@@ -5388,7 +5388,7 @@ proto.koinos.chain.execute_contract_args.prototype.toObject = function(opt_inclu
 proto.koinos.chain.execute_contract_args.toObject = function(includeInstance, msg) {
   var f, obj = {
     contractId: msg.getContractId_asB64(),
-    entrypoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    entryPoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
     args: msg.getArgs_asB64()
   };
 
@@ -5432,7 +5432,7 @@ proto.koinos.chain.execute_contract_args.deserializeBinaryFromReader = function(
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setEntrypoint(value);
+      msg.setEntryPoint(value);
       break;
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -5474,7 +5474,7 @@ proto.koinos.chain.execute_contract_args.serializeBinaryToWriter = function(mess
       f
     );
   }
-  f = message.getEntrypoint();
+  f = message.getEntryPoint();
   if (f !== 0) {
     writer.writeUint32(
       2,
@@ -5534,10 +5534,10 @@ proto.koinos.chain.execute_contract_args.prototype.setContractId = function(valu
 
 
 /**
- * optional uint32 entrypoint = 2;
+ * optional uint32 entry_point = 2;
  * @return {number}
  */
-proto.koinos.chain.execute_contract_args.prototype.getEntrypoint = function() {
+proto.koinos.chain.execute_contract_args.prototype.getEntryPoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -5546,7 +5546,7 @@ proto.koinos.chain.execute_contract_args.prototype.getEntrypoint = function() {
  * @param {number} value
  * @return {!proto.koinos.chain.execute_contract_args} returns this
  */
-proto.koinos.chain.execute_contract_args.prototype.setEntrypoint = function(value) {
+proto.koinos.chain.execute_contract_args.prototype.setEntryPoint = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -5880,7 +5880,7 @@ proto.koinos.chain.get_entry_point_return.prototype.toObject = function(opt_incl
  */
 proto.koinos.chain.get_entry_point_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    entrypoint: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    entryPoint: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -5919,7 +5919,7 @@ proto.koinos.chain.get_entry_point_return.deserializeBinaryFromReader = function
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setEntrypoint(value);
+      msg.setEntryPoint(value);
       break;
     default:
       reader.skipField();
@@ -5950,7 +5950,7 @@ proto.koinos.chain.get_entry_point_return.prototype.serializeBinary = function()
  */
 proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getEntrypoint();
+  f = message.getEntryPoint();
   if (f !== 0) {
     writer.writeUint32(
       1,
@@ -5961,10 +5961,10 @@ proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter = function(mes
 
 
 /**
- * optional uint32 entrypoint = 1;
+ * optional uint32 entry_point = 1;
  * @return {number}
  */
-proto.koinos.chain.get_entry_point_return.prototype.getEntrypoint = function() {
+proto.koinos.chain.get_entry_point_return.prototype.getEntryPoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -5973,7 +5973,7 @@ proto.koinos.chain.get_entry_point_return.prototype.getEntrypoint = function() {
  * @param {number} value
  * @return {!proto.koinos.chain.get_entry_point_return} returns this
  */
-proto.koinos.chain.get_entry_point_return.prototype.setEntrypoint = function(value) {
+proto.koinos.chain.get_entry_point_return.prototype.setEntryPoint = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 

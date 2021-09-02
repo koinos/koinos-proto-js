@@ -449,7 +449,7 @@ proto.koinos.protocol.contract_call_bundle.prototype.toObject = function(opt_inc
 proto.koinos.protocol.contract_call_bundle.toObject = function(includeInstance, msg) {
   var f, obj = {
     contractId: msg.getContractId_asB64(),
-    entrypoint: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    entryPoint: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -492,7 +492,7 @@ proto.koinos.protocol.contract_call_bundle.deserializeBinaryFromReader = functio
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setEntrypoint(value);
+      msg.setEntryPoint(value);
       break;
     default:
       reader.skipField();
@@ -530,7 +530,7 @@ proto.koinos.protocol.contract_call_bundle.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getEntrypoint();
+  f = message.getEntryPoint();
   if (f !== 0) {
     writer.writeUint32(
       2,
@@ -583,10 +583,10 @@ proto.koinos.protocol.contract_call_bundle.prototype.setContractId = function(va
 
 
 /**
- * optional uint32 entrypoint = 2;
+ * optional uint32 entry_point = 2;
  * @return {number}
  */
-proto.koinos.protocol.contract_call_bundle.prototype.getEntrypoint = function() {
+proto.koinos.protocol.contract_call_bundle.prototype.getEntryPoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -595,7 +595,7 @@ proto.koinos.protocol.contract_call_bundle.prototype.getEntrypoint = function() 
  * @param {number} value
  * @return {!proto.koinos.protocol.contract_call_bundle} returns this
  */
-proto.koinos.protocol.contract_call_bundle.prototype.setEntrypoint = function(value) {
+proto.koinos.protocol.contract_call_bundle.prototype.setEntryPoint = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -1066,7 +1066,7 @@ proto.koinos.protocol.call_contract_operation.prototype.toObject = function(opt_
 proto.koinos.protocol.call_contract_operation.toObject = function(includeInstance, msg) {
   var f, obj = {
     contractId: msg.getContractId_asB64(),
-    entrypoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    entryPoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
     args: msg.getArgs_asB64()
   };
 
@@ -1110,7 +1110,7 @@ proto.koinos.protocol.call_contract_operation.deserializeBinaryFromReader = func
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setEntrypoint(value);
+      msg.setEntryPoint(value);
       break;
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -1152,7 +1152,7 @@ proto.koinos.protocol.call_contract_operation.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getEntrypoint();
+  f = message.getEntryPoint();
   if (f !== 0) {
     writer.writeUint32(
       2,
@@ -1212,10 +1212,10 @@ proto.koinos.protocol.call_contract_operation.prototype.setContractId = function
 
 
 /**
- * optional uint32 entrypoint = 2;
+ * optional uint32 entry_point = 2;
  * @return {number}
  */
-proto.koinos.protocol.call_contract_operation.prototype.getEntrypoint = function() {
+proto.koinos.protocol.call_contract_operation.prototype.getEntryPoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -1224,7 +1224,7 @@ proto.koinos.protocol.call_contract_operation.prototype.getEntrypoint = function
  * @param {number} value
  * @return {!proto.koinos.protocol.call_contract_operation} returns this
  */
-proto.koinos.protocol.call_contract_operation.prototype.setEntrypoint = function(value) {
+proto.koinos.protocol.call_contract_operation.prototype.setEntryPoint = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
