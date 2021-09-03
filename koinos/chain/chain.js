@@ -2196,7 +2196,7 @@ proto.koinos.chain.verify_block_signature_return.prototype.toObject = function(o
  */
 proto.koinos.chain.verify_block_signature_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -2235,7 +2235,7 @@ proto.koinos.chain.verify_block_signature_return.deserializeBinaryFromReader = f
     switch (field) {
     case 1:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -2266,7 +2266,7 @@ proto.koinos.chain.verify_block_signature_return.prototype.serializeBinary = fun
  */
 proto.koinos.chain.verify_block_signature_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult();
+  f = message.getValue();
   if (f) {
     writer.writeBool(
       1,
@@ -2277,10 +2277,10 @@ proto.koinos.chain.verify_block_signature_return.serializeBinaryToWriter = funct
 
 
 /**
- * optional bool result = 1;
+ * optional bool value = 1;
  * @return {boolean}
  */
-proto.koinos.chain.verify_block_signature_return.prototype.getResult = function() {
+proto.koinos.chain.verify_block_signature_return.prototype.getValue = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
@@ -2289,7 +2289,7 @@ proto.koinos.chain.verify_block_signature_return.prototype.getResult = function(
  * @param {boolean} value
  * @return {!proto.koinos.chain.verify_block_signature_return} returns this
  */
-proto.koinos.chain.verify_block_signature_return.prototype.setResult = function(value) {
+proto.koinos.chain.verify_block_signature_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -2560,7 +2560,7 @@ proto.koinos.chain.verify_merkle_root_return.prototype.toObject = function(opt_i
  */
 proto.koinos.chain.verify_merkle_root_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -2599,7 +2599,7 @@ proto.koinos.chain.verify_merkle_root_return.deserializeBinaryFromReader = funct
     switch (field) {
     case 1:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -2630,7 +2630,7 @@ proto.koinos.chain.verify_merkle_root_return.prototype.serializeBinary = functio
  */
 proto.koinos.chain.verify_merkle_root_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult();
+  f = message.getValue();
   if (f) {
     writer.writeBool(
       1,
@@ -2641,10 +2641,10 @@ proto.koinos.chain.verify_merkle_root_return.serializeBinaryToWriter = function(
 
 
 /**
- * optional bool result = 1;
+ * optional bool value = 1;
  * @return {boolean}
  */
-proto.koinos.chain.verify_merkle_root_return.prototype.getResult = function() {
+proto.koinos.chain.verify_merkle_root_return.prototype.getValue = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
@@ -2653,7 +2653,7 @@ proto.koinos.chain.verify_merkle_root_return.prototype.getResult = function() {
  * @param {boolean} value
  * @return {!proto.koinos.chain.verify_merkle_root_return} returns this
  */
-proto.koinos.chain.verify_merkle_root_return.prototype.setResult = function(value) {
+proto.koinos.chain.verify_merkle_root_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -4302,7 +4302,7 @@ proto.koinos.chain.db_put_object_return.prototype.toObject = function(opt_includ
  */
 proto.koinos.chain.db_put_object_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -4341,7 +4341,7 @@ proto.koinos.chain.db_put_object_return.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -4372,7 +4372,7 @@ proto.koinos.chain.db_put_object_return.prototype.serializeBinary = function() {
  */
 proto.koinos.chain.db_put_object_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult();
+  f = message.getValue();
   if (f) {
     writer.writeBool(
       1,
@@ -4383,10 +4383,10 @@ proto.koinos.chain.db_put_object_return.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional bool result = 1;
+ * optional bool value = 1;
  * @return {boolean}
  */
-proto.koinos.chain.db_put_object_return.prototype.getResult = function() {
+proto.koinos.chain.db_put_object_return.prototype.getValue = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
@@ -4395,7 +4395,7 @@ proto.koinos.chain.db_put_object_return.prototype.getResult = function() {
  * @param {boolean} value
  * @return {!proto.koinos.chain.db_put_object_return} returns this
  */
-proto.koinos.chain.db_put_object_return.prototype.setResult = function(value) {
+proto.koinos.chain.db_put_object_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -4688,7 +4688,7 @@ proto.koinos.chain.db_get_object_return.prototype.toObject = function(opt_includ
  */
 proto.koinos.chain.db_get_object_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: msg.getResult_asB64()
+    value: msg.getValue_asB64()
   };
 
   if (includeInstance) {
@@ -4727,7 +4727,7 @@ proto.koinos.chain.db_get_object_return.deserializeBinaryFromReader = function(m
     switch (field) {
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -4758,7 +4758,7 @@ proto.koinos.chain.db_get_object_return.prototype.serializeBinary = function() {
  */
 proto.koinos.chain.db_get_object_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult_asU8();
+  f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
@@ -4769,35 +4769,35 @@ proto.koinos.chain.db_get_object_return.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional bytes result = 3;
+ * optional bytes value = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.db_get_object_return.prototype.getResult = function() {
+proto.koinos.chain.db_get_object_return.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * optional bytes result = 3;
- * This is a type-conversion wrapper around `getResult()`
+ * optional bytes value = 3;
+ * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.db_get_object_return.prototype.getResult_asB64 = function() {
+proto.koinos.chain.db_get_object_return.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getResult()));
+      this.getValue()));
 };
 
 
 /**
- * optional bytes result = 3;
+ * optional bytes value = 3;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getResult()`
+ * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.db_get_object_return.prototype.getResult_asU8 = function() {
+proto.koinos.chain.db_get_object_return.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getResult()));
+      this.getValue()));
 };
 
 
@@ -4805,7 +4805,7 @@ proto.koinos.chain.db_get_object_return.prototype.getResult_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.db_get_object_return} returns this
  */
-proto.koinos.chain.db_get_object_return.prototype.setResult = function(value) {
+proto.koinos.chain.db_get_object_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -5098,7 +5098,7 @@ proto.koinos.chain.db_get_next_object_return.prototype.toObject = function(opt_i
  */
 proto.koinos.chain.db_get_next_object_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: msg.getResult_asB64()
+    value: msg.getValue_asB64()
   };
 
   if (includeInstance) {
@@ -5137,7 +5137,7 @@ proto.koinos.chain.db_get_next_object_return.deserializeBinaryFromReader = funct
     switch (field) {
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -5168,7 +5168,7 @@ proto.koinos.chain.db_get_next_object_return.prototype.serializeBinary = functio
  */
 proto.koinos.chain.db_get_next_object_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult_asU8();
+  f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
@@ -5179,35 +5179,35 @@ proto.koinos.chain.db_get_next_object_return.serializeBinaryToWriter = function(
 
 
 /**
- * optional bytes result = 3;
+ * optional bytes value = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.db_get_next_object_return.prototype.getResult = function() {
+proto.koinos.chain.db_get_next_object_return.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * optional bytes result = 3;
- * This is a type-conversion wrapper around `getResult()`
+ * optional bytes value = 3;
+ * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.db_get_next_object_return.prototype.getResult_asB64 = function() {
+proto.koinos.chain.db_get_next_object_return.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getResult()));
+      this.getValue()));
 };
 
 
 /**
- * optional bytes result = 3;
+ * optional bytes value = 3;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getResult()`
+ * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.db_get_next_object_return.prototype.getResult_asU8 = function() {
+proto.koinos.chain.db_get_next_object_return.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getResult()));
+      this.getValue()));
 };
 
 
@@ -5215,7 +5215,7 @@ proto.koinos.chain.db_get_next_object_return.prototype.getResult_asU8 = function
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.db_get_next_object_return} returns this
  */
-proto.koinos.chain.db_get_next_object_return.prototype.setResult = function(value) {
+proto.koinos.chain.db_get_next_object_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -5508,7 +5508,7 @@ proto.koinos.chain.db_get_prev_object_return.prototype.toObject = function(opt_i
  */
 proto.koinos.chain.db_get_prev_object_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: msg.getResult_asB64()
+    value: msg.getValue_asB64()
   };
 
   if (includeInstance) {
@@ -5547,7 +5547,7 @@ proto.koinos.chain.db_get_prev_object_return.deserializeBinaryFromReader = funct
     switch (field) {
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -5578,7 +5578,7 @@ proto.koinos.chain.db_get_prev_object_return.prototype.serializeBinary = functio
  */
 proto.koinos.chain.db_get_prev_object_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult_asU8();
+  f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
@@ -5589,35 +5589,35 @@ proto.koinos.chain.db_get_prev_object_return.serializeBinaryToWriter = function(
 
 
 /**
- * optional bytes result = 3;
+ * optional bytes value = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.db_get_prev_object_return.prototype.getResult = function() {
+proto.koinos.chain.db_get_prev_object_return.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * optional bytes result = 3;
- * This is a type-conversion wrapper around `getResult()`
+ * optional bytes value = 3;
+ * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.db_get_prev_object_return.prototype.getResult_asB64 = function() {
+proto.koinos.chain.db_get_prev_object_return.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getResult()));
+      this.getValue()));
 };
 
 
 /**
- * optional bytes result = 3;
+ * optional bytes value = 3;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getResult()`
+ * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.db_get_prev_object_return.prototype.getResult_asU8 = function() {
+proto.koinos.chain.db_get_prev_object_return.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getResult()));
+      this.getValue()));
 };
 
 
@@ -5625,7 +5625,7 @@ proto.koinos.chain.db_get_prev_object_return.prototype.getResult_asU8 = function
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.db_get_prev_object_return} returns this
  */
-proto.koinos.chain.db_get_prev_object_return.prototype.setResult = function(value) {
+proto.koinos.chain.db_get_prev_object_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -5900,7 +5900,7 @@ proto.koinos.chain.call_contract_return.prototype.toObject = function(opt_includ
  */
 proto.koinos.chain.call_contract_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    result: msg.getResult_asB64()
+    value: msg.getValue_asB64()
   };
 
   if (includeInstance) {
@@ -5939,7 +5939,7 @@ proto.koinos.chain.call_contract_return.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setResult(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -5970,7 +5970,7 @@ proto.koinos.chain.call_contract_return.prototype.serializeBinary = function() {
  */
 proto.koinos.chain.call_contract_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResult_asU8();
+  f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
@@ -5981,35 +5981,35 @@ proto.koinos.chain.call_contract_return.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional bytes result = 1;
+ * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.call_contract_return.prototype.getResult = function() {
+proto.koinos.chain.call_contract_return.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
- * optional bytes result = 1;
- * This is a type-conversion wrapper around `getResult()`
+ * optional bytes value = 1;
+ * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.call_contract_return.prototype.getResult_asB64 = function() {
+proto.koinos.chain.call_contract_return.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getResult()));
+      this.getValue()));
 };
 
 
 /**
- * optional bytes result = 1;
+ * optional bytes value = 1;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getResult()`
+ * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.call_contract_return.prototype.getResult_asU8 = function() {
+proto.koinos.chain.call_contract_return.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getResult()));
+      this.getValue()));
 };
 
 
@@ -6017,7 +6017,7 @@ proto.koinos.chain.call_contract_return.prototype.getResult_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.call_contract_return} returns this
  */
-proto.koinos.chain.call_contract_return.prototype.setResult = function(value) {
+proto.koinos.chain.call_contract_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -6155,7 +6155,7 @@ proto.koinos.chain.get_entry_point_return.prototype.toObject = function(opt_incl
  */
 proto.koinos.chain.get_entry_point_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    entryPoint: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    value: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -6194,7 +6194,7 @@ proto.koinos.chain.get_entry_point_return.deserializeBinaryFromReader = function
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setEntryPoint(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -6225,7 +6225,7 @@ proto.koinos.chain.get_entry_point_return.prototype.serializeBinary = function()
  */
 proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getEntryPoint();
+  f = message.getValue();
   if (f !== 0) {
     writer.writeUint32(
       1,
@@ -6236,10 +6236,10 @@ proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter = function(mes
 
 
 /**
- * optional uint32 entry_point = 1;
+ * optional uint32 value = 1;
  * @return {number}
  */
-proto.koinos.chain.get_entry_point_return.prototype.getEntryPoint = function() {
+proto.koinos.chain.get_entry_point_return.prototype.getValue = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -6248,7 +6248,7 @@ proto.koinos.chain.get_entry_point_return.prototype.getEntryPoint = function() {
  * @param {number} value
  * @return {!proto.koinos.chain.get_entry_point_return} returns this
  */
-proto.koinos.chain.get_entry_point_return.prototype.setEntryPoint = function(value) {
+proto.koinos.chain.get_entry_point_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -10565,7 +10565,7 @@ proto.koinos.chain.get_account_nonce_return.prototype.toObject = function(opt_in
  */
 proto.koinos.chain.get_account_nonce_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    nonce: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    value: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -10604,7 +10604,7 @@ proto.koinos.chain.get_account_nonce_return.deserializeBinaryFromReader = functi
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setNonce(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -10635,7 +10635,7 @@ proto.koinos.chain.get_account_nonce_return.prototype.serializeBinary = function
  */
 proto.koinos.chain.get_account_nonce_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getNonce();
+  f = message.getValue();
   if (f !== 0) {
     writer.writeUint64(
       1,
@@ -10646,10 +10646,10 @@ proto.koinos.chain.get_account_nonce_return.serializeBinaryToWriter = function(m
 
 
 /**
- * optional uint64 nonce = 1;
+ * optional uint64 value = 1;
  * @return {number}
  */
-proto.koinos.chain.get_account_nonce_return.prototype.getNonce = function() {
+proto.koinos.chain.get_account_nonce_return.prototype.getValue = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -10658,7 +10658,7 @@ proto.koinos.chain.get_account_nonce_return.prototype.getNonce = function() {
  * @param {number} value
  * @return {!proto.koinos.chain.get_account_nonce_return} returns this
  */
-proto.koinos.chain.get_account_nonce_return.prototype.setNonce = function(value) {
+proto.koinos.chain.get_account_nonce_return.prototype.setValue = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
