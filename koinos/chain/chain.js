@@ -9210,7 +9210,7 @@ proto.koinos.chain.get_last_irreversible_block_return.prototype.toObject = funct
  */
 proto.koinos.chain.get_last_irreversible_block_return.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: (f = msg.getValue()) && proto.koinos.block_topology.toObject(includeInstance, f)
+    value: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -9248,8 +9248,7 @@ proto.koinos.chain.get_last_irreversible_block_return.deserializeBinaryFromReade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.koinos.block_topology;
-      reader.readMessage(value,proto.koinos.block_topology.deserializeBinaryFromReader);
+      var value = /** @type {number} */ (reader.readUint64());
       msg.setValue(value);
       break;
     default:
@@ -9282,50 +9281,30 @@ proto.koinos.chain.get_last_irreversible_block_return.prototype.serializeBinary 
 proto.koinos.chain.get_last_irreversible_block_return.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
-  if (f != null) {
-    writer.writeMessage(
+  if (f !== 0) {
+    writer.writeUint64(
       1,
-      f,
-      proto.koinos.block_topology.serializeBinaryToWriter
+      f
     );
   }
 };
 
 
 /**
- * optional koinos.block_topology value = 1;
- * @return {?proto.koinos.block_topology}
+ * optional uint64 value = 1;
+ * @return {number}
  */
 proto.koinos.chain.get_last_irreversible_block_return.prototype.getValue = function() {
-  return /** @type{?proto.koinos.block_topology} */ (
-    jspb.Message.getWrapperField(this, proto.koinos.block_topology, 1));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {?proto.koinos.block_topology|undefined} value
+ * @param {number} value
  * @return {!proto.koinos.chain.get_last_irreversible_block_return} returns this
-*/
+ */
 proto.koinos.chain.get_last_irreversible_block_return.prototype.setValue = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.get_last_irreversible_block_return} returns this
- */
-proto.koinos.chain.get_last_irreversible_block_return.prototype.clearValue = function() {
-  return this.setValue(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.koinos.chain.get_last_irreversible_block_return.prototype.hasValue = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
