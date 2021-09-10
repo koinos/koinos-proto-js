@@ -4526,8 +4526,8 @@ proto.koinos.chain.db_get_object_args.serializeBinaryToWriter = function(message
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 3));
-  if (f != null) {
+  f = message.getObjectSizeHint();
+  if (f !== 0) {
     writer.writeUint32(
       3,
       f
@@ -4634,25 +4634,7 @@ proto.koinos.chain.db_get_object_args.prototype.getObjectSizeHint = function() {
  * @return {!proto.koinos.chain.db_get_object_args} returns this
  */
 proto.koinos.chain.db_get_object_args.prototype.setObjectSizeHint = function(value) {
-  return jspb.Message.setField(this, 3, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.koinos.chain.db_get_object_args} returns this
- */
-proto.koinos.chain.db_get_object_args.prototype.clearObjectSizeHint = function() {
-  return jspb.Message.setField(this, 3, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.koinos.chain.db_get_object_args.prototype.hasObjectSizeHint = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -4936,8 +4918,8 @@ proto.koinos.chain.db_get_next_object_args.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 3));
-  if (f != null) {
+  f = message.getObjectSizeHint();
+  if (f !== 0) {
     writer.writeUint32(
       3,
       f
@@ -5044,25 +5026,7 @@ proto.koinos.chain.db_get_next_object_args.prototype.getObjectSizeHint = functio
  * @return {!proto.koinos.chain.db_get_next_object_args} returns this
  */
 proto.koinos.chain.db_get_next_object_args.prototype.setObjectSizeHint = function(value) {
-  return jspb.Message.setField(this, 3, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.koinos.chain.db_get_next_object_args} returns this
- */
-proto.koinos.chain.db_get_next_object_args.prototype.clearObjectSizeHint = function() {
-  return jspb.Message.setField(this, 3, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.koinos.chain.db_get_next_object_args.prototype.hasObjectSizeHint = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -5346,8 +5310,8 @@ proto.koinos.chain.db_get_prev_object_args.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 3));
-  if (f != null) {
+  f = message.getObjectSizeHint();
+  if (f !== 0) {
     writer.writeUint32(
       3,
       f
@@ -5454,25 +5418,7 @@ proto.koinos.chain.db_get_prev_object_args.prototype.getObjectSizeHint = functio
  * @return {!proto.koinos.chain.db_get_prev_object_args} returns this
  */
 proto.koinos.chain.db_get_prev_object_args.prototype.setObjectSizeHint = function(value) {
-  return jspb.Message.setField(this, 3, value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.koinos.chain.db_get_prev_object_args} returns this
- */
-proto.koinos.chain.db_get_prev_object_args.prototype.clearObjectSizeHint = function() {
-  return jspb.Message.setField(this, 3, undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.koinos.chain.db_get_prev_object_args.prototype.hasObjectSizeHint = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
