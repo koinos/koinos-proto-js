@@ -70,7 +70,7 @@ proto.koinos.block_topology.prototype.toObject = function(opt_includeInstance) {
 proto.koinos.block_topology.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: msg.getId_asB64(),
-    height: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    height: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     previous: msg.getPrevious_asB64()
   };
 
@@ -113,7 +113,7 @@ proto.koinos.block_topology.deserializeBinaryFromReader = function(msg, reader) 
       msg.setId(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setHeight(value);
       break;
     case 3:
@@ -157,8 +157,8 @@ proto.koinos.block_topology.serializeBinaryToWriter = function(message, writer) 
     );
   }
   f = message.getHeight();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -217,19 +217,19 @@ proto.koinos.block_topology.prototype.setId = function(value) {
 
 /**
  * optional uint64 height = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.block_topology.prototype.getHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.block_topology} returns this
  */
 proto.koinos.block_topology.prototype.setHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 

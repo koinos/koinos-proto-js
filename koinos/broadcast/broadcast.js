@@ -140,9 +140,9 @@ proto.koinos.broadcast.transaction_accepted.toObject = function(includeInstance,
   var f, obj = {
     transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f),
     payer: msg.getPayer_asB64(),
-    maxPayerResources: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    trxResourceLimit: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    height: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    maxPayerResources: jspb.Message.getFieldWithDefault(msg, 3, "0"),
+    trxResourceLimit: jspb.Message.getFieldWithDefault(msg, 4, "0"),
+    height: jspb.Message.getFieldWithDefault(msg, 5, "0")
   };
 
   if (includeInstance) {
@@ -189,15 +189,15 @@ proto.koinos.broadcast.transaction_accepted.deserializeBinaryFromReader = functi
       msg.setPayer(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setMaxPayerResources(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setTrxResourceLimit(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setHeight(value);
       break;
     default:
@@ -245,22 +245,22 @@ proto.koinos.broadcast.transaction_accepted.serializeBinaryToWriter = function(m
     );
   }
   f = message.getMaxPayerResources();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       3,
       f
     );
   }
   f = message.getTrxResourceLimit();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       4,
       f
     );
   }
   f = message.getHeight();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       5,
       f
     );
@@ -349,55 +349,55 @@ proto.koinos.broadcast.transaction_accepted.prototype.setPayer = function(value)
 
 /**
  * optional uint64 max_payer_resources = 3;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.broadcast.transaction_accepted.prototype.getMaxPayerResources = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.broadcast.transaction_accepted} returns this
  */
 proto.koinos.broadcast.transaction_accepted.prototype.setMaxPayerResources = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3StringIntField(this, 3, value);
 };
 
 
 /**
  * optional uint64 trx_resource_limit = 4;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.broadcast.transaction_accepted.prototype.getTrxResourceLimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.broadcast.transaction_accepted} returns this
  */
 proto.koinos.broadcast.transaction_accepted.prototype.setTrxResourceLimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
+  return jspb.Message.setProto3StringIntField(this, 4, value);
 };
 
 
 /**
  * optional uint64 height = 5;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.broadcast.transaction_accepted.prototype.getHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.broadcast.transaction_accepted} returns this
  */
 proto.koinos.broadcast.transaction_accepted.prototype.setHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3StringIntField(this, 5, value);
 };
 
 

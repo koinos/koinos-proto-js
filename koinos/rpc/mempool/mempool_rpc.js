@@ -185,8 +185,8 @@ proto.koinos.rpc.mempool.check_pending_account_resources_request.prototype.toObj
 proto.koinos.rpc.mempool.check_pending_account_resources_request.toObject = function(includeInstance, msg) {
   var f, obj = {
     payer: msg.getPayer_asB64(),
-    maxPayerResources: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    trxResourceLimit: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    maxPayerResources: jspb.Message.getFieldWithDefault(msg, 2, "0"),
+    trxResourceLimit: jspb.Message.getFieldWithDefault(msg, 3, "0")
   };
 
   if (includeInstance) {
@@ -228,11 +228,11 @@ proto.koinos.rpc.mempool.check_pending_account_resources_request.deserializeBina
       msg.setPayer(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setMaxPayerResources(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setTrxResourceLimit(value);
       break;
     default:
@@ -272,15 +272,15 @@ proto.koinos.rpc.mempool.check_pending_account_resources_request.serializeBinary
     );
   }
   f = message.getMaxPayerResources();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
   }
   f = message.getTrxResourceLimit();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       3,
       f
     );
@@ -332,37 +332,37 @@ proto.koinos.rpc.mempool.check_pending_account_resources_request.prototype.setPa
 
 /**
  * optional uint64 max_payer_resources = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.rpc.mempool.check_pending_account_resources_request.prototype.getMaxPayerResources = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.rpc.mempool.check_pending_account_resources_request} returns this
  */
 proto.koinos.rpc.mempool.check_pending_account_resources_request.prototype.setMaxPayerResources = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
 /**
  * optional uint64 trx_resource_limit = 3;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.rpc.mempool.check_pending_account_resources_request.prototype.getTrxResourceLimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.rpc.mempool.check_pending_account_resources_request} returns this
  */
 proto.koinos.rpc.mempool.check_pending_account_resources_request.prototype.setTrxResourceLimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3StringIntField(this, 3, value);
 };
 
 
@@ -528,7 +528,7 @@ proto.koinos.rpc.mempool.get_pending_transactions_request.prototype.toObject = f
  */
 proto.koinos.rpc.mempool.get_pending_transactions_request.toObject = function(includeInstance, msg) {
   var f, obj = {
-    limit: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    limit: jspb.Message.getFieldWithDefault(msg, 1, "0")
   };
 
   if (includeInstance) {
@@ -566,7 +566,7 @@ proto.koinos.rpc.mempool.get_pending_transactions_request.deserializeBinaryFromR
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setLimit(value);
       break;
     default:
@@ -599,8 +599,8 @@ proto.koinos.rpc.mempool.get_pending_transactions_request.prototype.serializeBin
 proto.koinos.rpc.mempool.get_pending_transactions_request.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLimit();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       1,
       f
     );
@@ -610,19 +610,19 @@ proto.koinos.rpc.mempool.get_pending_transactions_request.serializeBinaryToWrite
 
 /**
  * optional uint64 limit = 1;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.rpc.mempool.get_pending_transactions_request.prototype.getLimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.rpc.mempool.get_pending_transactions_request} returns this
  */
 proto.koinos.rpc.mempool.get_pending_transactions_request.prototype.setLimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
 

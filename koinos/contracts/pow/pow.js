@@ -92,9 +92,9 @@ proto.koinos.contracts.pow.difficulty_metadata.prototype.toObject = function(opt
 proto.koinos.contracts.pow.difficulty_metadata.toObject = function(includeInstance, msg) {
   var f, obj = {
     target: msg.getTarget_asB64(),
-    lastBlockTime: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    lastBlockTime: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     difficulty: msg.getDifficulty_asB64(),
-    targetBlockInterval: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    targetBlockInterval: jspb.Message.getFieldWithDefault(msg, 4, "0")
   };
 
   if (includeInstance) {
@@ -136,7 +136,7 @@ proto.koinos.contracts.pow.difficulty_metadata.deserializeBinaryFromReader = fun
       msg.setTarget(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setLastBlockTime(value);
       break;
     case 3:
@@ -144,7 +144,7 @@ proto.koinos.contracts.pow.difficulty_metadata.deserializeBinaryFromReader = fun
       msg.setDifficulty(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setTargetBlockInterval(value);
       break;
     default:
@@ -184,8 +184,8 @@ proto.koinos.contracts.pow.difficulty_metadata.serializeBinaryToWriter = functio
     );
   }
   f = message.getLastBlockTime();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -198,8 +198,8 @@ proto.koinos.contracts.pow.difficulty_metadata.serializeBinaryToWriter = functio
     );
   }
   f = message.getTargetBlockInterval();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       4,
       f
     );
@@ -251,19 +251,19 @@ proto.koinos.contracts.pow.difficulty_metadata.prototype.setTarget = function(va
 
 /**
  * optional uint64 last_block_time = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.contracts.pow.difficulty_metadata.prototype.getLastBlockTime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.contracts.pow.difficulty_metadata} returns this
  */
 proto.koinos.contracts.pow.difficulty_metadata.prototype.setLastBlockTime = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
@@ -311,19 +311,19 @@ proto.koinos.contracts.pow.difficulty_metadata.prototype.setDifficulty = functio
 
 /**
  * optional uint64 target_block_interval = 4;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.contracts.pow.difficulty_metadata.prototype.getTargetBlockInterval = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.contracts.pow.difficulty_metadata} returns this
  */
 proto.koinos.contracts.pow.difficulty_metadata.prototype.setTargetBlockInterval = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
+  return jspb.Message.setProto3StringIntField(this, 4, value);
 };
 
 

@@ -94,7 +94,7 @@ proto.koinos.block_store.block_item.prototype.toObject = function(opt_includeIns
 proto.koinos.block_store.block_item.toObject = function(includeInstance, msg) {
   var f, obj = {
     blockId: msg.getBlockId_asB64(),
-    blockHeight: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    blockHeight: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     block: (f = msg.getBlock()) && proto.koinos.protocol.block.toObject(includeInstance, f),
     receipt: (f = msg.getReceipt()) && proto.koinos.protocol.block_receipt.toObject(includeInstance, f)
   };
@@ -138,7 +138,7 @@ proto.koinos.block_store.block_item.deserializeBinaryFromReader = function(msg, 
       msg.setBlockId(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setBlockHeight(value);
       break;
     case 3:
@@ -188,8 +188,8 @@ proto.koinos.block_store.block_item.serializeBinaryToWriter = function(message, 
     );
   }
   f = message.getBlockHeight();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -257,19 +257,19 @@ proto.koinos.block_store.block_item.prototype.setBlockId = function(value) {
 
 /**
  * optional uint64 block_height = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.block_store.block_item.prototype.getBlockHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.block_store.block_item} returns this
  */
 proto.koinos.block_store.block_item.prototype.setBlockHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
@@ -387,7 +387,7 @@ proto.koinos.block_store.block_record.prototype.toObject = function(opt_includeI
 proto.koinos.block_store.block_record.toObject = function(includeInstance, msg) {
   var f, obj = {
     blockId: msg.getBlockId_asB64(),
-    blockHeight: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    blockHeight: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     block: (f = msg.getBlock()) && proto.koinos.protocol.block.toObject(includeInstance, f),
     receipt: (f = msg.getReceipt()) && proto.koinos.protocol.block_receipt.toObject(includeInstance, f),
     previousBlockIdsList: msg.getPreviousBlockIdsList_asB64()
@@ -432,7 +432,7 @@ proto.koinos.block_store.block_record.deserializeBinaryFromReader = function(msg
       msg.setBlockId(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setBlockHeight(value);
       break;
     case 3:
@@ -486,8 +486,8 @@ proto.koinos.block_store.block_record.serializeBinaryToWriter = function(message
     );
   }
   f = message.getBlockHeight();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -562,19 +562,19 @@ proto.koinos.block_store.block_record.prototype.setBlockId = function(value) {
 
 /**
  * optional uint64 block_height = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.block_store.block_record.prototype.getBlockHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.block_store.block_record} returns this
  */
 proto.koinos.block_store.block_record.prototype.setBlockHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 

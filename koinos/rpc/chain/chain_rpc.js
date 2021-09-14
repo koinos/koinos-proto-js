@@ -1162,7 +1162,7 @@ proto.koinos.rpc.chain.get_head_info_response.prototype.toObject = function(opt_
 proto.koinos.rpc.chain.get_head_info_response.toObject = function(includeInstance, msg) {
   var f, obj = {
     headTopology: (f = msg.getHeadTopology()) && proto.koinos.block_topology.toObject(includeInstance, f),
-    lastIrreversibleBlock: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    lastIrreversibleBlock: jspb.Message.getFieldWithDefault(msg, 2, "0")
   };
 
   if (includeInstance) {
@@ -1205,7 +1205,7 @@ proto.koinos.rpc.chain.get_head_info_response.deserializeBinaryFromReader = func
       msg.setHeadTopology(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setLastIrreversibleBlock(value);
       break;
     default:
@@ -1246,8 +1246,8 @@ proto.koinos.rpc.chain.get_head_info_response.serializeBinaryToWriter = function
     );
   }
   f = message.getLastIrreversibleBlock();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -1294,19 +1294,19 @@ proto.koinos.rpc.chain.get_head_info_response.prototype.hasHeadTopology = functi
 
 /**
  * optional uint64 last_irreversible_block = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.rpc.chain.get_head_info_response.prototype.getLastIrreversibleBlock = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.rpc.chain.get_head_info_response} returns this
  */
 proto.koinos.rpc.chain.get_head_info_response.prototype.setLastIrreversibleBlock = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
@@ -2485,7 +2485,7 @@ proto.koinos.rpc.chain.get_account_nonce_response.prototype.toObject = function(
  */
 proto.koinos.rpc.chain.get_account_nonce_response.toObject = function(includeInstance, msg) {
   var f, obj = {
-    nonce: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    nonce: jspb.Message.getFieldWithDefault(msg, 1, "0")
   };
 
   if (includeInstance) {
@@ -2523,7 +2523,7 @@ proto.koinos.rpc.chain.get_account_nonce_response.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setNonce(value);
       break;
     default:
@@ -2556,8 +2556,8 @@ proto.koinos.rpc.chain.get_account_nonce_response.prototype.serializeBinary = fu
 proto.koinos.rpc.chain.get_account_nonce_response.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getNonce();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       1,
       f
     );
@@ -2567,19 +2567,19 @@ proto.koinos.rpc.chain.get_account_nonce_response.serializeBinaryToWriter = func
 
 /**
  * optional uint64 nonce = 1;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.rpc.chain.get_account_nonce_response.prototype.getNonce = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.rpc.chain.get_account_nonce_response} returns this
  */
 proto.koinos.rpc.chain.get_account_nonce_response.prototype.setNonce = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
 

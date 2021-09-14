@@ -1680,8 +1680,8 @@ proto.koinos.protocol.active_transaction_data.prototype.toObject = function(opt_
  */
 proto.koinos.protocol.active_transaction_data.toObject = function(includeInstance, msg) {
   var f, obj = {
-    resourceLimit: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    nonce: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    resourceLimit: jspb.Message.getFieldWithDefault(msg, 1, "0"),
+    nonce: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     operationsList: jspb.Message.toObjectList(msg.getOperationsList(),
     proto.koinos.protocol.operation.toObject, includeInstance)
   };
@@ -1721,11 +1721,11 @@ proto.koinos.protocol.active_transaction_data.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setResourceLimit(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setNonce(value);
       break;
     case 3:
@@ -1763,15 +1763,15 @@ proto.koinos.protocol.active_transaction_data.prototype.serializeBinary = functi
 proto.koinos.protocol.active_transaction_data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getResourceLimit();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       1,
       f
     );
   }
   f = message.getNonce();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -1789,37 +1789,37 @@ proto.koinos.protocol.active_transaction_data.serializeBinaryToWriter = function
 
 /**
  * optional uint64 resource_limit = 1;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.protocol.active_transaction_data.prototype.getResourceLimit = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.protocol.active_transaction_data} returns this
  */
 proto.koinos.protocol.active_transaction_data.prototype.setResourceLimit = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
 
 /**
  * optional uint64 nonce = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.protocol.active_transaction_data.prototype.getNonce = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.protocol.active_transaction_data} returns this
  */
 proto.koinos.protocol.active_transaction_data.prototype.setNonce = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
@@ -2674,8 +2674,8 @@ proto.koinos.protocol.block_header.prototype.toObject = function(opt_includeInst
 proto.koinos.protocol.block_header.toObject = function(includeInstance, msg) {
   var f, obj = {
     previous: msg.getPrevious_asB64(),
-    height: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    timestamp: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    height: jspb.Message.getFieldWithDefault(msg, 2, "0"),
+    timestamp: jspb.Message.getFieldWithDefault(msg, 3, "0")
   };
 
   if (includeInstance) {
@@ -2717,11 +2717,11 @@ proto.koinos.protocol.block_header.deserializeBinaryFromReader = function(msg, r
       msg.setPrevious(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setHeight(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setTimestamp(value);
       break;
     default:
@@ -2761,15 +2761,15 @@ proto.koinos.protocol.block_header.serializeBinaryToWriter = function(message, w
     );
   }
   f = message.getHeight();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
   }
   f = message.getTimestamp();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       3,
       f
     );
@@ -2821,37 +2821,37 @@ proto.koinos.protocol.block_header.prototype.setPrevious = function(value) {
 
 /**
  * optional uint64 height = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.protocol.block_header.prototype.getHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.protocol.block_header} returns this
  */
 proto.koinos.protocol.block_header.prototype.setHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
 /**
  * optional uint64 timestamp = 3;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.protocol.block_header.prototype.getTimestamp = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.protocol.block_header} returns this
  */
 proto.koinos.protocol.block_header.prototype.setTimestamp = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3StringIntField(this, 3, value);
 };
 
 

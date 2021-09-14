@@ -675,7 +675,7 @@ proto.koinos.rpc.block_store.get_blocks_by_height_request.prototype.toObject = f
 proto.koinos.rpc.block_store.get_blocks_by_height_request.toObject = function(includeInstance, msg) {
   var f, obj = {
     headBlockId: msg.getHeadBlockId_asB64(),
-    ancestorStartHeight: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    ancestorStartHeight: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     numBlocks: jspb.Message.getFieldWithDefault(msg, 3, 0),
     returnBlock: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
     returnReceipt: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
@@ -720,7 +720,7 @@ proto.koinos.rpc.block_store.get_blocks_by_height_request.deserializeBinaryFromR
       msg.setHeadBlockId(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setAncestorStartHeight(value);
       break;
     case 3:
@@ -772,8 +772,8 @@ proto.koinos.rpc.block_store.get_blocks_by_height_request.serializeBinaryToWrite
     );
   }
   f = message.getAncestorStartHeight();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
       2,
       f
     );
@@ -846,19 +846,19 @@ proto.koinos.rpc.block_store.get_blocks_by_height_request.prototype.setHeadBlock
 
 /**
  * optional uint64 ancestor_start_height = 2;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.rpc.block_store.get_blocks_by_height_request.prototype.getAncestorStartHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.rpc.block_store.get_blocks_by_height_request} returns this
  */
 proto.koinos.rpc.block_store.get_blocks_by_height_request.prototype.setAncestorStartHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
