@@ -8775,7 +8775,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.toObject = func
  */
 proto.koinos.chain.get_transaction_resource_limit_args.toObject = function(includeInstance, msg) {
   var f, obj = {
-    transction: (f = msg.getTransction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f)
+    transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -8815,7 +8815,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.deserializeBinaryFromRead
     case 1:
       var value = new proto.koinos.protocol.transaction;
       reader.readMessage(value,proto.koinos.protocol.transaction.deserializeBinaryFromReader);
-      msg.setTransction(value);
+      msg.setTransaction(value);
       break;
     default:
       reader.skipField();
@@ -8846,7 +8846,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.serializeBinary
  */
 proto.koinos.chain.get_transaction_resource_limit_args.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTransction();
+  f = message.getTransaction();
   if (f != null) {
     writer.writeMessage(
       1,
@@ -8858,10 +8858,10 @@ proto.koinos.chain.get_transaction_resource_limit_args.serializeBinaryToWriter =
 
 
 /**
- * optional koinos.protocol.transaction transction = 1;
+ * optional koinos.protocol.transaction transaction = 1;
  * @return {?proto.koinos.protocol.transaction}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.getTransction = function() {
+proto.koinos.chain.get_transaction_resource_limit_args.prototype.getTransaction = function() {
   return /** @type{?proto.koinos.protocol.transaction} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.transaction, 1));
 };
@@ -8871,7 +8871,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.getTransction =
  * @param {?proto.koinos.protocol.transaction|undefined} value
  * @return {!proto.koinos.chain.get_transaction_resource_limit_args} returns this
 */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.setTransction = function(value) {
+proto.koinos.chain.get_transaction_resource_limit_args.prototype.setTransaction = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
@@ -8880,8 +8880,8 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.setTransction =
  * Clears the message field making it undefined.
  * @return {!proto.koinos.chain.get_transaction_resource_limit_args} returns this
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.clearTransction = function() {
-  return this.setTransction(undefined);
+proto.koinos.chain.get_transaction_resource_limit_args.prototype.clearTransaction = function() {
+  return this.setTransaction(undefined);
 };
 
 
@@ -8889,7 +8889,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.clearTransction
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.hasTransction = function() {
+proto.koinos.chain.get_transaction_resource_limit_args.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
