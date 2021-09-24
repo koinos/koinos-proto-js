@@ -70,7 +70,6 @@ goog.provide('proto.koinos.chain.require_authority_return');
 goog.provide('proto.koinos.chain.set_contract_return_args');
 goog.provide('proto.koinos.chain.set_contract_return_return');
 goog.provide('proto.koinos.chain.verify_block_signature_args');
-goog.provide('proto.koinos.chain.verify_block_signature_args.ActiveDataCase');
 goog.provide('proto.koinos.chain.verify_block_signature_return');
 goog.provide('proto.koinos.chain.verify_merkle_root_args');
 goog.provide('proto.koinos.chain.verify_merkle_root_return');
@@ -78,7 +77,6 @@ goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
 goog.require('proto.koinos.block_topology');
-goog.require('proto.koinos.protocol.active_block_data');
 goog.require('proto.koinos.protocol.block');
 goog.require('proto.koinos.protocol.call_contract_operation');
 goog.require('proto.koinos.protocol.set_system_call_operation');
@@ -159,7 +157,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.koinos.chain.verify_block_signature_args = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.koinos.chain.verify_block_signature_args.oneofGroups_);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.koinos.chain.verify_block_signature_args, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1809,32 +1807,6 @@ proto.koinos.chain.prints_return.serializeBinaryToWriter = function(message, wri
 
 
 
-/**
- * Oneof group definitions for this message. Each group defines the field
- * numbers belonging to that group. When of these fields' value is set, all
- * other fields in the group are cleared. During deserialization, if multiple
- * fields are encountered for a group, only the last value seen will be kept.
- * @private {!Array<!Array<number>>}
- * @const
- */
-proto.koinos.chain.verify_block_signature_args.oneofGroups_ = [[2,3]];
-
-/**
- * @enum {number}
- */
-proto.koinos.chain.verify_block_signature_args.ActiveDataCase = {
-  ACTIVE_DATA_NOT_SET: 0,
-  ACTIVE_NATIVE: 2,
-  ACTIVE_BLOB: 3
-};
-
-/**
- * @return {proto.koinos.chain.verify_block_signature_args.ActiveDataCase}
- */
-proto.koinos.chain.verify_block_signature_args.prototype.getActiveDataCase = function() {
-  return /** @type {proto.koinos.chain.verify_block_signature_args.ActiveDataCase} */(jspb.Message.computeOneofCase(this, proto.koinos.chain.verify_block_signature_args.oneofGroups_[0]));
-};
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1867,8 +1839,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.toObject = function(opt
 proto.koinos.chain.verify_block_signature_args.toObject = function(includeInstance, msg) {
   var f, obj = {
     digest: msg.getDigest_asB64(),
-    activeNative: (f = msg.getActiveNative()) && proto.koinos.protocol.active_block_data.toObject(includeInstance, f),
-    activeBlob: msg.getActiveBlob_asB64(),
+    active: msg.getActive_asB64(),
     signatureData: msg.getSignatureData_asB64()
   };
 
@@ -1911,15 +1882,10 @@ proto.koinos.chain.verify_block_signature_args.deserializeBinaryFromReader = fun
       msg.setDigest(value);
       break;
     case 2:
-      var value = new proto.koinos.protocol.active_block_data;
-      reader.readMessage(value,proto.koinos.protocol.active_block_data.deserializeBinaryFromReader);
-      msg.setActiveNative(value);
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setActive(value);
       break;
     case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setActiveBlob(value);
-      break;
-    case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setSignatureData(value);
       break;
@@ -1959,25 +1925,17 @@ proto.koinos.chain.verify_block_signature_args.serializeBinaryToWriter = functio
       f
     );
   }
-  f = message.getActiveNative();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      proto.koinos.protocol.active_block_data.serializeBinaryToWriter
-    );
-  }
-  f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 3));
-  if (f != null) {
+  f = message.getActive_asU8();
+  if (f.length > 0) {
     writer.writeBytes(
-      3,
+      2,
       f
     );
   }
   f = message.getSignatureData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
-      4,
+      3,
       f
     );
   }
@@ -2027,72 +1985,35 @@ proto.koinos.chain.verify_block_signature_args.prototype.setDigest = function(va
 
 
 /**
- * optional koinos.protocol.active_block_data active_native = 2;
- * @return {?proto.koinos.protocol.active_block_data}
- */
-proto.koinos.chain.verify_block_signature_args.prototype.getActiveNative = function() {
-  return /** @type{?proto.koinos.protocol.active_block_data} */ (
-    jspb.Message.getWrapperField(this, proto.koinos.protocol.active_block_data, 2));
-};
-
-
-/**
- * @param {?proto.koinos.protocol.active_block_data|undefined} value
- * @return {!proto.koinos.chain.verify_block_signature_args} returns this
-*/
-proto.koinos.chain.verify_block_signature_args.prototype.setActiveNative = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 2, proto.koinos.chain.verify_block_signature_args.oneofGroups_[0], value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.verify_block_signature_args} returns this
- */
-proto.koinos.chain.verify_block_signature_args.prototype.clearActiveNative = function() {
-  return this.setActiveNative(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.koinos.chain.verify_block_signature_args.prototype.hasActiveNative = function() {
-  return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional bytes active_blob = 3;
+ * optional bytes active = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getActiveBlob = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.koinos.chain.verify_block_signature_args.prototype.getActive = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
- * optional bytes active_blob = 3;
- * This is a type-conversion wrapper around `getActiveBlob()`
+ * optional bytes active = 2;
+ * This is a type-conversion wrapper around `getActive()`
  * @return {string}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getActiveBlob_asB64 = function() {
+proto.koinos.chain.verify_block_signature_args.prototype.getActive_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getActiveBlob()));
+      this.getActive()));
 };
 
 
 /**
- * optional bytes active_blob = 3;
+ * optional bytes active = 2;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getActiveBlob()`
+ * This is a type-conversion wrapper around `getActive()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getActiveBlob_asU8 = function() {
+proto.koinos.chain.verify_block_signature_args.prototype.getActive_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getActiveBlob()));
+      this.getActive()));
 };
 
 
@@ -2100,40 +2021,22 @@ proto.koinos.chain.verify_block_signature_args.prototype.getActiveBlob_asU8 = fu
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.verify_block_signature_args} returns this
  */
-proto.koinos.chain.verify_block_signature_args.prototype.setActiveBlob = function(value) {
-  return jspb.Message.setOneofField(this, 3, proto.koinos.chain.verify_block_signature_args.oneofGroups_[0], value);
+proto.koinos.chain.verify_block_signature_args.prototype.setActive = function(value) {
+  return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
 /**
- * Clears the field making it undefined.
- * @return {!proto.koinos.chain.verify_block_signature_args} returns this
- */
-proto.koinos.chain.verify_block_signature_args.prototype.clearActiveBlob = function() {
-  return jspb.Message.setOneofField(this, 3, proto.koinos.chain.verify_block_signature_args.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.koinos.chain.verify_block_signature_args.prototype.hasActiveBlob = function() {
-  return jspb.Message.getField(this, 3) != null;
-};
-
-
-/**
- * optional bytes signature_data = 4;
+ * optional bytes signature_data = 3;
  * @return {!(string|Uint8Array)}
  */
 proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * optional bytes signature_data = 4;
+ * optional bytes signature_data = 3;
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {string}
  */
@@ -2144,7 +2047,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData_asB64 
 
 
 /**
- * optional bytes signature_data = 4;
+ * optional bytes signature_data = 3;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
  * This is a type-conversion wrapper around `getSignatureData()`
@@ -2161,7 +2064,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData_asU8 =
  * @return {!proto.koinos.chain.verify_block_signature_args} returns this
  */
 proto.koinos.chain.verify_block_signature_args.prototype.setSignatureData = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
