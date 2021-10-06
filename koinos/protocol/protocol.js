@@ -1680,7 +1680,7 @@ proto.koinos.protocol.active_transaction_data.prototype.toObject = function(opt_
  */
 proto.koinos.protocol.active_transaction_data.toObject = function(includeInstance, msg) {
   var f, obj = {
-    resourceLimit: jspb.Message.getFieldWithDefault(msg, 1, "0"),
+    rcLimit: jspb.Message.getFieldWithDefault(msg, 1, "0"),
     nonce: jspb.Message.getFieldWithDefault(msg, 2, "0"),
     operationsList: jspb.Message.toObjectList(msg.getOperationsList(),
     proto.koinos.protocol.operation.toObject, includeInstance)
@@ -1722,7 +1722,7 @@ proto.koinos.protocol.active_transaction_data.deserializeBinaryFromReader = func
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readUint64String());
-      msg.setResourceLimit(value);
+      msg.setRcLimit(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readUint64String());
@@ -1762,7 +1762,7 @@ proto.koinos.protocol.active_transaction_data.prototype.serializeBinary = functi
  */
 proto.koinos.protocol.active_transaction_data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getResourceLimit();
+  f = message.getRcLimit();
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
       1,
@@ -1788,10 +1788,10 @@ proto.koinos.protocol.active_transaction_data.serializeBinaryToWriter = function
 
 
 /**
- * optional uint64 resource_limit = 1;
+ * optional uint64 rc_limit = 1;
  * @return {string}
  */
-proto.koinos.protocol.active_transaction_data.prototype.getResourceLimit = function() {
+proto.koinos.protocol.active_transaction_data.prototype.getRcLimit = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
@@ -1800,7 +1800,7 @@ proto.koinos.protocol.active_transaction_data.prototype.getResourceLimit = funct
  * @param {string} value
  * @return {!proto.koinos.protocol.active_transaction_data} returns this
  */
-proto.koinos.protocol.active_transaction_data.prototype.setResourceLimit = function(value) {
+proto.koinos.protocol.active_transaction_data.prototype.setRcLimit = function(value) {
   return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 

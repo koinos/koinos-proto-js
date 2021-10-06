@@ -11,68 +11,75 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.koinos.chain.apply_block_args');
-goog.provide('proto.koinos.chain.apply_block_return');
-goog.provide('proto.koinos.chain.apply_call_contract_operation_args');
-goog.provide('proto.koinos.chain.apply_call_contract_operation_return');
-goog.provide('proto.koinos.chain.apply_set_system_call_operation_args');
-goog.provide('proto.koinos.chain.apply_set_system_call_operation_return');
-goog.provide('proto.koinos.chain.apply_transaction_args');
-goog.provide('proto.koinos.chain.apply_transaction_return');
-goog.provide('proto.koinos.chain.apply_upload_contract_operation_args');
-goog.provide('proto.koinos.chain.apply_upload_contract_operation_return');
-goog.provide('proto.koinos.chain.call_contract_args');
-goog.provide('proto.koinos.chain.call_contract_return');
-goog.provide('proto.koinos.chain.exit_contract_args');
-goog.provide('proto.koinos.chain.exit_contract_return');
-goog.provide('proto.koinos.chain.get_account_nonce_args');
-goog.provide('proto.koinos.chain.get_account_nonce_return');
-goog.provide('proto.koinos.chain.get_caller_args');
-goog.provide('proto.koinos.chain.get_caller_return');
-goog.provide('proto.koinos.chain.get_contract_args_args');
-goog.provide('proto.koinos.chain.get_contract_args_return');
-goog.provide('proto.koinos.chain.get_contract_args_size_args');
-goog.provide('proto.koinos.chain.get_contract_args_size_return');
-goog.provide('proto.koinos.chain.get_contract_id_args');
-goog.provide('proto.koinos.chain.get_contract_id_return');
-goog.provide('proto.koinos.chain.get_entry_point_args');
-goog.provide('proto.koinos.chain.get_entry_point_return');
-goog.provide('proto.koinos.chain.get_head_info_args');
-goog.provide('proto.koinos.chain.get_head_info_return');
-goog.provide('proto.koinos.chain.get_last_irreversible_block_args');
-goog.provide('proto.koinos.chain.get_last_irreversible_block_return');
-goog.provide('proto.koinos.chain.get_max_account_resources_args');
-goog.provide('proto.koinos.chain.get_max_account_resources_return');
-goog.provide('proto.koinos.chain.get_next_object_args');
-goog.provide('proto.koinos.chain.get_next_object_return');
-goog.provide('proto.koinos.chain.get_object_args');
-goog.provide('proto.koinos.chain.get_object_return');
-goog.provide('proto.koinos.chain.get_prev_object_args');
-goog.provide('proto.koinos.chain.get_prev_object_return');
-goog.provide('proto.koinos.chain.get_transaction_payer_args');
-goog.provide('proto.koinos.chain.get_transaction_payer_return');
-goog.provide('proto.koinos.chain.get_transaction_resource_limit_args');
-goog.provide('proto.koinos.chain.get_transaction_resource_limit_return');
-goog.provide('proto.koinos.chain.get_transaction_signature_args');
-goog.provide('proto.koinos.chain.get_transaction_signature_return');
-goog.provide('proto.koinos.chain.hash_args');
-goog.provide('proto.koinos.chain.hash_return');
+goog.provide('proto.koinos.chain.apply_block_arguments');
+goog.provide('proto.koinos.chain.apply_block_result');
+goog.provide('proto.koinos.chain.apply_call_contract_operation_arguments');
+goog.provide('proto.koinos.chain.apply_call_contract_operation_result');
+goog.provide('proto.koinos.chain.apply_set_system_call_operation_arguments');
+goog.provide('proto.koinos.chain.apply_set_system_call_operation_result');
+goog.provide('proto.koinos.chain.apply_transaction_arguments');
+goog.provide('proto.koinos.chain.apply_transaction_result');
+goog.provide('proto.koinos.chain.apply_upload_contract_operation_arguments');
+goog.provide('proto.koinos.chain.apply_upload_contract_operation_result');
+goog.provide('proto.koinos.chain.call_contract_arguments');
+goog.provide('proto.koinos.chain.call_contract_result');
+goog.provide('proto.koinos.chain.consume_account_rc_arguments');
+goog.provide('proto.koinos.chain.consume_account_rc_result');
+goog.provide('proto.koinos.chain.consume_block_resources_arguments');
+goog.provide('proto.koinos.chain.consume_block_resources_result');
+goog.provide('proto.koinos.chain.exit_contract_arguments');
+goog.provide('proto.koinos.chain.exit_contract_result');
+goog.provide('proto.koinos.chain.get_account_nonce_arguments');
+goog.provide('proto.koinos.chain.get_account_nonce_result');
+goog.provide('proto.koinos.chain.get_account_rc_arguments');
+goog.provide('proto.koinos.chain.get_account_rc_result');
+goog.provide('proto.koinos.chain.get_caller_arguments');
+goog.provide('proto.koinos.chain.get_caller_result');
+goog.provide('proto.koinos.chain.get_contract_arguments_arguments');
+goog.provide('proto.koinos.chain.get_contract_arguments_result');
+goog.provide('proto.koinos.chain.get_contract_arguments_size_arguments');
+goog.provide('proto.koinos.chain.get_contract_arguments_size_result');
+goog.provide('proto.koinos.chain.get_contract_id_arguments');
+goog.provide('proto.koinos.chain.get_contract_id_result');
+goog.provide('proto.koinos.chain.get_entry_point_arguments');
+goog.provide('proto.koinos.chain.get_entry_point_result');
+goog.provide('proto.koinos.chain.get_head_info_arguments');
+goog.provide('proto.koinos.chain.get_head_info_result');
+goog.provide('proto.koinos.chain.get_last_irreversible_block_arguments');
+goog.provide('proto.koinos.chain.get_last_irreversible_block_result');
+goog.provide('proto.koinos.chain.get_next_object_arguments');
+goog.provide('proto.koinos.chain.get_next_object_result');
+goog.provide('proto.koinos.chain.get_object_arguments');
+goog.provide('proto.koinos.chain.get_object_result');
+goog.provide('proto.koinos.chain.get_prev_object_arguments');
+goog.provide('proto.koinos.chain.get_prev_object_result');
+goog.provide('proto.koinos.chain.get_resource_limits_arguments');
+goog.provide('proto.koinos.chain.get_resource_limits_result');
+goog.provide('proto.koinos.chain.get_transaction_payer_arguments');
+goog.provide('proto.koinos.chain.get_transaction_payer_result');
+goog.provide('proto.koinos.chain.get_transaction_rc_limit_arguments');
+goog.provide('proto.koinos.chain.get_transaction_rc_limit_result');
+goog.provide('proto.koinos.chain.get_transaction_signature_arguments');
+goog.provide('proto.koinos.chain.get_transaction_signature_result');
+goog.provide('proto.koinos.chain.hash_arguments');
+goog.provide('proto.koinos.chain.hash_result');
 goog.provide('proto.koinos.chain.head_info');
-goog.provide('proto.koinos.chain.prints_args');
-goog.provide('proto.koinos.chain.prints_return');
+goog.provide('proto.koinos.chain.prints_arguments');
+goog.provide('proto.koinos.chain.prints_result');
 goog.provide('proto.koinos.chain.privilege');
-goog.provide('proto.koinos.chain.put_object_args');
-goog.provide('proto.koinos.chain.put_object_return');
-goog.provide('proto.koinos.chain.recover_public_key_args');
-goog.provide('proto.koinos.chain.recover_public_key_return');
-goog.provide('proto.koinos.chain.require_authority_args');
-goog.provide('proto.koinos.chain.require_authority_return');
-goog.provide('proto.koinos.chain.set_contract_return_args');
-goog.provide('proto.koinos.chain.set_contract_return_return');
-goog.provide('proto.koinos.chain.verify_block_signature_args');
-goog.provide('proto.koinos.chain.verify_block_signature_return');
-goog.provide('proto.koinos.chain.verify_merkle_root_args');
-goog.provide('proto.koinos.chain.verify_merkle_root_return');
+goog.provide('proto.koinos.chain.put_object_arguments');
+goog.provide('proto.koinos.chain.put_object_result');
+goog.provide('proto.koinos.chain.recover_public_key_arguments');
+goog.provide('proto.koinos.chain.recover_public_key_result');
+goog.provide('proto.koinos.chain.require_authority_arguments');
+goog.provide('proto.koinos.chain.require_authority_result');
+goog.provide('proto.koinos.chain.resource_limit_data');
+goog.provide('proto.koinos.chain.set_contract_result_arguments');
+goog.provide('proto.koinos.chain.set_contract_result_result');
+goog.provide('proto.koinos.chain.verify_block_signature_arguments');
+goog.provide('proto.koinos.chain.verify_block_signature_result');
+goog.provide('proto.koinos.chain.verify_merkle_root_arguments');
+goog.provide('proto.koinos.chain.verify_merkle_root_result');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
@@ -114,16 +121,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.prints_args = function(opt_data) {
+proto.koinos.chain.resource_limit_data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.prints_args, jspb.Message);
+goog.inherits(proto.koinos.chain.resource_limit_data, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.prints_args.displayName = 'proto.koinos.chain.prints_args';
+  proto.koinos.chain.resource_limit_data.displayName = 'proto.koinos.chain.resource_limit_data';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -135,16 +142,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.prints_return = function(opt_data) {
+proto.koinos.chain.prints_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.prints_return, jspb.Message);
+goog.inherits(proto.koinos.chain.prints_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.prints_return.displayName = 'proto.koinos.chain.prints_return';
+  proto.koinos.chain.prints_arguments.displayName = 'proto.koinos.chain.prints_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -156,16 +163,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.verify_block_signature_args = function(opt_data) {
+proto.koinos.chain.prints_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.verify_block_signature_args, jspb.Message);
+goog.inherits(proto.koinos.chain.prints_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.verify_block_signature_args.displayName = 'proto.koinos.chain.verify_block_signature_args';
+  proto.koinos.chain.prints_result.displayName = 'proto.koinos.chain.prints_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -177,16 +184,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.verify_block_signature_return = function(opt_data) {
+proto.koinos.chain.verify_block_signature_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.verify_block_signature_return, jspb.Message);
+goog.inherits(proto.koinos.chain.verify_block_signature_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.verify_block_signature_return.displayName = 'proto.koinos.chain.verify_block_signature_return';
+  proto.koinos.chain.verify_block_signature_arguments.displayName = 'proto.koinos.chain.verify_block_signature_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -198,16 +205,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.verify_merkle_root_args = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.koinos.chain.verify_merkle_root_args.repeatedFields_, null);
+proto.koinos.chain.verify_block_signature_result = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.verify_merkle_root_args, jspb.Message);
+goog.inherits(proto.koinos.chain.verify_block_signature_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.verify_merkle_root_args.displayName = 'proto.koinos.chain.verify_merkle_root_args';
+  proto.koinos.chain.verify_block_signature_result.displayName = 'proto.koinos.chain.verify_block_signature_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -219,16 +226,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.verify_merkle_root_return = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.koinos.chain.verify_merkle_root_arguments = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.koinos.chain.verify_merkle_root_arguments.repeatedFields_, null);
 };
-goog.inherits(proto.koinos.chain.verify_merkle_root_return, jspb.Message);
+goog.inherits(proto.koinos.chain.verify_merkle_root_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.verify_merkle_root_return.displayName = 'proto.koinos.chain.verify_merkle_root_return';
+  proto.koinos.chain.verify_merkle_root_arguments.displayName = 'proto.koinos.chain.verify_merkle_root_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -240,16 +247,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_block_args = function(opt_data) {
+proto.koinos.chain.verify_merkle_root_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_block_args, jspb.Message);
+goog.inherits(proto.koinos.chain.verify_merkle_root_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_block_args.displayName = 'proto.koinos.chain.apply_block_args';
+  proto.koinos.chain.verify_merkle_root_result.displayName = 'proto.koinos.chain.verify_merkle_root_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -261,16 +268,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_block_return = function(opt_data) {
+proto.koinos.chain.apply_block_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_block_return, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_block_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_block_return.displayName = 'proto.koinos.chain.apply_block_return';
+  proto.koinos.chain.apply_block_arguments.displayName = 'proto.koinos.chain.apply_block_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -282,16 +289,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_transaction_args = function(opt_data) {
+proto.koinos.chain.apply_block_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_transaction_args, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_block_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_transaction_args.displayName = 'proto.koinos.chain.apply_transaction_args';
+  proto.koinos.chain.apply_block_result.displayName = 'proto.koinos.chain.apply_block_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -303,16 +310,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_transaction_return = function(opt_data) {
+proto.koinos.chain.apply_transaction_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_transaction_return, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_transaction_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_transaction_return.displayName = 'proto.koinos.chain.apply_transaction_return';
+  proto.koinos.chain.apply_transaction_arguments.displayName = 'proto.koinos.chain.apply_transaction_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -324,16 +331,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_upload_contract_operation_args = function(opt_data) {
+proto.koinos.chain.apply_transaction_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_upload_contract_operation_args, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_transaction_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_upload_contract_operation_args.displayName = 'proto.koinos.chain.apply_upload_contract_operation_args';
+  proto.koinos.chain.apply_transaction_result.displayName = 'proto.koinos.chain.apply_transaction_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -345,16 +352,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_upload_contract_operation_return = function(opt_data) {
+proto.koinos.chain.apply_upload_contract_operation_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_upload_contract_operation_return, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_upload_contract_operation_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_upload_contract_operation_return.displayName = 'proto.koinos.chain.apply_upload_contract_operation_return';
+  proto.koinos.chain.apply_upload_contract_operation_arguments.displayName = 'proto.koinos.chain.apply_upload_contract_operation_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -366,16 +373,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_call_contract_operation_args = function(opt_data) {
+proto.koinos.chain.apply_upload_contract_operation_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_call_contract_operation_args, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_upload_contract_operation_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_call_contract_operation_args.displayName = 'proto.koinos.chain.apply_call_contract_operation_args';
+  proto.koinos.chain.apply_upload_contract_operation_result.displayName = 'proto.koinos.chain.apply_upload_contract_operation_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -387,16 +394,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_call_contract_operation_return = function(opt_data) {
+proto.koinos.chain.apply_call_contract_operation_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_call_contract_operation_return, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_call_contract_operation_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_call_contract_operation_return.displayName = 'proto.koinos.chain.apply_call_contract_operation_return';
+  proto.koinos.chain.apply_call_contract_operation_arguments.displayName = 'proto.koinos.chain.apply_call_contract_operation_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -408,16 +415,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_set_system_call_operation_args = function(opt_data) {
+proto.koinos.chain.apply_call_contract_operation_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_set_system_call_operation_args, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_call_contract_operation_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_set_system_call_operation_args.displayName = 'proto.koinos.chain.apply_set_system_call_operation_args';
+  proto.koinos.chain.apply_call_contract_operation_result.displayName = 'proto.koinos.chain.apply_call_contract_operation_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -429,16 +436,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.apply_set_system_call_operation_return = function(opt_data) {
+proto.koinos.chain.apply_set_system_call_operation_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.apply_set_system_call_operation_return, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_set_system_call_operation_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.apply_set_system_call_operation_return.displayName = 'proto.koinos.chain.apply_set_system_call_operation_return';
+  proto.koinos.chain.apply_set_system_call_operation_arguments.displayName = 'proto.koinos.chain.apply_set_system_call_operation_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -450,16 +457,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.put_object_args = function(opt_data) {
+proto.koinos.chain.apply_set_system_call_operation_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.put_object_args, jspb.Message);
+goog.inherits(proto.koinos.chain.apply_set_system_call_operation_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.put_object_args.displayName = 'proto.koinos.chain.put_object_args';
+  proto.koinos.chain.apply_set_system_call_operation_result.displayName = 'proto.koinos.chain.apply_set_system_call_operation_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -471,16 +478,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.put_object_return = function(opt_data) {
+proto.koinos.chain.put_object_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.put_object_return, jspb.Message);
+goog.inherits(proto.koinos.chain.put_object_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.put_object_return.displayName = 'proto.koinos.chain.put_object_return';
+  proto.koinos.chain.put_object_arguments.displayName = 'proto.koinos.chain.put_object_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -492,16 +499,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_object_args = function(opt_data) {
+proto.koinos.chain.put_object_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_object_args, jspb.Message);
+goog.inherits(proto.koinos.chain.put_object_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_object_args.displayName = 'proto.koinos.chain.get_object_args';
+  proto.koinos.chain.put_object_result.displayName = 'proto.koinos.chain.put_object_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -513,16 +520,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_object_return = function(opt_data) {
+proto.koinos.chain.get_object_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_object_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_object_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_object_return.displayName = 'proto.koinos.chain.get_object_return';
+  proto.koinos.chain.get_object_arguments.displayName = 'proto.koinos.chain.get_object_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -534,16 +541,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_next_object_args = function(opt_data) {
+proto.koinos.chain.get_object_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_next_object_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_object_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_next_object_args.displayName = 'proto.koinos.chain.get_next_object_args';
+  proto.koinos.chain.get_object_result.displayName = 'proto.koinos.chain.get_object_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -555,16 +562,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_next_object_return = function(opt_data) {
+proto.koinos.chain.get_next_object_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_next_object_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_next_object_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_next_object_return.displayName = 'proto.koinos.chain.get_next_object_return';
+  proto.koinos.chain.get_next_object_arguments.displayName = 'proto.koinos.chain.get_next_object_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -576,16 +583,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_prev_object_args = function(opt_data) {
+proto.koinos.chain.get_next_object_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_prev_object_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_next_object_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_prev_object_args.displayName = 'proto.koinos.chain.get_prev_object_args';
+  proto.koinos.chain.get_next_object_result.displayName = 'proto.koinos.chain.get_next_object_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -597,16 +604,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_prev_object_return = function(opt_data) {
+proto.koinos.chain.get_prev_object_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_prev_object_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_prev_object_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_prev_object_return.displayName = 'proto.koinos.chain.get_prev_object_return';
+  proto.koinos.chain.get_prev_object_arguments.displayName = 'proto.koinos.chain.get_prev_object_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -618,16 +625,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.call_contract_args = function(opt_data) {
+proto.koinos.chain.get_prev_object_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.call_contract_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_prev_object_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.call_contract_args.displayName = 'proto.koinos.chain.call_contract_args';
+  proto.koinos.chain.get_prev_object_result.displayName = 'proto.koinos.chain.get_prev_object_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -639,16 +646,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.call_contract_return = function(opt_data) {
+proto.koinos.chain.call_contract_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.call_contract_return, jspb.Message);
+goog.inherits(proto.koinos.chain.call_contract_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.call_contract_return.displayName = 'proto.koinos.chain.call_contract_return';
+  proto.koinos.chain.call_contract_arguments.displayName = 'proto.koinos.chain.call_contract_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -660,16 +667,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_entry_point_args = function(opt_data) {
+proto.koinos.chain.call_contract_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_entry_point_args, jspb.Message);
+goog.inherits(proto.koinos.chain.call_contract_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_entry_point_args.displayName = 'proto.koinos.chain.get_entry_point_args';
+  proto.koinos.chain.call_contract_result.displayName = 'proto.koinos.chain.call_contract_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -681,16 +688,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_entry_point_return = function(opt_data) {
+proto.koinos.chain.get_entry_point_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_entry_point_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_entry_point_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_entry_point_return.displayName = 'proto.koinos.chain.get_entry_point_return';
+  proto.koinos.chain.get_entry_point_arguments.displayName = 'proto.koinos.chain.get_entry_point_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -702,16 +709,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_contract_args_size_args = function(opt_data) {
+proto.koinos.chain.get_entry_point_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_contract_args_size_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_entry_point_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_contract_args_size_args.displayName = 'proto.koinos.chain.get_contract_args_size_args';
+  proto.koinos.chain.get_entry_point_result.displayName = 'proto.koinos.chain.get_entry_point_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -723,16 +730,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_contract_args_size_return = function(opt_data) {
+proto.koinos.chain.get_contract_arguments_size_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_contract_args_size_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_contract_arguments_size_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_contract_args_size_return.displayName = 'proto.koinos.chain.get_contract_args_size_return';
+  proto.koinos.chain.get_contract_arguments_size_arguments.displayName = 'proto.koinos.chain.get_contract_arguments_size_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -744,16 +751,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_contract_args_args = function(opt_data) {
+proto.koinos.chain.get_contract_arguments_size_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_contract_args_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_contract_arguments_size_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_contract_args_args.displayName = 'proto.koinos.chain.get_contract_args_args';
+  proto.koinos.chain.get_contract_arguments_size_result.displayName = 'proto.koinos.chain.get_contract_arguments_size_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -765,16 +772,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_contract_args_return = function(opt_data) {
+proto.koinos.chain.get_contract_arguments_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_contract_args_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_contract_arguments_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_contract_args_return.displayName = 'proto.koinos.chain.get_contract_args_return';
+  proto.koinos.chain.get_contract_arguments_arguments.displayName = 'proto.koinos.chain.get_contract_arguments_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -786,16 +793,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.set_contract_return_args = function(opt_data) {
+proto.koinos.chain.get_contract_arguments_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.set_contract_return_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_contract_arguments_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.set_contract_return_args.displayName = 'proto.koinos.chain.set_contract_return_args';
+  proto.koinos.chain.get_contract_arguments_result.displayName = 'proto.koinos.chain.get_contract_arguments_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -807,16 +814,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.set_contract_return_return = function(opt_data) {
+proto.koinos.chain.set_contract_result_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.set_contract_return_return, jspb.Message);
+goog.inherits(proto.koinos.chain.set_contract_result_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.set_contract_return_return.displayName = 'proto.koinos.chain.set_contract_return_return';
+  proto.koinos.chain.set_contract_result_arguments.displayName = 'proto.koinos.chain.set_contract_result_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -828,16 +835,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.exit_contract_args = function(opt_data) {
+proto.koinos.chain.set_contract_result_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.exit_contract_args, jspb.Message);
+goog.inherits(proto.koinos.chain.set_contract_result_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.exit_contract_args.displayName = 'proto.koinos.chain.exit_contract_args';
+  proto.koinos.chain.set_contract_result_result.displayName = 'proto.koinos.chain.set_contract_result_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -849,16 +856,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.exit_contract_return = function(opt_data) {
+proto.koinos.chain.exit_contract_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.exit_contract_return, jspb.Message);
+goog.inherits(proto.koinos.chain.exit_contract_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.exit_contract_return.displayName = 'proto.koinos.chain.exit_contract_return';
+  proto.koinos.chain.exit_contract_arguments.displayName = 'proto.koinos.chain.exit_contract_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -870,16 +877,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_head_info_args = function(opt_data) {
+proto.koinos.chain.exit_contract_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_head_info_args, jspb.Message);
+goog.inherits(proto.koinos.chain.exit_contract_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_head_info_args.displayName = 'proto.koinos.chain.get_head_info_args';
+  proto.koinos.chain.exit_contract_result.displayName = 'proto.koinos.chain.exit_contract_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -891,16 +898,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_head_info_return = function(opt_data) {
+proto.koinos.chain.get_head_info_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_head_info_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_head_info_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_head_info_return.displayName = 'proto.koinos.chain.get_head_info_return';
+  proto.koinos.chain.get_head_info_arguments.displayName = 'proto.koinos.chain.get_head_info_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -912,16 +919,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.hash_args = function(opt_data) {
+proto.koinos.chain.get_head_info_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.hash_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_head_info_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.hash_args.displayName = 'proto.koinos.chain.hash_args';
+  proto.koinos.chain.get_head_info_result.displayName = 'proto.koinos.chain.get_head_info_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -933,16 +940,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.hash_return = function(opt_data) {
+proto.koinos.chain.hash_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.hash_return, jspb.Message);
+goog.inherits(proto.koinos.chain.hash_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.hash_return.displayName = 'proto.koinos.chain.hash_return';
+  proto.koinos.chain.hash_arguments.displayName = 'proto.koinos.chain.hash_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -954,16 +961,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.recover_public_key_args = function(opt_data) {
+proto.koinos.chain.hash_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.recover_public_key_args, jspb.Message);
+goog.inherits(proto.koinos.chain.hash_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.recover_public_key_args.displayName = 'proto.koinos.chain.recover_public_key_args';
+  proto.koinos.chain.hash_result.displayName = 'proto.koinos.chain.hash_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -975,16 +982,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.recover_public_key_return = function(opt_data) {
+proto.koinos.chain.recover_public_key_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.recover_public_key_return, jspb.Message);
+goog.inherits(proto.koinos.chain.recover_public_key_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.recover_public_key_return.displayName = 'proto.koinos.chain.recover_public_key_return';
+  proto.koinos.chain.recover_public_key_arguments.displayName = 'proto.koinos.chain.recover_public_key_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -996,16 +1003,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_transaction_payer_args = function(opt_data) {
+proto.koinos.chain.recover_public_key_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_transaction_payer_args, jspb.Message);
+goog.inherits(proto.koinos.chain.recover_public_key_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_transaction_payer_args.displayName = 'proto.koinos.chain.get_transaction_payer_args';
+  proto.koinos.chain.recover_public_key_result.displayName = 'proto.koinos.chain.recover_public_key_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1017,16 +1024,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_transaction_payer_return = function(opt_data) {
+proto.koinos.chain.get_transaction_payer_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_transaction_payer_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_transaction_payer_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_transaction_payer_return.displayName = 'proto.koinos.chain.get_transaction_payer_return';
+  proto.koinos.chain.get_transaction_payer_arguments.displayName = 'proto.koinos.chain.get_transaction_payer_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1038,16 +1045,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_max_account_resources_args = function(opt_data) {
+proto.koinos.chain.get_transaction_payer_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_max_account_resources_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_transaction_payer_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_max_account_resources_args.displayName = 'proto.koinos.chain.get_max_account_resources_args';
+  proto.koinos.chain.get_transaction_payer_result.displayName = 'proto.koinos.chain.get_transaction_payer_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1059,16 +1066,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_max_account_resources_return = function(opt_data) {
+proto.koinos.chain.get_account_rc_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_max_account_resources_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_account_rc_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_max_account_resources_return.displayName = 'proto.koinos.chain.get_max_account_resources_return';
+  proto.koinos.chain.get_account_rc_arguments.displayName = 'proto.koinos.chain.get_account_rc_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1080,16 +1087,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_transaction_resource_limit_args = function(opt_data) {
+proto.koinos.chain.get_account_rc_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_transaction_resource_limit_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_account_rc_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_transaction_resource_limit_args.displayName = 'proto.koinos.chain.get_transaction_resource_limit_args';
+  proto.koinos.chain.get_account_rc_result.displayName = 'proto.koinos.chain.get_account_rc_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1101,16 +1108,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_transaction_resource_limit_return = function(opt_data) {
+proto.koinos.chain.consume_account_rc_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_transaction_resource_limit_return, jspb.Message);
+goog.inherits(proto.koinos.chain.consume_account_rc_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_transaction_resource_limit_return.displayName = 'proto.koinos.chain.get_transaction_resource_limit_return';
+  proto.koinos.chain.consume_account_rc_arguments.displayName = 'proto.koinos.chain.consume_account_rc_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1122,16 +1129,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_last_irreversible_block_args = function(opt_data) {
+proto.koinos.chain.consume_account_rc_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_last_irreversible_block_args, jspb.Message);
+goog.inherits(proto.koinos.chain.consume_account_rc_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_last_irreversible_block_args.displayName = 'proto.koinos.chain.get_last_irreversible_block_args';
+  proto.koinos.chain.consume_account_rc_result.displayName = 'proto.koinos.chain.consume_account_rc_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1143,16 +1150,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_last_irreversible_block_return = function(opt_data) {
+proto.koinos.chain.get_resource_limits_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_last_irreversible_block_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_resource_limits_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_last_irreversible_block_return.displayName = 'proto.koinos.chain.get_last_irreversible_block_return';
+  proto.koinos.chain.get_resource_limits_arguments.displayName = 'proto.koinos.chain.get_resource_limits_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1164,16 +1171,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_caller_args = function(opt_data) {
+proto.koinos.chain.get_resource_limits_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_caller_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_resource_limits_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_caller_args.displayName = 'proto.koinos.chain.get_caller_args';
+  proto.koinos.chain.get_resource_limits_result.displayName = 'proto.koinos.chain.get_resource_limits_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1185,16 +1192,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_caller_return = function(opt_data) {
+proto.koinos.chain.consume_block_resources_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_caller_return, jspb.Message);
+goog.inherits(proto.koinos.chain.consume_block_resources_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_caller_return.displayName = 'proto.koinos.chain.get_caller_return';
+  proto.koinos.chain.consume_block_resources_arguments.displayName = 'proto.koinos.chain.consume_block_resources_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1206,16 +1213,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.require_authority_args = function(opt_data) {
+proto.koinos.chain.consume_block_resources_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.require_authority_args, jspb.Message);
+goog.inherits(proto.koinos.chain.consume_block_resources_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.require_authority_args.displayName = 'proto.koinos.chain.require_authority_args';
+  proto.koinos.chain.consume_block_resources_result.displayName = 'proto.koinos.chain.consume_block_resources_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1227,16 +1234,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.require_authority_return = function(opt_data) {
+proto.koinos.chain.get_transaction_rc_limit_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.require_authority_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_transaction_rc_limit_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.require_authority_return.displayName = 'proto.koinos.chain.require_authority_return';
+  proto.koinos.chain.get_transaction_rc_limit_arguments.displayName = 'proto.koinos.chain.get_transaction_rc_limit_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1248,16 +1255,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_transaction_signature_args = function(opt_data) {
+proto.koinos.chain.get_transaction_rc_limit_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_transaction_signature_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_transaction_rc_limit_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_transaction_signature_args.displayName = 'proto.koinos.chain.get_transaction_signature_args';
+  proto.koinos.chain.get_transaction_rc_limit_result.displayName = 'proto.koinos.chain.get_transaction_rc_limit_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1269,16 +1276,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_transaction_signature_return = function(opt_data) {
+proto.koinos.chain.get_last_irreversible_block_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_transaction_signature_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_last_irreversible_block_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_transaction_signature_return.displayName = 'proto.koinos.chain.get_transaction_signature_return';
+  proto.koinos.chain.get_last_irreversible_block_arguments.displayName = 'proto.koinos.chain.get_last_irreversible_block_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1290,16 +1297,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_contract_id_args = function(opt_data) {
+proto.koinos.chain.get_last_irreversible_block_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_contract_id_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_last_irreversible_block_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_contract_id_args.displayName = 'proto.koinos.chain.get_contract_id_args';
+  proto.koinos.chain.get_last_irreversible_block_result.displayName = 'proto.koinos.chain.get_last_irreversible_block_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1311,16 +1318,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_contract_id_return = function(opt_data) {
+proto.koinos.chain.get_caller_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_contract_id_return, jspb.Message);
+goog.inherits(proto.koinos.chain.get_caller_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_contract_id_return.displayName = 'proto.koinos.chain.get_contract_id_return';
+  proto.koinos.chain.get_caller_arguments.displayName = 'proto.koinos.chain.get_caller_arguments';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1332,16 +1339,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_account_nonce_args = function(opt_data) {
+proto.koinos.chain.get_caller_result = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_account_nonce_args, jspb.Message);
+goog.inherits(proto.koinos.chain.get_caller_result, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_account_nonce_args.displayName = 'proto.koinos.chain.get_account_nonce_args';
+  proto.koinos.chain.get_caller_result.displayName = 'proto.koinos.chain.get_caller_result';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1353,16 +1360,163 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.koinos.chain.get_account_nonce_return = function(opt_data) {
+proto.koinos.chain.require_authority_arguments = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.koinos.chain.get_account_nonce_return, jspb.Message);
+goog.inherits(proto.koinos.chain.require_authority_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.koinos.chain.get_account_nonce_return.displayName = 'proto.koinos.chain.get_account_nonce_return';
+  proto.koinos.chain.require_authority_arguments.displayName = 'proto.koinos.chain.require_authority_arguments';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.require_authority_result = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.require_authority_result, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.require_authority_result.displayName = 'proto.koinos.chain.require_authority_result';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.get_transaction_signature_arguments = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.get_transaction_signature_arguments, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.get_transaction_signature_arguments.displayName = 'proto.koinos.chain.get_transaction_signature_arguments';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.get_transaction_signature_result = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.get_transaction_signature_result, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.get_transaction_signature_result.displayName = 'proto.koinos.chain.get_transaction_signature_result';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.get_contract_id_arguments = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.get_contract_id_arguments, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.get_contract_id_arguments.displayName = 'proto.koinos.chain.get_contract_id_arguments';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.get_contract_id_result = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.get_contract_id_result, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.get_contract_id_result.displayName = 'proto.koinos.chain.get_contract_id_result';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.get_account_nonce_arguments = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.get_account_nonce_arguments, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.get_account_nonce_arguments.displayName = 'proto.koinos.chain.get_account_nonce_arguments';
+}
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.koinos.chain.get_account_nonce_result = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.koinos.chain.get_account_nonce_result, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.koinos.chain.get_account_nonce_result.displayName = 'proto.koinos.chain.get_account_nonce_result';
 }
 
 
@@ -1591,8 +1745,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.prints_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.prints_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.resource_limit_data.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.resource_limit_data.toObject(opt_includeInstance, this);
 };
 
 
@@ -1601,11 +1755,291 @@ proto.koinos.chain.prints_args.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.prints_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.resource_limit_data} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.prints_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.resource_limit_data.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    diskStorageLimit: jspb.Message.getFieldWithDefault(msg, 1, "0"),
+    diskStorageCost: jspb.Message.getFieldWithDefault(msg, 2, "0"),
+    networkBandwidthLimit: jspb.Message.getFieldWithDefault(msg, 3, "0"),
+    networkBandwidthCost: jspb.Message.getFieldWithDefault(msg, 4, "0"),
+    computeBandwidthLimit: jspb.Message.getFieldWithDefault(msg, 5, "0"),
+    computeBandwidthCost: jspb.Message.getFieldWithDefault(msg, 6, "0")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.resource_limit_data}
+ */
+proto.koinos.chain.resource_limit_data.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.resource_limit_data;
+  return proto.koinos.chain.resource_limit_data.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.resource_limit_data} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.resource_limit_data}
+ */
+proto.koinos.chain.resource_limit_data.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setDiskStorageLimit(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setDiskStorageCost(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setNetworkBandwidthLimit(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setNetworkBandwidthCost(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setComputeBandwidthLimit(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setComputeBandwidthCost(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.resource_limit_data.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.resource_limit_data.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.resource_limit_data} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.resource_limit_data.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDiskStorageLimit();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      1,
+      f
+    );
+  }
+  f = message.getDiskStorageCost();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      2,
+      f
+    );
+  }
+  f = message.getNetworkBandwidthLimit();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      3,
+      f
+    );
+  }
+  f = message.getNetworkBandwidthCost();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      4,
+      f
+    );
+  }
+  f = message.getComputeBandwidthLimit();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      5,
+      f
+    );
+  }
+  f = message.getComputeBandwidthCost();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      6,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 disk_storage_limit = 1;
+ * @return {string}
+ */
+proto.koinos.chain.resource_limit_data.prototype.getDiskStorageLimit = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.resource_limit_data} returns this
+ */
+proto.koinos.chain.resource_limit_data.prototype.setDiskStorageLimit = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 disk_storage_cost = 2;
+ * @return {string}
+ */
+proto.koinos.chain.resource_limit_data.prototype.getDiskStorageCost = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.resource_limit_data} returns this
+ */
+proto.koinos.chain.resource_limit_data.prototype.setDiskStorageCost = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 2, value);
+};
+
+
+/**
+ * optional uint64 network_bandwidth_limit = 3;
+ * @return {string}
+ */
+proto.koinos.chain.resource_limit_data.prototype.getNetworkBandwidthLimit = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.resource_limit_data} returns this
+ */
+proto.koinos.chain.resource_limit_data.prototype.setNetworkBandwidthLimit = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 3, value);
+};
+
+
+/**
+ * optional uint64 network_bandwidth_cost = 4;
+ * @return {string}
+ */
+proto.koinos.chain.resource_limit_data.prototype.getNetworkBandwidthCost = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.resource_limit_data} returns this
+ */
+proto.koinos.chain.resource_limit_data.prototype.setNetworkBandwidthCost = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 4, value);
+};
+
+
+/**
+ * optional uint64 compute_bandwidth_limit = 5;
+ * @return {string}
+ */
+proto.koinos.chain.resource_limit_data.prototype.getComputeBandwidthLimit = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.resource_limit_data} returns this
+ */
+proto.koinos.chain.resource_limit_data.prototype.setComputeBandwidthLimit = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 5, value);
+};
+
+
+/**
+ * optional uint64 compute_bandwidth_cost = 6;
+ * @return {string}
+ */
+proto.koinos.chain.resource_limit_data.prototype.getComputeBandwidthCost = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.resource_limit_data} returns this
+ */
+proto.koinos.chain.resource_limit_data.prototype.setComputeBandwidthCost = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 6, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.prints_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.prints_arguments.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.prints_arguments} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.prints_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     message: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -1621,23 +2055,23 @@ proto.koinos.chain.prints_args.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.prints_args}
+ * @return {!proto.koinos.chain.prints_arguments}
  */
-proto.koinos.chain.prints_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.prints_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.prints_args;
-  return proto.koinos.chain.prints_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.prints_arguments;
+  return proto.koinos.chain.prints_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.prints_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.prints_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.prints_args}
+ * @return {!proto.koinos.chain.prints_arguments}
  */
-proto.koinos.chain.prints_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.prints_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1661,9 +2095,9 @@ proto.koinos.chain.prints_args.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.prints_args.prototype.serializeBinary = function() {
+proto.koinos.chain.prints_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.prints_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.prints_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1671,11 +2105,11 @@ proto.koinos.chain.prints_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.prints_args} message
+ * @param {!proto.koinos.chain.prints_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.prints_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.prints_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMessage();
   if (f.length > 0) {
@@ -1691,16 +2125,16 @@ proto.koinos.chain.prints_args.serializeBinaryToWriter = function(message, write
  * optional string message = 1;
  * @return {string}
  */
-proto.koinos.chain.prints_args.prototype.getMessage = function() {
+proto.koinos.chain.prints_arguments.prototype.getMessage = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.prints_args} returns this
+ * @return {!proto.koinos.chain.prints_arguments} returns this
  */
-proto.koinos.chain.prints_args.prototype.setMessage = function(value) {
+proto.koinos.chain.prints_arguments.prototype.setMessage = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1721,8 +2155,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.prints_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.prints_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.prints_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.prints_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -1731,11 +2165,11 @@ proto.koinos.chain.prints_return.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.prints_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.prints_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.prints_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.prints_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -1751,23 +2185,23 @@ proto.koinos.chain.prints_return.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.prints_return}
+ * @return {!proto.koinos.chain.prints_result}
  */
-proto.koinos.chain.prints_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.prints_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.prints_return;
-  return proto.koinos.chain.prints_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.prints_result;
+  return proto.koinos.chain.prints_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.prints_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.prints_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.prints_return}
+ * @return {!proto.koinos.chain.prints_result}
  */
-proto.koinos.chain.prints_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.prints_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1787,9 +2221,9 @@ proto.koinos.chain.prints_return.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.prints_return.prototype.serializeBinary = function() {
+proto.koinos.chain.prints_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.prints_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.prints_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1797,11 +2231,11 @@ proto.koinos.chain.prints_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.prints_return} message
+ * @param {!proto.koinos.chain.prints_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.prints_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.prints_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -1822,8 +2256,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.verify_block_signature_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.verify_block_signature_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.verify_block_signature_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -1832,11 +2266,11 @@ proto.koinos.chain.verify_block_signature_args.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.verify_block_signature_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.verify_block_signature_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_block_signature_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.verify_block_signature_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     digest: msg.getDigest_asB64(),
     active: msg.getActive_asB64(),
@@ -1854,23 +2288,23 @@ proto.koinos.chain.verify_block_signature_args.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.verify_block_signature_args}
+ * @return {!proto.koinos.chain.verify_block_signature_arguments}
  */
-proto.koinos.chain.verify_block_signature_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.verify_block_signature_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.verify_block_signature_args;
-  return proto.koinos.chain.verify_block_signature_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.verify_block_signature_arguments;
+  return proto.koinos.chain.verify_block_signature_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.verify_block_signature_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.verify_block_signature_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.verify_block_signature_args}
+ * @return {!proto.koinos.chain.verify_block_signature_arguments}
  */
-proto.koinos.chain.verify_block_signature_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.verify_block_signature_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1902,9 +2336,9 @@ proto.koinos.chain.verify_block_signature_args.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.serializeBinary = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.verify_block_signature_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.verify_block_signature_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1912,11 +2346,11 @@ proto.koinos.chain.verify_block_signature_args.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.verify_block_signature_args} message
+ * @param {!proto.koinos.chain.verify_block_signature_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_block_signature_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.verify_block_signature_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDigest_asU8();
   if (f.length > 0) {
@@ -1946,7 +2380,7 @@ proto.koinos.chain.verify_block_signature_args.serializeBinaryToWriter = functio
  * optional bytes digest = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getDigest = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getDigest = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -1956,7 +2390,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getDigest = function() 
  * This is a type-conversion wrapper around `getDigest()`
  * @return {string}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getDigest_asB64 = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getDigest_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getDigest()));
 };
@@ -1969,7 +2403,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getDigest_asB64 = funct
  * This is a type-conversion wrapper around `getDigest()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getDigest_asU8 = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getDigest_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getDigest()));
 };
@@ -1977,9 +2411,9 @@ proto.koinos.chain.verify_block_signature_args.prototype.getDigest_asU8 = functi
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.verify_block_signature_args} returns this
+ * @return {!proto.koinos.chain.verify_block_signature_arguments} returns this
  */
-proto.koinos.chain.verify_block_signature_args.prototype.setDigest = function(value) {
+proto.koinos.chain.verify_block_signature_arguments.prototype.setDigest = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -1988,7 +2422,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.setDigest = function(va
  * optional bytes active = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getActive = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getActive = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -1998,7 +2432,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getActive = function() 
  * This is a type-conversion wrapper around `getActive()`
  * @return {string}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getActive_asB64 = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getActive_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getActive()));
 };
@@ -2011,7 +2445,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getActive_asB64 = funct
  * This is a type-conversion wrapper around `getActive()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getActive_asU8 = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getActive_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getActive()));
 };
@@ -2019,9 +2453,9 @@ proto.koinos.chain.verify_block_signature_args.prototype.getActive_asU8 = functi
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.verify_block_signature_args} returns this
+ * @return {!proto.koinos.chain.verify_block_signature_arguments} returns this
  */
-proto.koinos.chain.verify_block_signature_args.prototype.setActive = function(value) {
+proto.koinos.chain.verify_block_signature_arguments.prototype.setActive = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -2030,7 +2464,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.setActive = function(va
  * optional bytes signature_data = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getSignatureData = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -2040,7 +2474,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData = func
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {string}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData_asB64 = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getSignatureData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSignatureData()));
 };
@@ -2053,7 +2487,7 @@ proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData_asB64 
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData_asU8 = function() {
+proto.koinos.chain.verify_block_signature_arguments.prototype.getSignatureData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSignatureData()));
 };
@@ -2061,9 +2495,9 @@ proto.koinos.chain.verify_block_signature_args.prototype.getSignatureData_asU8 =
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.verify_block_signature_args} returns this
+ * @return {!proto.koinos.chain.verify_block_signature_arguments} returns this
  */
-proto.koinos.chain.verify_block_signature_args.prototype.setSignatureData = function(value) {
+proto.koinos.chain.verify_block_signature_arguments.prototype.setSignatureData = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -2084,8 +2518,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.verify_block_signature_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.verify_block_signature_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.verify_block_signature_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.verify_block_signature_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -2094,11 +2528,11 @@ proto.koinos.chain.verify_block_signature_return.prototype.toObject = function(o
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.verify_block_signature_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.verify_block_signature_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_block_signature_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.verify_block_signature_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
@@ -2114,23 +2548,23 @@ proto.koinos.chain.verify_block_signature_return.toObject = function(includeInst
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.verify_block_signature_return}
+ * @return {!proto.koinos.chain.verify_block_signature_result}
  */
-proto.koinos.chain.verify_block_signature_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.verify_block_signature_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.verify_block_signature_return;
-  return proto.koinos.chain.verify_block_signature_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.verify_block_signature_result;
+  return proto.koinos.chain.verify_block_signature_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.verify_block_signature_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.verify_block_signature_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.verify_block_signature_return}
+ * @return {!proto.koinos.chain.verify_block_signature_result}
  */
-proto.koinos.chain.verify_block_signature_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.verify_block_signature_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2154,9 +2588,9 @@ proto.koinos.chain.verify_block_signature_return.deserializeBinaryFromReader = f
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_block_signature_return.prototype.serializeBinary = function() {
+proto.koinos.chain.verify_block_signature_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.verify_block_signature_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.verify_block_signature_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2164,11 +2598,11 @@ proto.koinos.chain.verify_block_signature_return.prototype.serializeBinary = fun
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.verify_block_signature_return} message
+ * @param {!proto.koinos.chain.verify_block_signature_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_block_signature_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.verify_block_signature_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (f) {
@@ -2184,16 +2618,16 @@ proto.koinos.chain.verify_block_signature_return.serializeBinaryToWriter = funct
  * optional bool value = 1;
  * @return {boolean}
  */
-proto.koinos.chain.verify_block_signature_return.prototype.getValue = function() {
+proto.koinos.chain.verify_block_signature_result.prototype.getValue = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.koinos.chain.verify_block_signature_return} returns this
+ * @return {!proto.koinos.chain.verify_block_signature_result} returns this
  */
-proto.koinos.chain.verify_block_signature_return.prototype.setValue = function(value) {
+proto.koinos.chain.verify_block_signature_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -2204,7 +2638,7 @@ proto.koinos.chain.verify_block_signature_return.prototype.setValue = function(v
  * @private {!Array<number>}
  * @const
  */
-proto.koinos.chain.verify_merkle_root_args.repeatedFields_ = [2];
+proto.koinos.chain.verify_merkle_root_arguments.repeatedFields_ = [2];
 
 
 
@@ -2221,8 +2655,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.verify_merkle_root_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.verify_merkle_root_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.verify_merkle_root_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -2231,11 +2665,11 @@ proto.koinos.chain.verify_merkle_root_args.prototype.toObject = function(opt_inc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.verify_merkle_root_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.verify_merkle_root_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_merkle_root_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.verify_merkle_root_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     root: msg.getRoot_asB64(),
     hashesList: msg.getHashesList_asB64()
@@ -2252,23 +2686,23 @@ proto.koinos.chain.verify_merkle_root_args.toObject = function(includeInstance, 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.verify_merkle_root_args}
+ * @return {!proto.koinos.chain.verify_merkle_root_arguments}
  */
-proto.koinos.chain.verify_merkle_root_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.verify_merkle_root_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.verify_merkle_root_args;
-  return proto.koinos.chain.verify_merkle_root_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.verify_merkle_root_arguments;
+  return proto.koinos.chain.verify_merkle_root_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.verify_merkle_root_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.verify_merkle_root_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.verify_merkle_root_args}
+ * @return {!proto.koinos.chain.verify_merkle_root_arguments}
  */
-proto.koinos.chain.verify_merkle_root_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.verify_merkle_root_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2296,9 +2730,9 @@ proto.koinos.chain.verify_merkle_root_args.deserializeBinaryFromReader = functio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.serializeBinary = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.verify_merkle_root_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.verify_merkle_root_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2306,11 +2740,11 @@ proto.koinos.chain.verify_merkle_root_args.prototype.serializeBinary = function(
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.verify_merkle_root_args} message
+ * @param {!proto.koinos.chain.verify_merkle_root_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_merkle_root_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.verify_merkle_root_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRoot_asU8();
   if (f.length > 0) {
@@ -2333,7 +2767,7 @@ proto.koinos.chain.verify_merkle_root_args.serializeBinaryToWriter = function(me
  * optional bytes root = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.getRoot = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.getRoot = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -2343,7 +2777,7 @@ proto.koinos.chain.verify_merkle_root_args.prototype.getRoot = function() {
  * This is a type-conversion wrapper around `getRoot()`
  * @return {string}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.getRoot_asB64 = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.getRoot_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getRoot()));
 };
@@ -2356,7 +2790,7 @@ proto.koinos.chain.verify_merkle_root_args.prototype.getRoot_asB64 = function() 
  * This is a type-conversion wrapper around `getRoot()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.getRoot_asU8 = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.getRoot_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getRoot()));
 };
@@ -2364,9 +2798,9 @@ proto.koinos.chain.verify_merkle_root_args.prototype.getRoot_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.verify_merkle_root_args} returns this
+ * @return {!proto.koinos.chain.verify_merkle_root_arguments} returns this
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.setRoot = function(value) {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.setRoot = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -2375,7 +2809,7 @@ proto.koinos.chain.verify_merkle_root_args.prototype.setRoot = function(value) {
  * repeated bytes hashes = 2;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.getHashesList = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.getHashesList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
@@ -2385,7 +2819,7 @@ proto.koinos.chain.verify_merkle_root_args.prototype.getHashesList = function() 
  * This is a type-conversion wrapper around `getHashesList()`
  * @return {!Array<string>}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.getHashesList_asB64 = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.getHashesList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getHashesList()));
 };
@@ -2398,7 +2832,7 @@ proto.koinos.chain.verify_merkle_root_args.prototype.getHashesList_asB64 = funct
  * This is a type-conversion wrapper around `getHashesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.getHashesList_asU8 = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.getHashesList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getHashesList()));
 };
@@ -2406,9 +2840,9 @@ proto.koinos.chain.verify_merkle_root_args.prototype.getHashesList_asU8 = functi
 
 /**
  * @param {!(Array<!Uint8Array>|Array<string>)} value
- * @return {!proto.koinos.chain.verify_merkle_root_args} returns this
+ * @return {!proto.koinos.chain.verify_merkle_root_arguments} returns this
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.setHashesList = function(value) {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.setHashesList = function(value) {
   return jspb.Message.setField(this, 2, value || []);
 };
 
@@ -2416,18 +2850,18 @@ proto.koinos.chain.verify_merkle_root_args.prototype.setHashesList = function(va
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
- * @return {!proto.koinos.chain.verify_merkle_root_args} returns this
+ * @return {!proto.koinos.chain.verify_merkle_root_arguments} returns this
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.addHashes = function(value, opt_index) {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.addHashes = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.koinos.chain.verify_merkle_root_args} returns this
+ * @return {!proto.koinos.chain.verify_merkle_root_arguments} returns this
  */
-proto.koinos.chain.verify_merkle_root_args.prototype.clearHashesList = function() {
+proto.koinos.chain.verify_merkle_root_arguments.prototype.clearHashesList = function() {
   return this.setHashesList([]);
 };
 
@@ -2448,8 +2882,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.verify_merkle_root_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.verify_merkle_root_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.verify_merkle_root_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.verify_merkle_root_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -2458,11 +2892,11 @@ proto.koinos.chain.verify_merkle_root_return.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.verify_merkle_root_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.verify_merkle_root_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_merkle_root_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.verify_merkle_root_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
@@ -2478,23 +2912,23 @@ proto.koinos.chain.verify_merkle_root_return.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.verify_merkle_root_return}
+ * @return {!proto.koinos.chain.verify_merkle_root_result}
  */
-proto.koinos.chain.verify_merkle_root_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.verify_merkle_root_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.verify_merkle_root_return;
-  return proto.koinos.chain.verify_merkle_root_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.verify_merkle_root_result;
+  return proto.koinos.chain.verify_merkle_root_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.verify_merkle_root_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.verify_merkle_root_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.verify_merkle_root_return}
+ * @return {!proto.koinos.chain.verify_merkle_root_result}
  */
-proto.koinos.chain.verify_merkle_root_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.verify_merkle_root_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2518,9 +2952,9 @@ proto.koinos.chain.verify_merkle_root_return.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.verify_merkle_root_return.prototype.serializeBinary = function() {
+proto.koinos.chain.verify_merkle_root_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.verify_merkle_root_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.verify_merkle_root_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2528,11 +2962,11 @@ proto.koinos.chain.verify_merkle_root_return.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.verify_merkle_root_return} message
+ * @param {!proto.koinos.chain.verify_merkle_root_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.verify_merkle_root_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.verify_merkle_root_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (f) {
@@ -2548,16 +2982,16 @@ proto.koinos.chain.verify_merkle_root_return.serializeBinaryToWriter = function(
  * optional bool value = 1;
  * @return {boolean}
  */
-proto.koinos.chain.verify_merkle_root_return.prototype.getValue = function() {
+proto.koinos.chain.verify_merkle_root_result.prototype.getValue = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.koinos.chain.verify_merkle_root_return} returns this
+ * @return {!proto.koinos.chain.verify_merkle_root_result} returns this
  */
-proto.koinos.chain.verify_merkle_root_return.prototype.setValue = function(value) {
+proto.koinos.chain.verify_merkle_root_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -2578,8 +3012,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_block_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_block_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_block_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_block_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -2588,11 +3022,11 @@ proto.koinos.chain.apply_block_args.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_block_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_block_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_block_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_block_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     block: (f = msg.getBlock()) && proto.koinos.protocol.block.toObject(includeInstance, f),
     checkPassiveData: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
@@ -2611,23 +3045,23 @@ proto.koinos.chain.apply_block_args.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_block_args}
+ * @return {!proto.koinos.chain.apply_block_arguments}
  */
-proto.koinos.chain.apply_block_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_block_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_block_args;
-  return proto.koinos.chain.apply_block_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_block_arguments;
+  return proto.koinos.chain.apply_block_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_block_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_block_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_block_args}
+ * @return {!proto.koinos.chain.apply_block_arguments}
  */
-proto.koinos.chain.apply_block_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_block_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2664,9 +3098,9 @@ proto.koinos.chain.apply_block_args.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_block_args.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_block_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_block_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_block_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2674,11 +3108,11 @@ proto.koinos.chain.apply_block_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_block_args} message
+ * @param {!proto.koinos.chain.apply_block_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_block_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_block_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBlock();
   if (f != null) {
@@ -2716,7 +3150,7 @@ proto.koinos.chain.apply_block_args.serializeBinaryToWriter = function(message, 
  * optional koinos.protocol.block block = 1;
  * @return {?proto.koinos.protocol.block}
  */
-proto.koinos.chain.apply_block_args.prototype.getBlock = function() {
+proto.koinos.chain.apply_block_arguments.prototype.getBlock = function() {
   return /** @type{?proto.koinos.protocol.block} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.block, 1));
 };
@@ -2724,18 +3158,18 @@ proto.koinos.chain.apply_block_args.prototype.getBlock = function() {
 
 /**
  * @param {?proto.koinos.protocol.block|undefined} value
- * @return {!proto.koinos.chain.apply_block_args} returns this
+ * @return {!proto.koinos.chain.apply_block_arguments} returns this
 */
-proto.koinos.chain.apply_block_args.prototype.setBlock = function(value) {
+proto.koinos.chain.apply_block_arguments.prototype.setBlock = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.apply_block_args} returns this
+ * @return {!proto.koinos.chain.apply_block_arguments} returns this
  */
-proto.koinos.chain.apply_block_args.prototype.clearBlock = function() {
+proto.koinos.chain.apply_block_arguments.prototype.clearBlock = function() {
   return this.setBlock(undefined);
 };
 
@@ -2744,7 +3178,7 @@ proto.koinos.chain.apply_block_args.prototype.clearBlock = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.apply_block_args.prototype.hasBlock = function() {
+proto.koinos.chain.apply_block_arguments.prototype.hasBlock = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -2753,16 +3187,16 @@ proto.koinos.chain.apply_block_args.prototype.hasBlock = function() {
  * optional bool check_passive_data = 2;
  * @return {boolean}
  */
-proto.koinos.chain.apply_block_args.prototype.getCheckPassiveData = function() {
+proto.koinos.chain.apply_block_arguments.prototype.getCheckPassiveData = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.koinos.chain.apply_block_args} returns this
+ * @return {!proto.koinos.chain.apply_block_arguments} returns this
  */
-proto.koinos.chain.apply_block_args.prototype.setCheckPassiveData = function(value) {
+proto.koinos.chain.apply_block_arguments.prototype.setCheckPassiveData = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
@@ -2771,16 +3205,16 @@ proto.koinos.chain.apply_block_args.prototype.setCheckPassiveData = function(val
  * optional bool check_block_signature = 3;
  * @return {boolean}
  */
-proto.koinos.chain.apply_block_args.prototype.getCheckBlockSignature = function() {
+proto.koinos.chain.apply_block_arguments.prototype.getCheckBlockSignature = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.koinos.chain.apply_block_args} returns this
+ * @return {!proto.koinos.chain.apply_block_arguments} returns this
  */
-proto.koinos.chain.apply_block_args.prototype.setCheckBlockSignature = function(value) {
+proto.koinos.chain.apply_block_arguments.prototype.setCheckBlockSignature = function(value) {
   return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
@@ -2789,16 +3223,16 @@ proto.koinos.chain.apply_block_args.prototype.setCheckBlockSignature = function(
  * optional bool check_transaction_signature = 4;
  * @return {boolean}
  */
-proto.koinos.chain.apply_block_args.prototype.getCheckTransactionSignature = function() {
+proto.koinos.chain.apply_block_arguments.prototype.getCheckTransactionSignature = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.koinos.chain.apply_block_args} returns this
+ * @return {!proto.koinos.chain.apply_block_arguments} returns this
  */
-proto.koinos.chain.apply_block_args.prototype.setCheckTransactionSignature = function(value) {
+proto.koinos.chain.apply_block_arguments.prototype.setCheckTransactionSignature = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
@@ -2819,8 +3253,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_block_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_block_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_block_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_block_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -2829,11 +3263,11 @@ proto.koinos.chain.apply_block_return.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_block_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_block_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_block_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_block_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2849,23 +3283,23 @@ proto.koinos.chain.apply_block_return.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_block_return}
+ * @return {!proto.koinos.chain.apply_block_result}
  */
-proto.koinos.chain.apply_block_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_block_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_block_return;
-  return proto.koinos.chain.apply_block_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_block_result;
+  return proto.koinos.chain.apply_block_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_block_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_block_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_block_return}
+ * @return {!proto.koinos.chain.apply_block_result}
  */
-proto.koinos.chain.apply_block_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_block_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2885,9 +3319,9 @@ proto.koinos.chain.apply_block_return.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_block_return.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_block_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_block_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_block_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2895,11 +3329,11 @@ proto.koinos.chain.apply_block_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_block_return} message
+ * @param {!proto.koinos.chain.apply_block_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_block_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_block_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2920,8 +3354,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_transaction_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_transaction_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_transaction_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_transaction_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -2930,11 +3364,11 @@ proto.koinos.chain.apply_transaction_args.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_transaction_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_transaction_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_transaction_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_transaction_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f)
   };
@@ -2950,23 +3384,23 @@ proto.koinos.chain.apply_transaction_args.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_transaction_args}
+ * @return {!proto.koinos.chain.apply_transaction_arguments}
  */
-proto.koinos.chain.apply_transaction_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_transaction_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_transaction_args;
-  return proto.koinos.chain.apply_transaction_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_transaction_arguments;
+  return proto.koinos.chain.apply_transaction_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_transaction_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_transaction_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_transaction_args}
+ * @return {!proto.koinos.chain.apply_transaction_arguments}
  */
-proto.koinos.chain.apply_transaction_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_transaction_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2991,9 +3425,9 @@ proto.koinos.chain.apply_transaction_args.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_transaction_args.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_transaction_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_transaction_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_transaction_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3001,11 +3435,11 @@ proto.koinos.chain.apply_transaction_args.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_transaction_args} message
+ * @param {!proto.koinos.chain.apply_transaction_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_transaction_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_transaction_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTransaction();
   if (f != null) {
@@ -3022,7 +3456,7 @@ proto.koinos.chain.apply_transaction_args.serializeBinaryToWriter = function(mes
  * optional koinos.protocol.transaction transaction = 1;
  * @return {?proto.koinos.protocol.transaction}
  */
-proto.koinos.chain.apply_transaction_args.prototype.getTransaction = function() {
+proto.koinos.chain.apply_transaction_arguments.prototype.getTransaction = function() {
   return /** @type{?proto.koinos.protocol.transaction} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.transaction, 1));
 };
@@ -3030,18 +3464,18 @@ proto.koinos.chain.apply_transaction_args.prototype.getTransaction = function() 
 
 /**
  * @param {?proto.koinos.protocol.transaction|undefined} value
- * @return {!proto.koinos.chain.apply_transaction_args} returns this
+ * @return {!proto.koinos.chain.apply_transaction_arguments} returns this
 */
-proto.koinos.chain.apply_transaction_args.prototype.setTransaction = function(value) {
+proto.koinos.chain.apply_transaction_arguments.prototype.setTransaction = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.apply_transaction_args} returns this
+ * @return {!proto.koinos.chain.apply_transaction_arguments} returns this
  */
-proto.koinos.chain.apply_transaction_args.prototype.clearTransaction = function() {
+proto.koinos.chain.apply_transaction_arguments.prototype.clearTransaction = function() {
   return this.setTransaction(undefined);
 };
 
@@ -3050,7 +3484,7 @@ proto.koinos.chain.apply_transaction_args.prototype.clearTransaction = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.apply_transaction_args.prototype.hasTransaction = function() {
+proto.koinos.chain.apply_transaction_arguments.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3071,8 +3505,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_transaction_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_transaction_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_transaction_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_transaction_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -3081,11 +3515,11 @@ proto.koinos.chain.apply_transaction_return.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_transaction_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_transaction_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_transaction_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_transaction_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3101,23 +3535,23 @@ proto.koinos.chain.apply_transaction_return.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_transaction_return}
+ * @return {!proto.koinos.chain.apply_transaction_result}
  */
-proto.koinos.chain.apply_transaction_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_transaction_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_transaction_return;
-  return proto.koinos.chain.apply_transaction_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_transaction_result;
+  return proto.koinos.chain.apply_transaction_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_transaction_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_transaction_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_transaction_return}
+ * @return {!proto.koinos.chain.apply_transaction_result}
  */
-proto.koinos.chain.apply_transaction_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_transaction_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3137,9 +3571,9 @@ proto.koinos.chain.apply_transaction_return.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_transaction_return.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_transaction_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_transaction_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_transaction_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3147,11 +3581,11 @@ proto.koinos.chain.apply_transaction_return.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_transaction_return} message
+ * @param {!proto.koinos.chain.apply_transaction_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_transaction_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_transaction_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3172,8 +3606,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_upload_contract_operation_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_upload_contract_operation_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_upload_contract_operation_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_upload_contract_operation_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -3182,11 +3616,11 @@ proto.koinos.chain.apply_upload_contract_operation_args.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_upload_contract_operation_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_upload_contract_operation_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_upload_contract_operation_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_upload_contract_operation_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     op: (f = msg.getOp()) && proto.koinos.protocol.upload_contract_operation.toObject(includeInstance, f)
   };
@@ -3202,23 +3636,23 @@ proto.koinos.chain.apply_upload_contract_operation_args.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_upload_contract_operation_args}
+ * @return {!proto.koinos.chain.apply_upload_contract_operation_arguments}
  */
-proto.koinos.chain.apply_upload_contract_operation_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_upload_contract_operation_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_upload_contract_operation_args;
-  return proto.koinos.chain.apply_upload_contract_operation_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_upload_contract_operation_arguments;
+  return proto.koinos.chain.apply_upload_contract_operation_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_upload_contract_operation_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_upload_contract_operation_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_upload_contract_operation_args}
+ * @return {!proto.koinos.chain.apply_upload_contract_operation_arguments}
  */
-proto.koinos.chain.apply_upload_contract_operation_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_upload_contract_operation_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3243,9 +3677,9 @@ proto.koinos.chain.apply_upload_contract_operation_args.deserializeBinaryFromRea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_upload_contract_operation_args.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_upload_contract_operation_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_upload_contract_operation_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_upload_contract_operation_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3253,11 +3687,11 @@ proto.koinos.chain.apply_upload_contract_operation_args.prototype.serializeBinar
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_upload_contract_operation_args} message
+ * @param {!proto.koinos.chain.apply_upload_contract_operation_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_upload_contract_operation_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_upload_contract_operation_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getOp();
   if (f != null) {
@@ -3274,7 +3708,7 @@ proto.koinos.chain.apply_upload_contract_operation_args.serializeBinaryToWriter 
  * optional koinos.protocol.upload_contract_operation op = 1;
  * @return {?proto.koinos.protocol.upload_contract_operation}
  */
-proto.koinos.chain.apply_upload_contract_operation_args.prototype.getOp = function() {
+proto.koinos.chain.apply_upload_contract_operation_arguments.prototype.getOp = function() {
   return /** @type{?proto.koinos.protocol.upload_contract_operation} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.upload_contract_operation, 1));
 };
@@ -3282,18 +3716,18 @@ proto.koinos.chain.apply_upload_contract_operation_args.prototype.getOp = functi
 
 /**
  * @param {?proto.koinos.protocol.upload_contract_operation|undefined} value
- * @return {!proto.koinos.chain.apply_upload_contract_operation_args} returns this
+ * @return {!proto.koinos.chain.apply_upload_contract_operation_arguments} returns this
 */
-proto.koinos.chain.apply_upload_contract_operation_args.prototype.setOp = function(value) {
+proto.koinos.chain.apply_upload_contract_operation_arguments.prototype.setOp = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.apply_upload_contract_operation_args} returns this
+ * @return {!proto.koinos.chain.apply_upload_contract_operation_arguments} returns this
  */
-proto.koinos.chain.apply_upload_contract_operation_args.prototype.clearOp = function() {
+proto.koinos.chain.apply_upload_contract_operation_arguments.prototype.clearOp = function() {
   return this.setOp(undefined);
 };
 
@@ -3302,7 +3736,7 @@ proto.koinos.chain.apply_upload_contract_operation_args.prototype.clearOp = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.apply_upload_contract_operation_args.prototype.hasOp = function() {
+proto.koinos.chain.apply_upload_contract_operation_arguments.prototype.hasOp = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3323,8 +3757,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_upload_contract_operation_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_upload_contract_operation_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_upload_contract_operation_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_upload_contract_operation_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -3333,11 +3767,11 @@ proto.koinos.chain.apply_upload_contract_operation_return.prototype.toObject = f
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_upload_contract_operation_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_upload_contract_operation_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_upload_contract_operation_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_upload_contract_operation_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3353,23 +3787,23 @@ proto.koinos.chain.apply_upload_contract_operation_return.toObject = function(in
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_upload_contract_operation_return}
+ * @return {!proto.koinos.chain.apply_upload_contract_operation_result}
  */
-proto.koinos.chain.apply_upload_contract_operation_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_upload_contract_operation_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_upload_contract_operation_return;
-  return proto.koinos.chain.apply_upload_contract_operation_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_upload_contract_operation_result;
+  return proto.koinos.chain.apply_upload_contract_operation_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_upload_contract_operation_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_upload_contract_operation_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_upload_contract_operation_return}
+ * @return {!proto.koinos.chain.apply_upload_contract_operation_result}
  */
-proto.koinos.chain.apply_upload_contract_operation_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_upload_contract_operation_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3389,9 +3823,9 @@ proto.koinos.chain.apply_upload_contract_operation_return.deserializeBinaryFromR
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_upload_contract_operation_return.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_upload_contract_operation_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_upload_contract_operation_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_upload_contract_operation_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3399,11 +3833,11 @@ proto.koinos.chain.apply_upload_contract_operation_return.prototype.serializeBin
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_upload_contract_operation_return} message
+ * @param {!proto.koinos.chain.apply_upload_contract_operation_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_upload_contract_operation_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_upload_contract_operation_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3424,8 +3858,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_call_contract_operation_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_call_contract_operation_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_call_contract_operation_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_call_contract_operation_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -3434,11 +3868,11 @@ proto.koinos.chain.apply_call_contract_operation_args.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_call_contract_operation_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_call_contract_operation_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_call_contract_operation_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_call_contract_operation_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     op: (f = msg.getOp()) && proto.koinos.protocol.call_contract_operation.toObject(includeInstance, f)
   };
@@ -3454,23 +3888,23 @@ proto.koinos.chain.apply_call_contract_operation_args.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_call_contract_operation_args}
+ * @return {!proto.koinos.chain.apply_call_contract_operation_arguments}
  */
-proto.koinos.chain.apply_call_contract_operation_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_call_contract_operation_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_call_contract_operation_args;
-  return proto.koinos.chain.apply_call_contract_operation_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_call_contract_operation_arguments;
+  return proto.koinos.chain.apply_call_contract_operation_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_call_contract_operation_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_call_contract_operation_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_call_contract_operation_args}
+ * @return {!proto.koinos.chain.apply_call_contract_operation_arguments}
  */
-proto.koinos.chain.apply_call_contract_operation_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_call_contract_operation_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3495,9 +3929,9 @@ proto.koinos.chain.apply_call_contract_operation_args.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_call_contract_operation_args.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_call_contract_operation_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_call_contract_operation_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_call_contract_operation_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3505,11 +3939,11 @@ proto.koinos.chain.apply_call_contract_operation_args.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_call_contract_operation_args} message
+ * @param {!proto.koinos.chain.apply_call_contract_operation_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_call_contract_operation_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_call_contract_operation_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getOp();
   if (f != null) {
@@ -3526,7 +3960,7 @@ proto.koinos.chain.apply_call_contract_operation_args.serializeBinaryToWriter = 
  * optional koinos.protocol.call_contract_operation op = 1;
  * @return {?proto.koinos.protocol.call_contract_operation}
  */
-proto.koinos.chain.apply_call_contract_operation_args.prototype.getOp = function() {
+proto.koinos.chain.apply_call_contract_operation_arguments.prototype.getOp = function() {
   return /** @type{?proto.koinos.protocol.call_contract_operation} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.call_contract_operation, 1));
 };
@@ -3534,18 +3968,18 @@ proto.koinos.chain.apply_call_contract_operation_args.prototype.getOp = function
 
 /**
  * @param {?proto.koinos.protocol.call_contract_operation|undefined} value
- * @return {!proto.koinos.chain.apply_call_contract_operation_args} returns this
+ * @return {!proto.koinos.chain.apply_call_contract_operation_arguments} returns this
 */
-proto.koinos.chain.apply_call_contract_operation_args.prototype.setOp = function(value) {
+proto.koinos.chain.apply_call_contract_operation_arguments.prototype.setOp = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.apply_call_contract_operation_args} returns this
+ * @return {!proto.koinos.chain.apply_call_contract_operation_arguments} returns this
  */
-proto.koinos.chain.apply_call_contract_operation_args.prototype.clearOp = function() {
+proto.koinos.chain.apply_call_contract_operation_arguments.prototype.clearOp = function() {
   return this.setOp(undefined);
 };
 
@@ -3554,7 +3988,7 @@ proto.koinos.chain.apply_call_contract_operation_args.prototype.clearOp = functi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.apply_call_contract_operation_args.prototype.hasOp = function() {
+proto.koinos.chain.apply_call_contract_operation_arguments.prototype.hasOp = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3575,8 +4009,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_call_contract_operation_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_call_contract_operation_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_call_contract_operation_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_call_contract_operation_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -3585,11 +4019,11 @@ proto.koinos.chain.apply_call_contract_operation_return.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_call_contract_operation_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_call_contract_operation_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_call_contract_operation_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_call_contract_operation_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3605,23 +4039,23 @@ proto.koinos.chain.apply_call_contract_operation_return.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_call_contract_operation_return}
+ * @return {!proto.koinos.chain.apply_call_contract_operation_result}
  */
-proto.koinos.chain.apply_call_contract_operation_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_call_contract_operation_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_call_contract_operation_return;
-  return proto.koinos.chain.apply_call_contract_operation_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_call_contract_operation_result;
+  return proto.koinos.chain.apply_call_contract_operation_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_call_contract_operation_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_call_contract_operation_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_call_contract_operation_return}
+ * @return {!proto.koinos.chain.apply_call_contract_operation_result}
  */
-proto.koinos.chain.apply_call_contract_operation_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_call_contract_operation_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3641,9 +4075,9 @@ proto.koinos.chain.apply_call_contract_operation_return.deserializeBinaryFromRea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_call_contract_operation_return.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_call_contract_operation_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_call_contract_operation_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_call_contract_operation_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3651,11 +4085,11 @@ proto.koinos.chain.apply_call_contract_operation_return.prototype.serializeBinar
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_call_contract_operation_return} message
+ * @param {!proto.koinos.chain.apply_call_contract_operation_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_call_contract_operation_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_call_contract_operation_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3676,8 +4110,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_set_system_call_operation_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_set_system_call_operation_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_set_system_call_operation_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_set_system_call_operation_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -3686,11 +4120,11 @@ proto.koinos.chain.apply_set_system_call_operation_args.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_set_system_call_operation_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_set_system_call_operation_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_set_system_call_operation_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_set_system_call_operation_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     op: (f = msg.getOp()) && proto.koinos.protocol.set_system_call_operation.toObject(includeInstance, f)
   };
@@ -3706,23 +4140,23 @@ proto.koinos.chain.apply_set_system_call_operation_args.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_set_system_call_operation_args}
+ * @return {!proto.koinos.chain.apply_set_system_call_operation_arguments}
  */
-proto.koinos.chain.apply_set_system_call_operation_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_set_system_call_operation_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_set_system_call_operation_args;
-  return proto.koinos.chain.apply_set_system_call_operation_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_set_system_call_operation_arguments;
+  return proto.koinos.chain.apply_set_system_call_operation_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_set_system_call_operation_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_set_system_call_operation_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_set_system_call_operation_args}
+ * @return {!proto.koinos.chain.apply_set_system_call_operation_arguments}
  */
-proto.koinos.chain.apply_set_system_call_operation_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_set_system_call_operation_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3747,9 +4181,9 @@ proto.koinos.chain.apply_set_system_call_operation_args.deserializeBinaryFromRea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_set_system_call_operation_args.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_set_system_call_operation_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_set_system_call_operation_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_set_system_call_operation_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3757,11 +4191,11 @@ proto.koinos.chain.apply_set_system_call_operation_args.prototype.serializeBinar
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_set_system_call_operation_args} message
+ * @param {!proto.koinos.chain.apply_set_system_call_operation_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_set_system_call_operation_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_set_system_call_operation_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getOp();
   if (f != null) {
@@ -3778,7 +4212,7 @@ proto.koinos.chain.apply_set_system_call_operation_args.serializeBinaryToWriter 
  * optional koinos.protocol.set_system_call_operation op = 1;
  * @return {?proto.koinos.protocol.set_system_call_operation}
  */
-proto.koinos.chain.apply_set_system_call_operation_args.prototype.getOp = function() {
+proto.koinos.chain.apply_set_system_call_operation_arguments.prototype.getOp = function() {
   return /** @type{?proto.koinos.protocol.set_system_call_operation} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.set_system_call_operation, 1));
 };
@@ -3786,18 +4220,18 @@ proto.koinos.chain.apply_set_system_call_operation_args.prototype.getOp = functi
 
 /**
  * @param {?proto.koinos.protocol.set_system_call_operation|undefined} value
- * @return {!proto.koinos.chain.apply_set_system_call_operation_args} returns this
+ * @return {!proto.koinos.chain.apply_set_system_call_operation_arguments} returns this
 */
-proto.koinos.chain.apply_set_system_call_operation_args.prototype.setOp = function(value) {
+proto.koinos.chain.apply_set_system_call_operation_arguments.prototype.setOp = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.apply_set_system_call_operation_args} returns this
+ * @return {!proto.koinos.chain.apply_set_system_call_operation_arguments} returns this
  */
-proto.koinos.chain.apply_set_system_call_operation_args.prototype.clearOp = function() {
+proto.koinos.chain.apply_set_system_call_operation_arguments.prototype.clearOp = function() {
   return this.setOp(undefined);
 };
 
@@ -3806,7 +4240,7 @@ proto.koinos.chain.apply_set_system_call_operation_args.prototype.clearOp = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.apply_set_system_call_operation_args.prototype.hasOp = function() {
+proto.koinos.chain.apply_set_system_call_operation_arguments.prototype.hasOp = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3827,8 +4261,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.apply_set_system_call_operation_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.apply_set_system_call_operation_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.apply_set_system_call_operation_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.apply_set_system_call_operation_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -3837,11 +4271,11 @@ proto.koinos.chain.apply_set_system_call_operation_return.prototype.toObject = f
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.apply_set_system_call_operation_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.apply_set_system_call_operation_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_set_system_call_operation_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.apply_set_system_call_operation_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3857,23 +4291,23 @@ proto.koinos.chain.apply_set_system_call_operation_return.toObject = function(in
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.apply_set_system_call_operation_return}
+ * @return {!proto.koinos.chain.apply_set_system_call_operation_result}
  */
-proto.koinos.chain.apply_set_system_call_operation_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.apply_set_system_call_operation_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.apply_set_system_call_operation_return;
-  return proto.koinos.chain.apply_set_system_call_operation_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.apply_set_system_call_operation_result;
+  return proto.koinos.chain.apply_set_system_call_operation_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.apply_set_system_call_operation_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.apply_set_system_call_operation_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.apply_set_system_call_operation_return}
+ * @return {!proto.koinos.chain.apply_set_system_call_operation_result}
  */
-proto.koinos.chain.apply_set_system_call_operation_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.apply_set_system_call_operation_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3893,9 +4327,9 @@ proto.koinos.chain.apply_set_system_call_operation_return.deserializeBinaryFromR
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.apply_set_system_call_operation_return.prototype.serializeBinary = function() {
+proto.koinos.chain.apply_set_system_call_operation_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.apply_set_system_call_operation_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.apply_set_system_call_operation_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3903,11 +4337,11 @@ proto.koinos.chain.apply_set_system_call_operation_return.prototype.serializeBin
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.apply_set_system_call_operation_return} message
+ * @param {!proto.koinos.chain.apply_set_system_call_operation_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.apply_set_system_call_operation_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.apply_set_system_call_operation_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3928,8 +4362,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.put_object_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.put_object_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.put_object_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.put_object_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -3938,11 +4372,11 @@ proto.koinos.chain.put_object_args.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.put_object_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.put_object_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.put_object_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.put_object_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     space: msg.getSpace_asB64(),
     key: msg.getKey_asB64(),
@@ -3960,23 +4394,23 @@ proto.koinos.chain.put_object_args.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.put_object_args}
+ * @return {!proto.koinos.chain.put_object_arguments}
  */
-proto.koinos.chain.put_object_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.put_object_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.put_object_args;
-  return proto.koinos.chain.put_object_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.put_object_arguments;
+  return proto.koinos.chain.put_object_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.put_object_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.put_object_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.put_object_args}
+ * @return {!proto.koinos.chain.put_object_arguments}
  */
-proto.koinos.chain.put_object_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.put_object_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4008,9 +4442,9 @@ proto.koinos.chain.put_object_args.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.put_object_args.prototype.serializeBinary = function() {
+proto.koinos.chain.put_object_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.put_object_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.put_object_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4018,11 +4452,11 @@ proto.koinos.chain.put_object_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.put_object_args} message
+ * @param {!proto.koinos.chain.put_object_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.put_object_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.put_object_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSpace_asU8();
   if (f.length > 0) {
@@ -4052,7 +4486,7 @@ proto.koinos.chain.put_object_args.serializeBinaryToWriter = function(message, w
  * optional bytes space = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.put_object_args.prototype.getSpace = function() {
+proto.koinos.chain.put_object_arguments.prototype.getSpace = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -4062,7 +4496,7 @@ proto.koinos.chain.put_object_args.prototype.getSpace = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {string}
  */
-proto.koinos.chain.put_object_args.prototype.getSpace_asB64 = function() {
+proto.koinos.chain.put_object_arguments.prototype.getSpace_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSpace()));
 };
@@ -4075,7 +4509,7 @@ proto.koinos.chain.put_object_args.prototype.getSpace_asB64 = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.put_object_args.prototype.getSpace_asU8 = function() {
+proto.koinos.chain.put_object_arguments.prototype.getSpace_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSpace()));
 };
@@ -4083,9 +4517,9 @@ proto.koinos.chain.put_object_args.prototype.getSpace_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.put_object_args} returns this
+ * @return {!proto.koinos.chain.put_object_arguments} returns this
  */
-proto.koinos.chain.put_object_args.prototype.setSpace = function(value) {
+proto.koinos.chain.put_object_arguments.prototype.setSpace = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -4094,7 +4528,7 @@ proto.koinos.chain.put_object_args.prototype.setSpace = function(value) {
  * optional bytes key = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.put_object_args.prototype.getKey = function() {
+proto.koinos.chain.put_object_arguments.prototype.getKey = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -4104,7 +4538,7 @@ proto.koinos.chain.put_object_args.prototype.getKey = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.koinos.chain.put_object_args.prototype.getKey_asB64 = function() {
+proto.koinos.chain.put_object_arguments.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getKey()));
 };
@@ -4117,7 +4551,7 @@ proto.koinos.chain.put_object_args.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.put_object_args.prototype.getKey_asU8 = function() {
+proto.koinos.chain.put_object_arguments.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getKey()));
 };
@@ -4125,9 +4559,9 @@ proto.koinos.chain.put_object_args.prototype.getKey_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.put_object_args} returns this
+ * @return {!proto.koinos.chain.put_object_arguments} returns this
  */
-proto.koinos.chain.put_object_args.prototype.setKey = function(value) {
+proto.koinos.chain.put_object_arguments.prototype.setKey = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -4136,7 +4570,7 @@ proto.koinos.chain.put_object_args.prototype.setKey = function(value) {
  * optional bytes obj = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.put_object_args.prototype.getObj = function() {
+proto.koinos.chain.put_object_arguments.prototype.getObj = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -4146,7 +4580,7 @@ proto.koinos.chain.put_object_args.prototype.getObj = function() {
  * This is a type-conversion wrapper around `getObj()`
  * @return {string}
  */
-proto.koinos.chain.put_object_args.prototype.getObj_asB64 = function() {
+proto.koinos.chain.put_object_arguments.prototype.getObj_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getObj()));
 };
@@ -4159,7 +4593,7 @@ proto.koinos.chain.put_object_args.prototype.getObj_asB64 = function() {
  * This is a type-conversion wrapper around `getObj()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.put_object_args.prototype.getObj_asU8 = function() {
+proto.koinos.chain.put_object_arguments.prototype.getObj_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getObj()));
 };
@@ -4167,9 +4601,9 @@ proto.koinos.chain.put_object_args.prototype.getObj_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.put_object_args} returns this
+ * @return {!proto.koinos.chain.put_object_arguments} returns this
  */
-proto.koinos.chain.put_object_args.prototype.setObj = function(value) {
+proto.koinos.chain.put_object_arguments.prototype.setObj = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -4190,8 +4624,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.put_object_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.put_object_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.put_object_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.put_object_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -4200,11 +4634,11 @@ proto.koinos.chain.put_object_return.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.put_object_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.put_object_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.put_object_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.put_object_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
@@ -4220,23 +4654,23 @@ proto.koinos.chain.put_object_return.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.put_object_return}
+ * @return {!proto.koinos.chain.put_object_result}
  */
-proto.koinos.chain.put_object_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.put_object_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.put_object_return;
-  return proto.koinos.chain.put_object_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.put_object_result;
+  return proto.koinos.chain.put_object_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.put_object_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.put_object_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.put_object_return}
+ * @return {!proto.koinos.chain.put_object_result}
  */
-proto.koinos.chain.put_object_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.put_object_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4260,9 +4694,9 @@ proto.koinos.chain.put_object_return.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.put_object_return.prototype.serializeBinary = function() {
+proto.koinos.chain.put_object_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.put_object_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.put_object_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4270,11 +4704,11 @@ proto.koinos.chain.put_object_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.put_object_return} message
+ * @param {!proto.koinos.chain.put_object_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.put_object_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.put_object_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (f) {
@@ -4290,16 +4724,16 @@ proto.koinos.chain.put_object_return.serializeBinaryToWriter = function(message,
  * optional bool value = 1;
  * @return {boolean}
  */
-proto.koinos.chain.put_object_return.prototype.getValue = function() {
+proto.koinos.chain.put_object_result.prototype.getValue = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.koinos.chain.put_object_return} returns this
+ * @return {!proto.koinos.chain.put_object_result} returns this
  */
-proto.koinos.chain.put_object_return.prototype.setValue = function(value) {
+proto.koinos.chain.put_object_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
@@ -4320,8 +4754,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_object_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_object_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_object_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_object_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -4330,11 +4764,11 @@ proto.koinos.chain.get_object_args.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_object_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_object_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_object_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_object_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     space: msg.getSpace_asB64(),
     key: msg.getKey_asB64(),
@@ -4352,23 +4786,23 @@ proto.koinos.chain.get_object_args.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_object_args}
+ * @return {!proto.koinos.chain.get_object_arguments}
  */
-proto.koinos.chain.get_object_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_object_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_object_args;
-  return proto.koinos.chain.get_object_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_object_arguments;
+  return proto.koinos.chain.get_object_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_object_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_object_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_object_args}
+ * @return {!proto.koinos.chain.get_object_arguments}
  */
-proto.koinos.chain.get_object_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_object_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4400,9 +4834,9 @@ proto.koinos.chain.get_object_args.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_object_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_object_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_object_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_object_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4410,11 +4844,11 @@ proto.koinos.chain.get_object_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_object_args} message
+ * @param {!proto.koinos.chain.get_object_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_object_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_object_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSpace_asU8();
   if (f.length > 0) {
@@ -4444,7 +4878,7 @@ proto.koinos.chain.get_object_args.serializeBinaryToWriter = function(message, w
  * optional bytes space = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_object_args.prototype.getSpace = function() {
+proto.koinos.chain.get_object_arguments.prototype.getSpace = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -4454,7 +4888,7 @@ proto.koinos.chain.get_object_args.prototype.getSpace = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {string}
  */
-proto.koinos.chain.get_object_args.prototype.getSpace_asB64 = function() {
+proto.koinos.chain.get_object_arguments.prototype.getSpace_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSpace()));
 };
@@ -4467,7 +4901,7 @@ proto.koinos.chain.get_object_args.prototype.getSpace_asB64 = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_object_args.prototype.getSpace_asU8 = function() {
+proto.koinos.chain.get_object_arguments.prototype.getSpace_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSpace()));
 };
@@ -4475,9 +4909,9 @@ proto.koinos.chain.get_object_args.prototype.getSpace_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_object_args} returns this
+ * @return {!proto.koinos.chain.get_object_arguments} returns this
  */
-proto.koinos.chain.get_object_args.prototype.setSpace = function(value) {
+proto.koinos.chain.get_object_arguments.prototype.setSpace = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -4486,7 +4920,7 @@ proto.koinos.chain.get_object_args.prototype.setSpace = function(value) {
  * optional bytes key = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_object_args.prototype.getKey = function() {
+proto.koinos.chain.get_object_arguments.prototype.getKey = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -4496,7 +4930,7 @@ proto.koinos.chain.get_object_args.prototype.getKey = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.koinos.chain.get_object_args.prototype.getKey_asB64 = function() {
+proto.koinos.chain.get_object_arguments.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getKey()));
 };
@@ -4509,7 +4943,7 @@ proto.koinos.chain.get_object_args.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_object_args.prototype.getKey_asU8 = function() {
+proto.koinos.chain.get_object_arguments.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getKey()));
 };
@@ -4517,9 +4951,9 @@ proto.koinos.chain.get_object_args.prototype.getKey_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_object_args} returns this
+ * @return {!proto.koinos.chain.get_object_arguments} returns this
  */
-proto.koinos.chain.get_object_args.prototype.setKey = function(value) {
+proto.koinos.chain.get_object_arguments.prototype.setKey = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -4528,16 +4962,16 @@ proto.koinos.chain.get_object_args.prototype.setKey = function(value) {
  * optional uint32 object_size_hint = 3;
  * @return {number}
  */
-proto.koinos.chain.get_object_args.prototype.getObjectSizeHint = function() {
+proto.koinos.chain.get_object_arguments.prototype.getObjectSizeHint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.get_object_args} returns this
+ * @return {!proto.koinos.chain.get_object_arguments} returns this
  */
-proto.koinos.chain.get_object_args.prototype.setObjectSizeHint = function(value) {
+proto.koinos.chain.get_object_arguments.prototype.setObjectSizeHint = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -4558,8 +4992,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_object_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_object_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_object_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_object_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -4568,11 +5002,11 @@ proto.koinos.chain.get_object_return.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_object_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_object_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_object_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_object_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -4588,23 +5022,23 @@ proto.koinos.chain.get_object_return.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_object_return}
+ * @return {!proto.koinos.chain.get_object_result}
  */
-proto.koinos.chain.get_object_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_object_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_object_return;
-  return proto.koinos.chain.get_object_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_object_result;
+  return proto.koinos.chain.get_object_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_object_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_object_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_object_return}
+ * @return {!proto.koinos.chain.get_object_result}
  */
-proto.koinos.chain.get_object_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_object_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4628,9 +5062,9 @@ proto.koinos.chain.get_object_return.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_object_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_object_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_object_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_object_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4638,11 +5072,11 @@ proto.koinos.chain.get_object_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_object_return} message
+ * @param {!proto.koinos.chain.get_object_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_object_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_object_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -4658,7 +5092,7 @@ proto.koinos.chain.get_object_return.serializeBinaryToWriter = function(message,
  * optional bytes value = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_object_return.prototype.getValue = function() {
+proto.koinos.chain.get_object_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -4668,7 +5102,7 @@ proto.koinos.chain.get_object_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_object_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_object_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -4681,7 +5115,7 @@ proto.koinos.chain.get_object_return.prototype.getValue_asB64 = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_object_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_object_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -4689,9 +5123,9 @@ proto.koinos.chain.get_object_return.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_object_return} returns this
+ * @return {!proto.koinos.chain.get_object_result} returns this
  */
-proto.koinos.chain.get_object_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_object_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -4712,8 +5146,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_next_object_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_next_object_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_next_object_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_next_object_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -4722,11 +5156,11 @@ proto.koinos.chain.get_next_object_args.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_next_object_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_next_object_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_next_object_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_next_object_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     space: msg.getSpace_asB64(),
     key: msg.getKey_asB64(),
@@ -4744,23 +5178,23 @@ proto.koinos.chain.get_next_object_args.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_next_object_args}
+ * @return {!proto.koinos.chain.get_next_object_arguments}
  */
-proto.koinos.chain.get_next_object_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_next_object_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_next_object_args;
-  return proto.koinos.chain.get_next_object_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_next_object_arguments;
+  return proto.koinos.chain.get_next_object_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_next_object_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_next_object_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_next_object_args}
+ * @return {!proto.koinos.chain.get_next_object_arguments}
  */
-proto.koinos.chain.get_next_object_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_next_object_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4792,9 +5226,9 @@ proto.koinos.chain.get_next_object_args.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_next_object_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_next_object_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_next_object_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4802,11 +5236,11 @@ proto.koinos.chain.get_next_object_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_next_object_args} message
+ * @param {!proto.koinos.chain.get_next_object_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_next_object_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_next_object_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSpace_asU8();
   if (f.length > 0) {
@@ -4836,7 +5270,7 @@ proto.koinos.chain.get_next_object_args.serializeBinaryToWriter = function(messa
  * optional bytes space = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_next_object_args.prototype.getSpace = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getSpace = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -4846,7 +5280,7 @@ proto.koinos.chain.get_next_object_args.prototype.getSpace = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {string}
  */
-proto.koinos.chain.get_next_object_args.prototype.getSpace_asB64 = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getSpace_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSpace()));
 };
@@ -4859,7 +5293,7 @@ proto.koinos.chain.get_next_object_args.prototype.getSpace_asB64 = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_next_object_args.prototype.getSpace_asU8 = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getSpace_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSpace()));
 };
@@ -4867,9 +5301,9 @@ proto.koinos.chain.get_next_object_args.prototype.getSpace_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_next_object_args} returns this
+ * @return {!proto.koinos.chain.get_next_object_arguments} returns this
  */
-proto.koinos.chain.get_next_object_args.prototype.setSpace = function(value) {
+proto.koinos.chain.get_next_object_arguments.prototype.setSpace = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -4878,7 +5312,7 @@ proto.koinos.chain.get_next_object_args.prototype.setSpace = function(value) {
  * optional bytes key = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_next_object_args.prototype.getKey = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getKey = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -4888,7 +5322,7 @@ proto.koinos.chain.get_next_object_args.prototype.getKey = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.koinos.chain.get_next_object_args.prototype.getKey_asB64 = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getKey()));
 };
@@ -4901,7 +5335,7 @@ proto.koinos.chain.get_next_object_args.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_next_object_args.prototype.getKey_asU8 = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getKey()));
 };
@@ -4909,9 +5343,9 @@ proto.koinos.chain.get_next_object_args.prototype.getKey_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_next_object_args} returns this
+ * @return {!proto.koinos.chain.get_next_object_arguments} returns this
  */
-proto.koinos.chain.get_next_object_args.prototype.setKey = function(value) {
+proto.koinos.chain.get_next_object_arguments.prototype.setKey = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -4920,16 +5354,16 @@ proto.koinos.chain.get_next_object_args.prototype.setKey = function(value) {
  * optional uint32 object_size_hint = 3;
  * @return {number}
  */
-proto.koinos.chain.get_next_object_args.prototype.getObjectSizeHint = function() {
+proto.koinos.chain.get_next_object_arguments.prototype.getObjectSizeHint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.get_next_object_args} returns this
+ * @return {!proto.koinos.chain.get_next_object_arguments} returns this
  */
-proto.koinos.chain.get_next_object_args.prototype.setObjectSizeHint = function(value) {
+proto.koinos.chain.get_next_object_arguments.prototype.setObjectSizeHint = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -4950,8 +5384,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_next_object_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_next_object_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_next_object_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_next_object_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -4960,11 +5394,11 @@ proto.koinos.chain.get_next_object_return.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_next_object_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_next_object_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_next_object_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_next_object_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -4980,23 +5414,23 @@ proto.koinos.chain.get_next_object_return.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_next_object_return}
+ * @return {!proto.koinos.chain.get_next_object_result}
  */
-proto.koinos.chain.get_next_object_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_next_object_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_next_object_return;
-  return proto.koinos.chain.get_next_object_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_next_object_result;
+  return proto.koinos.chain.get_next_object_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_next_object_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_next_object_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_next_object_return}
+ * @return {!proto.koinos.chain.get_next_object_result}
  */
-proto.koinos.chain.get_next_object_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_next_object_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5020,9 +5454,9 @@ proto.koinos.chain.get_next_object_return.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_next_object_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_next_object_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_next_object_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_next_object_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5030,11 +5464,11 @@ proto.koinos.chain.get_next_object_return.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_next_object_return} message
+ * @param {!proto.koinos.chain.get_next_object_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_next_object_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_next_object_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -5050,7 +5484,7 @@ proto.koinos.chain.get_next_object_return.serializeBinaryToWriter = function(mes
  * optional bytes value = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_next_object_return.prototype.getValue = function() {
+proto.koinos.chain.get_next_object_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -5060,7 +5494,7 @@ proto.koinos.chain.get_next_object_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_next_object_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_next_object_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -5073,7 +5507,7 @@ proto.koinos.chain.get_next_object_return.prototype.getValue_asB64 = function() 
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_next_object_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_next_object_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -5081,9 +5515,9 @@ proto.koinos.chain.get_next_object_return.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_next_object_return} returns this
+ * @return {!proto.koinos.chain.get_next_object_result} returns this
  */
-proto.koinos.chain.get_next_object_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_next_object_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -5104,8 +5538,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_prev_object_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_prev_object_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_prev_object_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_prev_object_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -5114,11 +5548,11 @@ proto.koinos.chain.get_prev_object_args.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_prev_object_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_prev_object_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_prev_object_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_prev_object_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     space: msg.getSpace_asB64(),
     key: msg.getKey_asB64(),
@@ -5136,23 +5570,23 @@ proto.koinos.chain.get_prev_object_args.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_prev_object_args}
+ * @return {!proto.koinos.chain.get_prev_object_arguments}
  */
-proto.koinos.chain.get_prev_object_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_prev_object_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_prev_object_args;
-  return proto.koinos.chain.get_prev_object_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_prev_object_arguments;
+  return proto.koinos.chain.get_prev_object_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_prev_object_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_prev_object_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_prev_object_args}
+ * @return {!proto.koinos.chain.get_prev_object_arguments}
  */
-proto.koinos.chain.get_prev_object_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_prev_object_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5184,9 +5618,9 @@ proto.koinos.chain.get_prev_object_args.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_prev_object_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_prev_object_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_prev_object_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5194,11 +5628,11 @@ proto.koinos.chain.get_prev_object_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_prev_object_args} message
+ * @param {!proto.koinos.chain.get_prev_object_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_prev_object_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_prev_object_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSpace_asU8();
   if (f.length > 0) {
@@ -5228,7 +5662,7 @@ proto.koinos.chain.get_prev_object_args.serializeBinaryToWriter = function(messa
  * optional bytes space = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getSpace = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getSpace = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -5238,7 +5672,7 @@ proto.koinos.chain.get_prev_object_args.prototype.getSpace = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {string}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getSpace_asB64 = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getSpace_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSpace()));
 };
@@ -5251,7 +5685,7 @@ proto.koinos.chain.get_prev_object_args.prototype.getSpace_asB64 = function() {
  * This is a type-conversion wrapper around `getSpace()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getSpace_asU8 = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getSpace_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSpace()));
 };
@@ -5259,9 +5693,9 @@ proto.koinos.chain.get_prev_object_args.prototype.getSpace_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_prev_object_args} returns this
+ * @return {!proto.koinos.chain.get_prev_object_arguments} returns this
  */
-proto.koinos.chain.get_prev_object_args.prototype.setSpace = function(value) {
+proto.koinos.chain.get_prev_object_arguments.prototype.setSpace = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -5270,7 +5704,7 @@ proto.koinos.chain.get_prev_object_args.prototype.setSpace = function(value) {
  * optional bytes key = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getKey = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getKey = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -5280,7 +5714,7 @@ proto.koinos.chain.get_prev_object_args.prototype.getKey = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getKey_asB64 = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getKey()));
 };
@@ -5293,7 +5727,7 @@ proto.koinos.chain.get_prev_object_args.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getKey_asU8 = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getKey()));
 };
@@ -5301,9 +5735,9 @@ proto.koinos.chain.get_prev_object_args.prototype.getKey_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_prev_object_args} returns this
+ * @return {!proto.koinos.chain.get_prev_object_arguments} returns this
  */
-proto.koinos.chain.get_prev_object_args.prototype.setKey = function(value) {
+proto.koinos.chain.get_prev_object_arguments.prototype.setKey = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -5312,16 +5746,16 @@ proto.koinos.chain.get_prev_object_args.prototype.setKey = function(value) {
  * optional uint32 object_size_hint = 3;
  * @return {number}
  */
-proto.koinos.chain.get_prev_object_args.prototype.getObjectSizeHint = function() {
+proto.koinos.chain.get_prev_object_arguments.prototype.getObjectSizeHint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.get_prev_object_args} returns this
+ * @return {!proto.koinos.chain.get_prev_object_arguments} returns this
  */
-proto.koinos.chain.get_prev_object_args.prototype.setObjectSizeHint = function(value) {
+proto.koinos.chain.get_prev_object_arguments.prototype.setObjectSizeHint = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -5342,8 +5776,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_prev_object_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_prev_object_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_prev_object_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_prev_object_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -5352,11 +5786,11 @@ proto.koinos.chain.get_prev_object_return.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_prev_object_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_prev_object_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_prev_object_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_prev_object_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -5372,23 +5806,23 @@ proto.koinos.chain.get_prev_object_return.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_prev_object_return}
+ * @return {!proto.koinos.chain.get_prev_object_result}
  */
-proto.koinos.chain.get_prev_object_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_prev_object_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_prev_object_return;
-  return proto.koinos.chain.get_prev_object_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_prev_object_result;
+  return proto.koinos.chain.get_prev_object_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_prev_object_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_prev_object_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_prev_object_return}
+ * @return {!proto.koinos.chain.get_prev_object_result}
  */
-proto.koinos.chain.get_prev_object_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_prev_object_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5412,9 +5846,9 @@ proto.koinos.chain.get_prev_object_return.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_prev_object_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_prev_object_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_prev_object_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_prev_object_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5422,11 +5856,11 @@ proto.koinos.chain.get_prev_object_return.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_prev_object_return} message
+ * @param {!proto.koinos.chain.get_prev_object_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_prev_object_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_prev_object_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -5442,7 +5876,7 @@ proto.koinos.chain.get_prev_object_return.serializeBinaryToWriter = function(mes
  * optional bytes value = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_prev_object_return.prototype.getValue = function() {
+proto.koinos.chain.get_prev_object_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -5452,7 +5886,7 @@ proto.koinos.chain.get_prev_object_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_prev_object_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_prev_object_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -5465,7 +5899,7 @@ proto.koinos.chain.get_prev_object_return.prototype.getValue_asB64 = function() 
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_prev_object_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_prev_object_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -5473,9 +5907,9 @@ proto.koinos.chain.get_prev_object_return.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_prev_object_return} returns this
+ * @return {!proto.koinos.chain.get_prev_object_result} returns this
  */
-proto.koinos.chain.get_prev_object_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_prev_object_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -5496,8 +5930,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.call_contract_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.call_contract_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.call_contract_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.call_contract_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -5506,11 +5940,11 @@ proto.koinos.chain.call_contract_args.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.call_contract_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.call_contract_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.call_contract_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.call_contract_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     contractId: msg.getContractId_asB64(),
     entryPoint: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -5528,23 +5962,23 @@ proto.koinos.chain.call_contract_args.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.call_contract_args}
+ * @return {!proto.koinos.chain.call_contract_arguments}
  */
-proto.koinos.chain.call_contract_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.call_contract_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.call_contract_args;
-  return proto.koinos.chain.call_contract_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.call_contract_arguments;
+  return proto.koinos.chain.call_contract_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.call_contract_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.call_contract_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.call_contract_args}
+ * @return {!proto.koinos.chain.call_contract_arguments}
  */
-proto.koinos.chain.call_contract_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.call_contract_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5576,9 +6010,9 @@ proto.koinos.chain.call_contract_args.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.call_contract_args.prototype.serializeBinary = function() {
+proto.koinos.chain.call_contract_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.call_contract_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.call_contract_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5586,11 +6020,11 @@ proto.koinos.chain.call_contract_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.call_contract_args} message
+ * @param {!proto.koinos.chain.call_contract_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.call_contract_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.call_contract_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getContractId_asU8();
   if (f.length > 0) {
@@ -5620,7 +6054,7 @@ proto.koinos.chain.call_contract_args.serializeBinaryToWriter = function(message
  * optional bytes contract_id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.call_contract_args.prototype.getContractId = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getContractId = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -5630,7 +6064,7 @@ proto.koinos.chain.call_contract_args.prototype.getContractId = function() {
  * This is a type-conversion wrapper around `getContractId()`
  * @return {string}
  */
-proto.koinos.chain.call_contract_args.prototype.getContractId_asB64 = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getContractId_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getContractId()));
 };
@@ -5643,7 +6077,7 @@ proto.koinos.chain.call_contract_args.prototype.getContractId_asB64 = function()
  * This is a type-conversion wrapper around `getContractId()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.call_contract_args.prototype.getContractId_asU8 = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getContractId_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getContractId()));
 };
@@ -5651,9 +6085,9 @@ proto.koinos.chain.call_contract_args.prototype.getContractId_asU8 = function() 
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.call_contract_args} returns this
+ * @return {!proto.koinos.chain.call_contract_arguments} returns this
  */
-proto.koinos.chain.call_contract_args.prototype.setContractId = function(value) {
+proto.koinos.chain.call_contract_arguments.prototype.setContractId = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -5662,16 +6096,16 @@ proto.koinos.chain.call_contract_args.prototype.setContractId = function(value) 
  * optional uint32 entry_point = 2;
  * @return {number}
  */
-proto.koinos.chain.call_contract_args.prototype.getEntryPoint = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getEntryPoint = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.call_contract_args} returns this
+ * @return {!proto.koinos.chain.call_contract_arguments} returns this
  */
-proto.koinos.chain.call_contract_args.prototype.setEntryPoint = function(value) {
+proto.koinos.chain.call_contract_arguments.prototype.setEntryPoint = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -5680,7 +6114,7 @@ proto.koinos.chain.call_contract_args.prototype.setEntryPoint = function(value) 
  * optional bytes args = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.call_contract_args.prototype.getArgs = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getArgs = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -5690,7 +6124,7 @@ proto.koinos.chain.call_contract_args.prototype.getArgs = function() {
  * This is a type-conversion wrapper around `getArgs()`
  * @return {string}
  */
-proto.koinos.chain.call_contract_args.prototype.getArgs_asB64 = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getArgs_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getArgs()));
 };
@@ -5703,7 +6137,7 @@ proto.koinos.chain.call_contract_args.prototype.getArgs_asB64 = function() {
  * This is a type-conversion wrapper around `getArgs()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.call_contract_args.prototype.getArgs_asU8 = function() {
+proto.koinos.chain.call_contract_arguments.prototype.getArgs_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getArgs()));
 };
@@ -5711,9 +6145,9 @@ proto.koinos.chain.call_contract_args.prototype.getArgs_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.call_contract_args} returns this
+ * @return {!proto.koinos.chain.call_contract_arguments} returns this
  */
-proto.koinos.chain.call_contract_args.prototype.setArgs = function(value) {
+proto.koinos.chain.call_contract_arguments.prototype.setArgs = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -5734,8 +6168,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.call_contract_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.call_contract_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.call_contract_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.call_contract_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -5744,11 +6178,11 @@ proto.koinos.chain.call_contract_return.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.call_contract_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.call_contract_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.call_contract_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.call_contract_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -5764,23 +6198,23 @@ proto.koinos.chain.call_contract_return.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.call_contract_return}
+ * @return {!proto.koinos.chain.call_contract_result}
  */
-proto.koinos.chain.call_contract_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.call_contract_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.call_contract_return;
-  return proto.koinos.chain.call_contract_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.call_contract_result;
+  return proto.koinos.chain.call_contract_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.call_contract_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.call_contract_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.call_contract_return}
+ * @return {!proto.koinos.chain.call_contract_result}
  */
-proto.koinos.chain.call_contract_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.call_contract_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5804,9 +6238,9 @@ proto.koinos.chain.call_contract_return.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.call_contract_return.prototype.serializeBinary = function() {
+proto.koinos.chain.call_contract_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.call_contract_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.call_contract_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5814,11 +6248,11 @@ proto.koinos.chain.call_contract_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.call_contract_return} message
+ * @param {!proto.koinos.chain.call_contract_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.call_contract_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.call_contract_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -5834,7 +6268,7 @@ proto.koinos.chain.call_contract_return.serializeBinaryToWriter = function(messa
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.call_contract_return.prototype.getValue = function() {
+proto.koinos.chain.call_contract_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -5844,7 +6278,7 @@ proto.koinos.chain.call_contract_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.call_contract_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.call_contract_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -5857,7 +6291,7 @@ proto.koinos.chain.call_contract_return.prototype.getValue_asB64 = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.call_contract_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.call_contract_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -5865,9 +6299,9 @@ proto.koinos.chain.call_contract_return.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.call_contract_return} returns this
+ * @return {!proto.koinos.chain.call_contract_result} returns this
  */
-proto.koinos.chain.call_contract_return.prototype.setValue = function(value) {
+proto.koinos.chain.call_contract_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -5888,8 +6322,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_entry_point_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_entry_point_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_entry_point_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_entry_point_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -5898,11 +6332,11 @@ proto.koinos.chain.get_entry_point_args.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_entry_point_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_entry_point_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_entry_point_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_entry_point_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -5918,23 +6352,23 @@ proto.koinos.chain.get_entry_point_args.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_entry_point_args}
+ * @return {!proto.koinos.chain.get_entry_point_arguments}
  */
-proto.koinos.chain.get_entry_point_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_entry_point_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_entry_point_args;
-  return proto.koinos.chain.get_entry_point_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_entry_point_arguments;
+  return proto.koinos.chain.get_entry_point_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_entry_point_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_entry_point_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_entry_point_args}
+ * @return {!proto.koinos.chain.get_entry_point_arguments}
  */
-proto.koinos.chain.get_entry_point_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_entry_point_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5954,9 +6388,9 @@ proto.koinos.chain.get_entry_point_args.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_entry_point_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_entry_point_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_entry_point_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_entry_point_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5964,11 +6398,11 @@ proto.koinos.chain.get_entry_point_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_entry_point_args} message
+ * @param {!proto.koinos.chain.get_entry_point_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_entry_point_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_entry_point_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -5989,8 +6423,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_entry_point_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_entry_point_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_entry_point_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_entry_point_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -5999,11 +6433,11 @@ proto.koinos.chain.get_entry_point_return.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_entry_point_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_entry_point_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_entry_point_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_entry_point_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -6019,23 +6453,23 @@ proto.koinos.chain.get_entry_point_return.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_entry_point_return}
+ * @return {!proto.koinos.chain.get_entry_point_result}
  */
-proto.koinos.chain.get_entry_point_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_entry_point_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_entry_point_return;
-  return proto.koinos.chain.get_entry_point_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_entry_point_result;
+  return proto.koinos.chain.get_entry_point_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_entry_point_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_entry_point_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_entry_point_return}
+ * @return {!proto.koinos.chain.get_entry_point_result}
  */
-proto.koinos.chain.get_entry_point_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_entry_point_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6059,9 +6493,9 @@ proto.koinos.chain.get_entry_point_return.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_entry_point_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_entry_point_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_entry_point_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6069,11 +6503,11 @@ proto.koinos.chain.get_entry_point_return.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_entry_point_return} message
+ * @param {!proto.koinos.chain.get_entry_point_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_entry_point_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (f !== 0) {
@@ -6089,16 +6523,16 @@ proto.koinos.chain.get_entry_point_return.serializeBinaryToWriter = function(mes
  * optional uint32 value = 1;
  * @return {number}
  */
-proto.koinos.chain.get_entry_point_return.prototype.getValue = function() {
+proto.koinos.chain.get_entry_point_result.prototype.getValue = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.get_entry_point_return} returns this
+ * @return {!proto.koinos.chain.get_entry_point_result} returns this
  */
-proto.koinos.chain.get_entry_point_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_entry_point_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6119,8 +6553,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_contract_args_size_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_contract_args_size_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_contract_arguments_size_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_contract_arguments_size_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -6129,11 +6563,11 @@ proto.koinos.chain.get_contract_args_size_args.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_contract_args_size_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_contract_arguments_size_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_size_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_contract_arguments_size_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -6149,23 +6583,23 @@ proto.koinos.chain.get_contract_args_size_args.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_contract_args_size_args}
+ * @return {!proto.koinos.chain.get_contract_arguments_size_arguments}
  */
-proto.koinos.chain.get_contract_args_size_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_contract_arguments_size_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_contract_args_size_args;
-  return proto.koinos.chain.get_contract_args_size_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_contract_arguments_size_arguments;
+  return proto.koinos.chain.get_contract_arguments_size_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_contract_args_size_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_contract_arguments_size_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_contract_args_size_args}
+ * @return {!proto.koinos.chain.get_contract_arguments_size_arguments}
  */
-proto.koinos.chain.get_contract_args_size_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_contract_arguments_size_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6185,9 +6619,9 @@ proto.koinos.chain.get_contract_args_size_args.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_args_size_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_contract_arguments_size_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_contract_args_size_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_contract_arguments_size_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6195,11 +6629,11 @@ proto.koinos.chain.get_contract_args_size_args.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_contract_args_size_args} message
+ * @param {!proto.koinos.chain.get_contract_arguments_size_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_size_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_contract_arguments_size_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -6220,8 +6654,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_contract_args_size_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_contract_args_size_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_contract_arguments_size_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_contract_arguments_size_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -6230,11 +6664,11 @@ proto.koinos.chain.get_contract_args_size_return.prototype.toObject = function(o
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_contract_args_size_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_contract_arguments_size_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_size_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_contract_arguments_size_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -6250,23 +6684,23 @@ proto.koinos.chain.get_contract_args_size_return.toObject = function(includeInst
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_contract_args_size_return}
+ * @return {!proto.koinos.chain.get_contract_arguments_size_result}
  */
-proto.koinos.chain.get_contract_args_size_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_contract_arguments_size_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_contract_args_size_return;
-  return proto.koinos.chain.get_contract_args_size_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_contract_arguments_size_result;
+  return proto.koinos.chain.get_contract_arguments_size_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_contract_args_size_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_contract_arguments_size_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_contract_args_size_return}
+ * @return {!proto.koinos.chain.get_contract_arguments_size_result}
  */
-proto.koinos.chain.get_contract_args_size_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_contract_arguments_size_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6290,9 +6724,9 @@ proto.koinos.chain.get_contract_args_size_return.deserializeBinaryFromReader = f
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_args_size_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_contract_arguments_size_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_contract_args_size_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_contract_arguments_size_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6300,11 +6734,11 @@ proto.koinos.chain.get_contract_args_size_return.prototype.serializeBinary = fun
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_contract_args_size_return} message
+ * @param {!proto.koinos.chain.get_contract_arguments_size_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_size_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_contract_arguments_size_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (f !== 0) {
@@ -6320,16 +6754,16 @@ proto.koinos.chain.get_contract_args_size_return.serializeBinaryToWriter = funct
  * optional uint32 value = 1;
  * @return {number}
  */
-proto.koinos.chain.get_contract_args_size_return.prototype.getValue = function() {
+proto.koinos.chain.get_contract_arguments_size_result.prototype.getValue = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.get_contract_args_size_return} returns this
+ * @return {!proto.koinos.chain.get_contract_arguments_size_result} returns this
  */
-proto.koinos.chain.get_contract_args_size_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_contract_arguments_size_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6350,8 +6784,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_contract_args_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_contract_args_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_contract_arguments_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_contract_arguments_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -6360,11 +6794,11 @@ proto.koinos.chain.get_contract_args_args.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_contract_args_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_contract_arguments_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_contract_arguments_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -6380,23 +6814,23 @@ proto.koinos.chain.get_contract_args_args.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_contract_args_args}
+ * @return {!proto.koinos.chain.get_contract_arguments_arguments}
  */
-proto.koinos.chain.get_contract_args_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_contract_arguments_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_contract_args_args;
-  return proto.koinos.chain.get_contract_args_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_contract_arguments_arguments;
+  return proto.koinos.chain.get_contract_arguments_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_contract_args_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_contract_arguments_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_contract_args_args}
+ * @return {!proto.koinos.chain.get_contract_arguments_arguments}
  */
-proto.koinos.chain.get_contract_args_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_contract_arguments_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6416,9 +6850,9 @@ proto.koinos.chain.get_contract_args_args.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_args_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_contract_arguments_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_contract_args_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_contract_arguments_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6426,11 +6860,11 @@ proto.koinos.chain.get_contract_args_args.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_contract_args_args} message
+ * @param {!proto.koinos.chain.get_contract_arguments_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_contract_arguments_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -6451,8 +6885,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_contract_args_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_contract_args_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_contract_arguments_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_contract_arguments_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -6461,11 +6895,11 @@ proto.koinos.chain.get_contract_args_return.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_contract_args_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_contract_arguments_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_contract_arguments_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -6481,23 +6915,23 @@ proto.koinos.chain.get_contract_args_return.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_contract_args_return}
+ * @return {!proto.koinos.chain.get_contract_arguments_result}
  */
-proto.koinos.chain.get_contract_args_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_contract_arguments_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_contract_args_return;
-  return proto.koinos.chain.get_contract_args_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_contract_arguments_result;
+  return proto.koinos.chain.get_contract_arguments_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_contract_args_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_contract_arguments_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_contract_args_return}
+ * @return {!proto.koinos.chain.get_contract_arguments_result}
  */
-proto.koinos.chain.get_contract_args_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_contract_arguments_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6521,9 +6955,9 @@ proto.koinos.chain.get_contract_args_return.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_args_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_contract_arguments_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_contract_args_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_contract_arguments_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6531,11 +6965,11 @@ proto.koinos.chain.get_contract_args_return.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_contract_args_return} message
+ * @param {!proto.koinos.chain.get_contract_arguments_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_args_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_contract_arguments_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -6551,7 +6985,7 @@ proto.koinos.chain.get_contract_args_return.serializeBinaryToWriter = function(m
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_contract_args_return.prototype.getValue = function() {
+proto.koinos.chain.get_contract_arguments_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -6561,7 +6995,7 @@ proto.koinos.chain.get_contract_args_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_contract_args_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_contract_arguments_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -6574,7 +7008,7 @@ proto.koinos.chain.get_contract_args_return.prototype.getValue_asB64 = function(
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_args_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_contract_arguments_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -6582,9 +7016,9 @@ proto.koinos.chain.get_contract_args_return.prototype.getValue_asU8 = function()
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_contract_args_return} returns this
+ * @return {!proto.koinos.chain.get_contract_arguments_result} returns this
  */
-proto.koinos.chain.get_contract_args_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_contract_arguments_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -6605,8 +7039,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.set_contract_return_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.set_contract_return_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.set_contract_result_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.set_contract_result_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -6615,11 +7049,11 @@ proto.koinos.chain.set_contract_return_args.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.set_contract_return_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.set_contract_result_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.set_contract_return_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.set_contract_result_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -6635,23 +7069,23 @@ proto.koinos.chain.set_contract_return_args.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.set_contract_return_args}
+ * @return {!proto.koinos.chain.set_contract_result_arguments}
  */
-proto.koinos.chain.set_contract_return_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.set_contract_result_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.set_contract_return_args;
-  return proto.koinos.chain.set_contract_return_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.set_contract_result_arguments;
+  return proto.koinos.chain.set_contract_result_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.set_contract_return_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.set_contract_result_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.set_contract_return_args}
+ * @return {!proto.koinos.chain.set_contract_result_arguments}
  */
-proto.koinos.chain.set_contract_return_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.set_contract_result_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6675,9 +7109,9 @@ proto.koinos.chain.set_contract_return_args.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.set_contract_return_args.prototype.serializeBinary = function() {
+proto.koinos.chain.set_contract_result_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.set_contract_return_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.set_contract_result_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6685,11 +7119,11 @@ proto.koinos.chain.set_contract_return_args.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.set_contract_return_args} message
+ * @param {!proto.koinos.chain.set_contract_result_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.set_contract_return_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.set_contract_result_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -6705,7 +7139,7 @@ proto.koinos.chain.set_contract_return_args.serializeBinaryToWriter = function(m
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.set_contract_return_args.prototype.getValue = function() {
+proto.koinos.chain.set_contract_result_arguments.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -6715,7 +7149,7 @@ proto.koinos.chain.set_contract_return_args.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.set_contract_return_args.prototype.getValue_asB64 = function() {
+proto.koinos.chain.set_contract_result_arguments.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -6728,7 +7162,7 @@ proto.koinos.chain.set_contract_return_args.prototype.getValue_asB64 = function(
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.set_contract_return_args.prototype.getValue_asU8 = function() {
+proto.koinos.chain.set_contract_result_arguments.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -6736,9 +7170,9 @@ proto.koinos.chain.set_contract_return_args.prototype.getValue_asU8 = function()
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.set_contract_return_args} returns this
+ * @return {!proto.koinos.chain.set_contract_result_arguments} returns this
  */
-proto.koinos.chain.set_contract_return_args.prototype.setValue = function(value) {
+proto.koinos.chain.set_contract_result_arguments.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -6759,8 +7193,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.set_contract_return_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.set_contract_return_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.set_contract_result_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.set_contract_result_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -6769,11 +7203,11 @@ proto.koinos.chain.set_contract_return_return.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.set_contract_return_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.set_contract_result_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.set_contract_return_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.set_contract_result_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -6789,23 +7223,23 @@ proto.koinos.chain.set_contract_return_return.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.set_contract_return_return}
+ * @return {!proto.koinos.chain.set_contract_result_result}
  */
-proto.koinos.chain.set_contract_return_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.set_contract_result_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.set_contract_return_return;
-  return proto.koinos.chain.set_contract_return_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.set_contract_result_result;
+  return proto.koinos.chain.set_contract_result_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.set_contract_return_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.set_contract_result_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.set_contract_return_return}
+ * @return {!proto.koinos.chain.set_contract_result_result}
  */
-proto.koinos.chain.set_contract_return_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.set_contract_result_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6825,9 +7259,9 @@ proto.koinos.chain.set_contract_return_return.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.set_contract_return_return.prototype.serializeBinary = function() {
+proto.koinos.chain.set_contract_result_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.set_contract_return_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.set_contract_result_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6835,11 +7269,11 @@ proto.koinos.chain.set_contract_return_return.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.set_contract_return_return} message
+ * @param {!proto.koinos.chain.set_contract_result_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.set_contract_return_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.set_contract_result_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -6860,8 +7294,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.exit_contract_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.exit_contract_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.exit_contract_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.exit_contract_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -6870,11 +7304,11 @@ proto.koinos.chain.exit_contract_args.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.exit_contract_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.exit_contract_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.exit_contract_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.exit_contract_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     exitCode: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -6890,23 +7324,23 @@ proto.koinos.chain.exit_contract_args.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.exit_contract_args}
+ * @return {!proto.koinos.chain.exit_contract_arguments}
  */
-proto.koinos.chain.exit_contract_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.exit_contract_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.exit_contract_args;
-  return proto.koinos.chain.exit_contract_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.exit_contract_arguments;
+  return proto.koinos.chain.exit_contract_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.exit_contract_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.exit_contract_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.exit_contract_args}
+ * @return {!proto.koinos.chain.exit_contract_arguments}
  */
-proto.koinos.chain.exit_contract_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.exit_contract_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6930,9 +7364,9 @@ proto.koinos.chain.exit_contract_args.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.exit_contract_args.prototype.serializeBinary = function() {
+proto.koinos.chain.exit_contract_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.exit_contract_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.exit_contract_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6940,11 +7374,11 @@ proto.koinos.chain.exit_contract_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.exit_contract_args} message
+ * @param {!proto.koinos.chain.exit_contract_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.exit_contract_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.exit_contract_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getExitCode();
   if (f !== 0) {
@@ -6960,16 +7394,16 @@ proto.koinos.chain.exit_contract_args.serializeBinaryToWriter = function(message
  * optional uint32 exit_code = 1;
  * @return {number}
  */
-proto.koinos.chain.exit_contract_args.prototype.getExitCode = function() {
+proto.koinos.chain.exit_contract_arguments.prototype.getExitCode = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.koinos.chain.exit_contract_args} returns this
+ * @return {!proto.koinos.chain.exit_contract_arguments} returns this
  */
-proto.koinos.chain.exit_contract_args.prototype.setExitCode = function(value) {
+proto.koinos.chain.exit_contract_arguments.prototype.setExitCode = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6990,8 +7424,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.exit_contract_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.exit_contract_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.exit_contract_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.exit_contract_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -7000,11 +7434,11 @@ proto.koinos.chain.exit_contract_return.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.exit_contract_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.exit_contract_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.exit_contract_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.exit_contract_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -7020,23 +7454,23 @@ proto.koinos.chain.exit_contract_return.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.exit_contract_return}
+ * @return {!proto.koinos.chain.exit_contract_result}
  */
-proto.koinos.chain.exit_contract_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.exit_contract_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.exit_contract_return;
-  return proto.koinos.chain.exit_contract_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.exit_contract_result;
+  return proto.koinos.chain.exit_contract_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.exit_contract_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.exit_contract_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.exit_contract_return}
+ * @return {!proto.koinos.chain.exit_contract_result}
  */
-proto.koinos.chain.exit_contract_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.exit_contract_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7056,9 +7490,9 @@ proto.koinos.chain.exit_contract_return.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.exit_contract_return.prototype.serializeBinary = function() {
+proto.koinos.chain.exit_contract_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.exit_contract_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.exit_contract_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7066,11 +7500,11 @@ proto.koinos.chain.exit_contract_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.exit_contract_return} message
+ * @param {!proto.koinos.chain.exit_contract_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.exit_contract_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.exit_contract_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -7091,8 +7525,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_head_info_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_head_info_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_head_info_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_head_info_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -7101,11 +7535,11 @@ proto.koinos.chain.get_head_info_args.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_head_info_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_head_info_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_head_info_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_head_info_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -7121,23 +7555,23 @@ proto.koinos.chain.get_head_info_args.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_head_info_args}
+ * @return {!proto.koinos.chain.get_head_info_arguments}
  */
-proto.koinos.chain.get_head_info_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_head_info_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_head_info_args;
-  return proto.koinos.chain.get_head_info_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_head_info_arguments;
+  return proto.koinos.chain.get_head_info_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_head_info_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_head_info_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_head_info_args}
+ * @return {!proto.koinos.chain.get_head_info_arguments}
  */
-proto.koinos.chain.get_head_info_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_head_info_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7157,9 +7591,9 @@ proto.koinos.chain.get_head_info_args.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_head_info_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_head_info_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_head_info_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_head_info_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7167,11 +7601,11 @@ proto.koinos.chain.get_head_info_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_head_info_args} message
+ * @param {!proto.koinos.chain.get_head_info_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_head_info_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_head_info_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -7192,8 +7626,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_head_info_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_head_info_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_head_info_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_head_info_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -7202,11 +7636,11 @@ proto.koinos.chain.get_head_info_return.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_head_info_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_head_info_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_head_info_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_head_info_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: (f = msg.getValue()) && proto.koinos.chain.head_info.toObject(includeInstance, f)
   };
@@ -7222,23 +7656,23 @@ proto.koinos.chain.get_head_info_return.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_head_info_return}
+ * @return {!proto.koinos.chain.get_head_info_result}
  */
-proto.koinos.chain.get_head_info_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_head_info_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_head_info_return;
-  return proto.koinos.chain.get_head_info_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_head_info_result;
+  return proto.koinos.chain.get_head_info_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_head_info_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_head_info_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_head_info_return}
+ * @return {!proto.koinos.chain.get_head_info_result}
  */
-proto.koinos.chain.get_head_info_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_head_info_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7263,9 +7697,9 @@ proto.koinos.chain.get_head_info_return.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_head_info_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_head_info_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_head_info_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_head_info_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7273,11 +7707,11 @@ proto.koinos.chain.get_head_info_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_head_info_return} message
+ * @param {!proto.koinos.chain.get_head_info_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_head_info_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_head_info_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (f != null) {
@@ -7294,7 +7728,7 @@ proto.koinos.chain.get_head_info_return.serializeBinaryToWriter = function(messa
  * optional head_info value = 1;
  * @return {?proto.koinos.chain.head_info}
  */
-proto.koinos.chain.get_head_info_return.prototype.getValue = function() {
+proto.koinos.chain.get_head_info_result.prototype.getValue = function() {
   return /** @type{?proto.koinos.chain.head_info} */ (
     jspb.Message.getWrapperField(this, proto.koinos.chain.head_info, 1));
 };
@@ -7302,18 +7736,18 @@ proto.koinos.chain.get_head_info_return.prototype.getValue = function() {
 
 /**
  * @param {?proto.koinos.chain.head_info|undefined} value
- * @return {!proto.koinos.chain.get_head_info_return} returns this
+ * @return {!proto.koinos.chain.get_head_info_result} returns this
 */
-proto.koinos.chain.get_head_info_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_head_info_result.prototype.setValue = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.get_head_info_return} returns this
+ * @return {!proto.koinos.chain.get_head_info_result} returns this
  */
-proto.koinos.chain.get_head_info_return.prototype.clearValue = function() {
+proto.koinos.chain.get_head_info_result.prototype.clearValue = function() {
   return this.setValue(undefined);
 };
 
@@ -7322,7 +7756,7 @@ proto.koinos.chain.get_head_info_return.prototype.clearValue = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.get_head_info_return.prototype.hasValue = function() {
+proto.koinos.chain.get_head_info_result.prototype.hasValue = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -7343,8 +7777,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.hash_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.hash_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.hash_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.hash_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -7353,11 +7787,11 @@ proto.koinos.chain.hash_args.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.hash_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.hash_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.hash_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.hash_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     code: jspb.Message.getFieldWithDefault(msg, 1, "0"),
     obj: msg.getObj_asB64(),
@@ -7375,23 +7809,23 @@ proto.koinos.chain.hash_args.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.hash_args}
+ * @return {!proto.koinos.chain.hash_arguments}
  */
-proto.koinos.chain.hash_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.hash_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.hash_args;
-  return proto.koinos.chain.hash_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.hash_arguments;
+  return proto.koinos.chain.hash_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.hash_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.hash_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.hash_args}
+ * @return {!proto.koinos.chain.hash_arguments}
  */
-proto.koinos.chain.hash_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.hash_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7423,9 +7857,9 @@ proto.koinos.chain.hash_args.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.hash_args.prototype.serializeBinary = function() {
+proto.koinos.chain.hash_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.hash_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.hash_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7433,11 +7867,11 @@ proto.koinos.chain.hash_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.hash_args} message
+ * @param {!proto.koinos.chain.hash_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.hash_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.hash_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCode();
   if (parseInt(f, 10) !== 0) {
@@ -7467,16 +7901,16 @@ proto.koinos.chain.hash_args.serializeBinaryToWriter = function(message, writer)
  * optional uint64 code = 1;
  * @return {string}
  */
-proto.koinos.chain.hash_args.prototype.getCode = function() {
+proto.koinos.chain.hash_arguments.prototype.getCode = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.hash_args} returns this
+ * @return {!proto.koinos.chain.hash_arguments} returns this
  */
-proto.koinos.chain.hash_args.prototype.setCode = function(value) {
+proto.koinos.chain.hash_arguments.prototype.setCode = function(value) {
   return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
@@ -7485,7 +7919,7 @@ proto.koinos.chain.hash_args.prototype.setCode = function(value) {
  * optional bytes obj = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.hash_args.prototype.getObj = function() {
+proto.koinos.chain.hash_arguments.prototype.getObj = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -7495,7 +7929,7 @@ proto.koinos.chain.hash_args.prototype.getObj = function() {
  * This is a type-conversion wrapper around `getObj()`
  * @return {string}
  */
-proto.koinos.chain.hash_args.prototype.getObj_asB64 = function() {
+proto.koinos.chain.hash_arguments.prototype.getObj_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getObj()));
 };
@@ -7508,7 +7942,7 @@ proto.koinos.chain.hash_args.prototype.getObj_asB64 = function() {
  * This is a type-conversion wrapper around `getObj()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.hash_args.prototype.getObj_asU8 = function() {
+proto.koinos.chain.hash_arguments.prototype.getObj_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getObj()));
 };
@@ -7516,9 +7950,9 @@ proto.koinos.chain.hash_args.prototype.getObj_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.hash_args} returns this
+ * @return {!proto.koinos.chain.hash_arguments} returns this
  */
-proto.koinos.chain.hash_args.prototype.setObj = function(value) {
+proto.koinos.chain.hash_arguments.prototype.setObj = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -7527,16 +7961,16 @@ proto.koinos.chain.hash_args.prototype.setObj = function(value) {
  * optional uint64 size = 3;
  * @return {string}
  */
-proto.koinos.chain.hash_args.prototype.getSize = function() {
+proto.koinos.chain.hash_arguments.prototype.getSize = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.hash_args} returns this
+ * @return {!proto.koinos.chain.hash_arguments} returns this
  */
-proto.koinos.chain.hash_args.prototype.setSize = function(value) {
+proto.koinos.chain.hash_arguments.prototype.setSize = function(value) {
   return jspb.Message.setProto3StringIntField(this, 3, value);
 };
 
@@ -7557,8 +7991,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.hash_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.hash_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.hash_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.hash_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -7567,11 +8001,11 @@ proto.koinos.chain.hash_return.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.hash_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.hash_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.hash_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.hash_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -7587,23 +8021,23 @@ proto.koinos.chain.hash_return.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.hash_return}
+ * @return {!proto.koinos.chain.hash_result}
  */
-proto.koinos.chain.hash_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.hash_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.hash_return;
-  return proto.koinos.chain.hash_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.hash_result;
+  return proto.koinos.chain.hash_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.hash_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.hash_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.hash_return}
+ * @return {!proto.koinos.chain.hash_result}
  */
-proto.koinos.chain.hash_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.hash_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7627,9 +8061,9 @@ proto.koinos.chain.hash_return.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.hash_return.prototype.serializeBinary = function() {
+proto.koinos.chain.hash_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.hash_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.hash_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7637,11 +8071,11 @@ proto.koinos.chain.hash_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.hash_return} message
+ * @param {!proto.koinos.chain.hash_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.hash_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.hash_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -7657,7 +8091,7 @@ proto.koinos.chain.hash_return.serializeBinaryToWriter = function(message, write
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.hash_return.prototype.getValue = function() {
+proto.koinos.chain.hash_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -7667,7 +8101,7 @@ proto.koinos.chain.hash_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.hash_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.hash_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -7680,7 +8114,7 @@ proto.koinos.chain.hash_return.prototype.getValue_asB64 = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.hash_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.hash_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -7688,9 +8122,9 @@ proto.koinos.chain.hash_return.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.hash_return} returns this
+ * @return {!proto.koinos.chain.hash_result} returns this
  */
-proto.koinos.chain.hash_return.prototype.setValue = function(value) {
+proto.koinos.chain.hash_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -7711,8 +8145,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.recover_public_key_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.recover_public_key_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.recover_public_key_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.recover_public_key_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -7721,11 +8155,11 @@ proto.koinos.chain.recover_public_key_args.prototype.toObject = function(opt_inc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.recover_public_key_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.recover_public_key_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.recover_public_key_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.recover_public_key_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     signatureData: msg.getSignatureData_asB64(),
     digest: msg.getDigest_asB64()
@@ -7742,23 +8176,23 @@ proto.koinos.chain.recover_public_key_args.toObject = function(includeInstance, 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.recover_public_key_args}
+ * @return {!proto.koinos.chain.recover_public_key_arguments}
  */
-proto.koinos.chain.recover_public_key_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.recover_public_key_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.recover_public_key_args;
-  return proto.koinos.chain.recover_public_key_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.recover_public_key_arguments;
+  return proto.koinos.chain.recover_public_key_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.recover_public_key_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.recover_public_key_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.recover_public_key_args}
+ * @return {!proto.koinos.chain.recover_public_key_arguments}
  */
-proto.koinos.chain.recover_public_key_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.recover_public_key_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7786,9 +8220,9 @@ proto.koinos.chain.recover_public_key_args.deserializeBinaryFromReader = functio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.recover_public_key_args.prototype.serializeBinary = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.recover_public_key_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.recover_public_key_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7796,11 +8230,11 @@ proto.koinos.chain.recover_public_key_args.prototype.serializeBinary = function(
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.recover_public_key_args} message
+ * @param {!proto.koinos.chain.recover_public_key_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.recover_public_key_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.recover_public_key_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSignatureData_asU8();
   if (f.length > 0) {
@@ -7823,7 +8257,7 @@ proto.koinos.chain.recover_public_key_args.serializeBinaryToWriter = function(me
  * optional bytes signature_data = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.recover_public_key_args.prototype.getSignatureData = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.getSignatureData = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -7833,7 +8267,7 @@ proto.koinos.chain.recover_public_key_args.prototype.getSignatureData = function
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {string}
  */
-proto.koinos.chain.recover_public_key_args.prototype.getSignatureData_asB64 = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.getSignatureData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSignatureData()));
 };
@@ -7846,7 +8280,7 @@ proto.koinos.chain.recover_public_key_args.prototype.getSignatureData_asB64 = fu
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.recover_public_key_args.prototype.getSignatureData_asU8 = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.getSignatureData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSignatureData()));
 };
@@ -7854,9 +8288,9 @@ proto.koinos.chain.recover_public_key_args.prototype.getSignatureData_asU8 = fun
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.recover_public_key_args} returns this
+ * @return {!proto.koinos.chain.recover_public_key_arguments} returns this
  */
-proto.koinos.chain.recover_public_key_args.prototype.setSignatureData = function(value) {
+proto.koinos.chain.recover_public_key_arguments.prototype.setSignatureData = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -7865,7 +8299,7 @@ proto.koinos.chain.recover_public_key_args.prototype.setSignatureData = function
  * optional bytes digest = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.recover_public_key_args.prototype.getDigest = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.getDigest = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -7875,7 +8309,7 @@ proto.koinos.chain.recover_public_key_args.prototype.getDigest = function() {
  * This is a type-conversion wrapper around `getDigest()`
  * @return {string}
  */
-proto.koinos.chain.recover_public_key_args.prototype.getDigest_asB64 = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.getDigest_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getDigest()));
 };
@@ -7888,7 +8322,7 @@ proto.koinos.chain.recover_public_key_args.prototype.getDigest_asB64 = function(
  * This is a type-conversion wrapper around `getDigest()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.recover_public_key_args.prototype.getDigest_asU8 = function() {
+proto.koinos.chain.recover_public_key_arguments.prototype.getDigest_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getDigest()));
 };
@@ -7896,9 +8330,9 @@ proto.koinos.chain.recover_public_key_args.prototype.getDigest_asU8 = function()
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.recover_public_key_args} returns this
+ * @return {!proto.koinos.chain.recover_public_key_arguments} returns this
  */
-proto.koinos.chain.recover_public_key_args.prototype.setDigest = function(value) {
+proto.koinos.chain.recover_public_key_arguments.prototype.setDigest = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -7919,8 +8353,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.recover_public_key_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.recover_public_key_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.recover_public_key_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.recover_public_key_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -7929,11 +8363,11 @@ proto.koinos.chain.recover_public_key_return.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.recover_public_key_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.recover_public_key_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.recover_public_key_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.recover_public_key_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -7949,23 +8383,23 @@ proto.koinos.chain.recover_public_key_return.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.recover_public_key_return}
+ * @return {!proto.koinos.chain.recover_public_key_result}
  */
-proto.koinos.chain.recover_public_key_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.recover_public_key_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.recover_public_key_return;
-  return proto.koinos.chain.recover_public_key_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.recover_public_key_result;
+  return proto.koinos.chain.recover_public_key_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.recover_public_key_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.recover_public_key_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.recover_public_key_return}
+ * @return {!proto.koinos.chain.recover_public_key_result}
  */
-proto.koinos.chain.recover_public_key_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.recover_public_key_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7989,9 +8423,9 @@ proto.koinos.chain.recover_public_key_return.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.recover_public_key_return.prototype.serializeBinary = function() {
+proto.koinos.chain.recover_public_key_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.recover_public_key_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.recover_public_key_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7999,11 +8433,11 @@ proto.koinos.chain.recover_public_key_return.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.recover_public_key_return} message
+ * @param {!proto.koinos.chain.recover_public_key_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.recover_public_key_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.recover_public_key_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -8019,7 +8453,7 @@ proto.koinos.chain.recover_public_key_return.serializeBinaryToWriter = function(
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.recover_public_key_return.prototype.getValue = function() {
+proto.koinos.chain.recover_public_key_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -8029,7 +8463,7 @@ proto.koinos.chain.recover_public_key_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.recover_public_key_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.recover_public_key_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -8042,7 +8476,7 @@ proto.koinos.chain.recover_public_key_return.prototype.getValue_asB64 = function
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.recover_public_key_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.recover_public_key_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -8050,9 +8484,9 @@ proto.koinos.chain.recover_public_key_return.prototype.getValue_asU8 = function(
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.recover_public_key_return} returns this
+ * @return {!proto.koinos.chain.recover_public_key_result} returns this
  */
-proto.koinos.chain.recover_public_key_return.prototype.setValue = function(value) {
+proto.koinos.chain.recover_public_key_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -8073,8 +8507,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_transaction_payer_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_transaction_payer_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_transaction_payer_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_transaction_payer_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -8083,11 +8517,11 @@ proto.koinos.chain.get_transaction_payer_args.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_transaction_payer_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_transaction_payer_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_payer_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_transaction_payer_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f)
   };
@@ -8103,23 +8537,23 @@ proto.koinos.chain.get_transaction_payer_args.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_transaction_payer_args}
+ * @return {!proto.koinos.chain.get_transaction_payer_arguments}
  */
-proto.koinos.chain.get_transaction_payer_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_transaction_payer_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_transaction_payer_args;
-  return proto.koinos.chain.get_transaction_payer_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_transaction_payer_arguments;
+  return proto.koinos.chain.get_transaction_payer_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_transaction_payer_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_transaction_payer_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_transaction_payer_args}
+ * @return {!proto.koinos.chain.get_transaction_payer_arguments}
  */
-proto.koinos.chain.get_transaction_payer_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_transaction_payer_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8144,9 +8578,9 @@ proto.koinos.chain.get_transaction_payer_args.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_payer_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_transaction_payer_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_transaction_payer_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_transaction_payer_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8154,11 +8588,11 @@ proto.koinos.chain.get_transaction_payer_args.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_transaction_payer_args} message
+ * @param {!proto.koinos.chain.get_transaction_payer_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_payer_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_transaction_payer_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTransaction();
   if (f != null) {
@@ -8175,7 +8609,7 @@ proto.koinos.chain.get_transaction_payer_args.serializeBinaryToWriter = function
  * optional koinos.protocol.transaction transaction = 1;
  * @return {?proto.koinos.protocol.transaction}
  */
-proto.koinos.chain.get_transaction_payer_args.prototype.getTransaction = function() {
+proto.koinos.chain.get_transaction_payer_arguments.prototype.getTransaction = function() {
   return /** @type{?proto.koinos.protocol.transaction} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.transaction, 1));
 };
@@ -8183,18 +8617,18 @@ proto.koinos.chain.get_transaction_payer_args.prototype.getTransaction = functio
 
 /**
  * @param {?proto.koinos.protocol.transaction|undefined} value
- * @return {!proto.koinos.chain.get_transaction_payer_args} returns this
+ * @return {!proto.koinos.chain.get_transaction_payer_arguments} returns this
 */
-proto.koinos.chain.get_transaction_payer_args.prototype.setTransaction = function(value) {
+proto.koinos.chain.get_transaction_payer_arguments.prototype.setTransaction = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.get_transaction_payer_args} returns this
+ * @return {!proto.koinos.chain.get_transaction_payer_arguments} returns this
  */
-proto.koinos.chain.get_transaction_payer_args.prototype.clearTransaction = function() {
+proto.koinos.chain.get_transaction_payer_arguments.prototype.clearTransaction = function() {
   return this.setTransaction(undefined);
 };
 
@@ -8203,7 +8637,7 @@ proto.koinos.chain.get_transaction_payer_args.prototype.clearTransaction = funct
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.get_transaction_payer_args.prototype.hasTransaction = function() {
+proto.koinos.chain.get_transaction_payer_arguments.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8224,8 +8658,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_transaction_payer_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_transaction_payer_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_transaction_payer_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_transaction_payer_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -8234,11 +8668,11 @@ proto.koinos.chain.get_transaction_payer_return.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_transaction_payer_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_transaction_payer_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_payer_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_transaction_payer_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -8254,23 +8688,23 @@ proto.koinos.chain.get_transaction_payer_return.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_transaction_payer_return}
+ * @return {!proto.koinos.chain.get_transaction_payer_result}
  */
-proto.koinos.chain.get_transaction_payer_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_transaction_payer_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_transaction_payer_return;
-  return proto.koinos.chain.get_transaction_payer_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_transaction_payer_result;
+  return proto.koinos.chain.get_transaction_payer_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_transaction_payer_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_transaction_payer_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_transaction_payer_return}
+ * @return {!proto.koinos.chain.get_transaction_payer_result}
  */
-proto.koinos.chain.get_transaction_payer_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_transaction_payer_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8294,9 +8728,9 @@ proto.koinos.chain.get_transaction_payer_return.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_payer_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_transaction_payer_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_transaction_payer_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_transaction_payer_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8304,11 +8738,11 @@ proto.koinos.chain.get_transaction_payer_return.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_transaction_payer_return} message
+ * @param {!proto.koinos.chain.get_transaction_payer_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_payer_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_transaction_payer_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -8324,7 +8758,7 @@ proto.koinos.chain.get_transaction_payer_return.serializeBinaryToWriter = functi
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_transaction_payer_return.prototype.getValue = function() {
+proto.koinos.chain.get_transaction_payer_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -8334,7 +8768,7 @@ proto.koinos.chain.get_transaction_payer_return.prototype.getValue = function() 
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_transaction_payer_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_transaction_payer_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -8347,7 +8781,7 @@ proto.koinos.chain.get_transaction_payer_return.prototype.getValue_asB64 = funct
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_payer_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_transaction_payer_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -8355,9 +8789,9 @@ proto.koinos.chain.get_transaction_payer_return.prototype.getValue_asU8 = functi
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_transaction_payer_return} returns this
+ * @return {!proto.koinos.chain.get_transaction_payer_result} returns this
  */
-proto.koinos.chain.get_transaction_payer_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_transaction_payer_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -8378,8 +8812,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_max_account_resources_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_max_account_resources_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_account_rc_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_account_rc_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -8388,11 +8822,11 @@ proto.koinos.chain.get_max_account_resources_args.prototype.toObject = function(
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_max_account_resources_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_account_rc_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_max_account_resources_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_account_rc_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     account: msg.getAccount_asB64()
   };
@@ -8408,23 +8842,23 @@ proto.koinos.chain.get_max_account_resources_args.toObject = function(includeIns
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_max_account_resources_args}
+ * @return {!proto.koinos.chain.get_account_rc_arguments}
  */
-proto.koinos.chain.get_max_account_resources_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_account_rc_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_max_account_resources_args;
-  return proto.koinos.chain.get_max_account_resources_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_account_rc_arguments;
+  return proto.koinos.chain.get_account_rc_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_max_account_resources_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_account_rc_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_max_account_resources_args}
+ * @return {!proto.koinos.chain.get_account_rc_arguments}
  */
-proto.koinos.chain.get_max_account_resources_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_account_rc_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8448,9 +8882,9 @@ proto.koinos.chain.get_max_account_resources_args.deserializeBinaryFromReader = 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_max_account_resources_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_account_rc_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_max_account_resources_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_account_rc_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8458,11 +8892,11 @@ proto.koinos.chain.get_max_account_resources_args.prototype.serializeBinary = fu
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_max_account_resources_args} message
+ * @param {!proto.koinos.chain.get_account_rc_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_max_account_resources_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_account_rc_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAccount_asU8();
   if (f.length > 0) {
@@ -8478,7 +8912,7 @@ proto.koinos.chain.get_max_account_resources_args.serializeBinaryToWriter = func
  * optional bytes account = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_max_account_resources_args.prototype.getAccount = function() {
+proto.koinos.chain.get_account_rc_arguments.prototype.getAccount = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -8488,7 +8922,7 @@ proto.koinos.chain.get_max_account_resources_args.prototype.getAccount = functio
  * This is a type-conversion wrapper around `getAccount()`
  * @return {string}
  */
-proto.koinos.chain.get_max_account_resources_args.prototype.getAccount_asB64 = function() {
+proto.koinos.chain.get_account_rc_arguments.prototype.getAccount_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getAccount()));
 };
@@ -8501,7 +8935,7 @@ proto.koinos.chain.get_max_account_resources_args.prototype.getAccount_asB64 = f
  * This is a type-conversion wrapper around `getAccount()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_max_account_resources_args.prototype.getAccount_asU8 = function() {
+proto.koinos.chain.get_account_rc_arguments.prototype.getAccount_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getAccount()));
 };
@@ -8509,9 +8943,9 @@ proto.koinos.chain.get_max_account_resources_args.prototype.getAccount_asU8 = fu
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_max_account_resources_args} returns this
+ * @return {!proto.koinos.chain.get_account_rc_arguments} returns this
  */
-proto.koinos.chain.get_max_account_resources_args.prototype.setAccount = function(value) {
+proto.koinos.chain.get_account_rc_arguments.prototype.setAccount = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -8532,8 +8966,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_max_account_resources_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_max_account_resources_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_account_rc_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_account_rc_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -8542,11 +8976,11 @@ proto.koinos.chain.get_max_account_resources_return.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_max_account_resources_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_account_rc_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_max_account_resources_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_account_rc_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getFieldWithDefault(msg, 1, "0")
   };
@@ -8562,23 +8996,23 @@ proto.koinos.chain.get_max_account_resources_return.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_max_account_resources_return}
+ * @return {!proto.koinos.chain.get_account_rc_result}
  */
-proto.koinos.chain.get_max_account_resources_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_account_rc_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_max_account_resources_return;
-  return proto.koinos.chain.get_max_account_resources_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_account_rc_result;
+  return proto.koinos.chain.get_account_rc_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_max_account_resources_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_account_rc_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_max_account_resources_return}
+ * @return {!proto.koinos.chain.get_account_rc_result}
  */
-proto.koinos.chain.get_max_account_resources_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_account_rc_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8602,9 +9036,9 @@ proto.koinos.chain.get_max_account_resources_return.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_max_account_resources_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_account_rc_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_max_account_resources_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_account_rc_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8612,11 +9046,11 @@ proto.koinos.chain.get_max_account_resources_return.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_max_account_resources_return} message
+ * @param {!proto.koinos.chain.get_account_rc_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_max_account_resources_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_account_rc_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (parseInt(f, 10) !== 0) {
@@ -8632,16 +9066,16 @@ proto.koinos.chain.get_max_account_resources_return.serializeBinaryToWriter = fu
  * optional uint64 value = 1;
  * @return {string}
  */
-proto.koinos.chain.get_max_account_resources_return.prototype.getValue = function() {
+proto.koinos.chain.get_account_rc_result.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.get_max_account_resources_return} returns this
+ * @return {!proto.koinos.chain.get_account_rc_result} returns this
  */
-proto.koinos.chain.get_max_account_resources_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_account_rc_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
@@ -8662,8 +9096,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_transaction_resource_limit_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.consume_account_rc_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.consume_account_rc_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -8672,11 +9106,897 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.toObject = func
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_transaction_resource_limit_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.consume_account_rc_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_resource_limit_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.consume_account_rc_arguments.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    account: msg.getAccount_asB64(),
+    value: jspb.Message.getFieldWithDefault(msg, 2, "0")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.consume_account_rc_arguments}
+ */
+proto.koinos.chain.consume_account_rc_arguments.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.consume_account_rc_arguments;
+  return proto.koinos.chain.consume_account_rc_arguments.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.consume_account_rc_arguments} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.consume_account_rc_arguments}
+ */
+proto.koinos.chain.consume_account_rc_arguments.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setAccount(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.consume_account_rc_arguments.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.consume_account_rc_arguments} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_account_rc_arguments.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getAccount_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      1,
+      f
+    );
+  }
+  f = message.getValue();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bytes account = 1;
+ * @return {!(string|Uint8Array)}
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.getAccount = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * optional bytes account = 1;
+ * This is a type-conversion wrapper around `getAccount()`
+ * @return {string}
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.getAccount_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getAccount()));
+};
+
+
+/**
+ * optional bytes account = 1;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getAccount()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.getAccount_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getAccount()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.koinos.chain.consume_account_rc_arguments} returns this
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.setAccount = function(value) {
+  return jspb.Message.setProto3BytesField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 value = 2;
+ * @return {string}
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.getValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.consume_account_rc_arguments} returns this
+ */
+proto.koinos.chain.consume_account_rc_arguments.prototype.setValue = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 2, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.consume_account_rc_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.consume_account_rc_result.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.consume_account_rc_result} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_account_rc_result.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.consume_account_rc_result}
+ */
+proto.koinos.chain.consume_account_rc_result.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.consume_account_rc_result;
+  return proto.koinos.chain.consume_account_rc_result.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.consume_account_rc_result} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.consume_account_rc_result}
+ */
+proto.koinos.chain.consume_account_rc_result.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.consume_account_rc_result.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.consume_account_rc_result.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.consume_account_rc_result} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_account_rc_result.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValue();
+  if (f) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bool value = 1;
+ * @return {boolean}
+ */
+proto.koinos.chain.consume_account_rc_result.prototype.getValue = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.chain.consume_account_rc_result} returns this
+ */
+proto.koinos.chain.consume_account_rc_result.prototype.setValue = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.get_resource_limits_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_resource_limits_arguments.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.get_resource_limits_arguments} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.get_resource_limits_arguments.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.get_resource_limits_arguments}
+ */
+proto.koinos.chain.get_resource_limits_arguments.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.get_resource_limits_arguments;
+  return proto.koinos.chain.get_resource_limits_arguments.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.get_resource_limits_arguments} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.get_resource_limits_arguments}
+ */
+proto.koinos.chain.get_resource_limits_arguments.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.get_resource_limits_arguments.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.get_resource_limits_arguments.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.get_resource_limits_arguments} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.get_resource_limits_arguments.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.get_resource_limits_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_resource_limits_result.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.get_resource_limits_result} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.get_resource_limits_result.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    value: (f = msg.getValue()) && proto.koinos.chain.resource_limit_data.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.get_resource_limits_result}
+ */
+proto.koinos.chain.get_resource_limits_result.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.get_resource_limits_result;
+  return proto.koinos.chain.get_resource_limits_result.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.get_resource_limits_result} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.get_resource_limits_result}
+ */
+proto.koinos.chain.get_resource_limits_result.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.koinos.chain.resource_limit_data;
+      reader.readMessage(value,proto.koinos.chain.resource_limit_data.deserializeBinaryFromReader);
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.get_resource_limits_result.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.get_resource_limits_result.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.get_resource_limits_result} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.get_resource_limits_result.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValue();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.koinos.chain.resource_limit_data.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional resource_limit_data value = 1;
+ * @return {?proto.koinos.chain.resource_limit_data}
+ */
+proto.koinos.chain.get_resource_limits_result.prototype.getValue = function() {
+  return /** @type{?proto.koinos.chain.resource_limit_data} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.chain.resource_limit_data, 1));
+};
+
+
+/**
+ * @param {?proto.koinos.chain.resource_limit_data|undefined} value
+ * @return {!proto.koinos.chain.get_resource_limits_result} returns this
+*/
+proto.koinos.chain.get_resource_limits_result.prototype.setValue = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.koinos.chain.get_resource_limits_result} returns this
+ */
+proto.koinos.chain.get_resource_limits_result.prototype.clearValue = function() {
+  return this.setValue(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.koinos.chain.get_resource_limits_result.prototype.hasValue = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.consume_block_resources_arguments.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.consume_block_resources_arguments} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_block_resources_arguments.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    diskStorageConsumed: jspb.Message.getFieldWithDefault(msg, 1, "0"),
+    networkBandwidthConsumed: jspb.Message.getFieldWithDefault(msg, 2, "0"),
+    computeBandwidthConsumed: jspb.Message.getFieldWithDefault(msg, 3, "0")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.consume_block_resources_arguments}
+ */
+proto.koinos.chain.consume_block_resources_arguments.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.consume_block_resources_arguments;
+  return proto.koinos.chain.consume_block_resources_arguments.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.consume_block_resources_arguments} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.consume_block_resources_arguments}
+ */
+proto.koinos.chain.consume_block_resources_arguments.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setDiskStorageConsumed(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setNetworkBandwidthConsumed(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setComputeBandwidthConsumed(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.consume_block_resources_arguments.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.consume_block_resources_arguments} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_block_resources_arguments.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDiskStorageConsumed();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      1,
+      f
+    );
+  }
+  f = message.getNetworkBandwidthConsumed();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      2,
+      f
+    );
+  }
+  f = message.getComputeBandwidthConsumed();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 disk_storage_consumed = 1;
+ * @return {string}
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.getDiskStorageConsumed = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.consume_block_resources_arguments} returns this
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.setDiskStorageConsumed = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 1, value);
+};
+
+
+/**
+ * optional uint64 network_bandwidth_consumed = 2;
+ * @return {string}
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.getNetworkBandwidthConsumed = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.consume_block_resources_arguments} returns this
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.setNetworkBandwidthConsumed = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 2, value);
+};
+
+
+/**
+ * optional uint64 compute_bandwidth_consumed = 3;
+ * @return {string}
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.getComputeBandwidthConsumed = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.chain.consume_block_resources_arguments} returns this
+ */
+proto.koinos.chain.consume_block_resources_arguments.prototype.setComputeBandwidthConsumed = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 3, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.consume_block_resources_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.consume_block_resources_result.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.consume_block_resources_result} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_block_resources_result.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.koinos.chain.consume_block_resources_result}
+ */
+proto.koinos.chain.consume_block_resources_result.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.koinos.chain.consume_block_resources_result;
+  return proto.koinos.chain.consume_block_resources_result.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.koinos.chain.consume_block_resources_result} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.koinos.chain.consume_block_resources_result}
+ */
+proto.koinos.chain.consume_block_resources_result.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.consume_block_resources_result.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.koinos.chain.consume_block_resources_result.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.koinos.chain.consume_block_resources_result} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.consume_block_resources_result.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValue();
+  if (f) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bool value = 1;
+ * @return {boolean}
+ */
+proto.koinos.chain.consume_block_resources_result.prototype.getValue = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.chain.consume_block_resources_result} returns this
+ */
+proto.koinos.chain.consume_block_resources_result.prototype.setValue = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.koinos.chain.get_transaction_rc_limit_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_transaction_rc_limit_arguments.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.koinos.chain.get_transaction_rc_limit_arguments} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.koinos.chain.get_transaction_rc_limit_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f)
   };
@@ -8692,23 +10012,23 @@ proto.koinos.chain.get_transaction_resource_limit_args.toObject = function(inclu
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_transaction_resource_limit_args}
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_arguments}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_transaction_rc_limit_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_transaction_resource_limit_args;
-  return proto.koinos.chain.get_transaction_resource_limit_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_transaction_rc_limit_arguments;
+  return proto.koinos.chain.get_transaction_rc_limit_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_transaction_resource_limit_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_transaction_rc_limit_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_transaction_resource_limit_args}
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_arguments}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_transaction_rc_limit_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8733,9 +10053,9 @@ proto.koinos.chain.get_transaction_resource_limit_args.deserializeBinaryFromRead
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_transaction_rc_limit_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_transaction_resource_limit_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_transaction_rc_limit_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8743,11 +10063,11 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.serializeBinary
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_transaction_resource_limit_args} message
+ * @param {!proto.koinos.chain.get_transaction_rc_limit_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_resource_limit_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_transaction_rc_limit_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTransaction();
   if (f != null) {
@@ -8764,7 +10084,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.serializeBinaryToWriter =
  * optional koinos.protocol.transaction transaction = 1;
  * @return {?proto.koinos.protocol.transaction}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.getTransaction = function() {
+proto.koinos.chain.get_transaction_rc_limit_arguments.prototype.getTransaction = function() {
   return /** @type{?proto.koinos.protocol.transaction} */ (
     jspb.Message.getWrapperField(this, proto.koinos.protocol.transaction, 1));
 };
@@ -8772,18 +10092,18 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.getTransaction 
 
 /**
  * @param {?proto.koinos.protocol.transaction|undefined} value
- * @return {!proto.koinos.chain.get_transaction_resource_limit_args} returns this
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_arguments} returns this
 */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.setTransaction = function(value) {
+proto.koinos.chain.get_transaction_rc_limit_arguments.prototype.setTransaction = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.koinos.chain.get_transaction_resource_limit_args} returns this
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_arguments} returns this
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.clearTransaction = function() {
+proto.koinos.chain.get_transaction_rc_limit_arguments.prototype.clearTransaction = function() {
   return this.setTransaction(undefined);
 };
 
@@ -8792,7 +10112,7 @@ proto.koinos.chain.get_transaction_resource_limit_args.prototype.clearTransactio
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.koinos.chain.get_transaction_resource_limit_args.prototype.hasTransaction = function() {
+proto.koinos.chain.get_transaction_rc_limit_arguments.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8813,8 +10133,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_transaction_resource_limit_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_transaction_resource_limit_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_transaction_rc_limit_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_transaction_rc_limit_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -8823,11 +10143,11 @@ proto.koinos.chain.get_transaction_resource_limit_return.prototype.toObject = fu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_transaction_resource_limit_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_transaction_rc_limit_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_resource_limit_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_transaction_rc_limit_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getFieldWithDefault(msg, 1, "0")
   };
@@ -8843,23 +10163,23 @@ proto.koinos.chain.get_transaction_resource_limit_return.toObject = function(inc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_transaction_resource_limit_return}
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_result}
  */
-proto.koinos.chain.get_transaction_resource_limit_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_transaction_rc_limit_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_transaction_resource_limit_return;
-  return proto.koinos.chain.get_transaction_resource_limit_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_transaction_rc_limit_result;
+  return proto.koinos.chain.get_transaction_rc_limit_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_transaction_resource_limit_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_transaction_rc_limit_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_transaction_resource_limit_return}
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_result}
  */
-proto.koinos.chain.get_transaction_resource_limit_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_transaction_rc_limit_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8883,9 +10203,9 @@ proto.koinos.chain.get_transaction_resource_limit_return.deserializeBinaryFromRe
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_resource_limit_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_transaction_rc_limit_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_transaction_resource_limit_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_transaction_rc_limit_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8893,11 +10213,11 @@ proto.koinos.chain.get_transaction_resource_limit_return.prototype.serializeBina
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_transaction_resource_limit_return} message
+ * @param {!proto.koinos.chain.get_transaction_rc_limit_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_resource_limit_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_transaction_rc_limit_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (parseInt(f, 10) !== 0) {
@@ -8913,16 +10233,16 @@ proto.koinos.chain.get_transaction_resource_limit_return.serializeBinaryToWriter
  * optional uint64 value = 1;
  * @return {string}
  */
-proto.koinos.chain.get_transaction_resource_limit_return.prototype.getValue = function() {
+proto.koinos.chain.get_transaction_rc_limit_result.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.get_transaction_resource_limit_return} returns this
+ * @return {!proto.koinos.chain.get_transaction_rc_limit_result} returns this
  */
-proto.koinos.chain.get_transaction_resource_limit_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_transaction_rc_limit_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
@@ -8943,8 +10263,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_last_irreversible_block_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_last_irreversible_block_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_last_irreversible_block_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_last_irreversible_block_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -8953,11 +10273,11 @@ proto.koinos.chain.get_last_irreversible_block_args.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_last_irreversible_block_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_last_irreversible_block_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_last_irreversible_block_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_last_irreversible_block_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -8973,23 +10293,23 @@ proto.koinos.chain.get_last_irreversible_block_args.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_last_irreversible_block_args}
+ * @return {!proto.koinos.chain.get_last_irreversible_block_arguments}
  */
-proto.koinos.chain.get_last_irreversible_block_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_last_irreversible_block_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_last_irreversible_block_args;
-  return proto.koinos.chain.get_last_irreversible_block_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_last_irreversible_block_arguments;
+  return proto.koinos.chain.get_last_irreversible_block_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_last_irreversible_block_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_last_irreversible_block_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_last_irreversible_block_args}
+ * @return {!proto.koinos.chain.get_last_irreversible_block_arguments}
  */
-proto.koinos.chain.get_last_irreversible_block_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_last_irreversible_block_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9009,9 +10329,9 @@ proto.koinos.chain.get_last_irreversible_block_args.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_last_irreversible_block_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_last_irreversible_block_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_last_irreversible_block_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_last_irreversible_block_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9019,11 +10339,11 @@ proto.koinos.chain.get_last_irreversible_block_args.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_last_irreversible_block_args} message
+ * @param {!proto.koinos.chain.get_last_irreversible_block_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_last_irreversible_block_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_last_irreversible_block_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -9044,8 +10364,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_last_irreversible_block_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_last_irreversible_block_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_last_irreversible_block_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_last_irreversible_block_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -9054,11 +10374,11 @@ proto.koinos.chain.get_last_irreversible_block_return.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_last_irreversible_block_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_last_irreversible_block_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_last_irreversible_block_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_last_irreversible_block_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getFieldWithDefault(msg, 1, "0")
   };
@@ -9074,23 +10394,23 @@ proto.koinos.chain.get_last_irreversible_block_return.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_last_irreversible_block_return}
+ * @return {!proto.koinos.chain.get_last_irreversible_block_result}
  */
-proto.koinos.chain.get_last_irreversible_block_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_last_irreversible_block_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_last_irreversible_block_return;
-  return proto.koinos.chain.get_last_irreversible_block_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_last_irreversible_block_result;
+  return proto.koinos.chain.get_last_irreversible_block_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_last_irreversible_block_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_last_irreversible_block_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_last_irreversible_block_return}
+ * @return {!proto.koinos.chain.get_last_irreversible_block_result}
  */
-proto.koinos.chain.get_last_irreversible_block_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_last_irreversible_block_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9114,9 +10434,9 @@ proto.koinos.chain.get_last_irreversible_block_return.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_last_irreversible_block_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_last_irreversible_block_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_last_irreversible_block_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_last_irreversible_block_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9124,11 +10444,11 @@ proto.koinos.chain.get_last_irreversible_block_return.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_last_irreversible_block_return} message
+ * @param {!proto.koinos.chain.get_last_irreversible_block_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_last_irreversible_block_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_last_irreversible_block_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (parseInt(f, 10) !== 0) {
@@ -9144,16 +10464,16 @@ proto.koinos.chain.get_last_irreversible_block_return.serializeBinaryToWriter = 
  * optional uint64 value = 1;
  * @return {string}
  */
-proto.koinos.chain.get_last_irreversible_block_return.prototype.getValue = function() {
+proto.koinos.chain.get_last_irreversible_block_result.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.get_last_irreversible_block_return} returns this
+ * @return {!proto.koinos.chain.get_last_irreversible_block_result} returns this
  */
-proto.koinos.chain.get_last_irreversible_block_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_last_irreversible_block_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 
@@ -9174,8 +10494,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_caller_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_caller_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_caller_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_caller_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -9184,11 +10504,11 @@ proto.koinos.chain.get_caller_args.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_caller_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_caller_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_caller_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_caller_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -9204,23 +10524,23 @@ proto.koinos.chain.get_caller_args.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_caller_args}
+ * @return {!proto.koinos.chain.get_caller_arguments}
  */
-proto.koinos.chain.get_caller_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_caller_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_caller_args;
-  return proto.koinos.chain.get_caller_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_caller_arguments;
+  return proto.koinos.chain.get_caller_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_caller_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_caller_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_caller_args}
+ * @return {!proto.koinos.chain.get_caller_arguments}
  */
-proto.koinos.chain.get_caller_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_caller_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9240,9 +10560,9 @@ proto.koinos.chain.get_caller_args.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_caller_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_caller_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_caller_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_caller_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9250,11 +10570,11 @@ proto.koinos.chain.get_caller_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_caller_args} message
+ * @param {!proto.koinos.chain.get_caller_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_caller_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_caller_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -9275,8 +10595,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_caller_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_caller_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_caller_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_caller_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -9285,11 +10605,11 @@ proto.koinos.chain.get_caller_return.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_caller_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_caller_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_caller_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_caller_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     caller: msg.getCaller_asB64(),
     callerPrivilege: jspb.Message.getFieldWithDefault(msg, 2, 0)
@@ -9306,23 +10626,23 @@ proto.koinos.chain.get_caller_return.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_caller_return}
+ * @return {!proto.koinos.chain.get_caller_result}
  */
-proto.koinos.chain.get_caller_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_caller_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_caller_return;
-  return proto.koinos.chain.get_caller_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_caller_result;
+  return proto.koinos.chain.get_caller_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_caller_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_caller_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_caller_return}
+ * @return {!proto.koinos.chain.get_caller_result}
  */
-proto.koinos.chain.get_caller_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_caller_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9350,9 +10670,9 @@ proto.koinos.chain.get_caller_return.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_caller_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_caller_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_caller_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_caller_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9360,11 +10680,11 @@ proto.koinos.chain.get_caller_return.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_caller_return} message
+ * @param {!proto.koinos.chain.get_caller_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_caller_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_caller_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCaller_asU8();
   if (f.length > 0) {
@@ -9387,7 +10707,7 @@ proto.koinos.chain.get_caller_return.serializeBinaryToWriter = function(message,
  * optional bytes caller = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_caller_return.prototype.getCaller = function() {
+proto.koinos.chain.get_caller_result.prototype.getCaller = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -9397,7 +10717,7 @@ proto.koinos.chain.get_caller_return.prototype.getCaller = function() {
  * This is a type-conversion wrapper around `getCaller()`
  * @return {string}
  */
-proto.koinos.chain.get_caller_return.prototype.getCaller_asB64 = function() {
+proto.koinos.chain.get_caller_result.prototype.getCaller_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getCaller()));
 };
@@ -9410,7 +10730,7 @@ proto.koinos.chain.get_caller_return.prototype.getCaller_asB64 = function() {
  * This is a type-conversion wrapper around `getCaller()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_caller_return.prototype.getCaller_asU8 = function() {
+proto.koinos.chain.get_caller_result.prototype.getCaller_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getCaller()));
 };
@@ -9418,9 +10738,9 @@ proto.koinos.chain.get_caller_return.prototype.getCaller_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_caller_return} returns this
+ * @return {!proto.koinos.chain.get_caller_result} returns this
  */
-proto.koinos.chain.get_caller_return.prototype.setCaller = function(value) {
+proto.koinos.chain.get_caller_result.prototype.setCaller = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -9429,16 +10749,16 @@ proto.koinos.chain.get_caller_return.prototype.setCaller = function(value) {
  * optional privilege caller_privilege = 2;
  * @return {!proto.koinos.chain.privilege}
  */
-proto.koinos.chain.get_caller_return.prototype.getCallerPrivilege = function() {
+proto.koinos.chain.get_caller_result.prototype.getCallerPrivilege = function() {
   return /** @type {!proto.koinos.chain.privilege} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {!proto.koinos.chain.privilege} value
- * @return {!proto.koinos.chain.get_caller_return} returns this
+ * @return {!proto.koinos.chain.get_caller_result} returns this
  */
-proto.koinos.chain.get_caller_return.prototype.setCallerPrivilege = function(value) {
+proto.koinos.chain.get_caller_result.prototype.setCallerPrivilege = function(value) {
   return jspb.Message.setProto3EnumField(this, 2, value);
 };
 
@@ -9459,8 +10779,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.require_authority_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.require_authority_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.require_authority_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.require_authority_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -9469,11 +10789,11 @@ proto.koinos.chain.require_authority_args.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.require_authority_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.require_authority_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.require_authority_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.require_authority_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     account: msg.getAccount_asB64()
   };
@@ -9489,23 +10809,23 @@ proto.koinos.chain.require_authority_args.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.require_authority_args}
+ * @return {!proto.koinos.chain.require_authority_arguments}
  */
-proto.koinos.chain.require_authority_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.require_authority_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.require_authority_args;
-  return proto.koinos.chain.require_authority_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.require_authority_arguments;
+  return proto.koinos.chain.require_authority_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.require_authority_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.require_authority_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.require_authority_args}
+ * @return {!proto.koinos.chain.require_authority_arguments}
  */
-proto.koinos.chain.require_authority_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.require_authority_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9529,9 +10849,9 @@ proto.koinos.chain.require_authority_args.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.require_authority_args.prototype.serializeBinary = function() {
+proto.koinos.chain.require_authority_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.require_authority_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.require_authority_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9539,11 +10859,11 @@ proto.koinos.chain.require_authority_args.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.require_authority_args} message
+ * @param {!proto.koinos.chain.require_authority_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.require_authority_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.require_authority_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAccount_asU8();
   if (f.length > 0) {
@@ -9559,7 +10879,7 @@ proto.koinos.chain.require_authority_args.serializeBinaryToWriter = function(mes
  * optional bytes account = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.require_authority_args.prototype.getAccount = function() {
+proto.koinos.chain.require_authority_arguments.prototype.getAccount = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -9569,7 +10889,7 @@ proto.koinos.chain.require_authority_args.prototype.getAccount = function() {
  * This is a type-conversion wrapper around `getAccount()`
  * @return {string}
  */
-proto.koinos.chain.require_authority_args.prototype.getAccount_asB64 = function() {
+proto.koinos.chain.require_authority_arguments.prototype.getAccount_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getAccount()));
 };
@@ -9582,7 +10902,7 @@ proto.koinos.chain.require_authority_args.prototype.getAccount_asB64 = function(
  * This is a type-conversion wrapper around `getAccount()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.require_authority_args.prototype.getAccount_asU8 = function() {
+proto.koinos.chain.require_authority_arguments.prototype.getAccount_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getAccount()));
 };
@@ -9590,9 +10910,9 @@ proto.koinos.chain.require_authority_args.prototype.getAccount_asU8 = function()
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.require_authority_args} returns this
+ * @return {!proto.koinos.chain.require_authority_arguments} returns this
  */
-proto.koinos.chain.require_authority_args.prototype.setAccount = function(value) {
+proto.koinos.chain.require_authority_arguments.prototype.setAccount = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -9613,8 +10933,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.require_authority_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.require_authority_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.require_authority_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.require_authority_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -9623,11 +10943,11 @@ proto.koinos.chain.require_authority_return.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.require_authority_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.require_authority_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.require_authority_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.require_authority_result.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -9643,23 +10963,23 @@ proto.koinos.chain.require_authority_return.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.require_authority_return}
+ * @return {!proto.koinos.chain.require_authority_result}
  */
-proto.koinos.chain.require_authority_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.require_authority_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.require_authority_return;
-  return proto.koinos.chain.require_authority_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.require_authority_result;
+  return proto.koinos.chain.require_authority_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.require_authority_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.require_authority_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.require_authority_return}
+ * @return {!proto.koinos.chain.require_authority_result}
  */
-proto.koinos.chain.require_authority_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.require_authority_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9679,9 +10999,9 @@ proto.koinos.chain.require_authority_return.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.require_authority_return.prototype.serializeBinary = function() {
+proto.koinos.chain.require_authority_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.require_authority_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.require_authority_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9689,11 +11009,11 @@ proto.koinos.chain.require_authority_return.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.require_authority_return} message
+ * @param {!proto.koinos.chain.require_authority_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.require_authority_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.require_authority_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -9714,8 +11034,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_transaction_signature_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_transaction_signature_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_transaction_signature_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_transaction_signature_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -9724,11 +11044,11 @@ proto.koinos.chain.get_transaction_signature_args.prototype.toObject = function(
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_transaction_signature_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_transaction_signature_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_signature_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_transaction_signature_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -9744,23 +11064,23 @@ proto.koinos.chain.get_transaction_signature_args.toObject = function(includeIns
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_transaction_signature_args}
+ * @return {!proto.koinos.chain.get_transaction_signature_arguments}
  */
-proto.koinos.chain.get_transaction_signature_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_transaction_signature_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_transaction_signature_args;
-  return proto.koinos.chain.get_transaction_signature_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_transaction_signature_arguments;
+  return proto.koinos.chain.get_transaction_signature_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_transaction_signature_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_transaction_signature_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_transaction_signature_args}
+ * @return {!proto.koinos.chain.get_transaction_signature_arguments}
  */
-proto.koinos.chain.get_transaction_signature_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_transaction_signature_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9780,9 +11100,9 @@ proto.koinos.chain.get_transaction_signature_args.deserializeBinaryFromReader = 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_signature_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_transaction_signature_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_transaction_signature_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_transaction_signature_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9790,11 +11110,11 @@ proto.koinos.chain.get_transaction_signature_args.prototype.serializeBinary = fu
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_transaction_signature_args} message
+ * @param {!proto.koinos.chain.get_transaction_signature_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_signature_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_transaction_signature_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -9815,8 +11135,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_transaction_signature_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_transaction_signature_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_transaction_signature_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_transaction_signature_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -9825,11 +11145,11 @@ proto.koinos.chain.get_transaction_signature_return.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_transaction_signature_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_transaction_signature_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_signature_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_transaction_signature_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -9845,23 +11165,23 @@ proto.koinos.chain.get_transaction_signature_return.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_transaction_signature_return}
+ * @return {!proto.koinos.chain.get_transaction_signature_result}
  */
-proto.koinos.chain.get_transaction_signature_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_transaction_signature_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_transaction_signature_return;
-  return proto.koinos.chain.get_transaction_signature_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_transaction_signature_result;
+  return proto.koinos.chain.get_transaction_signature_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_transaction_signature_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_transaction_signature_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_transaction_signature_return}
+ * @return {!proto.koinos.chain.get_transaction_signature_result}
  */
-proto.koinos.chain.get_transaction_signature_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_transaction_signature_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9885,9 +11205,9 @@ proto.koinos.chain.get_transaction_signature_return.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_signature_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_transaction_signature_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_transaction_signature_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_transaction_signature_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9895,11 +11215,11 @@ proto.koinos.chain.get_transaction_signature_return.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_transaction_signature_return} message
+ * @param {!proto.koinos.chain.get_transaction_signature_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_transaction_signature_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_transaction_signature_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -9915,7 +11235,7 @@ proto.koinos.chain.get_transaction_signature_return.serializeBinaryToWriter = fu
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_transaction_signature_return.prototype.getValue = function() {
+proto.koinos.chain.get_transaction_signature_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -9925,7 +11245,7 @@ proto.koinos.chain.get_transaction_signature_return.prototype.getValue = functio
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_transaction_signature_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_transaction_signature_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -9938,7 +11258,7 @@ proto.koinos.chain.get_transaction_signature_return.prototype.getValue_asB64 = f
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_transaction_signature_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_transaction_signature_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -9946,9 +11266,9 @@ proto.koinos.chain.get_transaction_signature_return.prototype.getValue_asU8 = fu
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_transaction_signature_return} returns this
+ * @return {!proto.koinos.chain.get_transaction_signature_result} returns this
  */
-proto.koinos.chain.get_transaction_signature_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_transaction_signature_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -9969,8 +11289,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_contract_id_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_contract_id_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_contract_id_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_contract_id_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -9979,11 +11299,11 @@ proto.koinos.chain.get_contract_id_args.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_contract_id_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_contract_id_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_id_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_contract_id_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -9999,23 +11319,23 @@ proto.koinos.chain.get_contract_id_args.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_contract_id_args}
+ * @return {!proto.koinos.chain.get_contract_id_arguments}
  */
-proto.koinos.chain.get_contract_id_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_contract_id_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_contract_id_args;
-  return proto.koinos.chain.get_contract_id_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_contract_id_arguments;
+  return proto.koinos.chain.get_contract_id_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_contract_id_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_contract_id_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_contract_id_args}
+ * @return {!proto.koinos.chain.get_contract_id_arguments}
  */
-proto.koinos.chain.get_contract_id_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_contract_id_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10035,9 +11355,9 @@ proto.koinos.chain.get_contract_id_args.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_id_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_contract_id_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_contract_id_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_contract_id_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10045,11 +11365,11 @@ proto.koinos.chain.get_contract_id_args.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_contract_id_args} message
+ * @param {!proto.koinos.chain.get_contract_id_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_id_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_contract_id_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -10070,8 +11390,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_contract_id_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_contract_id_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_contract_id_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_contract_id_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -10080,11 +11400,11 @@ proto.koinos.chain.get_contract_id_return.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_contract_id_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_contract_id_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_id_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_contract_id_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: msg.getValue_asB64()
   };
@@ -10100,23 +11420,23 @@ proto.koinos.chain.get_contract_id_return.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_contract_id_return}
+ * @return {!proto.koinos.chain.get_contract_id_result}
  */
-proto.koinos.chain.get_contract_id_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_contract_id_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_contract_id_return;
-  return proto.koinos.chain.get_contract_id_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_contract_id_result;
+  return proto.koinos.chain.get_contract_id_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_contract_id_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_contract_id_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_contract_id_return}
+ * @return {!proto.koinos.chain.get_contract_id_result}
  */
-proto.koinos.chain.get_contract_id_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_contract_id_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10140,9 +11460,9 @@ proto.koinos.chain.get_contract_id_return.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_id_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_contract_id_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_contract_id_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_contract_id_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10150,11 +11470,11 @@ proto.koinos.chain.get_contract_id_return.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_contract_id_return} message
+ * @param {!proto.koinos.chain.get_contract_id_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_contract_id_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_contract_id_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue_asU8();
   if (f.length > 0) {
@@ -10170,7 +11490,7 @@ proto.koinos.chain.get_contract_id_return.serializeBinaryToWriter = function(mes
  * optional bytes value = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_contract_id_return.prototype.getValue = function() {
+proto.koinos.chain.get_contract_id_result.prototype.getValue = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -10180,7 +11500,7 @@ proto.koinos.chain.get_contract_id_return.prototype.getValue = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.koinos.chain.get_contract_id_return.prototype.getValue_asB64 = function() {
+proto.koinos.chain.get_contract_id_result.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getValue()));
 };
@@ -10193,7 +11513,7 @@ proto.koinos.chain.get_contract_id_return.prototype.getValue_asB64 = function() 
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_contract_id_return.prototype.getValue_asU8 = function() {
+proto.koinos.chain.get_contract_id_result.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getValue()));
 };
@@ -10201,9 +11521,9 @@ proto.koinos.chain.get_contract_id_return.prototype.getValue_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_contract_id_return} returns this
+ * @return {!proto.koinos.chain.get_contract_id_result} returns this
  */
-proto.koinos.chain.get_contract_id_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_contract_id_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -10224,8 +11544,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_account_nonce_args.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_account_nonce_args.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_account_nonce_arguments.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_account_nonce_arguments.toObject(opt_includeInstance, this);
 };
 
 
@@ -10234,11 +11554,11 @@ proto.koinos.chain.get_account_nonce_args.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_account_nonce_args} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_account_nonce_arguments} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_account_nonce_args.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_account_nonce_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     account: msg.getAccount_asB64()
   };
@@ -10254,23 +11574,23 @@ proto.koinos.chain.get_account_nonce_args.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_account_nonce_args}
+ * @return {!proto.koinos.chain.get_account_nonce_arguments}
  */
-proto.koinos.chain.get_account_nonce_args.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_account_nonce_arguments.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_account_nonce_args;
-  return proto.koinos.chain.get_account_nonce_args.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_account_nonce_arguments;
+  return proto.koinos.chain.get_account_nonce_arguments.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_account_nonce_args} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_account_nonce_arguments} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_account_nonce_args}
+ * @return {!proto.koinos.chain.get_account_nonce_arguments}
  */
-proto.koinos.chain.get_account_nonce_args.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_account_nonce_arguments.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10294,9 +11614,9 @@ proto.koinos.chain.get_account_nonce_args.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_account_nonce_args.prototype.serializeBinary = function() {
+proto.koinos.chain.get_account_nonce_arguments.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_account_nonce_args.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_account_nonce_arguments.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10304,11 +11624,11 @@ proto.koinos.chain.get_account_nonce_args.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_account_nonce_args} message
+ * @param {!proto.koinos.chain.get_account_nonce_arguments} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_account_nonce_args.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_account_nonce_arguments.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAccount_asU8();
   if (f.length > 0) {
@@ -10324,7 +11644,7 @@ proto.koinos.chain.get_account_nonce_args.serializeBinaryToWriter = function(mes
  * optional bytes account = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.get_account_nonce_args.prototype.getAccount = function() {
+proto.koinos.chain.get_account_nonce_arguments.prototype.getAccount = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -10334,7 +11654,7 @@ proto.koinos.chain.get_account_nonce_args.prototype.getAccount = function() {
  * This is a type-conversion wrapper around `getAccount()`
  * @return {string}
  */
-proto.koinos.chain.get_account_nonce_args.prototype.getAccount_asB64 = function() {
+proto.koinos.chain.get_account_nonce_arguments.prototype.getAccount_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getAccount()));
 };
@@ -10347,7 +11667,7 @@ proto.koinos.chain.get_account_nonce_args.prototype.getAccount_asB64 = function(
  * This is a type-conversion wrapper around `getAccount()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_account_nonce_args.prototype.getAccount_asU8 = function() {
+proto.koinos.chain.get_account_nonce_arguments.prototype.getAccount_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getAccount()));
 };
@@ -10355,9 +11675,9 @@ proto.koinos.chain.get_account_nonce_args.prototype.getAccount_asU8 = function()
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.koinos.chain.get_account_nonce_args} returns this
+ * @return {!proto.koinos.chain.get_account_nonce_arguments} returns this
  */
-proto.koinos.chain.get_account_nonce_args.prototype.setAccount = function(value) {
+proto.koinos.chain.get_account_nonce_arguments.prototype.setAccount = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -10378,8 +11698,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.koinos.chain.get_account_nonce_return.prototype.toObject = function(opt_includeInstance) {
-  return proto.koinos.chain.get_account_nonce_return.toObject(opt_includeInstance, this);
+proto.koinos.chain.get_account_nonce_result.prototype.toObject = function(opt_includeInstance) {
+  return proto.koinos.chain.get_account_nonce_result.toObject(opt_includeInstance, this);
 };
 
 
@@ -10388,11 +11708,11 @@ proto.koinos.chain.get_account_nonce_return.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.koinos.chain.get_account_nonce_return} msg The msg instance to transform.
+ * @param {!proto.koinos.chain.get_account_nonce_result} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_account_nonce_return.toObject = function(includeInstance, msg) {
+proto.koinos.chain.get_account_nonce_result.toObject = function(includeInstance, msg) {
   var f, obj = {
     value: jspb.Message.getFieldWithDefault(msg, 1, "0")
   };
@@ -10408,23 +11728,23 @@ proto.koinos.chain.get_account_nonce_return.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.koinos.chain.get_account_nonce_return}
+ * @return {!proto.koinos.chain.get_account_nonce_result}
  */
-proto.koinos.chain.get_account_nonce_return.deserializeBinary = function(bytes) {
+proto.koinos.chain.get_account_nonce_result.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.koinos.chain.get_account_nonce_return;
-  return proto.koinos.chain.get_account_nonce_return.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.koinos.chain.get_account_nonce_result;
+  return proto.koinos.chain.get_account_nonce_result.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.koinos.chain.get_account_nonce_return} msg The message object to deserialize into.
+ * @param {!proto.koinos.chain.get_account_nonce_result} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.koinos.chain.get_account_nonce_return}
+ * @return {!proto.koinos.chain.get_account_nonce_result}
  */
-proto.koinos.chain.get_account_nonce_return.deserializeBinaryFromReader = function(msg, reader) {
+proto.koinos.chain.get_account_nonce_result.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10448,9 +11768,9 @@ proto.koinos.chain.get_account_nonce_return.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.koinos.chain.get_account_nonce_return.prototype.serializeBinary = function() {
+proto.koinos.chain.get_account_nonce_result.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.koinos.chain.get_account_nonce_return.serializeBinaryToWriter(this, writer);
+  proto.koinos.chain.get_account_nonce_result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10458,11 +11778,11 @@ proto.koinos.chain.get_account_nonce_return.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.koinos.chain.get_account_nonce_return} message
+ * @param {!proto.koinos.chain.get_account_nonce_result} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.koinos.chain.get_account_nonce_return.serializeBinaryToWriter = function(message, writer) {
+proto.koinos.chain.get_account_nonce_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
   if (parseInt(f, 10) !== 0) {
@@ -10478,16 +11798,16 @@ proto.koinos.chain.get_account_nonce_return.serializeBinaryToWriter = function(m
  * optional uint64 value = 1;
  * @return {string}
  */
-proto.koinos.chain.get_account_nonce_return.prototype.getValue = function() {
+proto.koinos.chain.get_account_nonce_result.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.koinos.chain.get_account_nonce_return} returns this
+ * @return {!proto.koinos.chain.get_account_nonce_result} returns this
  */
-proto.koinos.chain.get_account_nonce_return.prototype.setValue = function(value) {
+proto.koinos.chain.get_account_nonce_result.prototype.setValue = function(value) {
   return jspb.Message.setProto3StringIntField(this, 1, value);
 };
 

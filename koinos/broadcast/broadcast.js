@@ -140,8 +140,8 @@ proto.koinos.broadcast.transaction_accepted.toObject = function(includeInstance,
   var f, obj = {
     transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f),
     payer: msg.getPayer_asB64(),
-    maxPayerResources: jspb.Message.getFieldWithDefault(msg, 3, "0"),
-    trxResourceLimit: jspb.Message.getFieldWithDefault(msg, 4, "0"),
+    maxPayerRc: jspb.Message.getFieldWithDefault(msg, 3, "0"),
+    rcLimit: jspb.Message.getFieldWithDefault(msg, 4, "0"),
     height: jspb.Message.getFieldWithDefault(msg, 5, "0")
   };
 
@@ -190,11 +190,11 @@ proto.koinos.broadcast.transaction_accepted.deserializeBinaryFromReader = functi
       break;
     case 3:
       var value = /** @type {string} */ (reader.readUint64String());
-      msg.setMaxPayerResources(value);
+      msg.setMaxPayerRc(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readUint64String());
-      msg.setTrxResourceLimit(value);
+      msg.setRcLimit(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readUint64String());
@@ -244,14 +244,14 @@ proto.koinos.broadcast.transaction_accepted.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getMaxPayerResources();
+  f = message.getMaxPayerRc();
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
       3,
       f
     );
   }
-  f = message.getTrxResourceLimit();
+  f = message.getRcLimit();
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
       4,
@@ -348,10 +348,10 @@ proto.koinos.broadcast.transaction_accepted.prototype.setPayer = function(value)
 
 
 /**
- * optional uint64 max_payer_resources = 3;
+ * optional uint64 max_payer_rc = 3;
  * @return {string}
  */
-proto.koinos.broadcast.transaction_accepted.prototype.getMaxPayerResources = function() {
+proto.koinos.broadcast.transaction_accepted.prototype.getMaxPayerRc = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
 };
 
@@ -360,16 +360,16 @@ proto.koinos.broadcast.transaction_accepted.prototype.getMaxPayerResources = fun
  * @param {string} value
  * @return {!proto.koinos.broadcast.transaction_accepted} returns this
  */
-proto.koinos.broadcast.transaction_accepted.prototype.setMaxPayerResources = function(value) {
+proto.koinos.broadcast.transaction_accepted.prototype.setMaxPayerRc = function(value) {
   return jspb.Message.setProto3StringIntField(this, 3, value);
 };
 
 
 /**
- * optional uint64 trx_resource_limit = 4;
+ * optional uint64 rc_limit = 4;
  * @return {string}
  */
-proto.koinos.broadcast.transaction_accepted.prototype.getTrxResourceLimit = function() {
+proto.koinos.broadcast.transaction_accepted.prototype.getRcLimit = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, "0"));
 };
 
@@ -378,7 +378,7 @@ proto.koinos.broadcast.transaction_accepted.prototype.getTrxResourceLimit = func
  * @param {string} value
  * @return {!proto.koinos.broadcast.transaction_accepted} returns this
  */
-proto.koinos.broadcast.transaction_accepted.prototype.setTrxResourceLimit = function(value) {
+proto.koinos.broadcast.transaction_accepted.prototype.setRcLimit = function(value) {
   return jspb.Message.setProto3StringIntField(this, 4, value);
 };
 
