@@ -142,7 +142,10 @@ proto.koinos.broadcast.transaction_accepted.toObject = function(includeInstance,
     payer: msg.getPayer_asB64(),
     maxPayerRc: jspb.Message.getFieldWithDefault(msg, 3, "0"),
     rcLimit: jspb.Message.getFieldWithDefault(msg, 4, "0"),
-    height: jspb.Message.getFieldWithDefault(msg, 5, "0")
+    height: jspb.Message.getFieldWithDefault(msg, 5, "0"),
+    diskStorageUsed: jspb.Message.getFieldWithDefault(msg, 6, "0"),
+    networkBandwidthUsed: jspb.Message.getFieldWithDefault(msg, 7, "0"),
+    computeBandwidthUsed: jspb.Message.getFieldWithDefault(msg, 8, "0")
   };
 
   if (includeInstance) {
@@ -199,6 +202,18 @@ proto.koinos.broadcast.transaction_accepted.deserializeBinaryFromReader = functi
     case 5:
       var value = /** @type {string} */ (reader.readUint64String());
       msg.setHeight(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setDiskStorageUsed(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setNetworkBandwidthUsed(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readUint64String());
+      msg.setComputeBandwidthUsed(value);
       break;
     default:
       reader.skipField();
@@ -262,6 +277,27 @@ proto.koinos.broadcast.transaction_accepted.serializeBinaryToWriter = function(m
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
       5,
+      f
+    );
+  }
+  f = message.getDiskStorageUsed();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      6,
+      f
+    );
+  }
+  f = message.getNetworkBandwidthUsed();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      7,
+      f
+    );
+  }
+  f = message.getComputeBandwidthUsed();
+  if (parseInt(f, 10) !== 0) {
+    writer.writeUint64String(
+      8,
       f
     );
   }
@@ -398,6 +434,60 @@ proto.koinos.broadcast.transaction_accepted.prototype.getHeight = function() {
  */
 proto.koinos.broadcast.transaction_accepted.prototype.setHeight = function(value) {
   return jspb.Message.setProto3StringIntField(this, 5, value);
+};
+
+
+/**
+ * optional uint64 disk_storage_used = 6;
+ * @return {string}
+ */
+proto.koinos.broadcast.transaction_accepted.prototype.getDiskStorageUsed = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.broadcast.transaction_accepted} returns this
+ */
+proto.koinos.broadcast.transaction_accepted.prototype.setDiskStorageUsed = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 6, value);
+};
+
+
+/**
+ * optional uint64 network_bandwidth_used = 7;
+ * @return {string}
+ */
+proto.koinos.broadcast.transaction_accepted.prototype.getNetworkBandwidthUsed = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.broadcast.transaction_accepted} returns this
+ */
+proto.koinos.broadcast.transaction_accepted.prototype.setNetworkBandwidthUsed = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 7, value);
+};
+
+
+/**
+ * optional uint64 compute_bandwidth_used = 8;
+ * @return {string}
+ */
+proto.koinos.broadcast.transaction_accepted.prototype.getComputeBandwidthUsed = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, "0"));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.koinos.broadcast.transaction_accepted} returns this
+ */
+proto.koinos.broadcast.transaction_accepted.prototype.setComputeBandwidthUsed = function(value) {
+  return jspb.Message.setProto3StringIntField(this, 8, value);
 };
 
 
