@@ -39,7 +39,9 @@ goog.require('jspb.Message');
 goog.require('proto.koinos.block_topology');
 goog.require('proto.koinos.chain.resource_limit_data');
 goog.require('proto.koinos.protocol.block');
+goog.require('proto.koinos.protocol.block_receipt');
 goog.require('proto.koinos.protocol.transaction');
+goog.require('proto.koinos.protocol.transaction_receipt');
 goog.require('proto.koinos.rpc.error_response');
 goog.require('proto.koinos.rpc.reserved_rpc');
 
@@ -736,7 +738,7 @@ proto.koinos.rpc.chain.submit_block_response.prototype.toObject = function(opt_i
  */
 proto.koinos.rpc.chain.submit_block_response.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    receipt: (f = msg.getReceipt()) && proto.koinos.protocol.block_receipt.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -773,6 +775,11 @@ proto.koinos.rpc.chain.submit_block_response.deserializeBinaryFromReader = funct
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = new proto.koinos.protocol.block_receipt;
+      reader.readMessage(value,proto.koinos.protocol.block_receipt.deserializeBinaryFromReader);
+      msg.setReceipt(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -802,6 +809,51 @@ proto.koinos.rpc.chain.submit_block_response.prototype.serializeBinary = functio
  */
 proto.koinos.rpc.chain.submit_block_response.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getReceipt();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.koinos.protocol.block_receipt.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional koinos.protocol.block_receipt receipt = 1;
+ * @return {?proto.koinos.protocol.block_receipt}
+ */
+proto.koinos.rpc.chain.submit_block_response.prototype.getReceipt = function() {
+  return /** @type{?proto.koinos.protocol.block_receipt} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.protocol.block_receipt, 1));
+};
+
+
+/**
+ * @param {?proto.koinos.protocol.block_receipt|undefined} value
+ * @return {!proto.koinos.rpc.chain.submit_block_response} returns this
+*/
+proto.koinos.rpc.chain.submit_block_response.prototype.setReceipt = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.koinos.rpc.chain.submit_block_response} returns this
+ */
+proto.koinos.rpc.chain.submit_block_response.prototype.clearReceipt = function() {
+  return this.setReceipt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.koinos.rpc.chain.submit_block_response.prototype.hasReceipt = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1048,7 +1100,7 @@ proto.koinos.rpc.chain.submit_transaction_response.prototype.toObject = function
  */
 proto.koinos.rpc.chain.submit_transaction_response.toObject = function(includeInstance, msg) {
   var f, obj = {
-
+    receipt: (f = msg.getReceipt()) && proto.koinos.protocol.transaction_receipt.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1085,6 +1137,11 @@ proto.koinos.rpc.chain.submit_transaction_response.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
+    case 1:
+      var value = new proto.koinos.protocol.transaction_receipt;
+      reader.readMessage(value,proto.koinos.protocol.transaction_receipt.deserializeBinaryFromReader);
+      msg.setReceipt(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1114,6 +1171,51 @@ proto.koinos.rpc.chain.submit_transaction_response.prototype.serializeBinary = f
  */
 proto.koinos.rpc.chain.submit_transaction_response.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getReceipt();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.koinos.protocol.transaction_receipt.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional koinos.protocol.transaction_receipt receipt = 1;
+ * @return {?proto.koinos.protocol.transaction_receipt}
+ */
+proto.koinos.rpc.chain.submit_transaction_response.prototype.getReceipt = function() {
+  return /** @type{?proto.koinos.protocol.transaction_receipt} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.protocol.transaction_receipt, 1));
+};
+
+
+/**
+ * @param {?proto.koinos.protocol.transaction_receipt|undefined} value
+ * @return {!proto.koinos.rpc.chain.submit_transaction_response} returns this
+*/
+proto.koinos.rpc.chain.submit_transaction_response.prototype.setReceipt = function(value) {
+  return jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.koinos.rpc.chain.submit_transaction_response} returns this
+ */
+proto.koinos.rpc.chain.submit_transaction_response.prototype.clearReceipt = function() {
+  return this.setReceipt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.koinos.rpc.chain.submit_transaction_response.prototype.hasReceipt = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
