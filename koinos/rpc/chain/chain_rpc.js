@@ -497,10 +497,7 @@ proto.koinos.rpc.chain.submit_block_request.prototype.toObject = function(opt_in
  */
 proto.koinos.rpc.chain.submit_block_request.toObject = function(includeInstance, msg) {
   var f, obj = {
-    block: (f = msg.getBlock()) && proto.koinos.protocol.block.toObject(includeInstance, f),
-    verifyPassiveData: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-    verifyBlockSignature: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
-    verifyTransactionSignature: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
+    block: (f = msg.getBlock()) && proto.koinos.protocol.block.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -542,18 +539,6 @@ proto.koinos.rpc.chain.submit_block_request.deserializeBinaryFromReader = functi
       reader.readMessage(value,proto.koinos.protocol.block.deserializeBinaryFromReader);
       msg.setBlock(value);
       break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setVerifyPassiveData(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setVerifyBlockSignature(value);
-      break;
-    case 4:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setVerifyTransactionSignature(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -589,27 +574,6 @@ proto.koinos.rpc.chain.submit_block_request.serializeBinaryToWriter = function(m
       1,
       f,
       proto.koinos.protocol.block.serializeBinaryToWriter
-    );
-  }
-  f = message.getVerifyPassiveData();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
-  f = message.getVerifyBlockSignature();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
-  f = message.getVerifyTransactionSignature();
-  if (f) {
-    writer.writeBool(
-      4,
-      f
     );
   }
 };
@@ -649,60 +613,6 @@ proto.koinos.rpc.chain.submit_block_request.prototype.clearBlock = function() {
  */
 proto.koinos.rpc.chain.submit_block_request.prototype.hasBlock = function() {
   return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional bool verify_passive_data = 2;
- * @return {boolean}
- */
-proto.koinos.rpc.chain.submit_block_request.prototype.getVerifyPassiveData = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.koinos.rpc.chain.submit_block_request} returns this
- */
-proto.koinos.rpc.chain.submit_block_request.prototype.setVerifyPassiveData = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-/**
- * optional bool verify_block_signature = 3;
- * @return {boolean}
- */
-proto.koinos.rpc.chain.submit_block_request.prototype.getVerifyBlockSignature = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.koinos.rpc.chain.submit_block_request} returns this
- */
-proto.koinos.rpc.chain.submit_block_request.prototype.setVerifyBlockSignature = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
-};
-
-
-/**
- * optional bool verify_transaction_signature = 4;
- * @return {boolean}
- */
-proto.koinos.rpc.chain.submit_block_request.prototype.getVerifyTransactionSignature = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.koinos.rpc.chain.submit_block_request} returns this
- */
-proto.koinos.rpc.chain.submit_block_request.prototype.setVerifyTransactionSignature = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
@@ -889,9 +799,7 @@ proto.koinos.rpc.chain.submit_transaction_request.prototype.toObject = function(
  */
 proto.koinos.rpc.chain.submit_transaction_request.toObject = function(includeInstance, msg) {
   var f, obj = {
-    transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f),
-    verifyPassiveData: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-    verifyTransactionSignature: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
+    transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -933,14 +841,6 @@ proto.koinos.rpc.chain.submit_transaction_request.deserializeBinaryFromReader = 
       reader.readMessage(value,proto.koinos.protocol.transaction.deserializeBinaryFromReader);
       msg.setTransaction(value);
       break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setVerifyPassiveData(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setVerifyTransactionSignature(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -976,20 +876,6 @@ proto.koinos.rpc.chain.submit_transaction_request.serializeBinaryToWriter = func
       1,
       f,
       proto.koinos.protocol.transaction.serializeBinaryToWriter
-    );
-  }
-  f = message.getVerifyPassiveData();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
-  f = message.getVerifyTransactionSignature();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
     );
   }
 };
@@ -1029,42 +915,6 @@ proto.koinos.rpc.chain.submit_transaction_request.prototype.clearTransaction = f
  */
 proto.koinos.rpc.chain.submit_transaction_request.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional bool verify_passive_data = 2;
- * @return {boolean}
- */
-proto.koinos.rpc.chain.submit_transaction_request.prototype.getVerifyPassiveData = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.koinos.rpc.chain.submit_transaction_request} returns this
- */
-proto.koinos.rpc.chain.submit_transaction_request.prototype.setVerifyPassiveData = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-/**
- * optional bool verify_transaction_signature = 3;
- * @return {boolean}
- */
-proto.koinos.rpc.chain.submit_transaction_request.prototype.getVerifyTransactionSignature = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.koinos.rpc.chain.submit_transaction_request} returns this
- */
-proto.koinos.rpc.chain.submit_transaction_request.prototype.setVerifyTransactionSignature = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 

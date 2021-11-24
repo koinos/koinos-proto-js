@@ -19,7 +19,6 @@ goog.provide('proto.koinos.protocol.system_call_id');
 proto.koinos.protocol.system_call_id = {
   RESERVED_ID: 0,
   PRINTS: 1,
-  VERIFY_BLOCK_HEADER: 2,
   APPLY_BLOCK: 3,
   APPLY_TRANSACTION: 4,
   APPLY_UPLOAD_CONTRACT_OPERATION: 5,
@@ -38,7 +37,7 @@ proto.koinos.protocol.system_call_id = {
   GET_HEAD_INFO: 18,
   HASH: 19,
   RECOVER_PUBLIC_KEY: 20,
-  VERIFY_BLOCK_SIGNATURE: 21,
+  PROCESS_BLOCK_SIGNATURE: 21,
   VERIFY_MERKLE_ROOT: 22,
   GET_TRANSACTION_PAYER: 23,
   GET_TRANSACTION_RC_LIMIT: 25,
