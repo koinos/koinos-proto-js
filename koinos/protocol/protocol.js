@@ -3013,7 +3013,7 @@ proto.koinos.protocol.active_block_data.toObject = function(includeInstance, msg
   var f, obj = {
     transactionMerkleRoot: msg.getTransactionMerkleRoot_asB64(),
     signer: msg.getSigner_asB64(),
-    stateMerkleRoot: msg.getStateMerkleRoot_asB64()
+    previousStateMerkleRoot: msg.getPreviousStateMerkleRoot_asB64()
   };
 
   if (includeInstance) {
@@ -3060,7 +3060,7 @@ proto.koinos.protocol.active_block_data.deserializeBinaryFromReader = function(m
       break;
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setStateMerkleRoot(value);
+      msg.setPreviousStateMerkleRoot(value);
       break;
     default:
       reader.skipField();
@@ -3105,7 +3105,7 @@ proto.koinos.protocol.active_block_data.serializeBinaryToWriter = function(messa
       f
     );
   }
-  f = message.getStateMerkleRoot_asU8();
+  f = message.getPreviousStateMerkleRoot_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
@@ -3200,35 +3200,35 @@ proto.koinos.protocol.active_block_data.prototype.setSigner = function(value) {
 
 
 /**
- * optional bytes state_merkle_root = 4;
+ * optional bytes previous_state_merkle_root = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.protocol.active_block_data.prototype.getStateMerkleRoot = function() {
+proto.koinos.protocol.active_block_data.prototype.getPreviousStateMerkleRoot = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
- * optional bytes state_merkle_root = 4;
- * This is a type-conversion wrapper around `getStateMerkleRoot()`
+ * optional bytes previous_state_merkle_root = 4;
+ * This is a type-conversion wrapper around `getPreviousStateMerkleRoot()`
  * @return {string}
  */
-proto.koinos.protocol.active_block_data.prototype.getStateMerkleRoot_asB64 = function() {
+proto.koinos.protocol.active_block_data.prototype.getPreviousStateMerkleRoot_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getStateMerkleRoot()));
+      this.getPreviousStateMerkleRoot()));
 };
 
 
 /**
- * optional bytes state_merkle_root = 4;
+ * optional bytes previous_state_merkle_root = 4;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getStateMerkleRoot()`
+ * This is a type-conversion wrapper around `getPreviousStateMerkleRoot()`
  * @return {!Uint8Array}
  */
-proto.koinos.protocol.active_block_data.prototype.getStateMerkleRoot_asU8 = function() {
+proto.koinos.protocol.active_block_data.prototype.getPreviousStateMerkleRoot_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getStateMerkleRoot()));
+      this.getPreviousStateMerkleRoot()));
 };
 
 
@@ -3236,7 +3236,7 @@ proto.koinos.protocol.active_block_data.prototype.getStateMerkleRoot_asU8 = func
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.protocol.active_block_data} returns this
  */
-proto.koinos.protocol.active_block_data.prototype.setStateMerkleRoot = function(value) {
+proto.koinos.protocol.active_block_data.prototype.setPreviousStateMerkleRoot = function(value) {
   return jspb.Message.setProto3BytesField(this, 4, value);
 };
 

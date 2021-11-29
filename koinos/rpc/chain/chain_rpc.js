@@ -1203,7 +1203,8 @@ proto.koinos.rpc.chain.get_head_info_response.prototype.toObject = function(opt_
 proto.koinos.rpc.chain.get_head_info_response.toObject = function(includeInstance, msg) {
   var f, obj = {
     headTopology: (f = msg.getHeadTopology()) && proto.koinos.block_topology.toObject(includeInstance, f),
-    lastIrreversibleBlock: jspb.Message.getFieldWithDefault(msg, 2, "0")
+    lastIrreversibleBlock: jspb.Message.getFieldWithDefault(msg, 2, "0"),
+    headStateMerkleRoot: msg.getHeadStateMerkleRoot_asB64()
   };
 
   if (includeInstance) {
@@ -1249,6 +1250,10 @@ proto.koinos.rpc.chain.get_head_info_response.deserializeBinaryFromReader = func
       var value = /** @type {string} */ (reader.readUint64String());
       msg.setLastIrreversibleBlock(value);
       break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setHeadStateMerkleRoot(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1290,6 +1295,13 @@ proto.koinos.rpc.chain.get_head_info_response.serializeBinaryToWriter = function
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
       2,
+      f
+    );
+  }
+  f = message.getHeadStateMerkleRoot_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      3,
       f
     );
   }
@@ -1348,6 +1360,48 @@ proto.koinos.rpc.chain.get_head_info_response.prototype.getLastIrreversibleBlock
  */
 proto.koinos.rpc.chain.get_head_info_response.prototype.setLastIrreversibleBlock = function(value) {
   return jspb.Message.setProto3StringIntField(this, 2, value);
+};
+
+
+/**
+ * optional bytes head_state_merkle_root = 3;
+ * @return {!(string|Uint8Array)}
+ */
+proto.koinos.rpc.chain.get_head_info_response.prototype.getHeadStateMerkleRoot = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * optional bytes head_state_merkle_root = 3;
+ * This is a type-conversion wrapper around `getHeadStateMerkleRoot()`
+ * @return {string}
+ */
+proto.koinos.rpc.chain.get_head_info_response.prototype.getHeadStateMerkleRoot_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getHeadStateMerkleRoot()));
+};
+
+
+/**
+ * optional bytes head_state_merkle_root = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getHeadStateMerkleRoot()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.rpc.chain.get_head_info_response.prototype.getHeadStateMerkleRoot_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getHeadStateMerkleRoot()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.koinos.rpc.chain.get_head_info_response} returns this
+ */
+proto.koinos.rpc.chain.get_head_info_response.prototype.setHeadStateMerkleRoot = function(value) {
+  return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
