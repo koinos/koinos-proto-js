@@ -3834,7 +3834,7 @@ proto.koinos.protocol.block.prototype.clearTransactionsList = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.koinos.protocol.block_receipt.repeatedFields_ = [6,7];
+proto.koinos.protocol.block_receipt.repeatedFields_ = [7,8];
 
 
 
@@ -3872,6 +3872,7 @@ proto.koinos.protocol.block_receipt.toObject = function(includeInstance, msg) {
     diskStorageUsed: jspb.Message.getFieldWithDefault(msg, 3, "0"),
     networkBandwidthUsed: jspb.Message.getFieldWithDefault(msg, 4, "0"),
     computeBandwidthUsed: jspb.Message.getFieldWithDefault(msg, 5, "0"),
+    stateMerkleRoot: msg.getStateMerkleRoot_asB64(),
     eventsList: jspb.Message.toObjectList(msg.getEventsList(),
     proto.koinos.protocol.event_data.toObject, includeInstance),
     transactionReceiptsList: jspb.Message.toObjectList(msg.getTransactionReceiptsList(),
@@ -3933,11 +3934,15 @@ proto.koinos.protocol.block_receipt.deserializeBinaryFromReader = function(msg, 
       msg.setComputeBandwidthUsed(value);
       break;
     case 6:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setStateMerkleRoot(value);
+      break;
+    case 7:
       var value = new proto.koinos.protocol.event_data;
       reader.readMessage(value,proto.koinos.protocol.event_data.deserializeBinaryFromReader);
       msg.addEvents(value);
       break;
-    case 7:
+    case 8:
       var value = new proto.koinos.protocol.transaction_receipt;
       reader.readMessage(value,proto.koinos.protocol.transaction_receipt.deserializeBinaryFromReader);
       msg.addTransactionReceipts(value);
@@ -4006,10 +4011,17 @@ proto.koinos.protocol.block_receipt.serializeBinaryToWriter = function(message, 
       f
     );
   }
+  f = message.getStateMerkleRoot_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      6,
+      f
+    );
+  }
   f = message.getEventsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      6,
+      7,
       f,
       proto.koinos.protocol.event_data.serializeBinaryToWriter
     );
@@ -4017,7 +4029,7 @@ proto.koinos.protocol.block_receipt.serializeBinaryToWriter = function(message, 
   f = message.getTransactionReceiptsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      7,
+      8,
       f,
       proto.koinos.protocol.transaction_receipt.serializeBinaryToWriter
     );
@@ -4140,12 +4152,54 @@ proto.koinos.protocol.block_receipt.prototype.setComputeBandwidthUsed = function
 
 
 /**
- * repeated event_data events = 6;
+ * optional bytes state_merkle_root = 6;
+ * @return {!(string|Uint8Array)}
+ */
+proto.koinos.protocol.block_receipt.prototype.getStateMerkleRoot = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * optional bytes state_merkle_root = 6;
+ * This is a type-conversion wrapper around `getStateMerkleRoot()`
+ * @return {string}
+ */
+proto.koinos.protocol.block_receipt.prototype.getStateMerkleRoot_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getStateMerkleRoot()));
+};
+
+
+/**
+ * optional bytes state_merkle_root = 6;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getStateMerkleRoot()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.protocol.block_receipt.prototype.getStateMerkleRoot_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getStateMerkleRoot()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.koinos.protocol.block_receipt} returns this
+ */
+proto.koinos.protocol.block_receipt.prototype.setStateMerkleRoot = function(value) {
+  return jspb.Message.setProto3BytesField(this, 6, value);
+};
+
+
+/**
+ * repeated event_data events = 7;
  * @return {!Array<!proto.koinos.protocol.event_data>}
  */
 proto.koinos.protocol.block_receipt.prototype.getEventsList = function() {
   return /** @type{!Array<!proto.koinos.protocol.event_data>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.koinos.protocol.event_data, 6));
+    jspb.Message.getRepeatedWrapperField(this, proto.koinos.protocol.event_data, 7));
 };
 
 
@@ -4154,7 +4208,7 @@ proto.koinos.protocol.block_receipt.prototype.getEventsList = function() {
  * @return {!proto.koinos.protocol.block_receipt} returns this
 */
 proto.koinos.protocol.block_receipt.prototype.setEventsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+  return jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
 
 
@@ -4164,7 +4218,7 @@ proto.koinos.protocol.block_receipt.prototype.setEventsList = function(value) {
  * @return {!proto.koinos.protocol.event_data}
  */
 proto.koinos.protocol.block_receipt.prototype.addEvents = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.koinos.protocol.event_data, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.koinos.protocol.event_data, opt_index);
 };
 
 
@@ -4178,12 +4232,12 @@ proto.koinos.protocol.block_receipt.prototype.clearEventsList = function() {
 
 
 /**
- * repeated transaction_receipt transaction_receipts = 7;
+ * repeated transaction_receipt transaction_receipts = 8;
  * @return {!Array<!proto.koinos.protocol.transaction_receipt>}
  */
 proto.koinos.protocol.block_receipt.prototype.getTransactionReceiptsList = function() {
   return /** @type{!Array<!proto.koinos.protocol.transaction_receipt>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.koinos.protocol.transaction_receipt, 7));
+    jspb.Message.getRepeatedWrapperField(this, proto.koinos.protocol.transaction_receipt, 8));
 };
 
 
@@ -4192,7 +4246,7 @@ proto.koinos.protocol.block_receipt.prototype.getTransactionReceiptsList = funct
  * @return {!proto.koinos.protocol.block_receipt} returns this
 */
 proto.koinos.protocol.block_receipt.prototype.setTransactionReceiptsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 7, value);
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
 };
 
 
@@ -4202,7 +4256,7 @@ proto.koinos.protocol.block_receipt.prototype.setTransactionReceiptsList = funct
  * @return {!proto.koinos.protocol.transaction_receipt}
  */
 proto.koinos.protocol.block_receipt.prototype.addTransactionReceipts = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.koinos.protocol.transaction_receipt, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.koinos.protocol.transaction_receipt, opt_index);
 };
 
 
