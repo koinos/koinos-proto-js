@@ -281,7 +281,7 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.toObject = funct
  */
 proto.koinos.rpc.block_store.get_blocks_by_id_request.toObject = function(includeInstance, msg) {
   var f, obj = {
-    blockIdList: msg.getBlockIdList_asB64(),
+    blockIdsList: msg.getBlockIdsList_asB64(),
     returnBlock: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
     returnReceipt: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
@@ -322,7 +322,7 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.deserializeBinaryFromReade
     switch (field) {
     case 1:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addBlockId(value);
+      msg.addBlockIds(value);
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -361,7 +361,7 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.serializeBinary 
  */
 proto.koinos.rpc.block_store.get_blocks_by_id_request.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getBlockIdList_asU8();
+  f = message.getBlockIdsList_asU8();
   if (f.length > 0) {
     writer.writeRepeatedBytes(
       1,
@@ -386,35 +386,35 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.serializeBinaryToWriter = 
 
 
 /**
- * repeated bytes block_id = 1;
+ * repeated bytes block_ids = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdList = function() {
+proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdsList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
 /**
- * repeated bytes block_id = 1;
- * This is a type-conversion wrapper around `getBlockIdList()`
+ * repeated bytes block_ids = 1;
+ * This is a type-conversion wrapper around `getBlockIdsList()`
  * @return {!Array<string>}
  */
-proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdList_asB64 = function() {
+proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdsList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getBlockIdList()));
+      this.getBlockIdsList()));
 };
 
 
 /**
- * repeated bytes block_id = 1;
+ * repeated bytes block_ids = 1;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getBlockIdList()`
+ * This is a type-conversion wrapper around `getBlockIdsList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdList_asU8 = function() {
+proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdsList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getBlockIdList()));
+      this.getBlockIdsList()));
 };
 
 
@@ -422,7 +422,7 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.getBlockIdList_a
  * @param {!(Array<!Uint8Array>|Array<string>)} value
  * @return {!proto.koinos.rpc.block_store.get_blocks_by_id_request} returns this
  */
-proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.setBlockIdList = function(value) {
+proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.setBlockIdsList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -432,7 +432,7 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.setBlockIdList =
  * @param {number=} opt_index
  * @return {!proto.koinos.rpc.block_store.get_blocks_by_id_request} returns this
  */
-proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.addBlockId = function(value, opt_index) {
+proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.addBlockIds = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
@@ -441,8 +441,8 @@ proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.addBlockId = fun
  * Clears the list making it empty but non-null.
  * @return {!proto.koinos.rpc.block_store.get_blocks_by_id_request} returns this
  */
-proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.clearBlockIdList = function() {
-  return this.setBlockIdList([]);
+proto.koinos.rpc.block_store.get_blocks_by_id_request.prototype.clearBlockIdsList = function() {
+  return this.setBlockIdsList([]);
 };
 
 
