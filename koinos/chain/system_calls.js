@@ -89,6 +89,7 @@ goog.require('proto.koinos.chain.head_info');
 goog.require('proto.koinos.chain.object_space');
 goog.require('proto.koinos.chain.resource_limit_data');
 goog.require('proto.koinos.protocol.block');
+goog.require('proto.koinos.protocol.block_header');
 goog.require('proto.koinos.protocol.call_contract_operation');
 goog.require('proto.koinos.protocol.set_system_call_operation');
 goog.require('proto.koinos.protocol.set_system_contract_operation');
@@ -2194,8 +2195,8 @@ proto.koinos.chain.process_block_signature_arguments.prototype.toObject = functi
 proto.koinos.chain.process_block_signature_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     digest: msg.getDigest_asB64(),
-    active: msg.getActive_asB64(),
-    signatureData: msg.getSignatureData_asB64()
+    header: (f = msg.getHeader()) && proto.koinos.protocol.block_header.toObject(includeInstance, f),
+    signature: msg.getSignature_asB64()
   };
 
   if (includeInstance) {
@@ -2237,12 +2238,13 @@ proto.koinos.chain.process_block_signature_arguments.deserializeBinaryFromReader
       msg.setDigest(value);
       break;
     case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setActive(value);
+      var value = new proto.koinos.protocol.block_header;
+      reader.readMessage(value,proto.koinos.protocol.block_header.deserializeBinaryFromReader);
+      msg.setHeader(value);
       break;
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSignatureData(value);
+      msg.setSignature(value);
       break;
     default:
       reader.skipField();
@@ -2280,14 +2282,15 @@ proto.koinos.chain.process_block_signature_arguments.serializeBinaryToWriter = f
       f
     );
   }
-  f = message.getActive_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
+  f = message.getHeader();
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      proto.koinos.protocol.block_header.serializeBinaryToWriter
     );
   }
-  f = message.getSignatureData_asU8();
+  f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
@@ -2340,77 +2343,72 @@ proto.koinos.chain.process_block_signature_arguments.prototype.setDigest = funct
 
 
 /**
- * optional bytes active = 2;
- * @return {!(string|Uint8Array)}
+ * optional koinos.protocol.block_header header = 2;
+ * @return {?proto.koinos.protocol.block_header}
  */
-proto.koinos.chain.process_block_signature_arguments.prototype.getActive = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.koinos.chain.process_block_signature_arguments.prototype.getHeader = function() {
+  return /** @type{?proto.koinos.protocol.block_header} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.protocol.block_header, 2));
 };
 
 
 /**
- * optional bytes active = 2;
- * This is a type-conversion wrapper around `getActive()`
- * @return {string}
- */
-proto.koinos.chain.process_block_signature_arguments.prototype.getActive_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getActive()));
+ * @param {?proto.koinos.protocol.block_header|undefined} value
+ * @return {!proto.koinos.chain.process_block_signature_arguments} returns this
+*/
+proto.koinos.chain.process_block_signature_arguments.prototype.setHeader = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
- * optional bytes active = 2;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getActive()`
- * @return {!Uint8Array}
- */
-proto.koinos.chain.process_block_signature_arguments.prototype.getActive_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getActive()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
+ * Clears the message field making it undefined.
  * @return {!proto.koinos.chain.process_block_signature_arguments} returns this
  */
-proto.koinos.chain.process_block_signature_arguments.prototype.setActive = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+proto.koinos.chain.process_block_signature_arguments.prototype.clearHeader = function() {
+  return this.setHeader(undefined);
 };
 
 
 /**
- * optional bytes signature_data = 3;
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.koinos.chain.process_block_signature_arguments.prototype.hasHeader = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bytes signature = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.koinos.chain.process_block_signature_arguments.prototype.getSignatureData = function() {
+proto.koinos.chain.process_block_signature_arguments.prototype.getSignature = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * optional bytes signature_data = 3;
- * This is a type-conversion wrapper around `getSignatureData()`
+ * optional bytes signature = 3;
+ * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.koinos.chain.process_block_signature_arguments.prototype.getSignatureData_asB64 = function() {
+proto.koinos.chain.process_block_signature_arguments.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSignatureData()));
+      this.getSignature()));
 };
 
 
 /**
- * optional bytes signature_data = 3;
+ * optional bytes signature = 3;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSignatureData()`
+ * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.koinos.chain.process_block_signature_arguments.prototype.getSignatureData_asU8 = function() {
+proto.koinos.chain.process_block_signature_arguments.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSignatureData()));
+      this.getSignature()));
 };
 
 
@@ -2418,7 +2416,7 @@ proto.koinos.chain.process_block_signature_arguments.prototype.getSignatureData_
  * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.process_block_signature_arguments} returns this
  */
-proto.koinos.chain.process_block_signature_arguments.prototype.setSignatureData = function(value) {
+proto.koinos.chain.process_block_signature_arguments.prototype.setSignature = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
