@@ -4784,7 +4784,7 @@ proto.koinos.chain.put_object_result.prototype.toObject = function(opt_includeIn
  */
 proto.koinos.chain.put_object_result.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    value: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -4822,7 +4822,7 @@ proto.koinos.chain.put_object_result.deserializeBinaryFromReader = function(msg,
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setValue(value);
       break;
     default:
@@ -4855,8 +4855,8 @@ proto.koinos.chain.put_object_result.prototype.serializeBinary = function() {
 proto.koinos.chain.put_object_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getValue();
-  if (f) {
-    writer.writeBool(
+  if (f !== 0) {
+    writer.writeInt32(
       1,
       f
     );
@@ -4865,20 +4865,20 @@ proto.koinos.chain.put_object_result.serializeBinaryToWriter = function(message,
 
 
 /**
- * optional bool value = 1;
- * @return {boolean}
+ * optional int32 value = 1;
+ * @return {number}
  */
 proto.koinos.chain.put_object_result.prototype.getValue = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {boolean} value
+ * @param {number} value
  * @return {!proto.koinos.chain.put_object_result} returns this
  */
 proto.koinos.chain.put_object_result.prototype.setValue = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
