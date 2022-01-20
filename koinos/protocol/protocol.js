@@ -1116,7 +1116,10 @@ proto.koinos.protocol.upload_contract_operation.toObject = function(includeInsta
   var f, obj = {
     contractId: msg.getContractId_asB64(),
     bytecode: msg.getBytecode_asB64(),
-    abi: jspb.Message.getFieldWithDefault(msg, 3, "")
+    abi: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    authorizesCallContract: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    authorizesUseRc: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    authorizesUploadContract: jspb.Message.getBooleanFieldWithDefault(msg, 6, false)
   };
 
   if (includeInstance) {
@@ -1165,6 +1168,18 @@ proto.koinos.protocol.upload_contract_operation.deserializeBinaryFromReader = fu
       var value = /** @type {string} */ (reader.readString());
       msg.setAbi(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAuthorizesCallContract(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAuthorizesUseRc(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAuthorizesUploadContract(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1212,6 +1227,27 @@ proto.koinos.protocol.upload_contract_operation.serializeBinaryToWriter = functi
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getAuthorizesCallContract();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getAuthorizesUseRc();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+  f = message.getAuthorizesUploadContract();
+  if (f) {
+    writer.writeBool(
+      6,
       f
     );
   }
@@ -1317,6 +1353,60 @@ proto.koinos.protocol.upload_contract_operation.prototype.getAbi = function() {
  */
 proto.koinos.protocol.upload_contract_operation.prototype.setAbi = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional bool authorizes_call_contract = 4;
+ * @return {boolean}
+ */
+proto.koinos.protocol.upload_contract_operation.prototype.getAuthorizesCallContract = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.protocol.upload_contract_operation} returns this
+ */
+proto.koinos.protocol.upload_contract_operation.prototype.setAuthorizesCallContract = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional bool authorizes_use_rc = 5;
+ * @return {boolean}
+ */
+proto.koinos.protocol.upload_contract_operation.prototype.getAuthorizesUseRc = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.protocol.upload_contract_operation} returns this
+ */
+proto.koinos.protocol.upload_contract_operation.prototype.setAuthorizesUseRc = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional bool authorizes_upload_contract = 6;
+ * @return {boolean}
+ */
+proto.koinos.protocol.upload_contract_operation.prototype.getAuthorizesUploadContract = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.protocol.upload_contract_operation} returns this
+ */
+proto.koinos.protocol.upload_contract_operation.prototype.setAuthorizesUploadContract = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 
@@ -2289,7 +2379,9 @@ proto.koinos.protocol.transaction_header.toObject = function(includeInstance, ms
   var f, obj = {
     rcLimit: jspb.Message.getFieldWithDefault(msg, 1, "0"),
     nonce: jspb.Message.getFieldWithDefault(msg, 2, "0"),
-    operationMerkleRoot: msg.getOperationMerkleRoot_asB64()
+    operationMerkleRoot: msg.getOperationMerkleRoot_asB64(),
+    payer: msg.getPayer_asB64(),
+    payee: msg.getPayee_asB64()
   };
 
   if (includeInstance) {
@@ -2338,6 +2430,14 @@ proto.koinos.protocol.transaction_header.deserializeBinaryFromReader = function(
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setOperationMerkleRoot(value);
       break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPayer(value);
+      break;
+    case 5:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPayee(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -2385,6 +2485,20 @@ proto.koinos.protocol.transaction_header.serializeBinaryToWriter = function(mess
   if (f.length > 0) {
     writer.writeBytes(
       3,
+      f
+    );
+  }
+  f = message.getPayer_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      4,
+      f
+    );
+  }
+  f = message.getPayee_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      5,
       f
     );
   }
@@ -2469,13 +2583,97 @@ proto.koinos.protocol.transaction_header.prototype.setOperationMerkleRoot = func
 };
 
 
+/**
+ * optional bytes payer = 4;
+ * @return {!(string|Uint8Array)}
+ */
+proto.koinos.protocol.transaction_header.prototype.getPayer = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * optional bytes payer = 4;
+ * This is a type-conversion wrapper around `getPayer()`
+ * @return {string}
+ */
+proto.koinos.protocol.transaction_header.prototype.getPayer_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getPayer()));
+};
+
+
+/**
+ * optional bytes payer = 4;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getPayer()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.protocol.transaction_header.prototype.getPayer_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getPayer()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.koinos.protocol.transaction_header} returns this
+ */
+proto.koinos.protocol.transaction_header.prototype.setPayer = function(value) {
+  return jspb.Message.setProto3BytesField(this, 4, value);
+};
+
+
+/**
+ * optional bytes payee = 5;
+ * @return {!(string|Uint8Array)}
+ */
+proto.koinos.protocol.transaction_header.prototype.getPayee = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * optional bytes payee = 5;
+ * This is a type-conversion wrapper around `getPayee()`
+ * @return {string}
+ */
+proto.koinos.protocol.transaction_header.prototype.getPayee_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getPayee()));
+};
+
+
+/**
+ * optional bytes payee = 5;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getPayee()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.protocol.transaction_header.prototype.getPayee_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getPayee()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.koinos.protocol.transaction_header} returns this
+ */
+proto.koinos.protocol.transaction_header.prototype.setPayee = function(value) {
+  return jspb.Message.setProto3BytesField(this, 5, value);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.koinos.protocol.transaction.repeatedFields_ = [3];
+proto.koinos.protocol.transaction.repeatedFields_ = [3,4];
 
 
 
@@ -2512,7 +2710,7 @@ proto.koinos.protocol.transaction.toObject = function(includeInstance, msg) {
     header: (f = msg.getHeader()) && proto.koinos.protocol.transaction_header.toObject(includeInstance, f),
     operationsList: jspb.Message.toObjectList(msg.getOperationsList(),
     proto.koinos.protocol.operation.toObject, includeInstance),
-    signature: msg.getSignature_asB64()
+    signaturesList: msg.getSignaturesList_asB64()
   };
 
   if (includeInstance) {
@@ -2565,7 +2763,7 @@ proto.koinos.protocol.transaction.deserializeBinaryFromReader = function(msg, re
       break;
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSignature(value);
+      msg.addSignatures(value);
       break;
     default:
       reader.skipField();
@@ -2619,9 +2817,9 @@ proto.koinos.protocol.transaction.serializeBinaryToWriter = function(message, wr
       proto.koinos.protocol.operation.serializeBinaryToWriter
     );
   }
-  f = message.getSignature_asU8();
+  f = message.getSignaturesList_asU8();
   if (f.length > 0) {
-    writer.writeBytes(
+    writer.writeRepeatedBytes(
       4,
       f
     );
@@ -2747,44 +2945,63 @@ proto.koinos.protocol.transaction.prototype.clearOperationsList = function() {
 
 
 /**
- * optional bytes signature = 4;
- * @return {!(string|Uint8Array)}
+ * repeated bytes signatures = 4;
+ * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.koinos.protocol.transaction.prototype.getSignature = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.koinos.protocol.transaction.prototype.getSignaturesList = function() {
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 4));
 };
 
 
 /**
- * optional bytes signature = 4;
- * This is a type-conversion wrapper around `getSignature()`
- * @return {string}
+ * repeated bytes signatures = 4;
+ * This is a type-conversion wrapper around `getSignaturesList()`
+ * @return {!Array<string>}
  */
-proto.koinos.protocol.transaction.prototype.getSignature_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSignature()));
+proto.koinos.protocol.transaction.prototype.getSignaturesList_asB64 = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+      this.getSignaturesList()));
 };
 
 
 /**
- * optional bytes signature = 4;
+ * repeated bytes signatures = 4;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSignature()`
- * @return {!Uint8Array}
+ * This is a type-conversion wrapper around `getSignaturesList()`
+ * @return {!Array<!Uint8Array>}
  */
-proto.koinos.protocol.transaction.prototype.getSignature_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSignature()));
+proto.koinos.protocol.transaction.prototype.getSignaturesList_asU8 = function() {
+  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+      this.getSignaturesList()));
+};
+
+
+/**
+ * @param {!(Array<!Uint8Array>|Array<string>)} value
+ * @return {!proto.koinos.protocol.transaction} returns this
+ */
+proto.koinos.protocol.transaction.prototype.setSignaturesList = function(value) {
+  return jspb.Message.setField(this, 4, value || []);
 };
 
 
 /**
  * @param {!(string|Uint8Array)} value
+ * @param {number=} opt_index
  * @return {!proto.koinos.protocol.transaction} returns this
  */
-proto.koinos.protocol.transaction.prototype.setSignature = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+proto.koinos.protocol.transaction.prototype.addSignatures = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.koinos.protocol.transaction} returns this
+ */
+proto.koinos.protocol.transaction.prototype.clearSignaturesList = function() {
+  return this.setSignaturesList([]);
 };
 
 

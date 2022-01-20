@@ -1472,7 +1472,10 @@ proto.koinos.chain.contract_metadata_object.prototype.toObject = function(opt_in
 proto.koinos.chain.contract_metadata_object.toObject = function(includeInstance, msg) {
   var f, obj = {
     hash: msg.getHash_asB64(),
-    system: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
+    system: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+    authorizesCallContract: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    authorizesUseResources: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    authorizesUploadContract: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
   if (includeInstance) {
@@ -1517,6 +1520,18 @@ proto.koinos.chain.contract_metadata_object.deserializeBinaryFromReader = functi
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setSystem(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAuthorizesCallContract(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAuthorizesUseResources(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAuthorizesUploadContract(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1557,6 +1572,27 @@ proto.koinos.chain.contract_metadata_object.serializeBinaryToWriter = function(m
   if (f) {
     writer.writeBool(
       2,
+      f
+    );
+  }
+  f = message.getAuthorizesCallContract();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getAuthorizesUseResources();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getAuthorizesUploadContract();
+  if (f) {
+    writer.writeBool(
+      5,
       f
     );
   }
@@ -1620,6 +1656,60 @@ proto.koinos.chain.contract_metadata_object.prototype.getSystem = function() {
  */
 proto.koinos.chain.contract_metadata_object.prototype.setSystem = function(value) {
   return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool authorizes_call_contract = 3;
+ * @return {boolean}
+ */
+proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesCallContract = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.chain.contract_metadata_object} returns this
+ */
+proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesCallContract = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional bool authorizes_use_resources = 4;
+ * @return {boolean}
+ */
+proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesUseResources = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.chain.contract_metadata_object} returns this
+ */
+proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesUseResources = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional bool authorizes_upload_contract = 5;
+ * @return {boolean}
+ */
+proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesUploadContract = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.chain.contract_metadata_object} returns this
+ */
+proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesUploadContract = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
