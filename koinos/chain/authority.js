@@ -51,7 +51,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.koinos.chain.authorize_arguments = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.koinos.chain.authorize_arguments.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.koinos.chain.authorize_arguments, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -267,13 +267,6 @@ proto.koinos.chain.call_target.prototype.setEntryPoint = function(value) {
 
 
 
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.koinos.chain.authorize_arguments.repeatedFields_ = [2];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -306,8 +299,7 @@ proto.koinos.chain.authorize_arguments.prototype.toObject = function(opt_include
 proto.koinos.chain.authorize_arguments.toObject = function(includeInstance, msg) {
   var f, obj = {
     type: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    callsList: jspb.Message.toObjectList(msg.getCallsList(),
-    proto.koinos.chain.call_target.toObject, includeInstance)
+    call: (f = msg.getCall()) && proto.koinos.chain.call_target.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -351,7 +343,7 @@ proto.koinos.chain.authorize_arguments.deserializeBinaryFromReader = function(ms
     case 2:
       var value = new proto.koinos.chain.call_target;
       reader.readMessage(value,proto.koinos.chain.call_target.deserializeBinaryFromReader);
-      msg.addCalls(value);
+      msg.setCall(value);
       break;
     default:
       reader.skipField();
@@ -389,9 +381,9 @@ proto.koinos.chain.authorize_arguments.serializeBinaryToWriter = function(messag
       f
     );
   }
-  f = message.getCallsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getCall();
+  if (f != null) {
+    writer.writeMessage(
       2,
       f,
       proto.koinos.chain.call_target.serializeBinaryToWriter
@@ -419,40 +411,39 @@ proto.koinos.chain.authorize_arguments.prototype.setType = function(value) {
 
 
 /**
- * repeated call_target calls = 2;
- * @return {!Array<!proto.koinos.chain.call_target>}
+ * optional call_target call = 2;
+ * @return {?proto.koinos.chain.call_target}
  */
-proto.koinos.chain.authorize_arguments.prototype.getCallsList = function() {
-  return /** @type{!Array<!proto.koinos.chain.call_target>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.koinos.chain.call_target, 2));
+proto.koinos.chain.authorize_arguments.prototype.getCall = function() {
+  return /** @type{?proto.koinos.chain.call_target} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.chain.call_target, 2));
 };
 
 
 /**
- * @param {!Array<!proto.koinos.chain.call_target>} value
+ * @param {?proto.koinos.chain.call_target|undefined} value
  * @return {!proto.koinos.chain.authorize_arguments} returns this
 */
-proto.koinos.chain.authorize_arguments.prototype.setCallsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+proto.koinos.chain.authorize_arguments.prototype.setCall = function(value) {
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
- * @param {!proto.koinos.chain.call_target=} opt_value
- * @param {number=} opt_index
- * @return {!proto.koinos.chain.call_target}
- */
-proto.koinos.chain.authorize_arguments.prototype.addCalls = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.koinos.chain.call_target, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
+ * Clears the message field making it undefined.
  * @return {!proto.koinos.chain.authorize_arguments} returns this
  */
-proto.koinos.chain.authorize_arguments.prototype.clearCallsList = function() {
-  return this.setCallsList([]);
+proto.koinos.chain.authorize_arguments.prototype.clearCall = function() {
+  return this.setCall(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.koinos.chain.authorize_arguments.prototype.hasCall = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

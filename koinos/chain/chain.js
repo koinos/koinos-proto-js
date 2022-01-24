@@ -1474,7 +1474,7 @@ proto.koinos.chain.contract_metadata_object.toObject = function(includeInstance,
     hash: msg.getHash_asB64(),
     system: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
     authorizesCallContract: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
-    authorizesUseResources: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    authorizesUseRc: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
     authorizesUploadContract: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
@@ -1526,7 +1526,7 @@ proto.koinos.chain.contract_metadata_object.deserializeBinaryFromReader = functi
       break;
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAuthorizesUseResources(value);
+      msg.setAuthorizesUseRc(value);
       break;
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -1582,7 +1582,7 @@ proto.koinos.chain.contract_metadata_object.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getAuthorizesUseResources();
+  f = message.getAuthorizesUseRc();
   if (f) {
     writer.writeBool(
       4,
@@ -1678,10 +1678,10 @@ proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesCallContract 
 
 
 /**
- * optional bool authorizes_use_resources = 4;
+ * optional bool authorizes_use_rc = 4;
  * @return {boolean}
  */
-proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesUseResources = function() {
+proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesUseRc = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
 };
 
@@ -1690,7 +1690,7 @@ proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesUseResources 
  * @param {boolean} value
  * @return {!proto.koinos.chain.contract_metadata_object} returns this
  */
-proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesUseResources = function(value) {
+proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesUseRc = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
