@@ -16,11 +16,13 @@ goog.provide('proto.koinos.protocol.block_header');
 goog.provide('proto.koinos.protocol.block_receipt');
 goog.provide('proto.koinos.protocol.call_contract_operation');
 goog.provide('proto.koinos.protocol.contract_call_bundle');
+goog.provide('proto.koinos.protocol.dsa');
 goog.provide('proto.koinos.protocol.event_data');
 goog.provide('proto.koinos.protocol.operation');
 goog.provide('proto.koinos.protocol.operation.OpCase');
 goog.provide('proto.koinos.protocol.set_system_call_operation');
 goog.provide('proto.koinos.protocol.set_system_contract_operation');
+goog.provide('proto.koinos.protocol.system_authorization_type');
 goog.provide('proto.koinos.protocol.system_call_target');
 goog.provide('proto.koinos.protocol.system_call_target.TargetCase');
 goog.provide('proto.koinos.protocol.transaction');
@@ -3011,7 +3013,7 @@ proto.koinos.protocol.transaction.prototype.clearSignaturesList = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.koinos.protocol.transaction_receipt.repeatedFields_ = [10];
+proto.koinos.protocol.transaction_receipt.repeatedFields_ = [10,11];
 
 
 
@@ -3054,7 +3056,8 @@ proto.koinos.protocol.transaction_receipt.toObject = function(includeInstance, m
     computeBandwidthUsed: jspb.Message.getFieldWithDefault(msg, 8, "0"),
     reverted: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
     eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    proto.koinos.protocol.event_data.toObject, includeInstance)
+    proto.koinos.protocol.event_data.toObject, includeInstance),
+    logsList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3131,6 +3134,10 @@ proto.koinos.protocol.transaction_receipt.deserializeBinaryFromReader = function
       var value = new proto.koinos.protocol.event_data;
       reader.readMessage(value,proto.koinos.protocol.event_data.deserializeBinaryFromReader);
       msg.addEvents(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addLogs(value);
       break;
     default:
       reader.skipField();
@@ -3230,6 +3237,13 @@ proto.koinos.protocol.transaction_receipt.serializeBinaryToWriter = function(mes
       10,
       f,
       proto.koinos.protocol.event_data.serializeBinaryToWriter
+    );
+  }
+  f = message.getLogsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      11,
+      f
     );
   }
 };
@@ -3480,6 +3494,43 @@ proto.koinos.protocol.transaction_receipt.prototype.addEvents = function(opt_val
  */
 proto.koinos.protocol.transaction_receipt.prototype.clearEventsList = function() {
   return this.setEventsList([]);
+};
+
+
+/**
+ * repeated string logs = 11;
+ * @return {!Array<string>}
+ */
+proto.koinos.protocol.transaction_receipt.prototype.getLogsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 11));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.koinos.protocol.transaction_receipt} returns this
+ */
+proto.koinos.protocol.transaction_receipt.prototype.setLogsList = function(value) {
+  return jspb.Message.setField(this, 11, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.koinos.protocol.transaction_receipt} returns this
+ */
+proto.koinos.protocol.transaction_receipt.prototype.addLogs = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 11, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.koinos.protocol.transaction_receipt} returns this
+ */
+proto.koinos.protocol.transaction_receipt.prototype.clearLogsList = function() {
+  return this.setLogsList([]);
 };
 
 
@@ -4184,7 +4235,7 @@ proto.koinos.protocol.block.prototype.setSignature = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.koinos.protocol.block_receipt.repeatedFields_ = [7,8];
+proto.koinos.protocol.block_receipt.repeatedFields_ = [7,8,9];
 
 
 
@@ -4226,7 +4277,8 @@ proto.koinos.protocol.block_receipt.toObject = function(includeInstance, msg) {
     eventsList: jspb.Message.toObjectList(msg.getEventsList(),
     proto.koinos.protocol.event_data.toObject, includeInstance),
     transactionReceiptsList: jspb.Message.toObjectList(msg.getTransactionReceiptsList(),
-    proto.koinos.protocol.transaction_receipt.toObject, includeInstance)
+    proto.koinos.protocol.transaction_receipt.toObject, includeInstance),
+    logsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -4296,6 +4348,10 @@ proto.koinos.protocol.block_receipt.deserializeBinaryFromReader = function(msg, 
       var value = new proto.koinos.protocol.transaction_receipt;
       reader.readMessage(value,proto.koinos.protocol.transaction_receipt.deserializeBinaryFromReader);
       msg.addTransactionReceipts(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addLogs(value);
       break;
     default:
       reader.skipField();
@@ -4382,6 +4438,13 @@ proto.koinos.protocol.block_receipt.serializeBinaryToWriter = function(message, 
       8,
       f,
       proto.koinos.protocol.transaction_receipt.serializeBinaryToWriter
+    );
+  }
+  f = message.getLogsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
+      f
     );
   }
 };
@@ -4618,4 +4681,56 @@ proto.koinos.protocol.block_receipt.prototype.clearTransactionReceiptsList = fun
   return this.setTransactionReceiptsList([]);
 };
 
+
+/**
+ * repeated string logs = 9;
+ * @return {!Array<string>}
+ */
+proto.koinos.protocol.block_receipt.prototype.getLogsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.koinos.protocol.block_receipt} returns this
+ */
+proto.koinos.protocol.block_receipt.prototype.setLogsList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.koinos.protocol.block_receipt} returns this
+ */
+proto.koinos.protocol.block_receipt.prototype.addLogs = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.koinos.protocol.block_receipt} returns this
+ */
+proto.koinos.protocol.block_receipt.prototype.clearLogsList = function() {
+  return this.setLogsList([]);
+};
+
+
+/**
+ * @enum {number}
+ */
+proto.koinos.protocol.dsa = {
+  ECDSA_SECP256K1: 0
+};
+
+/**
+ * @enum {number}
+ */
+proto.koinos.protocol.system_authorization_type = {
+  SET_SYSTEM_CONTRACT: 0,
+  SET_SYSTEM_CALL: 1
+};
 
