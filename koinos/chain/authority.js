@@ -581,8 +581,8 @@ proto.koinos.chain.authorize_result.prototype.setValue = function(value) {
  * @enum {number}
  */
 proto.koinos.chain.authorization_type = {
-  CALL_CONTRACT: 0,
-  USE_RC: 1,
-  UPLOAD_CONTRACT: 2
+  CONTRACT_CALL: 0,
+  RC_USE: 1,
+  CONTRACT_UPLOAD: 2
 };
 

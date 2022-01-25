@@ -16,13 +16,11 @@ goog.provide('proto.koinos.protocol.block_header');
 goog.provide('proto.koinos.protocol.block_receipt');
 goog.provide('proto.koinos.protocol.call_contract_operation');
 goog.provide('proto.koinos.protocol.contract_call_bundle');
-goog.provide('proto.koinos.protocol.dsa');
 goog.provide('proto.koinos.protocol.event_data');
 goog.provide('proto.koinos.protocol.operation');
 goog.provide('proto.koinos.protocol.operation.OpCase');
 goog.provide('proto.koinos.protocol.set_system_call_operation');
 goog.provide('proto.koinos.protocol.set_system_contract_operation');
-goog.provide('proto.koinos.protocol.system_authorization_type');
 goog.provide('proto.koinos.protocol.system_call_target');
 goog.provide('proto.koinos.protocol.system_call_target.TargetCase');
 goog.provide('proto.koinos.protocol.transaction');
@@ -4718,19 +4716,4 @@ proto.koinos.protocol.block_receipt.prototype.clearLogsList = function() {
   return this.setLogsList([]);
 };
 
-
-/**
- * @enum {number}
- */
-proto.koinos.protocol.dsa = {
-  ECDSA_SECP256K1: 0
-};
-
-/**
- * @enum {number}
- */
-proto.koinos.protocol.system_authorization_type = {
-  SET_SYSTEM_CONTRACT: 0,
-  SET_SYSTEM_CALL: 1
-};
 
