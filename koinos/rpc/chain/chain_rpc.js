@@ -287,7 +287,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.koinos.rpc.chain.read_contract_response = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.koinos.rpc.chain.read_contract_response.repeatedFields_, null);
 };
 goog.inherits(proto.koinos.rpc.chain.read_contract_response, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -2211,6 +2211,13 @@ proto.koinos.rpc.chain.read_contract_request.prototype.setArgs = function(value)
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.koinos.rpc.chain.read_contract_response.repeatedFields_ = [2];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2243,7 +2250,7 @@ proto.koinos.rpc.chain.read_contract_response.prototype.toObject = function(opt_
 proto.koinos.rpc.chain.read_contract_response.toObject = function(includeInstance, msg) {
   var f, obj = {
     result: msg.getResult_asB64(),
-    logs: jspb.Message.getFieldWithDefault(msg, 2, "")
+    logsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2286,7 +2293,7 @@ proto.koinos.rpc.chain.read_contract_response.deserializeBinaryFromReader = func
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setLogs(value);
+      msg.addLogs(value);
       break;
     default:
       reader.skipField();
@@ -2324,9 +2331,9 @@ proto.koinos.rpc.chain.read_contract_response.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getLogs();
+  f = message.getLogsList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedString(
       2,
       f
     );
@@ -2377,20 +2384,39 @@ proto.koinos.rpc.chain.read_contract_response.prototype.setResult = function(val
 
 
 /**
- * optional string logs = 2;
- * @return {string}
+ * repeated string logs = 2;
+ * @return {!Array<string>}
  */
-proto.koinos.rpc.chain.read_contract_response.prototype.getLogs = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.koinos.rpc.chain.read_contract_response.prototype.getLogsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.koinos.rpc.chain.read_contract_response} returns this
+ */
+proto.koinos.rpc.chain.read_contract_response.prototype.setLogsList = function(value) {
+  return jspb.Message.setField(this, 2, value || []);
 };
 
 
 /**
  * @param {string} value
+ * @param {number=} opt_index
  * @return {!proto.koinos.rpc.chain.read_contract_response} returns this
  */
-proto.koinos.rpc.chain.read_contract_response.prototype.setLogs = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+proto.koinos.rpc.chain.read_contract_response.prototype.addLogs = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.koinos.rpc.chain.read_contract_response} returns this
+ */
+proto.koinos.rpc.chain.read_contract_response.prototype.clearLogsList = function() {
+  return this.setLogsList([]);
 };
 
 
