@@ -95,7 +95,7 @@ goog.require('proto.koinos.chain.caller_data');
 goog.require('proto.koinos.chain.head_info');
 goog.require('proto.koinos.chain.object_space');
 goog.require('proto.koinos.chain.resource_limit_data');
-goog.require('proto.koinos.chain.value');
+goog.require('proto.koinos.chain.value_type');
 goog.require('proto.koinos.protocol.block');
 goog.require('proto.koinos.protocol.block_header');
 goog.require('proto.koinos.protocol.call_contract_operation');
@@ -2915,7 +2915,7 @@ proto.koinos.chain.get_transaction_field_result.prototype.toObject = function(op
  */
 proto.koinos.chain.get_transaction_field_result.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: (f = msg.getValue()) && proto.koinos.chain.value.toObject(includeInstance, f)
+    value: (f = msg.getValue()) && proto.koinos.chain.value_type.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2953,8 +2953,8 @@ proto.koinos.chain.get_transaction_field_result.deserializeBinaryFromReader = fu
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.koinos.chain.value;
-      reader.readMessage(value,proto.koinos.chain.value.deserializeBinaryFromReader);
+      var value = new proto.koinos.chain.value_type;
+      reader.readMessage(value,proto.koinos.chain.value_type.deserializeBinaryFromReader);
       msg.setValue(value);
       break;
     default:
@@ -2991,24 +2991,24 @@ proto.koinos.chain.get_transaction_field_result.serializeBinaryToWriter = functi
     writer.writeMessage(
       1,
       f,
-      proto.koinos.chain.value.serializeBinaryToWriter
+      proto.koinos.chain.value_type.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional value value = 1;
- * @return {?proto.koinos.chain.value}
+ * optional value_type value = 1;
+ * @return {?proto.koinos.chain.value_type}
  */
 proto.koinos.chain.get_transaction_field_result.prototype.getValue = function() {
-  return /** @type{?proto.koinos.chain.value} */ (
-    jspb.Message.getWrapperField(this, proto.koinos.chain.value, 1));
+  return /** @type{?proto.koinos.chain.value_type} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.chain.value_type, 1));
 };
 
 
 /**
- * @param {?proto.koinos.chain.value|undefined} value
+ * @param {?proto.koinos.chain.value_type|undefined} value
  * @return {!proto.koinos.chain.get_transaction_field_result} returns this
 */
 proto.koinos.chain.get_transaction_field_result.prototype.setValue = function(value) {
@@ -3196,7 +3196,7 @@ proto.koinos.chain.get_block_field_result.prototype.toObject = function(opt_incl
  */
 proto.koinos.chain.get_block_field_result.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: (f = msg.getValue()) && proto.koinos.chain.value.toObject(includeInstance, f)
+    value: (f = msg.getValue()) && proto.koinos.chain.value_type.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3234,8 +3234,8 @@ proto.koinos.chain.get_block_field_result.deserializeBinaryFromReader = function
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.koinos.chain.value;
-      reader.readMessage(value,proto.koinos.chain.value.deserializeBinaryFromReader);
+      var value = new proto.koinos.chain.value_type;
+      reader.readMessage(value,proto.koinos.chain.value_type.deserializeBinaryFromReader);
       msg.setValue(value);
       break;
     default:
@@ -3272,24 +3272,24 @@ proto.koinos.chain.get_block_field_result.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       1,
       f,
-      proto.koinos.chain.value.serializeBinaryToWriter
+      proto.koinos.chain.value_type.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional value value = 1;
- * @return {?proto.koinos.chain.value}
+ * optional value_type value = 1;
+ * @return {?proto.koinos.chain.value_type}
  */
 proto.koinos.chain.get_block_field_result.prototype.getValue = function() {
-  return /** @type{?proto.koinos.chain.value} */ (
-    jspb.Message.getWrapperField(this, proto.koinos.chain.value, 1));
+  return /** @type{?proto.koinos.chain.value_type} */ (
+    jspb.Message.getWrapperField(this, proto.koinos.chain.value_type, 1));
 };
 
 
 /**
- * @param {?proto.koinos.chain.value|undefined} value
+ * @param {?proto.koinos.chain.value_type|undefined} value
  * @return {!proto.koinos.chain.get_block_field_result} returns this
 */
 proto.koinos.chain.get_block_field_result.prototype.setValue = function(value) {
