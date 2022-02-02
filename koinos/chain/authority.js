@@ -583,6 +583,7 @@ proto.koinos.chain.authorize_result.prototype.setValue = function(value) {
 proto.koinos.chain.authorization_type = {
   CONTRACT_CALL: 0,
   RC_USE: 1,
-  CONTRACT_UPLOAD: 2
+  CONTRACT_UPLOAD: 2,
+  SIGNATURE_EXISTS: 3
 };
 

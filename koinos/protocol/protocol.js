@@ -2379,7 +2379,7 @@ proto.koinos.protocol.transaction_header.toObject = function(includeInstance, ms
   var f, obj = {
     chainId: msg.getChainId_asB64(),
     rcLimit: jspb.Message.getFieldWithDefault(msg, 2, "0"),
-    nonce: jspb.Message.getFieldWithDefault(msg, 3, "0"),
+    nonce: msg.getNonce_asB64(),
     operationMerkleRoot: msg.getOperationMerkleRoot_asB64(),
     payer: msg.getPayer_asB64(),
     payee: msg.getPayee_asB64()
@@ -2428,7 +2428,7 @@ proto.koinos.protocol.transaction_header.deserializeBinaryFromReader = function(
       msg.setRcLimit(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readUint64String());
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setNonce(value);
       break;
     case 4:
@@ -2486,9 +2486,9 @@ proto.koinos.protocol.transaction_header.serializeBinaryToWriter = function(mess
       f
     );
   }
-  f = message.getNonce();
-  if (parseInt(f, 10) !== 0) {
-    writer.writeUint64String(
+  f = message.getNonce_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
       3,
       f
     );
@@ -2578,20 +2578,44 @@ proto.koinos.protocol.transaction_header.prototype.setRcLimit = function(value) 
 
 
 /**
- * optional uint64 nonce = 3;
- * @return {string}
+ * optional bytes nonce = 3;
+ * @return {!(string|Uint8Array)}
  */
 proto.koinos.protocol.transaction_header.prototype.getNonce = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * @param {string} value
+ * optional bytes nonce = 3;
+ * This is a type-conversion wrapper around `getNonce()`
+ * @return {string}
+ */
+proto.koinos.protocol.transaction_header.prototype.getNonce_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getNonce()));
+};
+
+
+/**
+ * optional bytes nonce = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getNonce()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.protocol.transaction_header.prototype.getNonce_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getNonce()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.protocol.transaction_header} returns this
  */
 proto.koinos.protocol.transaction_header.prototype.setNonce = function(value) {
-  return jspb.Message.setProto3StringIntField(this, 3, value);
+  return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
