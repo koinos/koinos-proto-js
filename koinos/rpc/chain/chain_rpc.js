@@ -2606,7 +2606,7 @@ proto.koinos.rpc.chain.get_account_nonce_response.prototype.toObject = function(
  */
 proto.koinos.rpc.chain.get_account_nonce_response.toObject = function(includeInstance, msg) {
   var f, obj = {
-    nonce: jspb.Message.getFieldWithDefault(msg, 1, "0")
+    nonce: msg.getNonce_asB64()
   };
 
   if (includeInstance) {
@@ -2644,7 +2644,7 @@ proto.koinos.rpc.chain.get_account_nonce_response.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readUint64String());
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setNonce(value);
       break;
     default:
@@ -2676,9 +2676,9 @@ proto.koinos.rpc.chain.get_account_nonce_response.prototype.serializeBinary = fu
  */
 proto.koinos.rpc.chain.get_account_nonce_response.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getNonce();
-  if (parseInt(f, 10) !== 0) {
-    writer.writeUint64String(
+  f = message.getNonce_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
       1,
       f
     );
@@ -2687,20 +2687,44 @@ proto.koinos.rpc.chain.get_account_nonce_response.serializeBinaryToWriter = func
 
 
 /**
- * optional uint64 nonce = 1;
- * @return {string}
+ * optional bytes nonce = 1;
+ * @return {!(string|Uint8Array)}
  */
 proto.koinos.rpc.chain.get_account_nonce_response.prototype.getNonce = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
- * @param {string} value
+ * optional bytes nonce = 1;
+ * This is a type-conversion wrapper around `getNonce()`
+ * @return {string}
+ */
+proto.koinos.rpc.chain.get_account_nonce_response.prototype.getNonce_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getNonce()));
+};
+
+
+/**
+ * optional bytes nonce = 1;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getNonce()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.rpc.chain.get_account_nonce_response.prototype.getNonce_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getNonce()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.rpc.chain.get_account_nonce_response} returns this
  */
 proto.koinos.rpc.chain.get_account_nonce_response.prototype.setNonce = function(value) {
-  return jspb.Message.setProto3StringIntField(this, 1, value);
+  return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
