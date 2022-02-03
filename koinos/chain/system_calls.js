@@ -6432,7 +6432,7 @@ proto.koinos.chain.get_account_nonce_result.prototype.toObject = function(opt_in
  */
 proto.koinos.chain.get_account_nonce_result.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: jspb.Message.getFieldWithDefault(msg, 1, "0")
+    value: msg.getValue_asB64()
   };
 
   if (includeInstance) {
@@ -6470,7 +6470,7 @@ proto.koinos.chain.get_account_nonce_result.deserializeBinaryFromReader = functi
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readUint64String());
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setValue(value);
       break;
     default:
@@ -6502,9 +6502,9 @@ proto.koinos.chain.get_account_nonce_result.prototype.serializeBinary = function
  */
 proto.koinos.chain.get_account_nonce_result.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValue();
-  if (parseInt(f, 10) !== 0) {
-    writer.writeUint64String(
+  f = message.getValue_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
       1,
       f
     );
@@ -6513,20 +6513,44 @@ proto.koinos.chain.get_account_nonce_result.serializeBinaryToWriter = function(m
 
 
 /**
- * optional uint64 value = 1;
- * @return {string}
+ * optional bytes value = 1;
+ * @return {!(string|Uint8Array)}
  */
 proto.koinos.chain.get_account_nonce_result.prototype.getValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, "0"));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
- * @param {string} value
+ * optional bytes value = 1;
+ * This is a type-conversion wrapper around `getValue()`
+ * @return {string}
+ */
+proto.koinos.chain.get_account_nonce_result.prototype.getValue_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getValue()));
+};
+
+
+/**
+ * optional bytes value = 1;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getValue()`
+ * @return {!Uint8Array}
+ */
+proto.koinos.chain.get_account_nonce_result.prototype.getValue_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getValue()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
  * @return {!proto.koinos.chain.get_account_nonce_result} returns this
  */
 proto.koinos.chain.get_account_nonce_result.prototype.setValue = function(value) {
-  return jspb.Message.setProto3StringIntField(this, 1, value);
+  return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
