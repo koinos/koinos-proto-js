@@ -1518,7 +1518,7 @@ proto.koinos.chain.contract_metadata_object.toObject = function(includeInstance,
     hash: msg.getHash_asB64(),
     system: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
     authorizesCallContract: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
-    authorizesTransacionApplication: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    authorizesTransactionApplication: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
     authorizesUploadContract: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
@@ -1570,7 +1570,7 @@ proto.koinos.chain.contract_metadata_object.deserializeBinaryFromReader = functi
       break;
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAuthorizesTransacionApplication(value);
+      msg.setAuthorizesTransactionApplication(value);
       break;
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -1626,7 +1626,7 @@ proto.koinos.chain.contract_metadata_object.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getAuthorizesTransacionApplication();
+  f = message.getAuthorizesTransactionApplication();
   if (f) {
     writer.writeBool(
       4,
@@ -1722,10 +1722,10 @@ proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesCallContract 
 
 
 /**
- * optional bool authorizes_transacion_application = 4;
+ * optional bool authorizes_transaction_application = 4;
  * @return {boolean}
  */
-proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesTransacionApplication = function() {
+proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesTransactionApplication = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
 };
 
@@ -1734,7 +1734,7 @@ proto.koinos.chain.contract_metadata_object.prototype.getAuthorizesTransacionApp
  * @param {boolean} value
  * @return {!proto.koinos.chain.contract_metadata_object} returns this
  */
-proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesTransacionApplication = function(value) {
+proto.koinos.chain.contract_metadata_object.prototype.setAuthorizesTransactionApplication = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
