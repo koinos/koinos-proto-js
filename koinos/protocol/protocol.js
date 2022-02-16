@@ -1118,7 +1118,7 @@ proto.koinos.protocol.upload_contract_operation.toObject = function(includeInsta
     bytecode: msg.getBytecode_asB64(),
     abi: jspb.Message.getFieldWithDefault(msg, 3, ""),
     authorizesCallContract: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    authorizesUseRc: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    authorizesTransactionApplication: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
     authorizesUploadContract: jspb.Message.getBooleanFieldWithDefault(msg, 6, false)
   };
 
@@ -1174,7 +1174,7 @@ proto.koinos.protocol.upload_contract_operation.deserializeBinaryFromReader = fu
       break;
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAuthorizesUseRc(value);
+      msg.setAuthorizesTransactionApplication(value);
       break;
     case 6:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -1237,7 +1237,7 @@ proto.koinos.protocol.upload_contract_operation.serializeBinaryToWriter = functi
       f
     );
   }
-  f = message.getAuthorizesUseRc();
+  f = message.getAuthorizesTransactionApplication();
   if (f) {
     writer.writeBool(
       5,
@@ -1375,10 +1375,10 @@ proto.koinos.protocol.upload_contract_operation.prototype.setAuthorizesCallContr
 
 
 /**
- * optional bool authorizes_use_rc = 5;
+ * optional bool authorizes_transaction_application = 5;
  * @return {boolean}
  */
-proto.koinos.protocol.upload_contract_operation.prototype.getAuthorizesUseRc = function() {
+proto.koinos.protocol.upload_contract_operation.prototype.getAuthorizesTransactionApplication = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
@@ -1387,7 +1387,7 @@ proto.koinos.protocol.upload_contract_operation.prototype.getAuthorizesUseRc = f
  * @param {boolean} value
  * @return {!proto.koinos.protocol.upload_contract_operation} returns this
  */
-proto.koinos.protocol.upload_contract_operation.prototype.setAuthorizesUseRc = function(value) {
+proto.koinos.protocol.upload_contract_operation.prototype.setAuthorizesTransactionApplication = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
