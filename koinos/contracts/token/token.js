@@ -2654,7 +2654,7 @@ proto.koinos.contracts.token.mint_event.prototype.toObject = function(opt_includ
 proto.koinos.contracts.token.mint_event.toObject = function(includeInstance, msg) {
   var f, obj = {
     to: msg.getTo_asB64(),
-    value: jspb.Message.getFieldWithDefault(msg, 3, "0")
+    value: jspb.Message.getFieldWithDefault(msg, 2, "0")
   };
 
   if (includeInstance) {
@@ -2695,7 +2695,7 @@ proto.koinos.contracts.token.mint_event.deserializeBinaryFromReader = function(m
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setTo(value);
       break;
-    case 3:
+    case 2:
       var value = /** @type {string} */ (reader.readUint64String());
       msg.setValue(value);
       break;
@@ -2738,7 +2738,7 @@ proto.koinos.contracts.token.mint_event.serializeBinaryToWriter = function(messa
   f = message.getValue();
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
-      3,
+      2,
       f
     );
   }
@@ -2788,11 +2788,11 @@ proto.koinos.contracts.token.mint_event.prototype.setTo = function(value) {
 
 
 /**
- * optional uint64 value = 3;
+ * optional uint64 value = 2;
  * @return {string}
  */
 proto.koinos.contracts.token.mint_event.prototype.getValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, "0"));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, "0"));
 };
 
 
@@ -2801,7 +2801,7 @@ proto.koinos.contracts.token.mint_event.prototype.getValue = function() {
  * @return {!proto.koinos.contracts.token.mint_event} returns this
  */
 proto.koinos.contracts.token.mint_event.prototype.setValue = function(value) {
-  return jspb.Message.setProto3StringIntField(this, 3, value);
+  return jspb.Message.setProto3StringIntField(this, 2, value);
 };
 
 
