@@ -159,15 +159,15 @@ proto.koinos.chain.value_type.toObject = function(includeInstance, msg) {
     doubleValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
     floatValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
     int32Value: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    int64Value: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    int64Value: jspb.Message.getFieldWithDefault(msg, 5, "0"),
     uint32Value: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    uint64Value: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    uint64Value: jspb.Message.getFieldWithDefault(msg, 7, "0"),
     sint32Value: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    sint64Value: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    sint64Value: jspb.Message.getFieldWithDefault(msg, 9, "0"),
     fixed32Value: jspb.Message.getFieldWithDefault(msg, 10, 0),
-    fixed64Value: jspb.Message.getFieldWithDefault(msg, 11, 0),
+    fixed64Value: jspb.Message.getFieldWithDefault(msg, 11, "0"),
     sfixed32Value: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    sfixed64Value: jspb.Message.getFieldWithDefault(msg, 13, 0),
+    sfixed64Value: jspb.Message.getFieldWithDefault(msg, 13, "0"),
     boolValue: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
     stringValue: jspb.Message.getFieldWithDefault(msg, 15, ""),
     bytesValue: msg.getBytesValue_asB64()
@@ -225,7 +225,7 @@ proto.koinos.chain.value_type.deserializeBinaryFromReader = function(msg, reader
       msg.setInt32Value(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = /** @type {string} */ (reader.readInt64String());
       msg.setInt64Value(value);
       break;
     case 6:
@@ -233,7 +233,7 @@ proto.koinos.chain.value_type.deserializeBinaryFromReader = function(msg, reader
       msg.setUint32Value(value);
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {string} */ (reader.readUint64String());
       msg.setUint64Value(value);
       break;
     case 8:
@@ -241,7 +241,7 @@ proto.koinos.chain.value_type.deserializeBinaryFromReader = function(msg, reader
       msg.setSint32Value(value);
       break;
     case 9:
-      var value = /** @type {number} */ (reader.readSint64());
+      var value = /** @type {string} */ (reader.readSint64String());
       msg.setSint64Value(value);
       break;
     case 10:
@@ -249,7 +249,7 @@ proto.koinos.chain.value_type.deserializeBinaryFromReader = function(msg, reader
       msg.setFixed32Value(value);
       break;
     case 11:
-      var value = /** @type {number} */ (reader.readFixed64());
+      var value = /** @type {string} */ (reader.readFixed64String());
       msg.setFixed64Value(value);
       break;
     case 12:
@@ -257,7 +257,7 @@ proto.koinos.chain.value_type.deserializeBinaryFromReader = function(msg, reader
       msg.setSfixed32Value(value);
       break;
     case 13:
-      var value = /** @type {number} */ (reader.readSfixed64());
+      var value = /** @type {string} */ (reader.readSfixed64String());
       msg.setSfixed64Value(value);
       break;
     case 14:
@@ -330,9 +330,9 @@ proto.koinos.chain.value_type.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  f = /** @type {string} */ (jspb.Message.getField(message, 5));
   if (f != null) {
-    writer.writeInt64(
+    writer.writeInt64String(
       5,
       f
     );
@@ -344,9 +344,9 @@ proto.koinos.chain.value_type.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  f = /** @type {string} */ (jspb.Message.getField(message, 7));
   if (f != null) {
-    writer.writeUint64(
+    writer.writeUint64String(
       7,
       f
     );
@@ -358,9 +358,9 @@ proto.koinos.chain.value_type.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 9));
+  f = /** @type {string} */ (jspb.Message.getField(message, 9));
   if (f != null) {
-    writer.writeSint64(
+    writer.writeSint64String(
       9,
       f
     );
@@ -372,9 +372,9 @@ proto.koinos.chain.value_type.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 11));
+  f = /** @type {string} */ (jspb.Message.getField(message, 11));
   if (f != null) {
-    writer.writeFixed64(
+    writer.writeFixed64String(
       11,
       f
     );
@@ -386,9 +386,9 @@ proto.koinos.chain.value_type.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 13));
+  f = /** @type {string} */ (jspb.Message.getField(message, 13));
   if (f != null) {
-    writer.writeSfixed64(
+    writer.writeSfixed64String(
       13,
       f
     );
@@ -564,15 +564,15 @@ proto.koinos.chain.value_type.prototype.hasInt32Value = function() {
 
 /**
  * optional int64 int64_value = 5;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.chain.value_type.prototype.getInt64Value = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.chain.value_type} returns this
  */
 proto.koinos.chain.value_type.prototype.setInt64Value = function(value) {
@@ -636,15 +636,15 @@ proto.koinos.chain.value_type.prototype.hasUint32Value = function() {
 
 /**
  * optional uint64 uint64_value = 7;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.chain.value_type.prototype.getUint64Value = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.chain.value_type} returns this
  */
 proto.koinos.chain.value_type.prototype.setUint64Value = function(value) {
@@ -708,15 +708,15 @@ proto.koinos.chain.value_type.prototype.hasSint32Value = function() {
 
 /**
  * optional sint64 sint64_value = 9;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.chain.value_type.prototype.getSint64Value = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.chain.value_type} returns this
  */
 proto.koinos.chain.value_type.prototype.setSint64Value = function(value) {
@@ -780,15 +780,15 @@ proto.koinos.chain.value_type.prototype.hasFixed32Value = function() {
 
 /**
  * optional fixed64 fixed64_value = 11;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.chain.value_type.prototype.getFixed64Value = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.chain.value_type} returns this
  */
 proto.koinos.chain.value_type.prototype.setFixed64Value = function(value) {
@@ -852,15 +852,15 @@ proto.koinos.chain.value_type.prototype.hasSfixed32Value = function() {
 
 /**
  * optional sfixed64 sfixed64_value = 13;
- * @return {number}
+ * @return {string}
  */
 proto.koinos.chain.value_type.prototype.getSfixed64Value = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 13, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, "0"));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.koinos.chain.value_type} returns this
  */
 proto.koinos.chain.value_type.prototype.setSfixed64Value = function(value) {
