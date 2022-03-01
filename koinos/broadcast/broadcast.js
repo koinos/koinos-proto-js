@@ -594,7 +594,8 @@ proto.koinos.broadcast.block_accepted.prototype.toObject = function(opt_includeI
 proto.koinos.broadcast.block_accepted.toObject = function(includeInstance, msg) {
   var f, obj = {
     block: (f = msg.getBlock()) && proto.koinos.protocol.block.toObject(includeInstance, f),
-    receipt: (f = msg.getReceipt()) && proto.koinos.protocol.block_receipt.toObject(includeInstance, f)
+    receipt: (f = msg.getReceipt()) && proto.koinos.protocol.block_receipt.toObject(includeInstance, f),
+    live: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -641,6 +642,10 @@ proto.koinos.broadcast.block_accepted.deserializeBinaryFromReader = function(msg
       reader.readMessage(value,proto.koinos.protocol.block_receipt.deserializeBinaryFromReader);
       msg.setReceipt(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLive(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -684,6 +689,13 @@ proto.koinos.broadcast.block_accepted.serializeBinaryToWriter = function(message
       2,
       f,
       proto.koinos.protocol.block_receipt.serializeBinaryToWriter
+    );
+  }
+  f = message.getLive();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
     );
   }
 };
@@ -760,6 +772,24 @@ proto.koinos.broadcast.block_accepted.prototype.clearReceipt = function() {
  */
 proto.koinos.broadcast.block_accepted.prototype.hasReceipt = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bool live = 3;
+ * @return {boolean}
+ */
+proto.koinos.broadcast.block_accepted.prototype.getLive = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.koinos.broadcast.block_accepted} returns this
+ */
+proto.koinos.broadcast.block_accepted.prototype.setLive = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
