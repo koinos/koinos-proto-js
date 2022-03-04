@@ -618,8 +618,7 @@ proto.koinos.broadcast.mempool_accepted.toObject = function(includeInstance, msg
     transaction: (f = msg.getTransaction()) && proto.koinos.protocol.transaction.toObject(includeInstance, f),
     receipt: (f = msg.getReceipt()) && proto.koinos.protocol.transaction_receipt.toObject(includeInstance, f),
     height: jspb.Message.getFieldWithDefault(msg, 3, "0"),
-    pendingRcUsed: jspb.Message.getFieldWithDefault(msg, 4, "0"),
-    rcLimit: jspb.Message.getFieldWithDefault(msg, 5, "0")
+    pendingRcUsed: jspb.Message.getFieldWithDefault(msg, 4, "0")
   };
 
   if (includeInstance) {
@@ -673,10 +672,6 @@ proto.koinos.broadcast.mempool_accepted.deserializeBinaryFromReader = function(m
     case 4:
       var value = /** @type {string} */ (reader.readUint64String());
       msg.setPendingRcUsed(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readUint64String());
-      msg.setRcLimit(value);
       break;
     default:
       reader.skipField();
@@ -734,13 +729,6 @@ proto.koinos.broadcast.mempool_accepted.serializeBinaryToWriter = function(messa
   if (parseInt(f, 10) !== 0) {
     writer.writeUint64String(
       4,
-      f
-    );
-  }
-  f = message.getRcLimit();
-  if (parseInt(f, 10) !== 0) {
-    writer.writeUint64String(
-      5,
       f
     );
   }
@@ -854,24 +842,6 @@ proto.koinos.broadcast.mempool_accepted.prototype.getPendingRcUsed = function() 
  */
 proto.koinos.broadcast.mempool_accepted.prototype.setPendingRcUsed = function(value) {
   return jspb.Message.setProto3StringIntField(this, 4, value);
-};
-
-
-/**
- * optional uint64 rc_limit = 5;
- * @return {string}
- */
-proto.koinos.broadcast.mempool_accepted.prototype.getRcLimit = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, "0"));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.koinos.broadcast.mempool_accepted} returns this
- */
-proto.koinos.broadcast.mempool_accepted.prototype.setRcLimit = function(value) {
-  return jspb.Message.setProto3StringIntField(this, 5, value);
 };
 
 
