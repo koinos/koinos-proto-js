@@ -273,7 +273,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.koinos.protocol.block_header = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.koinos.protocol.block_header.repeatedFields_, null);
 };
 goog.inherits(proto.koinos.protocol.block_header, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -3611,6 +3611,13 @@ proto.koinos.protocol.transaction_receipt.prototype.clearLogsList = function() {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.koinos.protocol.block_header.repeatedFields_ = [7];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -3647,7 +3654,8 @@ proto.koinos.protocol.block_header.toObject = function(includeInstance, msg) {
     timestamp: jspb.Message.getFieldWithDefault(msg, 3, "0"),
     previousStateMerkleRoot: msg.getPreviousStateMerkleRoot_asB64(),
     transactionMerkleRoot: msg.getTransactionMerkleRoot_asB64(),
-    signer: msg.getSigner_asB64()
+    signer: msg.getSigner_asB64(),
+    approvedProposalsList: msg.getApprovedProposalsList_asB64()
   };
 
   if (includeInstance) {
@@ -3707,6 +3715,10 @@ proto.koinos.protocol.block_header.deserializeBinaryFromReader = function(msg, r
     case 6:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setSigner(value);
+      break;
+    case 7:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.addApprovedProposals(value);
       break;
     default:
       reader.skipField();
@@ -3776,6 +3788,13 @@ proto.koinos.protocol.block_header.serializeBinaryToWriter = function(message, w
   if (f.length > 0) {
     writer.writeBytes(
       6,
+      f
+    );
+  }
+  f = message.getApprovedProposalsList_asU8();
+  if (f.length > 0) {
+    writer.writeRepeatedBytes(
+      7,
       f
     );
   }
@@ -3983,6 +4002,67 @@ proto.koinos.protocol.block_header.prototype.getSigner_asU8 = function() {
  */
 proto.koinos.protocol.block_header.prototype.setSigner = function(value) {
   return jspb.Message.setProto3BytesField(this, 6, value);
+};
+
+
+/**
+ * repeated bytes approved_proposals = 7;
+ * @return {!(Array<!Uint8Array>|Array<string>)}
+ */
+proto.koinos.protocol.block_header.prototype.getApprovedProposalsList = function() {
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 7));
+};
+
+
+/**
+ * repeated bytes approved_proposals = 7;
+ * This is a type-conversion wrapper around `getApprovedProposalsList()`
+ * @return {!Array<string>}
+ */
+proto.koinos.protocol.block_header.prototype.getApprovedProposalsList_asB64 = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+      this.getApprovedProposalsList()));
+};
+
+
+/**
+ * repeated bytes approved_proposals = 7;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getApprovedProposalsList()`
+ * @return {!Array<!Uint8Array>}
+ */
+proto.koinos.protocol.block_header.prototype.getApprovedProposalsList_asU8 = function() {
+  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+      this.getApprovedProposalsList()));
+};
+
+
+/**
+ * @param {!(Array<!Uint8Array>|Array<string>)} value
+ * @return {!proto.koinos.protocol.block_header} returns this
+ */
+proto.koinos.protocol.block_header.prototype.setApprovedProposalsList = function(value) {
+  return jspb.Message.setField(this, 7, value || []);
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @param {number=} opt_index
+ * @return {!proto.koinos.protocol.block_header} returns this
+ */
+proto.koinos.protocol.block_header.prototype.addApprovedProposals = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.koinos.protocol.block_header} returns this
+ */
+proto.koinos.protocol.block_header.prototype.clearApprovedProposalsList = function() {
+  return this.setApprovedProposalsList([]);
 };
 
 
