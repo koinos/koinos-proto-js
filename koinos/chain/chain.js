@@ -16,6 +16,7 @@ goog.provide('proto.koinos.chain.compute_bandwidth_entry');
 goog.provide('proto.koinos.chain.compute_bandwidth_registry');
 goog.provide('proto.koinos.chain.contract_metadata_object');
 goog.provide('proto.koinos.chain.database_key');
+goog.provide('proto.koinos.chain.dsa');
 goog.provide('proto.koinos.chain.genesis_data');
 goog.provide('proto.koinos.chain.genesis_entry');
 goog.provide('proto.koinos.chain.head_info');
@@ -2502,5 +2503,12 @@ proto.koinos.chain.genesis_data.prototype.clearEntriesList = function() {
 proto.koinos.chain.privilege = {
   KERNEL_MODE: 0,
   USER_MODE: 1
+};
+
+/**
+ * @enum {number}
+ */
+proto.koinos.chain.dsa = {
+  ECDSA_SECP256K1: 0
 };
 
