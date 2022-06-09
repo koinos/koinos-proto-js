@@ -413,14 +413,19 @@ export namespace koinos {
                 active = 1,
                 approved = 2,
                 expired = 3,
-                applied = 4
+                applied = 4,
+                failed = 5,
+                reverted = 6
             }
 
             /** Properties of a proposal_record. */
             interface Iproposal_record {
 
-                /** proposal_record proposal */
-                proposal?: (koinos.protocol.Itransaction|null);
+                /** proposal_record operations */
+                operations?: (koinos.protocol.Ioperation[]|null);
+
+                /** proposal_record operation_merkle_root */
+                operation_merkle_root?: (Uint8Array|null);
 
                 /** proposal_record vote_start_height */
                 vote_start_height?: (number|Long|null);
@@ -439,6 +444,9 @@ export namespace koinos {
 
                 /** proposal_record status */
                 status?: (koinos.contracts.governance.proposal_status|null);
+
+                /** proposal_record fee */
+                fee?: (number|Long|null);
             }
 
             /** Represents a proposal_record. */
@@ -450,8 +458,11 @@ export namespace koinos {
                  */
                 constructor(properties?: koinos.contracts.governance.Iproposal_record);
 
-                /** proposal_record proposal. */
-                public proposal?: (koinos.protocol.Itransaction|null);
+                /** proposal_record operations. */
+                public operations: koinos.protocol.Ioperation[];
+
+                /** proposal_record operation_merkle_root. */
+                public operation_merkle_root: Uint8Array;
 
                 /** proposal_record vote_start_height. */
                 public vote_start_height: (number|Long);
@@ -470,6 +481,9 @@ export namespace koinos {
 
                 /** proposal_record status. */
                 public status: koinos.contracts.governance.proposal_status;
+
+                /** proposal_record fee. */
+                public fee: (number|Long);
 
                 /**
                  * Creates a new proposal_record instance using the specified properties.
@@ -545,8 +559,11 @@ export namespace koinos {
             /** Properties of a submit_proposal_arguments. */
             interface Isubmit_proposal_arguments {
 
-                /** submit_proposal_arguments proposal */
-                proposal?: (koinos.protocol.Itransaction|null);
+                /** submit_proposal_arguments operations */
+                operations?: (koinos.protocol.Ioperation[]|null);
+
+                /** submit_proposal_arguments operation_merkle_root */
+                operation_merkle_root?: (Uint8Array|null);
 
                 /** submit_proposal_arguments fee */
                 fee?: (number|Long|null);
@@ -561,8 +578,11 @@ export namespace koinos {
                  */
                 constructor(properties?: koinos.contracts.governance.Isubmit_proposal_arguments);
 
-                /** submit_proposal_arguments proposal. */
-                public proposal?: (koinos.protocol.Itransaction|null);
+                /** submit_proposal_arguments operations. */
+                public operations: koinos.protocol.Ioperation[];
+
+                /** submit_proposal_arguments operation_merkle_root. */
+                public operation_merkle_root: Uint8Array;
 
                 /** submit_proposal_arguments fee. */
                 public fee: (number|Long);
@@ -640,9 +660,6 @@ export namespace koinos {
 
             /** Properties of a submit_proposal_result. */
             interface Isubmit_proposal_result {
-
-                /** submit_proposal_result value */
-                value?: (boolean|null);
             }
 
             /** Represents a submit_proposal_result. */
@@ -653,9 +670,6 @@ export namespace koinos {
                  * @param [properties] Properties to set
                  */
                 constructor(properties?: koinos.contracts.governance.Isubmit_proposal_result);
-
-                /** submit_proposal_result value. */
-                public value: boolean;
 
                 /**
                  * Creates a new submit_proposal_result instance using the specified properties.
@@ -1569,174 +1583,6 @@ export namespace koinos {
 
                 /**
                  * Converts this proposal_vote_event to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a block_callback_arguments. */
-            interface Iblock_callback_arguments {
-            }
-
-            /** Represents a block_callback_arguments. */
-            class block_callback_arguments implements Iblock_callback_arguments {
-
-                /**
-                 * Constructs a new block_callback_arguments.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.contracts.governance.Iblock_callback_arguments);
-
-                /**
-                 * Creates a new block_callback_arguments instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns block_callback_arguments instance
-                 */
-                public static create(properties?: koinos.contracts.governance.Iblock_callback_arguments): koinos.contracts.governance.block_callback_arguments;
-
-                /**
-                 * Encodes the specified block_callback_arguments message. Does not implicitly {@link koinos.contracts.governance.block_callback_arguments.verify|verify} messages.
-                 * @param message block_callback_arguments message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.contracts.governance.Iblock_callback_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified block_callback_arguments message, length delimited. Does not implicitly {@link koinos.contracts.governance.block_callback_arguments.verify|verify} messages.
-                 * @param message block_callback_arguments message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.contracts.governance.Iblock_callback_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a block_callback_arguments message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns block_callback_arguments
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.governance.block_callback_arguments;
-
-                /**
-                 * Decodes a block_callback_arguments message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns block_callback_arguments
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.governance.block_callback_arguments;
-
-                /**
-                 * Verifies a block_callback_arguments message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a block_callback_arguments message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns block_callback_arguments
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.contracts.governance.block_callback_arguments;
-
-                /**
-                 * Creates a plain object from a block_callback_arguments message. Also converts values to other types if specified.
-                 * @param message block_callback_arguments
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.contracts.governance.block_callback_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this block_callback_arguments to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a block_callback_result. */
-            interface Iblock_callback_result {
-            }
-
-            /** Represents a block_callback_result. */
-            class block_callback_result implements Iblock_callback_result {
-
-                /**
-                 * Constructs a new block_callback_result.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.contracts.governance.Iblock_callback_result);
-
-                /**
-                 * Creates a new block_callback_result instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns block_callback_result instance
-                 */
-                public static create(properties?: koinos.contracts.governance.Iblock_callback_result): koinos.contracts.governance.block_callback_result;
-
-                /**
-                 * Encodes the specified block_callback_result message. Does not implicitly {@link koinos.contracts.governance.block_callback_result.verify|verify} messages.
-                 * @param message block_callback_result message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.contracts.governance.Iblock_callback_result, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified block_callback_result message, length delimited. Does not implicitly {@link koinos.contracts.governance.block_callback_result.verify|verify} messages.
-                 * @param message block_callback_result message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.contracts.governance.Iblock_callback_result, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a block_callback_result message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns block_callback_result
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.governance.block_callback_result;
-
-                /**
-                 * Decodes a block_callback_result message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns block_callback_result
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.governance.block_callback_result;
-
-                /**
-                 * Verifies a block_callback_result message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a block_callback_result message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns block_callback_result
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.contracts.governance.block_callback_result;
-
-                /**
-                 * Creates a plain object from a block_callback_result message. Also converts values to other types if specified.
-                 * @param message block_callback_result
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.contracts.governance.block_callback_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this block_callback_result to JSON.
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
@@ -12126,6 +11972,192 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of a result. */
+        interface Iresult {
+
+            /** result code */
+            code?: (number|null);
+
+            /** result value */
+            value?: (Uint8Array|null);
+        }
+
+        /** Represents a result. */
+        class result implements Iresult {
+
+            /**
+             * Constructs a new result.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iresult);
+
+            /** result code. */
+            public code: number;
+
+            /** result value. */
+            public value: Uint8Array;
+
+            /**
+             * Creates a new result instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns result instance
+             */
+            public static create(properties?: koinos.chain.Iresult): koinos.chain.result;
+
+            /**
+             * Encodes the specified result message. Does not implicitly {@link koinos.chain.result.verify|verify} messages.
+             * @param message result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iresult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified result message, length delimited. Does not implicitly {@link koinos.chain.result.verify|verify} messages.
+             * @param message result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iresult, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a result message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.result;
+
+            /**
+             * Decodes a result message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.result;
+
+            /**
+             * Verifies a result message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a result message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns result
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.result;
+
+            /**
+             * Creates a plain object from a result message. Also converts values to other types if specified.
+             * @param message result
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this result to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an error_info. */
+        interface Ierror_info {
+
+            /** error_info message */
+            message?: (string|null);
+        }
+
+        /** Represents an error_info. */
+        class error_info implements Ierror_info {
+
+            /**
+             * Constructs a new error_info.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Ierror_info);
+
+            /** error_info message. */
+            public message: string;
+
+            /**
+             * Creates a new error_info instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns error_info instance
+             */
+            public static create(properties?: koinos.chain.Ierror_info): koinos.chain.error_info;
+
+            /**
+             * Encodes the specified error_info message. Does not implicitly {@link koinos.chain.error_info.verify|verify} messages.
+             * @param message error_info message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Ierror_info, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified error_info message, length delimited. Does not implicitly {@link koinos.chain.error_info.verify|verify} messages.
+             * @param message error_info message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Ierror_info, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an error_info message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns error_info
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.error_info;
+
+            /**
+             * Decodes an error_info message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns error_info
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.error_info;
+
+            /**
+             * Verifies an error_info message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an error_info message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns error_info
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.error_info;
+
+            /**
+             * Creates a plain object from an error_info message. Also converts values to other types if specified.
+             * @param message error_info
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.error_info, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this error_info to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of an object_space. */
         interface Iobject_space {
 
@@ -12613,6 +12645,102 @@ export namespace koinos {
 
             /**
              * Converts this caller_data to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an argument_data. */
+        interface Iargument_data {
+
+            /** argument_data entry_point */
+            entry_point?: (number|null);
+
+            /** argument_data arguments */
+            "arguments"?: (Uint8Array|null);
+        }
+
+        /** Represents an argument_data. */
+        class argument_data implements Iargument_data {
+
+            /**
+             * Constructs a new argument_data.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iargument_data);
+
+            /** argument_data entry_point. */
+            public entry_point: number;
+
+            /** argument_data arguments. */
+            public arguments: Uint8Array;
+
+            /**
+             * Creates a new argument_data instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns argument_data instance
+             */
+            public static create(properties?: koinos.chain.Iargument_data): koinos.chain.argument_data;
+
+            /**
+             * Encodes the specified argument_data message. Does not implicitly {@link koinos.chain.argument_data.verify|verify} messages.
+             * @param message argument_data message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iargument_data, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified argument_data message, length delimited. Does not implicitly {@link koinos.chain.argument_data.verify|verify} messages.
+             * @param message argument_data message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iargument_data, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an argument_data message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns argument_data
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.argument_data;
+
+            /**
+             * Decodes an argument_data message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns argument_data
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.argument_data;
+
+            /**
+             * Verifies an argument_data message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an argument_data message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns argument_data
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.argument_data;
+
+            /**
+             * Creates a plain object from an argument_data message. Also converts values to other types if specified.
+             * @param message argument_data
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.argument_data, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this argument_data to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -13249,6 +13377,7 @@ export namespace koinos {
             post_block_callback = 9,
             pre_transaction_callback = 10,
             post_transaction_callback = 11,
+            get_chain_id = 12,
             process_block_signature = 101,
             get_transaction = 102,
             get_transaction_field = 103,
@@ -13258,7 +13387,7 @@ export namespace koinos {
             get_account_nonce = 107,
             verify_account_nonce = 108,
             set_account_nonce = 109,
-            require_system_authority = 110,
+            check_system_authority = 110,
             get_account_rc = 201,
             consume_account_rc = 202,
             get_resource_limits = 203,
@@ -13275,14 +13404,38 @@ export namespace koinos {
             verify_merkle_root = 503,
             verify_signature = 504,
             verify_vrf_proof = 505,
-            call_contract = 601,
-            get_entry_point = 602,
-            get_contract_arguments = 603,
-            set_contract_result = 604,
-            exit_contract = 605,
-            get_contract_id = 606,
-            get_caller = 607,
-            require_authority = 608
+            call = 601,
+            exit = 602,
+            get_arguments = 603,
+            get_contract_id = 604,
+            get_caller = 605,
+            check_authority = 606
+        }
+
+        /** error_code enum. */
+        enum error_code {
+            success = 0,
+            reversion = 1,
+            internal_error = 100,
+            system_authorization_failure = 101,
+            invalid_contract = 102,
+            insufficient_privileges = 103,
+            insufficient_rc = 104,
+            insufficient_return_buffer = 105,
+            unknown_thunk = 106,
+            unknown_operation = 107,
+            read_only_context = 108,
+            failure = -1,
+            field_not_found = -100,
+            unknown_hash_code = -101,
+            unknown_dsa = -102,
+            unknown_system_call = -103,
+            authorization_failure = -200,
+            invalid_nonce = -201,
+            invalid_signature = -202,
+            malformed_block = -203,
+            malformed_transaction = -204,
+            block_resource_failure = -205
         }
 
         /** Properties of a get_head_info_arguments. */
@@ -15093,6 +15246,9 @@ export namespace koinos {
 
         /** Properties of a post_transaction_callback_result. */
         interface Ipost_transaction_callback_result {
+
+            /** post_transaction_callback_result value */
+            value?: (koinos.chain.Iresult|null);
         }
 
         /** Represents a post_transaction_callback_result. */
@@ -15103,6 +15259,9 @@ export namespace koinos {
              * @param [properties] Properties to set
              */
             constructor(properties?: koinos.chain.Ipost_transaction_callback_result);
+
+            /** post_transaction_callback_result value. */
+            public value?: (koinos.chain.Iresult|null);
 
             /**
              * Creates a new post_transaction_callback_result instance using the specified properties.
@@ -15170,6 +15329,180 @@ export namespace koinos {
 
             /**
              * Converts this post_transaction_callback_result to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_chain_id_arguments. */
+        interface Iget_chain_id_arguments {
+        }
+
+        /** Represents a get_chain_id_arguments. */
+        class get_chain_id_arguments implements Iget_chain_id_arguments {
+
+            /**
+             * Constructs a new get_chain_id_arguments.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_chain_id_arguments);
+
+            /**
+             * Creates a new get_chain_id_arguments instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_chain_id_arguments instance
+             */
+            public static create(properties?: koinos.chain.Iget_chain_id_arguments): koinos.chain.get_chain_id_arguments;
+
+            /**
+             * Encodes the specified get_chain_id_arguments message. Does not implicitly {@link koinos.chain.get_chain_id_arguments.verify|verify} messages.
+             * @param message get_chain_id_arguments message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_chain_id_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_chain_id_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_chain_id_arguments.verify|verify} messages.
+             * @param message get_chain_id_arguments message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_chain_id_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_chain_id_arguments message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_chain_id_arguments
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_chain_id_arguments;
+
+            /**
+             * Decodes a get_chain_id_arguments message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_chain_id_arguments
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_chain_id_arguments;
+
+            /**
+             * Verifies a get_chain_id_arguments message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_chain_id_arguments message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_chain_id_arguments
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_chain_id_arguments;
+
+            /**
+             * Creates a plain object from a get_chain_id_arguments message. Also converts values to other types if specified.
+             * @param message get_chain_id_arguments
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_chain_id_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_chain_id_arguments to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_chain_id_result. */
+        interface Iget_chain_id_result {
+
+            /** get_chain_id_result value */
+            value?: (Uint8Array|null);
+        }
+
+        /** Represents a get_chain_id_result. */
+        class get_chain_id_result implements Iget_chain_id_result {
+
+            /**
+             * Constructs a new get_chain_id_result.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_chain_id_result);
+
+            /** get_chain_id_result value. */
+            public value: Uint8Array;
+
+            /**
+             * Creates a new get_chain_id_result instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_chain_id_result instance
+             */
+            public static create(properties?: koinos.chain.Iget_chain_id_result): koinos.chain.get_chain_id_result;
+
+            /**
+             * Encodes the specified get_chain_id_result message. Does not implicitly {@link koinos.chain.get_chain_id_result.verify|verify} messages.
+             * @param message get_chain_id_result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_chain_id_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_chain_id_result message, length delimited. Does not implicitly {@link koinos.chain.get_chain_id_result.verify|verify} messages.
+             * @param message get_chain_id_result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_chain_id_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_chain_id_result message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_chain_id_result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_chain_id_result;
+
+            /**
+             * Decodes a get_chain_id_result message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_chain_id_result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_chain_id_result;
+
+            /**
+             * Verifies a get_chain_id_result message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_chain_id_result message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_chain_id_result
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_chain_id_result;
+
+            /**
+             * Creates a plain object from a get_chain_id_result message. Also converts values to other types if specified.
+             * @param message get_chain_id_result
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_chain_id_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_chain_id_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -16801,175 +17134,181 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a require_system_authority_arguments. */
-        interface Irequire_system_authority_arguments {
+        /** Properties of a check_system_authority_arguments. */
+        interface Icheck_system_authority_arguments {
 
-            /** require_system_authority_arguments type */
+            /** check_system_authority_arguments type */
             type?: (koinos.chain.system_authorization_type|null);
         }
 
-        /** Represents a require_system_authority_arguments. */
-        class require_system_authority_arguments implements Irequire_system_authority_arguments {
+        /** Represents a check_system_authority_arguments. */
+        class check_system_authority_arguments implements Icheck_system_authority_arguments {
 
             /**
-             * Constructs a new require_system_authority_arguments.
+             * Constructs a new check_system_authority_arguments.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Irequire_system_authority_arguments);
+            constructor(properties?: koinos.chain.Icheck_system_authority_arguments);
 
-            /** require_system_authority_arguments type. */
+            /** check_system_authority_arguments type. */
             public type: koinos.chain.system_authorization_type;
 
             /**
-             * Creates a new require_system_authority_arguments instance using the specified properties.
+             * Creates a new check_system_authority_arguments instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns require_system_authority_arguments instance
+             * @returns check_system_authority_arguments instance
              */
-            public static create(properties?: koinos.chain.Irequire_system_authority_arguments): koinos.chain.require_system_authority_arguments;
+            public static create(properties?: koinos.chain.Icheck_system_authority_arguments): koinos.chain.check_system_authority_arguments;
 
             /**
-             * Encodes the specified require_system_authority_arguments message. Does not implicitly {@link koinos.chain.require_system_authority_arguments.verify|verify} messages.
-             * @param message require_system_authority_arguments message or plain object to encode
+             * Encodes the specified check_system_authority_arguments message. Does not implicitly {@link koinos.chain.check_system_authority_arguments.verify|verify} messages.
+             * @param message check_system_authority_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Irequire_system_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icheck_system_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified require_system_authority_arguments message, length delimited. Does not implicitly {@link koinos.chain.require_system_authority_arguments.verify|verify} messages.
-             * @param message require_system_authority_arguments message or plain object to encode
+             * Encodes the specified check_system_authority_arguments message, length delimited. Does not implicitly {@link koinos.chain.check_system_authority_arguments.verify|verify} messages.
+             * @param message check_system_authority_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Irequire_system_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icheck_system_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a require_system_authority_arguments message from the specified reader or buffer.
+             * Decodes a check_system_authority_arguments message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns require_system_authority_arguments
+             * @returns check_system_authority_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.require_system_authority_arguments;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.check_system_authority_arguments;
 
             /**
-             * Decodes a require_system_authority_arguments message from the specified reader or buffer, length delimited.
+             * Decodes a check_system_authority_arguments message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns require_system_authority_arguments
+             * @returns check_system_authority_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.require_system_authority_arguments;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.check_system_authority_arguments;
 
             /**
-             * Verifies a require_system_authority_arguments message.
+             * Verifies a check_system_authority_arguments message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a require_system_authority_arguments message from a plain object. Also converts values to their respective internal types.
+             * Creates a check_system_authority_arguments message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns require_system_authority_arguments
+             * @returns check_system_authority_arguments
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.require_system_authority_arguments;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.check_system_authority_arguments;
 
             /**
-             * Creates a plain object from a require_system_authority_arguments message. Also converts values to other types if specified.
-             * @param message require_system_authority_arguments
+             * Creates a plain object from a check_system_authority_arguments message. Also converts values to other types if specified.
+             * @param message check_system_authority_arguments
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.require_system_authority_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.check_system_authority_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this require_system_authority_arguments to JSON.
+             * Converts this check_system_authority_arguments to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a require_system_authority_result. */
-        interface Irequire_system_authority_result {
+        /** Properties of a check_system_authority_result. */
+        interface Icheck_system_authority_result {
+
+            /** check_system_authority_result value */
+            value?: (boolean|null);
         }
 
-        /** Represents a require_system_authority_result. */
-        class require_system_authority_result implements Irequire_system_authority_result {
+        /** Represents a check_system_authority_result. */
+        class check_system_authority_result implements Icheck_system_authority_result {
 
             /**
-             * Constructs a new require_system_authority_result.
+             * Constructs a new check_system_authority_result.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Irequire_system_authority_result);
+            constructor(properties?: koinos.chain.Icheck_system_authority_result);
+
+            /** check_system_authority_result value. */
+            public value: boolean;
 
             /**
-             * Creates a new require_system_authority_result instance using the specified properties.
+             * Creates a new check_system_authority_result instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns require_system_authority_result instance
+             * @returns check_system_authority_result instance
              */
-            public static create(properties?: koinos.chain.Irequire_system_authority_result): koinos.chain.require_system_authority_result;
+            public static create(properties?: koinos.chain.Icheck_system_authority_result): koinos.chain.check_system_authority_result;
 
             /**
-             * Encodes the specified require_system_authority_result message. Does not implicitly {@link koinos.chain.require_system_authority_result.verify|verify} messages.
-             * @param message require_system_authority_result message or plain object to encode
+             * Encodes the specified check_system_authority_result message. Does not implicitly {@link koinos.chain.check_system_authority_result.verify|verify} messages.
+             * @param message check_system_authority_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Irequire_system_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icheck_system_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified require_system_authority_result message, length delimited. Does not implicitly {@link koinos.chain.require_system_authority_result.verify|verify} messages.
-             * @param message require_system_authority_result message or plain object to encode
+             * Encodes the specified check_system_authority_result message, length delimited. Does not implicitly {@link koinos.chain.check_system_authority_result.verify|verify} messages.
+             * @param message check_system_authority_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Irequire_system_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icheck_system_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a require_system_authority_result message from the specified reader or buffer.
+             * Decodes a check_system_authority_result message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns require_system_authority_result
+             * @returns check_system_authority_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.require_system_authority_result;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.check_system_authority_result;
 
             /**
-             * Decodes a require_system_authority_result message from the specified reader or buffer, length delimited.
+             * Decodes a check_system_authority_result message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns require_system_authority_result
+             * @returns check_system_authority_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.require_system_authority_result;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.check_system_authority_result;
 
             /**
-             * Verifies a require_system_authority_result message.
+             * Verifies a check_system_authority_result message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a require_system_authority_result message from a plain object. Also converts values to their respective internal types.
+             * Creates a check_system_authority_result message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns require_system_authority_result
+             * @returns check_system_authority_result
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.require_system_authority_result;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.check_system_authority_result;
 
             /**
-             * Creates a plain object from a require_system_authority_result message. Also converts values to other types if specified.
-             * @param message require_system_authority_result
+             * Creates a plain object from a check_system_authority_result message. Also converts values to other types if specified.
+             * @param message check_system_authority_result
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.require_system_authority_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.check_system_authority_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this require_system_authority_result to JSON.
+             * Converts this check_system_authority_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -17811,9 +18150,6 @@ export namespace koinos {
 
         /** Properties of a put_object_result. */
         interface Iput_object_result {
-
-            /** put_object_result value */
-            value?: (number|null);
         }
 
         /** Represents a put_object_result. */
@@ -17824,9 +18160,6 @@ export namespace koinos {
              * @param [properties] Properties to set
              */
             constructor(properties?: koinos.chain.Iput_object_result);
-
-            /** put_object_result value. */
-            public value: number;
 
             /**
              * Creates a new put_object_result instance using the specified properties.
@@ -20071,889 +20404,541 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a call_contract_arguments. */
-        interface Icall_contract_arguments {
+        /** Properties of a call_arguments. */
+        interface Icall_arguments {
 
-            /** call_contract_arguments contract_id */
+            /** call_arguments contract_id */
             contract_id?: (Uint8Array|null);
 
-            /** call_contract_arguments entry_point */
+            /** call_arguments entry_point */
             entry_point?: (number|null);
 
-            /** call_contract_arguments args */
+            /** call_arguments args */
             args?: (Uint8Array|null);
         }
 
-        /** Represents a call_contract_arguments. */
-        class call_contract_arguments implements Icall_contract_arguments {
+        /** Represents a call_arguments. */
+        class call_arguments implements Icall_arguments {
 
             /**
-             * Constructs a new call_contract_arguments.
+             * Constructs a new call_arguments.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Icall_contract_arguments);
+            constructor(properties?: koinos.chain.Icall_arguments);
 
-            /** call_contract_arguments contract_id. */
+            /** call_arguments contract_id. */
             public contract_id: Uint8Array;
 
-            /** call_contract_arguments entry_point. */
+            /** call_arguments entry_point. */
             public entry_point: number;
 
-            /** call_contract_arguments args. */
+            /** call_arguments args. */
             public args: Uint8Array;
 
             /**
-             * Creates a new call_contract_arguments instance using the specified properties.
+             * Creates a new call_arguments instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns call_contract_arguments instance
+             * @returns call_arguments instance
              */
-            public static create(properties?: koinos.chain.Icall_contract_arguments): koinos.chain.call_contract_arguments;
+            public static create(properties?: koinos.chain.Icall_arguments): koinos.chain.call_arguments;
 
             /**
-             * Encodes the specified call_contract_arguments message. Does not implicitly {@link koinos.chain.call_contract_arguments.verify|verify} messages.
-             * @param message call_contract_arguments message or plain object to encode
+             * Encodes the specified call_arguments message. Does not implicitly {@link koinos.chain.call_arguments.verify|verify} messages.
+             * @param message call_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Icall_contract_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icall_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified call_contract_arguments message, length delimited. Does not implicitly {@link koinos.chain.call_contract_arguments.verify|verify} messages.
-             * @param message call_contract_arguments message or plain object to encode
+             * Encodes the specified call_arguments message, length delimited. Does not implicitly {@link koinos.chain.call_arguments.verify|verify} messages.
+             * @param message call_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Icall_contract_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icall_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a call_contract_arguments message from the specified reader or buffer.
+             * Decodes a call_arguments message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns call_contract_arguments
+             * @returns call_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.call_contract_arguments;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.call_arguments;
 
             /**
-             * Decodes a call_contract_arguments message from the specified reader or buffer, length delimited.
+             * Decodes a call_arguments message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns call_contract_arguments
+             * @returns call_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.call_contract_arguments;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.call_arguments;
 
             /**
-             * Verifies a call_contract_arguments message.
+             * Verifies a call_arguments message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a call_contract_arguments message from a plain object. Also converts values to their respective internal types.
+             * Creates a call_arguments message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns call_contract_arguments
+             * @returns call_arguments
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.call_contract_arguments;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.call_arguments;
 
             /**
-             * Creates a plain object from a call_contract_arguments message. Also converts values to other types if specified.
-             * @param message call_contract_arguments
+             * Creates a plain object from a call_arguments message. Also converts values to other types if specified.
+             * @param message call_arguments
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.call_contract_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.call_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this call_contract_arguments to JSON.
+             * Converts this call_arguments to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a call_contract_result. */
-        interface Icall_contract_result {
+        /** Properties of a call_result. */
+        interface Icall_result {
 
-            /** call_contract_result value */
+            /** call_result value */
             value?: (Uint8Array|null);
         }
 
-        /** Represents a call_contract_result. */
-        class call_contract_result implements Icall_contract_result {
+        /** Represents a call_result. */
+        class call_result implements Icall_result {
 
             /**
-             * Constructs a new call_contract_result.
+             * Constructs a new call_result.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Icall_contract_result);
+            constructor(properties?: koinos.chain.Icall_result);
 
-            /** call_contract_result value. */
+            /** call_result value. */
             public value: Uint8Array;
 
             /**
-             * Creates a new call_contract_result instance using the specified properties.
+             * Creates a new call_result instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns call_contract_result instance
+             * @returns call_result instance
              */
-            public static create(properties?: koinos.chain.Icall_contract_result): koinos.chain.call_contract_result;
+            public static create(properties?: koinos.chain.Icall_result): koinos.chain.call_result;
 
             /**
-             * Encodes the specified call_contract_result message. Does not implicitly {@link koinos.chain.call_contract_result.verify|verify} messages.
-             * @param message call_contract_result message or plain object to encode
+             * Encodes the specified call_result message. Does not implicitly {@link koinos.chain.call_result.verify|verify} messages.
+             * @param message call_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Icall_contract_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icall_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified call_contract_result message, length delimited. Does not implicitly {@link koinos.chain.call_contract_result.verify|verify} messages.
-             * @param message call_contract_result message or plain object to encode
+             * Encodes the specified call_result message, length delimited. Does not implicitly {@link koinos.chain.call_result.verify|verify} messages.
+             * @param message call_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Icall_contract_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icall_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a call_contract_result message from the specified reader or buffer.
+             * Decodes a call_result message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns call_contract_result
+             * @returns call_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.call_contract_result;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.call_result;
 
             /**
-             * Decodes a call_contract_result message from the specified reader or buffer, length delimited.
+             * Decodes a call_result message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns call_contract_result
+             * @returns call_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.call_contract_result;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.call_result;
 
             /**
-             * Verifies a call_contract_result message.
+             * Verifies a call_result message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a call_contract_result message from a plain object. Also converts values to their respective internal types.
+             * Creates a call_result message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns call_contract_result
+             * @returns call_result
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.call_contract_result;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.call_result;
 
             /**
-             * Creates a plain object from a call_contract_result message. Also converts values to other types if specified.
-             * @param message call_contract_result
+             * Creates a plain object from a call_result message. Also converts values to other types if specified.
+             * @param message call_result
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.call_contract_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.call_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this call_contract_result to JSON.
+             * Converts this call_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a get_entry_point_arguments. */
-        interface Iget_entry_point_arguments {
+        /** Properties of a get_arguments_arguments. */
+        interface Iget_arguments_arguments {
         }
 
-        /** Represents a get_entry_point_arguments. */
-        class get_entry_point_arguments implements Iget_entry_point_arguments {
+        /** Represents a get_arguments_arguments. */
+        class get_arguments_arguments implements Iget_arguments_arguments {
 
             /**
-             * Constructs a new get_entry_point_arguments.
+             * Constructs a new get_arguments_arguments.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Iget_entry_point_arguments);
+            constructor(properties?: koinos.chain.Iget_arguments_arguments);
 
             /**
-             * Creates a new get_entry_point_arguments instance using the specified properties.
+             * Creates a new get_arguments_arguments instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns get_entry_point_arguments instance
+             * @returns get_arguments_arguments instance
              */
-            public static create(properties?: koinos.chain.Iget_entry_point_arguments): koinos.chain.get_entry_point_arguments;
+            public static create(properties?: koinos.chain.Iget_arguments_arguments): koinos.chain.get_arguments_arguments;
 
             /**
-             * Encodes the specified get_entry_point_arguments message. Does not implicitly {@link koinos.chain.get_entry_point_arguments.verify|verify} messages.
-             * @param message get_entry_point_arguments message or plain object to encode
+             * Encodes the specified get_arguments_arguments message. Does not implicitly {@link koinos.chain.get_arguments_arguments.verify|verify} messages.
+             * @param message get_arguments_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Iget_entry_point_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Iget_arguments_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified get_entry_point_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_entry_point_arguments.verify|verify} messages.
-             * @param message get_entry_point_arguments message or plain object to encode
+             * Encodes the specified get_arguments_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_arguments_arguments.verify|verify} messages.
+             * @param message get_arguments_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Iget_entry_point_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Iget_arguments_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a get_entry_point_arguments message from the specified reader or buffer.
+             * Decodes a get_arguments_arguments message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns get_entry_point_arguments
+             * @returns get_arguments_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_entry_point_arguments;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_arguments_arguments;
 
             /**
-             * Decodes a get_entry_point_arguments message from the specified reader or buffer, length delimited.
+             * Decodes a get_arguments_arguments message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns get_entry_point_arguments
+             * @returns get_arguments_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_entry_point_arguments;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_arguments_arguments;
 
             /**
-             * Verifies a get_entry_point_arguments message.
+             * Verifies a get_arguments_arguments message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a get_entry_point_arguments message from a plain object. Also converts values to their respective internal types.
+             * Creates a get_arguments_arguments message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns get_entry_point_arguments
+             * @returns get_arguments_arguments
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.get_entry_point_arguments;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_arguments_arguments;
 
             /**
-             * Creates a plain object from a get_entry_point_arguments message. Also converts values to other types if specified.
-             * @param message get_entry_point_arguments
+             * Creates a plain object from a get_arguments_arguments message. Also converts values to other types if specified.
+             * @param message get_arguments_arguments
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.get_entry_point_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.get_arguments_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this get_entry_point_arguments to JSON.
+             * Converts this get_arguments_arguments to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a get_entry_point_result. */
-        interface Iget_entry_point_result {
+        /** Properties of a get_arguments_result. */
+        interface Iget_arguments_result {
 
-            /** get_entry_point_result value */
-            value?: (number|null);
+            /** get_arguments_result value */
+            value?: (koinos.chain.Iargument_data|null);
         }
 
-        /** Represents a get_entry_point_result. */
-        class get_entry_point_result implements Iget_entry_point_result {
+        /** Represents a get_arguments_result. */
+        class get_arguments_result implements Iget_arguments_result {
 
             /**
-             * Constructs a new get_entry_point_result.
+             * Constructs a new get_arguments_result.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Iget_entry_point_result);
+            constructor(properties?: koinos.chain.Iget_arguments_result);
 
-            /** get_entry_point_result value. */
-            public value: number;
+            /** get_arguments_result value. */
+            public value?: (koinos.chain.Iargument_data|null);
 
             /**
-             * Creates a new get_entry_point_result instance using the specified properties.
+             * Creates a new get_arguments_result instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns get_entry_point_result instance
+             * @returns get_arguments_result instance
              */
-            public static create(properties?: koinos.chain.Iget_entry_point_result): koinos.chain.get_entry_point_result;
+            public static create(properties?: koinos.chain.Iget_arguments_result): koinos.chain.get_arguments_result;
 
             /**
-             * Encodes the specified get_entry_point_result message. Does not implicitly {@link koinos.chain.get_entry_point_result.verify|verify} messages.
-             * @param message get_entry_point_result message or plain object to encode
+             * Encodes the specified get_arguments_result message. Does not implicitly {@link koinos.chain.get_arguments_result.verify|verify} messages.
+             * @param message get_arguments_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Iget_entry_point_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Iget_arguments_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified get_entry_point_result message, length delimited. Does not implicitly {@link koinos.chain.get_entry_point_result.verify|verify} messages.
-             * @param message get_entry_point_result message or plain object to encode
+             * Encodes the specified get_arguments_result message, length delimited. Does not implicitly {@link koinos.chain.get_arguments_result.verify|verify} messages.
+             * @param message get_arguments_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Iget_entry_point_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Iget_arguments_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a get_entry_point_result message from the specified reader or buffer.
+             * Decodes a get_arguments_result message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns get_entry_point_result
+             * @returns get_arguments_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_entry_point_result;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_arguments_result;
 
             /**
-             * Decodes a get_entry_point_result message from the specified reader or buffer, length delimited.
+             * Decodes a get_arguments_result message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns get_entry_point_result
+             * @returns get_arguments_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_entry_point_result;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_arguments_result;
 
             /**
-             * Verifies a get_entry_point_result message.
+             * Verifies a get_arguments_result message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a get_entry_point_result message from a plain object. Also converts values to their respective internal types.
+             * Creates a get_arguments_result message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns get_entry_point_result
+             * @returns get_arguments_result
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.get_entry_point_result;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_arguments_result;
 
             /**
-             * Creates a plain object from a get_entry_point_result message. Also converts values to other types if specified.
-             * @param message get_entry_point_result
+             * Creates a plain object from a get_arguments_result message. Also converts values to other types if specified.
+             * @param message get_arguments_result
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.get_entry_point_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.get_arguments_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this get_entry_point_result to JSON.
+             * Converts this get_arguments_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a get_contract_arguments_arguments. */
-        interface Iget_contract_arguments_arguments {
+        /** Properties of an exit_arguments. */
+        interface Iexit_arguments {
+
+            /** exit_arguments retval */
+            retval?: (koinos.chain.Iresult|null);
         }
 
-        /** Represents a get_contract_arguments_arguments. */
-        class get_contract_arguments_arguments implements Iget_contract_arguments_arguments {
+        /** Represents an exit_arguments. */
+        class exit_arguments implements Iexit_arguments {
 
             /**
-             * Constructs a new get_contract_arguments_arguments.
+             * Constructs a new exit_arguments.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Iget_contract_arguments_arguments);
+            constructor(properties?: koinos.chain.Iexit_arguments);
+
+            /** exit_arguments retval. */
+            public retval?: (koinos.chain.Iresult|null);
 
             /**
-             * Creates a new get_contract_arguments_arguments instance using the specified properties.
+             * Creates a new exit_arguments instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns get_contract_arguments_arguments instance
+             * @returns exit_arguments instance
              */
-            public static create(properties?: koinos.chain.Iget_contract_arguments_arguments): koinos.chain.get_contract_arguments_arguments;
+            public static create(properties?: koinos.chain.Iexit_arguments): koinos.chain.exit_arguments;
 
             /**
-             * Encodes the specified get_contract_arguments_arguments message. Does not implicitly {@link koinos.chain.get_contract_arguments_arguments.verify|verify} messages.
-             * @param message get_contract_arguments_arguments message or plain object to encode
+             * Encodes the specified exit_arguments message. Does not implicitly {@link koinos.chain.exit_arguments.verify|verify} messages.
+             * @param message exit_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Iget_contract_arguments_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Iexit_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified get_contract_arguments_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_contract_arguments_arguments.verify|verify} messages.
-             * @param message get_contract_arguments_arguments message or plain object to encode
+             * Encodes the specified exit_arguments message, length delimited. Does not implicitly {@link koinos.chain.exit_arguments.verify|verify} messages.
+             * @param message exit_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Iget_contract_arguments_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Iexit_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a get_contract_arguments_arguments message from the specified reader or buffer.
+             * Decodes an exit_arguments message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns get_contract_arguments_arguments
+             * @returns exit_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_contract_arguments_arguments;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.exit_arguments;
 
             /**
-             * Decodes a get_contract_arguments_arguments message from the specified reader or buffer, length delimited.
+             * Decodes an exit_arguments message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns get_contract_arguments_arguments
+             * @returns exit_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_contract_arguments_arguments;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.exit_arguments;
 
             /**
-             * Verifies a get_contract_arguments_arguments message.
+             * Verifies an exit_arguments message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a get_contract_arguments_arguments message from a plain object. Also converts values to their respective internal types.
+             * Creates an exit_arguments message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns get_contract_arguments_arguments
+             * @returns exit_arguments
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.get_contract_arguments_arguments;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.exit_arguments;
 
             /**
-             * Creates a plain object from a get_contract_arguments_arguments message. Also converts values to other types if specified.
-             * @param message get_contract_arguments_arguments
+             * Creates a plain object from an exit_arguments message. Also converts values to other types if specified.
+             * @param message exit_arguments
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.get_contract_arguments_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.exit_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this get_contract_arguments_arguments to JSON.
+             * Converts this exit_arguments to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a get_contract_arguments_result. */
-        interface Iget_contract_arguments_result {
-
-            /** get_contract_arguments_result value */
-            value?: (Uint8Array|null);
+        /** Properties of an exit_result. */
+        interface Iexit_result {
         }
 
-        /** Represents a get_contract_arguments_result. */
-        class get_contract_arguments_result implements Iget_contract_arguments_result {
+        /** Represents an exit_result. */
+        class exit_result implements Iexit_result {
 
             /**
-             * Constructs a new get_contract_arguments_result.
+             * Constructs a new exit_result.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Iget_contract_arguments_result);
-
-            /** get_contract_arguments_result value. */
-            public value: Uint8Array;
+            constructor(properties?: koinos.chain.Iexit_result);
 
             /**
-             * Creates a new get_contract_arguments_result instance using the specified properties.
+             * Creates a new exit_result instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns get_contract_arguments_result instance
+             * @returns exit_result instance
              */
-            public static create(properties?: koinos.chain.Iget_contract_arguments_result): koinos.chain.get_contract_arguments_result;
+            public static create(properties?: koinos.chain.Iexit_result): koinos.chain.exit_result;
 
             /**
-             * Encodes the specified get_contract_arguments_result message. Does not implicitly {@link koinos.chain.get_contract_arguments_result.verify|verify} messages.
-             * @param message get_contract_arguments_result message or plain object to encode
+             * Encodes the specified exit_result message. Does not implicitly {@link koinos.chain.exit_result.verify|verify} messages.
+             * @param message exit_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Iget_contract_arguments_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Iexit_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified get_contract_arguments_result message, length delimited. Does not implicitly {@link koinos.chain.get_contract_arguments_result.verify|verify} messages.
-             * @param message get_contract_arguments_result message or plain object to encode
+             * Encodes the specified exit_result message, length delimited. Does not implicitly {@link koinos.chain.exit_result.verify|verify} messages.
+             * @param message exit_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Iget_contract_arguments_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Iexit_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a get_contract_arguments_result message from the specified reader or buffer.
+             * Decodes an exit_result message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns get_contract_arguments_result
+             * @returns exit_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_contract_arguments_result;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.exit_result;
 
             /**
-             * Decodes a get_contract_arguments_result message from the specified reader or buffer, length delimited.
+             * Decodes an exit_result message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns get_contract_arguments_result
+             * @returns exit_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_contract_arguments_result;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.exit_result;
 
             /**
-             * Verifies a get_contract_arguments_result message.
+             * Verifies an exit_result message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a get_contract_arguments_result message from a plain object. Also converts values to their respective internal types.
+             * Creates an exit_result message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns get_contract_arguments_result
+             * @returns exit_result
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.get_contract_arguments_result;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.exit_result;
 
             /**
-             * Creates a plain object from a get_contract_arguments_result message. Also converts values to other types if specified.
-             * @param message get_contract_arguments_result
+             * Creates a plain object from an exit_result message. Also converts values to other types if specified.
+             * @param message exit_result
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.get_contract_arguments_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.exit_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this get_contract_arguments_result to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a set_contract_result_arguments. */
-        interface Iset_contract_result_arguments {
-
-            /** set_contract_result_arguments value */
-            value?: (Uint8Array|null);
-        }
-
-        /** Represents a set_contract_result_arguments. */
-        class set_contract_result_arguments implements Iset_contract_result_arguments {
-
-            /**
-             * Constructs a new set_contract_result_arguments.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.chain.Iset_contract_result_arguments);
-
-            /** set_contract_result_arguments value. */
-            public value: Uint8Array;
-
-            /**
-             * Creates a new set_contract_result_arguments instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns set_contract_result_arguments instance
-             */
-            public static create(properties?: koinos.chain.Iset_contract_result_arguments): koinos.chain.set_contract_result_arguments;
-
-            /**
-             * Encodes the specified set_contract_result_arguments message. Does not implicitly {@link koinos.chain.set_contract_result_arguments.verify|verify} messages.
-             * @param message set_contract_result_arguments message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.chain.Iset_contract_result_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified set_contract_result_arguments message, length delimited. Does not implicitly {@link koinos.chain.set_contract_result_arguments.verify|verify} messages.
-             * @param message set_contract_result_arguments message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.chain.Iset_contract_result_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a set_contract_result_arguments message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns set_contract_result_arguments
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.set_contract_result_arguments;
-
-            /**
-             * Decodes a set_contract_result_arguments message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns set_contract_result_arguments
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.set_contract_result_arguments;
-
-            /**
-             * Verifies a set_contract_result_arguments message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a set_contract_result_arguments message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns set_contract_result_arguments
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.set_contract_result_arguments;
-
-            /**
-             * Creates a plain object from a set_contract_result_arguments message. Also converts values to other types if specified.
-             * @param message set_contract_result_arguments
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.chain.set_contract_result_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this set_contract_result_arguments to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of a set_contract_result_result. */
-        interface Iset_contract_result_result {
-        }
-
-        /** Represents a set_contract_result_result. */
-        class set_contract_result_result implements Iset_contract_result_result {
-
-            /**
-             * Constructs a new set_contract_result_result.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.chain.Iset_contract_result_result);
-
-            /**
-             * Creates a new set_contract_result_result instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns set_contract_result_result instance
-             */
-            public static create(properties?: koinos.chain.Iset_contract_result_result): koinos.chain.set_contract_result_result;
-
-            /**
-             * Encodes the specified set_contract_result_result message. Does not implicitly {@link koinos.chain.set_contract_result_result.verify|verify} messages.
-             * @param message set_contract_result_result message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.chain.Iset_contract_result_result, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified set_contract_result_result message, length delimited. Does not implicitly {@link koinos.chain.set_contract_result_result.verify|verify} messages.
-             * @param message set_contract_result_result message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.chain.Iset_contract_result_result, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a set_contract_result_result message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns set_contract_result_result
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.set_contract_result_result;
-
-            /**
-             * Decodes a set_contract_result_result message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns set_contract_result_result
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.set_contract_result_result;
-
-            /**
-             * Verifies a set_contract_result_result message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a set_contract_result_result message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns set_contract_result_result
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.set_contract_result_result;
-
-            /**
-             * Creates a plain object from a set_contract_result_result message. Also converts values to other types if specified.
-             * @param message set_contract_result_result
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.chain.set_contract_result_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this set_contract_result_result to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of an exit_contract_arguments. */
-        interface Iexit_contract_arguments {
-
-            /** exit_contract_arguments exit_code */
-            exit_code?: (number|null);
-        }
-
-        /** Represents an exit_contract_arguments. */
-        class exit_contract_arguments implements Iexit_contract_arguments {
-
-            /**
-             * Constructs a new exit_contract_arguments.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.chain.Iexit_contract_arguments);
-
-            /** exit_contract_arguments exit_code. */
-            public exit_code: number;
-
-            /**
-             * Creates a new exit_contract_arguments instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns exit_contract_arguments instance
-             */
-            public static create(properties?: koinos.chain.Iexit_contract_arguments): koinos.chain.exit_contract_arguments;
-
-            /**
-             * Encodes the specified exit_contract_arguments message. Does not implicitly {@link koinos.chain.exit_contract_arguments.verify|verify} messages.
-             * @param message exit_contract_arguments message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.chain.Iexit_contract_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified exit_contract_arguments message, length delimited. Does not implicitly {@link koinos.chain.exit_contract_arguments.verify|verify} messages.
-             * @param message exit_contract_arguments message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.chain.Iexit_contract_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an exit_contract_arguments message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns exit_contract_arguments
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.exit_contract_arguments;
-
-            /**
-             * Decodes an exit_contract_arguments message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns exit_contract_arguments
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.exit_contract_arguments;
-
-            /**
-             * Verifies an exit_contract_arguments message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an exit_contract_arguments message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns exit_contract_arguments
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.exit_contract_arguments;
-
-            /**
-             * Creates a plain object from an exit_contract_arguments message. Also converts values to other types if specified.
-             * @param message exit_contract_arguments
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.chain.exit_contract_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this exit_contract_arguments to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of an exit_contract_result. */
-        interface Iexit_contract_result {
-        }
-
-        /** Represents an exit_contract_result. */
-        class exit_contract_result implements Iexit_contract_result {
-
-            /**
-             * Constructs a new exit_contract_result.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.chain.Iexit_contract_result);
-
-            /**
-             * Creates a new exit_contract_result instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns exit_contract_result instance
-             */
-            public static create(properties?: koinos.chain.Iexit_contract_result): koinos.chain.exit_contract_result;
-
-            /**
-             * Encodes the specified exit_contract_result message. Does not implicitly {@link koinos.chain.exit_contract_result.verify|verify} messages.
-             * @param message exit_contract_result message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.chain.Iexit_contract_result, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified exit_contract_result message, length delimited. Does not implicitly {@link koinos.chain.exit_contract_result.verify|verify} messages.
-             * @param message exit_contract_result message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.chain.Iexit_contract_result, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an exit_contract_result message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns exit_contract_result
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.exit_contract_result;
-
-            /**
-             * Decodes an exit_contract_result message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns exit_contract_result
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.exit_contract_result;
-
-            /**
-             * Verifies an exit_contract_result message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an exit_contract_result message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns exit_contract_result
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.exit_contract_result;
-
-            /**
-             * Creates a plain object from an exit_contract_result message. Also converts values to other types if specified.
-             * @param message exit_contract_result
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.chain.exit_contract_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this exit_contract_result to JSON.
+             * Converts this exit_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -21307,181 +21292,187 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a require_authority_arguments. */
-        interface Irequire_authority_arguments {
+        /** Properties of a check_authority_arguments. */
+        interface Icheck_authority_arguments {
 
-            /** require_authority_arguments type */
+            /** check_authority_arguments type */
             type?: (koinos.chain.authorization_type|null);
 
-            /** require_authority_arguments account */
+            /** check_authority_arguments account */
             account?: (Uint8Array|null);
         }
 
-        /** Represents a require_authority_arguments. */
-        class require_authority_arguments implements Irequire_authority_arguments {
+        /** Represents a check_authority_arguments. */
+        class check_authority_arguments implements Icheck_authority_arguments {
 
             /**
-             * Constructs a new require_authority_arguments.
+             * Constructs a new check_authority_arguments.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Irequire_authority_arguments);
+            constructor(properties?: koinos.chain.Icheck_authority_arguments);
 
-            /** require_authority_arguments type. */
+            /** check_authority_arguments type. */
             public type: koinos.chain.authorization_type;
 
-            /** require_authority_arguments account. */
+            /** check_authority_arguments account. */
             public account: Uint8Array;
 
             /**
-             * Creates a new require_authority_arguments instance using the specified properties.
+             * Creates a new check_authority_arguments instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns require_authority_arguments instance
+             * @returns check_authority_arguments instance
              */
-            public static create(properties?: koinos.chain.Irequire_authority_arguments): koinos.chain.require_authority_arguments;
+            public static create(properties?: koinos.chain.Icheck_authority_arguments): koinos.chain.check_authority_arguments;
 
             /**
-             * Encodes the specified require_authority_arguments message. Does not implicitly {@link koinos.chain.require_authority_arguments.verify|verify} messages.
-             * @param message require_authority_arguments message or plain object to encode
+             * Encodes the specified check_authority_arguments message. Does not implicitly {@link koinos.chain.check_authority_arguments.verify|verify} messages.
+             * @param message check_authority_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Irequire_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icheck_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified require_authority_arguments message, length delimited. Does not implicitly {@link koinos.chain.require_authority_arguments.verify|verify} messages.
-             * @param message require_authority_arguments message or plain object to encode
+             * Encodes the specified check_authority_arguments message, length delimited. Does not implicitly {@link koinos.chain.check_authority_arguments.verify|verify} messages.
+             * @param message check_authority_arguments message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Irequire_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icheck_authority_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a require_authority_arguments message from the specified reader or buffer.
+             * Decodes a check_authority_arguments message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns require_authority_arguments
+             * @returns check_authority_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.require_authority_arguments;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.check_authority_arguments;
 
             /**
-             * Decodes a require_authority_arguments message from the specified reader or buffer, length delimited.
+             * Decodes a check_authority_arguments message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns require_authority_arguments
+             * @returns check_authority_arguments
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.require_authority_arguments;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.check_authority_arguments;
 
             /**
-             * Verifies a require_authority_arguments message.
+             * Verifies a check_authority_arguments message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a require_authority_arguments message from a plain object. Also converts values to their respective internal types.
+             * Creates a check_authority_arguments message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns require_authority_arguments
+             * @returns check_authority_arguments
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.require_authority_arguments;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.check_authority_arguments;
 
             /**
-             * Creates a plain object from a require_authority_arguments message. Also converts values to other types if specified.
-             * @param message require_authority_arguments
+             * Creates a plain object from a check_authority_arguments message. Also converts values to other types if specified.
+             * @param message check_authority_arguments
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.require_authority_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.check_authority_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this require_authority_arguments to JSON.
+             * Converts this check_authority_arguments to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of a require_authority_result. */
-        interface Irequire_authority_result {
+        /** Properties of a check_authority_result. */
+        interface Icheck_authority_result {
+
+            /** check_authority_result value */
+            value?: (boolean|null);
         }
 
-        /** Represents a require_authority_result. */
-        class require_authority_result implements Irequire_authority_result {
+        /** Represents a check_authority_result. */
+        class check_authority_result implements Icheck_authority_result {
 
             /**
-             * Constructs a new require_authority_result.
+             * Constructs a new check_authority_result.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Irequire_authority_result);
+            constructor(properties?: koinos.chain.Icheck_authority_result);
+
+            /** check_authority_result value. */
+            public value: boolean;
 
             /**
-             * Creates a new require_authority_result instance using the specified properties.
+             * Creates a new check_authority_result instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns require_authority_result instance
+             * @returns check_authority_result instance
              */
-            public static create(properties?: koinos.chain.Irequire_authority_result): koinos.chain.require_authority_result;
+            public static create(properties?: koinos.chain.Icheck_authority_result): koinos.chain.check_authority_result;
 
             /**
-             * Encodes the specified require_authority_result message. Does not implicitly {@link koinos.chain.require_authority_result.verify|verify} messages.
-             * @param message require_authority_result message or plain object to encode
+             * Encodes the specified check_authority_result message. Does not implicitly {@link koinos.chain.check_authority_result.verify|verify} messages.
+             * @param message check_authority_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Irequire_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icheck_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified require_authority_result message, length delimited. Does not implicitly {@link koinos.chain.require_authority_result.verify|verify} messages.
-             * @param message require_authority_result message or plain object to encode
+             * Encodes the specified check_authority_result message, length delimited. Does not implicitly {@link koinos.chain.check_authority_result.verify|verify} messages.
+             * @param message check_authority_result message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Irequire_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icheck_authority_result, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a require_authority_result message from the specified reader or buffer.
+             * Decodes a check_authority_result message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns require_authority_result
+             * @returns check_authority_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.require_authority_result;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.check_authority_result;
 
             /**
-             * Decodes a require_authority_result message from the specified reader or buffer, length delimited.
+             * Decodes a check_authority_result message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns require_authority_result
+             * @returns check_authority_result
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.require_authority_result;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.check_authority_result;
 
             /**
-             * Verifies a require_authority_result message.
+             * Verifies a check_authority_result message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a require_authority_result message from a plain object. Also converts values to their respective internal types.
+             * Creates a check_authority_result message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns require_authority_result
+             * @returns check_authority_result
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.require_authority_result;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.check_authority_result;
 
             /**
-             * Creates a plain object from a require_authority_result message. Also converts values to other types if specified.
-             * @param message require_authority_result
+             * Creates a plain object from a check_authority_result message. Also converts values to other types if specified.
+             * @param message check_authority_result
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.require_authority_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.check_authority_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this require_authority_result to JSON.
+             * Converts this check_authority_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
