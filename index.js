@@ -29396,14 +29396,201 @@
                 return set_system_contract_event;
             })();
     
+            chain.error_data = (function() {
+    
+                /**
+                 * Properties of an error_data.
+                 * @memberof koinos.chain
+                 * @interface Ierror_data
+                 * @property {string|null} [message] error_data message
+                 */
+    
+                /**
+                 * Constructs a new error_data.
+                 * @memberof koinos.chain
+                 * @classdesc Represents an error_data.
+                 * @implements Ierror_data
+                 * @constructor
+                 * @param {koinos.chain.Ierror_data=} [properties] Properties to set
+                 */
+                function error_data(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * error_data message.
+                 * @member {string} message
+                 * @memberof koinos.chain.error_data
+                 * @instance
+                 */
+                error_data.prototype.message = "";
+    
+                /**
+                 * Creates a new error_data instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {koinos.chain.Ierror_data=} [properties] Properties to set
+                 * @returns {koinos.chain.error_data} error_data instance
+                 */
+                error_data.create = function create(properties) {
+                    return new error_data(properties);
+                };
+    
+                /**
+                 * Encodes the specified error_data message. Does not implicitly {@link koinos.chain.error_data.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {koinos.chain.Ierror_data} message error_data message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                error_data.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.message != null && Object.hasOwnProperty.call(message, "message"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.message);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified error_data message, length delimited. Does not implicitly {@link koinos.chain.error_data.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {koinos.chain.Ierror_data} message error_data message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                error_data.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an error_data message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.chain.error_data} error_data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                error_data.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.error_data();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.message = reader.string();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an error_data message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.chain.error_data} error_data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                error_data.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an error_data message.
+                 * @function verify
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                error_data.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.message != null && message.hasOwnProperty("message"))
+                        if (!$util.isString(message.message))
+                            return "message: string expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an error_data message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.chain.error_data} error_data
+                 */
+                error_data.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.chain.error_data)
+                        return object;
+                    var message = new $root.koinos.chain.error_data();
+                    if (object.message != null)
+                        message.message = String(object.message);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an error_data message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.chain.error_data
+                 * @static
+                 * @param {koinos.chain.error_data} message error_data
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                error_data.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.message = "";
+                    if (message.message != null && message.hasOwnProperty("message"))
+                        object.message = message.message;
+                    return object;
+                };
+    
+                /**
+                 * Converts this error_data to JSON.
+                 * @function toJSON
+                 * @memberof koinos.chain.error_data
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                error_data.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return error_data;
+            })();
+    
             chain.result = (function() {
     
                 /**
                  * Properties of a result.
                  * @memberof koinos.chain
                  * @interface Iresult
-                 * @property {number|null} [code] result code
-                 * @property {Uint8Array|null} [value] result value
+                 * @property {Uint8Array|null} [object] result object
+                 * @property {koinos.chain.Ierror_data|null} [error] result error
                  */
     
                 /**
@@ -29422,20 +29609,34 @@
                 }
     
                 /**
-                 * result code.
-                 * @member {number} code
+                 * result object.
+                 * @member {Uint8Array|null|undefined} object
                  * @memberof koinos.chain.result
                  * @instance
                  */
-                result.prototype.code = 0;
+                result.prototype.object = null;
+    
+                /**
+                 * result error.
+                 * @member {koinos.chain.Ierror_data|null|undefined} error
+                 * @memberof koinos.chain.result
+                 * @instance
+                 */
+                result.prototype.error = null;
+    
+                // OneOf field names bound to virtual getters and setters
+                var $oneOfFields;
     
                 /**
                  * result value.
-                 * @member {Uint8Array} value
+                 * @member {"object"|"error"|undefined} value
                  * @memberof koinos.chain.result
                  * @instance
                  */
-                result.prototype.value = $util.newBuffer([]);
+                Object.defineProperty(result.prototype, "value", {
+                    get: $util.oneOfGetter($oneOfFields = ["object", "error"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
     
                 /**
                  * Creates a new result instance using the specified properties.
@@ -29461,10 +29662,10 @@
                 result.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.code != null && Object.hasOwnProperty.call(message, "code"))
-                        writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
-                    if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                        writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.value);
+                    if (message.object != null && Object.hasOwnProperty.call(message, "object"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.object);
+                    if (message.error != null && Object.hasOwnProperty.call(message, "error"))
+                        $root.koinos.chain.error_data.encode(message.error, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
                 };
     
@@ -29500,10 +29701,10 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.code = reader.int32();
+                            message.object = reader.bytes();
                             break;
                         case 2:
-                            message.value = reader.bytes();
+                            message.error = $root.koinos.chain.error_data.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -29540,12 +29741,22 @@
                 result.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.code != null && message.hasOwnProperty("code"))
-                        if (!$util.isInteger(message.code))
-                            return "code: integer expected";
-                    if (message.value != null && message.hasOwnProperty("value"))
-                        if (!(message.value && typeof message.value.length === "number" || $util.isString(message.value)))
-                            return "value: buffer expected";
+                    var properties = {};
+                    if (message.object != null && message.hasOwnProperty("object")) {
+                        properties.value = 1;
+                        if (!(message.object && typeof message.object.length === "number" || $util.isString(message.object)))
+                            return "object: buffer expected";
+                    }
+                    if (message.error != null && message.hasOwnProperty("error")) {
+                        if (properties.value === 1)
+                            return "value: multiple values";
+                        properties.value = 1;
+                        {
+                            var error = $root.koinos.chain.error_data.verify(message.error);
+                            if (error)
+                                return "error." + error;
+                        }
+                    }
                     return null;
                 };
     
@@ -29561,13 +29772,16 @@
                     if (object instanceof $root.koinos.chain.result)
                         return object;
                     var message = new $root.koinos.chain.result();
-                    if (object.code != null)
-                        message.code = object.code | 0;
-                    if (object.value != null)
-                        if (typeof object.value === "string")
-                            $util.base64.decode(object.value, message.value = $util.newBuffer($util.base64.length(object.value)), 0);
-                        else if (object.value.length)
-                            message.value = object.value;
+                    if (object.object != null)
+                        if (typeof object.object === "string")
+                            $util.base64.decode(object.object, message.object = $util.newBuffer($util.base64.length(object.object)), 0);
+                        else if (object.object.length)
+                            message.object = object.object;
+                    if (object.error != null) {
+                        if (typeof object.error !== "object")
+                            throw TypeError(".koinos.chain.result.error: object expected");
+                        message.error = $root.koinos.chain.error_data.fromObject(object.error);
+                    }
                     return message;
                 };
     
@@ -29584,20 +29798,16 @@
                     if (!options)
                         options = {};
                     var object = {};
-                    if (options.defaults) {
-                        object.code = 0;
-                        if (options.bytes === String)
-                            object.value = "";
-                        else {
-                            object.value = [];
-                            if (options.bytes !== Array)
-                                object.value = $util.newBuffer(object.value);
-                        }
+                    if (message.object != null && message.hasOwnProperty("object")) {
+                        object.object = options.bytes === String ? $util.base64.encode(message.object, 0, message.object.length) : options.bytes === Array ? Array.prototype.slice.call(message.object) : message.object;
+                        if (options.oneofs)
+                            object.value = "object";
                     }
-                    if (message.code != null && message.hasOwnProperty("code"))
-                        object.code = message.code;
-                    if (message.value != null && message.hasOwnProperty("value"))
-                        object.value = options.bytes === String ? $util.base64.encode(message.value, 0, message.value.length) : options.bytes === Array ? Array.prototype.slice.call(message.value) : message.value;
+                    if (message.error != null && message.hasOwnProperty("error")) {
+                        object.error = $root.koinos.chain.error_data.toObject(message.error, options);
+                        if (options.oneofs)
+                            object.value = "error";
+                    }
                     return object;
                 };
     
@@ -29613,193 +29823,6 @@
                 };
     
                 return result;
-            })();
-    
-            chain.error_info = (function() {
-    
-                /**
-                 * Properties of an error_info.
-                 * @memberof koinos.chain
-                 * @interface Ierror_info
-                 * @property {string|null} [message] error_info message
-                 */
-    
-                /**
-                 * Constructs a new error_info.
-                 * @memberof koinos.chain
-                 * @classdesc Represents an error_info.
-                 * @implements Ierror_info
-                 * @constructor
-                 * @param {koinos.chain.Ierror_info=} [properties] Properties to set
-                 */
-                function error_info(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * error_info message.
-                 * @member {string} message
-                 * @memberof koinos.chain.error_info
-                 * @instance
-                 */
-                error_info.prototype.message = "";
-    
-                /**
-                 * Creates a new error_info instance using the specified properties.
-                 * @function create
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {koinos.chain.Ierror_info=} [properties] Properties to set
-                 * @returns {koinos.chain.error_info} error_info instance
-                 */
-                error_info.create = function create(properties) {
-                    return new error_info(properties);
-                };
-    
-                /**
-                 * Encodes the specified error_info message. Does not implicitly {@link koinos.chain.error_info.verify|verify} messages.
-                 * @function encode
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {koinos.chain.Ierror_info} message error_info message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                error_info.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.message != null && Object.hasOwnProperty.call(message, "message"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.message);
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified error_info message, length delimited. Does not implicitly {@link koinos.chain.error_info.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {koinos.chain.Ierror_info} message error_info message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                error_info.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes an error_info message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {koinos.chain.error_info} error_info
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                error_info.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.error_info();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.message = reader.string();
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes an error_info message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {koinos.chain.error_info} error_info
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                error_info.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies an error_info message.
-                 * @function verify
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                error_info.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.message != null && message.hasOwnProperty("message"))
-                        if (!$util.isString(message.message))
-                            return "message: string expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates an error_info message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {koinos.chain.error_info} error_info
-                 */
-                error_info.fromObject = function fromObject(object) {
-                    if (object instanceof $root.koinos.chain.error_info)
-                        return object;
-                    var message = new $root.koinos.chain.error_info();
-                    if (object.message != null)
-                        message.message = String(object.message);
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from an error_info message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof koinos.chain.error_info
-                 * @static
-                 * @param {koinos.chain.error_info} message error_info
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                error_info.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.message = "";
-                    if (message.message != null && message.hasOwnProperty("message"))
-                        object.message = message.message;
-                    return object;
-                };
-    
-                /**
-                 * Converts this error_info to JSON.
-                 * @function toJSON
-                 * @memberof koinos.chain.error_info
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                error_info.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return error_info;
             })();
     
             chain.object_space = (function() {
@@ -36516,7 +36539,6 @@
                  * Properties of a post_transaction_callback_result.
                  * @memberof koinos.chain
                  * @interface Ipost_transaction_callback_result
-                 * @property {koinos.chain.Iresult|null} [value] post_transaction_callback_result value
                  */
     
                 /**
@@ -36533,14 +36555,6 @@
                             if (properties[keys[i]] != null)
                                 this[keys[i]] = properties[keys[i]];
                 }
-    
-                /**
-                 * post_transaction_callback_result value.
-                 * @member {koinos.chain.Iresult|null|undefined} value
-                 * @memberof koinos.chain.post_transaction_callback_result
-                 * @instance
-                 */
-                post_transaction_callback_result.prototype.value = null;
     
                 /**
                  * Creates a new post_transaction_callback_result instance using the specified properties.
@@ -36566,8 +36580,6 @@
                 post_transaction_callback_result.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                        $root.koinos.chain.result.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
                     return writer;
                 };
     
@@ -36602,9 +36614,6 @@
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
-                        case 1:
-                            message.value = $root.koinos.chain.result.decode(reader, reader.uint32());
-                            break;
                         default:
                             reader.skipType(tag & 7);
                             break;
@@ -36640,11 +36649,6 @@
                 post_transaction_callback_result.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.value != null && message.hasOwnProperty("value")) {
-                        var error = $root.koinos.chain.result.verify(message.value);
-                        if (error)
-                            return "value." + error;
-                    }
                     return null;
                 };
     
@@ -36659,13 +36663,7 @@
                 post_transaction_callback_result.fromObject = function fromObject(object) {
                     if (object instanceof $root.koinos.chain.post_transaction_callback_result)
                         return object;
-                    var message = new $root.koinos.chain.post_transaction_callback_result();
-                    if (object.value != null) {
-                        if (typeof object.value !== "object")
-                            throw TypeError(".koinos.chain.post_transaction_callback_result.value: object expected");
-                        message.value = $root.koinos.chain.result.fromObject(object.value);
-                    }
-                    return message;
+                    return new $root.koinos.chain.post_transaction_callback_result();
                 };
     
                 /**
@@ -36677,15 +36675,8 @@
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                post_transaction_callback_result.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.value = null;
-                    if (message.value != null && message.hasOwnProperty("value"))
-                        object.value = $root.koinos.chain.result.toObject(message.value, options);
-                    return object;
+                post_transaction_callback_result.toObject = function toObject() {
+                    return {};
                 };
     
                 /**
@@ -48197,7 +48188,7 @@
                  * Properties of a call_result.
                  * @memberof koinos.chain
                  * @interface Icall_result
-                 * @property {Uint8Array|null} [value] call_result value
+                 * @property {koinos.chain.Iresult|null} [value] call_result value
                  */
     
                 /**
@@ -48217,11 +48208,11 @@
     
                 /**
                  * call_result value.
-                 * @member {Uint8Array} value
+                 * @member {koinos.chain.Iresult|null|undefined} value
                  * @memberof koinos.chain.call_result
                  * @instance
                  */
-                call_result.prototype.value = $util.newBuffer([]);
+                call_result.prototype.value = null;
     
                 /**
                  * Creates a new call_result instance using the specified properties.
@@ -48248,7 +48239,7 @@
                     if (!writer)
                         writer = $Writer.create();
                     if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                        writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.value);
+                        $root.koinos.chain.result.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
                     return writer;
                 };
     
@@ -48284,7 +48275,7 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.value = reader.bytes();
+                            message.value = $root.koinos.chain.result.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -48321,9 +48312,11 @@
                 call_result.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.value != null && message.hasOwnProperty("value"))
-                        if (!(message.value && typeof message.value.length === "number" || $util.isString(message.value)))
-                            return "value: buffer expected";
+                    if (message.value != null && message.hasOwnProperty("value")) {
+                        var error = $root.koinos.chain.result.verify(message.value);
+                        if (error)
+                            return "value." + error;
+                    }
                     return null;
                 };
     
@@ -48339,11 +48332,11 @@
                     if (object instanceof $root.koinos.chain.call_result)
                         return object;
                     var message = new $root.koinos.chain.call_result();
-                    if (object.value != null)
-                        if (typeof object.value === "string")
-                            $util.base64.decode(object.value, message.value = $util.newBuffer($util.base64.length(object.value)), 0);
-                        else if (object.value.length)
-                            message.value = object.value;
+                    if (object.value != null) {
+                        if (typeof object.value !== "object")
+                            throw TypeError(".koinos.chain.call_result.value: object expected");
+                        message.value = $root.koinos.chain.result.fromObject(object.value);
+                    }
                     return message;
                 };
     
@@ -48361,15 +48354,9 @@
                         options = {};
                     var object = {};
                     if (options.defaults)
-                        if (options.bytes === String)
-                            object.value = "";
-                        else {
-                            object.value = [];
-                            if (options.bytes !== Array)
-                                object.value = $util.newBuffer(object.value);
-                        }
+                        object.value = null;
                     if (message.value != null && message.hasOwnProperty("value"))
-                        object.value = options.bytes === String ? $util.base64.encode(message.value, 0, message.value.length) : options.bytes === Array ? Array.prototype.slice.call(message.value) : message.value;
+                        object.value = $root.koinos.chain.result.toObject(message.value, options);
                     return object;
                 };
     
@@ -48745,7 +48732,8 @@
                  * Properties of an exit_arguments.
                  * @memberof koinos.chain
                  * @interface Iexit_arguments
-                 * @property {koinos.chain.Iresult|null} [retval] exit_arguments retval
+                 * @property {number|null} [code] exit_arguments code
+                 * @property {koinos.chain.Iresult|null} [res] exit_arguments res
                  */
     
                 /**
@@ -48764,12 +48752,20 @@
                 }
     
                 /**
-                 * exit_arguments retval.
-                 * @member {koinos.chain.Iresult|null|undefined} retval
+                 * exit_arguments code.
+                 * @member {number} code
                  * @memberof koinos.chain.exit_arguments
                  * @instance
                  */
-                exit_arguments.prototype.retval = null;
+                exit_arguments.prototype.code = 0;
+    
+                /**
+                 * exit_arguments res.
+                 * @member {koinos.chain.Iresult|null|undefined} res
+                 * @memberof koinos.chain.exit_arguments
+                 * @instance
+                 */
+                exit_arguments.prototype.res = null;
     
                 /**
                  * Creates a new exit_arguments instance using the specified properties.
@@ -48795,8 +48791,10 @@
                 exit_arguments.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.retval != null && Object.hasOwnProperty.call(message, "retval"))
-                        $root.koinos.chain.result.encode(message.retval, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.code != null && Object.hasOwnProperty.call(message, "code"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
+                    if (message.res != null && Object.hasOwnProperty.call(message, "res"))
+                        $root.koinos.chain.result.encode(message.res, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
                 };
     
@@ -48832,7 +48830,10 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.retval = $root.koinos.chain.result.decode(reader, reader.uint32());
+                            message.code = reader.int32();
+                            break;
+                        case 2:
+                            message.res = $root.koinos.chain.result.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -48869,10 +48870,13 @@
                 exit_arguments.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.retval != null && message.hasOwnProperty("retval")) {
-                        var error = $root.koinos.chain.result.verify(message.retval);
+                    if (message.code != null && message.hasOwnProperty("code"))
+                        if (!$util.isInteger(message.code))
+                            return "code: integer expected";
+                    if (message.res != null && message.hasOwnProperty("res")) {
+                        var error = $root.koinos.chain.result.verify(message.res);
                         if (error)
-                            return "retval." + error;
+                            return "res." + error;
                     }
                     return null;
                 };
@@ -48889,10 +48893,12 @@
                     if (object instanceof $root.koinos.chain.exit_arguments)
                         return object;
                     var message = new $root.koinos.chain.exit_arguments();
-                    if (object.retval != null) {
-                        if (typeof object.retval !== "object")
-                            throw TypeError(".koinos.chain.exit_arguments.retval: object expected");
-                        message.retval = $root.koinos.chain.result.fromObject(object.retval);
+                    if (object.code != null)
+                        message.code = object.code | 0;
+                    if (object.res != null) {
+                        if (typeof object.res !== "object")
+                            throw TypeError(".koinos.chain.exit_arguments.res: object expected");
+                        message.res = $root.koinos.chain.result.fromObject(object.res);
                     }
                     return message;
                 };
@@ -48910,10 +48916,14 @@
                     if (!options)
                         options = {};
                     var object = {};
-                    if (options.defaults)
-                        object.retval = null;
-                    if (message.retval != null && message.hasOwnProperty("retval"))
-                        object.retval = $root.koinos.chain.result.toObject(message.retval, options);
+                    if (options.defaults) {
+                        object.code = 0;
+                        object.res = null;
+                    }
+                    if (message.code != null && message.hasOwnProperty("code"))
+                        object.code = message.code;
+                    if (message.res != null && message.hasOwnProperty("res"))
+                        object.res = $root.koinos.chain.result.toObject(message.res, options);
                     return object;
                 };
     

@@ -2201,23 +2201,31 @@
                 }
               }
             },
-            "result": {
-              "fields": {
-                "code": {
-                  "type": "int32",
-                  "id": 1
-                },
-                "value": {
-                  "type": "bytes",
-                  "id": 2
-                }
-              }
-            },
-            "error_info": {
+            "error_data": {
               "fields": {
                 "message": {
                   "type": "string",
                   "id": 1
+                }
+              }
+            },
+            "result": {
+              "oneofs": {
+                "value": {
+                  "oneof": [
+                    "object",
+                    "error"
+                  ]
+                }
+              },
+              "fields": {
+                "object": {
+                  "type": "bytes",
+                  "id": 1
+                },
+                "error": {
+                  "type": "error_data",
+                  "id": 2
                 }
               }
             },
@@ -2610,12 +2618,7 @@
               "fields": {}
             },
             "post_transaction_callback_result": {
-              "fields": {
-                "value": {
-                  "type": "result",
-                  "id": 1
-                }
-              }
+              "fields": {}
             },
             "get_chain_id_arguments": {
               "fields": {}
@@ -3219,7 +3222,7 @@
             "call_result": {
               "fields": {
                 "value": {
-                  "type": "bytes",
+                  "type": "result",
                   "id": 1
                 }
               }
@@ -3237,9 +3240,13 @@
             },
             "exit_arguments": {
               "fields": {
-                "retval": {
-                  "type": "result",
+                "code": {
+                  "type": "int32",
                   "id": 1
+                },
+                "res": {
+                  "type": "result",
+                  "id": 2
                 }
               }
             },

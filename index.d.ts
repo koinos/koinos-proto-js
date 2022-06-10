@@ -11972,14 +11972,104 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of an error_data. */
+        interface Ierror_data {
+
+            /** error_data message */
+            message?: (string|null);
+        }
+
+        /** Represents an error_data. */
+        class error_data implements Ierror_data {
+
+            /**
+             * Constructs a new error_data.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Ierror_data);
+
+            /** error_data message. */
+            public message: string;
+
+            /**
+             * Creates a new error_data instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns error_data instance
+             */
+            public static create(properties?: koinos.chain.Ierror_data): koinos.chain.error_data;
+
+            /**
+             * Encodes the specified error_data message. Does not implicitly {@link koinos.chain.error_data.verify|verify} messages.
+             * @param message error_data message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Ierror_data, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified error_data message, length delimited. Does not implicitly {@link koinos.chain.error_data.verify|verify} messages.
+             * @param message error_data message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Ierror_data, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an error_data message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns error_data
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.error_data;
+
+            /**
+             * Decodes an error_data message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns error_data
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.error_data;
+
+            /**
+             * Verifies an error_data message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an error_data message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns error_data
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.error_data;
+
+            /**
+             * Creates a plain object from an error_data message. Also converts values to other types if specified.
+             * @param message error_data
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.error_data, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this error_data to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a result. */
         interface Iresult {
 
-            /** result code */
-            code?: (number|null);
+            /** result object */
+            object?: (Uint8Array|null);
 
-            /** result value */
-            value?: (Uint8Array|null);
+            /** result error */
+            error?: (koinos.chain.Ierror_data|null);
         }
 
         /** Represents a result. */
@@ -11991,11 +12081,14 @@ export namespace koinos {
              */
             constructor(properties?: koinos.chain.Iresult);
 
-            /** result code. */
-            public code: number;
+            /** result object. */
+            public object?: (Uint8Array|null);
+
+            /** result error. */
+            public error?: (koinos.chain.Ierror_data|null);
 
             /** result value. */
-            public value: Uint8Array;
+            public value?: ("object"|"error");
 
             /**
              * Creates a new result instance using the specified properties.
@@ -12063,96 +12156,6 @@ export namespace koinos {
 
             /**
              * Converts this result to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of an error_info. */
-        interface Ierror_info {
-
-            /** error_info message */
-            message?: (string|null);
-        }
-
-        /** Represents an error_info. */
-        class error_info implements Ierror_info {
-
-            /**
-             * Constructs a new error_info.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.chain.Ierror_info);
-
-            /** error_info message. */
-            public message: string;
-
-            /**
-             * Creates a new error_info instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns error_info instance
-             */
-            public static create(properties?: koinos.chain.Ierror_info): koinos.chain.error_info;
-
-            /**
-             * Encodes the specified error_info message. Does not implicitly {@link koinos.chain.error_info.verify|verify} messages.
-             * @param message error_info message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.chain.Ierror_info, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified error_info message, length delimited. Does not implicitly {@link koinos.chain.error_info.verify|verify} messages.
-             * @param message error_info message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.chain.Ierror_info, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an error_info message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns error_info
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.error_info;
-
-            /**
-             * Decodes an error_info message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns error_info
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.error_info;
-
-            /**
-             * Verifies an error_info message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an error_info message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns error_info
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.error_info;
-
-            /**
-             * Creates a plain object from an error_info message. Also converts values to other types if specified.
-             * @param message error_info
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.chain.error_info, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this error_info to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -15246,9 +15249,6 @@ export namespace koinos {
 
         /** Properties of a post_transaction_callback_result. */
         interface Ipost_transaction_callback_result {
-
-            /** post_transaction_callback_result value */
-            value?: (koinos.chain.Iresult|null);
         }
 
         /** Represents a post_transaction_callback_result. */
@@ -15259,9 +15259,6 @@ export namespace koinos {
              * @param [properties] Properties to set
              */
             constructor(properties?: koinos.chain.Ipost_transaction_callback_result);
-
-            /** post_transaction_callback_result value. */
-            public value?: (koinos.chain.Iresult|null);
 
             /**
              * Creates a new post_transaction_callback_result instance using the specified properties.
@@ -20510,7 +20507,7 @@ export namespace koinos {
         interface Icall_result {
 
             /** call_result value */
-            value?: (Uint8Array|null);
+            value?: (koinos.chain.Iresult|null);
         }
 
         /** Represents a call_result. */
@@ -20523,7 +20520,7 @@ export namespace koinos {
             constructor(properties?: koinos.chain.Icall_result);
 
             /** call_result value. */
-            public value: Uint8Array;
+            public value?: (koinos.chain.Iresult|null);
 
             /**
              * Creates a new call_result instance using the specified properties.
@@ -20773,8 +20770,11 @@ export namespace koinos {
         /** Properties of an exit_arguments. */
         interface Iexit_arguments {
 
-            /** exit_arguments retval */
-            retval?: (koinos.chain.Iresult|null);
+            /** exit_arguments code */
+            code?: (number|null);
+
+            /** exit_arguments res */
+            res?: (koinos.chain.Iresult|null);
         }
 
         /** Represents an exit_arguments. */
@@ -20786,8 +20786,11 @@ export namespace koinos {
              */
             constructor(properties?: koinos.chain.Iexit_arguments);
 
-            /** exit_arguments retval. */
-            public retval?: (koinos.chain.Iresult|null);
+            /** exit_arguments code. */
+            public code: number;
+
+            /** exit_arguments res. */
+            public res?: (koinos.chain.Iresult|null);
 
             /**
              * Creates a new exit_arguments instance using the specified properties.
