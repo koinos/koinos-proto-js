@@ -2954,9 +2954,6 @@ export namespace koinos {
 
             /** Properties of a transfer_result. */
             interface Itransfer_result {
-
-                /** transfer_result value */
-                value?: (boolean|null);
             }
 
             /** Represents a transfer_result. */
@@ -2967,9 +2964,6 @@ export namespace koinos {
                  * @param [properties] Properties to set
                  */
                 constructor(properties?: koinos.contracts.token.Itransfer_result);
-
-                /** transfer_result value. */
-                public value: boolean;
 
                 /**
                  * Creates a new transfer_result instance using the specified properties.
@@ -3140,9 +3134,6 @@ export namespace koinos {
 
             /** Properties of a mint_result. */
             interface Imint_result {
-
-                /** mint_result value */
-                value?: (boolean|null);
             }
 
             /** Represents a mint_result. */
@@ -3153,9 +3144,6 @@ export namespace koinos {
                  * @param [properties] Properties to set
                  */
                 constructor(properties?: koinos.contracts.token.Imint_result);
-
-                /** mint_result value. */
-                public value: boolean;
 
                 /**
                  * Creates a new mint_result instance using the specified properties.
@@ -3326,9 +3314,6 @@ export namespace koinos {
 
             /** Properties of a burn_result. */
             interface Iburn_result {
-
-                /** burn_result value */
-                value?: (boolean|null);
             }
 
             /** Represents a burn_result. */
@@ -3339,9 +3324,6 @@ export namespace koinos {
                  * @param [properties] Properties to set
                  */
                 constructor(properties?: koinos.contracts.token.Iburn_result);
-
-                /** burn_result value. */
-                public value: boolean;
 
                 /**
                  * Creates a new burn_result instance using the specified properties.

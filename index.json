@@ -445,12 +445,7 @@
                   }
                 },
                 "transfer_result": {
-                  "fields": {
-                    "value": {
-                      "type": "bool",
-                      "id": 1
-                    }
-                  }
+                  "fields": {}
                 },
                 "mint_arguments": {
                   "fields": {
@@ -471,12 +466,7 @@
                   }
                 },
                 "mint_result": {
-                  "fields": {
-                    "value": {
-                      "type": "bool",
-                      "id": 1
-                    }
-                  }
+                  "fields": {}
                 },
                 "burn_arguments": {
                   "fields": {
@@ -497,12 +487,7 @@
                   }
                 },
                 "burn_result": {
-                  "fields": {
-                    "value": {
-                      "type": "bool",
-                      "id": 1
-                    }
-                  }
+                  "fields": {}
                 },
                 "balance_object": {
                   "fields": {

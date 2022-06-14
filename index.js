@@ -6959,7 +6959,6 @@
                      * Properties of a transfer_result.
                      * @memberof koinos.contracts.token
                      * @interface Itransfer_result
-                     * @property {boolean|null} [value] transfer_result value
                      */
     
                     /**
@@ -6976,14 +6975,6 @@
                                 if (properties[keys[i]] != null)
                                     this[keys[i]] = properties[keys[i]];
                     }
-    
-                    /**
-                     * transfer_result value.
-                     * @member {boolean} value
-                     * @memberof koinos.contracts.token.transfer_result
-                     * @instance
-                     */
-                    transfer_result.prototype.value = false;
     
                     /**
                      * Creates a new transfer_result instance using the specified properties.
@@ -7009,8 +7000,6 @@
                     transfer_result.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).bool(message.value);
                         return writer;
                     };
     
@@ -7045,9 +7034,6 @@
                         while (reader.pos < end) {
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
-                            case 1:
-                                message.value = reader.bool();
-                                break;
                             default:
                                 reader.skipType(tag & 7);
                                 break;
@@ -7083,9 +7069,6 @@
                     transfer_result.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            if (typeof message.value !== "boolean")
-                                return "value: boolean expected";
                         return null;
                     };
     
@@ -7100,10 +7083,7 @@
                     transfer_result.fromObject = function fromObject(object) {
                         if (object instanceof $root.koinos.contracts.token.transfer_result)
                             return object;
-                        var message = new $root.koinos.contracts.token.transfer_result();
-                        if (object.value != null)
-                            message.value = Boolean(object.value);
-                        return message;
+                        return new $root.koinos.contracts.token.transfer_result();
                     };
     
                     /**
@@ -7115,15 +7095,8 @@
                      * @param {$protobuf.IConversionOptions} [options] Conversion options
                      * @returns {Object.<string,*>} Plain object
                      */
-                    transfer_result.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.value = false;
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            object.value = message.value;
-                        return object;
+                    transfer_result.toObject = function toObject() {
+                        return {};
                     };
     
                     /**
@@ -7379,7 +7352,6 @@
                      * Properties of a mint_result.
                      * @memberof koinos.contracts.token
                      * @interface Imint_result
-                     * @property {boolean|null} [value] mint_result value
                      */
     
                     /**
@@ -7396,14 +7368,6 @@
                                 if (properties[keys[i]] != null)
                                     this[keys[i]] = properties[keys[i]];
                     }
-    
-                    /**
-                     * mint_result value.
-                     * @member {boolean} value
-                     * @memberof koinos.contracts.token.mint_result
-                     * @instance
-                     */
-                    mint_result.prototype.value = false;
     
                     /**
                      * Creates a new mint_result instance using the specified properties.
@@ -7429,8 +7393,6 @@
                     mint_result.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).bool(message.value);
                         return writer;
                     };
     
@@ -7465,9 +7427,6 @@
                         while (reader.pos < end) {
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
-                            case 1:
-                                message.value = reader.bool();
-                                break;
                             default:
                                 reader.skipType(tag & 7);
                                 break;
@@ -7503,9 +7462,6 @@
                     mint_result.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            if (typeof message.value !== "boolean")
-                                return "value: boolean expected";
                         return null;
                     };
     
@@ -7520,10 +7476,7 @@
                     mint_result.fromObject = function fromObject(object) {
                         if (object instanceof $root.koinos.contracts.token.mint_result)
                             return object;
-                        var message = new $root.koinos.contracts.token.mint_result();
-                        if (object.value != null)
-                            message.value = Boolean(object.value);
-                        return message;
+                        return new $root.koinos.contracts.token.mint_result();
                     };
     
                     /**
@@ -7535,15 +7488,8 @@
                      * @param {$protobuf.IConversionOptions} [options] Conversion options
                      * @returns {Object.<string,*>} Plain object
                      */
-                    mint_result.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.value = false;
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            object.value = message.value;
-                        return object;
+                    mint_result.toObject = function toObject() {
+                        return {};
                     };
     
                     /**
@@ -7799,7 +7745,6 @@
                      * Properties of a burn_result.
                      * @memberof koinos.contracts.token
                      * @interface Iburn_result
-                     * @property {boolean|null} [value] burn_result value
                      */
     
                     /**
@@ -7816,14 +7761,6 @@
                                 if (properties[keys[i]] != null)
                                     this[keys[i]] = properties[keys[i]];
                     }
-    
-                    /**
-                     * burn_result value.
-                     * @member {boolean} value
-                     * @memberof koinos.contracts.token.burn_result
-                     * @instance
-                     */
-                    burn_result.prototype.value = false;
     
                     /**
                      * Creates a new burn_result instance using the specified properties.
@@ -7849,8 +7786,6 @@
                     burn_result.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).bool(message.value);
                         return writer;
                     };
     
@@ -7885,9 +7820,6 @@
                         while (reader.pos < end) {
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
-                            case 1:
-                                message.value = reader.bool();
-                                break;
                             default:
                                 reader.skipType(tag & 7);
                                 break;
@@ -7923,9 +7855,6 @@
                     burn_result.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            if (typeof message.value !== "boolean")
-                                return "value: boolean expected";
                         return null;
                     };
     
@@ -7940,10 +7869,7 @@
                     burn_result.fromObject = function fromObject(object) {
                         if (object instanceof $root.koinos.contracts.token.burn_result)
                             return object;
-                        var message = new $root.koinos.contracts.token.burn_result();
-                        if (object.value != null)
-                            message.value = Boolean(object.value);
-                        return message;
+                        return new $root.koinos.contracts.token.burn_result();
                     };
     
                     /**
@@ -7955,15 +7881,8 @@
                      * @param {$protobuf.IConversionOptions} [options] Conversion options
                      * @returns {Object.<string,*>} Plain object
                      */
-                    burn_result.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.value = false;
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            object.value = message.value;
-                        return object;
+                    burn_result.toObject = function toObject() {
+                        return {};
                     };
     
                     /**
