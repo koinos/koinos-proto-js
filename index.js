@@ -48463,7 +48463,7 @@
                  * Properties of a call_result.
                  * @memberof koinos.chain
                  * @interface Icall_result
-                 * @property {koinos.chain.Iresult|null} [value] call_result value
+                 * @property {Uint8Array|null} [value] call_result value
                  */
     
                 /**
@@ -48483,11 +48483,11 @@
     
                 /**
                  * call_result value.
-                 * @member {koinos.chain.Iresult|null|undefined} value
+                 * @member {Uint8Array} value
                  * @memberof koinos.chain.call_result
                  * @instance
                  */
-                call_result.prototype.value = null;
+                call_result.prototype.value = $util.newBuffer([]);
     
                 /**
                  * Creates a new call_result instance using the specified properties.
@@ -48514,7 +48514,7 @@
                     if (!writer)
                         writer = $Writer.create();
                     if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                        $root.koinos.chain.result.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.value);
                     return writer;
                 };
     
@@ -48550,7 +48550,7 @@
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
                         case 1:
-                            message.value = $root.koinos.chain.result.decode(reader, reader.uint32());
+                            message.value = reader.bytes();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -48587,11 +48587,9 @@
                 call_result.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.value != null && message.hasOwnProperty("value")) {
-                        var error = $root.koinos.chain.result.verify(message.value);
-                        if (error)
-                            return "value." + error;
-                    }
+                    if (message.value != null && message.hasOwnProperty("value"))
+                        if (!(message.value && typeof message.value.length === "number" || $util.isString(message.value)))
+                            return "value: buffer expected";
                     return null;
                 };
     
@@ -48607,11 +48605,11 @@
                     if (object instanceof $root.koinos.chain.call_result)
                         return object;
                     var message = new $root.koinos.chain.call_result();
-                    if (object.value != null) {
-                        if (typeof object.value !== "object")
-                            throw TypeError(".koinos.chain.call_result.value: object expected");
-                        message.value = $root.koinos.chain.result.fromObject(object.value);
-                    }
+                    if (object.value != null)
+                        if (typeof object.value === "string")
+                            $util.base64.decode(object.value, message.value = $util.newBuffer($util.base64.length(object.value)), 0);
+                        else if (object.value.length)
+                            message.value = object.value;
                     return message;
                 };
     
@@ -48629,9 +48627,15 @@
                         options = {};
                     var object = {};
                     if (options.defaults)
-                        object.value = null;
+                        if (options.bytes === String)
+                            object.value = "";
+                        else {
+                            object.value = [];
+                            if (options.bytes !== Array)
+                                object.value = $util.newBuffer(object.value);
+                        }
                     if (message.value != null && message.hasOwnProperty("value"))
-                        object.value = $root.koinos.chain.result.toObject(message.value, options);
+                        object.value = options.bytes === String ? $util.base64.encode(message.value, 0, message.value.length) : options.bytes === Array ? Array.prototype.slice.call(message.value) : message.value;
                     return object;
                 };
     

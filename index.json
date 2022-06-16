@@ -3220,7 +3220,7 @@
             "call_result": {
               "fields": {
                 "value": {
-                  "type": "result",
+                  "type": "bytes",
                   "id": 1
                 }
               }

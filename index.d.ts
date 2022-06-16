@@ -20665,7 +20665,7 @@ export namespace koinos {
         interface Icall_result {
 
             /** call_result value */
-            value?: (koinos.chain.Iresult|null);
+            value?: (Uint8Array|null);
         }
 
         /** Represents a call_result. */
@@ -20678,7 +20678,7 @@ export namespace koinos {
             constructor(properties?: koinos.chain.Icall_result);
 
             /** call_result value. */
-            public value?: (koinos.chain.Iresult|null);
+            public value: Uint8Array;
 
             /**
              * Creates a new call_result instance using the specified properties.
