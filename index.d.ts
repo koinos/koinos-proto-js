@@ -13373,6 +13373,7 @@ export namespace koinos {
             verify_account_nonce = 108,
             set_account_nonce = 109,
             check_system_authority = 110,
+            get_operation = 111,
             get_account_rc = 201,
             consume_account_rc = 202,
             get_resource_limits = 203,
@@ -13415,6 +13416,7 @@ export namespace koinos {
             unknown_hash_code = -101,
             unknown_dsa = -102,
             unknown_system_call = -103,
+            operation_not_found = -104,
             authorization_failure = -200,
             invalid_nonce = -201,
             invalid_signature = -202,
@@ -17288,6 +17290,180 @@ export namespace koinos {
 
             /**
              * Converts this check_system_authority_result to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_operation_arguments. */
+        interface Iget_operation_arguments {
+        }
+
+        /** Represents a get_operation_arguments. */
+        class get_operation_arguments implements Iget_operation_arguments {
+
+            /**
+             * Constructs a new get_operation_arguments.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_operation_arguments);
+
+            /**
+             * Creates a new get_operation_arguments instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_operation_arguments instance
+             */
+            public static create(properties?: koinos.chain.Iget_operation_arguments): koinos.chain.get_operation_arguments;
+
+            /**
+             * Encodes the specified get_operation_arguments message. Does not implicitly {@link koinos.chain.get_operation_arguments.verify|verify} messages.
+             * @param message get_operation_arguments message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_operation_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_operation_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_operation_arguments.verify|verify} messages.
+             * @param message get_operation_arguments message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_operation_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_operation_arguments message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_operation_arguments
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_operation_arguments;
+
+            /**
+             * Decodes a get_operation_arguments message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_operation_arguments
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_operation_arguments;
+
+            /**
+             * Verifies a get_operation_arguments message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_operation_arguments message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_operation_arguments
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_operation_arguments;
+
+            /**
+             * Creates a plain object from a get_operation_arguments message. Also converts values to other types if specified.
+             * @param message get_operation_arguments
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_operation_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_operation_arguments to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_operation_result. */
+        interface Iget_operation_result {
+
+            /** get_operation_result value */
+            value?: (koinos.protocol.Ioperation|null);
+        }
+
+        /** Represents a get_operation_result. */
+        class get_operation_result implements Iget_operation_result {
+
+            /**
+             * Constructs a new get_operation_result.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_operation_result);
+
+            /** get_operation_result value. */
+            public value?: (koinos.protocol.Ioperation|null);
+
+            /**
+             * Creates a new get_operation_result instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_operation_result instance
+             */
+            public static create(properties?: koinos.chain.Iget_operation_result): koinos.chain.get_operation_result;
+
+            /**
+             * Encodes the specified get_operation_result message. Does not implicitly {@link koinos.chain.get_operation_result.verify|verify} messages.
+             * @param message get_operation_result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_operation_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_operation_result message, length delimited. Does not implicitly {@link koinos.chain.get_operation_result.verify|verify} messages.
+             * @param message get_operation_result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_operation_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_operation_result message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_operation_result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_operation_result;
+
+            /**
+             * Decodes a get_operation_result message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_operation_result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_operation_result;
+
+            /**
+             * Verifies a get_operation_result message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_operation_result message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_operation_result
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_operation_result;
+
+            /**
+             * Creates a plain object from a get_operation_result message. Also converts values to other types if specified.
+             * @param message get_operation_result
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_operation_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_operation_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };

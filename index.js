@@ -32741,6 +32741,7 @@
              * @property {number} verify_account_nonce=108 verify_account_nonce value
              * @property {number} set_account_nonce=109 set_account_nonce value
              * @property {number} check_system_authority=110 check_system_authority value
+             * @property {number} get_operation=111 get_operation value
              * @property {number} get_account_rc=201 get_account_rc value
              * @property {number} consume_account_rc=202 consume_account_rc value
              * @property {number} get_resource_limits=203 get_resource_limits value
@@ -32789,6 +32790,7 @@
                 values[valuesById[108] = "verify_account_nonce"] = 108;
                 values[valuesById[109] = "set_account_nonce"] = 109;
                 values[valuesById[110] = "check_system_authority"] = 110;
+                values[valuesById[111] = "get_operation"] = 111;
                 values[valuesById[201] = "get_account_rc"] = 201;
                 values[valuesById[202] = "consume_account_rc"] = 202;
                 values[valuesById[203] = "get_resource_limits"] = 203;
@@ -32834,6 +32836,7 @@
              * @property {number} unknown_hash_code=-101 unknown_hash_code value
              * @property {number} unknown_dsa=-102 unknown_dsa value
              * @property {number} unknown_system_call=-103 unknown_system_call value
+             * @property {number} operation_not_found=-104 operation_not_found value
              * @property {number} authorization_failure=-200 authorization_failure value
              * @property {number} invalid_nonce=-201 invalid_nonce value
              * @property {number} invalid_signature=-202 invalid_signature value
@@ -32859,6 +32862,7 @@
                 values[valuesById[-101] = "unknown_hash_code"] = -101;
                 values[valuesById[-102] = "unknown_dsa"] = -102;
                 values[valuesById[-103] = "unknown_system_call"] = -103;
+                values[valuesById[-104] = "operation_not_found"] = -104;
                 values[valuesById[-200] = "authorization_failure"] = -200;
                 values[valuesById[-201] = "invalid_nonce"] = -201;
                 values[valuesById[-202] = "invalid_signature"] = -202;
@@ -40827,6 +40831,358 @@
                 };
     
                 return check_system_authority_result;
+            })();
+    
+            chain.get_operation_arguments = (function() {
+    
+                /**
+                 * Properties of a get_operation_arguments.
+                 * @memberof koinos.chain
+                 * @interface Iget_operation_arguments
+                 */
+    
+                /**
+                 * Constructs a new get_operation_arguments.
+                 * @memberof koinos.chain
+                 * @classdesc Represents a get_operation_arguments.
+                 * @implements Iget_operation_arguments
+                 * @constructor
+                 * @param {koinos.chain.Iget_operation_arguments=} [properties] Properties to set
+                 */
+                function get_operation_arguments(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Creates a new get_operation_arguments instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {koinos.chain.Iget_operation_arguments=} [properties] Properties to set
+                 * @returns {koinos.chain.get_operation_arguments} get_operation_arguments instance
+                 */
+                get_operation_arguments.create = function create(properties) {
+                    return new get_operation_arguments(properties);
+                };
+    
+                /**
+                 * Encodes the specified get_operation_arguments message. Does not implicitly {@link koinos.chain.get_operation_arguments.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {koinos.chain.Iget_operation_arguments} message get_operation_arguments message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                get_operation_arguments.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified get_operation_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_operation_arguments.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {koinos.chain.Iget_operation_arguments} message get_operation_arguments message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                get_operation_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a get_operation_arguments message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.chain.get_operation_arguments} get_operation_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                get_operation_arguments.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.get_operation_arguments();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a get_operation_arguments message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.chain.get_operation_arguments} get_operation_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                get_operation_arguments.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a get_operation_arguments message.
+                 * @function verify
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                get_operation_arguments.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a get_operation_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.chain.get_operation_arguments} get_operation_arguments
+                 */
+                get_operation_arguments.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.chain.get_operation_arguments)
+                        return object;
+                    return new $root.koinos.chain.get_operation_arguments();
+                };
+    
+                /**
+                 * Creates a plain object from a get_operation_arguments message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @static
+                 * @param {koinos.chain.get_operation_arguments} message get_operation_arguments
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                get_operation_arguments.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this get_operation_arguments to JSON.
+                 * @function toJSON
+                 * @memberof koinos.chain.get_operation_arguments
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                get_operation_arguments.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return get_operation_arguments;
+            })();
+    
+            chain.get_operation_result = (function() {
+    
+                /**
+                 * Properties of a get_operation_result.
+                 * @memberof koinos.chain
+                 * @interface Iget_operation_result
+                 * @property {koinos.protocol.Ioperation|null} [value] get_operation_result value
+                 */
+    
+                /**
+                 * Constructs a new get_operation_result.
+                 * @memberof koinos.chain
+                 * @classdesc Represents a get_operation_result.
+                 * @implements Iget_operation_result
+                 * @constructor
+                 * @param {koinos.chain.Iget_operation_result=} [properties] Properties to set
+                 */
+                function get_operation_result(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * get_operation_result value.
+                 * @member {koinos.protocol.Ioperation|null|undefined} value
+                 * @memberof koinos.chain.get_operation_result
+                 * @instance
+                 */
+                get_operation_result.prototype.value = null;
+    
+                /**
+                 * Creates a new get_operation_result instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {koinos.chain.Iget_operation_result=} [properties] Properties to set
+                 * @returns {koinos.chain.get_operation_result} get_operation_result instance
+                 */
+                get_operation_result.create = function create(properties) {
+                    return new get_operation_result(properties);
+                };
+    
+                /**
+                 * Encodes the specified get_operation_result message. Does not implicitly {@link koinos.chain.get_operation_result.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {koinos.chain.Iget_operation_result} message get_operation_result message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                get_operation_result.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                        $root.koinos.protocol.operation.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified get_operation_result message, length delimited. Does not implicitly {@link koinos.chain.get_operation_result.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {koinos.chain.Iget_operation_result} message get_operation_result message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                get_operation_result.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a get_operation_result message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.chain.get_operation_result} get_operation_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                get_operation_result.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.get_operation_result();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.value = $root.koinos.protocol.operation.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a get_operation_result message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.chain.get_operation_result} get_operation_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                get_operation_result.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a get_operation_result message.
+                 * @function verify
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                get_operation_result.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.value != null && message.hasOwnProperty("value")) {
+                        var error = $root.koinos.protocol.operation.verify(message.value);
+                        if (error)
+                            return "value." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a get_operation_result message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.chain.get_operation_result} get_operation_result
+                 */
+                get_operation_result.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.chain.get_operation_result)
+                        return object;
+                    var message = new $root.koinos.chain.get_operation_result();
+                    if (object.value != null) {
+                        if (typeof object.value !== "object")
+                            throw TypeError(".koinos.chain.get_operation_result.value: object expected");
+                        message.value = $root.koinos.protocol.operation.fromObject(object.value);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a get_operation_result message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.chain.get_operation_result
+                 * @static
+                 * @param {koinos.chain.get_operation_result} message get_operation_result
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                get_operation_result.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        object.value = null;
+                    if (message.value != null && message.hasOwnProperty("value"))
+                        object.value = $root.koinos.protocol.operation.toObject(message.value, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this get_operation_result to JSON.
+                 * @function toJSON
+                 * @memberof koinos.chain.get_operation_result
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                get_operation_result.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return get_operation_result;
             })();
     
             chain.get_account_rc_arguments = (function() {
