@@ -31,6 +31,170 @@
         },
         "contracts": {
           "nested": {
+            "pob": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/pob"
+              },
+              "nested": {
+                "public_key_record": {
+                  "fields": {
+                    "public_key": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    }
+                  }
+                },
+                "metadata": {
+                  "fields": {
+                    "seed": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    },
+                    "difficulty": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    },
+                    "last_block_time": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "target_block_interval": {
+                      "type": "uint64",
+                      "id": 4,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "signature_data": {
+                  "fields": {
+                    "vrf_proof": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    },
+                    "vrf_hash": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    },
+                    "signature": {
+                      "type": "bytes",
+                      "id": 3,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    }
+                  }
+                },
+                "vrf_payload": {
+                  "fields": {
+                    "seed": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    },
+                    "block_time": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "register_public_key_arguments": {
+                  "fields": {
+                    "public_key": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    }
+                  }
+                },
+                "register_public_key_result": {
+                  "fields": {}
+                },
+                "burn_arguments": {
+                  "fields": {
+                    "token_amount": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "burn_address": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "vhp_address": {
+                      "type": "bytes",
+                      "id": 3,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "burn_result": {
+                  "fields": {}
+                },
+                "get_metadata_arguments": {
+                  "fields": {}
+                },
+                "get_metadata_result": {
+                  "fields": {
+                    "metadata": {
+                      "type": "metadata",
+                      "id": 1
+                    }
+                  }
+                },
+                "register_public_key_event": {
+                  "fields": {
+                    "public_key": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    },
+                    "address": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "resources": {
               "options": {
                 "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/resources"

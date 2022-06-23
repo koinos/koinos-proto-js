@@ -58,6 +58,2366 @@
              */
             var contracts = {};
     
+            contracts.pob = (function() {
+    
+                /**
+                 * Namespace pob.
+                 * @memberof koinos.contracts
+                 * @namespace
+                 */
+                var pob = {};
+    
+                pob.public_key_record = (function() {
+    
+                    /**
+                     * Properties of a public_key_record.
+                     * @memberof koinos.contracts.pob
+                     * @interface Ipublic_key_record
+                     * @property {Uint8Array|null} [public_key] public_key_record public_key
+                     */
+    
+                    /**
+                     * Constructs a new public_key_record.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a public_key_record.
+                     * @implements Ipublic_key_record
+                     * @constructor
+                     * @param {koinos.contracts.pob.Ipublic_key_record=} [properties] Properties to set
+                     */
+                    function public_key_record(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * public_key_record public_key.
+                     * @member {Uint8Array} public_key
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @instance
+                     */
+                    public_key_record.prototype.public_key = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new public_key_record instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {koinos.contracts.pob.Ipublic_key_record=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.public_key_record} public_key_record instance
+                     */
+                    public_key_record.create = function create(properties) {
+                        return new public_key_record(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified public_key_record message. Does not implicitly {@link koinos.contracts.pob.public_key_record.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {koinos.contracts.pob.Ipublic_key_record} message public_key_record message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    public_key_record.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.public_key != null && Object.hasOwnProperty.call(message, "public_key"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.public_key);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified public_key_record message, length delimited. Does not implicitly {@link koinos.contracts.pob.public_key_record.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {koinos.contracts.pob.Ipublic_key_record} message public_key_record message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    public_key_record.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a public_key_record message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.public_key_record} public_key_record
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public_key_record.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.public_key_record();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.public_key = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a public_key_record message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.public_key_record} public_key_record
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public_key_record.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a public_key_record message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    public_key_record.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            if (!(message.public_key && typeof message.public_key.length === "number" || $util.isString(message.public_key)))
+                                return "public_key: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a public_key_record message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.public_key_record} public_key_record
+                     */
+                    public_key_record.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.public_key_record)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.public_key_record();
+                        if (object.public_key != null)
+                            if (typeof object.public_key === "string")
+                                $util.base64.decode(object.public_key, message.public_key = $util.newBuffer($util.base64.length(object.public_key)), 0);
+                            else if (object.public_key.length)
+                                message.public_key = object.public_key;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a public_key_record message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @static
+                     * @param {koinos.contracts.pob.public_key_record} message public_key_record
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    public_key_record.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            if (options.bytes === String)
+                                object.public_key = "";
+                            else {
+                                object.public_key = [];
+                                if (options.bytes !== Array)
+                                    object.public_key = $util.newBuffer(object.public_key);
+                            }
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            object.public_key = options.bytes === String ? $util.base64.encode(message.public_key, 0, message.public_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.public_key) : message.public_key;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this public_key_record to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.public_key_record
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    public_key_record.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return public_key_record;
+                })();
+    
+                pob.metadata = (function() {
+    
+                    /**
+                     * Properties of a metadata.
+                     * @memberof koinos.contracts.pob
+                     * @interface Imetadata
+                     * @property {Uint8Array|null} [seed] metadata seed
+                     * @property {Uint8Array|null} [difficulty] metadata difficulty
+                     * @property {number|Long|null} [last_block_time] metadata last_block_time
+                     * @property {number|Long|null} [target_block_interval] metadata target_block_interval
+                     */
+    
+                    /**
+                     * Constructs a new metadata.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a metadata.
+                     * @implements Imetadata
+                     * @constructor
+                     * @param {koinos.contracts.pob.Imetadata=} [properties] Properties to set
+                     */
+                    function metadata(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * metadata seed.
+                     * @member {Uint8Array} seed
+                     * @memberof koinos.contracts.pob.metadata
+                     * @instance
+                     */
+                    metadata.prototype.seed = $util.newBuffer([]);
+    
+                    /**
+                     * metadata difficulty.
+                     * @member {Uint8Array} difficulty
+                     * @memberof koinos.contracts.pob.metadata
+                     * @instance
+                     */
+                    metadata.prototype.difficulty = $util.newBuffer([]);
+    
+                    /**
+                     * metadata last_block_time.
+                     * @member {number|Long} last_block_time
+                     * @memberof koinos.contracts.pob.metadata
+                     * @instance
+                     */
+                    metadata.prototype.last_block_time = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * metadata target_block_interval.
+                     * @member {number|Long} target_block_interval
+                     * @memberof koinos.contracts.pob.metadata
+                     * @instance
+                     */
+                    metadata.prototype.target_block_interval = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * Creates a new metadata instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {koinos.contracts.pob.Imetadata=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.metadata} metadata instance
+                     */
+                    metadata.create = function create(properties) {
+                        return new metadata(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified metadata message. Does not implicitly {@link koinos.contracts.pob.metadata.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {koinos.contracts.pob.Imetadata} message metadata message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    metadata.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.seed != null && Object.hasOwnProperty.call(message, "seed"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.seed);
+                        if (message.difficulty != null && Object.hasOwnProperty.call(message, "difficulty"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.difficulty);
+                        if (message.last_block_time != null && Object.hasOwnProperty.call(message, "last_block_time"))
+                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.last_block_time);
+                        if (message.target_block_interval != null && Object.hasOwnProperty.call(message, "target_block_interval"))
+                            writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.target_block_interval);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified metadata message, length delimited. Does not implicitly {@link koinos.contracts.pob.metadata.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {koinos.contracts.pob.Imetadata} message metadata message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    metadata.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a metadata message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.metadata} metadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    metadata.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.metadata();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.seed = reader.bytes();
+                                break;
+                            case 2:
+                                message.difficulty = reader.bytes();
+                                break;
+                            case 3:
+                                message.last_block_time = reader.uint64();
+                                break;
+                            case 4:
+                                message.target_block_interval = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a metadata message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.metadata} metadata
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    metadata.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a metadata message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    metadata.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.seed != null && message.hasOwnProperty("seed"))
+                            if (!(message.seed && typeof message.seed.length === "number" || $util.isString(message.seed)))
+                                return "seed: buffer expected";
+                        if (message.difficulty != null && message.hasOwnProperty("difficulty"))
+                            if (!(message.difficulty && typeof message.difficulty.length === "number" || $util.isString(message.difficulty)))
+                                return "difficulty: buffer expected";
+                        if (message.last_block_time != null && message.hasOwnProperty("last_block_time"))
+                            if (!$util.isInteger(message.last_block_time) && !(message.last_block_time && $util.isInteger(message.last_block_time.low) && $util.isInteger(message.last_block_time.high)))
+                                return "last_block_time: integer|Long expected";
+                        if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
+                            if (!$util.isInteger(message.target_block_interval) && !(message.target_block_interval && $util.isInteger(message.target_block_interval.low) && $util.isInteger(message.target_block_interval.high)))
+                                return "target_block_interval: integer|Long expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a metadata message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.metadata} metadata
+                     */
+                    metadata.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.metadata)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.metadata();
+                        if (object.seed != null)
+                            if (typeof object.seed === "string")
+                                $util.base64.decode(object.seed, message.seed = $util.newBuffer($util.base64.length(object.seed)), 0);
+                            else if (object.seed.length)
+                                message.seed = object.seed;
+                        if (object.difficulty != null)
+                            if (typeof object.difficulty === "string")
+                                $util.base64.decode(object.difficulty, message.difficulty = $util.newBuffer($util.base64.length(object.difficulty)), 0);
+                            else if (object.difficulty.length)
+                                message.difficulty = object.difficulty;
+                        if (object.last_block_time != null)
+                            if ($util.Long)
+                                (message.last_block_time = $util.Long.fromValue(object.last_block_time)).unsigned = true;
+                            else if (typeof object.last_block_time === "string")
+                                message.last_block_time = parseInt(object.last_block_time, 10);
+                            else if (typeof object.last_block_time === "number")
+                                message.last_block_time = object.last_block_time;
+                            else if (typeof object.last_block_time === "object")
+                                message.last_block_time = new $util.LongBits(object.last_block_time.low >>> 0, object.last_block_time.high >>> 0).toNumber(true);
+                        if (object.target_block_interval != null)
+                            if ($util.Long)
+                                (message.target_block_interval = $util.Long.fromValue(object.target_block_interval)).unsigned = true;
+                            else if (typeof object.target_block_interval === "string")
+                                message.target_block_interval = parseInt(object.target_block_interval, 10);
+                            else if (typeof object.target_block_interval === "number")
+                                message.target_block_interval = object.target_block_interval;
+                            else if (typeof object.target_block_interval === "object")
+                                message.target_block_interval = new $util.LongBits(object.target_block_interval.low >>> 0, object.target_block_interval.high >>> 0).toNumber(true);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a metadata message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.metadata
+                     * @static
+                     * @param {koinos.contracts.pob.metadata} message metadata
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    metadata.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.seed = "";
+                            else {
+                                object.seed = [];
+                                if (options.bytes !== Array)
+                                    object.seed = $util.newBuffer(object.seed);
+                            }
+                            if (options.bytes === String)
+                                object.difficulty = "";
+                            else {
+                                object.difficulty = [];
+                                if (options.bytes !== Array)
+                                    object.difficulty = $util.newBuffer(object.difficulty);
+                            }
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.last_block_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.last_block_time = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.target_block_interval = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.target_block_interval = options.longs === String ? "0" : 0;
+                        }
+                        if (message.seed != null && message.hasOwnProperty("seed"))
+                            object.seed = options.bytes === String ? $util.base64.encode(message.seed, 0, message.seed.length) : options.bytes === Array ? Array.prototype.slice.call(message.seed) : message.seed;
+                        if (message.difficulty != null && message.hasOwnProperty("difficulty"))
+                            object.difficulty = options.bytes === String ? $util.base64.encode(message.difficulty, 0, message.difficulty.length) : options.bytes === Array ? Array.prototype.slice.call(message.difficulty) : message.difficulty;
+                        if (message.last_block_time != null && message.hasOwnProperty("last_block_time"))
+                            if (typeof message.last_block_time === "number")
+                                object.last_block_time = options.longs === String ? String(message.last_block_time) : message.last_block_time;
+                            else
+                                object.last_block_time = options.longs === String ? $util.Long.prototype.toString.call(message.last_block_time) : options.longs === Number ? new $util.LongBits(message.last_block_time.low >>> 0, message.last_block_time.high >>> 0).toNumber(true) : message.last_block_time;
+                        if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
+                            if (typeof message.target_block_interval === "number")
+                                object.target_block_interval = options.longs === String ? String(message.target_block_interval) : message.target_block_interval;
+                            else
+                                object.target_block_interval = options.longs === String ? $util.Long.prototype.toString.call(message.target_block_interval) : options.longs === Number ? new $util.LongBits(message.target_block_interval.low >>> 0, message.target_block_interval.high >>> 0).toNumber(true) : message.target_block_interval;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this metadata to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.metadata
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    metadata.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return metadata;
+                })();
+    
+                pob.signature_data = (function() {
+    
+                    /**
+                     * Properties of a signature_data.
+                     * @memberof koinos.contracts.pob
+                     * @interface Isignature_data
+                     * @property {Uint8Array|null} [vrf_proof] signature_data vrf_proof
+                     * @property {Uint8Array|null} [vrf_hash] signature_data vrf_hash
+                     * @property {Uint8Array|null} [signature] signature_data signature
+                     */
+    
+                    /**
+                     * Constructs a new signature_data.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a signature_data.
+                     * @implements Isignature_data
+                     * @constructor
+                     * @param {koinos.contracts.pob.Isignature_data=} [properties] Properties to set
+                     */
+                    function signature_data(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * signature_data vrf_proof.
+                     * @member {Uint8Array} vrf_proof
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @instance
+                     */
+                    signature_data.prototype.vrf_proof = $util.newBuffer([]);
+    
+                    /**
+                     * signature_data vrf_hash.
+                     * @member {Uint8Array} vrf_hash
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @instance
+                     */
+                    signature_data.prototype.vrf_hash = $util.newBuffer([]);
+    
+                    /**
+                     * signature_data signature.
+                     * @member {Uint8Array} signature
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @instance
+                     */
+                    signature_data.prototype.signature = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new signature_data instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {koinos.contracts.pob.Isignature_data=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.signature_data} signature_data instance
+                     */
+                    signature_data.create = function create(properties) {
+                        return new signature_data(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified signature_data message. Does not implicitly {@link koinos.contracts.pob.signature_data.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {koinos.contracts.pob.Isignature_data} message signature_data message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    signature_data.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.vrf_proof != null && Object.hasOwnProperty.call(message, "vrf_proof"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.vrf_proof);
+                        if (message.vrf_hash != null && Object.hasOwnProperty.call(message, "vrf_hash"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.vrf_hash);
+                        if (message.signature != null && Object.hasOwnProperty.call(message, "signature"))
+                            writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.signature);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified signature_data message, length delimited. Does not implicitly {@link koinos.contracts.pob.signature_data.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {koinos.contracts.pob.Isignature_data} message signature_data message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    signature_data.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a signature_data message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.signature_data} signature_data
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    signature_data.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.signature_data();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.vrf_proof = reader.bytes();
+                                break;
+                            case 2:
+                                message.vrf_hash = reader.bytes();
+                                break;
+                            case 3:
+                                message.signature = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a signature_data message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.signature_data} signature_data
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    signature_data.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a signature_data message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    signature_data.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.vrf_proof != null && message.hasOwnProperty("vrf_proof"))
+                            if (!(message.vrf_proof && typeof message.vrf_proof.length === "number" || $util.isString(message.vrf_proof)))
+                                return "vrf_proof: buffer expected";
+                        if (message.vrf_hash != null && message.hasOwnProperty("vrf_hash"))
+                            if (!(message.vrf_hash && typeof message.vrf_hash.length === "number" || $util.isString(message.vrf_hash)))
+                                return "vrf_hash: buffer expected";
+                        if (message.signature != null && message.hasOwnProperty("signature"))
+                            if (!(message.signature && typeof message.signature.length === "number" || $util.isString(message.signature)))
+                                return "signature: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a signature_data message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.signature_data} signature_data
+                     */
+                    signature_data.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.signature_data)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.signature_data();
+                        if (object.vrf_proof != null)
+                            if (typeof object.vrf_proof === "string")
+                                $util.base64.decode(object.vrf_proof, message.vrf_proof = $util.newBuffer($util.base64.length(object.vrf_proof)), 0);
+                            else if (object.vrf_proof.length)
+                                message.vrf_proof = object.vrf_proof;
+                        if (object.vrf_hash != null)
+                            if (typeof object.vrf_hash === "string")
+                                $util.base64.decode(object.vrf_hash, message.vrf_hash = $util.newBuffer($util.base64.length(object.vrf_hash)), 0);
+                            else if (object.vrf_hash.length)
+                                message.vrf_hash = object.vrf_hash;
+                        if (object.signature != null)
+                            if (typeof object.signature === "string")
+                                $util.base64.decode(object.signature, message.signature = $util.newBuffer($util.base64.length(object.signature)), 0);
+                            else if (object.signature.length)
+                                message.signature = object.signature;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a signature_data message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @static
+                     * @param {koinos.contracts.pob.signature_data} message signature_data
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    signature_data.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.vrf_proof = "";
+                            else {
+                                object.vrf_proof = [];
+                                if (options.bytes !== Array)
+                                    object.vrf_proof = $util.newBuffer(object.vrf_proof);
+                            }
+                            if (options.bytes === String)
+                                object.vrf_hash = "";
+                            else {
+                                object.vrf_hash = [];
+                                if (options.bytes !== Array)
+                                    object.vrf_hash = $util.newBuffer(object.vrf_hash);
+                            }
+                            if (options.bytes === String)
+                                object.signature = "";
+                            else {
+                                object.signature = [];
+                                if (options.bytes !== Array)
+                                    object.signature = $util.newBuffer(object.signature);
+                            }
+                        }
+                        if (message.vrf_proof != null && message.hasOwnProperty("vrf_proof"))
+                            object.vrf_proof = options.bytes === String ? $util.base64.encode(message.vrf_proof, 0, message.vrf_proof.length) : options.bytes === Array ? Array.prototype.slice.call(message.vrf_proof) : message.vrf_proof;
+                        if (message.vrf_hash != null && message.hasOwnProperty("vrf_hash"))
+                            object.vrf_hash = options.bytes === String ? $util.base64.encode(message.vrf_hash, 0, message.vrf_hash.length) : options.bytes === Array ? Array.prototype.slice.call(message.vrf_hash) : message.vrf_hash;
+                        if (message.signature != null && message.hasOwnProperty("signature"))
+                            object.signature = options.bytes === String ? $util.base64.encode(message.signature, 0, message.signature.length) : options.bytes === Array ? Array.prototype.slice.call(message.signature) : message.signature;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this signature_data to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.signature_data
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    signature_data.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return signature_data;
+                })();
+    
+                pob.vrf_payload = (function() {
+    
+                    /**
+                     * Properties of a vrf_payload.
+                     * @memberof koinos.contracts.pob
+                     * @interface Ivrf_payload
+                     * @property {Uint8Array|null} [seed] vrf_payload seed
+                     * @property {number|Long|null} [block_time] vrf_payload block_time
+                     */
+    
+                    /**
+                     * Constructs a new vrf_payload.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a vrf_payload.
+                     * @implements Ivrf_payload
+                     * @constructor
+                     * @param {koinos.contracts.pob.Ivrf_payload=} [properties] Properties to set
+                     */
+                    function vrf_payload(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * vrf_payload seed.
+                     * @member {Uint8Array} seed
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @instance
+                     */
+                    vrf_payload.prototype.seed = $util.newBuffer([]);
+    
+                    /**
+                     * vrf_payload block_time.
+                     * @member {number|Long} block_time
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @instance
+                     */
+                    vrf_payload.prototype.block_time = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * Creates a new vrf_payload instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {koinos.contracts.pob.Ivrf_payload=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.vrf_payload} vrf_payload instance
+                     */
+                    vrf_payload.create = function create(properties) {
+                        return new vrf_payload(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified vrf_payload message. Does not implicitly {@link koinos.contracts.pob.vrf_payload.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {koinos.contracts.pob.Ivrf_payload} message vrf_payload message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    vrf_payload.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.seed != null && Object.hasOwnProperty.call(message, "seed"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.seed);
+                        if (message.block_time != null && Object.hasOwnProperty.call(message, "block_time"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.block_time);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified vrf_payload message, length delimited. Does not implicitly {@link koinos.contracts.pob.vrf_payload.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {koinos.contracts.pob.Ivrf_payload} message vrf_payload message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    vrf_payload.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a vrf_payload message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.vrf_payload} vrf_payload
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    vrf_payload.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.vrf_payload();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.seed = reader.bytes();
+                                break;
+                            case 2:
+                                message.block_time = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a vrf_payload message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.vrf_payload} vrf_payload
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    vrf_payload.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a vrf_payload message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    vrf_payload.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.seed != null && message.hasOwnProperty("seed"))
+                            if (!(message.seed && typeof message.seed.length === "number" || $util.isString(message.seed)))
+                                return "seed: buffer expected";
+                        if (message.block_time != null && message.hasOwnProperty("block_time"))
+                            if (!$util.isInteger(message.block_time) && !(message.block_time && $util.isInteger(message.block_time.low) && $util.isInteger(message.block_time.high)))
+                                return "block_time: integer|Long expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a vrf_payload message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.vrf_payload} vrf_payload
+                     */
+                    vrf_payload.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.vrf_payload)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.vrf_payload();
+                        if (object.seed != null)
+                            if (typeof object.seed === "string")
+                                $util.base64.decode(object.seed, message.seed = $util.newBuffer($util.base64.length(object.seed)), 0);
+                            else if (object.seed.length)
+                                message.seed = object.seed;
+                        if (object.block_time != null)
+                            if ($util.Long)
+                                (message.block_time = $util.Long.fromValue(object.block_time)).unsigned = true;
+                            else if (typeof object.block_time === "string")
+                                message.block_time = parseInt(object.block_time, 10);
+                            else if (typeof object.block_time === "number")
+                                message.block_time = object.block_time;
+                            else if (typeof object.block_time === "object")
+                                message.block_time = new $util.LongBits(object.block_time.low >>> 0, object.block_time.high >>> 0).toNumber(true);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a vrf_payload message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @static
+                     * @param {koinos.contracts.pob.vrf_payload} message vrf_payload
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    vrf_payload.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.seed = "";
+                            else {
+                                object.seed = [];
+                                if (options.bytes !== Array)
+                                    object.seed = $util.newBuffer(object.seed);
+                            }
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.block_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.block_time = options.longs === String ? "0" : 0;
+                        }
+                        if (message.seed != null && message.hasOwnProperty("seed"))
+                            object.seed = options.bytes === String ? $util.base64.encode(message.seed, 0, message.seed.length) : options.bytes === Array ? Array.prototype.slice.call(message.seed) : message.seed;
+                        if (message.block_time != null && message.hasOwnProperty("block_time"))
+                            if (typeof message.block_time === "number")
+                                object.block_time = options.longs === String ? String(message.block_time) : message.block_time;
+                            else
+                                object.block_time = options.longs === String ? $util.Long.prototype.toString.call(message.block_time) : options.longs === Number ? new $util.LongBits(message.block_time.low >>> 0, message.block_time.high >>> 0).toNumber(true) : message.block_time;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this vrf_payload to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.vrf_payload
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    vrf_payload.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return vrf_payload;
+                })();
+    
+                pob.register_public_key_arguments = (function() {
+    
+                    /**
+                     * Properties of a register_public_key_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iregister_public_key_arguments
+                     * @property {Uint8Array|null} [public_key] register_public_key_arguments public_key
+                     */
+    
+                    /**
+                     * Constructs a new register_public_key_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a register_public_key_arguments.
+                     * @implements Iregister_public_key_arguments
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iregister_public_key_arguments=} [properties] Properties to set
+                     */
+                    function register_public_key_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * register_public_key_arguments public_key.
+                     * @member {Uint8Array} public_key
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @instance
+                     */
+                    register_public_key_arguments.prototype.public_key = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new register_public_key_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.register_public_key_arguments} register_public_key_arguments instance
+                     */
+                    register_public_key_arguments.create = function create(properties) {
+                        return new register_public_key_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified register_public_key_arguments message. Does not implicitly {@link koinos.contracts.pob.register_public_key_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_arguments} message register_public_key_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    register_public_key_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.public_key != null && Object.hasOwnProperty.call(message, "public_key"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.public_key);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified register_public_key_arguments message, length delimited. Does not implicitly {@link koinos.contracts.pob.register_public_key_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_arguments} message register_public_key_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    register_public_key_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a register_public_key_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.register_public_key_arguments} register_public_key_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    register_public_key_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.register_public_key_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.public_key = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a register_public_key_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.register_public_key_arguments} register_public_key_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    register_public_key_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a register_public_key_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    register_public_key_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            if (!(message.public_key && typeof message.public_key.length === "number" || $util.isString(message.public_key)))
+                                return "public_key: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a register_public_key_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.register_public_key_arguments} register_public_key_arguments
+                     */
+                    register_public_key_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.register_public_key_arguments)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.register_public_key_arguments();
+                        if (object.public_key != null)
+                            if (typeof object.public_key === "string")
+                                $util.base64.decode(object.public_key, message.public_key = $util.newBuffer($util.base64.length(object.public_key)), 0);
+                            else if (object.public_key.length)
+                                message.public_key = object.public_key;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a register_public_key_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.register_public_key_arguments} message register_public_key_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    register_public_key_arguments.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            if (options.bytes === String)
+                                object.public_key = "";
+                            else {
+                                object.public_key = [];
+                                if (options.bytes !== Array)
+                                    object.public_key = $util.newBuffer(object.public_key);
+                            }
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            object.public_key = options.bytes === String ? $util.base64.encode(message.public_key, 0, message.public_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.public_key) : message.public_key;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this register_public_key_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    register_public_key_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return register_public_key_arguments;
+                })();
+    
+                pob.register_public_key_result = (function() {
+    
+                    /**
+                     * Properties of a register_public_key_result.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iregister_public_key_result
+                     */
+    
+                    /**
+                     * Constructs a new register_public_key_result.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a register_public_key_result.
+                     * @implements Iregister_public_key_result
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iregister_public_key_result=} [properties] Properties to set
+                     */
+                    function register_public_key_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * Creates a new register_public_key_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.register_public_key_result} register_public_key_result instance
+                     */
+                    register_public_key_result.create = function create(properties) {
+                        return new register_public_key_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified register_public_key_result message. Does not implicitly {@link koinos.contracts.pob.register_public_key_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_result} message register_public_key_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    register_public_key_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified register_public_key_result message, length delimited. Does not implicitly {@link koinos.contracts.pob.register_public_key_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_result} message register_public_key_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    register_public_key_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a register_public_key_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.register_public_key_result} register_public_key_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    register_public_key_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.register_public_key_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a register_public_key_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.register_public_key_result} register_public_key_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    register_public_key_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a register_public_key_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    register_public_key_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a register_public_key_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.register_public_key_result} register_public_key_result
+                     */
+                    register_public_key_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.register_public_key_result)
+                            return object;
+                        return new $root.koinos.contracts.pob.register_public_key_result();
+                    };
+    
+                    /**
+                     * Creates a plain object from a register_public_key_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @static
+                     * @param {koinos.contracts.pob.register_public_key_result} message register_public_key_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    register_public_key_result.toObject = function toObject() {
+                        return {};
+                    };
+    
+                    /**
+                     * Converts this register_public_key_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.register_public_key_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    register_public_key_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return register_public_key_result;
+                })();
+    
+                pob.burn_arguments = (function() {
+    
+                    /**
+                     * Properties of a burn_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iburn_arguments
+                     * @property {number|Long|null} [token_amount] burn_arguments token_amount
+                     * @property {Uint8Array|null} [burn_address] burn_arguments burn_address
+                     * @property {Uint8Array|null} [vhp_address] burn_arguments vhp_address
+                     */
+    
+                    /**
+                     * Constructs a new burn_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a burn_arguments.
+                     * @implements Iburn_arguments
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iburn_arguments=} [properties] Properties to set
+                     */
+                    function burn_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * burn_arguments token_amount.
+                     * @member {number|Long} token_amount
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @instance
+                     */
+                    burn_arguments.prototype.token_amount = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * burn_arguments burn_address.
+                     * @member {Uint8Array} burn_address
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @instance
+                     */
+                    burn_arguments.prototype.burn_address = $util.newBuffer([]);
+    
+                    /**
+                     * burn_arguments vhp_address.
+                     * @member {Uint8Array} vhp_address
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @instance
+                     */
+                    burn_arguments.prototype.vhp_address = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new burn_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iburn_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.burn_arguments} burn_arguments instance
+                     */
+                    burn_arguments.create = function create(properties) {
+                        return new burn_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified burn_arguments message. Does not implicitly {@link koinos.contracts.pob.burn_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iburn_arguments} message burn_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    burn_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.token_amount != null && Object.hasOwnProperty.call(message, "token_amount"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.token_amount);
+                        if (message.burn_address != null && Object.hasOwnProperty.call(message, "burn_address"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.burn_address);
+                        if (message.vhp_address != null && Object.hasOwnProperty.call(message, "vhp_address"))
+                            writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.vhp_address);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified burn_arguments message, length delimited. Does not implicitly {@link koinos.contracts.pob.burn_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iburn_arguments} message burn_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    burn_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a burn_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.burn_arguments} burn_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    burn_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.burn_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.token_amount = reader.uint64();
+                                break;
+                            case 2:
+                                message.burn_address = reader.bytes();
+                                break;
+                            case 3:
+                                message.vhp_address = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a burn_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.burn_arguments} burn_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    burn_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a burn_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    burn_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.token_amount != null && message.hasOwnProperty("token_amount"))
+                            if (!$util.isInteger(message.token_amount) && !(message.token_amount && $util.isInteger(message.token_amount.low) && $util.isInteger(message.token_amount.high)))
+                                return "token_amount: integer|Long expected";
+                        if (message.burn_address != null && message.hasOwnProperty("burn_address"))
+                            if (!(message.burn_address && typeof message.burn_address.length === "number" || $util.isString(message.burn_address)))
+                                return "burn_address: buffer expected";
+                        if (message.vhp_address != null && message.hasOwnProperty("vhp_address"))
+                            if (!(message.vhp_address && typeof message.vhp_address.length === "number" || $util.isString(message.vhp_address)))
+                                return "vhp_address: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a burn_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.burn_arguments} burn_arguments
+                     */
+                    burn_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.burn_arguments)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.burn_arguments();
+                        if (object.token_amount != null)
+                            if ($util.Long)
+                                (message.token_amount = $util.Long.fromValue(object.token_amount)).unsigned = true;
+                            else if (typeof object.token_amount === "string")
+                                message.token_amount = parseInt(object.token_amount, 10);
+                            else if (typeof object.token_amount === "number")
+                                message.token_amount = object.token_amount;
+                            else if (typeof object.token_amount === "object")
+                                message.token_amount = new $util.LongBits(object.token_amount.low >>> 0, object.token_amount.high >>> 0).toNumber(true);
+                        if (object.burn_address != null)
+                            if (typeof object.burn_address === "string")
+                                $util.base64.decode(object.burn_address, message.burn_address = $util.newBuffer($util.base64.length(object.burn_address)), 0);
+                            else if (object.burn_address.length)
+                                message.burn_address = object.burn_address;
+                        if (object.vhp_address != null)
+                            if (typeof object.vhp_address === "string")
+                                $util.base64.decode(object.vhp_address, message.vhp_address = $util.newBuffer($util.base64.length(object.vhp_address)), 0);
+                            else if (object.vhp_address.length)
+                                message.vhp_address = object.vhp_address;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a burn_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.burn_arguments} message burn_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    burn_arguments.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.token_amount = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.token_amount = options.longs === String ? "0" : 0;
+                            if (options.bytes === String)
+                                object.burn_address = "";
+                            else {
+                                object.burn_address = [];
+                                if (options.bytes !== Array)
+                                    object.burn_address = $util.newBuffer(object.burn_address);
+                            }
+                            if (options.bytes === String)
+                                object.vhp_address = "";
+                            else {
+                                object.vhp_address = [];
+                                if (options.bytes !== Array)
+                                    object.vhp_address = $util.newBuffer(object.vhp_address);
+                            }
+                        }
+                        if (message.token_amount != null && message.hasOwnProperty("token_amount"))
+                            if (typeof message.token_amount === "number")
+                                object.token_amount = options.longs === String ? String(message.token_amount) : message.token_amount;
+                            else
+                                object.token_amount = options.longs === String ? $util.Long.prototype.toString.call(message.token_amount) : options.longs === Number ? new $util.LongBits(message.token_amount.low >>> 0, message.token_amount.high >>> 0).toNumber(true) : message.token_amount;
+                        if (message.burn_address != null && message.hasOwnProperty("burn_address"))
+                            object.burn_address = options.bytes === String ? $util.base64.encode(message.burn_address, 0, message.burn_address.length) : options.bytes === Array ? Array.prototype.slice.call(message.burn_address) : message.burn_address;
+                        if (message.vhp_address != null && message.hasOwnProperty("vhp_address"))
+                            object.vhp_address = options.bytes === String ? $util.base64.encode(message.vhp_address, 0, message.vhp_address.length) : options.bytes === Array ? Array.prototype.slice.call(message.vhp_address) : message.vhp_address;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this burn_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.burn_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    burn_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return burn_arguments;
+                })();
+    
+                pob.burn_result = (function() {
+    
+                    /**
+                     * Properties of a burn_result.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iburn_result
+                     */
+    
+                    /**
+                     * Constructs a new burn_result.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a burn_result.
+                     * @implements Iburn_result
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iburn_result=} [properties] Properties to set
+                     */
+                    function burn_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * Creates a new burn_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iburn_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.burn_result} burn_result instance
+                     */
+                    burn_result.create = function create(properties) {
+                        return new burn_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified burn_result message. Does not implicitly {@link koinos.contracts.pob.burn_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iburn_result} message burn_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    burn_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified burn_result message, length delimited. Does not implicitly {@link koinos.contracts.pob.burn_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iburn_result} message burn_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    burn_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a burn_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.burn_result} burn_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    burn_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.burn_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a burn_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.burn_result} burn_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    burn_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a burn_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    burn_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a burn_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.burn_result} burn_result
+                     */
+                    burn_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.burn_result)
+                            return object;
+                        return new $root.koinos.contracts.pob.burn_result();
+                    };
+    
+                    /**
+                     * Creates a plain object from a burn_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @static
+                     * @param {koinos.contracts.pob.burn_result} message burn_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    burn_result.toObject = function toObject() {
+                        return {};
+                    };
+    
+                    /**
+                     * Converts this burn_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.burn_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    burn_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return burn_result;
+                })();
+    
+                pob.get_metadata_arguments = (function() {
+    
+                    /**
+                     * Properties of a get_metadata_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iget_metadata_arguments
+                     */
+    
+                    /**
+                     * Constructs a new get_metadata_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a get_metadata_arguments.
+                     * @implements Iget_metadata_arguments
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iget_metadata_arguments=} [properties] Properties to set
+                     */
+                    function get_metadata_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * Creates a new get_metadata_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_metadata_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.get_metadata_arguments} get_metadata_arguments instance
+                     */
+                    get_metadata_arguments.create = function create(properties) {
+                        return new get_metadata_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified get_metadata_arguments message. Does not implicitly {@link koinos.contracts.pob.get_metadata_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_metadata_arguments} message get_metadata_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_metadata_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified get_metadata_arguments message, length delimited. Does not implicitly {@link koinos.contracts.pob.get_metadata_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_metadata_arguments} message get_metadata_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_metadata_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a get_metadata_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.get_metadata_arguments} get_metadata_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_metadata_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.get_metadata_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a get_metadata_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.get_metadata_arguments} get_metadata_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_metadata_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a get_metadata_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    get_metadata_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a get_metadata_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.get_metadata_arguments} get_metadata_arguments
+                     */
+                    get_metadata_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.get_metadata_arguments)
+                            return object;
+                        return new $root.koinos.contracts.pob.get_metadata_arguments();
+                    };
+    
+                    /**
+                     * Creates a plain object from a get_metadata_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.get_metadata_arguments} message get_metadata_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    get_metadata_arguments.toObject = function toObject() {
+                        return {};
+                    };
+    
+                    /**
+                     * Converts this get_metadata_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.get_metadata_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    get_metadata_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return get_metadata_arguments;
+                })();
+    
+                pob.get_metadata_result = (function() {
+    
+                    /**
+                     * Properties of a get_metadata_result.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iget_metadata_result
+                     * @property {koinos.contracts.pob.Imetadata|null} [metadata] get_metadata_result metadata
+                     */
+    
+                    /**
+                     * Constructs a new get_metadata_result.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a get_metadata_result.
+                     * @implements Iget_metadata_result
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iget_metadata_result=} [properties] Properties to set
+                     */
+                    function get_metadata_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * get_metadata_result metadata.
+                     * @member {koinos.contracts.pob.Imetadata|null|undefined} metadata
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @instance
+                     */
+                    get_metadata_result.prototype.metadata = null;
+    
+                    /**
+                     * Creates a new get_metadata_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_metadata_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.get_metadata_result} get_metadata_result instance
+                     */
+                    get_metadata_result.create = function create(properties) {
+                        return new get_metadata_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified get_metadata_result message. Does not implicitly {@link koinos.contracts.pob.get_metadata_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_metadata_result} message get_metadata_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_metadata_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.metadata != null && Object.hasOwnProperty.call(message, "metadata"))
+                            $root.koinos.contracts.pob.metadata.encode(message.metadata, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified get_metadata_result message, length delimited. Does not implicitly {@link koinos.contracts.pob.get_metadata_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_metadata_result} message get_metadata_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_metadata_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a get_metadata_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.get_metadata_result} get_metadata_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_metadata_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.get_metadata_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.metadata = $root.koinos.contracts.pob.metadata.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a get_metadata_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.get_metadata_result} get_metadata_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_metadata_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a get_metadata_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    get_metadata_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.metadata != null && message.hasOwnProperty("metadata")) {
+                            var error = $root.koinos.contracts.pob.metadata.verify(message.metadata);
+                            if (error)
+                                return "metadata." + error;
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a get_metadata_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.get_metadata_result} get_metadata_result
+                     */
+                    get_metadata_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.get_metadata_result)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.get_metadata_result();
+                        if (object.metadata != null) {
+                            if (typeof object.metadata !== "object")
+                                throw TypeError(".koinos.contracts.pob.get_metadata_result.metadata: object expected");
+                            message.metadata = $root.koinos.contracts.pob.metadata.fromObject(object.metadata);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a get_metadata_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @static
+                     * @param {koinos.contracts.pob.get_metadata_result} message get_metadata_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    get_metadata_result.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.metadata = null;
+                        if (message.metadata != null && message.hasOwnProperty("metadata"))
+                            object.metadata = $root.koinos.contracts.pob.metadata.toObject(message.metadata, options);
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this get_metadata_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.get_metadata_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    get_metadata_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return get_metadata_result;
+                })();
+    
+                pob.register_public_key_event = (function() {
+    
+                    /**
+                     * Properties of a register_public_key_event.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iregister_public_key_event
+                     * @property {Uint8Array|null} [public_key] register_public_key_event public_key
+                     * @property {Uint8Array|null} [address] register_public_key_event address
+                     */
+    
+                    /**
+                     * Constructs a new register_public_key_event.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a register_public_key_event.
+                     * @implements Iregister_public_key_event
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iregister_public_key_event=} [properties] Properties to set
+                     */
+                    function register_public_key_event(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * register_public_key_event public_key.
+                     * @member {Uint8Array} public_key
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @instance
+                     */
+                    register_public_key_event.prototype.public_key = $util.newBuffer([]);
+    
+                    /**
+                     * register_public_key_event address.
+                     * @member {Uint8Array} address
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @instance
+                     */
+                    register_public_key_event.prototype.address = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new register_public_key_event instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_event=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.register_public_key_event} register_public_key_event instance
+                     */
+                    register_public_key_event.create = function create(properties) {
+                        return new register_public_key_event(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified register_public_key_event message. Does not implicitly {@link koinos.contracts.pob.register_public_key_event.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_event} message register_public_key_event message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    register_public_key_event.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.public_key != null && Object.hasOwnProperty.call(message, "public_key"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.public_key);
+                        if (message.address != null && Object.hasOwnProperty.call(message, "address"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.address);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified register_public_key_event message, length delimited. Does not implicitly {@link koinos.contracts.pob.register_public_key_event.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {koinos.contracts.pob.Iregister_public_key_event} message register_public_key_event message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    register_public_key_event.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a register_public_key_event message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.register_public_key_event} register_public_key_event
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    register_public_key_event.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.register_public_key_event();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.public_key = reader.bytes();
+                                break;
+                            case 2:
+                                message.address = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a register_public_key_event message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.register_public_key_event} register_public_key_event
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    register_public_key_event.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a register_public_key_event message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    register_public_key_event.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            if (!(message.public_key && typeof message.public_key.length === "number" || $util.isString(message.public_key)))
+                                return "public_key: buffer expected";
+                        if (message.address != null && message.hasOwnProperty("address"))
+                            if (!(message.address && typeof message.address.length === "number" || $util.isString(message.address)))
+                                return "address: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a register_public_key_event message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.register_public_key_event} register_public_key_event
+                     */
+                    register_public_key_event.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.register_public_key_event)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.register_public_key_event();
+                        if (object.public_key != null)
+                            if (typeof object.public_key === "string")
+                                $util.base64.decode(object.public_key, message.public_key = $util.newBuffer($util.base64.length(object.public_key)), 0);
+                            else if (object.public_key.length)
+                                message.public_key = object.public_key;
+                        if (object.address != null)
+                            if (typeof object.address === "string")
+                                $util.base64.decode(object.address, message.address = $util.newBuffer($util.base64.length(object.address)), 0);
+                            else if (object.address.length)
+                                message.address = object.address;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a register_public_key_event message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @static
+                     * @param {koinos.contracts.pob.register_public_key_event} message register_public_key_event
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    register_public_key_event.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.public_key = "";
+                            else {
+                                object.public_key = [];
+                                if (options.bytes !== Array)
+                                    object.public_key = $util.newBuffer(object.public_key);
+                            }
+                            if (options.bytes === String)
+                                object.address = "";
+                            else {
+                                object.address = [];
+                                if (options.bytes !== Array)
+                                    object.address = $util.newBuffer(object.address);
+                            }
+                        }
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            object.public_key = options.bytes === String ? $util.base64.encode(message.public_key, 0, message.public_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.public_key) : message.public_key;
+                        if (message.address != null && message.hasOwnProperty("address"))
+                            object.address = options.bytes === String ? $util.base64.encode(message.address, 0, message.address.length) : options.bytes === Array ? Array.prototype.slice.call(message.address) : message.address;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this register_public_key_event to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    register_public_key_event.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return register_public_key_event;
+                })();
+    
+                return pob;
+            })();
+    
             contracts.resources = (function() {
     
                 /**
