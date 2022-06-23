@@ -21461,6 +21461,9 @@ export namespace koinos {
 
             /** check_authority_arguments account */
             account?: (Uint8Array|null);
+
+            /** check_authority_arguments data */
+            data?: (Uint8Array|null);
         }
 
         /** Represents a check_authority_arguments. */
@@ -21477,6 +21480,9 @@ export namespace koinos {
 
             /** check_authority_arguments account. */
             public account: Uint8Array;
+
+            /** check_authority_arguments data. */
+            public data: Uint8Array;
 
             /**
              * Creates a new check_authority_arguments instance using the specified properties.
@@ -21655,97 +21661,109 @@ export namespace koinos {
             contract_upload = 2
         }
 
-        /** Properties of a call_target. */
-        interface Icall_target {
+        /** Properties of a call_data. */
+        interface Icall_data {
 
-            /** call_target contract_id */
+            /** call_data contract_id */
             contract_id?: (Uint8Array|null);
 
-            /** call_target entry_point */
+            /** call_data entry_point */
             entry_point?: (number|null);
+
+            /** call_data caller */
+            caller?: (Uint8Array|null);
+
+            /** call_data data */
+            data?: (Uint8Array|null);
         }
 
-        /** Represents a call_target. */
-        class call_target implements Icall_target {
+        /** Represents a call_data. */
+        class call_data implements Icall_data {
 
             /**
-             * Constructs a new call_target.
+             * Constructs a new call_data.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.chain.Icall_target);
+            constructor(properties?: koinos.chain.Icall_data);
 
-            /** call_target contract_id. */
+            /** call_data contract_id. */
             public contract_id: Uint8Array;
 
-            /** call_target entry_point. */
+            /** call_data entry_point. */
             public entry_point: number;
 
+            /** call_data caller. */
+            public caller: Uint8Array;
+
+            /** call_data data. */
+            public data: Uint8Array;
+
             /**
-             * Creates a new call_target instance using the specified properties.
+             * Creates a new call_data instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns call_target instance
+             * @returns call_data instance
              */
-            public static create(properties?: koinos.chain.Icall_target): koinos.chain.call_target;
+            public static create(properties?: koinos.chain.Icall_data): koinos.chain.call_data;
 
             /**
-             * Encodes the specified call_target message. Does not implicitly {@link koinos.chain.call_target.verify|verify} messages.
-             * @param message call_target message or plain object to encode
+             * Encodes the specified call_data message. Does not implicitly {@link koinos.chain.call_data.verify|verify} messages.
+             * @param message call_data message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.chain.Icall_target, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.chain.Icall_data, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified call_target message, length delimited. Does not implicitly {@link koinos.chain.call_target.verify|verify} messages.
-             * @param message call_target message or plain object to encode
+             * Encodes the specified call_data message, length delimited. Does not implicitly {@link koinos.chain.call_data.verify|verify} messages.
+             * @param message call_data message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.chain.Icall_target, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.chain.Icall_data, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes a call_target message from the specified reader or buffer.
+             * Decodes a call_data message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns call_target
+             * @returns call_data
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.call_target;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.call_data;
 
             /**
-             * Decodes a call_target message from the specified reader or buffer, length delimited.
+             * Decodes a call_data message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns call_target
+             * @returns call_data
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.call_target;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.call_data;
 
             /**
-             * Verifies a call_target message.
+             * Verifies a call_data message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates a call_target message from a plain object. Also converts values to their respective internal types.
+             * Creates a call_data message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns call_target
+             * @returns call_data
              */
-            public static fromObject(object: { [k: string]: any }): koinos.chain.call_target;
+            public static fromObject(object: { [k: string]: any }): koinos.chain.call_data;
 
             /**
-             * Creates a plain object from a call_target message. Also converts values to other types if specified.
-             * @param message call_target
+             * Creates a plain object from a call_data message. Also converts values to other types if specified.
+             * @param message call_data
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.chain.call_target, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.chain.call_data, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this call_target to JSON.
+             * Converts this call_data to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -21758,7 +21776,7 @@ export namespace koinos {
             type?: (koinos.chain.authorization_type|null);
 
             /** authorize_arguments call */
-            call?: (koinos.chain.Icall_target|null);
+            call?: (koinos.chain.Icall_data|null);
         }
 
         /** Represents an authorize_arguments. */
@@ -21774,7 +21792,7 @@ export namespace koinos {
             public type: koinos.chain.authorization_type;
 
             /** authorize_arguments call. */
-            public call?: (koinos.chain.Icall_target|null);
+            public call?: (koinos.chain.Icall_data|null);
 
             /** authorize_arguments _call. */
             public _call?: "call";

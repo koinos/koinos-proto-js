@@ -50096,6 +50096,7 @@
                  * @interface Icheck_authority_arguments
                  * @property {koinos.chain.authorization_type|null} [type] check_authority_arguments type
                  * @property {Uint8Array|null} [account] check_authority_arguments account
+                 * @property {Uint8Array|null} [data] check_authority_arguments data
                  */
     
                 /**
@@ -50130,6 +50131,14 @@
                 check_authority_arguments.prototype.account = $util.newBuffer([]);
     
                 /**
+                 * check_authority_arguments data.
+                 * @member {Uint8Array} data
+                 * @memberof koinos.chain.check_authority_arguments
+                 * @instance
+                 */
+                check_authority_arguments.prototype.data = $util.newBuffer([]);
+    
+                /**
                  * Creates a new check_authority_arguments instance using the specified properties.
                  * @function create
                  * @memberof koinos.chain.check_authority_arguments
@@ -50157,6 +50166,8 @@
                         writer.uint32(/* id 1, wireType 0 =*/8).int32(message.type);
                     if (message.account != null && Object.hasOwnProperty.call(message, "account"))
                         writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.account);
+                    if (message.data != null && Object.hasOwnProperty.call(message, "data"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.data);
                     return writer;
                 };
     
@@ -50196,6 +50207,9 @@
                             break;
                         case 2:
                             message.account = reader.bytes();
+                            break;
+                        case 3:
+                            message.data = reader.bytes();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -50244,6 +50258,9 @@
                     if (message.account != null && message.hasOwnProperty("account"))
                         if (!(message.account && typeof message.account.length === "number" || $util.isString(message.account)))
                             return "account: buffer expected";
+                    if (message.data != null && message.hasOwnProperty("data"))
+                        if (!(message.data && typeof message.data.length === "number" || $util.isString(message.data)))
+                            return "data: buffer expected";
                     return null;
                 };
     
@@ -50278,6 +50295,11 @@
                             $util.base64.decode(object.account, message.account = $util.newBuffer($util.base64.length(object.account)), 0);
                         else if (object.account.length)
                             message.account = object.account;
+                    if (object.data != null)
+                        if (typeof object.data === "string")
+                            $util.base64.decode(object.data, message.data = $util.newBuffer($util.base64.length(object.data)), 0);
+                        else if (object.data.length)
+                            message.data = object.data;
                     return message;
                 };
     
@@ -50303,11 +50325,20 @@
                             if (options.bytes !== Array)
                                 object.account = $util.newBuffer(object.account);
                         }
+                        if (options.bytes === String)
+                            object.data = "";
+                        else {
+                            object.data = [];
+                            if (options.bytes !== Array)
+                                object.data = $util.newBuffer(object.data);
+                        }
                     }
                     if (message.type != null && message.hasOwnProperty("type"))
                         object.type = options.enums === String ? $root.koinos.chain.authorization_type[message.type] : message.type;
                     if (message.account != null && message.hasOwnProperty("account"))
                         object.account = options.bytes === String ? $util.base64.encode(message.account, 0, message.account.length) : options.bytes === Array ? Array.prototype.slice.call(message.account) : message.account;
+                    if (message.data != null && message.hasOwnProperty("data"))
+                        object.data = options.bytes === String ? $util.base64.encode(message.data, 0, message.data.length) : options.bytes === Array ? Array.prototype.slice.call(message.data) : message.data;
                     return object;
                 };
     
@@ -50548,25 +50579,27 @@
                 return values;
             })();
     
-            chain.call_target = (function() {
+            chain.call_data = (function() {
     
                 /**
-                 * Properties of a call_target.
+                 * Properties of a call_data.
                  * @memberof koinos.chain
-                 * @interface Icall_target
-                 * @property {Uint8Array|null} [contract_id] call_target contract_id
-                 * @property {number|null} [entry_point] call_target entry_point
+                 * @interface Icall_data
+                 * @property {Uint8Array|null} [contract_id] call_data contract_id
+                 * @property {number|null} [entry_point] call_data entry_point
+                 * @property {Uint8Array|null} [caller] call_data caller
+                 * @property {Uint8Array|null} [data] call_data data
                  */
     
                 /**
-                 * Constructs a new call_target.
+                 * Constructs a new call_data.
                  * @memberof koinos.chain
-                 * @classdesc Represents a call_target.
-                 * @implements Icall_target
+                 * @classdesc Represents a call_data.
+                 * @implements Icall_data
                  * @constructor
-                 * @param {koinos.chain.Icall_target=} [properties] Properties to set
+                 * @param {koinos.chain.Icall_data=} [properties] Properties to set
                  */
-                function call_target(properties) {
+                function call_data(properties) {
                     if (properties)
                         for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                             if (properties[keys[i]] != null)
@@ -50574,80 +50607,100 @@
                 }
     
                 /**
-                 * call_target contract_id.
+                 * call_data contract_id.
                  * @member {Uint8Array} contract_id
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @instance
                  */
-                call_target.prototype.contract_id = $util.newBuffer([]);
+                call_data.prototype.contract_id = $util.newBuffer([]);
     
                 /**
-                 * call_target entry_point.
+                 * call_data entry_point.
                  * @member {number} entry_point
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @instance
                  */
-                call_target.prototype.entry_point = 0;
+                call_data.prototype.entry_point = 0;
     
                 /**
-                 * Creates a new call_target instance using the specified properties.
-                 * @function create
-                 * @memberof koinos.chain.call_target
-                 * @static
-                 * @param {koinos.chain.Icall_target=} [properties] Properties to set
-                 * @returns {koinos.chain.call_target} call_target instance
+                 * call_data caller.
+                 * @member {Uint8Array} caller
+                 * @memberof koinos.chain.call_data
+                 * @instance
                  */
-                call_target.create = function create(properties) {
-                    return new call_target(properties);
+                call_data.prototype.caller = $util.newBuffer([]);
+    
+                /**
+                 * call_data data.
+                 * @member {Uint8Array} data
+                 * @memberof koinos.chain.call_data
+                 * @instance
+                 */
+                call_data.prototype.data = $util.newBuffer([]);
+    
+                /**
+                 * Creates a new call_data instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.chain.call_data
+                 * @static
+                 * @param {koinos.chain.Icall_data=} [properties] Properties to set
+                 * @returns {koinos.chain.call_data} call_data instance
+                 */
+                call_data.create = function create(properties) {
+                    return new call_data(properties);
                 };
     
                 /**
-                 * Encodes the specified call_target message. Does not implicitly {@link koinos.chain.call_target.verify|verify} messages.
+                 * Encodes the specified call_data message. Does not implicitly {@link koinos.chain.call_data.verify|verify} messages.
                  * @function encode
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
-                 * @param {koinos.chain.Icall_target} message call_target message or plain object to encode
+                 * @param {koinos.chain.Icall_data} message call_data message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                call_target.encode = function encode(message, writer) {
+                call_data.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
                     if (message.contract_id != null && Object.hasOwnProperty.call(message, "contract_id"))
                         writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.contract_id);
                     if (message.entry_point != null && Object.hasOwnProperty.call(message, "entry_point"))
                         writer.uint32(/* id 2, wireType 0 =*/16).uint32(message.entry_point);
+                    if (message.caller != null && Object.hasOwnProperty.call(message, "caller"))
+                        writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.caller);
+                    if (message.data != null && Object.hasOwnProperty.call(message, "data"))
+                        writer.uint32(/* id 4, wireType 2 =*/34).bytes(message.data);
                     return writer;
                 };
     
                 /**
-                 * Encodes the specified call_target message, length delimited. Does not implicitly {@link koinos.chain.call_target.verify|verify} messages.
+                 * Encodes the specified call_data message, length delimited. Does not implicitly {@link koinos.chain.call_data.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
-                 * @param {koinos.chain.Icall_target} message call_target message or plain object to encode
+                 * @param {koinos.chain.Icall_data} message call_data message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
-                call_target.encodeDelimited = function encodeDelimited(message, writer) {
+                call_data.encodeDelimited = function encodeDelimited(message, writer) {
                     return this.encode(message, writer).ldelim();
                 };
     
                 /**
-                 * Decodes a call_target message from the specified reader or buffer.
+                 * Decodes a call_data message from the specified reader or buffer.
                  * @function decode
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {koinos.chain.call_target} call_target
+                 * @returns {koinos.chain.call_data} call_data
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                call_target.decode = function decode(reader, length) {
+                call_data.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.call_target();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.call_data();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -50656,6 +50709,12 @@
                             break;
                         case 2:
                             message.entry_point = reader.uint32();
+                            break;
+                        case 3:
+                            message.caller = reader.bytes();
+                            break;
+                        case 4:
+                            message.data = reader.bytes();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -50666,30 +50725,30 @@
                 };
     
                 /**
-                 * Decodes a call_target message from the specified reader or buffer, length delimited.
+                 * Decodes a call_data message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {koinos.chain.call_target} call_target
+                 * @returns {koinos.chain.call_data} call_data
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                call_target.decodeDelimited = function decodeDelimited(reader) {
+                call_data.decodeDelimited = function decodeDelimited(reader) {
                     if (!(reader instanceof $Reader))
                         reader = new $Reader(reader);
                     return this.decode(reader, reader.uint32());
                 };
     
                 /**
-                 * Verifies a call_target message.
+                 * Verifies a call_data message.
                  * @function verify
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
                  */
-                call_target.verify = function verify(message) {
+                call_data.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
                     if (message.contract_id != null && message.hasOwnProperty("contract_id"))
@@ -50698,21 +50757,27 @@
                     if (message.entry_point != null && message.hasOwnProperty("entry_point"))
                         if (!$util.isInteger(message.entry_point))
                             return "entry_point: integer expected";
+                    if (message.caller != null && message.hasOwnProperty("caller"))
+                        if (!(message.caller && typeof message.caller.length === "number" || $util.isString(message.caller)))
+                            return "caller: buffer expected";
+                    if (message.data != null && message.hasOwnProperty("data"))
+                        if (!(message.data && typeof message.data.length === "number" || $util.isString(message.data)))
+                            return "data: buffer expected";
                     return null;
                 };
     
                 /**
-                 * Creates a call_target message from a plain object. Also converts values to their respective internal types.
+                 * Creates a call_data message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {koinos.chain.call_target} call_target
+                 * @returns {koinos.chain.call_data} call_data
                  */
-                call_target.fromObject = function fromObject(object) {
-                    if (object instanceof $root.koinos.chain.call_target)
+                call_data.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.chain.call_data)
                         return object;
-                    var message = new $root.koinos.chain.call_target();
+                    var message = new $root.koinos.chain.call_data();
                     if (object.contract_id != null)
                         if (typeof object.contract_id === "string")
                             $util.base64.decode(object.contract_id, message.contract_id = $util.newBuffer($util.base64.length(object.contract_id)), 0);
@@ -50720,19 +50785,29 @@
                             message.contract_id = object.contract_id;
                     if (object.entry_point != null)
                         message.entry_point = object.entry_point >>> 0;
+                    if (object.caller != null)
+                        if (typeof object.caller === "string")
+                            $util.base64.decode(object.caller, message.caller = $util.newBuffer($util.base64.length(object.caller)), 0);
+                        else if (object.caller.length)
+                            message.caller = object.caller;
+                    if (object.data != null)
+                        if (typeof object.data === "string")
+                            $util.base64.decode(object.data, message.data = $util.newBuffer($util.base64.length(object.data)), 0);
+                        else if (object.data.length)
+                            message.data = object.data;
                     return message;
                 };
     
                 /**
-                 * Creates a plain object from a call_target message. Also converts values to other types if specified.
+                 * Creates a plain object from a call_data message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @static
-                 * @param {koinos.chain.call_target} message call_target
+                 * @param {koinos.chain.call_data} message call_data
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                call_target.toObject = function toObject(message, options) {
+                call_data.toObject = function toObject(message, options) {
                     if (!options)
                         options = {};
                     var object = {};
@@ -50745,26 +50820,44 @@
                                 object.contract_id = $util.newBuffer(object.contract_id);
                         }
                         object.entry_point = 0;
+                        if (options.bytes === String)
+                            object.caller = "";
+                        else {
+                            object.caller = [];
+                            if (options.bytes !== Array)
+                                object.caller = $util.newBuffer(object.caller);
+                        }
+                        if (options.bytes === String)
+                            object.data = "";
+                        else {
+                            object.data = [];
+                            if (options.bytes !== Array)
+                                object.data = $util.newBuffer(object.data);
+                        }
                     }
                     if (message.contract_id != null && message.hasOwnProperty("contract_id"))
                         object.contract_id = options.bytes === String ? $util.base64.encode(message.contract_id, 0, message.contract_id.length) : options.bytes === Array ? Array.prototype.slice.call(message.contract_id) : message.contract_id;
                     if (message.entry_point != null && message.hasOwnProperty("entry_point"))
                         object.entry_point = message.entry_point;
+                    if (message.caller != null && message.hasOwnProperty("caller"))
+                        object.caller = options.bytes === String ? $util.base64.encode(message.caller, 0, message.caller.length) : options.bytes === Array ? Array.prototype.slice.call(message.caller) : message.caller;
+                    if (message.data != null && message.hasOwnProperty("data"))
+                        object.data = options.bytes === String ? $util.base64.encode(message.data, 0, message.data.length) : options.bytes === Array ? Array.prototype.slice.call(message.data) : message.data;
                     return object;
                 };
     
                 /**
-                 * Converts this call_target to JSON.
+                 * Converts this call_data to JSON.
                  * @function toJSON
-                 * @memberof koinos.chain.call_target
+                 * @memberof koinos.chain.call_data
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
-                call_target.prototype.toJSON = function toJSON() {
+                call_data.prototype.toJSON = function toJSON() {
                     return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                 };
     
-                return call_target;
+                return call_data;
             })();
     
             chain.authorize_arguments = (function() {
@@ -50774,7 +50867,7 @@
                  * @memberof koinos.chain
                  * @interface Iauthorize_arguments
                  * @property {koinos.chain.authorization_type|null} [type] authorize_arguments type
-                 * @property {koinos.chain.Icall_target|null} [call] authorize_arguments call
+                 * @property {koinos.chain.Icall_data|null} [call] authorize_arguments call
                  */
     
                 /**
@@ -50802,7 +50895,7 @@
     
                 /**
                  * authorize_arguments call.
-                 * @member {koinos.chain.Icall_target|null|undefined} call
+                 * @member {koinos.chain.Icall_data|null|undefined} call
                  * @memberof koinos.chain.authorize_arguments
                  * @instance
                  */
@@ -50849,7 +50942,7 @@
                     if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                         writer.uint32(/* id 1, wireType 0 =*/8).int32(message.type);
                     if (message.call != null && Object.hasOwnProperty.call(message, "call"))
-                        $root.koinos.chain.call_target.encode(message.call, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                        $root.koinos.chain.call_data.encode(message.call, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
                 };
     
@@ -50888,7 +50981,7 @@
                             message.type = reader.int32();
                             break;
                         case 2:
-                            message.call = $root.koinos.chain.call_target.decode(reader, reader.uint32());
+                            message.call = $root.koinos.chain.call_data.decode(reader, reader.uint32());
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -50938,7 +51031,7 @@
                     if (message.call != null && message.hasOwnProperty("call")) {
                         properties._call = 1;
                         {
-                            var error = $root.koinos.chain.call_target.verify(message.call);
+                            var error = $root.koinos.chain.call_data.verify(message.call);
                             if (error)
                                 return "call." + error;
                         }
@@ -50975,7 +51068,7 @@
                     if (object.call != null) {
                         if (typeof object.call !== "object")
                             throw TypeError(".koinos.chain.authorize_arguments.call: object expected");
-                        message.call = $root.koinos.chain.call_target.fromObject(object.call);
+                        message.call = $root.koinos.chain.call_data.fromObject(object.call);
                     }
                     return message;
                 };
@@ -50998,7 +51091,7 @@
                     if (message.type != null && message.hasOwnProperty("type"))
                         object.type = options.enums === String ? $root.koinos.chain.authorization_type[message.type] : message.type;
                     if (message.call != null && message.hasOwnProperty("call")) {
-                        object.call = $root.koinos.chain.call_target.toObject(message.call, options);
+                        object.call = $root.koinos.chain.call_data.toObject(message.call, options);
                         if (options.oneofs)
                             object._call = "call";
                     }
