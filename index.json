@@ -169,7 +169,7 @@
                 },
                 "get_metadata_result": {
                   "fields": {
-                    "metadata": {
+                    "value": {
                       "type": "metadata",
                       "id": 1
                     }

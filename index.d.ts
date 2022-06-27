@@ -862,8 +862,8 @@ export namespace koinos {
             /** Properties of a get_metadata_result. */
             interface Iget_metadata_result {
 
-                /** get_metadata_result metadata */
-                metadata?: (koinos.contracts.pob.Imetadata|null);
+                /** get_metadata_result value */
+                value?: (koinos.contracts.pob.Imetadata|null);
             }
 
             /** Represents a get_metadata_result. */
@@ -875,8 +875,8 @@ export namespace koinos {
                  */
                 constructor(properties?: koinos.contracts.pob.Iget_metadata_result);
 
-                /** get_metadata_result metadata. */
-                public metadata?: (koinos.contracts.pob.Imetadata|null);
+                /** get_metadata_result value. */
+                public value?: (koinos.contracts.pob.Imetadata|null);
 
                 /**
                  * Creates a new get_metadata_result instance using the specified properties.

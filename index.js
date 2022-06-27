@@ -2001,7 +2001,7 @@
                      * Properties of a get_metadata_result.
                      * @memberof koinos.contracts.pob
                      * @interface Iget_metadata_result
-                     * @property {koinos.contracts.pob.Imetadata|null} [metadata] get_metadata_result metadata
+                     * @property {koinos.contracts.pob.Imetadata|null} [value] get_metadata_result value
                      */
     
                     /**
@@ -2020,12 +2020,12 @@
                     }
     
                     /**
-                     * get_metadata_result metadata.
-                     * @member {koinos.contracts.pob.Imetadata|null|undefined} metadata
+                     * get_metadata_result value.
+                     * @member {koinos.contracts.pob.Imetadata|null|undefined} value
                      * @memberof koinos.contracts.pob.get_metadata_result
                      * @instance
                      */
-                    get_metadata_result.prototype.metadata = null;
+                    get_metadata_result.prototype.value = null;
     
                     /**
                      * Creates a new get_metadata_result instance using the specified properties.
@@ -2051,8 +2051,8 @@
                     get_metadata_result.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.metadata != null && Object.hasOwnProperty.call(message, "metadata"))
-                            $root.koinos.contracts.pob.metadata.encode(message.metadata, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                            $root.koinos.contracts.pob.metadata.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
                         return writer;
                     };
     
@@ -2088,7 +2088,7 @@
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
                             case 1:
-                                message.metadata = $root.koinos.contracts.pob.metadata.decode(reader, reader.uint32());
+                                message.value = $root.koinos.contracts.pob.metadata.decode(reader, reader.uint32());
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -2125,10 +2125,10 @@
                     get_metadata_result.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
-                        if (message.metadata != null && message.hasOwnProperty("metadata")) {
-                            var error = $root.koinos.contracts.pob.metadata.verify(message.metadata);
+                        if (message.value != null && message.hasOwnProperty("value")) {
+                            var error = $root.koinos.contracts.pob.metadata.verify(message.value);
                             if (error)
-                                return "metadata." + error;
+                                return "value." + error;
                         }
                         return null;
                     };
@@ -2145,10 +2145,10 @@
                         if (object instanceof $root.koinos.contracts.pob.get_metadata_result)
                             return object;
                         var message = new $root.koinos.contracts.pob.get_metadata_result();
-                        if (object.metadata != null) {
-                            if (typeof object.metadata !== "object")
-                                throw TypeError(".koinos.contracts.pob.get_metadata_result.metadata: object expected");
-                            message.metadata = $root.koinos.contracts.pob.metadata.fromObject(object.metadata);
+                        if (object.value != null) {
+                            if (typeof object.value !== "object")
+                                throw TypeError(".koinos.contracts.pob.get_metadata_result.value: object expected");
+                            message.value = $root.koinos.contracts.pob.metadata.fromObject(object.value);
                         }
                         return message;
                     };
@@ -2167,9 +2167,9 @@
                             options = {};
                         var object = {};
                         if (options.defaults)
-                            object.metadata = null;
-                        if (message.metadata != null && message.hasOwnProperty("metadata"))
-                            object.metadata = $root.koinos.contracts.pob.metadata.toObject(message.metadata, options);
+                            object.value = null;
+                        if (message.value != null && message.hasOwnProperty("value"))
+                            object.value = $root.koinos.contracts.pob.metadata.toObject(message.value, options);
                         return object;
                     };
     
