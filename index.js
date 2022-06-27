@@ -35078,7 +35078,7 @@
              * system_call_id enum.
              * @name koinos.chain.system_call_id
              * @enum {number}
-             * @property {number} reserved_id=0 reserved_id value
+             * @property {number} nop=0 nop value
              * @property {number} get_head_info=1 get_head_info value
              * @property {number} apply_block=2 apply_block value
              * @property {number} apply_transaction=3 apply_transaction value
@@ -35127,7 +35127,7 @@
              */
             chain.system_call_id = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
-                values[valuesById[0] = "reserved_id"] = 0;
+                values[valuesById[0] = "nop"] = 0;
                 values[valuesById[1] = "get_head_info"] = 1;
                 values[valuesById[2] = "apply_block"] = 2;
                 values[valuesById[3] = "apply_transaction"] = 3;
@@ -35230,6 +35230,326 @@
                 values[valuesById[-204] = "malformed_transaction"] = -204;
                 values[valuesById[-205] = "block_resource_failure"] = -205;
                 return values;
+            })();
+    
+            chain.nop_arguments = (function() {
+    
+                /**
+                 * Properties of a nop_arguments.
+                 * @memberof koinos.chain
+                 * @interface Inop_arguments
+                 */
+    
+                /**
+                 * Constructs a new nop_arguments.
+                 * @memberof koinos.chain
+                 * @classdesc Represents a nop_arguments.
+                 * @implements Inop_arguments
+                 * @constructor
+                 * @param {koinos.chain.Inop_arguments=} [properties] Properties to set
+                 */
+                function nop_arguments(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Creates a new nop_arguments instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {koinos.chain.Inop_arguments=} [properties] Properties to set
+                 * @returns {koinos.chain.nop_arguments} nop_arguments instance
+                 */
+                nop_arguments.create = function create(properties) {
+                    return new nop_arguments(properties);
+                };
+    
+                /**
+                 * Encodes the specified nop_arguments message. Does not implicitly {@link koinos.chain.nop_arguments.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {koinos.chain.Inop_arguments} message nop_arguments message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                nop_arguments.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified nop_arguments message, length delimited. Does not implicitly {@link koinos.chain.nop_arguments.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {koinos.chain.Inop_arguments} message nop_arguments message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                nop_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a nop_arguments message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.chain.nop_arguments} nop_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                nop_arguments.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.nop_arguments();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a nop_arguments message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.chain.nop_arguments} nop_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                nop_arguments.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a nop_arguments message.
+                 * @function verify
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                nop_arguments.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a nop_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.chain.nop_arguments} nop_arguments
+                 */
+                nop_arguments.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.chain.nop_arguments)
+                        return object;
+                    return new $root.koinos.chain.nop_arguments();
+                };
+    
+                /**
+                 * Creates a plain object from a nop_arguments message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.chain.nop_arguments
+                 * @static
+                 * @param {koinos.chain.nop_arguments} message nop_arguments
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                nop_arguments.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this nop_arguments to JSON.
+                 * @function toJSON
+                 * @memberof koinos.chain.nop_arguments
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                nop_arguments.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return nop_arguments;
+            })();
+    
+            chain.nop_result = (function() {
+    
+                /**
+                 * Properties of a nop_result.
+                 * @memberof koinos.chain
+                 * @interface Inop_result
+                 */
+    
+                /**
+                 * Constructs a new nop_result.
+                 * @memberof koinos.chain
+                 * @classdesc Represents a nop_result.
+                 * @implements Inop_result
+                 * @constructor
+                 * @param {koinos.chain.Inop_result=} [properties] Properties to set
+                 */
+                function nop_result(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Creates a new nop_result instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {koinos.chain.Inop_result=} [properties] Properties to set
+                 * @returns {koinos.chain.nop_result} nop_result instance
+                 */
+                nop_result.create = function create(properties) {
+                    return new nop_result(properties);
+                };
+    
+                /**
+                 * Encodes the specified nop_result message. Does not implicitly {@link koinos.chain.nop_result.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {koinos.chain.Inop_result} message nop_result message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                nop_result.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified nop_result message, length delimited. Does not implicitly {@link koinos.chain.nop_result.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {koinos.chain.Inop_result} message nop_result message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                nop_result.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a nop_result message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.chain.nop_result} nop_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                nop_result.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.chain.nop_result();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a nop_result message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.chain.nop_result} nop_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                nop_result.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a nop_result message.
+                 * @function verify
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                nop_result.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a nop_result message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.chain.nop_result} nop_result
+                 */
+                nop_result.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.chain.nop_result)
+                        return object;
+                    return new $root.koinos.chain.nop_result();
+                };
+    
+                /**
+                 * Creates a plain object from a nop_result message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.chain.nop_result
+                 * @static
+                 * @param {koinos.chain.nop_result} message nop_result
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                nop_result.toObject = function toObject() {
+                    return {};
+                };
+    
+                /**
+                 * Converts this nop_result to JSON.
+                 * @function toJSON
+                 * @memberof koinos.chain.nop_result
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                nop_result.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return nop_result;
             })();
     
             chain.get_head_info_arguments = (function() {

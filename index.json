@@ -2595,7 +2595,7 @@
             },
             "system_call_id": {
               "values": {
-                "reserved_id": 0,
+                "nop": 0,
                 "get_head_info": 1,
                 "apply_block": 2,
                 "apply_transaction": 3,
@@ -2669,6 +2669,12 @@
                 "malformed_transaction": -204,
                 "block_resource_failure": -205
               }
+            },
+            "nop_arguments": {
+              "fields": {}
+            },
+            "nop_result": {
+              "fields": {}
             },
             "get_head_info_arguments": {
               "fields": {}
