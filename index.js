@@ -67,6 +67,280 @@
                  */
                 var pob = {};
     
+                pob.consensus_parameters = (function() {
+    
+                    /**
+                     * Properties of a consensus_parameters.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iconsensus_parameters
+                     * @property {number|Long|null} [target_annual_inflation_rate] consensus_parameters target_annual_inflation_rate
+                     * @property {number|Long|null} [target_burn_percent] consensus_parameters target_burn_percent
+                     * @property {number|Long|null} [target_block_interval] consensus_parameters target_block_interval
+                     */
+    
+                    /**
+                     * Constructs a new consensus_parameters.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a consensus_parameters.
+                     * @implements Iconsensus_parameters
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iconsensus_parameters=} [properties] Properties to set
+                     */
+                    function consensus_parameters(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * consensus_parameters target_annual_inflation_rate.
+                     * @member {number|Long} target_annual_inflation_rate
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @instance
+                     */
+                    consensus_parameters.prototype.target_annual_inflation_rate = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * consensus_parameters target_burn_percent.
+                     * @member {number|Long} target_burn_percent
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @instance
+                     */
+                    consensus_parameters.prototype.target_burn_percent = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * consensus_parameters target_block_interval.
+                     * @member {number|Long} target_block_interval
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @instance
+                     */
+                    consensus_parameters.prototype.target_block_interval = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * Creates a new consensus_parameters instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {koinos.contracts.pob.Iconsensus_parameters=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.consensus_parameters} consensus_parameters instance
+                     */
+                    consensus_parameters.create = function create(properties) {
+                        return new consensus_parameters(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified consensus_parameters message. Does not implicitly {@link koinos.contracts.pob.consensus_parameters.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {koinos.contracts.pob.Iconsensus_parameters} message consensus_parameters message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    consensus_parameters.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.target_annual_inflation_rate != null && Object.hasOwnProperty.call(message, "target_annual_inflation_rate"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.target_annual_inflation_rate);
+                        if (message.target_burn_percent != null && Object.hasOwnProperty.call(message, "target_burn_percent"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.target_burn_percent);
+                        if (message.target_block_interval != null && Object.hasOwnProperty.call(message, "target_block_interval"))
+                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.target_block_interval);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified consensus_parameters message, length delimited. Does not implicitly {@link koinos.contracts.pob.consensus_parameters.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {koinos.contracts.pob.Iconsensus_parameters} message consensus_parameters message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    consensus_parameters.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a consensus_parameters message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.consensus_parameters} consensus_parameters
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    consensus_parameters.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.consensus_parameters();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.target_annual_inflation_rate = reader.uint64();
+                                break;
+                            case 2:
+                                message.target_burn_percent = reader.uint64();
+                                break;
+                            case 3:
+                                message.target_block_interval = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a consensus_parameters message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.consensus_parameters} consensus_parameters
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    consensus_parameters.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a consensus_parameters message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    consensus_parameters.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.target_annual_inflation_rate != null && message.hasOwnProperty("target_annual_inflation_rate"))
+                            if (!$util.isInteger(message.target_annual_inflation_rate) && !(message.target_annual_inflation_rate && $util.isInteger(message.target_annual_inflation_rate.low) && $util.isInteger(message.target_annual_inflation_rate.high)))
+                                return "target_annual_inflation_rate: integer|Long expected";
+                        if (message.target_burn_percent != null && message.hasOwnProperty("target_burn_percent"))
+                            if (!$util.isInteger(message.target_burn_percent) && !(message.target_burn_percent && $util.isInteger(message.target_burn_percent.low) && $util.isInteger(message.target_burn_percent.high)))
+                                return "target_burn_percent: integer|Long expected";
+                        if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
+                            if (!$util.isInteger(message.target_block_interval) && !(message.target_block_interval && $util.isInteger(message.target_block_interval.low) && $util.isInteger(message.target_block_interval.high)))
+                                return "target_block_interval: integer|Long expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a consensus_parameters message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.consensus_parameters} consensus_parameters
+                     */
+                    consensus_parameters.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.consensus_parameters)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.consensus_parameters();
+                        if (object.target_annual_inflation_rate != null)
+                            if ($util.Long)
+                                (message.target_annual_inflation_rate = $util.Long.fromValue(object.target_annual_inflation_rate)).unsigned = true;
+                            else if (typeof object.target_annual_inflation_rate === "string")
+                                message.target_annual_inflation_rate = parseInt(object.target_annual_inflation_rate, 10);
+                            else if (typeof object.target_annual_inflation_rate === "number")
+                                message.target_annual_inflation_rate = object.target_annual_inflation_rate;
+                            else if (typeof object.target_annual_inflation_rate === "object")
+                                message.target_annual_inflation_rate = new $util.LongBits(object.target_annual_inflation_rate.low >>> 0, object.target_annual_inflation_rate.high >>> 0).toNumber(true);
+                        if (object.target_burn_percent != null)
+                            if ($util.Long)
+                                (message.target_burn_percent = $util.Long.fromValue(object.target_burn_percent)).unsigned = true;
+                            else if (typeof object.target_burn_percent === "string")
+                                message.target_burn_percent = parseInt(object.target_burn_percent, 10);
+                            else if (typeof object.target_burn_percent === "number")
+                                message.target_burn_percent = object.target_burn_percent;
+                            else if (typeof object.target_burn_percent === "object")
+                                message.target_burn_percent = new $util.LongBits(object.target_burn_percent.low >>> 0, object.target_burn_percent.high >>> 0).toNumber(true);
+                        if (object.target_block_interval != null)
+                            if ($util.Long)
+                                (message.target_block_interval = $util.Long.fromValue(object.target_block_interval)).unsigned = true;
+                            else if (typeof object.target_block_interval === "string")
+                                message.target_block_interval = parseInt(object.target_block_interval, 10);
+                            else if (typeof object.target_block_interval === "number")
+                                message.target_block_interval = object.target_block_interval;
+                            else if (typeof object.target_block_interval === "object")
+                                message.target_block_interval = new $util.LongBits(object.target_block_interval.low >>> 0, object.target_block_interval.high >>> 0).toNumber(true);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a consensus_parameters message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @static
+                     * @param {koinos.contracts.pob.consensus_parameters} message consensus_parameters
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    consensus_parameters.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.target_annual_inflation_rate = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.target_annual_inflation_rate = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.target_burn_percent = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.target_burn_percent = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.target_block_interval = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.target_block_interval = options.longs === String ? "0" : 0;
+                        }
+                        if (message.target_annual_inflation_rate != null && message.hasOwnProperty("target_annual_inflation_rate"))
+                            if (typeof message.target_annual_inflation_rate === "number")
+                                object.target_annual_inflation_rate = options.longs === String ? String(message.target_annual_inflation_rate) : message.target_annual_inflation_rate;
+                            else
+                                object.target_annual_inflation_rate = options.longs === String ? $util.Long.prototype.toString.call(message.target_annual_inflation_rate) : options.longs === Number ? new $util.LongBits(message.target_annual_inflation_rate.low >>> 0, message.target_annual_inflation_rate.high >>> 0).toNumber(true) : message.target_annual_inflation_rate;
+                        if (message.target_burn_percent != null && message.hasOwnProperty("target_burn_percent"))
+                            if (typeof message.target_burn_percent === "number")
+                                object.target_burn_percent = options.longs === String ? String(message.target_burn_percent) : message.target_burn_percent;
+                            else
+                                object.target_burn_percent = options.longs === String ? $util.Long.prototype.toString.call(message.target_burn_percent) : options.longs === Number ? new $util.LongBits(message.target_burn_percent.low >>> 0, message.target_burn_percent.high >>> 0).toNumber(true) : message.target_burn_percent;
+                        if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
+                            if (typeof message.target_block_interval === "number")
+                                object.target_block_interval = options.longs === String ? String(message.target_block_interval) : message.target_block_interval;
+                            else
+                                object.target_block_interval = options.longs === String ? $util.Long.prototype.toString.call(message.target_block_interval) : options.longs === Number ? new $util.LongBits(message.target_block_interval.low >>> 0, message.target_block_interval.high >>> 0).toNumber(true) : message.target_block_interval;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this consensus_parameters to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    consensus_parameters.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return consensus_parameters;
+                })();
+    
                 pob.public_key_record = (function() {
     
                     /**
@@ -272,7 +546,6 @@
                      * @property {Uint8Array|null} [seed] metadata seed
                      * @property {Uint8Array|null} [difficulty] metadata difficulty
                      * @property {number|Long|null} [last_block_time] metadata last_block_time
-                     * @property {number|Long|null} [target_block_interval] metadata target_block_interval
                      */
     
                     /**
@@ -315,14 +588,6 @@
                     metadata.prototype.last_block_time = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
     
                     /**
-                     * metadata target_block_interval.
-                     * @member {number|Long} target_block_interval
-                     * @memberof koinos.contracts.pob.metadata
-                     * @instance
-                     */
-                    metadata.prototype.target_block_interval = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
                      * Creates a new metadata instance using the specified properties.
                      * @function create
                      * @memberof koinos.contracts.pob.metadata
@@ -352,8 +617,6 @@
                             writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.difficulty);
                         if (message.last_block_time != null && Object.hasOwnProperty.call(message, "last_block_time"))
                             writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.last_block_time);
-                        if (message.target_block_interval != null && Object.hasOwnProperty.call(message, "target_block_interval"))
-                            writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.target_block_interval);
                         return writer;
                     };
     
@@ -396,9 +659,6 @@
                                 break;
                             case 3:
                                 message.last_block_time = reader.uint64();
-                                break;
-                            case 4:
-                                message.target_block_interval = reader.uint64();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -444,9 +704,6 @@
                         if (message.last_block_time != null && message.hasOwnProperty("last_block_time"))
                             if (!$util.isInteger(message.last_block_time) && !(message.last_block_time && $util.isInteger(message.last_block_time.low) && $util.isInteger(message.last_block_time.high)))
                                 return "last_block_time: integer|Long expected";
-                        if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
-                            if (!$util.isInteger(message.target_block_interval) && !(message.target_block_interval && $util.isInteger(message.target_block_interval.low) && $util.isInteger(message.target_block_interval.high)))
-                                return "target_block_interval: integer|Long expected";
                         return null;
                     };
     
@@ -481,15 +738,6 @@
                                 message.last_block_time = object.last_block_time;
                             else if (typeof object.last_block_time === "object")
                                 message.last_block_time = new $util.LongBits(object.last_block_time.low >>> 0, object.last_block_time.high >>> 0).toNumber(true);
-                        if (object.target_block_interval != null)
-                            if ($util.Long)
-                                (message.target_block_interval = $util.Long.fromValue(object.target_block_interval)).unsigned = true;
-                            else if (typeof object.target_block_interval === "string")
-                                message.target_block_interval = parseInt(object.target_block_interval, 10);
-                            else if (typeof object.target_block_interval === "number")
-                                message.target_block_interval = object.target_block_interval;
-                            else if (typeof object.target_block_interval === "object")
-                                message.target_block_interval = new $util.LongBits(object.target_block_interval.low >>> 0, object.target_block_interval.high >>> 0).toNumber(true);
                         return message;
                     };
     
@@ -526,11 +774,6 @@
                                 object.last_block_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
                             } else
                                 object.last_block_time = options.longs === String ? "0" : 0;
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.target_block_interval = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.target_block_interval = options.longs === String ? "0" : 0;
                         }
                         if (message.seed != null && message.hasOwnProperty("seed"))
                             object.seed = options.bytes === String ? $util.base64.encode(message.seed, 0, message.seed.length) : options.bytes === Array ? Array.prototype.slice.call(message.seed) : message.seed;
@@ -541,11 +784,6 @@
                                 object.last_block_time = options.longs === String ? String(message.last_block_time) : message.last_block_time;
                             else
                                 object.last_block_time = options.longs === String ? $util.Long.prototype.toString.call(message.last_block_time) : options.longs === Number ? new $util.LongBits(message.last_block_time.low >>> 0, message.last_block_time.high >>> 0).toNumber(true) : message.last_block_time;
-                        if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
-                            if (typeof message.target_block_interval === "number")
-                                object.target_block_interval = options.longs === String ? String(message.target_block_interval) : message.target_block_interval;
-                            else
-                                object.target_block_interval = options.longs === String ? $util.Long.prototype.toString.call(message.target_block_interval) : options.longs === Number ? new $util.LongBits(message.target_block_interval.low >>> 0, message.target_block_interval.high >>> 0).toNumber(true) : message.target_block_interval;
                         return object;
                     };
     
@@ -1833,6 +2071,358 @@
                     };
     
                     return burn_result;
+                })();
+    
+                pob.get_consensus_parameters_arguments = (function() {
+    
+                    /**
+                     * Properties of a get_consensus_parameters_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iget_consensus_parameters_arguments
+                     */
+    
+                    /**
+                     * Constructs a new get_consensus_parameters_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a get_consensus_parameters_arguments.
+                     * @implements Iget_consensus_parameters_arguments
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_arguments=} [properties] Properties to set
+                     */
+                    function get_consensus_parameters_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * Creates a new get_consensus_parameters_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_arguments} get_consensus_parameters_arguments instance
+                     */
+                    get_consensus_parameters_arguments.create = function create(properties) {
+                        return new get_consensus_parameters_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified get_consensus_parameters_arguments message. Does not implicitly {@link koinos.contracts.pob.get_consensus_parameters_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_arguments} message get_consensus_parameters_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_consensus_parameters_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified get_consensus_parameters_arguments message, length delimited. Does not implicitly {@link koinos.contracts.pob.get_consensus_parameters_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_arguments} message get_consensus_parameters_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_consensus_parameters_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a get_consensus_parameters_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_arguments} get_consensus_parameters_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_consensus_parameters_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.get_consensus_parameters_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a get_consensus_parameters_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_arguments} get_consensus_parameters_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_consensus_parameters_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a get_consensus_parameters_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    get_consensus_parameters_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a get_consensus_parameters_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_arguments} get_consensus_parameters_arguments
+                     */
+                    get_consensus_parameters_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.get_consensus_parameters_arguments)
+                            return object;
+                        return new $root.koinos.contracts.pob.get_consensus_parameters_arguments();
+                    };
+    
+                    /**
+                     * Creates a plain object from a get_consensus_parameters_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.get_consensus_parameters_arguments} message get_consensus_parameters_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    get_consensus_parameters_arguments.toObject = function toObject() {
+                        return {};
+                    };
+    
+                    /**
+                     * Converts this get_consensus_parameters_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    get_consensus_parameters_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return get_consensus_parameters_arguments;
+                })();
+    
+                pob.get_consensus_parameters_result = (function() {
+    
+                    /**
+                     * Properties of a get_consensus_parameters_result.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iget_consensus_parameters_result
+                     * @property {koinos.contracts.pob.Iconsensus_parameters|null} [value] get_consensus_parameters_result value
+                     */
+    
+                    /**
+                     * Constructs a new get_consensus_parameters_result.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents a get_consensus_parameters_result.
+                     * @implements Iget_consensus_parameters_result
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_result=} [properties] Properties to set
+                     */
+                    function get_consensus_parameters_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * get_consensus_parameters_result value.
+                     * @member {koinos.contracts.pob.Iconsensus_parameters|null|undefined} value
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @instance
+                     */
+                    get_consensus_parameters_result.prototype.value = null;
+    
+                    /**
+                     * Creates a new get_consensus_parameters_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_result} get_consensus_parameters_result instance
+                     */
+                    get_consensus_parameters_result.create = function create(properties) {
+                        return new get_consensus_parameters_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified get_consensus_parameters_result message. Does not implicitly {@link koinos.contracts.pob.get_consensus_parameters_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_result} message get_consensus_parameters_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_consensus_parameters_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                            $root.koinos.contracts.pob.consensus_parameters.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified get_consensus_parameters_result message, length delimited. Does not implicitly {@link koinos.contracts.pob.get_consensus_parameters_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iget_consensus_parameters_result} message get_consensus_parameters_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_consensus_parameters_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a get_consensus_parameters_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_result} get_consensus_parameters_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_consensus_parameters_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.get_consensus_parameters_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.value = $root.koinos.contracts.pob.consensus_parameters.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a get_consensus_parameters_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_result} get_consensus_parameters_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_consensus_parameters_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a get_consensus_parameters_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    get_consensus_parameters_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.value != null && message.hasOwnProperty("value")) {
+                            var error = $root.koinos.contracts.pob.consensus_parameters.verify(message.value);
+                            if (error)
+                                return "value." + error;
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a get_consensus_parameters_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.get_consensus_parameters_result} get_consensus_parameters_result
+                     */
+                    get_consensus_parameters_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.get_consensus_parameters_result)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.get_consensus_parameters_result();
+                        if (object.value != null) {
+                            if (typeof object.value !== "object")
+                                throw TypeError(".koinos.contracts.pob.get_consensus_parameters_result.value: object expected");
+                            message.value = $root.koinos.contracts.pob.consensus_parameters.fromObject(object.value);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a get_consensus_parameters_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.get_consensus_parameters_result} message get_consensus_parameters_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    get_consensus_parameters_result.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.value = null;
+                        if (message.value != null && message.hasOwnProperty("value"))
+                            object.value = $root.koinos.contracts.pob.consensus_parameters.toObject(message.value, options);
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this get_consensus_parameters_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.get_consensus_parameters_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    get_consensus_parameters_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return get_consensus_parameters_result;
                 })();
     
                 pob.get_metadata_arguments = (function() {
