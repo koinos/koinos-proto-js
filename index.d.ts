@@ -12310,6 +12310,9 @@ export namespace koinos {
 
             /** block_accepted live */
             live?: (boolean|null);
+
+            /** block_accepted head */
+            head?: (boolean|null);
         }
 
         /** Represents a block_accepted. */
@@ -12329,6 +12332,9 @@ export namespace koinos {
 
             /** block_accepted live. */
             public live: boolean;
+
+            /** block_accepted head. */
+            public head: boolean;
 
             /**
              * Creates a new block_accepted instance using the specified properties.

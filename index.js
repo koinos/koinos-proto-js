@@ -30077,6 +30077,7 @@
                  * @property {koinos.protocol.Iblock|null} [block] block_accepted block
                  * @property {koinos.protocol.Iblock_receipt|null} [receipt] block_accepted receipt
                  * @property {boolean|null} [live] block_accepted live
+                 * @property {boolean|null} [head] block_accepted head
                  */
     
                 /**
@@ -30119,6 +30120,14 @@
                 block_accepted.prototype.live = false;
     
                 /**
+                 * block_accepted head.
+                 * @member {boolean} head
+                 * @memberof koinos.broadcast.block_accepted
+                 * @instance
+                 */
+                block_accepted.prototype.head = false;
+    
+                /**
                  * Creates a new block_accepted instance using the specified properties.
                  * @function create
                  * @memberof koinos.broadcast.block_accepted
@@ -30148,6 +30157,8 @@
                         $root.koinos.protocol.block_receipt.encode(message.receipt, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     if (message.live != null && Object.hasOwnProperty.call(message, "live"))
                         writer.uint32(/* id 3, wireType 0 =*/24).bool(message.live);
+                    if (message.head != null && Object.hasOwnProperty.call(message, "head"))
+                        writer.uint32(/* id 4, wireType 0 =*/32).bool(message.head);
                     return writer;
                 };
     
@@ -30190,6 +30201,9 @@
                             break;
                         case 3:
                             message.live = reader.bool();
+                            break;
+                        case 4:
+                            message.head = reader.bool();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -30239,6 +30253,9 @@
                     if (message.live != null && message.hasOwnProperty("live"))
                         if (typeof message.live !== "boolean")
                             return "live: boolean expected";
+                    if (message.head != null && message.hasOwnProperty("head"))
+                        if (typeof message.head !== "boolean")
+                            return "head: boolean expected";
                     return null;
                 };
     
@@ -30266,6 +30283,8 @@
                     }
                     if (object.live != null)
                         message.live = Boolean(object.live);
+                    if (object.head != null)
+                        message.head = Boolean(object.head);
                     return message;
                 };
     
@@ -30286,6 +30305,7 @@
                         object.block = null;
                         object.receipt = null;
                         object.live = false;
+                        object.head = false;
                     }
                     if (message.block != null && message.hasOwnProperty("block"))
                         object.block = $root.koinos.protocol.block.toObject(message.block, options);
@@ -30293,6 +30313,8 @@
                         object.receipt = $root.koinos.protocol.block_receipt.toObject(message.receipt, options);
                     if (message.live != null && message.hasOwnProperty("live"))
                         object.live = message.live;
+                    if (message.head != null && message.hasOwnProperty("head"))
+                        object.head = message.head;
                     return object;
                 };
     

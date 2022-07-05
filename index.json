@@ -2250,6 +2250,10 @@
                 "live": {
                   "type": "bool",
                   "id": 3
+                },
+                "head": {
+                  "type": "bool",
+                  "id": 4
                 }
               }
             },
