@@ -21442,6 +21442,7 @@
                      * @property {koinos.Iblock_topology|null} [head_topology] get_head_info_response head_topology
                      * @property {number|Long|null} [last_irreversible_block] get_head_info_response last_irreversible_block
                      * @property {Uint8Array|null} [head_state_merkle_root] get_head_info_response head_state_merkle_root
+                     * @property {number|Long|null} [head_block_time] get_head_info_response head_block_time
                      */
     
                     /**
@@ -21484,6 +21485,14 @@
                     get_head_info_response.prototype.head_state_merkle_root = $util.newBuffer([]);
     
                     /**
+                     * get_head_info_response head_block_time.
+                     * @member {number|Long} head_block_time
+                     * @memberof koinos.rpc.chain.get_head_info_response
+                     * @instance
+                     */
+                    get_head_info_response.prototype.head_block_time = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
                      * Creates a new get_head_info_response instance using the specified properties.
                      * @function create
                      * @memberof koinos.rpc.chain.get_head_info_response
@@ -21513,6 +21522,8 @@
                             writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.last_irreversible_block);
                         if (message.head_state_merkle_root != null && Object.hasOwnProperty.call(message, "head_state_merkle_root"))
                             writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.head_state_merkle_root);
+                        if (message.head_block_time != null && Object.hasOwnProperty.call(message, "head_block_time"))
+                            writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.head_block_time);
                         return writer;
                     };
     
@@ -21555,6 +21566,9 @@
                                 break;
                             case 3:
                                 message.head_state_merkle_root = reader.bytes();
+                                break;
+                            case 4:
+                                message.head_block_time = reader.uint64();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -21602,6 +21616,9 @@
                         if (message.head_state_merkle_root != null && message.hasOwnProperty("head_state_merkle_root"))
                             if (!(message.head_state_merkle_root && typeof message.head_state_merkle_root.length === "number" || $util.isString(message.head_state_merkle_root)))
                                 return "head_state_merkle_root: buffer expected";
+                        if (message.head_block_time != null && message.hasOwnProperty("head_block_time"))
+                            if (!$util.isInteger(message.head_block_time) && !(message.head_block_time && $util.isInteger(message.head_block_time.low) && $util.isInteger(message.head_block_time.high)))
+                                return "head_block_time: integer|Long expected";
                         return null;
                     };
     
@@ -21636,6 +21653,15 @@
                                 $util.base64.decode(object.head_state_merkle_root, message.head_state_merkle_root = $util.newBuffer($util.base64.length(object.head_state_merkle_root)), 0);
                             else if (object.head_state_merkle_root.length)
                                 message.head_state_merkle_root = object.head_state_merkle_root;
+                        if (object.head_block_time != null)
+                            if ($util.Long)
+                                (message.head_block_time = $util.Long.fromValue(object.head_block_time)).unsigned = true;
+                            else if (typeof object.head_block_time === "string")
+                                message.head_block_time = parseInt(object.head_block_time, 10);
+                            else if (typeof object.head_block_time === "number")
+                                message.head_block_time = object.head_block_time;
+                            else if (typeof object.head_block_time === "object")
+                                message.head_block_time = new $util.LongBits(object.head_block_time.low >>> 0, object.head_block_time.high >>> 0).toNumber(true);
                         return message;
                     };
     
@@ -21666,6 +21692,11 @@
                                 if (options.bytes !== Array)
                                     object.head_state_merkle_root = $util.newBuffer(object.head_state_merkle_root);
                             }
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.head_block_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.head_block_time = options.longs === String ? "0" : 0;
                         }
                         if (message.head_topology != null && message.hasOwnProperty("head_topology"))
                             object.head_topology = $root.koinos.block_topology.toObject(message.head_topology, options);
@@ -21676,6 +21707,11 @@
                                 object.last_irreversible_block = options.longs === String ? $util.Long.prototype.toString.call(message.last_irreversible_block) : options.longs === Number ? new $util.LongBits(message.last_irreversible_block.low >>> 0, message.last_irreversible_block.high >>> 0).toNumber(true) : message.last_irreversible_block;
                         if (message.head_state_merkle_root != null && message.hasOwnProperty("head_state_merkle_root"))
                             object.head_state_merkle_root = options.bytes === String ? $util.base64.encode(message.head_state_merkle_root, 0, message.head_state_merkle_root.length) : options.bytes === Array ? Array.prototype.slice.call(message.head_state_merkle_root) : message.head_state_merkle_root;
+                        if (message.head_block_time != null && message.hasOwnProperty("head_block_time"))
+                            if (typeof message.head_block_time === "number")
+                                object.head_block_time = options.longs === String ? String(message.head_block_time) : message.head_block_time;
+                            else
+                                object.head_block_time = options.longs === String ? $util.Long.prototype.toString.call(message.head_block_time) : options.longs === Number ? new $util.LongBits(message.head_block_time.low >>> 0, message.head_block_time.high >>> 0).toNumber(true) : message.head_block_time;
                         return object;
                     };
     

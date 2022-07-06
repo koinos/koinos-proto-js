@@ -1493,6 +1493,13 @@
                     "head_state_merkle_root": {
                       "type": "bytes",
                       "id": 3
+                    },
+                    "head_block_time": {
+                      "type": "uint64",
+                      "id": 4,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
                     }
                   }
                 },

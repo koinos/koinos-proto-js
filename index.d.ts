@@ -9099,6 +9099,9 @@ export namespace koinos {
 
                 /** get_head_info_response head_state_merkle_root */
                 head_state_merkle_root?: (Uint8Array|null);
+
+                /** get_head_info_response head_block_time */
+                head_block_time?: (number|Long|null);
             }
 
             /** Represents a get_head_info_response. */
@@ -9118,6 +9121,9 @@ export namespace koinos {
 
                 /** get_head_info_response head_state_merkle_root. */
                 public head_state_merkle_root: Uint8Array;
+
+                /** get_head_info_response head_block_time. */
+                public head_block_time: (number|Long);
 
                 /**
                  * Creates a new get_head_info_response instance using the specified properties.
