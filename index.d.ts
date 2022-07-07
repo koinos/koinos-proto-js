@@ -23,13 +23,16 @@ export namespace koinos {
             interface Iconsensus_parameters {
 
                 /** consensus_parameters target_annual_inflation_rate */
-                target_annual_inflation_rate?: (number|Long|null);
+                target_annual_inflation_rate?: (number|null);
 
                 /** consensus_parameters target_burn_percent */
-                target_burn_percent?: (number|Long|null);
+                target_burn_percent?: (number|null);
 
                 /** consensus_parameters target_block_interval */
-                target_block_interval?: (number|Long|null);
+                target_block_interval?: (number|null);
+
+                /** consensus_parameters quantum_length */
+                quantum_length?: (number|null);
             }
 
             /** Represents a consensus_parameters. */
@@ -42,13 +45,16 @@ export namespace koinos {
                 constructor(properties?: koinos.contracts.pob.Iconsensus_parameters);
 
                 /** consensus_parameters target_annual_inflation_rate. */
-                public target_annual_inflation_rate: (number|Long);
+                public target_annual_inflation_rate: number;
 
                 /** consensus_parameters target_burn_percent. */
-                public target_burn_percent: (number|Long);
+                public target_burn_percent: number;
 
                 /** consensus_parameters target_block_interval. */
-                public target_block_interval: (number|Long);
+                public target_block_interval: number;
+
+                /** consensus_parameters quantum_length. */
+                public quantum_length: number;
 
                 /**
                  * Creates a new consensus_parameters instance using the specified properties.

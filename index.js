@@ -73,9 +73,10 @@
                      * Properties of a consensus_parameters.
                      * @memberof koinos.contracts.pob
                      * @interface Iconsensus_parameters
-                     * @property {number|Long|null} [target_annual_inflation_rate] consensus_parameters target_annual_inflation_rate
-                     * @property {number|Long|null} [target_burn_percent] consensus_parameters target_burn_percent
-                     * @property {number|Long|null} [target_block_interval] consensus_parameters target_block_interval
+                     * @property {number|null} [target_annual_inflation_rate] consensus_parameters target_annual_inflation_rate
+                     * @property {number|null} [target_burn_percent] consensus_parameters target_burn_percent
+                     * @property {number|null} [target_block_interval] consensus_parameters target_block_interval
+                     * @property {number|null} [quantum_length] consensus_parameters quantum_length
                      */
     
                     /**
@@ -95,27 +96,35 @@
     
                     /**
                      * consensus_parameters target_annual_inflation_rate.
-                     * @member {number|Long} target_annual_inflation_rate
+                     * @member {number} target_annual_inflation_rate
                      * @memberof koinos.contracts.pob.consensus_parameters
                      * @instance
                      */
-                    consensus_parameters.prototype.target_annual_inflation_rate = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+                    consensus_parameters.prototype.target_annual_inflation_rate = 0;
     
                     /**
                      * consensus_parameters target_burn_percent.
-                     * @member {number|Long} target_burn_percent
+                     * @member {number} target_burn_percent
                      * @memberof koinos.contracts.pob.consensus_parameters
                      * @instance
                      */
-                    consensus_parameters.prototype.target_burn_percent = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+                    consensus_parameters.prototype.target_burn_percent = 0;
     
                     /**
                      * consensus_parameters target_block_interval.
-                     * @member {number|Long} target_block_interval
+                     * @member {number} target_block_interval
                      * @memberof koinos.contracts.pob.consensus_parameters
                      * @instance
                      */
-                    consensus_parameters.prototype.target_block_interval = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+                    consensus_parameters.prototype.target_block_interval = 0;
+    
+                    /**
+                     * consensus_parameters quantum_length.
+                     * @member {number} quantum_length
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @instance
+                     */
+                    consensus_parameters.prototype.quantum_length = 0;
     
                     /**
                      * Creates a new consensus_parameters instance using the specified properties.
@@ -142,11 +151,13 @@
                         if (!writer)
                             writer = $Writer.create();
                         if (message.target_annual_inflation_rate != null && Object.hasOwnProperty.call(message, "target_annual_inflation_rate"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.target_annual_inflation_rate);
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.target_annual_inflation_rate);
                         if (message.target_burn_percent != null && Object.hasOwnProperty.call(message, "target_burn_percent"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.target_burn_percent);
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint32(message.target_burn_percent);
                         if (message.target_block_interval != null && Object.hasOwnProperty.call(message, "target_block_interval"))
-                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.target_block_interval);
+                            writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.target_block_interval);
+                        if (message.quantum_length != null && Object.hasOwnProperty.call(message, "quantum_length"))
+                            writer.uint32(/* id 4, wireType 0 =*/32).uint32(message.quantum_length);
                         return writer;
                     };
     
@@ -182,13 +193,16 @@
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
                             case 1:
-                                message.target_annual_inflation_rate = reader.uint64();
+                                message.target_annual_inflation_rate = reader.uint32();
                                 break;
                             case 2:
-                                message.target_burn_percent = reader.uint64();
+                                message.target_burn_percent = reader.uint32();
                                 break;
                             case 3:
-                                message.target_block_interval = reader.uint64();
+                                message.target_block_interval = reader.uint32();
+                                break;
+                            case 4:
+                                message.quantum_length = reader.uint32();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -226,14 +240,17 @@
                         if (typeof message !== "object" || message === null)
                             return "object expected";
                         if (message.target_annual_inflation_rate != null && message.hasOwnProperty("target_annual_inflation_rate"))
-                            if (!$util.isInteger(message.target_annual_inflation_rate) && !(message.target_annual_inflation_rate && $util.isInteger(message.target_annual_inflation_rate.low) && $util.isInteger(message.target_annual_inflation_rate.high)))
-                                return "target_annual_inflation_rate: integer|Long expected";
+                            if (!$util.isInteger(message.target_annual_inflation_rate))
+                                return "target_annual_inflation_rate: integer expected";
                         if (message.target_burn_percent != null && message.hasOwnProperty("target_burn_percent"))
-                            if (!$util.isInteger(message.target_burn_percent) && !(message.target_burn_percent && $util.isInteger(message.target_burn_percent.low) && $util.isInteger(message.target_burn_percent.high)))
-                                return "target_burn_percent: integer|Long expected";
+                            if (!$util.isInteger(message.target_burn_percent))
+                                return "target_burn_percent: integer expected";
                         if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
-                            if (!$util.isInteger(message.target_block_interval) && !(message.target_block_interval && $util.isInteger(message.target_block_interval.low) && $util.isInteger(message.target_block_interval.high)))
-                                return "target_block_interval: integer|Long expected";
+                            if (!$util.isInteger(message.target_block_interval))
+                                return "target_block_interval: integer expected";
+                        if (message.quantum_length != null && message.hasOwnProperty("quantum_length"))
+                            if (!$util.isInteger(message.quantum_length))
+                                return "quantum_length: integer expected";
                         return null;
                     };
     
@@ -250,32 +267,13 @@
                             return object;
                         var message = new $root.koinos.contracts.pob.consensus_parameters();
                         if (object.target_annual_inflation_rate != null)
-                            if ($util.Long)
-                                (message.target_annual_inflation_rate = $util.Long.fromValue(object.target_annual_inflation_rate)).unsigned = true;
-                            else if (typeof object.target_annual_inflation_rate === "string")
-                                message.target_annual_inflation_rate = parseInt(object.target_annual_inflation_rate, 10);
-                            else if (typeof object.target_annual_inflation_rate === "number")
-                                message.target_annual_inflation_rate = object.target_annual_inflation_rate;
-                            else if (typeof object.target_annual_inflation_rate === "object")
-                                message.target_annual_inflation_rate = new $util.LongBits(object.target_annual_inflation_rate.low >>> 0, object.target_annual_inflation_rate.high >>> 0).toNumber(true);
+                            message.target_annual_inflation_rate = object.target_annual_inflation_rate >>> 0;
                         if (object.target_burn_percent != null)
-                            if ($util.Long)
-                                (message.target_burn_percent = $util.Long.fromValue(object.target_burn_percent)).unsigned = true;
-                            else if (typeof object.target_burn_percent === "string")
-                                message.target_burn_percent = parseInt(object.target_burn_percent, 10);
-                            else if (typeof object.target_burn_percent === "number")
-                                message.target_burn_percent = object.target_burn_percent;
-                            else if (typeof object.target_burn_percent === "object")
-                                message.target_burn_percent = new $util.LongBits(object.target_burn_percent.low >>> 0, object.target_burn_percent.high >>> 0).toNumber(true);
+                            message.target_burn_percent = object.target_burn_percent >>> 0;
                         if (object.target_block_interval != null)
-                            if ($util.Long)
-                                (message.target_block_interval = $util.Long.fromValue(object.target_block_interval)).unsigned = true;
-                            else if (typeof object.target_block_interval === "string")
-                                message.target_block_interval = parseInt(object.target_block_interval, 10);
-                            else if (typeof object.target_block_interval === "number")
-                                message.target_block_interval = object.target_block_interval;
-                            else if (typeof object.target_block_interval === "object")
-                                message.target_block_interval = new $util.LongBits(object.target_block_interval.low >>> 0, object.target_block_interval.high >>> 0).toNumber(true);
+                            message.target_block_interval = object.target_block_interval >>> 0;
+                        if (object.quantum_length != null)
+                            message.quantum_length = object.quantum_length >>> 0;
                         return message;
                     };
     
@@ -293,37 +291,19 @@
                             options = {};
                         var object = {};
                         if (options.defaults) {
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.target_annual_inflation_rate = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.target_annual_inflation_rate = options.longs === String ? "0" : 0;
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.target_burn_percent = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.target_burn_percent = options.longs === String ? "0" : 0;
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.target_block_interval = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.target_block_interval = options.longs === String ? "0" : 0;
+                            object.target_annual_inflation_rate = 0;
+                            object.target_burn_percent = 0;
+                            object.target_block_interval = 0;
+                            object.quantum_length = 0;
                         }
                         if (message.target_annual_inflation_rate != null && message.hasOwnProperty("target_annual_inflation_rate"))
-                            if (typeof message.target_annual_inflation_rate === "number")
-                                object.target_annual_inflation_rate = options.longs === String ? String(message.target_annual_inflation_rate) : message.target_annual_inflation_rate;
-                            else
-                                object.target_annual_inflation_rate = options.longs === String ? $util.Long.prototype.toString.call(message.target_annual_inflation_rate) : options.longs === Number ? new $util.LongBits(message.target_annual_inflation_rate.low >>> 0, message.target_annual_inflation_rate.high >>> 0).toNumber(true) : message.target_annual_inflation_rate;
+                            object.target_annual_inflation_rate = message.target_annual_inflation_rate;
                         if (message.target_burn_percent != null && message.hasOwnProperty("target_burn_percent"))
-                            if (typeof message.target_burn_percent === "number")
-                                object.target_burn_percent = options.longs === String ? String(message.target_burn_percent) : message.target_burn_percent;
-                            else
-                                object.target_burn_percent = options.longs === String ? $util.Long.prototype.toString.call(message.target_burn_percent) : options.longs === Number ? new $util.LongBits(message.target_burn_percent.low >>> 0, message.target_burn_percent.high >>> 0).toNumber(true) : message.target_burn_percent;
+                            object.target_burn_percent = message.target_burn_percent;
                         if (message.target_block_interval != null && message.hasOwnProperty("target_block_interval"))
-                            if (typeof message.target_block_interval === "number")
-                                object.target_block_interval = options.longs === String ? String(message.target_block_interval) : message.target_block_interval;
-                            else
-                                object.target_block_interval = options.longs === String ? $util.Long.prototype.toString.call(message.target_block_interval) : options.longs === Number ? new $util.LongBits(message.target_block_interval.low >>> 0, message.target_block_interval.high >>> 0).toNumber(true) : message.target_block_interval;
+                            object.target_block_interval = message.target_block_interval;
+                        if (message.quantum_length != null && message.hasOwnProperty("quantum_length"))
+                            object.quantum_length = message.quantum_length;
                         return object;
                     };
     

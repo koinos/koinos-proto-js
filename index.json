@@ -39,25 +39,20 @@
                 "consensus_parameters": {
                   "fields": {
                     "target_annual_inflation_rate": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
+                      "type": "uint32",
+                      "id": 1
                     },
                     "target_burn_percent": {
-                      "type": "uint64",
-                      "id": 2,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
+                      "type": "uint32",
+                      "id": 2
                     },
                     "target_block_interval": {
-                      "type": "uint64",
-                      "id": 3,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
+                      "type": "uint32",
+                      "id": 3
+                    },
+                    "quantum_length": {
+                      "type": "uint32",
+                      "id": 4
                     }
                   }
                 },
