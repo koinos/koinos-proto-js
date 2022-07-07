@@ -137,9 +137,16 @@
                 },
                 "register_public_key_arguments": {
                   "fields": {
-                    "public_key": {
+                    "producer": {
                       "type": "bytes",
                       "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "public_key": {
+                      "type": "bytes",
+                      "id": 2,
                       "options": {
                         "(btype)": "BASE64"
                       }

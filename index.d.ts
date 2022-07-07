@@ -520,6 +520,9 @@ export namespace koinos {
             /** Properties of a register_public_key_arguments. */
             interface Iregister_public_key_arguments {
 
+                /** register_public_key_arguments producer */
+                producer?: (Uint8Array|null);
+
                 /** register_public_key_arguments public_key */
                 public_key?: (Uint8Array|null);
             }
@@ -532,6 +535,9 @@ export namespace koinos {
                  * @param [properties] Properties to set
                  */
                 constructor(properties?: koinos.contracts.pob.Iregister_public_key_arguments);
+
+                /** register_public_key_arguments producer. */
+                public producer: Uint8Array;
 
                 /** register_public_key_arguments public_key. */
                 public public_key: Uint8Array;

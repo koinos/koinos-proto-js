@@ -1279,6 +1279,7 @@
                      * Properties of a register_public_key_arguments.
                      * @memberof koinos.contracts.pob
                      * @interface Iregister_public_key_arguments
+                     * @property {Uint8Array|null} [producer] register_public_key_arguments producer
                      * @property {Uint8Array|null} [public_key] register_public_key_arguments public_key
                      */
     
@@ -1296,6 +1297,14 @@
                                 if (properties[keys[i]] != null)
                                     this[keys[i]] = properties[keys[i]];
                     }
+    
+                    /**
+                     * register_public_key_arguments producer.
+                     * @member {Uint8Array} producer
+                     * @memberof koinos.contracts.pob.register_public_key_arguments
+                     * @instance
+                     */
+                    register_public_key_arguments.prototype.producer = $util.newBuffer([]);
     
                     /**
                      * register_public_key_arguments public_key.
@@ -1329,8 +1338,10 @@
                     register_public_key_arguments.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
+                        if (message.producer != null && Object.hasOwnProperty.call(message, "producer"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.producer);
                         if (message.public_key != null && Object.hasOwnProperty.call(message, "public_key"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.public_key);
+                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.public_key);
                         return writer;
                     };
     
@@ -1366,6 +1377,9 @@
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
                             case 1:
+                                message.producer = reader.bytes();
+                                break;
+                            case 2:
                                 message.public_key = reader.bytes();
                                 break;
                             default:
@@ -1403,6 +1417,9 @@
                     register_public_key_arguments.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
+                        if (message.producer != null && message.hasOwnProperty("producer"))
+                            if (!(message.producer && typeof message.producer.length === "number" || $util.isString(message.producer)))
+                                return "producer: buffer expected";
                         if (message.public_key != null && message.hasOwnProperty("public_key"))
                             if (!(message.public_key && typeof message.public_key.length === "number" || $util.isString(message.public_key)))
                                 return "public_key: buffer expected";
@@ -1421,6 +1438,11 @@
                         if (object instanceof $root.koinos.contracts.pob.register_public_key_arguments)
                             return object;
                         var message = new $root.koinos.contracts.pob.register_public_key_arguments();
+                        if (object.producer != null)
+                            if (typeof object.producer === "string")
+                                $util.base64.decode(object.producer, message.producer = $util.newBuffer($util.base64.length(object.producer)), 0);
+                            else if (object.producer.length)
+                                message.producer = object.producer;
                         if (object.public_key != null)
                             if (typeof object.public_key === "string")
                                 $util.base64.decode(object.public_key, message.public_key = $util.newBuffer($util.base64.length(object.public_key)), 0);
@@ -1442,7 +1464,14 @@
                         if (!options)
                             options = {};
                         var object = {};
-                        if (options.defaults)
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.producer = "";
+                            else {
+                                object.producer = [];
+                                if (options.bytes !== Array)
+                                    object.producer = $util.newBuffer(object.producer);
+                            }
                             if (options.bytes === String)
                                 object.public_key = "";
                             else {
@@ -1450,6 +1479,9 @@
                                 if (options.bytes !== Array)
                                     object.public_key = $util.newBuffer(object.public_key);
                             }
+                        }
+                        if (message.producer != null && message.hasOwnProperty("producer"))
+                            object.producer = options.bytes === String ? $util.base64.encode(message.producer, 0, message.producer.length) : options.bytes === Array ? Array.prototype.slice.call(message.producer) : message.producer;
                         if (message.public_key != null && message.hasOwnProperty("public_key"))
                             object.public_key = options.bytes === String ? $util.base64.encode(message.public_key, 0, message.public_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.public_key) : message.public_key;
                         return object;
