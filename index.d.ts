@@ -8841,6 +8841,9 @@ export namespace koinos {
 
                 /** submit_transaction_request transaction */
                 transaction?: (koinos.protocol.Itransaction|null);
+
+                /** submit_transaction_request broadcast */
+                broadcast?: (boolean|null);
             }
 
             /** Represents a submit_transaction_request. */
@@ -8854,6 +8857,9 @@ export namespace koinos {
 
                 /** submit_transaction_request transaction. */
                 public transaction?: (koinos.protocol.Itransaction|null);
+
+                /** submit_transaction_request broadcast. */
+                public broadcast: boolean;
 
                 /**
                  * Creates a new submit_transaction_request instance using the specified properties.
