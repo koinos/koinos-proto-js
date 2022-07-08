@@ -20908,6 +20908,7 @@
                      * @memberof koinos.rpc.chain
                      * @interface Isubmit_transaction_request
                      * @property {koinos.protocol.Itransaction|null} [transaction] submit_transaction_request transaction
+                     * @property {boolean|null} [broadcast] submit_transaction_request broadcast
                      */
     
                     /**
@@ -20932,6 +20933,14 @@
                      * @instance
                      */
                     submit_transaction_request.prototype.transaction = null;
+    
+                    /**
+                     * submit_transaction_request broadcast.
+                     * @member {boolean} broadcast
+                     * @memberof koinos.rpc.chain.submit_transaction_request
+                     * @instance
+                     */
+                    submit_transaction_request.prototype.broadcast = false;
     
                     /**
                      * Creates a new submit_transaction_request instance using the specified properties.
@@ -20959,6 +20968,8 @@
                             writer = $Writer.create();
                         if (message.transaction != null && Object.hasOwnProperty.call(message, "transaction"))
                             $root.koinos.protocol.transaction.encode(message.transaction, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        if (message.broadcast != null && Object.hasOwnProperty.call(message, "broadcast"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).bool(message.broadcast);
                         return writer;
                     };
     
@@ -20995,6 +21006,9 @@
                             switch (tag >>> 3) {
                             case 1:
                                 message.transaction = $root.koinos.protocol.transaction.decode(reader, reader.uint32());
+                                break;
+                            case 2:
+                                message.broadcast = reader.bool();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -21036,6 +21050,9 @@
                             if (error)
                                 return "transaction." + error;
                         }
+                        if (message.broadcast != null && message.hasOwnProperty("broadcast"))
+                            if (typeof message.broadcast !== "boolean")
+                                return "broadcast: boolean expected";
                         return null;
                     };
     
@@ -21056,6 +21073,8 @@
                                 throw TypeError(".koinos.rpc.chain.submit_transaction_request.transaction: object expected");
                             message.transaction = $root.koinos.protocol.transaction.fromObject(object.transaction);
                         }
+                        if (object.broadcast != null)
+                            message.broadcast = Boolean(object.broadcast);
                         return message;
                     };
     
@@ -21072,10 +21091,14 @@
                         if (!options)
                             options = {};
                         var object = {};
-                        if (options.defaults)
+                        if (options.defaults) {
                             object.transaction = null;
+                            object.broadcast = false;
+                        }
                         if (message.transaction != null && message.hasOwnProperty("transaction"))
                             object.transaction = $root.koinos.protocol.transaction.toObject(message.transaction, options);
+                        if (message.broadcast != null && message.hasOwnProperty("broadcast"))
+                            object.broadcast = message.broadcast;
                         return object;
                     };
     

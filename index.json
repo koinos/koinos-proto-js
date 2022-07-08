@@ -1465,6 +1465,10 @@
                     "transaction": {
                       "type": "protocol.transaction",
                       "id": 1
+                    },
+                    "broadcast": {
+                      "type": "bool",
+                      "id": 2
                     }
                   }
                 },
