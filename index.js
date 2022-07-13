@@ -36478,6 +36478,16 @@
              * @property {number} malformed_block=-203 malformed_block value
              * @property {number} malformed_transaction=-204 malformed_transaction value
              * @property {number} block_resource_failure=-205 block_resource_failure value
+             * @property {number} unknown_backend_exception=-1000 unknown_backend_exception value
+             * @property {number} unexpected_state=-1001 unexpected_state value
+             * @property {number} missing_required_arguments=-1002 missing_required_arguments value
+             * @property {number} unknown_previous_block=-1003 unknown_previous_block value
+             * @property {number} unexpected_height=-1004 unexpected_height value
+             * @property {number} block_state_error=-1005 block_state_error value
+             * @property {number} state_merkle_mismatch=-1006 state_merkle_mismatch value
+             * @property {number} unexpected_receipt=-1007 unexpected_receipt value
+             * @property {number} rpc_failure=-1008 rpc_failure value
+             * @property {number} pending_state_error=-1009 pending_state_error value
              */
             chain.error_code = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -36504,6 +36514,16 @@
                 values[valuesById[-203] = "malformed_block"] = -203;
                 values[valuesById[-204] = "malformed_transaction"] = -204;
                 values[valuesById[-205] = "block_resource_failure"] = -205;
+                values[valuesById[-1000] = "unknown_backend_exception"] = -1000;
+                values[valuesById[-1001] = "unexpected_state"] = -1001;
+                values[valuesById[-1002] = "missing_required_arguments"] = -1002;
+                values[valuesById[-1003] = "unknown_previous_block"] = -1003;
+                values[valuesById[-1004] = "unexpected_height"] = -1004;
+                values[valuesById[-1005] = "block_state_error"] = -1005;
+                values[valuesById[-1006] = "state_merkle_mismatch"] = -1006;
+                values[valuesById[-1007] = "unexpected_receipt"] = -1007;
+                values[valuesById[-1008] = "rpc_failure"] = -1008;
+                values[valuesById[-1009] = "pending_state_error"] = -1009;
                 return values;
             })();
     
