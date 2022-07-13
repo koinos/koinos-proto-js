@@ -31,6 +31,42 @@
         },
         "contracts": {
           "nested": {
+            "claim": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/claim"
+              },
+              "nested": {
+                "claim_status": {
+                  "fields": {
+                    "token_amount": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "claimed": {
+                      "type": "bool",
+                      "id": 2
+                    }
+                  }
+                },
+                "claim_arguments": {
+                  "fields": {
+                    "eth_address": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "claim_result": {
+                  "fields": {}
+                }
+              }
+            },
             "pob": {
               "options": {
                 "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/pob"

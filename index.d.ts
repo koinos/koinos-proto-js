@@ -16,6 +16,280 @@ export namespace koinos {
     /** Namespace contracts. */
     namespace contracts {
 
+        /** Namespace claim. */
+        namespace claim {
+
+            /** Properties of a claim_status. */
+            interface Iclaim_status {
+
+                /** claim_status token_amount */
+                token_amount?: (number|Long|null);
+
+                /** claim_status claimed */
+                claimed?: (boolean|null);
+            }
+
+            /** Represents a claim_status. */
+            class claim_status implements Iclaim_status {
+
+                /**
+                 * Constructs a new claim_status.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.claim.Iclaim_status);
+
+                /** claim_status token_amount. */
+                public token_amount: (number|Long);
+
+                /** claim_status claimed. */
+                public claimed: boolean;
+
+                /**
+                 * Creates a new claim_status instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns claim_status instance
+                 */
+                public static create(properties?: koinos.contracts.claim.Iclaim_status): koinos.contracts.claim.claim_status;
+
+                /**
+                 * Encodes the specified claim_status message. Does not implicitly {@link koinos.contracts.claim.claim_status.verify|verify} messages.
+                 * @param message claim_status message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.claim.Iclaim_status, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified claim_status message, length delimited. Does not implicitly {@link koinos.contracts.claim.claim_status.verify|verify} messages.
+                 * @param message claim_status message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.claim.Iclaim_status, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a claim_status message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns claim_status
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.claim.claim_status;
+
+                /**
+                 * Decodes a claim_status message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns claim_status
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.claim.claim_status;
+
+                /**
+                 * Verifies a claim_status message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a claim_status message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns claim_status
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.claim.claim_status;
+
+                /**
+                 * Creates a plain object from a claim_status message. Also converts values to other types if specified.
+                 * @param message claim_status
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.claim.claim_status, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this claim_status to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a claim_arguments. */
+            interface Iclaim_arguments {
+
+                /** claim_arguments eth_address */
+                eth_address?: (Uint8Array|null);
+            }
+
+            /** Represents a claim_arguments. */
+            class claim_arguments implements Iclaim_arguments {
+
+                /**
+                 * Constructs a new claim_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.claim.Iclaim_arguments);
+
+                /** claim_arguments eth_address. */
+                public eth_address: Uint8Array;
+
+                /**
+                 * Creates a new claim_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns claim_arguments instance
+                 */
+                public static create(properties?: koinos.contracts.claim.Iclaim_arguments): koinos.contracts.claim.claim_arguments;
+
+                /**
+                 * Encodes the specified claim_arguments message. Does not implicitly {@link koinos.contracts.claim.claim_arguments.verify|verify} messages.
+                 * @param message claim_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.claim.Iclaim_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified claim_arguments message, length delimited. Does not implicitly {@link koinos.contracts.claim.claim_arguments.verify|verify} messages.
+                 * @param message claim_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.claim.Iclaim_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a claim_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns claim_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.claim.claim_arguments;
+
+                /**
+                 * Decodes a claim_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns claim_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.claim.claim_arguments;
+
+                /**
+                 * Verifies a claim_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a claim_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns claim_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.claim.claim_arguments;
+
+                /**
+                 * Creates a plain object from a claim_arguments message. Also converts values to other types if specified.
+                 * @param message claim_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.claim.claim_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this claim_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a claim_result. */
+            interface Iclaim_result {
+            }
+
+            /** Represents a claim_result. */
+            class claim_result implements Iclaim_result {
+
+                /**
+                 * Constructs a new claim_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.claim.Iclaim_result);
+
+                /**
+                 * Creates a new claim_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns claim_result instance
+                 */
+                public static create(properties?: koinos.contracts.claim.Iclaim_result): koinos.contracts.claim.claim_result;
+
+                /**
+                 * Encodes the specified claim_result message. Does not implicitly {@link koinos.contracts.claim.claim_result.verify|verify} messages.
+                 * @param message claim_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.claim.Iclaim_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified claim_result message, length delimited. Does not implicitly {@link koinos.contracts.claim.claim_result.verify|verify} messages.
+                 * @param message claim_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.claim.Iclaim_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a claim_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns claim_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.claim.claim_result;
+
+                /**
+                 * Decodes a claim_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns claim_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.claim.claim_result;
+
+                /**
+                 * Verifies a claim_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a claim_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns claim_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.claim.claim_result;
+
+                /**
+                 * Creates a plain object from a claim_result message. Also converts values to other types if specified.
+                 * @param message claim_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.claim.claim_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this claim_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+        }
+
         /** Namespace pob. */
         namespace pob {
 
