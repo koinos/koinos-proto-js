@@ -59,6 +59,13 @@
                       "options": {
                         "(btype)": "HEX"
                       }
+                    },
+                    "koin_address": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
                     }
                   }
                 },
