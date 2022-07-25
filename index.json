@@ -36,6 +36,26 @@
                 "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/claim"
               },
               "nested": {
+                "claim_info": {
+                  "fields": {
+                    "total_eth_accounts": {
+                      "type": "uint32",
+                      "id": 1
+                    },
+                    "eth_accounts_claimed": {
+                      "type": "uint32",
+                      "id": 2
+                    },
+                    "total_koin": {
+                      "type": "uint64",
+                      "id": 3
+                    },
+                    "koin_claimed": {
+                      "type": "uint64",
+                      "id": 4
+                    }
+                  }
+                },
                 "claim_status": {
                   "fields": {
                     "token_amount": {
@@ -71,6 +91,17 @@
                 },
                 "claim_result": {
                   "fields": {}
+                },
+                "get_info_arguments": {
+                  "fields": {}
+                },
+                "get_info_result": {
+                  "fields": {
+                    "value": {
+                      "type": "claim_info",
+                      "id": 1
+                    }
+                  }
                 }
               }
             },
