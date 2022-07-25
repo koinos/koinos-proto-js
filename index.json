@@ -266,6 +266,28 @@
                       }
                     }
                   }
+                },
+                "get_public_key_arguments": {
+                  "fields": {
+                    "producer": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "get_public_key_result": {
+                  "fields": {
+                    "value": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "BASE64"
+                      }
+                    }
+                  }
                 }
               }
             },
