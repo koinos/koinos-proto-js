@@ -56349,8 +56349,6 @@
                  * @memberof koinos.chain
                  * @interface Ivalue_type
                  * @property {google.protobuf.IAny|null} [message_value] value_type message_value
-                 * @property {number|null} [double_value] value_type double_value
-                 * @property {number|null} [float_value] value_type float_value
                  * @property {number|null} [int32_value] value_type int32_value
                  * @property {number|Long|null} [int64_value] value_type int64_value
                  * @property {number|null} [uint32_value] value_type uint32_value
@@ -56388,22 +56386,6 @@
                  * @instance
                  */
                 value_type.prototype.message_value = null;
-    
-                /**
-                 * value_type double_value.
-                 * @member {number|null|undefined} double_value
-                 * @memberof koinos.chain.value_type
-                 * @instance
-                 */
-                value_type.prototype.double_value = null;
-    
-                /**
-                 * value_type float_value.
-                 * @member {number|null|undefined} float_value
-                 * @memberof koinos.chain.value_type
-                 * @instance
-                 */
-                value_type.prototype.float_value = null;
     
                 /**
                  * value_type int32_value.
@@ -56514,12 +56496,12 @@
     
                 /**
                  * value_type kind.
-                 * @member {"message_value"|"double_value"|"float_value"|"int32_value"|"int64_value"|"uint32_value"|"uint64_value"|"sint32_value"|"sint64_value"|"fixed32_value"|"fixed64_value"|"sfixed32_value"|"sfixed64_value"|"bool_value"|"string_value"|"bytes_value"|undefined} kind
+                 * @member {"message_value"|"int32_value"|"int64_value"|"uint32_value"|"uint64_value"|"sint32_value"|"sint64_value"|"fixed32_value"|"fixed64_value"|"sfixed32_value"|"sfixed64_value"|"bool_value"|"string_value"|"bytes_value"|undefined} kind
                  * @memberof koinos.chain.value_type
                  * @instance
                  */
                 Object.defineProperty(value_type.prototype, "kind", {
-                    get: $util.oneOfGetter($oneOfFields = ["message_value", "double_value", "float_value", "int32_value", "int64_value", "uint32_value", "uint64_value", "sint32_value", "sint64_value", "fixed32_value", "fixed64_value", "sfixed32_value", "sfixed64_value", "bool_value", "string_value", "bytes_value"]),
+                    get: $util.oneOfGetter($oneOfFields = ["message_value", "int32_value", "int64_value", "uint32_value", "uint64_value", "sint32_value", "sint64_value", "fixed32_value", "fixed64_value", "sfixed32_value", "sfixed64_value", "bool_value", "string_value", "bytes_value"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
     
@@ -56549,36 +56531,32 @@
                         writer = $Writer.create();
                     if (message.message_value != null && Object.hasOwnProperty.call(message, "message_value"))
                         $root.google.protobuf.Any.encode(message.message_value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.double_value != null && Object.hasOwnProperty.call(message, "double_value"))
-                        writer.uint32(/* id 2, wireType 1 =*/17).double(message.double_value);
-                    if (message.float_value != null && Object.hasOwnProperty.call(message, "float_value"))
-                        writer.uint32(/* id 3, wireType 5 =*/29).float(message.float_value);
                     if (message.int32_value != null && Object.hasOwnProperty.call(message, "int32_value"))
-                        writer.uint32(/* id 4, wireType 0 =*/32).int32(message.int32_value);
+                        writer.uint32(/* id 2, wireType 0 =*/16).int32(message.int32_value);
                     if (message.int64_value != null && Object.hasOwnProperty.call(message, "int64_value"))
-                        writer.uint32(/* id 5, wireType 0 =*/40).int64(message.int64_value);
+                        writer.uint32(/* id 3, wireType 0 =*/24).int64(message.int64_value);
                     if (message.uint32_value != null && Object.hasOwnProperty.call(message, "uint32_value"))
-                        writer.uint32(/* id 6, wireType 0 =*/48).uint32(message.uint32_value);
+                        writer.uint32(/* id 4, wireType 0 =*/32).uint32(message.uint32_value);
                     if (message.uint64_value != null && Object.hasOwnProperty.call(message, "uint64_value"))
-                        writer.uint32(/* id 7, wireType 0 =*/56).uint64(message.uint64_value);
+                        writer.uint32(/* id 5, wireType 0 =*/40).uint64(message.uint64_value);
                     if (message.sint32_value != null && Object.hasOwnProperty.call(message, "sint32_value"))
-                        writer.uint32(/* id 8, wireType 0 =*/64).sint32(message.sint32_value);
+                        writer.uint32(/* id 6, wireType 0 =*/48).sint32(message.sint32_value);
                     if (message.sint64_value != null && Object.hasOwnProperty.call(message, "sint64_value"))
-                        writer.uint32(/* id 9, wireType 0 =*/72).sint64(message.sint64_value);
+                        writer.uint32(/* id 7, wireType 0 =*/56).sint64(message.sint64_value);
                     if (message.fixed32_value != null && Object.hasOwnProperty.call(message, "fixed32_value"))
-                        writer.uint32(/* id 10, wireType 5 =*/85).fixed32(message.fixed32_value);
+                        writer.uint32(/* id 8, wireType 5 =*/69).fixed32(message.fixed32_value);
                     if (message.fixed64_value != null && Object.hasOwnProperty.call(message, "fixed64_value"))
-                        writer.uint32(/* id 11, wireType 1 =*/89).fixed64(message.fixed64_value);
+                        writer.uint32(/* id 9, wireType 1 =*/73).fixed64(message.fixed64_value);
                     if (message.sfixed32_value != null && Object.hasOwnProperty.call(message, "sfixed32_value"))
-                        writer.uint32(/* id 12, wireType 5 =*/101).sfixed32(message.sfixed32_value);
+                        writer.uint32(/* id 10, wireType 5 =*/85).sfixed32(message.sfixed32_value);
                     if (message.sfixed64_value != null && Object.hasOwnProperty.call(message, "sfixed64_value"))
-                        writer.uint32(/* id 13, wireType 1 =*/105).sfixed64(message.sfixed64_value);
+                        writer.uint32(/* id 11, wireType 1 =*/89).sfixed64(message.sfixed64_value);
                     if (message.bool_value != null && Object.hasOwnProperty.call(message, "bool_value"))
-                        writer.uint32(/* id 14, wireType 0 =*/112).bool(message.bool_value);
+                        writer.uint32(/* id 12, wireType 0 =*/96).bool(message.bool_value);
                     if (message.string_value != null && Object.hasOwnProperty.call(message, "string_value"))
-                        writer.uint32(/* id 15, wireType 2 =*/122).string(message.string_value);
+                        writer.uint32(/* id 13, wireType 2 =*/106).string(message.string_value);
                     if (message.bytes_value != null && Object.hasOwnProperty.call(message, "bytes_value"))
-                        writer.uint32(/* id 16, wireType 2 =*/130).bytes(message.bytes_value);
+                        writer.uint32(/* id 14, wireType 2 =*/114).bytes(message.bytes_value);
                     return writer;
                 };
     
@@ -56617,48 +56595,42 @@
                             message.message_value = $root.google.protobuf.Any.decode(reader, reader.uint32());
                             break;
                         case 2:
-                            message.double_value = reader.double();
-                            break;
-                        case 3:
-                            message.float_value = reader.float();
-                            break;
-                        case 4:
                             message.int32_value = reader.int32();
                             break;
-                        case 5:
+                        case 3:
                             message.int64_value = reader.int64();
                             break;
-                        case 6:
+                        case 4:
                             message.uint32_value = reader.uint32();
                             break;
-                        case 7:
+                        case 5:
                             message.uint64_value = reader.uint64();
                             break;
-                        case 8:
+                        case 6:
                             message.sint32_value = reader.sint32();
                             break;
-                        case 9:
+                        case 7:
                             message.sint64_value = reader.sint64();
                             break;
-                        case 10:
+                        case 8:
                             message.fixed32_value = reader.fixed32();
                             break;
-                        case 11:
+                        case 9:
                             message.fixed64_value = reader.fixed64();
                             break;
-                        case 12:
+                        case 10:
                             message.sfixed32_value = reader.sfixed32();
                             break;
-                        case 13:
+                        case 11:
                             message.sfixed64_value = reader.sfixed64();
                             break;
-                        case 14:
+                        case 12:
                             message.bool_value = reader.bool();
                             break;
-                        case 15:
+                        case 13:
                             message.string_value = reader.string();
                             break;
-                        case 16:
+                        case 14:
                             message.bytes_value = reader.bytes();
                             break;
                         default:
@@ -56704,20 +56676,6 @@
                             if (error)
                                 return "message_value." + error;
                         }
-                    }
-                    if (message.double_value != null && message.hasOwnProperty("double_value")) {
-                        if (properties.kind === 1)
-                            return "kind: multiple values";
-                        properties.kind = 1;
-                        if (typeof message.double_value !== "number")
-                            return "double_value: number expected";
-                    }
-                    if (message.float_value != null && message.hasOwnProperty("float_value")) {
-                        if (properties.kind === 1)
-                            return "kind: multiple values";
-                        properties.kind = 1;
-                        if (typeof message.float_value !== "number")
-                            return "float_value: number expected";
                     }
                     if (message.int32_value != null && message.hasOwnProperty("int32_value")) {
                         if (properties.kind === 1)
@@ -56830,10 +56788,6 @@
                             throw TypeError(".koinos.chain.value_type.message_value: object expected");
                         message.message_value = $root.google.protobuf.Any.fromObject(object.message_value);
                     }
-                    if (object.double_value != null)
-                        message.double_value = Number(object.double_value);
-                    if (object.float_value != null)
-                        message.float_value = Number(object.float_value);
                     if (object.int32_value != null)
                         message.int32_value = object.int32_value | 0;
                     if (object.int64_value != null)
@@ -56918,16 +56872,6 @@
                         object.message_value = $root.google.protobuf.Any.toObject(message.message_value, options);
                         if (options.oneofs)
                             object.kind = "message_value";
-                    }
-                    if (message.double_value != null && message.hasOwnProperty("double_value")) {
-                        object.double_value = options.json && !isFinite(message.double_value) ? String(message.double_value) : message.double_value;
-                        if (options.oneofs)
-                            object.kind = "double_value";
-                    }
-                    if (message.float_value != null && message.hasOwnProperty("float_value")) {
-                        object.float_value = options.json && !isFinite(message.float_value) ? String(message.float_value) : message.float_value;
-                        if (options.oneofs)
-                            object.kind = "float_value";
                     }
                     if (message.int32_value != null && message.hasOwnProperty("int32_value")) {
                         object.int32_value = message.int32_value;

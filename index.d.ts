@@ -24219,12 +24219,6 @@ export namespace koinos {
             /** value_type message_value */
             message_value?: (google.protobuf.IAny|null);
 
-            /** value_type double_value */
-            double_value?: (number|null);
-
-            /** value_type float_value */
-            float_value?: (number|null);
-
             /** value_type int32_value */
             int32_value?: (number|null);
 
@@ -24277,12 +24271,6 @@ export namespace koinos {
             /** value_type message_value. */
             public message_value?: (google.protobuf.IAny|null);
 
-            /** value_type double_value. */
-            public double_value?: (number|null);
-
-            /** value_type float_value. */
-            public float_value?: (number|null);
-
             /** value_type int32_value. */
             public int32_value?: (number|null);
 
@@ -24323,7 +24311,7 @@ export namespace koinos {
             public bytes_value?: (Uint8Array|null);
 
             /** value_type kind. */
-            public kind?: ("message_value"|"double_value"|"float_value"|"int32_value"|"int64_value"|"uint32_value"|"uint64_value"|"sint32_value"|"sint64_value"|"fixed32_value"|"fixed64_value"|"sfixed32_value"|"sfixed64_value"|"bool_value"|"string_value"|"bytes_value");
+            public kind?: ("message_value"|"int32_value"|"int64_value"|"uint32_value"|"uint64_value"|"sint32_value"|"sint64_value"|"fixed32_value"|"fixed64_value"|"sfixed32_value"|"sfixed64_value"|"bool_value"|"string_value"|"bytes_value");
 
             /**
              * Creates a new value_type instance using the specified properties.
