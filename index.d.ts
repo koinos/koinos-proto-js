@@ -231,6 +231,9 @@ export namespace koinos {
 
                 /** claim_arguments koin_address */
                 koin_address?: (Uint8Array|null);
+
+                /** claim_arguments signature */
+                signature?: (Uint8Array|null);
             }
 
             /** Represents a claim_arguments. */
@@ -247,6 +250,9 @@ export namespace koinos {
 
                 /** claim_arguments koin_address. */
                 public koin_address: Uint8Array;
+
+                /** claim_arguments signature. */
+                public signature: Uint8Array;
 
                 /**
                  * Creates a new claim_arguments instance using the specified properties.

@@ -86,6 +86,10 @@
                       "options": {
                         "(btype)": "ADDRESS"
                       }
+                    },
+                    "signature": {
+                      "type": "bytes",
+                      "id": 3
                     }
                   }
                 },

@@ -581,6 +581,7 @@
                      * @interface Iclaim_arguments
                      * @property {Uint8Array|null} [eth_address] claim_arguments eth_address
                      * @property {Uint8Array|null} [koin_address] claim_arguments koin_address
+                     * @property {Uint8Array|null} [signature] claim_arguments signature
                      */
     
                     /**
@@ -615,6 +616,14 @@
                     claim_arguments.prototype.koin_address = $util.newBuffer([]);
     
                     /**
+                     * claim_arguments signature.
+                     * @member {Uint8Array} signature
+                     * @memberof koinos.contracts.claim.claim_arguments
+                     * @instance
+                     */
+                    claim_arguments.prototype.signature = $util.newBuffer([]);
+    
+                    /**
                      * Creates a new claim_arguments instance using the specified properties.
                      * @function create
                      * @memberof koinos.contracts.claim.claim_arguments
@@ -642,6 +651,8 @@
                             writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.eth_address);
                         if (message.koin_address != null && Object.hasOwnProperty.call(message, "koin_address"))
                             writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.koin_address);
+                        if (message.signature != null && Object.hasOwnProperty.call(message, "signature"))
+                            writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.signature);
                         return writer;
                     };
     
@@ -681,6 +692,9 @@
                                 break;
                             case 2:
                                 message.koin_address = reader.bytes();
+                                break;
+                            case 3:
+                                message.signature = reader.bytes();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -723,6 +737,9 @@
                         if (message.koin_address != null && message.hasOwnProperty("koin_address"))
                             if (!(message.koin_address && typeof message.koin_address.length === "number" || $util.isString(message.koin_address)))
                                 return "koin_address: buffer expected";
+                        if (message.signature != null && message.hasOwnProperty("signature"))
+                            if (!(message.signature && typeof message.signature.length === "number" || $util.isString(message.signature)))
+                                return "signature: buffer expected";
                         return null;
                     };
     
@@ -748,6 +765,11 @@
                                 $util.base64.decode(object.koin_address, message.koin_address = $util.newBuffer($util.base64.length(object.koin_address)), 0);
                             else if (object.koin_address.length)
                                 message.koin_address = object.koin_address;
+                        if (object.signature != null)
+                            if (typeof object.signature === "string")
+                                $util.base64.decode(object.signature, message.signature = $util.newBuffer($util.base64.length(object.signature)), 0);
+                            else if (object.signature.length)
+                                message.signature = object.signature;
                         return message;
                     };
     
@@ -779,11 +801,20 @@
                                 if (options.bytes !== Array)
                                     object.koin_address = $util.newBuffer(object.koin_address);
                             }
+                            if (options.bytes === String)
+                                object.signature = "";
+                            else {
+                                object.signature = [];
+                                if (options.bytes !== Array)
+                                    object.signature = $util.newBuffer(object.signature);
+                            }
                         }
                         if (message.eth_address != null && message.hasOwnProperty("eth_address"))
                             object.eth_address = options.bytes === String ? $util.base64.encode(message.eth_address, 0, message.eth_address.length) : options.bytes === Array ? Array.prototype.slice.call(message.eth_address) : message.eth_address;
                         if (message.koin_address != null && message.hasOwnProperty("koin_address"))
                             object.koin_address = options.bytes === String ? $util.base64.encode(message.koin_address, 0, message.koin_address.length) : options.bytes === Array ? Array.prototype.slice.call(message.koin_address) : message.koin_address;
+                        if (message.signature != null && message.hasOwnProperty("signature"))
+                            object.signature = options.bytes === String ? $util.base64.encode(message.signature, 0, message.signature.length) : options.bytes === Array ? Array.prototype.slice.call(message.signature) : message.signature;
                         return object;
                     };
     
