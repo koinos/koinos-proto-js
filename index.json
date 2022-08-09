@@ -3413,6 +3413,10 @@
                 "digest": {
                   "type": "bytes",
                   "id": 3
+                },
+                "compressed": {
+                  "type": "bool",
+                  "id": 4
                 }
               }
             },
@@ -3474,6 +3478,10 @@
                   "options": {
                     "(btype)": "BASE64"
                   }
+                },
+                "compressed": {
+                  "type": "bool",
+                  "id": 5
                 }
               }
             },

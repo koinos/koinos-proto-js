@@ -22051,6 +22051,9 @@ export namespace koinos {
 
             /** recover_public_key_arguments digest */
             digest?: (Uint8Array|null);
+
+            /** recover_public_key_arguments compressed */
+            compressed?: (boolean|null);
         }
 
         /** Represents a recover_public_key_arguments. */
@@ -22070,6 +22073,9 @@ export namespace koinos {
 
             /** recover_public_key_arguments digest. */
             public digest: Uint8Array;
+
+            /** recover_public_key_arguments compressed. */
+            public compressed: boolean;
 
             /**
              * Creates a new recover_public_key_arguments instance using the specified properties.
@@ -22432,6 +22438,9 @@ export namespace koinos {
 
             /** verify_signature_arguments digest */
             digest?: (Uint8Array|null);
+
+            /** verify_signature_arguments compressed */
+            compressed?: (boolean|null);
         }
 
         /** Represents a verify_signature_arguments. */
@@ -22454,6 +22463,9 @@ export namespace koinos {
 
             /** verify_signature_arguments digest. */
             public digest: Uint8Array;
+
+            /** verify_signature_arguments compressed. */
+            public compressed: boolean;
 
             /**
              * Creates a new verify_signature_arguments instance using the specified properties.

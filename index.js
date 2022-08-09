@@ -51428,6 +51428,7 @@
                  * @property {koinos.chain.dsa|null} [type] recover_public_key_arguments type
                  * @property {Uint8Array|null} [signature] recover_public_key_arguments signature
                  * @property {Uint8Array|null} [digest] recover_public_key_arguments digest
+                 * @property {boolean|null} [compressed] recover_public_key_arguments compressed
                  */
     
                 /**
@@ -51470,6 +51471,14 @@
                 recover_public_key_arguments.prototype.digest = $util.newBuffer([]);
     
                 /**
+                 * recover_public_key_arguments compressed.
+                 * @member {boolean} compressed
+                 * @memberof koinos.chain.recover_public_key_arguments
+                 * @instance
+                 */
+                recover_public_key_arguments.prototype.compressed = false;
+    
+                /**
                  * Creates a new recover_public_key_arguments instance using the specified properties.
                  * @function create
                  * @memberof koinos.chain.recover_public_key_arguments
@@ -51499,6 +51508,8 @@
                         writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.signature);
                     if (message.digest != null && Object.hasOwnProperty.call(message, "digest"))
                         writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.digest);
+                    if (message.compressed != null && Object.hasOwnProperty.call(message, "compressed"))
+                        writer.uint32(/* id 4, wireType 0 =*/32).bool(message.compressed);
                     return writer;
                 };
     
@@ -51541,6 +51552,9 @@
                             break;
                         case 3:
                             message.digest = reader.bytes();
+                            break;
+                        case 4:
+                            message.compressed = reader.bool();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -51590,6 +51604,9 @@
                     if (message.digest != null && message.hasOwnProperty("digest"))
                         if (!(message.digest && typeof message.digest.length === "number" || $util.isString(message.digest)))
                             return "digest: buffer expected";
+                    if (message.compressed != null && message.hasOwnProperty("compressed"))
+                        if (typeof message.compressed !== "boolean")
+                            return "compressed: boolean expected";
                     return null;
                 };
     
@@ -51621,6 +51638,8 @@
                             $util.base64.decode(object.digest, message.digest = $util.newBuffer($util.base64.length(object.digest)), 0);
                         else if (object.digest.length)
                             message.digest = object.digest;
+                    if (object.compressed != null)
+                        message.compressed = Boolean(object.compressed);
                     return message;
                 };
     
@@ -51653,6 +51672,7 @@
                             if (options.bytes !== Array)
                                 object.digest = $util.newBuffer(object.digest);
                         }
+                        object.compressed = false;
                     }
                     if (message.type != null && message.hasOwnProperty("type"))
                         object.type = options.enums === String ? $root.koinos.chain.dsa[message.type] : message.type;
@@ -51660,6 +51680,8 @@
                         object.signature = options.bytes === String ? $util.base64.encode(message.signature, 0, message.signature.length) : options.bytes === Array ? Array.prototype.slice.call(message.signature) : message.signature;
                     if (message.digest != null && message.hasOwnProperty("digest"))
                         object.digest = options.bytes === String ? $util.base64.encode(message.digest, 0, message.digest.length) : options.bytes === Array ? Array.prototype.slice.call(message.digest) : message.digest;
+                    if (message.compressed != null && message.hasOwnProperty("compressed"))
+                        object.compressed = message.compressed;
                     return object;
                 };
     
@@ -52308,6 +52330,7 @@
                  * @property {Uint8Array|null} [public_key] verify_signature_arguments public_key
                  * @property {Uint8Array|null} [signature] verify_signature_arguments signature
                  * @property {Uint8Array|null} [digest] verify_signature_arguments digest
+                 * @property {boolean|null} [compressed] verify_signature_arguments compressed
                  */
     
                 /**
@@ -52358,6 +52381,14 @@
                 verify_signature_arguments.prototype.digest = $util.newBuffer([]);
     
                 /**
+                 * verify_signature_arguments compressed.
+                 * @member {boolean} compressed
+                 * @memberof koinos.chain.verify_signature_arguments
+                 * @instance
+                 */
+                verify_signature_arguments.prototype.compressed = false;
+    
+                /**
                  * Creates a new verify_signature_arguments instance using the specified properties.
                  * @function create
                  * @memberof koinos.chain.verify_signature_arguments
@@ -52389,6 +52420,8 @@
                         writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.signature);
                     if (message.digest != null && Object.hasOwnProperty.call(message, "digest"))
                         writer.uint32(/* id 4, wireType 2 =*/34).bytes(message.digest);
+                    if (message.compressed != null && Object.hasOwnProperty.call(message, "compressed"))
+                        writer.uint32(/* id 5, wireType 0 =*/40).bool(message.compressed);
                     return writer;
                 };
     
@@ -52434,6 +52467,9 @@
                             break;
                         case 4:
                             message.digest = reader.bytes();
+                            break;
+                        case 5:
+                            message.compressed = reader.bool();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -52486,6 +52522,9 @@
                     if (message.digest != null && message.hasOwnProperty("digest"))
                         if (!(message.digest && typeof message.digest.length === "number" || $util.isString(message.digest)))
                             return "digest: buffer expected";
+                    if (message.compressed != null && message.hasOwnProperty("compressed"))
+                        if (typeof message.compressed !== "boolean")
+                            return "compressed: boolean expected";
                     return null;
                 };
     
@@ -52522,6 +52561,8 @@
                             $util.base64.decode(object.digest, message.digest = $util.newBuffer($util.base64.length(object.digest)), 0);
                         else if (object.digest.length)
                             message.digest = object.digest;
+                    if (object.compressed != null)
+                        message.compressed = Boolean(object.compressed);
                     return message;
                 };
     
@@ -52561,6 +52602,7 @@
                             if (options.bytes !== Array)
                                 object.digest = $util.newBuffer(object.digest);
                         }
+                        object.compressed = false;
                     }
                     if (message.type != null && message.hasOwnProperty("type"))
                         object.type = options.enums === String ? $root.koinos.chain.dsa[message.type] : message.type;
@@ -52570,6 +52612,8 @@
                         object.signature = options.bytes === String ? $util.base64.encode(message.signature, 0, message.signature.length) : options.bytes === Array ? Array.prototype.slice.call(message.signature) : message.signature;
                     if (message.digest != null && message.hasOwnProperty("digest"))
                         object.digest = options.bytes === String ? $util.base64.encode(message.digest, 0, message.digest.length) : options.bytes === Array ? Array.prototype.slice.call(message.digest) : message.digest;
+                    if (message.compressed != null && message.hasOwnProperty("compressed"))
+                        object.compressed = message.compressed;
                     return object;
                 };
     
