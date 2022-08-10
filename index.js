@@ -43228,20 +43228,6 @@
                 return get_transaction_result;
             })();
     
-            /**
-             * system_authorization_type enum.
-             * @name koinos.chain.system_authorization_type
-             * @enum {number}
-             * @property {number} set_system_contract=0 set_system_contract value
-             * @property {number} set_system_call=1 set_system_call value
-             */
-            chain.system_authorization_type = (function() {
-                var valuesById = {}, values = Object.create(valuesById);
-                values[valuesById[0] = "set_system_contract"] = 0;
-                values[valuesById[1] = "set_system_call"] = 1;
-                return values;
-            })();
-    
             chain.get_transaction_field_arguments = (function() {
     
                 /**
@@ -45914,7 +45900,6 @@
                  * Properties of a check_system_authority_arguments.
                  * @memberof koinos.chain
                  * @interface Icheck_system_authority_arguments
-                 * @property {koinos.chain.system_authorization_type|null} [type] check_system_authority_arguments type
                  */
     
                 /**
@@ -45931,14 +45916,6 @@
                             if (properties[keys[i]] != null)
                                 this[keys[i]] = properties[keys[i]];
                 }
-    
-                /**
-                 * check_system_authority_arguments type.
-                 * @member {koinos.chain.system_authorization_type} type
-                 * @memberof koinos.chain.check_system_authority_arguments
-                 * @instance
-                 */
-                check_system_authority_arguments.prototype.type = 0;
     
                 /**
                  * Creates a new check_system_authority_arguments instance using the specified properties.
@@ -45964,8 +45941,6 @@
                 check_system_authority_arguments.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.type != null && Object.hasOwnProperty.call(message, "type"))
-                        writer.uint32(/* id 1, wireType 0 =*/8).int32(message.type);
                     return writer;
                 };
     
@@ -46000,9 +45975,6 @@
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
-                        case 1:
-                            message.type = reader.int32();
-                            break;
                         default:
                             reader.skipType(tag & 7);
                             break;
@@ -46038,14 +46010,6 @@
                 check_system_authority_arguments.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.type != null && message.hasOwnProperty("type"))
-                        switch (message.type) {
-                        default:
-                            return "type: enum value expected";
-                        case 0:
-                        case 1:
-                            break;
-                        }
                     return null;
                 };
     
@@ -46060,18 +46024,7 @@
                 check_system_authority_arguments.fromObject = function fromObject(object) {
                     if (object instanceof $root.koinos.chain.check_system_authority_arguments)
                         return object;
-                    var message = new $root.koinos.chain.check_system_authority_arguments();
-                    switch (object.type) {
-                    case "set_system_contract":
-                    case 0:
-                        message.type = 0;
-                        break;
-                    case "set_system_call":
-                    case 1:
-                        message.type = 1;
-                        break;
-                    }
-                    return message;
+                    return new $root.koinos.chain.check_system_authority_arguments();
                 };
     
                 /**
@@ -46083,15 +46036,8 @@
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
-                check_system_authority_arguments.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults)
-                        object.type = options.enums === String ? "set_system_contract" : 0;
-                    if (message.type != null && message.hasOwnProperty("type"))
-                        object.type = options.enums === String ? $root.koinos.chain.system_authorization_type[message.type] : message.type;
-                    return object;
+                check_system_authority_arguments.toObject = function toObject() {
+                    return {};
                 };
     
                 /**

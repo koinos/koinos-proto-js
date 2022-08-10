@@ -18296,12 +18296,6 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
-        /** system_authorization_type enum. */
-        enum system_authorization_type {
-            set_system_contract = 0,
-            set_system_call = 1
-        }
-
         /** Properties of a get_transaction_field_arguments. */
         interface Iget_transaction_field_arguments {
 
@@ -19558,9 +19552,6 @@ export namespace koinos {
 
         /** Properties of a check_system_authority_arguments. */
         interface Icheck_system_authority_arguments {
-
-            /** check_system_authority_arguments type */
-            type?: (koinos.chain.system_authorization_type|null);
         }
 
         /** Represents a check_system_authority_arguments. */
@@ -19571,9 +19562,6 @@ export namespace koinos {
              * @param [properties] Properties to set
              */
             constructor(properties?: koinos.chain.Icheck_system_authority_arguments);
-
-            /** check_system_authority_arguments type. */
-            public type: koinos.chain.system_authorization_type;
 
             /**
              * Creates a new check_system_authority_arguments instance using the specified properties.

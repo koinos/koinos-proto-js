@@ -3003,12 +3003,6 @@
                 }
               }
             },
-            "system_authorization_type": {
-              "values": {
-                "set_system_contract": 0,
-                "set_system_call": 1
-              }
-            },
             "get_transaction_field_arguments": {
               "fields": {
                 "field": {
@@ -3127,12 +3121,7 @@
               "fields": {}
             },
             "check_system_authority_arguments": {
-              "fields": {
-                "type": {
-                  "type": "system_authorization_type",
-                  "id": 1
-                }
-              }
+              "fields": {}
             },
             "check_system_authority_result": {
               "fields": {
