@@ -1344,6 +1344,394 @@
                     return get_info_result;
                 })();
     
+                claim.check_claim_arguments = (function() {
+    
+                    /**
+                     * Properties of a check_claim_arguments.
+                     * @memberof koinos.contracts.claim
+                     * @interface Icheck_claim_arguments
+                     * @property {Uint8Array|null} [eth_address] check_claim_arguments eth_address
+                     */
+    
+                    /**
+                     * Constructs a new check_claim_arguments.
+                     * @memberof koinos.contracts.claim
+                     * @classdesc Represents a check_claim_arguments.
+                     * @implements Icheck_claim_arguments
+                     * @constructor
+                     * @param {koinos.contracts.claim.Icheck_claim_arguments=} [properties] Properties to set
+                     */
+                    function check_claim_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * check_claim_arguments eth_address.
+                     * @member {Uint8Array} eth_address
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @instance
+                     */
+                    check_claim_arguments.prototype.eth_address = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new check_claim_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {koinos.contracts.claim.Icheck_claim_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.claim.check_claim_arguments} check_claim_arguments instance
+                     */
+                    check_claim_arguments.create = function create(properties) {
+                        return new check_claim_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified check_claim_arguments message. Does not implicitly {@link koinos.contracts.claim.check_claim_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {koinos.contracts.claim.Icheck_claim_arguments} message check_claim_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    check_claim_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.eth_address != null && Object.hasOwnProperty.call(message, "eth_address"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.eth_address);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified check_claim_arguments message, length delimited. Does not implicitly {@link koinos.contracts.claim.check_claim_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {koinos.contracts.claim.Icheck_claim_arguments} message check_claim_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    check_claim_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a check_claim_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.claim.check_claim_arguments} check_claim_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    check_claim_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.claim.check_claim_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.eth_address = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a check_claim_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.claim.check_claim_arguments} check_claim_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    check_claim_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a check_claim_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    check_claim_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.eth_address != null && message.hasOwnProperty("eth_address"))
+                            if (!(message.eth_address && typeof message.eth_address.length === "number" || $util.isString(message.eth_address)))
+                                return "eth_address: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a check_claim_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.claim.check_claim_arguments} check_claim_arguments
+                     */
+                    check_claim_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.claim.check_claim_arguments)
+                            return object;
+                        var message = new $root.koinos.contracts.claim.check_claim_arguments();
+                        if (object.eth_address != null)
+                            if (typeof object.eth_address === "string")
+                                $util.base64.decode(object.eth_address, message.eth_address = $util.newBuffer($util.base64.length(object.eth_address)), 0);
+                            else if (object.eth_address.length)
+                                message.eth_address = object.eth_address;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a check_claim_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @static
+                     * @param {koinos.contracts.claim.check_claim_arguments} message check_claim_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    check_claim_arguments.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            if (options.bytes === String)
+                                object.eth_address = "";
+                            else {
+                                object.eth_address = [];
+                                if (options.bytes !== Array)
+                                    object.eth_address = $util.newBuffer(object.eth_address);
+                            }
+                        if (message.eth_address != null && message.hasOwnProperty("eth_address"))
+                            object.eth_address = options.bytes === String ? $util.base64.encode(message.eth_address, 0, message.eth_address.length) : options.bytes === Array ? Array.prototype.slice.call(message.eth_address) : message.eth_address;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this check_claim_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.claim.check_claim_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    check_claim_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return check_claim_arguments;
+                })();
+    
+                claim.check_claim_result = (function() {
+    
+                    /**
+                     * Properties of a check_claim_result.
+                     * @memberof koinos.contracts.claim
+                     * @interface Icheck_claim_result
+                     * @property {koinos.contracts.claim.Iclaim_status|null} [value] check_claim_result value
+                     */
+    
+                    /**
+                     * Constructs a new check_claim_result.
+                     * @memberof koinos.contracts.claim
+                     * @classdesc Represents a check_claim_result.
+                     * @implements Icheck_claim_result
+                     * @constructor
+                     * @param {koinos.contracts.claim.Icheck_claim_result=} [properties] Properties to set
+                     */
+                    function check_claim_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * check_claim_result value.
+                     * @member {koinos.contracts.claim.Iclaim_status|null|undefined} value
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @instance
+                     */
+                    check_claim_result.prototype.value = null;
+    
+                    /**
+                     * Creates a new check_claim_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {koinos.contracts.claim.Icheck_claim_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.claim.check_claim_result} check_claim_result instance
+                     */
+                    check_claim_result.create = function create(properties) {
+                        return new check_claim_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified check_claim_result message. Does not implicitly {@link koinos.contracts.claim.check_claim_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {koinos.contracts.claim.Icheck_claim_result} message check_claim_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    check_claim_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                            $root.koinos.contracts.claim.claim_status.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified check_claim_result message, length delimited. Does not implicitly {@link koinos.contracts.claim.check_claim_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {koinos.contracts.claim.Icheck_claim_result} message check_claim_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    check_claim_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a check_claim_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.claim.check_claim_result} check_claim_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    check_claim_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.claim.check_claim_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.value = $root.koinos.contracts.claim.claim_status.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a check_claim_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.claim.check_claim_result} check_claim_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    check_claim_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a check_claim_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    check_claim_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.value != null && message.hasOwnProperty("value")) {
+                            var error = $root.koinos.contracts.claim.claim_status.verify(message.value);
+                            if (error)
+                                return "value." + error;
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a check_claim_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.claim.check_claim_result} check_claim_result
+                     */
+                    check_claim_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.claim.check_claim_result)
+                            return object;
+                        var message = new $root.koinos.contracts.claim.check_claim_result();
+                        if (object.value != null) {
+                            if (typeof object.value !== "object")
+                                throw TypeError(".koinos.contracts.claim.check_claim_result.value: object expected");
+                            message.value = $root.koinos.contracts.claim.claim_status.fromObject(object.value);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a check_claim_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @static
+                     * @param {koinos.contracts.claim.check_claim_result} message check_claim_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    check_claim_result.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.value = null;
+                        if (message.value != null && message.hasOwnProperty("value"))
+                            object.value = $root.koinos.contracts.claim.claim_status.toObject(message.value, options);
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this check_claim_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.claim.check_claim_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    check_claim_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return check_claim_result;
+                })();
+    
                 return claim;
             })();
     

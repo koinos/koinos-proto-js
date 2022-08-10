@@ -106,6 +106,25 @@
                       "id": 1
                     }
                   }
+                },
+                "check_claim_arguments": {
+                  "fields": {
+                    "eth_address": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "check_claim_result": {
+                  "fields": {
+                    "value": {
+                      "type": "claim_status",
+                      "id": 1
+                    }
+                  }
                 }
               }
             },
