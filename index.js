@@ -9057,6 +9057,898 @@
                 return governance;
             })();
     
+            contracts.vhp = (function() {
+    
+                /**
+                 * Namespace vhp.
+                 * @memberof koinos.contracts
+                 * @namespace
+                 */
+                var vhp = {};
+    
+                vhp.effective_balance_of_arguments = (function() {
+    
+                    /**
+                     * Properties of an effective_balance_of_arguments.
+                     * @memberof koinos.contracts.vhp
+                     * @interface Ieffective_balance_of_arguments
+                     * @property {Uint8Array|null} [owner] effective_balance_of_arguments owner
+                     */
+    
+                    /**
+                     * Constructs a new effective_balance_of_arguments.
+                     * @memberof koinos.contracts.vhp
+                     * @classdesc Represents an effective_balance_of_arguments.
+                     * @implements Ieffective_balance_of_arguments
+                     * @constructor
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_arguments=} [properties] Properties to set
+                     */
+                    function effective_balance_of_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * effective_balance_of_arguments owner.
+                     * @member {Uint8Array} owner
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @instance
+                     */
+                    effective_balance_of_arguments.prototype.owner = $util.newBuffer([]);
+    
+                    /**
+                     * Creates a new effective_balance_of_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.vhp.effective_balance_of_arguments} effective_balance_of_arguments instance
+                     */
+                    effective_balance_of_arguments.create = function create(properties) {
+                        return new effective_balance_of_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified effective_balance_of_arguments message. Does not implicitly {@link koinos.contracts.vhp.effective_balance_of_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_arguments} message effective_balance_of_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    effective_balance_of_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.owner);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified effective_balance_of_arguments message, length delimited. Does not implicitly {@link koinos.contracts.vhp.effective_balance_of_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_arguments} message effective_balance_of_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    effective_balance_of_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an effective_balance_of_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.vhp.effective_balance_of_arguments} effective_balance_of_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    effective_balance_of_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.vhp.effective_balance_of_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.owner = reader.bytes();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an effective_balance_of_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.vhp.effective_balance_of_arguments} effective_balance_of_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    effective_balance_of_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an effective_balance_of_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    effective_balance_of_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.owner != null && message.hasOwnProperty("owner"))
+                            if (!(message.owner && typeof message.owner.length === "number" || $util.isString(message.owner)))
+                                return "owner: buffer expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an effective_balance_of_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.vhp.effective_balance_of_arguments} effective_balance_of_arguments
+                     */
+                    effective_balance_of_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.vhp.effective_balance_of_arguments)
+                            return object;
+                        var message = new $root.koinos.contracts.vhp.effective_balance_of_arguments();
+                        if (object.owner != null)
+                            if (typeof object.owner === "string")
+                                $util.base64.decode(object.owner, message.owner = $util.newBuffer($util.base64.length(object.owner)), 0);
+                            else if (object.owner.length)
+                                message.owner = object.owner;
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an effective_balance_of_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @static
+                     * @param {koinos.contracts.vhp.effective_balance_of_arguments} message effective_balance_of_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    effective_balance_of_arguments.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            if (options.bytes === String)
+                                object.owner = "";
+                            else {
+                                object.owner = [];
+                                if (options.bytes !== Array)
+                                    object.owner = $util.newBuffer(object.owner);
+                            }
+                        if (message.owner != null && message.hasOwnProperty("owner"))
+                            object.owner = options.bytes === String ? $util.base64.encode(message.owner, 0, message.owner.length) : options.bytes === Array ? Array.prototype.slice.call(message.owner) : message.owner;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this effective_balance_of_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.vhp.effective_balance_of_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    effective_balance_of_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return effective_balance_of_arguments;
+                })();
+    
+                vhp.effective_balance_of_result = (function() {
+    
+                    /**
+                     * Properties of an effective_balance_of_result.
+                     * @memberof koinos.contracts.vhp
+                     * @interface Ieffective_balance_of_result
+                     * @property {number|Long|null} [value] effective_balance_of_result value
+                     */
+    
+                    /**
+                     * Constructs a new effective_balance_of_result.
+                     * @memberof koinos.contracts.vhp
+                     * @classdesc Represents an effective_balance_of_result.
+                     * @implements Ieffective_balance_of_result
+                     * @constructor
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_result=} [properties] Properties to set
+                     */
+                    function effective_balance_of_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * effective_balance_of_result value.
+                     * @member {number|Long} value
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @instance
+                     */
+                    effective_balance_of_result.prototype.value = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * Creates a new effective_balance_of_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.vhp.effective_balance_of_result} effective_balance_of_result instance
+                     */
+                    effective_balance_of_result.create = function create(properties) {
+                        return new effective_balance_of_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified effective_balance_of_result message. Does not implicitly {@link koinos.contracts.vhp.effective_balance_of_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_result} message effective_balance_of_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    effective_balance_of_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.value);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified effective_balance_of_result message, length delimited. Does not implicitly {@link koinos.contracts.vhp.effective_balance_of_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_of_result} message effective_balance_of_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    effective_balance_of_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an effective_balance_of_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.vhp.effective_balance_of_result} effective_balance_of_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    effective_balance_of_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.vhp.effective_balance_of_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.value = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an effective_balance_of_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.vhp.effective_balance_of_result} effective_balance_of_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    effective_balance_of_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an effective_balance_of_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    effective_balance_of_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.value != null && message.hasOwnProperty("value"))
+                            if (!$util.isInteger(message.value) && !(message.value && $util.isInteger(message.value.low) && $util.isInteger(message.value.high)))
+                                return "value: integer|Long expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an effective_balance_of_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.vhp.effective_balance_of_result} effective_balance_of_result
+                     */
+                    effective_balance_of_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.vhp.effective_balance_of_result)
+                            return object;
+                        var message = new $root.koinos.contracts.vhp.effective_balance_of_result();
+                        if (object.value != null)
+                            if ($util.Long)
+                                (message.value = $util.Long.fromValue(object.value)).unsigned = true;
+                            else if (typeof object.value === "string")
+                                message.value = parseInt(object.value, 10);
+                            else if (typeof object.value === "number")
+                                message.value = object.value;
+                            else if (typeof object.value === "object")
+                                message.value = new $util.LongBits(object.value.low >>> 0, object.value.high >>> 0).toNumber(true);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an effective_balance_of_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @static
+                     * @param {koinos.contracts.vhp.effective_balance_of_result} message effective_balance_of_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    effective_balance_of_result.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.value = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.value = options.longs === String ? "0" : 0;
+                        if (message.value != null && message.hasOwnProperty("value"))
+                            if (typeof message.value === "number")
+                                object.value = options.longs === String ? String(message.value) : message.value;
+                            else
+                                object.value = options.longs === String ? $util.Long.prototype.toString.call(message.value) : options.longs === Number ? new $util.LongBits(message.value.low >>> 0, message.value.high >>> 0).toNumber(true) : message.value;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this effective_balance_of_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.vhp.effective_balance_of_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    effective_balance_of_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return effective_balance_of_result;
+                })();
+    
+                vhp.balance_entry = (function() {
+    
+                    /**
+                     * Properties of a balance_entry.
+                     * @memberof koinos.contracts.vhp
+                     * @interface Ibalance_entry
+                     * @property {number|Long|null} [block_height] balance_entry block_height
+                     * @property {number|Long|null} [balance] balance_entry balance
+                     */
+    
+                    /**
+                     * Constructs a new balance_entry.
+                     * @memberof koinos.contracts.vhp
+                     * @classdesc Represents a balance_entry.
+                     * @implements Ibalance_entry
+                     * @constructor
+                     * @param {koinos.contracts.vhp.Ibalance_entry=} [properties] Properties to set
+                     */
+                    function balance_entry(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * balance_entry block_height.
+                     * @member {number|Long} block_height
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @instance
+                     */
+                    balance_entry.prototype.block_height = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * balance_entry balance.
+                     * @member {number|Long} balance
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @instance
+                     */
+                    balance_entry.prototype.balance = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * Creates a new balance_entry instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {koinos.contracts.vhp.Ibalance_entry=} [properties] Properties to set
+                     * @returns {koinos.contracts.vhp.balance_entry} balance_entry instance
+                     */
+                    balance_entry.create = function create(properties) {
+                        return new balance_entry(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified balance_entry message. Does not implicitly {@link koinos.contracts.vhp.balance_entry.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {koinos.contracts.vhp.Ibalance_entry} message balance_entry message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    balance_entry.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.block_height != null && Object.hasOwnProperty.call(message, "block_height"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.block_height);
+                        if (message.balance != null && Object.hasOwnProperty.call(message, "balance"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.balance);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified balance_entry message, length delimited. Does not implicitly {@link koinos.contracts.vhp.balance_entry.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {koinos.contracts.vhp.Ibalance_entry} message balance_entry message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    balance_entry.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a balance_entry message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.vhp.balance_entry} balance_entry
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    balance_entry.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.vhp.balance_entry();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.block_height = reader.uint64();
+                                break;
+                            case 2:
+                                message.balance = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a balance_entry message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.vhp.balance_entry} balance_entry
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    balance_entry.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a balance_entry message.
+                     * @function verify
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    balance_entry.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.block_height != null && message.hasOwnProperty("block_height"))
+                            if (!$util.isInteger(message.block_height) && !(message.block_height && $util.isInteger(message.block_height.low) && $util.isInteger(message.block_height.high)))
+                                return "block_height: integer|Long expected";
+                        if (message.balance != null && message.hasOwnProperty("balance"))
+                            if (!$util.isInteger(message.balance) && !(message.balance && $util.isInteger(message.balance.low) && $util.isInteger(message.balance.high)))
+                                return "balance: integer|Long expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a balance_entry message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.vhp.balance_entry} balance_entry
+                     */
+                    balance_entry.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.vhp.balance_entry)
+                            return object;
+                        var message = new $root.koinos.contracts.vhp.balance_entry();
+                        if (object.block_height != null)
+                            if ($util.Long)
+                                (message.block_height = $util.Long.fromValue(object.block_height)).unsigned = true;
+                            else if (typeof object.block_height === "string")
+                                message.block_height = parseInt(object.block_height, 10);
+                            else if (typeof object.block_height === "number")
+                                message.block_height = object.block_height;
+                            else if (typeof object.block_height === "object")
+                                message.block_height = new $util.LongBits(object.block_height.low >>> 0, object.block_height.high >>> 0).toNumber(true);
+                        if (object.balance != null)
+                            if ($util.Long)
+                                (message.balance = $util.Long.fromValue(object.balance)).unsigned = true;
+                            else if (typeof object.balance === "string")
+                                message.balance = parseInt(object.balance, 10);
+                            else if (typeof object.balance === "number")
+                                message.balance = object.balance;
+                            else if (typeof object.balance === "object")
+                                message.balance = new $util.LongBits(object.balance.low >>> 0, object.balance.high >>> 0).toNumber(true);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a balance_entry message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @static
+                     * @param {koinos.contracts.vhp.balance_entry} message balance_entry
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    balance_entry.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.block_height = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.block_height = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.balance = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.balance = options.longs === String ? "0" : 0;
+                        }
+                        if (message.block_height != null && message.hasOwnProperty("block_height"))
+                            if (typeof message.block_height === "number")
+                                object.block_height = options.longs === String ? String(message.block_height) : message.block_height;
+                            else
+                                object.block_height = options.longs === String ? $util.Long.prototype.toString.call(message.block_height) : options.longs === Number ? new $util.LongBits(message.block_height.low >>> 0, message.block_height.high >>> 0).toNumber(true) : message.block_height;
+                        if (message.balance != null && message.hasOwnProperty("balance"))
+                            if (typeof message.balance === "number")
+                                object.balance = options.longs === String ? String(message.balance) : message.balance;
+                            else
+                                object.balance = options.longs === String ? $util.Long.prototype.toString.call(message.balance) : options.longs === Number ? new $util.LongBits(message.balance.low >>> 0, message.balance.high >>> 0).toNumber(true) : message.balance;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this balance_entry to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.vhp.balance_entry
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    balance_entry.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return balance_entry;
+                })();
+    
+                vhp.effective_balance_object = (function() {
+    
+                    /**
+                     * Properties of an effective_balance_object.
+                     * @memberof koinos.contracts.vhp
+                     * @interface Ieffective_balance_object
+                     * @property {number|Long|null} [current_balance] effective_balance_object current_balance
+                     * @property {Array.<koinos.contracts.vhp.Ibalance_entry>|null} [past_balances] effective_balance_object past_balances
+                     */
+    
+                    /**
+                     * Constructs a new effective_balance_object.
+                     * @memberof koinos.contracts.vhp
+                     * @classdesc Represents an effective_balance_object.
+                     * @implements Ieffective_balance_object
+                     * @constructor
+                     * @param {koinos.contracts.vhp.Ieffective_balance_object=} [properties] Properties to set
+                     */
+                    function effective_balance_object(properties) {
+                        this.past_balances = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * effective_balance_object current_balance.
+                     * @member {number|Long} current_balance
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @instance
+                     */
+                    effective_balance_object.prototype.current_balance = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * effective_balance_object past_balances.
+                     * @member {Array.<koinos.contracts.vhp.Ibalance_entry>} past_balances
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @instance
+                     */
+                    effective_balance_object.prototype.past_balances = $util.emptyArray;
+    
+                    /**
+                     * Creates a new effective_balance_object instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_object=} [properties] Properties to set
+                     * @returns {koinos.contracts.vhp.effective_balance_object} effective_balance_object instance
+                     */
+                    effective_balance_object.create = function create(properties) {
+                        return new effective_balance_object(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified effective_balance_object message. Does not implicitly {@link koinos.contracts.vhp.effective_balance_object.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_object} message effective_balance_object message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    effective_balance_object.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.current_balance != null && Object.hasOwnProperty.call(message, "current_balance"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.current_balance);
+                        if (message.past_balances != null && message.past_balances.length)
+                            for (var i = 0; i < message.past_balances.length; ++i)
+                                $root.koinos.contracts.vhp.balance_entry.encode(message.past_balances[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified effective_balance_object message, length delimited. Does not implicitly {@link koinos.contracts.vhp.effective_balance_object.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {koinos.contracts.vhp.Ieffective_balance_object} message effective_balance_object message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    effective_balance_object.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an effective_balance_object message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.vhp.effective_balance_object} effective_balance_object
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    effective_balance_object.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.vhp.effective_balance_object();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.current_balance = reader.uint64();
+                                break;
+                            case 2:
+                                if (!(message.past_balances && message.past_balances.length))
+                                    message.past_balances = [];
+                                message.past_balances.push($root.koinos.contracts.vhp.balance_entry.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an effective_balance_object message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.vhp.effective_balance_object} effective_balance_object
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    effective_balance_object.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an effective_balance_object message.
+                     * @function verify
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    effective_balance_object.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.current_balance != null && message.hasOwnProperty("current_balance"))
+                            if (!$util.isInteger(message.current_balance) && !(message.current_balance && $util.isInteger(message.current_balance.low) && $util.isInteger(message.current_balance.high)))
+                                return "current_balance: integer|Long expected";
+                        if (message.past_balances != null && message.hasOwnProperty("past_balances")) {
+                            if (!Array.isArray(message.past_balances))
+                                return "past_balances: array expected";
+                            for (var i = 0; i < message.past_balances.length; ++i) {
+                                var error = $root.koinos.contracts.vhp.balance_entry.verify(message.past_balances[i]);
+                                if (error)
+                                    return "past_balances." + error;
+                            }
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an effective_balance_object message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.vhp.effective_balance_object} effective_balance_object
+                     */
+                    effective_balance_object.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.vhp.effective_balance_object)
+                            return object;
+                        var message = new $root.koinos.contracts.vhp.effective_balance_object();
+                        if (object.current_balance != null)
+                            if ($util.Long)
+                                (message.current_balance = $util.Long.fromValue(object.current_balance)).unsigned = true;
+                            else if (typeof object.current_balance === "string")
+                                message.current_balance = parseInt(object.current_balance, 10);
+                            else if (typeof object.current_balance === "number")
+                                message.current_balance = object.current_balance;
+                            else if (typeof object.current_balance === "object")
+                                message.current_balance = new $util.LongBits(object.current_balance.low >>> 0, object.current_balance.high >>> 0).toNumber(true);
+                        if (object.past_balances) {
+                            if (!Array.isArray(object.past_balances))
+                                throw TypeError(".koinos.contracts.vhp.effective_balance_object.past_balances: array expected");
+                            message.past_balances = [];
+                            for (var i = 0; i < object.past_balances.length; ++i) {
+                                if (typeof object.past_balances[i] !== "object")
+                                    throw TypeError(".koinos.contracts.vhp.effective_balance_object.past_balances: object expected");
+                                message.past_balances[i] = $root.koinos.contracts.vhp.balance_entry.fromObject(object.past_balances[i]);
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an effective_balance_object message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @static
+                     * @param {koinos.contracts.vhp.effective_balance_object} message effective_balance_object
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    effective_balance_object.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.past_balances = [];
+                        if (options.defaults)
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.current_balance = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.current_balance = options.longs === String ? "0" : 0;
+                        if (message.current_balance != null && message.hasOwnProperty("current_balance"))
+                            if (typeof message.current_balance === "number")
+                                object.current_balance = options.longs === String ? String(message.current_balance) : message.current_balance;
+                            else
+                                object.current_balance = options.longs === String ? $util.Long.prototype.toString.call(message.current_balance) : options.longs === Number ? new $util.LongBits(message.current_balance.low >>> 0, message.current_balance.high >>> 0).toNumber(true) : message.current_balance;
+                        if (message.past_balances && message.past_balances.length) {
+                            object.past_balances = [];
+                            for (var j = 0; j < message.past_balances.length; ++j)
+                                object.past_balances[j] = $root.koinos.contracts.vhp.balance_entry.toObject(message.past_balances[j], options);
+                        }
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this effective_balance_object to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.vhp.effective_balance_object
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    effective_balance_object.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return effective_balance_object;
+                })();
+    
+                return vhp;
+            })();
+    
             contracts.pow = (function() {
     
                 /**
@@ -11757,403 +12649,6 @@
                     return balance_of_result;
                 })();
     
-                token.effective_balance_of_arguments = (function() {
-    
-                    /**
-                     * Properties of an effective_balance_of_arguments.
-                     * @memberof koinos.contracts.token
-                     * @interface Ieffective_balance_of_arguments
-                     * @property {Uint8Array|null} [owner] effective_balance_of_arguments owner
-                     */
-    
-                    /**
-                     * Constructs a new effective_balance_of_arguments.
-                     * @memberof koinos.contracts.token
-                     * @classdesc Represents an effective_balance_of_arguments.
-                     * @implements Ieffective_balance_of_arguments
-                     * @constructor
-                     * @param {koinos.contracts.token.Ieffective_balance_of_arguments=} [properties] Properties to set
-                     */
-                    function effective_balance_of_arguments(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * effective_balance_of_arguments owner.
-                     * @member {Uint8Array} owner
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @instance
-                     */
-                    effective_balance_of_arguments.prototype.owner = $util.newBuffer([]);
-    
-                    /**
-                     * Creates a new effective_balance_of_arguments instance using the specified properties.
-                     * @function create
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_of_arguments=} [properties] Properties to set
-                     * @returns {koinos.contracts.token.effective_balance_of_arguments} effective_balance_of_arguments instance
-                     */
-                    effective_balance_of_arguments.create = function create(properties) {
-                        return new effective_balance_of_arguments(properties);
-                    };
-    
-                    /**
-                     * Encodes the specified effective_balance_of_arguments message. Does not implicitly {@link koinos.contracts.token.effective_balance_of_arguments.verify|verify} messages.
-                     * @function encode
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_of_arguments} message effective_balance_of_arguments message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    effective_balance_of_arguments.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.owner != null && Object.hasOwnProperty.call(message, "owner"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.owner);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified effective_balance_of_arguments message, length delimited. Does not implicitly {@link koinos.contracts.token.effective_balance_of_arguments.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_of_arguments} message effective_balance_of_arguments message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    effective_balance_of_arguments.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes an effective_balance_of_arguments message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {koinos.contracts.token.effective_balance_of_arguments} effective_balance_of_arguments
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    effective_balance_of_arguments.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.token.effective_balance_of_arguments();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.owner = reader.bytes();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes an effective_balance_of_arguments message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {koinos.contracts.token.effective_balance_of_arguments} effective_balance_of_arguments
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    effective_balance_of_arguments.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies an effective_balance_of_arguments message.
-                     * @function verify
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    effective_balance_of_arguments.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.owner != null && message.hasOwnProperty("owner"))
-                            if (!(message.owner && typeof message.owner.length === "number" || $util.isString(message.owner)))
-                                return "owner: buffer expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates an effective_balance_of_arguments message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {koinos.contracts.token.effective_balance_of_arguments} effective_balance_of_arguments
-                     */
-                    effective_balance_of_arguments.fromObject = function fromObject(object) {
-                        if (object instanceof $root.koinos.contracts.token.effective_balance_of_arguments)
-                            return object;
-                        var message = new $root.koinos.contracts.token.effective_balance_of_arguments();
-                        if (object.owner != null)
-                            if (typeof object.owner === "string")
-                                $util.base64.decode(object.owner, message.owner = $util.newBuffer($util.base64.length(object.owner)), 0);
-                            else if (object.owner.length)
-                                message.owner = object.owner;
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from an effective_balance_of_arguments message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @static
-                     * @param {koinos.contracts.token.effective_balance_of_arguments} message effective_balance_of_arguments
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    effective_balance_of_arguments.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            if (options.bytes === String)
-                                object.owner = "";
-                            else {
-                                object.owner = [];
-                                if (options.bytes !== Array)
-                                    object.owner = $util.newBuffer(object.owner);
-                            }
-                        if (message.owner != null && message.hasOwnProperty("owner"))
-                            object.owner = options.bytes === String ? $util.base64.encode(message.owner, 0, message.owner.length) : options.bytes === Array ? Array.prototype.slice.call(message.owner) : message.owner;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this effective_balance_of_arguments to JSON.
-                     * @function toJSON
-                     * @memberof koinos.contracts.token.effective_balance_of_arguments
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    effective_balance_of_arguments.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return effective_balance_of_arguments;
-                })();
-    
-                token.effective_balance_of_result = (function() {
-    
-                    /**
-                     * Properties of an effective_balance_of_result.
-                     * @memberof koinos.contracts.token
-                     * @interface Ieffective_balance_of_result
-                     * @property {number|Long|null} [value] effective_balance_of_result value
-                     */
-    
-                    /**
-                     * Constructs a new effective_balance_of_result.
-                     * @memberof koinos.contracts.token
-                     * @classdesc Represents an effective_balance_of_result.
-                     * @implements Ieffective_balance_of_result
-                     * @constructor
-                     * @param {koinos.contracts.token.Ieffective_balance_of_result=} [properties] Properties to set
-                     */
-                    function effective_balance_of_result(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * effective_balance_of_result value.
-                     * @member {number|Long} value
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @instance
-                     */
-                    effective_balance_of_result.prototype.value = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Creates a new effective_balance_of_result instance using the specified properties.
-                     * @function create
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_of_result=} [properties] Properties to set
-                     * @returns {koinos.contracts.token.effective_balance_of_result} effective_balance_of_result instance
-                     */
-                    effective_balance_of_result.create = function create(properties) {
-                        return new effective_balance_of_result(properties);
-                    };
-    
-                    /**
-                     * Encodes the specified effective_balance_of_result message. Does not implicitly {@link koinos.contracts.token.effective_balance_of_result.verify|verify} messages.
-                     * @function encode
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_of_result} message effective_balance_of_result message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    effective_balance_of_result.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.value);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified effective_balance_of_result message, length delimited. Does not implicitly {@link koinos.contracts.token.effective_balance_of_result.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_of_result} message effective_balance_of_result message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    effective_balance_of_result.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes an effective_balance_of_result message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {koinos.contracts.token.effective_balance_of_result} effective_balance_of_result
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    effective_balance_of_result.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.token.effective_balance_of_result();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.value = reader.uint64();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes an effective_balance_of_result message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {koinos.contracts.token.effective_balance_of_result} effective_balance_of_result
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    effective_balance_of_result.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies an effective_balance_of_result message.
-                     * @function verify
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    effective_balance_of_result.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            if (!$util.isInteger(message.value) && !(message.value && $util.isInteger(message.value.low) && $util.isInteger(message.value.high)))
-                                return "value: integer|Long expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates an effective_balance_of_result message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {koinos.contracts.token.effective_balance_of_result} effective_balance_of_result
-                     */
-                    effective_balance_of_result.fromObject = function fromObject(object) {
-                        if (object instanceof $root.koinos.contracts.token.effective_balance_of_result)
-                            return object;
-                        var message = new $root.koinos.contracts.token.effective_balance_of_result();
-                        if (object.value != null)
-                            if ($util.Long)
-                                (message.value = $util.Long.fromValue(object.value)).unsigned = true;
-                            else if (typeof object.value === "string")
-                                message.value = parseInt(object.value, 10);
-                            else if (typeof object.value === "number")
-                                message.value = object.value;
-                            else if (typeof object.value === "object")
-                                message.value = new $util.LongBits(object.value.low >>> 0, object.value.high >>> 0).toNumber(true);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from an effective_balance_of_result message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @static
-                     * @param {koinos.contracts.token.effective_balance_of_result} message effective_balance_of_result
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    effective_balance_of_result.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.value = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.value = options.longs === String ? "0" : 0;
-                        if (message.value != null && message.hasOwnProperty("value"))
-                            if (typeof message.value === "number")
-                                object.value = options.longs === String ? String(message.value) : message.value;
-                            else
-                                object.value = options.longs === String ? $util.Long.prototype.toString.call(message.value) : options.longs === Number ? new $util.LongBits(message.value.low >>> 0, message.value.high >>> 0).toNumber(true) : message.value;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this effective_balance_of_result to JSON.
-                     * @function toJSON
-                     * @memberof koinos.contracts.token.effective_balance_of_result
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    effective_balance_of_result.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return effective_balance_of_result;
-                })();
-    
                 token.transfer_arguments = (function() {
     
                     /**
@@ -13565,552 +14060,6 @@
                     return balance_object;
                 })();
     
-                token.mana_balance_object = (function() {
-    
-                    /**
-                     * Properties of a mana_balance_object.
-                     * @memberof koinos.contracts.token
-                     * @interface Imana_balance_object
-                     * @property {number|Long|null} [balance] mana_balance_object balance
-                     * @property {number|Long|null} [mana] mana_balance_object mana
-                     * @property {number|Long|null} [last_mana_update] mana_balance_object last_mana_update
-                     */
-    
-                    /**
-                     * Constructs a new mana_balance_object.
-                     * @memberof koinos.contracts.token
-                     * @classdesc Represents a mana_balance_object.
-                     * @implements Imana_balance_object
-                     * @constructor
-                     * @param {koinos.contracts.token.Imana_balance_object=} [properties] Properties to set
-                     */
-                    function mana_balance_object(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * mana_balance_object balance.
-                     * @member {number|Long} balance
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @instance
-                     */
-                    mana_balance_object.prototype.balance = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * mana_balance_object mana.
-                     * @member {number|Long} mana
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @instance
-                     */
-                    mana_balance_object.prototype.mana = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * mana_balance_object last_mana_update.
-                     * @member {number|Long} last_mana_update
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @instance
-                     */
-                    mana_balance_object.prototype.last_mana_update = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * Creates a new mana_balance_object instance using the specified properties.
-                     * @function create
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.Imana_balance_object=} [properties] Properties to set
-                     * @returns {koinos.contracts.token.mana_balance_object} mana_balance_object instance
-                     */
-                    mana_balance_object.create = function create(properties) {
-                        return new mana_balance_object(properties);
-                    };
-    
-                    /**
-                     * Encodes the specified mana_balance_object message. Does not implicitly {@link koinos.contracts.token.mana_balance_object.verify|verify} messages.
-                     * @function encode
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.Imana_balance_object} message mana_balance_object message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    mana_balance_object.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.balance != null && Object.hasOwnProperty.call(message, "balance"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.balance);
-                        if (message.mana != null && Object.hasOwnProperty.call(message, "mana"))
-                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.mana);
-                        if (message.last_mana_update != null && Object.hasOwnProperty.call(message, "last_mana_update"))
-                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.last_mana_update);
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified mana_balance_object message, length delimited. Does not implicitly {@link koinos.contracts.token.mana_balance_object.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.Imana_balance_object} message mana_balance_object message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    mana_balance_object.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes a mana_balance_object message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {koinos.contracts.token.mana_balance_object} mana_balance_object
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    mana_balance_object.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.token.mana_balance_object();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.balance = reader.uint64();
-                                break;
-                            case 2:
-                                message.mana = reader.uint64();
-                                break;
-                            case 3:
-                                message.last_mana_update = reader.uint64();
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes a mana_balance_object message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {koinos.contracts.token.mana_balance_object} mana_balance_object
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    mana_balance_object.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies a mana_balance_object message.
-                     * @function verify
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    mana_balance_object.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.balance != null && message.hasOwnProperty("balance"))
-                            if (!$util.isInteger(message.balance) && !(message.balance && $util.isInteger(message.balance.low) && $util.isInteger(message.balance.high)))
-                                return "balance: integer|Long expected";
-                        if (message.mana != null && message.hasOwnProperty("mana"))
-                            if (!$util.isInteger(message.mana) && !(message.mana && $util.isInteger(message.mana.low) && $util.isInteger(message.mana.high)))
-                                return "mana: integer|Long expected";
-                        if (message.last_mana_update != null && message.hasOwnProperty("last_mana_update"))
-                            if (!$util.isInteger(message.last_mana_update) && !(message.last_mana_update && $util.isInteger(message.last_mana_update.low) && $util.isInteger(message.last_mana_update.high)))
-                                return "last_mana_update: integer|Long expected";
-                        return null;
-                    };
-    
-                    /**
-                     * Creates a mana_balance_object message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {koinos.contracts.token.mana_balance_object} mana_balance_object
-                     */
-                    mana_balance_object.fromObject = function fromObject(object) {
-                        if (object instanceof $root.koinos.contracts.token.mana_balance_object)
-                            return object;
-                        var message = new $root.koinos.contracts.token.mana_balance_object();
-                        if (object.balance != null)
-                            if ($util.Long)
-                                (message.balance = $util.Long.fromValue(object.balance)).unsigned = true;
-                            else if (typeof object.balance === "string")
-                                message.balance = parseInt(object.balance, 10);
-                            else if (typeof object.balance === "number")
-                                message.balance = object.balance;
-                            else if (typeof object.balance === "object")
-                                message.balance = new $util.LongBits(object.balance.low >>> 0, object.balance.high >>> 0).toNumber(true);
-                        if (object.mana != null)
-                            if ($util.Long)
-                                (message.mana = $util.Long.fromValue(object.mana)).unsigned = true;
-                            else if (typeof object.mana === "string")
-                                message.mana = parseInt(object.mana, 10);
-                            else if (typeof object.mana === "number")
-                                message.mana = object.mana;
-                            else if (typeof object.mana === "object")
-                                message.mana = new $util.LongBits(object.mana.low >>> 0, object.mana.high >>> 0).toNumber(true);
-                        if (object.last_mana_update != null)
-                            if ($util.Long)
-                                (message.last_mana_update = $util.Long.fromValue(object.last_mana_update)).unsigned = true;
-                            else if (typeof object.last_mana_update === "string")
-                                message.last_mana_update = parseInt(object.last_mana_update, 10);
-                            else if (typeof object.last_mana_update === "number")
-                                message.last_mana_update = object.last_mana_update;
-                            else if (typeof object.last_mana_update === "object")
-                                message.last_mana_update = new $util.LongBits(object.last_mana_update.low >>> 0, object.last_mana_update.high >>> 0).toNumber(true);
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from a mana_balance_object message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.mana_balance_object} message mana_balance_object
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    mana_balance_object.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults) {
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.balance = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.balance = options.longs === String ? "0" : 0;
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.mana = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.mana = options.longs === String ? "0" : 0;
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.last_mana_update = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.last_mana_update = options.longs === String ? "0" : 0;
-                        }
-                        if (message.balance != null && message.hasOwnProperty("balance"))
-                            if (typeof message.balance === "number")
-                                object.balance = options.longs === String ? String(message.balance) : message.balance;
-                            else
-                                object.balance = options.longs === String ? $util.Long.prototype.toString.call(message.balance) : options.longs === Number ? new $util.LongBits(message.balance.low >>> 0, message.balance.high >>> 0).toNumber(true) : message.balance;
-                        if (message.mana != null && message.hasOwnProperty("mana"))
-                            if (typeof message.mana === "number")
-                                object.mana = options.longs === String ? String(message.mana) : message.mana;
-                            else
-                                object.mana = options.longs === String ? $util.Long.prototype.toString.call(message.mana) : options.longs === Number ? new $util.LongBits(message.mana.low >>> 0, message.mana.high >>> 0).toNumber(true) : message.mana;
-                        if (message.last_mana_update != null && message.hasOwnProperty("last_mana_update"))
-                            if (typeof message.last_mana_update === "number")
-                                object.last_mana_update = options.longs === String ? String(message.last_mana_update) : message.last_mana_update;
-                            else
-                                object.last_mana_update = options.longs === String ? $util.Long.prototype.toString.call(message.last_mana_update) : options.longs === Number ? new $util.LongBits(message.last_mana_update.low >>> 0, message.last_mana_update.high >>> 0).toNumber(true) : message.last_mana_update;
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this mana_balance_object to JSON.
-                     * @function toJSON
-                     * @memberof koinos.contracts.token.mana_balance_object
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    mana_balance_object.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return mana_balance_object;
-                })();
-    
-                token.effective_balance_object = (function() {
-    
-                    /**
-                     * Properties of an effective_balance_object.
-                     * @memberof koinos.contracts.token
-                     * @interface Ieffective_balance_object
-                     * @property {number|Long|null} [current_balance] effective_balance_object current_balance
-                     * @property {Object.<string,number|Long>|null} [past_balances] effective_balance_object past_balances
-                     */
-    
-                    /**
-                     * Constructs a new effective_balance_object.
-                     * @memberof koinos.contracts.token
-                     * @classdesc Represents an effective_balance_object.
-                     * @implements Ieffective_balance_object
-                     * @constructor
-                     * @param {koinos.contracts.token.Ieffective_balance_object=} [properties] Properties to set
-                     */
-                    function effective_balance_object(properties) {
-                        this.past_balances = {};
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-    
-                    /**
-                     * effective_balance_object current_balance.
-                     * @member {number|Long} current_balance
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @instance
-                     */
-                    effective_balance_object.prototype.current_balance = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
-    
-                    /**
-                     * effective_balance_object past_balances.
-                     * @member {Object.<string,number|Long>} past_balances
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @instance
-                     */
-                    effective_balance_object.prototype.past_balances = $util.emptyObject;
-    
-                    /**
-                     * Creates a new effective_balance_object instance using the specified properties.
-                     * @function create
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_object=} [properties] Properties to set
-                     * @returns {koinos.contracts.token.effective_balance_object} effective_balance_object instance
-                     */
-                    effective_balance_object.create = function create(properties) {
-                        return new effective_balance_object(properties);
-                    };
-    
-                    /**
-                     * Encodes the specified effective_balance_object message. Does not implicitly {@link koinos.contracts.token.effective_balance_object.verify|verify} messages.
-                     * @function encode
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_object} message effective_balance_object message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    effective_balance_object.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.current_balance != null && Object.hasOwnProperty.call(message, "current_balance"))
-                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.current_balance);
-                        if (message.past_balances != null && Object.hasOwnProperty.call(message, "past_balances"))
-                            for (var keys = Object.keys(message.past_balances), i = 0; i < keys.length; ++i)
-                                writer.uint32(/* id 2, wireType 2 =*/18).fork().uint32(/* id 1, wireType 0 =*/8).uint64(keys[i]).uint32(/* id 2, wireType 0 =*/16).uint64(message.past_balances[keys[i]]).ldelim();
-                        return writer;
-                    };
-    
-                    /**
-                     * Encodes the specified effective_balance_object message, length delimited. Does not implicitly {@link koinos.contracts.token.effective_balance_object.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.Ieffective_balance_object} message effective_balance_object message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    effective_balance_object.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-    
-                    /**
-                     * Decodes an effective_balance_object message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {koinos.contracts.token.effective_balance_object} effective_balance_object
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    effective_balance_object.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.token.effective_balance_object(), key, value;
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.current_balance = reader.uint64();
-                                break;
-                            case 2:
-                                if (message.past_balances === $util.emptyObject)
-                                    message.past_balances = {};
-                                var end2 = reader.uint32() + reader.pos;
-                                key = 0;
-                                value = 0;
-                                while (reader.pos < end2) {
-                                    var tag2 = reader.uint32();
-                                    switch (tag2 >>> 3) {
-                                    case 1:
-                                        key = reader.uint64();
-                                        break;
-                                    case 2:
-                                        value = reader.uint64();
-                                        break;
-                                    default:
-                                        reader.skipType(tag2 & 7);
-                                        break;
-                                    }
-                                }
-                                message.past_balances[typeof key === "object" ? $util.longToHash(key) : key] = value;
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Decodes an effective_balance_object message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {koinos.contracts.token.effective_balance_object} effective_balance_object
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    effective_balance_object.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-    
-                    /**
-                     * Verifies an effective_balance_object message.
-                     * @function verify
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    effective_balance_object.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.current_balance != null && message.hasOwnProperty("current_balance"))
-                            if (!$util.isInteger(message.current_balance) && !(message.current_balance && $util.isInteger(message.current_balance.low) && $util.isInteger(message.current_balance.high)))
-                                return "current_balance: integer|Long expected";
-                        if (message.past_balances != null && message.hasOwnProperty("past_balances")) {
-                            if (!$util.isObject(message.past_balances))
-                                return "past_balances: object expected";
-                            var key = Object.keys(message.past_balances);
-                            for (var i = 0; i < key.length; ++i) {
-                                if (!$util.key64Re.test(key[i]))
-                                    return "past_balances: integer|Long key{k:uint64} expected";
-                                if (!$util.isInteger(message.past_balances[key[i]]) && !(message.past_balances[key[i]] && $util.isInteger(message.past_balances[key[i]].low) && $util.isInteger(message.past_balances[key[i]].high)))
-                                    return "past_balances: integer|Long{k:uint64} expected";
-                            }
-                        }
-                        return null;
-                    };
-    
-                    /**
-                     * Creates an effective_balance_object message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {koinos.contracts.token.effective_balance_object} effective_balance_object
-                     */
-                    effective_balance_object.fromObject = function fromObject(object) {
-                        if (object instanceof $root.koinos.contracts.token.effective_balance_object)
-                            return object;
-                        var message = new $root.koinos.contracts.token.effective_balance_object();
-                        if (object.current_balance != null)
-                            if ($util.Long)
-                                (message.current_balance = $util.Long.fromValue(object.current_balance)).unsigned = true;
-                            else if (typeof object.current_balance === "string")
-                                message.current_balance = parseInt(object.current_balance, 10);
-                            else if (typeof object.current_balance === "number")
-                                message.current_balance = object.current_balance;
-                            else if (typeof object.current_balance === "object")
-                                message.current_balance = new $util.LongBits(object.current_balance.low >>> 0, object.current_balance.high >>> 0).toNumber(true);
-                        if (object.past_balances) {
-                            if (typeof object.past_balances !== "object")
-                                throw TypeError(".koinos.contracts.token.effective_balance_object.past_balances: object expected");
-                            message.past_balances = {};
-                            for (var keys = Object.keys(object.past_balances), i = 0; i < keys.length; ++i)
-                                if ($util.Long)
-                                    (message.past_balances[keys[i]] = $util.Long.fromValue(object.past_balances[keys[i]])).unsigned = true;
-                                else if (typeof object.past_balances[keys[i]] === "string")
-                                    message.past_balances[keys[i]] = parseInt(object.past_balances[keys[i]], 10);
-                                else if (typeof object.past_balances[keys[i]] === "number")
-                                    message.past_balances[keys[i]] = object.past_balances[keys[i]];
-                                else if (typeof object.past_balances[keys[i]] === "object")
-                                    message.past_balances[keys[i]] = new $util.LongBits(object.past_balances[keys[i]].low >>> 0, object.past_balances[keys[i]].high >>> 0).toNumber(true);
-                        }
-                        return message;
-                    };
-    
-                    /**
-                     * Creates a plain object from an effective_balance_object message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @static
-                     * @param {koinos.contracts.token.effective_balance_object} message effective_balance_object
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    effective_balance_object.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.objects || options.defaults)
-                            object.past_balances = {};
-                        if (options.defaults)
-                            if ($util.Long) {
-                                var long = new $util.Long(0, 0, true);
-                                object.current_balance = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                            } else
-                                object.current_balance = options.longs === String ? "0" : 0;
-                        if (message.current_balance != null && message.hasOwnProperty("current_balance"))
-                            if (typeof message.current_balance === "number")
-                                object.current_balance = options.longs === String ? String(message.current_balance) : message.current_balance;
-                            else
-                                object.current_balance = options.longs === String ? $util.Long.prototype.toString.call(message.current_balance) : options.longs === Number ? new $util.LongBits(message.current_balance.low >>> 0, message.current_balance.high >>> 0).toNumber(true) : message.current_balance;
-                        var keys2;
-                        if (message.past_balances && (keys2 = Object.keys(message.past_balances)).length) {
-                            object.past_balances = {};
-                            for (var j = 0; j < keys2.length; ++j)
-                                if (typeof message.past_balances[keys2[j]] === "number")
-                                    object.past_balances[keys2[j]] = options.longs === String ? String(message.past_balances[keys2[j]]) : message.past_balances[keys2[j]];
-                                else
-                                    object.past_balances[keys2[j]] = options.longs === String ? $util.Long.prototype.toString.call(message.past_balances[keys2[j]]) : options.longs === Number ? new $util.LongBits(message.past_balances[keys2[j]].low >>> 0, message.past_balances[keys2[j]].high >>> 0).toNumber(true) : message.past_balances[keys2[j]];
-                        }
-                        return object;
-                    };
-    
-                    /**
-                     * Converts this effective_balance_object to JSON.
-                     * @function toJSON
-                     * @memberof koinos.contracts.token.effective_balance_object
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    effective_balance_object.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-    
-                    return effective_balance_object;
-                })();
-    
                 token.burn_event = (function() {
     
                     /**
@@ -14842,6 +14791,292 @@
                 })();
     
                 return token;
+            })();
+    
+            contracts.koin = (function() {
+    
+                /**
+                 * Namespace koin.
+                 * @memberof koinos.contracts
+                 * @namespace
+                 */
+                var koin = {};
+    
+                koin.mana_balance_object = (function() {
+    
+                    /**
+                     * Properties of a mana_balance_object.
+                     * @memberof koinos.contracts.koin
+                     * @interface Imana_balance_object
+                     * @property {number|Long|null} [balance] mana_balance_object balance
+                     * @property {number|Long|null} [mana] mana_balance_object mana
+                     * @property {number|Long|null} [last_mana_update] mana_balance_object last_mana_update
+                     */
+    
+                    /**
+                     * Constructs a new mana_balance_object.
+                     * @memberof koinos.contracts.koin
+                     * @classdesc Represents a mana_balance_object.
+                     * @implements Imana_balance_object
+                     * @constructor
+                     * @param {koinos.contracts.koin.Imana_balance_object=} [properties] Properties to set
+                     */
+                    function mana_balance_object(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * mana_balance_object balance.
+                     * @member {number|Long} balance
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @instance
+                     */
+                    mana_balance_object.prototype.balance = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * mana_balance_object mana.
+                     * @member {number|Long} mana
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @instance
+                     */
+                    mana_balance_object.prototype.mana = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * mana_balance_object last_mana_update.
+                     * @member {number|Long} last_mana_update
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @instance
+                     */
+                    mana_balance_object.prototype.last_mana_update = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * Creates a new mana_balance_object instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {koinos.contracts.koin.Imana_balance_object=} [properties] Properties to set
+                     * @returns {koinos.contracts.koin.mana_balance_object} mana_balance_object instance
+                     */
+                    mana_balance_object.create = function create(properties) {
+                        return new mana_balance_object(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified mana_balance_object message. Does not implicitly {@link koinos.contracts.koin.mana_balance_object.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {koinos.contracts.koin.Imana_balance_object} message mana_balance_object message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    mana_balance_object.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.balance != null && Object.hasOwnProperty.call(message, "balance"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.balance);
+                        if (message.mana != null && Object.hasOwnProperty.call(message, "mana"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.mana);
+                        if (message.last_mana_update != null && Object.hasOwnProperty.call(message, "last_mana_update"))
+                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.last_mana_update);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified mana_balance_object message, length delimited. Does not implicitly {@link koinos.contracts.koin.mana_balance_object.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {koinos.contracts.koin.Imana_balance_object} message mana_balance_object message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    mana_balance_object.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a mana_balance_object message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.koin.mana_balance_object} mana_balance_object
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    mana_balance_object.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.koin.mana_balance_object();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.balance = reader.uint64();
+                                break;
+                            case 2:
+                                message.mana = reader.uint64();
+                                break;
+                            case 3:
+                                message.last_mana_update = reader.uint64();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a mana_balance_object message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.koin.mana_balance_object} mana_balance_object
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    mana_balance_object.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a mana_balance_object message.
+                     * @function verify
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    mana_balance_object.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.balance != null && message.hasOwnProperty("balance"))
+                            if (!$util.isInteger(message.balance) && !(message.balance && $util.isInteger(message.balance.low) && $util.isInteger(message.balance.high)))
+                                return "balance: integer|Long expected";
+                        if (message.mana != null && message.hasOwnProperty("mana"))
+                            if (!$util.isInteger(message.mana) && !(message.mana && $util.isInteger(message.mana.low) && $util.isInteger(message.mana.high)))
+                                return "mana: integer|Long expected";
+                        if (message.last_mana_update != null && message.hasOwnProperty("last_mana_update"))
+                            if (!$util.isInteger(message.last_mana_update) && !(message.last_mana_update && $util.isInteger(message.last_mana_update.low) && $util.isInteger(message.last_mana_update.high)))
+                                return "last_mana_update: integer|Long expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a mana_balance_object message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.koin.mana_balance_object} mana_balance_object
+                     */
+                    mana_balance_object.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.koin.mana_balance_object)
+                            return object;
+                        var message = new $root.koinos.contracts.koin.mana_balance_object();
+                        if (object.balance != null)
+                            if ($util.Long)
+                                (message.balance = $util.Long.fromValue(object.balance)).unsigned = true;
+                            else if (typeof object.balance === "string")
+                                message.balance = parseInt(object.balance, 10);
+                            else if (typeof object.balance === "number")
+                                message.balance = object.balance;
+                            else if (typeof object.balance === "object")
+                                message.balance = new $util.LongBits(object.balance.low >>> 0, object.balance.high >>> 0).toNumber(true);
+                        if (object.mana != null)
+                            if ($util.Long)
+                                (message.mana = $util.Long.fromValue(object.mana)).unsigned = true;
+                            else if (typeof object.mana === "string")
+                                message.mana = parseInt(object.mana, 10);
+                            else if (typeof object.mana === "number")
+                                message.mana = object.mana;
+                            else if (typeof object.mana === "object")
+                                message.mana = new $util.LongBits(object.mana.low >>> 0, object.mana.high >>> 0).toNumber(true);
+                        if (object.last_mana_update != null)
+                            if ($util.Long)
+                                (message.last_mana_update = $util.Long.fromValue(object.last_mana_update)).unsigned = true;
+                            else if (typeof object.last_mana_update === "string")
+                                message.last_mana_update = parseInt(object.last_mana_update, 10);
+                            else if (typeof object.last_mana_update === "number")
+                                message.last_mana_update = object.last_mana_update;
+                            else if (typeof object.last_mana_update === "object")
+                                message.last_mana_update = new $util.LongBits(object.last_mana_update.low >>> 0, object.last_mana_update.high >>> 0).toNumber(true);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a mana_balance_object message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @static
+                     * @param {koinos.contracts.koin.mana_balance_object} message mana_balance_object
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    mana_balance_object.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.balance = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.balance = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.mana = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.mana = options.longs === String ? "0" : 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.last_mana_update = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.last_mana_update = options.longs === String ? "0" : 0;
+                        }
+                        if (message.balance != null && message.hasOwnProperty("balance"))
+                            if (typeof message.balance === "number")
+                                object.balance = options.longs === String ? String(message.balance) : message.balance;
+                            else
+                                object.balance = options.longs === String ? $util.Long.prototype.toString.call(message.balance) : options.longs === Number ? new $util.LongBits(message.balance.low >>> 0, message.balance.high >>> 0).toNumber(true) : message.balance;
+                        if (message.mana != null && message.hasOwnProperty("mana"))
+                            if (typeof message.mana === "number")
+                                object.mana = options.longs === String ? String(message.mana) : message.mana;
+                            else
+                                object.mana = options.longs === String ? $util.Long.prototype.toString.call(message.mana) : options.longs === Number ? new $util.LongBits(message.mana.low >>> 0, message.mana.high >>> 0).toNumber(true) : message.mana;
+                        if (message.last_mana_update != null && message.hasOwnProperty("last_mana_update"))
+                            if (typeof message.last_mana_update === "number")
+                                object.last_mana_update = options.longs === String ? String(message.last_mana_update) : message.last_mana_update;
+                            else
+                                object.last_mana_update = options.longs === String ? $util.Long.prototype.toString.call(message.last_mana_update) : options.longs === Number ? new $util.LongBits(message.last_mana_update.low >>> 0, message.last_mana_update.high >>> 0).toNumber(true) : message.last_mana_update;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this mana_balance_object to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.koin.mana_balance_object
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    mana_balance_object.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return mana_balance_object;
+                })();
+    
+                return koin;
             })();
     
             return contracts;

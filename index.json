@@ -610,6 +610,69 @@
                 }
               }
             },
+            "vhp": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/vhp"
+              },
+              "nested": {
+                "effective_balance_of_arguments": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "effective_balance_of_result": {
+                  "fields": {
+                    "value": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "balance_entry": {
+                  "fields": {
+                    "block_height": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "balance": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "effective_balance_object": {
+                  "fields": {
+                    "current_balance": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "past_balances": {
+                      "rule": "repeated",
+                      "type": "balance_entry",
+                      "id": 2
+                    }
+                  }
+                }
+              }
+            },
             "pow": {
               "options": {
                 "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/pow"
@@ -740,28 +803,6 @@
                     }
                   }
                 },
-                "effective_balance_of_arguments": {
-                  "fields": {
-                    "owner": {
-                      "type": "bytes",
-                      "id": 1,
-                      "options": {
-                        "(btype)": "ADDRESS"
-                      }
-                    }
-                  }
-                },
-                "effective_balance_of_result": {
-                  "fields": {
-                    "value": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    }
-                  }
-                },
                 "transfer_arguments": {
                   "fields": {
                     "from": {
@@ -843,47 +884,6 @@
                     }
                   }
                 },
-                "mana_balance_object": {
-                  "fields": {
-                    "balance": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "mana": {
-                      "type": "uint64",
-                      "id": 2,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "last_mana_update": {
-                      "type": "uint64",
-                      "id": 3,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    }
-                  }
-                },
-                "effective_balance_object": {
-                  "fields": {
-                    "current_balance": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "past_balances": {
-                      "keyType": "uint64",
-                      "type": "uint64",
-                      "id": 2
-                    }
-                  }
-                },
                 "burn_event": {
                   "fields": {
                     "from": {
@@ -937,6 +937,38 @@
                       }
                     },
                     "value": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "koin": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/koin"
+              },
+              "nested": {
+                "mana_balance_object": {
+                  "fields": {
+                    "balance": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "mana": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "last_mana_update": {
                       "type": "uint64",
                       "id": 3,
                       "options": {
