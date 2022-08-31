@@ -161,6 +161,13 @@
                       "options": {
                         "(btype)": "BASE64"
                       }
+                    },
+                    "set_block_height": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
                     }
                   }
                 },
@@ -733,6 +740,28 @@
                     }
                   }
                 },
+                "effective_balance_of_arguments": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "effective_balance_of_result": {
+                  "fields": {
+                    "value": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
                 "transfer_arguments": {
                   "fields": {
                     "from": {
@@ -836,6 +865,22 @@
                       "options": {
                         "jstype": "JS_STRING"
                       }
+                    }
+                  }
+                },
+                "effective_balance_object": {
+                  "fields": {
+                    "current_balance": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "past_balances": {
+                      "keyType": "uint64",
+                      "type": "uint64",
+                      "id": 2
                     }
                   }
                 },

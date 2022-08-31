@@ -880,6 +880,9 @@ export namespace koinos {
 
                 /** public_key_record public_key */
                 public_key?: (Uint8Array|null);
+
+                /** public_key_record set_block_height */
+                set_block_height?: (number|Long|null);
             }
 
             /** Represents a public_key_record. */
@@ -893,6 +896,9 @@ export namespace koinos {
 
                 /** public_key_record public_key. */
                 public public_key: Uint8Array;
+
+                /** public_key_record set_block_height. */
+                public set_block_height: (number|Long);
 
                 /**
                  * Creates a new public_key_record instance using the specified properties.
@@ -5090,6 +5096,186 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
 
+            /** Properties of an effective_balance_of_arguments. */
+            interface Ieffective_balance_of_arguments {
+
+                /** effective_balance_of_arguments owner */
+                owner?: (Uint8Array|null);
+            }
+
+            /** Represents an effective_balance_of_arguments. */
+            class effective_balance_of_arguments implements Ieffective_balance_of_arguments {
+
+                /**
+                 * Constructs a new effective_balance_of_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.token.Ieffective_balance_of_arguments);
+
+                /** effective_balance_of_arguments owner. */
+                public owner: Uint8Array;
+
+                /**
+                 * Creates a new effective_balance_of_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns effective_balance_of_arguments instance
+                 */
+                public static create(properties?: koinos.contracts.token.Ieffective_balance_of_arguments): koinos.contracts.token.effective_balance_of_arguments;
+
+                /**
+                 * Encodes the specified effective_balance_of_arguments message. Does not implicitly {@link koinos.contracts.token.effective_balance_of_arguments.verify|verify} messages.
+                 * @param message effective_balance_of_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.token.Ieffective_balance_of_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified effective_balance_of_arguments message, length delimited. Does not implicitly {@link koinos.contracts.token.effective_balance_of_arguments.verify|verify} messages.
+                 * @param message effective_balance_of_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.token.Ieffective_balance_of_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an effective_balance_of_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns effective_balance_of_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.token.effective_balance_of_arguments;
+
+                /**
+                 * Decodes an effective_balance_of_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns effective_balance_of_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.token.effective_balance_of_arguments;
+
+                /**
+                 * Verifies an effective_balance_of_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an effective_balance_of_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns effective_balance_of_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.token.effective_balance_of_arguments;
+
+                /**
+                 * Creates a plain object from an effective_balance_of_arguments message. Also converts values to other types if specified.
+                 * @param message effective_balance_of_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.token.effective_balance_of_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this effective_balance_of_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an effective_balance_of_result. */
+            interface Ieffective_balance_of_result {
+
+                /** effective_balance_of_result value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents an effective_balance_of_result. */
+            class effective_balance_of_result implements Ieffective_balance_of_result {
+
+                /**
+                 * Constructs a new effective_balance_of_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.token.Ieffective_balance_of_result);
+
+                /** effective_balance_of_result value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new effective_balance_of_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns effective_balance_of_result instance
+                 */
+                public static create(properties?: koinos.contracts.token.Ieffective_balance_of_result): koinos.contracts.token.effective_balance_of_result;
+
+                /**
+                 * Encodes the specified effective_balance_of_result message. Does not implicitly {@link koinos.contracts.token.effective_balance_of_result.verify|verify} messages.
+                 * @param message effective_balance_of_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.token.Ieffective_balance_of_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified effective_balance_of_result message, length delimited. Does not implicitly {@link koinos.contracts.token.effective_balance_of_result.verify|verify} messages.
+                 * @param message effective_balance_of_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.token.Ieffective_balance_of_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an effective_balance_of_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns effective_balance_of_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.token.effective_balance_of_result;
+
+                /**
+                 * Decodes an effective_balance_of_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns effective_balance_of_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.token.effective_balance_of_result;
+
+                /**
+                 * Verifies an effective_balance_of_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an effective_balance_of_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns effective_balance_of_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.token.effective_balance_of_result;
+
+                /**
+                 * Creates a plain object from an effective_balance_of_result message. Also converts values to other types if specified.
+                 * @param message effective_balance_of_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.token.effective_balance_of_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this effective_balance_of_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
             /** Properties of a transfer_arguments. */
             interface Itransfer_arguments {
 
@@ -5823,6 +6009,102 @@ export namespace koinos {
 
                 /**
                  * Converts this mana_balance_object to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an effective_balance_object. */
+            interface Ieffective_balance_object {
+
+                /** effective_balance_object current_balance */
+                current_balance?: (number|Long|null);
+
+                /** effective_balance_object past_balances */
+                past_balances?: ({ [k: string]: (number|Long) }|null);
+            }
+
+            /** Represents an effective_balance_object. */
+            class effective_balance_object implements Ieffective_balance_object {
+
+                /**
+                 * Constructs a new effective_balance_object.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.token.Ieffective_balance_object);
+
+                /** effective_balance_object current_balance. */
+                public current_balance: (number|Long);
+
+                /** effective_balance_object past_balances. */
+                public past_balances: { [k: string]: (number|Long) };
+
+                /**
+                 * Creates a new effective_balance_object instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns effective_balance_object instance
+                 */
+                public static create(properties?: koinos.contracts.token.Ieffective_balance_object): koinos.contracts.token.effective_balance_object;
+
+                /**
+                 * Encodes the specified effective_balance_object message. Does not implicitly {@link koinos.contracts.token.effective_balance_object.verify|verify} messages.
+                 * @param message effective_balance_object message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.token.Ieffective_balance_object, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified effective_balance_object message, length delimited. Does not implicitly {@link koinos.contracts.token.effective_balance_object.verify|verify} messages.
+                 * @param message effective_balance_object message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.token.Ieffective_balance_object, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an effective_balance_object message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns effective_balance_object
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.token.effective_balance_object;
+
+                /**
+                 * Decodes an effective_balance_object message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns effective_balance_object
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.token.effective_balance_object;
+
+                /**
+                 * Verifies an effective_balance_object message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an effective_balance_object message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns effective_balance_object
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.token.effective_balance_object;
+
+                /**
+                 * Creates a plain object from an effective_balance_object message. Also converts values to other types if specified.
+                 * @param message effective_balance_object
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.token.effective_balance_object, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this effective_balance_object to JSON.
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
