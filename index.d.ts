@@ -2266,6 +2266,180 @@ export namespace koinos {
                  */
                 public toJSON(): { [k: string]: any };
             }
+
+            /** Properties of an update_consensus_parameters_arguments. */
+            interface Iupdate_consensus_parameters_arguments {
+
+                /** update_consensus_parameters_arguments value */
+                value?: (koinos.contracts.pob.Iconsensus_parameters|null);
+            }
+
+            /** Represents an update_consensus_parameters_arguments. */
+            class update_consensus_parameters_arguments implements Iupdate_consensus_parameters_arguments {
+
+                /**
+                 * Constructs a new update_consensus_parameters_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.pob.Iupdate_consensus_parameters_arguments);
+
+                /** update_consensus_parameters_arguments value. */
+                public value?: (koinos.contracts.pob.Iconsensus_parameters|null);
+
+                /**
+                 * Creates a new update_consensus_parameters_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns update_consensus_parameters_arguments instance
+                 */
+                public static create(properties?: koinos.contracts.pob.Iupdate_consensus_parameters_arguments): koinos.contracts.pob.update_consensus_parameters_arguments;
+
+                /**
+                 * Encodes the specified update_consensus_parameters_arguments message. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_arguments.verify|verify} messages.
+                 * @param message update_consensus_parameters_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.pob.Iupdate_consensus_parameters_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified update_consensus_parameters_arguments message, length delimited. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_arguments.verify|verify} messages.
+                 * @param message update_consensus_parameters_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.pob.Iupdate_consensus_parameters_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an update_consensus_parameters_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns update_consensus_parameters_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.pob.update_consensus_parameters_arguments;
+
+                /**
+                 * Decodes an update_consensus_parameters_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns update_consensus_parameters_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.pob.update_consensus_parameters_arguments;
+
+                /**
+                 * Verifies an update_consensus_parameters_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an update_consensus_parameters_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns update_consensus_parameters_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.pob.update_consensus_parameters_arguments;
+
+                /**
+                 * Creates a plain object from an update_consensus_parameters_arguments message. Also converts values to other types if specified.
+                 * @param message update_consensus_parameters_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.pob.update_consensus_parameters_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this update_consensus_parameters_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an update_consensus_parameters_result. */
+            interface Iupdate_consensus_parameters_result {
+            }
+
+            /** Represents an update_consensus_parameters_result. */
+            class update_consensus_parameters_result implements Iupdate_consensus_parameters_result {
+
+                /**
+                 * Constructs a new update_consensus_parameters_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.pob.Iupdate_consensus_parameters_result);
+
+                /**
+                 * Creates a new update_consensus_parameters_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns update_consensus_parameters_result instance
+                 */
+                public static create(properties?: koinos.contracts.pob.Iupdate_consensus_parameters_result): koinos.contracts.pob.update_consensus_parameters_result;
+
+                /**
+                 * Encodes the specified update_consensus_parameters_result message. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_result.verify|verify} messages.
+                 * @param message update_consensus_parameters_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.pob.Iupdate_consensus_parameters_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified update_consensus_parameters_result message, length delimited. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_result.verify|verify} messages.
+                 * @param message update_consensus_parameters_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.pob.Iupdate_consensus_parameters_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an update_consensus_parameters_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns update_consensus_parameters_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.pob.update_consensus_parameters_result;
+
+                /**
+                 * Decodes an update_consensus_parameters_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns update_consensus_parameters_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.pob.update_consensus_parameters_result;
+
+                /**
+                 * Verifies an update_consensus_parameters_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an update_consensus_parameters_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns update_consensus_parameters_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.pob.update_consensus_parameters_result;
+
+                /**
+                 * Creates a plain object from an update_consensus_parameters_result message. Also converts values to other types if specified.
+                 * @param message update_consensus_parameters_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.pob.update_consensus_parameters_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this update_consensus_parameters_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
         }
 
         /** Namespace resources. */

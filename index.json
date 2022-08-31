@@ -353,6 +353,17 @@
                       }
                     }
                   }
+                },
+                "update_consensus_parameters_arguments": {
+                  "fields": {
+                    "value": {
+                      "type": "consensus_parameters",
+                      "id": 1
+                    }
+                  }
+                },
+                "update_consensus_parameters_result": {
+                  "fields": {}
                 }
               }
             },

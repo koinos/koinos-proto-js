@@ -5159,6 +5159,358 @@
                     return get_public_key_result;
                 })();
     
+                pob.update_consensus_parameters_arguments = (function() {
+    
+                    /**
+                     * Properties of an update_consensus_parameters_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iupdate_consensus_parameters_arguments
+                     * @property {koinos.contracts.pob.Iconsensus_parameters|null} [value] update_consensus_parameters_arguments value
+                     */
+    
+                    /**
+                     * Constructs a new update_consensus_parameters_arguments.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents an update_consensus_parameters_arguments.
+                     * @implements Iupdate_consensus_parameters_arguments
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_arguments=} [properties] Properties to set
+                     */
+                    function update_consensus_parameters_arguments(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * update_consensus_parameters_arguments value.
+                     * @member {koinos.contracts.pob.Iconsensus_parameters|null|undefined} value
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @instance
+                     */
+                    update_consensus_parameters_arguments.prototype.value = null;
+    
+                    /**
+                     * Creates a new update_consensus_parameters_arguments instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_arguments=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_arguments} update_consensus_parameters_arguments instance
+                     */
+                    update_consensus_parameters_arguments.create = function create(properties) {
+                        return new update_consensus_parameters_arguments(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified update_consensus_parameters_arguments message. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_arguments.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_arguments} message update_consensus_parameters_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    update_consensus_parameters_arguments.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                            $root.koinos.contracts.pob.consensus_parameters.encode(message.value, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified update_consensus_parameters_arguments message, length delimited. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_arguments.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_arguments} message update_consensus_parameters_arguments message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    update_consensus_parameters_arguments.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an update_consensus_parameters_arguments message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_arguments} update_consensus_parameters_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    update_consensus_parameters_arguments.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.update_consensus_parameters_arguments();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.value = $root.koinos.contracts.pob.consensus_parameters.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an update_consensus_parameters_arguments message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_arguments} update_consensus_parameters_arguments
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    update_consensus_parameters_arguments.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an update_consensus_parameters_arguments message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    update_consensus_parameters_arguments.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.value != null && message.hasOwnProperty("value")) {
+                            var error = $root.koinos.contracts.pob.consensus_parameters.verify(message.value);
+                            if (error)
+                                return "value." + error;
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an update_consensus_parameters_arguments message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_arguments} update_consensus_parameters_arguments
+                     */
+                    update_consensus_parameters_arguments.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.update_consensus_parameters_arguments)
+                            return object;
+                        var message = new $root.koinos.contracts.pob.update_consensus_parameters_arguments();
+                        if (object.value != null) {
+                            if (typeof object.value !== "object")
+                                throw TypeError(".koinos.contracts.pob.update_consensus_parameters_arguments.value: object expected");
+                            message.value = $root.koinos.contracts.pob.consensus_parameters.fromObject(object.value);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an update_consensus_parameters_arguments message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @static
+                     * @param {koinos.contracts.pob.update_consensus_parameters_arguments} message update_consensus_parameters_arguments
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    update_consensus_parameters_arguments.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.value = null;
+                        if (message.value != null && message.hasOwnProperty("value"))
+                            object.value = $root.koinos.contracts.pob.consensus_parameters.toObject(message.value, options);
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this update_consensus_parameters_arguments to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_arguments
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    update_consensus_parameters_arguments.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return update_consensus_parameters_arguments;
+                })();
+    
+                pob.update_consensus_parameters_result = (function() {
+    
+                    /**
+                     * Properties of an update_consensus_parameters_result.
+                     * @memberof koinos.contracts.pob
+                     * @interface Iupdate_consensus_parameters_result
+                     */
+    
+                    /**
+                     * Constructs a new update_consensus_parameters_result.
+                     * @memberof koinos.contracts.pob
+                     * @classdesc Represents an update_consensus_parameters_result.
+                     * @implements Iupdate_consensus_parameters_result
+                     * @constructor
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_result=} [properties] Properties to set
+                     */
+                    function update_consensus_parameters_result(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * Creates a new update_consensus_parameters_result instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_result=} [properties] Properties to set
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_result} update_consensus_parameters_result instance
+                     */
+                    update_consensus_parameters_result.create = function create(properties) {
+                        return new update_consensus_parameters_result(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified update_consensus_parameters_result message. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_result.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_result} message update_consensus_parameters_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    update_consensus_parameters_result.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified update_consensus_parameters_result message, length delimited. Does not implicitly {@link koinos.contracts.pob.update_consensus_parameters_result.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.Iupdate_consensus_parameters_result} message update_consensus_parameters_result message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    update_consensus_parameters_result.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an update_consensus_parameters_result message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_result} update_consensus_parameters_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    update_consensus_parameters_result.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.contracts.pob.update_consensus_parameters_result();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an update_consensus_parameters_result message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_result} update_consensus_parameters_result
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    update_consensus_parameters_result.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an update_consensus_parameters_result message.
+                     * @function verify
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    update_consensus_parameters_result.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an update_consensus_parameters_result message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.contracts.pob.update_consensus_parameters_result} update_consensus_parameters_result
+                     */
+                    update_consensus_parameters_result.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.contracts.pob.update_consensus_parameters_result)
+                            return object;
+                        return new $root.koinos.contracts.pob.update_consensus_parameters_result();
+                    };
+    
+                    /**
+                     * Creates a plain object from an update_consensus_parameters_result message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @static
+                     * @param {koinos.contracts.pob.update_consensus_parameters_result} message update_consensus_parameters_result
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    update_consensus_parameters_result.toObject = function toObject() {
+                        return {};
+                    };
+    
+                    /**
+                     * Converts this update_consensus_parameters_result to JSON.
+                     * @function toJSON
+                     * @memberof koinos.contracts.pob.update_consensus_parameters_result
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    update_consensus_parameters_result.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return update_consensus_parameters_result;
+                })();
+    
                 return pob;
             })();
     
