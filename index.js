@@ -1754,6 +1754,7 @@
                      * @property {number|null} [target_burn_percent] consensus_parameters target_burn_percent
                      * @property {number|null} [target_block_interval] consensus_parameters target_block_interval
                      * @property {number|null} [quantum_length] consensus_parameters quantum_length
+                     * @property {number|Long|null} [minimum_block_time] consensus_parameters minimum_block_time
                      */
     
                     /**
@@ -1804,6 +1805,14 @@
                     consensus_parameters.prototype.quantum_length = 0;
     
                     /**
+                     * consensus_parameters minimum_block_time.
+                     * @member {number|Long} minimum_block_time
+                     * @memberof koinos.contracts.pob.consensus_parameters
+                     * @instance
+                     */
+                    consensus_parameters.prototype.minimum_block_time = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
                      * Creates a new consensus_parameters instance using the specified properties.
                      * @function create
                      * @memberof koinos.contracts.pob.consensus_parameters
@@ -1835,6 +1844,8 @@
                             writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.target_block_interval);
                         if (message.quantum_length != null && Object.hasOwnProperty.call(message, "quantum_length"))
                             writer.uint32(/* id 4, wireType 0 =*/32).uint32(message.quantum_length);
+                        if (message.minimum_block_time != null && Object.hasOwnProperty.call(message, "minimum_block_time"))
+                            writer.uint32(/* id 5, wireType 0 =*/40).uint64(message.minimum_block_time);
                         return writer;
                     };
     
@@ -1880,6 +1891,9 @@
                                 break;
                             case 4:
                                 message.quantum_length = reader.uint32();
+                                break;
+                            case 5:
+                                message.minimum_block_time = reader.uint64();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -1928,6 +1942,9 @@
                         if (message.quantum_length != null && message.hasOwnProperty("quantum_length"))
                             if (!$util.isInteger(message.quantum_length))
                                 return "quantum_length: integer expected";
+                        if (message.minimum_block_time != null && message.hasOwnProperty("minimum_block_time"))
+                            if (!$util.isInteger(message.minimum_block_time) && !(message.minimum_block_time && $util.isInteger(message.minimum_block_time.low) && $util.isInteger(message.minimum_block_time.high)))
+                                return "minimum_block_time: integer|Long expected";
                         return null;
                     };
     
@@ -1951,6 +1968,15 @@
                             message.target_block_interval = object.target_block_interval >>> 0;
                         if (object.quantum_length != null)
                             message.quantum_length = object.quantum_length >>> 0;
+                        if (object.minimum_block_time != null)
+                            if ($util.Long)
+                                (message.minimum_block_time = $util.Long.fromValue(object.minimum_block_time)).unsigned = true;
+                            else if (typeof object.minimum_block_time === "string")
+                                message.minimum_block_time = parseInt(object.minimum_block_time, 10);
+                            else if (typeof object.minimum_block_time === "number")
+                                message.minimum_block_time = object.minimum_block_time;
+                            else if (typeof object.minimum_block_time === "object")
+                                message.minimum_block_time = new $util.LongBits(object.minimum_block_time.low >>> 0, object.minimum_block_time.high >>> 0).toNumber(true);
                         return message;
                     };
     
@@ -1972,6 +1998,11 @@
                             object.target_burn_percent = 0;
                             object.target_block_interval = 0;
                             object.quantum_length = 0;
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.minimum_block_time = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.minimum_block_time = options.longs === String ? "0" : 0;
                         }
                         if (message.target_annual_inflation_rate != null && message.hasOwnProperty("target_annual_inflation_rate"))
                             object.target_annual_inflation_rate = message.target_annual_inflation_rate;
@@ -1981,6 +2012,11 @@
                             object.target_block_interval = message.target_block_interval;
                         if (message.quantum_length != null && message.hasOwnProperty("quantum_length"))
                             object.quantum_length = message.quantum_length;
+                        if (message.minimum_block_time != null && message.hasOwnProperty("minimum_block_time"))
+                            if (typeof message.minimum_block_time === "number")
+                                object.minimum_block_time = options.longs === String ? String(message.minimum_block_time) : message.minimum_block_time;
+                            else
+                                object.minimum_block_time = options.longs === String ? $util.Long.prototype.toString.call(message.minimum_block_time) : options.longs === Number ? new $util.LongBits(message.minimum_block_time.low >>> 0, message.minimum_block_time.high >>> 0).toNumber(true) : message.minimum_block_time;
                         return object;
                     };
     

@@ -781,6 +781,9 @@ export namespace koinos {
 
                 /** consensus_parameters quantum_length */
                 quantum_length?: (number|null);
+
+                /** consensus_parameters minimum_block_time */
+                minimum_block_time?: (number|Long|null);
             }
 
             /** Represents a consensus_parameters. */
@@ -803,6 +806,9 @@ export namespace koinos {
 
                 /** consensus_parameters quantum_length. */
                 public quantum_length: number;
+
+                /** consensus_parameters minimum_block_time. */
+                public minimum_block_time: (number|Long);
 
                 /**
                  * Creates a new consensus_parameters instance using the specified properties.

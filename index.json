@@ -150,6 +150,10 @@
                     "quantum_length": {
                       "type": "uint32",
                       "id": 4
+                    },
+                    "minimum_block_time": {
+                      "type": "uint64",
+                      "id": 5
                     }
                   }
                 },
