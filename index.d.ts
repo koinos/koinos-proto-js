@@ -16261,7 +16261,8 @@ export namespace koinos {
             indexer_failure = -1011,
             network_bandwidth_limit_exceeded = -1012,
             compute_bandwidth_limit_exceeded = -1013,
-            disk_storage_limit_exceeded = -1014
+            disk_storage_limit_exceeded = -1014,
+            pre_irreversibility_block = -1015
         }
 
         /** Properties of a nop_arguments. */

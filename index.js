@@ -39299,6 +39299,7 @@
              * @property {number} network_bandwidth_limit_exceeded=-1012 network_bandwidth_limit_exceeded value
              * @property {number} compute_bandwidth_limit_exceeded=-1013 compute_bandwidth_limit_exceeded value
              * @property {number} disk_storage_limit_exceeded=-1014 disk_storage_limit_exceeded value
+             * @property {number} pre_irreversibility_block=-1015 pre_irreversibility_block value
              */
             chain.error_code = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -39340,6 +39341,7 @@
                 values[valuesById[-1012] = "network_bandwidth_limit_exceeded"] = -1012;
                 values[valuesById[-1013] = "compute_bandwidth_limit_exceeded"] = -1013;
                 values[valuesById[-1014] = "disk_storage_limit_exceeded"] = -1014;
+                values[valuesById[-1015] = "pre_irreversibility_block"] = -1015;
                 return values;
             })();
     
