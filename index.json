@@ -266,6 +266,100 @@
                 }
               }
             },
+            "name_service": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/name-service"
+              },
+              "nested": {
+                "name_record": {
+                  "fields": {
+                    "name": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "address_record": {
+                  "fields": {
+                    "address": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "get_address_arguments": {
+                  "fields": {
+                    "name": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "get_address_result": {
+                  "fields": {
+                    "value": {
+                      "type": "address_record",
+                      "id": 1
+                    }
+                  }
+                },
+                "get_name_arguments": {
+                  "fields": {
+                    "address": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "get_name_result": {
+                  "fields": {
+                    "value": {
+                      "type": "name_record",
+                      "id": 1
+                    }
+                  }
+                },
+                "set_record_arguments": {
+                  "fields": {
+                    "name": {
+                      "type": "string",
+                      "id": 1
+                    },
+                    "address": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "set_record_result": {
+                  "fields": {}
+                },
+                "record_update_event": {
+                  "fields": {
+                    "name": {
+                      "type": "string",
+                      "id": 1
+                    },
+                    "address": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "token": {
               "options": {
                 "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/token"

@@ -1539,6 +1539,826 @@ export namespace koinos {
             }
         }
 
+        /** Namespace name_service. */
+        namespace name_service {
+
+            /** Properties of a name_record. */
+            interface Iname_record {
+
+                /** name_record name */
+                name?: (string|null);
+            }
+
+            /** Represents a name_record. */
+            class name_record implements Iname_record {
+
+                /**
+                 * Constructs a new name_record.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iname_record);
+
+                /** name_record name. */
+                public name: string;
+
+                /**
+                 * Creates a new name_record instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns name_record instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iname_record): koinos.contracts.name_service.name_record;
+
+                /**
+                 * Encodes the specified name_record message. Does not implicitly {@link koinos.contracts.name_service.name_record.verify|verify} messages.
+                 * @param message name_record message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iname_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified name_record message, length delimited. Does not implicitly {@link koinos.contracts.name_service.name_record.verify|verify} messages.
+                 * @param message name_record message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iname_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a name_record message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns name_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.name_record;
+
+                /**
+                 * Decodes a name_record message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns name_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.name_record;
+
+                /**
+                 * Verifies a name_record message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a name_record message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns name_record
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.name_record;
+
+                /**
+                 * Creates a plain object from a name_record message. Also converts values to other types if specified.
+                 * @param message name_record
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.name_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this name_record to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an address_record. */
+            interface Iaddress_record {
+
+                /** address_record address */
+                address?: (Uint8Array|null);
+            }
+
+            /** Represents an address_record. */
+            class address_record implements Iaddress_record {
+
+                /**
+                 * Constructs a new address_record.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iaddress_record);
+
+                /** address_record address. */
+                public address: Uint8Array;
+
+                /**
+                 * Creates a new address_record instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns address_record instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iaddress_record): koinos.contracts.name_service.address_record;
+
+                /**
+                 * Encodes the specified address_record message. Does not implicitly {@link koinos.contracts.name_service.address_record.verify|verify} messages.
+                 * @param message address_record message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iaddress_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified address_record message, length delimited. Does not implicitly {@link koinos.contracts.name_service.address_record.verify|verify} messages.
+                 * @param message address_record message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iaddress_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an address_record message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns address_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.address_record;
+
+                /**
+                 * Decodes an address_record message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns address_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.address_record;
+
+                /**
+                 * Verifies an address_record message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an address_record message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns address_record
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.address_record;
+
+                /**
+                 * Creates a plain object from an address_record message. Also converts values to other types if specified.
+                 * @param message address_record
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.address_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this address_record to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_address_arguments. */
+            interface Iget_address_arguments {
+
+                /** get_address_arguments name */
+                name?: (string|null);
+            }
+
+            /** Represents a get_address_arguments. */
+            class get_address_arguments implements Iget_address_arguments {
+
+                /**
+                 * Constructs a new get_address_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iget_address_arguments);
+
+                /** get_address_arguments name. */
+                public name: string;
+
+                /**
+                 * Creates a new get_address_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_address_arguments instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iget_address_arguments): koinos.contracts.name_service.get_address_arguments;
+
+                /**
+                 * Encodes the specified get_address_arguments message. Does not implicitly {@link koinos.contracts.name_service.get_address_arguments.verify|verify} messages.
+                 * @param message get_address_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iget_address_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_address_arguments message, length delimited. Does not implicitly {@link koinos.contracts.name_service.get_address_arguments.verify|verify} messages.
+                 * @param message get_address_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iget_address_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_address_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_address_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.get_address_arguments;
+
+                /**
+                 * Decodes a get_address_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_address_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.get_address_arguments;
+
+                /**
+                 * Verifies a get_address_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_address_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_address_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.get_address_arguments;
+
+                /**
+                 * Creates a plain object from a get_address_arguments message. Also converts values to other types if specified.
+                 * @param message get_address_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.get_address_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_address_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_address_result. */
+            interface Iget_address_result {
+
+                /** get_address_result value */
+                value?: (koinos.contracts.name_service.Iaddress_record|null);
+            }
+
+            /** Represents a get_address_result. */
+            class get_address_result implements Iget_address_result {
+
+                /**
+                 * Constructs a new get_address_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iget_address_result);
+
+                /** get_address_result value. */
+                public value?: (koinos.contracts.name_service.Iaddress_record|null);
+
+                /**
+                 * Creates a new get_address_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_address_result instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iget_address_result): koinos.contracts.name_service.get_address_result;
+
+                /**
+                 * Encodes the specified get_address_result message. Does not implicitly {@link koinos.contracts.name_service.get_address_result.verify|verify} messages.
+                 * @param message get_address_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iget_address_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_address_result message, length delimited. Does not implicitly {@link koinos.contracts.name_service.get_address_result.verify|verify} messages.
+                 * @param message get_address_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iget_address_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_address_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_address_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.get_address_result;
+
+                /**
+                 * Decodes a get_address_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_address_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.get_address_result;
+
+                /**
+                 * Verifies a get_address_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_address_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_address_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.get_address_result;
+
+                /**
+                 * Creates a plain object from a get_address_result message. Also converts values to other types if specified.
+                 * @param message get_address_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.get_address_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_address_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_name_arguments. */
+            interface Iget_name_arguments {
+
+                /** get_name_arguments address */
+                address?: (Uint8Array|null);
+            }
+
+            /** Represents a get_name_arguments. */
+            class get_name_arguments implements Iget_name_arguments {
+
+                /**
+                 * Constructs a new get_name_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iget_name_arguments);
+
+                /** get_name_arguments address. */
+                public address: Uint8Array;
+
+                /**
+                 * Creates a new get_name_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_name_arguments instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iget_name_arguments): koinos.contracts.name_service.get_name_arguments;
+
+                /**
+                 * Encodes the specified get_name_arguments message. Does not implicitly {@link koinos.contracts.name_service.get_name_arguments.verify|verify} messages.
+                 * @param message get_name_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iget_name_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_name_arguments message, length delimited. Does not implicitly {@link koinos.contracts.name_service.get_name_arguments.verify|verify} messages.
+                 * @param message get_name_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iget_name_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_name_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_name_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.get_name_arguments;
+
+                /**
+                 * Decodes a get_name_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_name_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.get_name_arguments;
+
+                /**
+                 * Verifies a get_name_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_name_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_name_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.get_name_arguments;
+
+                /**
+                 * Creates a plain object from a get_name_arguments message. Also converts values to other types if specified.
+                 * @param message get_name_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.get_name_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_name_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_name_result. */
+            interface Iget_name_result {
+
+                /** get_name_result value */
+                value?: (koinos.contracts.name_service.Iname_record|null);
+            }
+
+            /** Represents a get_name_result. */
+            class get_name_result implements Iget_name_result {
+
+                /**
+                 * Constructs a new get_name_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iget_name_result);
+
+                /** get_name_result value. */
+                public value?: (koinos.contracts.name_service.Iname_record|null);
+
+                /**
+                 * Creates a new get_name_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_name_result instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iget_name_result): koinos.contracts.name_service.get_name_result;
+
+                /**
+                 * Encodes the specified get_name_result message. Does not implicitly {@link koinos.contracts.name_service.get_name_result.verify|verify} messages.
+                 * @param message get_name_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iget_name_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_name_result message, length delimited. Does not implicitly {@link koinos.contracts.name_service.get_name_result.verify|verify} messages.
+                 * @param message get_name_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iget_name_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_name_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_name_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.get_name_result;
+
+                /**
+                 * Decodes a get_name_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_name_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.get_name_result;
+
+                /**
+                 * Verifies a get_name_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_name_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_name_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.get_name_result;
+
+                /**
+                 * Creates a plain object from a get_name_result message. Also converts values to other types if specified.
+                 * @param message get_name_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.get_name_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_name_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a set_record_arguments. */
+            interface Iset_record_arguments {
+
+                /** set_record_arguments name */
+                name?: (string|null);
+
+                /** set_record_arguments address */
+                address?: (Uint8Array|null);
+            }
+
+            /** Represents a set_record_arguments. */
+            class set_record_arguments implements Iset_record_arguments {
+
+                /**
+                 * Constructs a new set_record_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iset_record_arguments);
+
+                /** set_record_arguments name. */
+                public name: string;
+
+                /** set_record_arguments address. */
+                public address: Uint8Array;
+
+                /**
+                 * Creates a new set_record_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns set_record_arguments instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iset_record_arguments): koinos.contracts.name_service.set_record_arguments;
+
+                /**
+                 * Encodes the specified set_record_arguments message. Does not implicitly {@link koinos.contracts.name_service.set_record_arguments.verify|verify} messages.
+                 * @param message set_record_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iset_record_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified set_record_arguments message, length delimited. Does not implicitly {@link koinos.contracts.name_service.set_record_arguments.verify|verify} messages.
+                 * @param message set_record_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iset_record_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a set_record_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns set_record_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.set_record_arguments;
+
+                /**
+                 * Decodes a set_record_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns set_record_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.set_record_arguments;
+
+                /**
+                 * Verifies a set_record_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a set_record_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns set_record_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.set_record_arguments;
+
+                /**
+                 * Creates a plain object from a set_record_arguments message. Also converts values to other types if specified.
+                 * @param message set_record_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.set_record_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this set_record_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a set_record_result. */
+            interface Iset_record_result {
+            }
+
+            /** Represents a set_record_result. */
+            class set_record_result implements Iset_record_result {
+
+                /**
+                 * Constructs a new set_record_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Iset_record_result);
+
+                /**
+                 * Creates a new set_record_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns set_record_result instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Iset_record_result): koinos.contracts.name_service.set_record_result;
+
+                /**
+                 * Encodes the specified set_record_result message. Does not implicitly {@link koinos.contracts.name_service.set_record_result.verify|verify} messages.
+                 * @param message set_record_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Iset_record_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified set_record_result message, length delimited. Does not implicitly {@link koinos.contracts.name_service.set_record_result.verify|verify} messages.
+                 * @param message set_record_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Iset_record_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a set_record_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns set_record_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.set_record_result;
+
+                /**
+                 * Decodes a set_record_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns set_record_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.set_record_result;
+
+                /**
+                 * Verifies a set_record_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a set_record_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns set_record_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.set_record_result;
+
+                /**
+                 * Creates a plain object from a set_record_result message. Also converts values to other types if specified.
+                 * @param message set_record_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.set_record_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this set_record_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a record_update_event. */
+            interface Irecord_update_event {
+
+                /** record_update_event name */
+                name?: (string|null);
+
+                /** record_update_event address */
+                address?: (Uint8Array|null);
+            }
+
+            /** Represents a record_update_event. */
+            class record_update_event implements Irecord_update_event {
+
+                /**
+                 * Constructs a new record_update_event.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.contracts.name_service.Irecord_update_event);
+
+                /** record_update_event name. */
+                public name: string;
+
+                /** record_update_event address. */
+                public address: Uint8Array;
+
+                /**
+                 * Creates a new record_update_event instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns record_update_event instance
+                 */
+                public static create(properties?: koinos.contracts.name_service.Irecord_update_event): koinos.contracts.name_service.record_update_event;
+
+                /**
+                 * Encodes the specified record_update_event message. Does not implicitly {@link koinos.contracts.name_service.record_update_event.verify|verify} messages.
+                 * @param message record_update_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.contracts.name_service.Irecord_update_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified record_update_event message, length delimited. Does not implicitly {@link koinos.contracts.name_service.record_update_event.verify|verify} messages.
+                 * @param message record_update_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.contracts.name_service.Irecord_update_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a record_update_event message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns record_update_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contracts.name_service.record_update_event;
+
+                /**
+                 * Decodes a record_update_event message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns record_update_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contracts.name_service.record_update_event;
+
+                /**
+                 * Verifies a record_update_event message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a record_update_event message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns record_update_event
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.contracts.name_service.record_update_event;
+
+                /**
+                 * Creates a plain object from a record_update_event message. Also converts values to other types if specified.
+                 * @param message record_update_event
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.contracts.name_service.record_update_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this record_update_event to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+        }
+
         /** Namespace token. */
         namespace token {
 
