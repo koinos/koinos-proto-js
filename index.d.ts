@@ -10475,7 +10475,9 @@ export namespace koinos {
             get_arguments = 603,
             get_contract_id = 604,
             get_caller = 605,
-            check_authority = 606
+            check_authority = 606,
+            get_contract_name = 10000,
+            get_contract_address = 10001
         }
 
         /** Properties of a nop_arguments. */

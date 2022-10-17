@@ -25031,6 +25031,8 @@
              * @property {number} get_contract_id=604 get_contract_id value
              * @property {number} get_caller=605 get_caller value
              * @property {number} check_authority=606 check_authority value
+             * @property {number} get_contract_name=10000 get_contract_name value
+             * @property {number} get_contract_address=10001 get_contract_address value
              */
             chain.system_call_id = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -25080,6 +25082,8 @@
                 values[valuesById[604] = "get_contract_id"] = 604;
                 values[valuesById[605] = "get_caller"] = 605;
                 values[valuesById[606] = "check_authority"] = 606;
+                values[valuesById[10000] = "get_contract_name"] = 10000;
+                values[valuesById[10001] = "get_contract_address"] = 10001;
                 return values;
             })();
     
