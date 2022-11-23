@@ -68,6 +68,80 @@
             }
           }
         },
+        "account_history": {
+          "options": {
+            "go_package": "github.com/koinos/koinos-proto-golang/koinos/account_history"
+          },
+          "nested": {
+            "account_metadata": {
+              "fields": {
+                "seq_num": {
+                  "type": "uint64",
+                  "id": 1
+                }
+              }
+            },
+            "history_index": {
+              "fields": {
+                "address": {
+                  "type": "bytes",
+                  "id": 1,
+                  "options": {
+                    "(btype)": "ADDRESS"
+                  }
+                },
+                "seq_num": {
+                  "type": "uint64",
+                  "id": 2
+                }
+              }
+            },
+            "transaction_record": {
+              "fields": {
+                "transaction": {
+                  "type": "protocol.transaction",
+                  "id": 1
+                },
+                "receipt": {
+                  "type": "protocol.transaction_receipt",
+                  "id": 2
+                }
+              }
+            },
+            "block_record": {
+              "fields": {
+                "header": {
+                  "type": "protocol.block_header",
+                  "id": 1
+                },
+                "receipt": {
+                  "type": "protocol.block_receipt",
+                  "id": 2
+                }
+              }
+            },
+            "history_record": {
+              "oneofs": {
+                "record": {
+                  "oneof": [
+                    "trx",
+                    "block"
+                  ]
+                }
+              },
+              "fields": {
+                "trx": {
+                  "type": "transaction_record",
+                  "id": 1
+                },
+                "block": {
+                  "type": "block_record",
+                  "id": 2
+                }
+              }
+            }
+          }
+        },
         "contracts": {
           "nested": {
             "koin": {
@@ -3344,6 +3418,135 @@
                     },
                     "get_transactions_by_id": {
                       "type": "get_transactions_by_id_response",
+                      "id": 3
+                    }
+                  }
+                }
+              }
+            },
+            "account_history": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/account_history"
+              },
+              "nested": {
+                "account_history_entry": {
+                  "oneofs": {
+                    "record": {
+                      "oneof": [
+                        "trx",
+                        "block"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "seq_num": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "trx": {
+                      "type": ".koinos.account_history.transaction_record",
+                      "id": 2
+                    },
+                    "block": {
+                      "type": ".koinos.account_history.block_record",
+                      "id": 3
+                    }
+                  }
+                },
+                "get_account_history_request": {
+                  "oneofs": {
+                    "_seq_num": {
+                      "oneof": [
+                        "seq_num"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "address": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "seq_num": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING",
+                        "proto3_optional": true
+                      }
+                    },
+                    "limit": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "ascending": {
+                      "type": "bool",
+                      "id": 4
+                    },
+                    "irreversible": {
+                      "type": "bool",
+                      "id": 5
+                    }
+                  }
+                },
+                "get_account_history_response": {
+                  "fields": {
+                    "values": {
+                      "rule": "repeated",
+                      "type": "account_history_entry",
+                      "id": 1
+                    }
+                  }
+                },
+                "account_history_request": {
+                  "oneofs": {
+                    "request": {
+                      "oneof": [
+                        "reserved",
+                        "get_account_history"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "reserved": {
+                      "type": "rpc.reserved_rpc",
+                      "id": 1
+                    },
+                    "get_account_history": {
+                      "type": "get_account_history_request",
+                      "id": 2
+                    }
+                  }
+                },
+                "account_history_response": {
+                  "oneofs": {
+                    "response": {
+                      "oneof": [
+                        "reserved",
+                        "error",
+                        "get_account_history"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "reserved": {
+                      "type": "rpc.reserved_rpc",
+                      "id": 1
+                    },
+                    "error": {
+                      "type": "rpc.error_response",
+                      "id": 2
+                    },
+                    "get_account_history": {
+                      "type": "get_account_history_response",
                       "id": 3
                     }
                   }

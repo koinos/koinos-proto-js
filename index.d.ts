@@ -298,6 +298,487 @@ export namespace koinos {
         }
     }
 
+    /** Namespace account_history. */
+    namespace account_history {
+
+        /** Properties of an account_metadata. */
+        interface Iaccount_metadata {
+
+            /** account_metadata seq_num */
+            seq_num?: (number|Long|null);
+        }
+
+        /** Represents an account_metadata. */
+        class account_metadata implements Iaccount_metadata {
+
+            /**
+             * Constructs a new account_metadata.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.account_history.Iaccount_metadata);
+
+            /** account_metadata seq_num. */
+            public seq_num: (number|Long);
+
+            /**
+             * Creates a new account_metadata instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns account_metadata instance
+             */
+            public static create(properties?: koinos.account_history.Iaccount_metadata): koinos.account_history.account_metadata;
+
+            /**
+             * Encodes the specified account_metadata message. Does not implicitly {@link koinos.account_history.account_metadata.verify|verify} messages.
+             * @param message account_metadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.account_history.Iaccount_metadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified account_metadata message, length delimited. Does not implicitly {@link koinos.account_history.account_metadata.verify|verify} messages.
+             * @param message account_metadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.account_history.Iaccount_metadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an account_metadata message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns account_metadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.account_history.account_metadata;
+
+            /**
+             * Decodes an account_metadata message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns account_metadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.account_history.account_metadata;
+
+            /**
+             * Verifies an account_metadata message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an account_metadata message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns account_metadata
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.account_history.account_metadata;
+
+            /**
+             * Creates a plain object from an account_metadata message. Also converts values to other types if specified.
+             * @param message account_metadata
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.account_history.account_metadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this account_metadata to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a history_index. */
+        interface Ihistory_index {
+
+            /** history_index address */
+            address?: (Uint8Array|null);
+
+            /** history_index seq_num */
+            seq_num?: (number|Long|null);
+        }
+
+        /** Represents a history_index. */
+        class history_index implements Ihistory_index {
+
+            /**
+             * Constructs a new history_index.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.account_history.Ihistory_index);
+
+            /** history_index address. */
+            public address: Uint8Array;
+
+            /** history_index seq_num. */
+            public seq_num: (number|Long);
+
+            /**
+             * Creates a new history_index instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns history_index instance
+             */
+            public static create(properties?: koinos.account_history.Ihistory_index): koinos.account_history.history_index;
+
+            /**
+             * Encodes the specified history_index message. Does not implicitly {@link koinos.account_history.history_index.verify|verify} messages.
+             * @param message history_index message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.account_history.Ihistory_index, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified history_index message, length delimited. Does not implicitly {@link koinos.account_history.history_index.verify|verify} messages.
+             * @param message history_index message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.account_history.Ihistory_index, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a history_index message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns history_index
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.account_history.history_index;
+
+            /**
+             * Decodes a history_index message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns history_index
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.account_history.history_index;
+
+            /**
+             * Verifies a history_index message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a history_index message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns history_index
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.account_history.history_index;
+
+            /**
+             * Creates a plain object from a history_index message. Also converts values to other types if specified.
+             * @param message history_index
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.account_history.history_index, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this history_index to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a transaction_record. */
+        interface Itransaction_record {
+
+            /** transaction_record transaction */
+            transaction?: (koinos.protocol.Itransaction|null);
+
+            /** transaction_record receipt */
+            receipt?: (koinos.protocol.Itransaction_receipt|null);
+        }
+
+        /** Represents a transaction_record. */
+        class transaction_record implements Itransaction_record {
+
+            /**
+             * Constructs a new transaction_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.account_history.Itransaction_record);
+
+            /** transaction_record transaction. */
+            public transaction?: (koinos.protocol.Itransaction|null);
+
+            /** transaction_record receipt. */
+            public receipt?: (koinos.protocol.Itransaction_receipt|null);
+
+            /**
+             * Creates a new transaction_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns transaction_record instance
+             */
+            public static create(properties?: koinos.account_history.Itransaction_record): koinos.account_history.transaction_record;
+
+            /**
+             * Encodes the specified transaction_record message. Does not implicitly {@link koinos.account_history.transaction_record.verify|verify} messages.
+             * @param message transaction_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.account_history.Itransaction_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified transaction_record message, length delimited. Does not implicitly {@link koinos.account_history.transaction_record.verify|verify} messages.
+             * @param message transaction_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.account_history.Itransaction_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a transaction_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns transaction_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.account_history.transaction_record;
+
+            /**
+             * Decodes a transaction_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns transaction_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.account_history.transaction_record;
+
+            /**
+             * Verifies a transaction_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a transaction_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns transaction_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.account_history.transaction_record;
+
+            /**
+             * Creates a plain object from a transaction_record message. Also converts values to other types if specified.
+             * @param message transaction_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.account_history.transaction_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this transaction_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a block_record. */
+        interface Iblock_record {
+
+            /** block_record header */
+            header?: (koinos.protocol.Iblock_header|null);
+
+            /** block_record receipt */
+            receipt?: (koinos.protocol.Iblock_receipt|null);
+        }
+
+        /** Represents a block_record. */
+        class block_record implements Iblock_record {
+
+            /**
+             * Constructs a new block_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.account_history.Iblock_record);
+
+            /** block_record header. */
+            public header?: (koinos.protocol.Iblock_header|null);
+
+            /** block_record receipt. */
+            public receipt?: (koinos.protocol.Iblock_receipt|null);
+
+            /**
+             * Creates a new block_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns block_record instance
+             */
+            public static create(properties?: koinos.account_history.Iblock_record): koinos.account_history.block_record;
+
+            /**
+             * Encodes the specified block_record message. Does not implicitly {@link koinos.account_history.block_record.verify|verify} messages.
+             * @param message block_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.account_history.Iblock_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified block_record message, length delimited. Does not implicitly {@link koinos.account_history.block_record.verify|verify} messages.
+             * @param message block_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.account_history.Iblock_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a block_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns block_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.account_history.block_record;
+
+            /**
+             * Decodes a block_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns block_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.account_history.block_record;
+
+            /**
+             * Verifies a block_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a block_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns block_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.account_history.block_record;
+
+            /**
+             * Creates a plain object from a block_record message. Also converts values to other types if specified.
+             * @param message block_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.account_history.block_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this block_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a history_record. */
+        interface Ihistory_record {
+
+            /** history_record trx */
+            trx?: (koinos.account_history.Itransaction_record|null);
+
+            /** history_record block */
+            block?: (koinos.account_history.Iblock_record|null);
+        }
+
+        /** Represents a history_record. */
+        class history_record implements Ihistory_record {
+
+            /**
+             * Constructs a new history_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.account_history.Ihistory_record);
+
+            /** history_record trx. */
+            public trx?: (koinos.account_history.Itransaction_record|null);
+
+            /** history_record block. */
+            public block?: (koinos.account_history.Iblock_record|null);
+
+            /** history_record record. */
+            public record?: ("trx"|"block");
+
+            /**
+             * Creates a new history_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns history_record instance
+             */
+            public static create(properties?: koinos.account_history.Ihistory_record): koinos.account_history.history_record;
+
+            /**
+             * Encodes the specified history_record message. Does not implicitly {@link koinos.account_history.history_record.verify|verify} messages.
+             * @param message history_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.account_history.Ihistory_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified history_record message, length delimited. Does not implicitly {@link koinos.account_history.history_record.verify|verify} messages.
+             * @param message history_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.account_history.Ihistory_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a history_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns history_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.account_history.history_record;
+
+            /**
+             * Decodes a history_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns history_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.account_history.history_record;
+
+            /**
+             * Verifies a history_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a history_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns history_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.account_history.history_record;
+
+            /**
+             * Creates a plain object from a history_record message. Also converts values to other types if specified.
+             * @param message history_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.account_history.history_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this history_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
+
     /** Namespace contracts. */
     namespace contracts {
 
@@ -22274,6 +22755,526 @@ export namespace koinos {
 
                 /**
                  * Converts this transaction_store_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+        }
+
+        /** Namespace account_history. */
+        namespace account_history {
+
+            /** Properties of an account_history_entry. */
+            interface Iaccount_history_entry {
+
+                /** account_history_entry seq_num */
+                seq_num?: (number|Long|null);
+
+                /** account_history_entry trx */
+                trx?: (koinos.account_history.Itransaction_record|null);
+
+                /** account_history_entry block */
+                block?: (koinos.account_history.Iblock_record|null);
+            }
+
+            /** Represents an account_history_entry. */
+            class account_history_entry implements Iaccount_history_entry {
+
+                /**
+                 * Constructs a new account_history_entry.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iaccount_history_entry);
+
+                /** account_history_entry seq_num. */
+                public seq_num: (number|Long);
+
+                /** account_history_entry trx. */
+                public trx?: (koinos.account_history.Itransaction_record|null);
+
+                /** account_history_entry block. */
+                public block?: (koinos.account_history.Iblock_record|null);
+
+                /** account_history_entry record. */
+                public record?: ("trx"|"block");
+
+                /**
+                 * Creates a new account_history_entry instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_history_entry instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iaccount_history_entry): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Encodes the specified account_history_entry message. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
+                 * @param message account_history_entry message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iaccount_history_entry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_history_entry message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
+                 * @param message account_history_entry message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_entry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_history_entry message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_history_entry
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Decodes an account_history_entry message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_history_entry
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Verifies an account_history_entry message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_history_entry message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_history_entry
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Creates a plain object from an account_history_entry message. Also converts values to other types if specified.
+                 * @param message account_history_entry
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.account_history_entry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_history_entry to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_account_history_request. */
+            interface Iget_account_history_request {
+
+                /** get_account_history_request address */
+                address?: (Uint8Array|null);
+
+                /** get_account_history_request seq_num */
+                seq_num?: (number|Long|null);
+
+                /** get_account_history_request limit */
+                limit?: (number|Long|null);
+
+                /** get_account_history_request ascending */
+                ascending?: (boolean|null);
+
+                /** get_account_history_request irreversible */
+                irreversible?: (boolean|null);
+            }
+
+            /** Represents a get_account_history_request. */
+            class get_account_history_request implements Iget_account_history_request {
+
+                /**
+                 * Constructs a new get_account_history_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iget_account_history_request);
+
+                /** get_account_history_request address. */
+                public address: Uint8Array;
+
+                /** get_account_history_request seq_num. */
+                public seq_num?: (number|Long|null);
+
+                /** get_account_history_request limit. */
+                public limit: (number|Long);
+
+                /** get_account_history_request ascending. */
+                public ascending: boolean;
+
+                /** get_account_history_request irreversible. */
+                public irreversible: boolean;
+
+                /** get_account_history_request _seq_num. */
+                public _seq_num?: "seq_num";
+
+                /**
+                 * Creates a new get_account_history_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_account_history_request instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iget_account_history_request): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Encodes the specified get_account_history_request message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
+                 * @param message get_account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iget_account_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
+                 * @param message get_account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iget_account_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_account_history_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Decodes a get_account_history_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Verifies a get_account_history_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_account_history_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_account_history_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Creates a plain object from a get_account_history_request message. Also converts values to other types if specified.
+                 * @param message get_account_history_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.get_account_history_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_account_history_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_account_history_response. */
+            interface Iget_account_history_response {
+
+                /** get_account_history_response values */
+                values?: (koinos.rpc.account_history.Iaccount_history_entry[]|null);
+            }
+
+            /** Represents a get_account_history_response. */
+            class get_account_history_response implements Iget_account_history_response {
+
+                /**
+                 * Constructs a new get_account_history_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iget_account_history_response);
+
+                /** get_account_history_response values. */
+                public values: koinos.rpc.account_history.Iaccount_history_entry[];
+
+                /**
+                 * Creates a new get_account_history_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_account_history_response instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iget_account_history_response): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Encodes the specified get_account_history_response message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
+                 * @param message get_account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iget_account_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
+                 * @param message get_account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iget_account_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_account_history_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Decodes a get_account_history_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Verifies a get_account_history_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_account_history_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_account_history_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Creates a plain object from a get_account_history_response message. Also converts values to other types if specified.
+                 * @param message get_account_history_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.get_account_history_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_account_history_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an account_history_request. */
+            interface Iaccount_history_request {
+
+                /** account_history_request reserved */
+                reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** account_history_request get_account_history */
+                get_account_history?: (koinos.rpc.account_history.Iget_account_history_request|null);
+            }
+
+            /** Represents an account_history_request. */
+            class account_history_request implements Iaccount_history_request {
+
+                /**
+                 * Constructs a new account_history_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iaccount_history_request);
+
+                /** account_history_request reserved. */
+                public reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** account_history_request get_account_history. */
+                public get_account_history?: (koinos.rpc.account_history.Iget_account_history_request|null);
+
+                /** account_history_request request. */
+                public request?: ("reserved"|"get_account_history");
+
+                /**
+                 * Creates a new account_history_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_history_request instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iaccount_history_request): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Encodes the specified account_history_request message. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
+                 * @param message account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iaccount_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
+                 * @param message account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_history_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Decodes an account_history_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Verifies an account_history_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_history_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_history_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Creates a plain object from an account_history_request message. Also converts values to other types if specified.
+                 * @param message account_history_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.account_history_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_history_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an account_history_response. */
+            interface Iaccount_history_response {
+
+                /** account_history_response reserved */
+                reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** account_history_response error */
+                error?: (koinos.rpc.Ierror_response|null);
+
+                /** account_history_response get_account_history */
+                get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
+            }
+
+            /** Represents an account_history_response. */
+            class account_history_response implements Iaccount_history_response {
+
+                /**
+                 * Constructs a new account_history_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iaccount_history_response);
+
+                /** account_history_response reserved. */
+                public reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** account_history_response error. */
+                public error?: (koinos.rpc.Ierror_response|null);
+
+                /** account_history_response get_account_history. */
+                public get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
+
+                /** account_history_response response. */
+                public response?: ("reserved"|"error"|"get_account_history");
+
+                /**
+                 * Creates a new account_history_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_history_response instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iaccount_history_response): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Encodes the specified account_history_response message. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
+                 * @param message account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iaccount_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
+                 * @param message account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_history_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Decodes an account_history_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Verifies an account_history_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_history_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_history_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Creates a plain object from an account_history_response message. Also converts values to other types if specified.
+                 * @param message account_history_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.account_history_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_history_response to JSON.
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };

@@ -734,6 +734,1137 @@
             return transaction_store;
         })();
     
+        koinos.account_history = (function() {
+    
+            /**
+             * Namespace account_history.
+             * @memberof koinos
+             * @namespace
+             */
+            var account_history = {};
+    
+            account_history.account_metadata = (function() {
+    
+                /**
+                 * Properties of an account_metadata.
+                 * @memberof koinos.account_history
+                 * @interface Iaccount_metadata
+                 * @property {number|Long|null} [seq_num] account_metadata seq_num
+                 */
+    
+                /**
+                 * Constructs a new account_metadata.
+                 * @memberof koinos.account_history
+                 * @classdesc Represents an account_metadata.
+                 * @implements Iaccount_metadata
+                 * @constructor
+                 * @param {koinos.account_history.Iaccount_metadata=} [properties] Properties to set
+                 */
+                function account_metadata(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * account_metadata seq_num.
+                 * @member {number|Long} seq_num
+                 * @memberof koinos.account_history.account_metadata
+                 * @instance
+                 */
+                account_metadata.prototype.seq_num = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Creates a new account_metadata instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {koinos.account_history.Iaccount_metadata=} [properties] Properties to set
+                 * @returns {koinos.account_history.account_metadata} account_metadata instance
+                 */
+                account_metadata.create = function create(properties) {
+                    return new account_metadata(properties);
+                };
+    
+                /**
+                 * Encodes the specified account_metadata message. Does not implicitly {@link koinos.account_history.account_metadata.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {koinos.account_history.Iaccount_metadata} message account_metadata message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                account_metadata.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.seq_num != null && Object.hasOwnProperty.call(message, "seq_num"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.seq_num);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified account_metadata message, length delimited. Does not implicitly {@link koinos.account_history.account_metadata.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {koinos.account_history.Iaccount_metadata} message account_metadata message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                account_metadata.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes an account_metadata message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.account_history.account_metadata} account_metadata
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                account_metadata.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.account_history.account_metadata();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.seq_num = reader.uint64();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes an account_metadata message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.account_history.account_metadata} account_metadata
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                account_metadata.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies an account_metadata message.
+                 * @function verify
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                account_metadata.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.seq_num != null && message.hasOwnProperty("seq_num"))
+                        if (!$util.isInteger(message.seq_num) && !(message.seq_num && $util.isInteger(message.seq_num.low) && $util.isInteger(message.seq_num.high)))
+                            return "seq_num: integer|Long expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates an account_metadata message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.account_history.account_metadata} account_metadata
+                 */
+                account_metadata.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.account_history.account_metadata)
+                        return object;
+                    var message = new $root.koinos.account_history.account_metadata();
+                    if (object.seq_num != null)
+                        if ($util.Long)
+                            (message.seq_num = $util.Long.fromValue(object.seq_num)).unsigned = true;
+                        else if (typeof object.seq_num === "string")
+                            message.seq_num = parseInt(object.seq_num, 10);
+                        else if (typeof object.seq_num === "number")
+                            message.seq_num = object.seq_num;
+                        else if (typeof object.seq_num === "object")
+                            message.seq_num = new $util.LongBits(object.seq_num.low >>> 0, object.seq_num.high >>> 0).toNumber(true);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from an account_metadata message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.account_history.account_metadata
+                 * @static
+                 * @param {koinos.account_history.account_metadata} message account_metadata
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                account_metadata.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults)
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.seq_num = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.seq_num = options.longs === String ? "0" : 0;
+                    if (message.seq_num != null && message.hasOwnProperty("seq_num"))
+                        if (typeof message.seq_num === "number")
+                            object.seq_num = options.longs === String ? String(message.seq_num) : message.seq_num;
+                        else
+                            object.seq_num = options.longs === String ? $util.Long.prototype.toString.call(message.seq_num) : options.longs === Number ? new $util.LongBits(message.seq_num.low >>> 0, message.seq_num.high >>> 0).toNumber(true) : message.seq_num;
+                    return object;
+                };
+    
+                /**
+                 * Converts this account_metadata to JSON.
+                 * @function toJSON
+                 * @memberof koinos.account_history.account_metadata
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                account_metadata.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return account_metadata;
+            })();
+    
+            account_history.history_index = (function() {
+    
+                /**
+                 * Properties of a history_index.
+                 * @memberof koinos.account_history
+                 * @interface Ihistory_index
+                 * @property {Uint8Array|null} [address] history_index address
+                 * @property {number|Long|null} [seq_num] history_index seq_num
+                 */
+    
+                /**
+                 * Constructs a new history_index.
+                 * @memberof koinos.account_history
+                 * @classdesc Represents a history_index.
+                 * @implements Ihistory_index
+                 * @constructor
+                 * @param {koinos.account_history.Ihistory_index=} [properties] Properties to set
+                 */
+                function history_index(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * history_index address.
+                 * @member {Uint8Array} address
+                 * @memberof koinos.account_history.history_index
+                 * @instance
+                 */
+                history_index.prototype.address = $util.newBuffer([]);
+    
+                /**
+                 * history_index seq_num.
+                 * @member {number|Long} seq_num
+                 * @memberof koinos.account_history.history_index
+                 * @instance
+                 */
+                history_index.prototype.seq_num = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                /**
+                 * Creates a new history_index instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {koinos.account_history.Ihistory_index=} [properties] Properties to set
+                 * @returns {koinos.account_history.history_index} history_index instance
+                 */
+                history_index.create = function create(properties) {
+                    return new history_index(properties);
+                };
+    
+                /**
+                 * Encodes the specified history_index message. Does not implicitly {@link koinos.account_history.history_index.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {koinos.account_history.Ihistory_index} message history_index message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                history_index.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.address != null && Object.hasOwnProperty.call(message, "address"))
+                        writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.address);
+                    if (message.seq_num != null && Object.hasOwnProperty.call(message, "seq_num"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.seq_num);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified history_index message, length delimited. Does not implicitly {@link koinos.account_history.history_index.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {koinos.account_history.Ihistory_index} message history_index message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                history_index.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a history_index message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.account_history.history_index} history_index
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                history_index.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.account_history.history_index();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.address = reader.bytes();
+                            break;
+                        case 2:
+                            message.seq_num = reader.uint64();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a history_index message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.account_history.history_index} history_index
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                history_index.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a history_index message.
+                 * @function verify
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                history_index.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.address != null && message.hasOwnProperty("address"))
+                        if (!(message.address && typeof message.address.length === "number" || $util.isString(message.address)))
+                            return "address: buffer expected";
+                    if (message.seq_num != null && message.hasOwnProperty("seq_num"))
+                        if (!$util.isInteger(message.seq_num) && !(message.seq_num && $util.isInteger(message.seq_num.low) && $util.isInteger(message.seq_num.high)))
+                            return "seq_num: integer|Long expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a history_index message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.account_history.history_index} history_index
+                 */
+                history_index.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.account_history.history_index)
+                        return object;
+                    var message = new $root.koinos.account_history.history_index();
+                    if (object.address != null)
+                        if (typeof object.address === "string")
+                            $util.base64.decode(object.address, message.address = $util.newBuffer($util.base64.length(object.address)), 0);
+                        else if (object.address.length)
+                            message.address = object.address;
+                    if (object.seq_num != null)
+                        if ($util.Long)
+                            (message.seq_num = $util.Long.fromValue(object.seq_num)).unsigned = true;
+                        else if (typeof object.seq_num === "string")
+                            message.seq_num = parseInt(object.seq_num, 10);
+                        else if (typeof object.seq_num === "number")
+                            message.seq_num = object.seq_num;
+                        else if (typeof object.seq_num === "object")
+                            message.seq_num = new $util.LongBits(object.seq_num.low >>> 0, object.seq_num.high >>> 0).toNumber(true);
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a history_index message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.account_history.history_index
+                 * @static
+                 * @param {koinos.account_history.history_index} message history_index
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                history_index.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        if (options.bytes === String)
+                            object.address = "";
+                        else {
+                            object.address = [];
+                            if (options.bytes !== Array)
+                                object.address = $util.newBuffer(object.address);
+                        }
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, true);
+                            object.seq_num = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.seq_num = options.longs === String ? "0" : 0;
+                    }
+                    if (message.address != null && message.hasOwnProperty("address"))
+                        object.address = options.bytes === String ? $util.base64.encode(message.address, 0, message.address.length) : options.bytes === Array ? Array.prototype.slice.call(message.address) : message.address;
+                    if (message.seq_num != null && message.hasOwnProperty("seq_num"))
+                        if (typeof message.seq_num === "number")
+                            object.seq_num = options.longs === String ? String(message.seq_num) : message.seq_num;
+                        else
+                            object.seq_num = options.longs === String ? $util.Long.prototype.toString.call(message.seq_num) : options.longs === Number ? new $util.LongBits(message.seq_num.low >>> 0, message.seq_num.high >>> 0).toNumber(true) : message.seq_num;
+                    return object;
+                };
+    
+                /**
+                 * Converts this history_index to JSON.
+                 * @function toJSON
+                 * @memberof koinos.account_history.history_index
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                history_index.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return history_index;
+            })();
+    
+            account_history.transaction_record = (function() {
+    
+                /**
+                 * Properties of a transaction_record.
+                 * @memberof koinos.account_history
+                 * @interface Itransaction_record
+                 * @property {koinos.protocol.Itransaction|null} [transaction] transaction_record transaction
+                 * @property {koinos.protocol.Itransaction_receipt|null} [receipt] transaction_record receipt
+                 */
+    
+                /**
+                 * Constructs a new transaction_record.
+                 * @memberof koinos.account_history
+                 * @classdesc Represents a transaction_record.
+                 * @implements Itransaction_record
+                 * @constructor
+                 * @param {koinos.account_history.Itransaction_record=} [properties] Properties to set
+                 */
+                function transaction_record(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * transaction_record transaction.
+                 * @member {koinos.protocol.Itransaction|null|undefined} transaction
+                 * @memberof koinos.account_history.transaction_record
+                 * @instance
+                 */
+                transaction_record.prototype.transaction = null;
+    
+                /**
+                 * transaction_record receipt.
+                 * @member {koinos.protocol.Itransaction_receipt|null|undefined} receipt
+                 * @memberof koinos.account_history.transaction_record
+                 * @instance
+                 */
+                transaction_record.prototype.receipt = null;
+    
+                /**
+                 * Creates a new transaction_record instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {koinos.account_history.Itransaction_record=} [properties] Properties to set
+                 * @returns {koinos.account_history.transaction_record} transaction_record instance
+                 */
+                transaction_record.create = function create(properties) {
+                    return new transaction_record(properties);
+                };
+    
+                /**
+                 * Encodes the specified transaction_record message. Does not implicitly {@link koinos.account_history.transaction_record.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {koinos.account_history.Itransaction_record} message transaction_record message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                transaction_record.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.transaction != null && Object.hasOwnProperty.call(message, "transaction"))
+                        $root.koinos.protocol.transaction.encode(message.transaction, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.receipt != null && Object.hasOwnProperty.call(message, "receipt"))
+                        $root.koinos.protocol.transaction_receipt.encode(message.receipt, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified transaction_record message, length delimited. Does not implicitly {@link koinos.account_history.transaction_record.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {koinos.account_history.Itransaction_record} message transaction_record message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                transaction_record.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a transaction_record message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.account_history.transaction_record} transaction_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                transaction_record.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.account_history.transaction_record();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.transaction = $root.koinos.protocol.transaction.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            message.receipt = $root.koinos.protocol.transaction_receipt.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a transaction_record message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.account_history.transaction_record} transaction_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                transaction_record.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a transaction_record message.
+                 * @function verify
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                transaction_record.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.transaction != null && message.hasOwnProperty("transaction")) {
+                        var error = $root.koinos.protocol.transaction.verify(message.transaction);
+                        if (error)
+                            return "transaction." + error;
+                    }
+                    if (message.receipt != null && message.hasOwnProperty("receipt")) {
+                        var error = $root.koinos.protocol.transaction_receipt.verify(message.receipt);
+                        if (error)
+                            return "receipt." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a transaction_record message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.account_history.transaction_record} transaction_record
+                 */
+                transaction_record.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.account_history.transaction_record)
+                        return object;
+                    var message = new $root.koinos.account_history.transaction_record();
+                    if (object.transaction != null) {
+                        if (typeof object.transaction !== "object")
+                            throw TypeError(".koinos.account_history.transaction_record.transaction: object expected");
+                        message.transaction = $root.koinos.protocol.transaction.fromObject(object.transaction);
+                    }
+                    if (object.receipt != null) {
+                        if (typeof object.receipt !== "object")
+                            throw TypeError(".koinos.account_history.transaction_record.receipt: object expected");
+                        message.receipt = $root.koinos.protocol.transaction_receipt.fromObject(object.receipt);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a transaction_record message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.account_history.transaction_record
+                 * @static
+                 * @param {koinos.account_history.transaction_record} message transaction_record
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                transaction_record.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.transaction = null;
+                        object.receipt = null;
+                    }
+                    if (message.transaction != null && message.hasOwnProperty("transaction"))
+                        object.transaction = $root.koinos.protocol.transaction.toObject(message.transaction, options);
+                    if (message.receipt != null && message.hasOwnProperty("receipt"))
+                        object.receipt = $root.koinos.protocol.transaction_receipt.toObject(message.receipt, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this transaction_record to JSON.
+                 * @function toJSON
+                 * @memberof koinos.account_history.transaction_record
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                transaction_record.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return transaction_record;
+            })();
+    
+            account_history.block_record = (function() {
+    
+                /**
+                 * Properties of a block_record.
+                 * @memberof koinos.account_history
+                 * @interface Iblock_record
+                 * @property {koinos.protocol.Iblock_header|null} [header] block_record header
+                 * @property {koinos.protocol.Iblock_receipt|null} [receipt] block_record receipt
+                 */
+    
+                /**
+                 * Constructs a new block_record.
+                 * @memberof koinos.account_history
+                 * @classdesc Represents a block_record.
+                 * @implements Iblock_record
+                 * @constructor
+                 * @param {koinos.account_history.Iblock_record=} [properties] Properties to set
+                 */
+                function block_record(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * block_record header.
+                 * @member {koinos.protocol.Iblock_header|null|undefined} header
+                 * @memberof koinos.account_history.block_record
+                 * @instance
+                 */
+                block_record.prototype.header = null;
+    
+                /**
+                 * block_record receipt.
+                 * @member {koinos.protocol.Iblock_receipt|null|undefined} receipt
+                 * @memberof koinos.account_history.block_record
+                 * @instance
+                 */
+                block_record.prototype.receipt = null;
+    
+                /**
+                 * Creates a new block_record instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {koinos.account_history.Iblock_record=} [properties] Properties to set
+                 * @returns {koinos.account_history.block_record} block_record instance
+                 */
+                block_record.create = function create(properties) {
+                    return new block_record(properties);
+                };
+    
+                /**
+                 * Encodes the specified block_record message. Does not implicitly {@link koinos.account_history.block_record.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {koinos.account_history.Iblock_record} message block_record message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                block_record.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.header != null && Object.hasOwnProperty.call(message, "header"))
+                        $root.koinos.protocol.block_header.encode(message.header, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.receipt != null && Object.hasOwnProperty.call(message, "receipt"))
+                        $root.koinos.protocol.block_receipt.encode(message.receipt, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified block_record message, length delimited. Does not implicitly {@link koinos.account_history.block_record.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {koinos.account_history.Iblock_record} message block_record message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                block_record.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a block_record message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.account_history.block_record} block_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                block_record.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.account_history.block_record();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.header = $root.koinos.protocol.block_header.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            message.receipt = $root.koinos.protocol.block_receipt.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a block_record message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.account_history.block_record} block_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                block_record.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a block_record message.
+                 * @function verify
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                block_record.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.header != null && message.hasOwnProperty("header")) {
+                        var error = $root.koinos.protocol.block_header.verify(message.header);
+                        if (error)
+                            return "header." + error;
+                    }
+                    if (message.receipt != null && message.hasOwnProperty("receipt")) {
+                        var error = $root.koinos.protocol.block_receipt.verify(message.receipt);
+                        if (error)
+                            return "receipt." + error;
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a block_record message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.account_history.block_record} block_record
+                 */
+                block_record.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.account_history.block_record)
+                        return object;
+                    var message = new $root.koinos.account_history.block_record();
+                    if (object.header != null) {
+                        if (typeof object.header !== "object")
+                            throw TypeError(".koinos.account_history.block_record.header: object expected");
+                        message.header = $root.koinos.protocol.block_header.fromObject(object.header);
+                    }
+                    if (object.receipt != null) {
+                        if (typeof object.receipt !== "object")
+                            throw TypeError(".koinos.account_history.block_record.receipt: object expected");
+                        message.receipt = $root.koinos.protocol.block_receipt.fromObject(object.receipt);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a block_record message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.account_history.block_record
+                 * @static
+                 * @param {koinos.account_history.block_record} message block_record
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                block_record.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        object.header = null;
+                        object.receipt = null;
+                    }
+                    if (message.header != null && message.hasOwnProperty("header"))
+                        object.header = $root.koinos.protocol.block_header.toObject(message.header, options);
+                    if (message.receipt != null && message.hasOwnProperty("receipt"))
+                        object.receipt = $root.koinos.protocol.block_receipt.toObject(message.receipt, options);
+                    return object;
+                };
+    
+                /**
+                 * Converts this block_record to JSON.
+                 * @function toJSON
+                 * @memberof koinos.account_history.block_record
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                block_record.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return block_record;
+            })();
+    
+            account_history.history_record = (function() {
+    
+                /**
+                 * Properties of a history_record.
+                 * @memberof koinos.account_history
+                 * @interface Ihistory_record
+                 * @property {koinos.account_history.Itransaction_record|null} [trx] history_record trx
+                 * @property {koinos.account_history.Iblock_record|null} [block] history_record block
+                 */
+    
+                /**
+                 * Constructs a new history_record.
+                 * @memberof koinos.account_history
+                 * @classdesc Represents a history_record.
+                 * @implements Ihistory_record
+                 * @constructor
+                 * @param {koinos.account_history.Ihistory_record=} [properties] Properties to set
+                 */
+                function history_record(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * history_record trx.
+                 * @member {koinos.account_history.Itransaction_record|null|undefined} trx
+                 * @memberof koinos.account_history.history_record
+                 * @instance
+                 */
+                history_record.prototype.trx = null;
+    
+                /**
+                 * history_record block.
+                 * @member {koinos.account_history.Iblock_record|null|undefined} block
+                 * @memberof koinos.account_history.history_record
+                 * @instance
+                 */
+                history_record.prototype.block = null;
+    
+                // OneOf field names bound to virtual getters and setters
+                var $oneOfFields;
+    
+                /**
+                 * history_record record.
+                 * @member {"trx"|"block"|undefined} record
+                 * @memberof koinos.account_history.history_record
+                 * @instance
+                 */
+                Object.defineProperty(history_record.prototype, "record", {
+                    get: $util.oneOfGetter($oneOfFields = ["trx", "block"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+    
+                /**
+                 * Creates a new history_record instance using the specified properties.
+                 * @function create
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {koinos.account_history.Ihistory_record=} [properties] Properties to set
+                 * @returns {koinos.account_history.history_record} history_record instance
+                 */
+                history_record.create = function create(properties) {
+                    return new history_record(properties);
+                };
+    
+                /**
+                 * Encodes the specified history_record message. Does not implicitly {@link koinos.account_history.history_record.verify|verify} messages.
+                 * @function encode
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {koinos.account_history.Ihistory_record} message history_record message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                history_record.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.trx != null && Object.hasOwnProperty.call(message, "trx"))
+                        $root.koinos.account_history.transaction_record.encode(message.trx, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                    if (message.block != null && Object.hasOwnProperty.call(message, "block"))
+                        $root.koinos.account_history.block_record.encode(message.block, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified history_record message, length delimited. Does not implicitly {@link koinos.account_history.history_record.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {koinos.account_history.Ihistory_record} message history_record message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                history_record.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a history_record message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {koinos.account_history.history_record} history_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                history_record.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.account_history.history_record();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.trx = $root.koinos.account_history.transaction_record.decode(reader, reader.uint32());
+                            break;
+                        case 2:
+                            message.block = $root.koinos.account_history.block_record.decode(reader, reader.uint32());
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a history_record message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {koinos.account_history.history_record} history_record
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                history_record.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a history_record message.
+                 * @function verify
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                history_record.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    var properties = {};
+                    if (message.trx != null && message.hasOwnProperty("trx")) {
+                        properties.record = 1;
+                        {
+                            var error = $root.koinos.account_history.transaction_record.verify(message.trx);
+                            if (error)
+                                return "trx." + error;
+                        }
+                    }
+                    if (message.block != null && message.hasOwnProperty("block")) {
+                        if (properties.record === 1)
+                            return "record: multiple values";
+                        properties.record = 1;
+                        {
+                            var error = $root.koinos.account_history.block_record.verify(message.block);
+                            if (error)
+                                return "block." + error;
+                        }
+                    }
+                    return null;
+                };
+    
+                /**
+                 * Creates a history_record message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {koinos.account_history.history_record} history_record
+                 */
+                history_record.fromObject = function fromObject(object) {
+                    if (object instanceof $root.koinos.account_history.history_record)
+                        return object;
+                    var message = new $root.koinos.account_history.history_record();
+                    if (object.trx != null) {
+                        if (typeof object.trx !== "object")
+                            throw TypeError(".koinos.account_history.history_record.trx: object expected");
+                        message.trx = $root.koinos.account_history.transaction_record.fromObject(object.trx);
+                    }
+                    if (object.block != null) {
+                        if (typeof object.block !== "object")
+                            throw TypeError(".koinos.account_history.history_record.block: object expected");
+                        message.block = $root.koinos.account_history.block_record.fromObject(object.block);
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a history_record message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof koinos.account_history.history_record
+                 * @static
+                 * @param {koinos.account_history.history_record} message history_record
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                history_record.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (message.trx != null && message.hasOwnProperty("trx")) {
+                        object.trx = $root.koinos.account_history.transaction_record.toObject(message.trx, options);
+                        if (options.oneofs)
+                            object.record = "trx";
+                    }
+                    if (message.block != null && message.hasOwnProperty("block")) {
+                        object.block = $root.koinos.account_history.block_record.toObject(message.block, options);
+                        if (options.oneofs)
+                            object.record = "block";
+                    }
+                    return object;
+                };
+    
+                /**
+                 * Converts this history_record to JSON.
+                 * @function toJSON
+                 * @memberof koinos.account_history.history_record
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                history_record.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return history_record;
+            })();
+    
+            return account_history;
+        })();
+    
         koinos.contracts = (function() {
     
             /**
@@ -51434,6 +52565,1360 @@
                 })();
     
                 return transaction_store;
+            })();
+    
+            rpc.account_history = (function() {
+    
+                /**
+                 * Namespace account_history.
+                 * @memberof koinos.rpc
+                 * @namespace
+                 */
+                var account_history = {};
+    
+                account_history.account_history_entry = (function() {
+    
+                    /**
+                     * Properties of an account_history_entry.
+                     * @memberof koinos.rpc.account_history
+                     * @interface Iaccount_history_entry
+                     * @property {number|Long|null} [seq_num] account_history_entry seq_num
+                     * @property {koinos.account_history.Itransaction_record|null} [trx] account_history_entry trx
+                     * @property {koinos.account_history.Iblock_record|null} [block] account_history_entry block
+                     */
+    
+                    /**
+                     * Constructs a new account_history_entry.
+                     * @memberof koinos.rpc.account_history
+                     * @classdesc Represents an account_history_entry.
+                     * @implements Iaccount_history_entry
+                     * @constructor
+                     * @param {koinos.rpc.account_history.Iaccount_history_entry=} [properties] Properties to set
+                     */
+                    function account_history_entry(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * account_history_entry seq_num.
+                     * @member {number|Long} seq_num
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @instance
+                     */
+                    account_history_entry.prototype.seq_num = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * account_history_entry trx.
+                     * @member {koinos.account_history.Itransaction_record|null|undefined} trx
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @instance
+                     */
+                    account_history_entry.prototype.trx = null;
+    
+                    /**
+                     * account_history_entry block.
+                     * @member {koinos.account_history.Iblock_record|null|undefined} block
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @instance
+                     */
+                    account_history_entry.prototype.block = null;
+    
+                    // OneOf field names bound to virtual getters and setters
+                    var $oneOfFields;
+    
+                    /**
+                     * account_history_entry record.
+                     * @member {"trx"|"block"|undefined} record
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @instance
+                     */
+                    Object.defineProperty(account_history_entry.prototype, "record", {
+                        get: $util.oneOfGetter($oneOfFields = ["trx", "block"]),
+                        set: $util.oneOfSetter($oneOfFields)
+                    });
+    
+                    /**
+                     * Creates a new account_history_entry instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_entry=} [properties] Properties to set
+                     * @returns {koinos.rpc.account_history.account_history_entry} account_history_entry instance
+                     */
+                    account_history_entry.create = function create(properties) {
+                        return new account_history_entry(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified account_history_entry message. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_entry} message account_history_entry message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    account_history_entry.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.seq_num != null && Object.hasOwnProperty.call(message, "seq_num"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.seq_num);
+                        if (message.trx != null && Object.hasOwnProperty.call(message, "trx"))
+                            $root.koinos.account_history.transaction_record.encode(message.trx, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                        if (message.block != null && Object.hasOwnProperty.call(message, "block"))
+                            $root.koinos.account_history.block_record.encode(message.block, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified account_history_entry message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_entry} message account_history_entry message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    account_history_entry.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an account_history_entry message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.rpc.account_history.account_history_entry} account_history_entry
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    account_history_entry.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.rpc.account_history.account_history_entry();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.seq_num = reader.uint64();
+                                break;
+                            case 2:
+                                message.trx = $root.koinos.account_history.transaction_record.decode(reader, reader.uint32());
+                                break;
+                            case 3:
+                                message.block = $root.koinos.account_history.block_record.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an account_history_entry message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.rpc.account_history.account_history_entry} account_history_entry
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    account_history_entry.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an account_history_entry message.
+                     * @function verify
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    account_history_entry.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        var properties = {};
+                        if (message.seq_num != null && message.hasOwnProperty("seq_num"))
+                            if (!$util.isInteger(message.seq_num) && !(message.seq_num && $util.isInteger(message.seq_num.low) && $util.isInteger(message.seq_num.high)))
+                                return "seq_num: integer|Long expected";
+                        if (message.trx != null && message.hasOwnProperty("trx")) {
+                            properties.record = 1;
+                            {
+                                var error = $root.koinos.account_history.transaction_record.verify(message.trx);
+                                if (error)
+                                    return "trx." + error;
+                            }
+                        }
+                        if (message.block != null && message.hasOwnProperty("block")) {
+                            if (properties.record === 1)
+                                return "record: multiple values";
+                            properties.record = 1;
+                            {
+                                var error = $root.koinos.account_history.block_record.verify(message.block);
+                                if (error)
+                                    return "block." + error;
+                            }
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an account_history_entry message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.rpc.account_history.account_history_entry} account_history_entry
+                     */
+                    account_history_entry.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.rpc.account_history.account_history_entry)
+                            return object;
+                        var message = new $root.koinos.rpc.account_history.account_history_entry();
+                        if (object.seq_num != null)
+                            if ($util.Long)
+                                (message.seq_num = $util.Long.fromValue(object.seq_num)).unsigned = true;
+                            else if (typeof object.seq_num === "string")
+                                message.seq_num = parseInt(object.seq_num, 10);
+                            else if (typeof object.seq_num === "number")
+                                message.seq_num = object.seq_num;
+                            else if (typeof object.seq_num === "object")
+                                message.seq_num = new $util.LongBits(object.seq_num.low >>> 0, object.seq_num.high >>> 0).toNumber(true);
+                        if (object.trx != null) {
+                            if (typeof object.trx !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_entry.trx: object expected");
+                            message.trx = $root.koinos.account_history.transaction_record.fromObject(object.trx);
+                        }
+                        if (object.block != null) {
+                            if (typeof object.block !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_entry.block: object expected");
+                            message.block = $root.koinos.account_history.block_record.fromObject(object.block);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an account_history_entry message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @static
+                     * @param {koinos.rpc.account_history.account_history_entry} message account_history_entry
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    account_history_entry.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.seq_num = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.seq_num = options.longs === String ? "0" : 0;
+                        if (message.seq_num != null && message.hasOwnProperty("seq_num"))
+                            if (typeof message.seq_num === "number")
+                                object.seq_num = options.longs === String ? String(message.seq_num) : message.seq_num;
+                            else
+                                object.seq_num = options.longs === String ? $util.Long.prototype.toString.call(message.seq_num) : options.longs === Number ? new $util.LongBits(message.seq_num.low >>> 0, message.seq_num.high >>> 0).toNumber(true) : message.seq_num;
+                        if (message.trx != null && message.hasOwnProperty("trx")) {
+                            object.trx = $root.koinos.account_history.transaction_record.toObject(message.trx, options);
+                            if (options.oneofs)
+                                object.record = "trx";
+                        }
+                        if (message.block != null && message.hasOwnProperty("block")) {
+                            object.block = $root.koinos.account_history.block_record.toObject(message.block, options);
+                            if (options.oneofs)
+                                object.record = "block";
+                        }
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this account_history_entry to JSON.
+                     * @function toJSON
+                     * @memberof koinos.rpc.account_history.account_history_entry
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    account_history_entry.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return account_history_entry;
+                })();
+    
+                account_history.get_account_history_request = (function() {
+    
+                    /**
+                     * Properties of a get_account_history_request.
+                     * @memberof koinos.rpc.account_history
+                     * @interface Iget_account_history_request
+                     * @property {Uint8Array|null} [address] get_account_history_request address
+                     * @property {number|Long|null} [seq_num] get_account_history_request seq_num
+                     * @property {number|Long|null} [limit] get_account_history_request limit
+                     * @property {boolean|null} [ascending] get_account_history_request ascending
+                     * @property {boolean|null} [irreversible] get_account_history_request irreversible
+                     */
+    
+                    /**
+                     * Constructs a new get_account_history_request.
+                     * @memberof koinos.rpc.account_history
+                     * @classdesc Represents a get_account_history_request.
+                     * @implements Iget_account_history_request
+                     * @constructor
+                     * @param {koinos.rpc.account_history.Iget_account_history_request=} [properties] Properties to set
+                     */
+                    function get_account_history_request(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * get_account_history_request address.
+                     * @member {Uint8Array} address
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     */
+                    get_account_history_request.prototype.address = $util.newBuffer([]);
+    
+                    /**
+                     * get_account_history_request seq_num.
+                     * @member {number|Long|null|undefined} seq_num
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     */
+                    get_account_history_request.prototype.seq_num = null;
+    
+                    /**
+                     * get_account_history_request limit.
+                     * @member {number|Long} limit
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     */
+                    get_account_history_request.prototype.limit = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+    
+                    /**
+                     * get_account_history_request ascending.
+                     * @member {boolean} ascending
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     */
+                    get_account_history_request.prototype.ascending = false;
+    
+                    /**
+                     * get_account_history_request irreversible.
+                     * @member {boolean} irreversible
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     */
+                    get_account_history_request.prototype.irreversible = false;
+    
+                    // OneOf field names bound to virtual getters and setters
+                    var $oneOfFields;
+    
+                    /**
+                     * get_account_history_request _seq_num.
+                     * @member {"seq_num"|undefined} _seq_num
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     */
+                    Object.defineProperty(get_account_history_request.prototype, "_seq_num", {
+                        get: $util.oneOfGetter($oneOfFields = ["seq_num"]),
+                        set: $util.oneOfSetter($oneOfFields)
+                    });
+    
+                    /**
+                     * Creates a new get_account_history_request instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.Iget_account_history_request=} [properties] Properties to set
+                     * @returns {koinos.rpc.account_history.get_account_history_request} get_account_history_request instance
+                     */
+                    get_account_history_request.create = function create(properties) {
+                        return new get_account_history_request(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified get_account_history_request message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.Iget_account_history_request} message get_account_history_request message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_account_history_request.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.address != null && Object.hasOwnProperty.call(message, "address"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.address);
+                        if (message.seq_num != null && Object.hasOwnProperty.call(message, "seq_num"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.seq_num);
+                        if (message.limit != null && Object.hasOwnProperty.call(message, "limit"))
+                            writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.limit);
+                        if (message.ascending != null && Object.hasOwnProperty.call(message, "ascending"))
+                            writer.uint32(/* id 4, wireType 0 =*/32).bool(message.ascending);
+                        if (message.irreversible != null && Object.hasOwnProperty.call(message, "irreversible"))
+                            writer.uint32(/* id 5, wireType 0 =*/40).bool(message.irreversible);
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified get_account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.Iget_account_history_request} message get_account_history_request message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_account_history_request.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a get_account_history_request message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.rpc.account_history.get_account_history_request} get_account_history_request
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_account_history_request.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.rpc.account_history.get_account_history_request();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.address = reader.bytes();
+                                break;
+                            case 2:
+                                message.seq_num = reader.uint64();
+                                break;
+                            case 3:
+                                message.limit = reader.uint64();
+                                break;
+                            case 4:
+                                message.ascending = reader.bool();
+                                break;
+                            case 5:
+                                message.irreversible = reader.bool();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a get_account_history_request message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.rpc.account_history.get_account_history_request} get_account_history_request
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_account_history_request.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a get_account_history_request message.
+                     * @function verify
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    get_account_history_request.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        var properties = {};
+                        if (message.address != null && message.hasOwnProperty("address"))
+                            if (!(message.address && typeof message.address.length === "number" || $util.isString(message.address)))
+                                return "address: buffer expected";
+                        if (message.seq_num != null && message.hasOwnProperty("seq_num")) {
+                            properties._seq_num = 1;
+                            if (!$util.isInteger(message.seq_num) && !(message.seq_num && $util.isInteger(message.seq_num.low) && $util.isInteger(message.seq_num.high)))
+                                return "seq_num: integer|Long expected";
+                        }
+                        if (message.limit != null && message.hasOwnProperty("limit"))
+                            if (!$util.isInteger(message.limit) && !(message.limit && $util.isInteger(message.limit.low) && $util.isInteger(message.limit.high)))
+                                return "limit: integer|Long expected";
+                        if (message.ascending != null && message.hasOwnProperty("ascending"))
+                            if (typeof message.ascending !== "boolean")
+                                return "ascending: boolean expected";
+                        if (message.irreversible != null && message.hasOwnProperty("irreversible"))
+                            if (typeof message.irreversible !== "boolean")
+                                return "irreversible: boolean expected";
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a get_account_history_request message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.rpc.account_history.get_account_history_request} get_account_history_request
+                     */
+                    get_account_history_request.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.rpc.account_history.get_account_history_request)
+                            return object;
+                        var message = new $root.koinos.rpc.account_history.get_account_history_request();
+                        if (object.address != null)
+                            if (typeof object.address === "string")
+                                $util.base64.decode(object.address, message.address = $util.newBuffer($util.base64.length(object.address)), 0);
+                            else if (object.address.length)
+                                message.address = object.address;
+                        if (object.seq_num != null)
+                            if ($util.Long)
+                                (message.seq_num = $util.Long.fromValue(object.seq_num)).unsigned = true;
+                            else if (typeof object.seq_num === "string")
+                                message.seq_num = parseInt(object.seq_num, 10);
+                            else if (typeof object.seq_num === "number")
+                                message.seq_num = object.seq_num;
+                            else if (typeof object.seq_num === "object")
+                                message.seq_num = new $util.LongBits(object.seq_num.low >>> 0, object.seq_num.high >>> 0).toNumber(true);
+                        if (object.limit != null)
+                            if ($util.Long)
+                                (message.limit = $util.Long.fromValue(object.limit)).unsigned = true;
+                            else if (typeof object.limit === "string")
+                                message.limit = parseInt(object.limit, 10);
+                            else if (typeof object.limit === "number")
+                                message.limit = object.limit;
+                            else if (typeof object.limit === "object")
+                                message.limit = new $util.LongBits(object.limit.low >>> 0, object.limit.high >>> 0).toNumber(true);
+                        if (object.ascending != null)
+                            message.ascending = Boolean(object.ascending);
+                        if (object.irreversible != null)
+                            message.irreversible = Boolean(object.irreversible);
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a get_account_history_request message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.get_account_history_request} message get_account_history_request
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    get_account_history_request.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if (options.bytes === String)
+                                object.address = "";
+                            else {
+                                object.address = [];
+                                if (options.bytes !== Array)
+                                    object.address = $util.newBuffer(object.address);
+                            }
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, true);
+                                object.limit = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.limit = options.longs === String ? "0" : 0;
+                            object.ascending = false;
+                            object.irreversible = false;
+                        }
+                        if (message.address != null && message.hasOwnProperty("address"))
+                            object.address = options.bytes === String ? $util.base64.encode(message.address, 0, message.address.length) : options.bytes === Array ? Array.prototype.slice.call(message.address) : message.address;
+                        if (message.seq_num != null && message.hasOwnProperty("seq_num")) {
+                            if (typeof message.seq_num === "number")
+                                object.seq_num = options.longs === String ? String(message.seq_num) : message.seq_num;
+                            else
+                                object.seq_num = options.longs === String ? $util.Long.prototype.toString.call(message.seq_num) : options.longs === Number ? new $util.LongBits(message.seq_num.low >>> 0, message.seq_num.high >>> 0).toNumber(true) : message.seq_num;
+                            if (options.oneofs)
+                                object._seq_num = "seq_num";
+                        }
+                        if (message.limit != null && message.hasOwnProperty("limit"))
+                            if (typeof message.limit === "number")
+                                object.limit = options.longs === String ? String(message.limit) : message.limit;
+                            else
+                                object.limit = options.longs === String ? $util.Long.prototype.toString.call(message.limit) : options.longs === Number ? new $util.LongBits(message.limit.low >>> 0, message.limit.high >>> 0).toNumber(true) : message.limit;
+                        if (message.ascending != null && message.hasOwnProperty("ascending"))
+                            object.ascending = message.ascending;
+                        if (message.irreversible != null && message.hasOwnProperty("irreversible"))
+                            object.irreversible = message.irreversible;
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this get_account_history_request to JSON.
+                     * @function toJSON
+                     * @memberof koinos.rpc.account_history.get_account_history_request
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    get_account_history_request.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return get_account_history_request;
+                })();
+    
+                account_history.get_account_history_response = (function() {
+    
+                    /**
+                     * Properties of a get_account_history_response.
+                     * @memberof koinos.rpc.account_history
+                     * @interface Iget_account_history_response
+                     * @property {Array.<koinos.rpc.account_history.Iaccount_history_entry>|null} [values] get_account_history_response values
+                     */
+    
+                    /**
+                     * Constructs a new get_account_history_response.
+                     * @memberof koinos.rpc.account_history
+                     * @classdesc Represents a get_account_history_response.
+                     * @implements Iget_account_history_response
+                     * @constructor
+                     * @param {koinos.rpc.account_history.Iget_account_history_response=} [properties] Properties to set
+                     */
+                    function get_account_history_response(properties) {
+                        this.values = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * get_account_history_response values.
+                     * @member {Array.<koinos.rpc.account_history.Iaccount_history_entry>} values
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @instance
+                     */
+                    get_account_history_response.prototype.values = $util.emptyArray;
+    
+                    /**
+                     * Creates a new get_account_history_response instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.Iget_account_history_response=} [properties] Properties to set
+                     * @returns {koinos.rpc.account_history.get_account_history_response} get_account_history_response instance
+                     */
+                    get_account_history_response.create = function create(properties) {
+                        return new get_account_history_response(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified get_account_history_response message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.Iget_account_history_response} message get_account_history_response message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_account_history_response.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.values != null && message.values.length)
+                            for (var i = 0; i < message.values.length; ++i)
+                                $root.koinos.rpc.account_history.account_history_entry.encode(message.values[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified get_account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.Iget_account_history_response} message get_account_history_response message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    get_account_history_response.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes a get_account_history_response message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.rpc.account_history.get_account_history_response} get_account_history_response
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_account_history_response.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.rpc.account_history.get_account_history_response();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.values && message.values.length))
+                                    message.values = [];
+                                message.values.push($root.koinos.rpc.account_history.account_history_entry.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes a get_account_history_response message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.rpc.account_history.get_account_history_response} get_account_history_response
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    get_account_history_response.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies a get_account_history_response message.
+                     * @function verify
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    get_account_history_response.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.values != null && message.hasOwnProperty("values")) {
+                            if (!Array.isArray(message.values))
+                                return "values: array expected";
+                            for (var i = 0; i < message.values.length; ++i) {
+                                var error = $root.koinos.rpc.account_history.account_history_entry.verify(message.values[i]);
+                                if (error)
+                                    return "values." + error;
+                            }
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates a get_account_history_response message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.rpc.account_history.get_account_history_response} get_account_history_response
+                     */
+                    get_account_history_response.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.rpc.account_history.get_account_history_response)
+                            return object;
+                        var message = new $root.koinos.rpc.account_history.get_account_history_response();
+                        if (object.values) {
+                            if (!Array.isArray(object.values))
+                                throw TypeError(".koinos.rpc.account_history.get_account_history_response.values: array expected");
+                            message.values = [];
+                            for (var i = 0; i < object.values.length; ++i) {
+                                if (typeof object.values[i] !== "object")
+                                    throw TypeError(".koinos.rpc.account_history.get_account_history_response.values: object expected");
+                                message.values[i] = $root.koinos.rpc.account_history.account_history_entry.fromObject(object.values[i]);
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from a get_account_history_response message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.get_account_history_response} message get_account_history_response
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    get_account_history_response.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.values = [];
+                        if (message.values && message.values.length) {
+                            object.values = [];
+                            for (var j = 0; j < message.values.length; ++j)
+                                object.values[j] = $root.koinos.rpc.account_history.account_history_entry.toObject(message.values[j], options);
+                        }
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this get_account_history_response to JSON.
+                     * @function toJSON
+                     * @memberof koinos.rpc.account_history.get_account_history_response
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    get_account_history_response.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return get_account_history_response;
+                })();
+    
+                account_history.account_history_request = (function() {
+    
+                    /**
+                     * Properties of an account_history_request.
+                     * @memberof koinos.rpc.account_history
+                     * @interface Iaccount_history_request
+                     * @property {koinos.rpc.Ireserved_rpc|null} [reserved] account_history_request reserved
+                     * @property {koinos.rpc.account_history.Iget_account_history_request|null} [get_account_history] account_history_request get_account_history
+                     */
+    
+                    /**
+                     * Constructs a new account_history_request.
+                     * @memberof koinos.rpc.account_history
+                     * @classdesc Represents an account_history_request.
+                     * @implements Iaccount_history_request
+                     * @constructor
+                     * @param {koinos.rpc.account_history.Iaccount_history_request=} [properties] Properties to set
+                     */
+                    function account_history_request(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * account_history_request reserved.
+                     * @member {koinos.rpc.Ireserved_rpc|null|undefined} reserved
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @instance
+                     */
+                    account_history_request.prototype.reserved = null;
+    
+                    /**
+                     * account_history_request get_account_history.
+                     * @member {koinos.rpc.account_history.Iget_account_history_request|null|undefined} get_account_history
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @instance
+                     */
+                    account_history_request.prototype.get_account_history = null;
+    
+                    // OneOf field names bound to virtual getters and setters
+                    var $oneOfFields;
+    
+                    /**
+                     * account_history_request request.
+                     * @member {"reserved"|"get_account_history"|undefined} request
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @instance
+                     */
+                    Object.defineProperty(account_history_request.prototype, "request", {
+                        get: $util.oneOfGetter($oneOfFields = ["reserved", "get_account_history"]),
+                        set: $util.oneOfSetter($oneOfFields)
+                    });
+    
+                    /**
+                     * Creates a new account_history_request instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_request=} [properties] Properties to set
+                     * @returns {koinos.rpc.account_history.account_history_request} account_history_request instance
+                     */
+                    account_history_request.create = function create(properties) {
+                        return new account_history_request(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified account_history_request message. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_request} message account_history_request message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    account_history_request.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.reserved != null && Object.hasOwnProperty.call(message, "reserved"))
+                            $root.koinos.rpc.reserved_rpc.encode(message.reserved, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        if (message.get_account_history != null && Object.hasOwnProperty.call(message, "get_account_history"))
+                            $root.koinos.rpc.account_history.get_account_history_request.encode(message.get_account_history, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_request} message account_history_request message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    account_history_request.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an account_history_request message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.rpc.account_history.account_history_request} account_history_request
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    account_history_request.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.rpc.account_history.account_history_request();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.reserved = $root.koinos.rpc.reserved_rpc.decode(reader, reader.uint32());
+                                break;
+                            case 2:
+                                message.get_account_history = $root.koinos.rpc.account_history.get_account_history_request.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an account_history_request message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.rpc.account_history.account_history_request} account_history_request
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    account_history_request.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an account_history_request message.
+                     * @function verify
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    account_history_request.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        var properties = {};
+                        if (message.reserved != null && message.hasOwnProperty("reserved")) {
+                            properties.request = 1;
+                            {
+                                var error = $root.koinos.rpc.reserved_rpc.verify(message.reserved);
+                                if (error)
+                                    return "reserved." + error;
+                            }
+                        }
+                        if (message.get_account_history != null && message.hasOwnProperty("get_account_history")) {
+                            if (properties.request === 1)
+                                return "request: multiple values";
+                            properties.request = 1;
+                            {
+                                var error = $root.koinos.rpc.account_history.get_account_history_request.verify(message.get_account_history);
+                                if (error)
+                                    return "get_account_history." + error;
+                            }
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an account_history_request message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.rpc.account_history.account_history_request} account_history_request
+                     */
+                    account_history_request.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.rpc.account_history.account_history_request)
+                            return object;
+                        var message = new $root.koinos.rpc.account_history.account_history_request();
+                        if (object.reserved != null) {
+                            if (typeof object.reserved !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_request.reserved: object expected");
+                            message.reserved = $root.koinos.rpc.reserved_rpc.fromObject(object.reserved);
+                        }
+                        if (object.get_account_history != null) {
+                            if (typeof object.get_account_history !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_request.get_account_history: object expected");
+                            message.get_account_history = $root.koinos.rpc.account_history.get_account_history_request.fromObject(object.get_account_history);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an account_history_request message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @static
+                     * @param {koinos.rpc.account_history.account_history_request} message account_history_request
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    account_history_request.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (message.reserved != null && message.hasOwnProperty("reserved")) {
+                            object.reserved = $root.koinos.rpc.reserved_rpc.toObject(message.reserved, options);
+                            if (options.oneofs)
+                                object.request = "reserved";
+                        }
+                        if (message.get_account_history != null && message.hasOwnProperty("get_account_history")) {
+                            object.get_account_history = $root.koinos.rpc.account_history.get_account_history_request.toObject(message.get_account_history, options);
+                            if (options.oneofs)
+                                object.request = "get_account_history";
+                        }
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this account_history_request to JSON.
+                     * @function toJSON
+                     * @memberof koinos.rpc.account_history.account_history_request
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    account_history_request.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return account_history_request;
+                })();
+    
+                account_history.account_history_response = (function() {
+    
+                    /**
+                     * Properties of an account_history_response.
+                     * @memberof koinos.rpc.account_history
+                     * @interface Iaccount_history_response
+                     * @property {koinos.rpc.Ireserved_rpc|null} [reserved] account_history_response reserved
+                     * @property {koinos.rpc.Ierror_response|null} [error] account_history_response error
+                     * @property {koinos.rpc.account_history.Iget_account_history_response|null} [get_account_history] account_history_response get_account_history
+                     */
+    
+                    /**
+                     * Constructs a new account_history_response.
+                     * @memberof koinos.rpc.account_history
+                     * @classdesc Represents an account_history_response.
+                     * @implements Iaccount_history_response
+                     * @constructor
+                     * @param {koinos.rpc.account_history.Iaccount_history_response=} [properties] Properties to set
+                     */
+                    function account_history_response(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+    
+                    /**
+                     * account_history_response reserved.
+                     * @member {koinos.rpc.Ireserved_rpc|null|undefined} reserved
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @instance
+                     */
+                    account_history_response.prototype.reserved = null;
+    
+                    /**
+                     * account_history_response error.
+                     * @member {koinos.rpc.Ierror_response|null|undefined} error
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @instance
+                     */
+                    account_history_response.prototype.error = null;
+    
+                    /**
+                     * account_history_response get_account_history.
+                     * @member {koinos.rpc.account_history.Iget_account_history_response|null|undefined} get_account_history
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @instance
+                     */
+                    account_history_response.prototype.get_account_history = null;
+    
+                    // OneOf field names bound to virtual getters and setters
+                    var $oneOfFields;
+    
+                    /**
+                     * account_history_response response.
+                     * @member {"reserved"|"error"|"get_account_history"|undefined} response
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @instance
+                     */
+                    Object.defineProperty(account_history_response.prototype, "response", {
+                        get: $util.oneOfGetter($oneOfFields = ["reserved", "error", "get_account_history"]),
+                        set: $util.oneOfSetter($oneOfFields)
+                    });
+    
+                    /**
+                     * Creates a new account_history_response instance using the specified properties.
+                     * @function create
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_response=} [properties] Properties to set
+                     * @returns {koinos.rpc.account_history.account_history_response} account_history_response instance
+                     */
+                    account_history_response.create = function create(properties) {
+                        return new account_history_response(properties);
+                    };
+    
+                    /**
+                     * Encodes the specified account_history_response message. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
+                     * @function encode
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_response} message account_history_response message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    account_history_response.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.reserved != null && Object.hasOwnProperty.call(message, "reserved"))
+                            $root.koinos.rpc.reserved_rpc.encode(message.reserved, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        if (message.error != null && Object.hasOwnProperty.call(message, "error"))
+                            $root.koinos.rpc.error_response.encode(message.error, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                        if (message.get_account_history != null && Object.hasOwnProperty.call(message, "get_account_history"))
+                            $root.koinos.rpc.account_history.get_account_history_response.encode(message.get_account_history, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                        return writer;
+                    };
+    
+                    /**
+                     * Encodes the specified account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.Iaccount_history_response} message account_history_response message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    account_history_response.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+    
+                    /**
+                     * Decodes an account_history_response message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {koinos.rpc.account_history.account_history_response} account_history_response
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    account_history_response.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.koinos.rpc.account_history.account_history_response();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.reserved = $root.koinos.rpc.reserved_rpc.decode(reader, reader.uint32());
+                                break;
+                            case 2:
+                                message.error = $root.koinos.rpc.error_response.decode(reader, reader.uint32());
+                                break;
+                            case 3:
+                                message.get_account_history = $root.koinos.rpc.account_history.get_account_history_response.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Decodes an account_history_response message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {koinos.rpc.account_history.account_history_response} account_history_response
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    account_history_response.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+    
+                    /**
+                     * Verifies an account_history_response message.
+                     * @function verify
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    account_history_response.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        var properties = {};
+                        if (message.reserved != null && message.hasOwnProperty("reserved")) {
+                            properties.response = 1;
+                            {
+                                var error = $root.koinos.rpc.reserved_rpc.verify(message.reserved);
+                                if (error)
+                                    return "reserved." + error;
+                            }
+                        }
+                        if (message.error != null && message.hasOwnProperty("error")) {
+                            if (properties.response === 1)
+                                return "response: multiple values";
+                            properties.response = 1;
+                            {
+                                var error = $root.koinos.rpc.error_response.verify(message.error);
+                                if (error)
+                                    return "error." + error;
+                            }
+                        }
+                        if (message.get_account_history != null && message.hasOwnProperty("get_account_history")) {
+                            if (properties.response === 1)
+                                return "response: multiple values";
+                            properties.response = 1;
+                            {
+                                var error = $root.koinos.rpc.account_history.get_account_history_response.verify(message.get_account_history);
+                                if (error)
+                                    return "get_account_history." + error;
+                            }
+                        }
+                        return null;
+                    };
+    
+                    /**
+                     * Creates an account_history_response message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {koinos.rpc.account_history.account_history_response} account_history_response
+                     */
+                    account_history_response.fromObject = function fromObject(object) {
+                        if (object instanceof $root.koinos.rpc.account_history.account_history_response)
+                            return object;
+                        var message = new $root.koinos.rpc.account_history.account_history_response();
+                        if (object.reserved != null) {
+                            if (typeof object.reserved !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_response.reserved: object expected");
+                            message.reserved = $root.koinos.rpc.reserved_rpc.fromObject(object.reserved);
+                        }
+                        if (object.error != null) {
+                            if (typeof object.error !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_response.error: object expected");
+                            message.error = $root.koinos.rpc.error_response.fromObject(object.error);
+                        }
+                        if (object.get_account_history != null) {
+                            if (typeof object.get_account_history !== "object")
+                                throw TypeError(".koinos.rpc.account_history.account_history_response.get_account_history: object expected");
+                            message.get_account_history = $root.koinos.rpc.account_history.get_account_history_response.fromObject(object.get_account_history);
+                        }
+                        return message;
+                    };
+    
+                    /**
+                     * Creates a plain object from an account_history_response message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @static
+                     * @param {koinos.rpc.account_history.account_history_response} message account_history_response
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    account_history_response.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (message.reserved != null && message.hasOwnProperty("reserved")) {
+                            object.reserved = $root.koinos.rpc.reserved_rpc.toObject(message.reserved, options);
+                            if (options.oneofs)
+                                object.response = "reserved";
+                        }
+                        if (message.error != null && message.hasOwnProperty("error")) {
+                            object.error = $root.koinos.rpc.error_response.toObject(message.error, options);
+                            if (options.oneofs)
+                                object.response = "error";
+                        }
+                        if (message.get_account_history != null && message.hasOwnProperty("get_account_history")) {
+                            object.get_account_history = $root.koinos.rpc.account_history.get_account_history_response.toObject(message.get_account_history, options);
+                            if (options.oneofs)
+                                object.response = "get_account_history";
+                        }
+                        return object;
+                    };
+    
+                    /**
+                     * Converts this account_history_response to JSON.
+                     * @function toJSON
+                     * @memberof koinos.rpc.account_history.account_history_response
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    account_history_response.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+    
+                    return account_history_response;
+                })();
+    
+                return account_history;
             })();
     
             rpc.mempool = (function() {
