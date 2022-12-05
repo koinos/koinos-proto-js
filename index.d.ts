@@ -7004,11 +7004,11 @@ export namespace koinos {
             /** Properties of a register_public_key_event. */
             interface Iregister_public_key_event {
 
-                /** register_public_key_event public_key */
-                public_key?: (Uint8Array|null);
-
                 /** register_public_key_event address */
                 address?: (Uint8Array|null);
+
+                /** register_public_key_event public_key */
+                public_key?: (Uint8Array|null);
             }
 
             /** Represents a register_public_key_event. */
@@ -7020,11 +7020,11 @@ export namespace koinos {
                  */
                 constructor(properties?: koinos.contracts.pob.Iregister_public_key_event);
 
-                /** register_public_key_event public_key. */
-                public public_key: Uint8Array;
-
                 /** register_public_key_event address. */
                 public address: Uint8Array;
+
+                /** register_public_key_event public_key. */
+                public public_key: Uint8Array;
 
                 /**
                  * Creates a new register_public_key_event instance using the specified properties.

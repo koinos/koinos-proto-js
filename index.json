@@ -989,18 +989,18 @@
                 },
                 "register_public_key_event": {
                   "fields": {
-                    "public_key": {
+                    "address": {
                       "type": "bytes",
                       "id": 1,
                       "options": {
-                        "(btype)": "BASE64"
+                        "(btype)": "ADDRESS"
                       }
                     },
-                    "address": {
+                    "public_key": {
                       "type": "bytes",
                       "id": 2,
                       "options": {
-                        "(btype)": "ADDRESS"
+                        "(btype)": "BASE64"
                       }
                     }
                   }

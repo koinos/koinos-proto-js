@@ -15831,8 +15831,8 @@
                      * Properties of a register_public_key_event.
                      * @memberof koinos.contracts.pob
                      * @interface Iregister_public_key_event
-                     * @property {Uint8Array|null} [public_key] register_public_key_event public_key
                      * @property {Uint8Array|null} [address] register_public_key_event address
+                     * @property {Uint8Array|null} [public_key] register_public_key_event public_key
                      */
     
                     /**
@@ -15851,20 +15851,20 @@
                     }
     
                     /**
-                     * register_public_key_event public_key.
-                     * @member {Uint8Array} public_key
-                     * @memberof koinos.contracts.pob.register_public_key_event
-                     * @instance
-                     */
-                    register_public_key_event.prototype.public_key = $util.newBuffer([]);
-    
-                    /**
                      * register_public_key_event address.
                      * @member {Uint8Array} address
                      * @memberof koinos.contracts.pob.register_public_key_event
                      * @instance
                      */
                     register_public_key_event.prototype.address = $util.newBuffer([]);
+    
+                    /**
+                     * register_public_key_event public_key.
+                     * @member {Uint8Array} public_key
+                     * @memberof koinos.contracts.pob.register_public_key_event
+                     * @instance
+                     */
+                    register_public_key_event.prototype.public_key = $util.newBuffer([]);
     
                     /**
                      * Creates a new register_public_key_event instance using the specified properties.
@@ -15890,10 +15890,10 @@
                     register_public_key_event.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.public_key != null && Object.hasOwnProperty.call(message, "public_key"))
-                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.public_key);
                         if (message.address != null && Object.hasOwnProperty.call(message, "address"))
-                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.address);
+                            writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.address);
+                        if (message.public_key != null && Object.hasOwnProperty.call(message, "public_key"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.public_key);
                         return writer;
                     };
     
@@ -15929,10 +15929,10 @@
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
                             case 1:
-                                message.public_key = reader.bytes();
+                                message.address = reader.bytes();
                                 break;
                             case 2:
-                                message.address = reader.bytes();
+                                message.public_key = reader.bytes();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -15969,12 +15969,12 @@
                     register_public_key_event.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
-                        if (message.public_key != null && message.hasOwnProperty("public_key"))
-                            if (!(message.public_key && typeof message.public_key.length === "number" || $util.isString(message.public_key)))
-                                return "public_key: buffer expected";
                         if (message.address != null && message.hasOwnProperty("address"))
                             if (!(message.address && typeof message.address.length === "number" || $util.isString(message.address)))
                                 return "address: buffer expected";
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            if (!(message.public_key && typeof message.public_key.length === "number" || $util.isString(message.public_key)))
+                                return "public_key: buffer expected";
                         return null;
                     };
     
@@ -15990,16 +15990,16 @@
                         if (object instanceof $root.koinos.contracts.pob.register_public_key_event)
                             return object;
                         var message = new $root.koinos.contracts.pob.register_public_key_event();
-                        if (object.public_key != null)
-                            if (typeof object.public_key === "string")
-                                $util.base64.decode(object.public_key, message.public_key = $util.newBuffer($util.base64.length(object.public_key)), 0);
-                            else if (object.public_key.length)
-                                message.public_key = object.public_key;
                         if (object.address != null)
                             if (typeof object.address === "string")
                                 $util.base64.decode(object.address, message.address = $util.newBuffer($util.base64.length(object.address)), 0);
                             else if (object.address.length)
                                 message.address = object.address;
+                        if (object.public_key != null)
+                            if (typeof object.public_key === "string")
+                                $util.base64.decode(object.public_key, message.public_key = $util.newBuffer($util.base64.length(object.public_key)), 0);
+                            else if (object.public_key.length)
+                                message.public_key = object.public_key;
                         return message;
                     };
     
@@ -16018,24 +16018,24 @@
                         var object = {};
                         if (options.defaults) {
                             if (options.bytes === String)
-                                object.public_key = "";
-                            else {
-                                object.public_key = [];
-                                if (options.bytes !== Array)
-                                    object.public_key = $util.newBuffer(object.public_key);
-                            }
-                            if (options.bytes === String)
                                 object.address = "";
                             else {
                                 object.address = [];
                                 if (options.bytes !== Array)
                                     object.address = $util.newBuffer(object.address);
                             }
+                            if (options.bytes === String)
+                                object.public_key = "";
+                            else {
+                                object.public_key = [];
+                                if (options.bytes !== Array)
+                                    object.public_key = $util.newBuffer(object.public_key);
+                            }
                         }
-                        if (message.public_key != null && message.hasOwnProperty("public_key"))
-                            object.public_key = options.bytes === String ? $util.base64.encode(message.public_key, 0, message.public_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.public_key) : message.public_key;
                         if (message.address != null && message.hasOwnProperty("address"))
                             object.address = options.bytes === String ? $util.base64.encode(message.address, 0, message.address.length) : options.bytes === Array ? Array.prototype.slice.call(message.address) : message.address;
+                        if (message.public_key != null && message.hasOwnProperty("public_key"))
+                            object.public_key = options.bytes === String ? $util.base64.encode(message.public_key, 0, message.public_key.length) : options.bytes === Array ? Array.prototype.slice.call(message.public_key) : message.public_key;
                         return object;
                     };
     
