@@ -9014,6 +9014,310 @@ export namespace koinos {
         }
     }
 
+    /** Namespace mempool. */
+    namespace mempool {
+
+        /** Properties of a mempool_metadata. */
+        interface Imempool_metadata {
+
+            /** mempool_metadata seq_num */
+            seq_num?: (number|Long|null);
+        }
+
+        /** Represents a mempool_metadata. */
+        class mempool_metadata implements Imempool_metadata {
+
+            /**
+             * Constructs a new mempool_metadata.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Imempool_metadata);
+
+            /** mempool_metadata seq_num. */
+            public seq_num: (number|Long);
+
+            /**
+             * Creates a new mempool_metadata instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns mempool_metadata instance
+             */
+            public static create(properties?: koinos.mempool.Imempool_metadata): koinos.mempool.mempool_metadata;
+
+            /**
+             * Encodes the specified mempool_metadata message. Does not implicitly {@link koinos.mempool.mempool_metadata.verify|verify} messages.
+             * @param message mempool_metadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Imempool_metadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified mempool_metadata message, length delimited. Does not implicitly {@link koinos.mempool.mempool_metadata.verify|verify} messages.
+             * @param message mempool_metadata message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Imempool_metadata, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a mempool_metadata message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns mempool_metadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.mempool_metadata;
+
+            /**
+             * Decodes a mempool_metadata message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns mempool_metadata
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.mempool_metadata;
+
+            /**
+             * Verifies a mempool_metadata message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a mempool_metadata message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns mempool_metadata
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.mempool_metadata;
+
+            /**
+             * Creates a plain object from a mempool_metadata message. Also converts values to other types if specified.
+             * @param message mempool_metadata
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.mempool_metadata, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this mempool_metadata to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an address_resource_record. */
+        interface Iaddress_resource_record {
+
+            /** address_resource_record max_rc */
+            max_rc?: (number|Long|null);
+
+            /** address_resource_record current_rc */
+            current_rc?: (number|Long|null);
+        }
+
+        /** Represents an address_resource_record. */
+        class address_resource_record implements Iaddress_resource_record {
+
+            /**
+             * Constructs a new address_resource_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Iaddress_resource_record);
+
+            /** address_resource_record max_rc. */
+            public max_rc: (number|Long);
+
+            /** address_resource_record current_rc. */
+            public current_rc: (number|Long);
+
+            /**
+             * Creates a new address_resource_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns address_resource_record instance
+             */
+            public static create(properties?: koinos.mempool.Iaddress_resource_record): koinos.mempool.address_resource_record;
+
+            /**
+             * Encodes the specified address_resource_record message. Does not implicitly {@link koinos.mempool.address_resource_record.verify|verify} messages.
+             * @param message address_resource_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Iaddress_resource_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified address_resource_record message, length delimited. Does not implicitly {@link koinos.mempool.address_resource_record.verify|verify} messages.
+             * @param message address_resource_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Iaddress_resource_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an address_resource_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns address_resource_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.address_resource_record;
+
+            /**
+             * Decodes an address_resource_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns address_resource_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.address_resource_record;
+
+            /**
+             * Verifies an address_resource_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an address_resource_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns address_resource_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.address_resource_record;
+
+            /**
+             * Creates a plain object from an address_resource_record message. Also converts values to other types if specified.
+             * @param message address_resource_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.address_resource_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this address_resource_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a pending_transaction_record. */
+        interface Ipending_transaction_record {
+
+            /** pending_transaction_record transaction */
+            transaction?: (koinos.protocol.Itransaction|null);
+
+            /** pending_transaction_record timestamp */
+            timestamp?: (number|Long|null);
+
+            /** pending_transaction_record disk_storage_used */
+            disk_storage_used?: (number|Long|null);
+
+            /** pending_transaction_record network_bandwidth_used */
+            network_bandwidth_used?: (number|Long|null);
+
+            /** pending_transaction_record compute_bandwidth_used */
+            compute_bandwidth_used?: (number|Long|null);
+        }
+
+        /** Represents a pending_transaction_record. */
+        class pending_transaction_record implements Ipending_transaction_record {
+
+            /**
+             * Constructs a new pending_transaction_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Ipending_transaction_record);
+
+            /** pending_transaction_record transaction. */
+            public transaction?: (koinos.protocol.Itransaction|null);
+
+            /** pending_transaction_record timestamp. */
+            public timestamp: (number|Long);
+
+            /** pending_transaction_record disk_storage_used. */
+            public disk_storage_used: (number|Long);
+
+            /** pending_transaction_record network_bandwidth_used. */
+            public network_bandwidth_used: (number|Long);
+
+            /** pending_transaction_record compute_bandwidth_used. */
+            public compute_bandwidth_used: (number|Long);
+
+            /**
+             * Creates a new pending_transaction_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns pending_transaction_record instance
+             */
+            public static create(properties?: koinos.mempool.Ipending_transaction_record): koinos.mempool.pending_transaction_record;
+
+            /**
+             * Encodes the specified pending_transaction_record message. Does not implicitly {@link koinos.mempool.pending_transaction_record.verify|verify} messages.
+             * @param message pending_transaction_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Ipending_transaction_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified pending_transaction_record message, length delimited. Does not implicitly {@link koinos.mempool.pending_transaction_record.verify|verify} messages.
+             * @param message pending_transaction_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Ipending_transaction_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a pending_transaction_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns pending_transaction_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.pending_transaction_record;
+
+            /**
+             * Decodes a pending_transaction_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns pending_transaction_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.pending_transaction_record;
+
+            /**
+             * Verifies a pending_transaction_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a pending_transaction_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns pending_transaction_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.pending_transaction_record;
+
+            /**
+             * Creates a plain object from a pending_transaction_record message. Also converts values to other types if specified.
+             * @param message pending_transaction_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.pending_transaction_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this pending_transaction_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
+
     /** bytes_type enum. */
     enum bytes_type {
         BASE64 = 0,
@@ -23589,6 +23893,9 @@ export namespace koinos {
 
                 /** get_pending_transactions_request limit */
                 limit?: (number|Long|null);
+
+                /** get_pending_transactions_request block_id */
+                block_id?: (Uint8Array|null);
             }
 
             /** Represents a get_pending_transactions_request. */
@@ -23602,6 +23909,12 @@ export namespace koinos {
 
                 /** get_pending_transactions_request limit. */
                 public limit: (number|Long);
+
+                /** get_pending_transactions_request block_id. */
+                public block_id?: (Uint8Array|null);
+
+                /** get_pending_transactions_request _block_id. */
+                public _block_id?: "block_id";
 
                 /**
                  * Creates a new get_pending_transactions_request instance using the specified properties.

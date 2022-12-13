@@ -1297,6 +1297,57 @@
             }
           }
         },
+        "mempool": {
+          "options": {
+            "go_package": "github.com/koinos/koinos-proto-golang/koinos/mempool"
+          },
+          "nested": {
+            "mempool_metadata": {
+              "fields": {
+                "seq_num": {
+                  "type": "uint64",
+                  "id": 1
+                }
+              }
+            },
+            "address_resource_record": {
+              "fields": {
+                "max_rc": {
+                  "type": "uint64",
+                  "id": 1
+                },
+                "current_rc": {
+                  "type": "uint64",
+                  "id": 2
+                }
+              }
+            },
+            "pending_transaction_record": {
+              "fields": {
+                "transaction": {
+                  "type": "protocol.transaction",
+                  "id": 1
+                },
+                "timestamp": {
+                  "type": "uint64",
+                  "id": 2
+                },
+                "disk_storage_used": {
+                  "type": "uint64",
+                  "id": 3
+                },
+                "network_bandwidth_used": {
+                  "type": "uint64",
+                  "id": 4
+                },
+                "compute_bandwidth_used": {
+                  "type": "uint64",
+                  "id": 5
+                }
+              }
+            }
+          }
+        },
         "bytes_type": {
           "values": {
             "BASE64": 0,
@@ -3621,12 +3672,27 @@
                   }
                 },
                 "get_pending_transactions_request": {
+                  "oneofs": {
+                    "_block_id": {
+                      "oneof": [
+                        "block_id"
+                      ]
+                    }
+                  },
                   "fields": {
                     "limit": {
                       "type": "uint64",
                       "id": 1,
                       "options": {
                         "jstype": "JS_STRING"
+                      }
+                    },
+                    "block_id": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "BLOCK_ID",
+                        "proto3_optional": true
                       }
                     }
                   }
