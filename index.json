@@ -3639,6 +3639,13 @@
                   }
                 },
                 "check_pending_account_resources_request": {
+                  "oneofs": {
+                    "_block_id": {
+                      "oneof": [
+                        "block_id"
+                      ]
+                    }
+                  },
                   "fields": {
                     "payer": {
                       "type": "bytes",
@@ -3659,6 +3666,14 @@
                       "id": 3,
                       "options": {
                         "jstype": "JS_STRING"
+                      }
+                    },
+                    "block_id": {
+                      "type": "bytes",
+                      "id": 4,
+                      "options": {
+                        "(btype)": "BLOCK_ID",
+                        "proto3_optional": true
                       }
                     }
                   }

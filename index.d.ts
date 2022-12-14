@@ -23707,6 +23707,9 @@ export namespace koinos {
 
                 /** check_pending_account_resources_request rc_limit */
                 rc_limit?: (number|Long|null);
+
+                /** check_pending_account_resources_request block_id */
+                block_id?: (Uint8Array|null);
             }
 
             /** Represents a check_pending_account_resources_request. */
@@ -23726,6 +23729,12 @@ export namespace koinos {
 
                 /** check_pending_account_resources_request rc_limit. */
                 public rc_limit: (number|Long);
+
+                /** check_pending_account_resources_request block_id. */
+                public block_id?: (Uint8Array|null);
+
+                /** check_pending_account_resources_request _block_id. */
+                public _block_id?: "block_id";
 
                 /**
                  * Creates a new check_pending_account_resources_request instance using the specified properties.
