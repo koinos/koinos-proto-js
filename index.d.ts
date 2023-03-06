@@ -24342,6 +24342,201 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
 
+            /** Properties of an invoke_system_call_request. */
+            interface Iinvoke_system_call_request {
+
+                /** invoke_system_call_request id */
+                id?: (number|Long|null);
+
+                /** invoke_system_call_request name */
+                name?: (string|null);
+
+                /** invoke_system_call_request args */
+                args?: (Uint8Array|null);
+            }
+
+            /** Represents an invoke_system_call_request. */
+            class invoke_system_call_request implements Iinvoke_system_call_request {
+
+                /**
+                 * Constructs a new invoke_system_call_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.chain.Iinvoke_system_call_request);
+
+                /** invoke_system_call_request id. */
+                public id?: (number|Long|null);
+
+                /** invoke_system_call_request name. */
+                public name?: (string|null);
+
+                /** invoke_system_call_request args. */
+                public args: Uint8Array;
+
+                /** invoke_system_call_request system_call. */
+                public system_call?: ("id"|"name");
+
+                /**
+                 * Creates a new invoke_system_call_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns invoke_system_call_request instance
+                 */
+                public static create(properties?: koinos.rpc.chain.Iinvoke_system_call_request): koinos.rpc.chain.invoke_system_call_request;
+
+                /**
+                 * Encodes the specified invoke_system_call_request message. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_request.verify|verify} messages.
+                 * @param message invoke_system_call_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.chain.Iinvoke_system_call_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified invoke_system_call_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_request.verify|verify} messages.
+                 * @param message invoke_system_call_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.chain.Iinvoke_system_call_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an invoke_system_call_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns invoke_system_call_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.invoke_system_call_request;
+
+                /**
+                 * Decodes an invoke_system_call_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns invoke_system_call_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.invoke_system_call_request;
+
+                /**
+                 * Verifies an invoke_system_call_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an invoke_system_call_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns invoke_system_call_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.invoke_system_call_request;
+
+                /**
+                 * Creates a plain object from an invoke_system_call_request message. Also converts values to other types if specified.
+                 * @param message invoke_system_call_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.chain.invoke_system_call_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this invoke_system_call_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an invoke_system_call_response. */
+            interface Iinvoke_system_call_response {
+
+                /** invoke_system_call_response value */
+                value?: (Uint8Array|null);
+            }
+
+            /** Represents an invoke_system_call_response. */
+            class invoke_system_call_response implements Iinvoke_system_call_response {
+
+                /**
+                 * Constructs a new invoke_system_call_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.chain.Iinvoke_system_call_response);
+
+                /** invoke_system_call_response value. */
+                public value: Uint8Array;
+
+                /**
+                 * Creates a new invoke_system_call_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns invoke_system_call_response instance
+                 */
+                public static create(properties?: koinos.rpc.chain.Iinvoke_system_call_response): koinos.rpc.chain.invoke_system_call_response;
+
+                /**
+                 * Encodes the specified invoke_system_call_response message. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_response.verify|verify} messages.
+                 * @param message invoke_system_call_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.chain.Iinvoke_system_call_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified invoke_system_call_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_response.verify|verify} messages.
+                 * @param message invoke_system_call_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.chain.Iinvoke_system_call_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an invoke_system_call_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns invoke_system_call_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.invoke_system_call_response;
+
+                /**
+                 * Decodes an invoke_system_call_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns invoke_system_call_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.invoke_system_call_response;
+
+                /**
+                 * Verifies an invoke_system_call_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an invoke_system_call_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns invoke_system_call_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.invoke_system_call_response;
+
+                /**
+                 * Creates a plain object from an invoke_system_call_response message. Also converts values to other types if specified.
+                 * @param message invoke_system_call_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.chain.invoke_system_call_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this invoke_system_call_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
             /** Properties of a chain_request. */
             interface Ichain_request {
 
@@ -24374,6 +24569,9 @@ export namespace koinos {
 
                 /** chain_request get_resource_limits */
                 get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_request|null);
+
+                /** chain_request invoke_system_call */
+                invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_request|null);
             }
 
             /** Represents a chain_request. */
@@ -24415,8 +24613,11 @@ export namespace koinos {
                 /** chain_request get_resource_limits. */
                 public get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_request|null);
 
+                /** chain_request invoke_system_call. */
+                public invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_request|null);
+
                 /** chain_request request. */
-                public request?: ("reserved"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits");
+                public request?: ("reserved"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
 
                 /**
                  * Creates a new chain_request instance using the specified properties.
@@ -24524,6 +24725,9 @@ export namespace koinos {
 
                 /** chain_response get_resource_limits */
                 get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_response|null);
+
+                /** chain_response invoke_system_call */
+                invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_response|null);
             }
 
             /** Represents a chain_response. */
@@ -24568,8 +24772,11 @@ export namespace koinos {
                 /** chain_response get_resource_limits. */
                 public get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_response|null);
 
+                /** chain_response invoke_system_call. */
+                public invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_response|null);
+
                 /** chain_response response. */
-                public response?: ("reserved"|"error"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits");
+                public response?: ("reserved"|"error"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
 
                 /**
                  * Creates a new chain_response instance using the specified properties.
@@ -28420,6 +28627,20 @@ export namespace koinos {
             public get_resource_limits(request: koinos.rpc.chain.Iget_resource_limits_request): Promise<koinos.rpc.chain.get_resource_limits_response>;
 
             /**
+             * Calls invoke_system_call.
+             * @param request invoke_system_call_request message or plain object
+             * @param callback Node-style callback called with the error, if any, and invoke_system_call_response
+             */
+            public invoke_system_call(request: koinos.rpc.chain.Iinvoke_system_call_request, callback: koinos.services.koinos.invoke_system_callCallback): void;
+
+            /**
+             * Calls invoke_system_call.
+             * @param request invoke_system_call_request message or plain object
+             * @returns Promise
+             */
+            public invoke_system_call(request: koinos.rpc.chain.Iinvoke_system_call_request): Promise<koinos.rpc.chain.invoke_system_call_response>;
+
+            /**
              * Calls get_contract_meta.
              * @param request get_contract_meta_request message or plain object
              * @param callback Node-style callback called with the error, if any, and get_contract_meta_response
@@ -28582,6 +28803,13 @@ export namespace koinos {
              * @param [response] get_resource_limits_response
              */
             type get_resource_limitsCallback = (error: (Error|null), response?: koinos.rpc.chain.get_resource_limits_response) => void;
+
+            /**
+             * Callback as used by {@link koinos.services.koinos#invoke_system_call}.
+             * @param error Error, if any
+             * @param [response] invoke_system_call_response
+             */
+            type invoke_system_callCallback = (error: (Error|null), response?: koinos.rpc.chain.invoke_system_call_response) => void;
 
             /**
              * Callback as used by {@link koinos.services.koinos#get_contract_meta}.

@@ -3571,6 +3571,38 @@
                     }
                   }
                 },
+                "invoke_system_call_request": {
+                  "oneofs": {
+                    "system_call": {
+                      "oneof": [
+                        "id",
+                        "name"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "id": {
+                      "type": "int64",
+                      "id": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "id": 2
+                    },
+                    "args": {
+                      "type": "bytes",
+                      "id": 3
+                    }
+                  }
+                },
+                "invoke_system_call_response": {
+                  "fields": {
+                    "value": {
+                      "type": "bytes",
+                      "id": 1
+                    }
+                  }
+                },
                 "chain_request": {
                   "oneofs": {
                     "request": {
@@ -3584,7 +3616,8 @@
                         "read_contract",
                         "get_account_nonce",
                         "get_account_rc",
-                        "get_resource_limits"
+                        "get_resource_limits",
+                        "invoke_system_call"
                       ]
                     }
                   },
@@ -3628,6 +3661,10 @@
                     "get_resource_limits": {
                       "type": "get_resource_limits_request",
                       "id": 10
+                    },
+                    "invoke_system_call": {
+                      "type": "invoke_system_call_request",
+                      "id": 11
                     }
                   }
                 },
@@ -3645,7 +3682,8 @@
                         "read_contract",
                         "get_account_nonce",
                         "get_account_rc",
-                        "get_resource_limits"
+                        "get_resource_limits",
+                        "invoke_system_call"
                       ]
                     }
                   },
@@ -3693,6 +3731,10 @@
                     "get_resource_limits": {
                       "type": "get_resource_limits_response",
                       "id": 11
+                    },
+                    "invoke_system_call": {
+                      "type": "invoke_system_call_response",
+                      "id": 12
                     }
                   }
                 }
@@ -4459,6 +4501,10 @@
                 "get_resource_limits": {
                   "requestType": ".koinos.rpc.chain.get_resource_limits_request",
                   "responseType": ".koinos.rpc.chain.get_resource_limits_response"
+                },
+                "invoke_system_call": {
+                  "requestType": ".koinos.rpc.chain.invoke_system_call_request",
+                  "responseType": ".koinos.rpc.chain.invoke_system_call_response"
                 },
                 "get_contract_meta": {
                   "requestType": ".koinos.rpc.contract_meta_store.get_contract_meta_request",
