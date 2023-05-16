@@ -107,6 +107,108 @@ export namespace koinos {
     /** Namespace protocol. */
     namespace protocol {
 
+        /** Properties of an object_space. */
+        interface Iobject_space {
+
+            /** object_space system */
+            system?: (boolean|null);
+
+            /** object_space zone */
+            zone?: (Uint8Array|null);
+
+            /** object_space id */
+            id?: (number|null);
+        }
+
+        /** Represents an object_space. */
+        class object_space implements Iobject_space {
+
+            /**
+             * Constructs a new object_space.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.protocol.Iobject_space);
+
+            /** object_space system. */
+            public system: boolean;
+
+            /** object_space zone. */
+            public zone: Uint8Array;
+
+            /** object_space id. */
+            public id: number;
+
+            /**
+             * Creates a new object_space instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns object_space instance
+             */
+            public static create(properties?: koinos.protocol.Iobject_space): koinos.protocol.object_space;
+
+            /**
+             * Encodes the specified object_space message. Does not implicitly {@link koinos.protocol.object_space.verify|verify} messages.
+             * @param message object_space message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.protocol.Iobject_space, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified object_space message, length delimited. Does not implicitly {@link koinos.protocol.object_space.verify|verify} messages.
+             * @param message object_space message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.protocol.Iobject_space, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an object_space message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns object_space
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.protocol.object_space;
+
+            /**
+             * Decodes an object_space message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns object_space
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.protocol.object_space;
+
+            /**
+             * Verifies an object_space message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an object_space message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns object_space
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.protocol.object_space;
+
+            /**
+             * Creates a plain object from an object_space message. Also converts values to other types if specified.
+             * @param message object_space
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.protocol.object_space, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this object_space to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of an event_data. */
         interface Ievent_data {
 
@@ -1204,6 +1306,9 @@ export namespace koinos {
 
             /** transaction_receipt logs */
             logs?: (string[]|null);
+
+            /** transaction_receipt state_delta_entries */
+            state_delta_entries?: (koinos.protocol.Istate_delta_entry[]|null);
         }
 
         /** Represents a transaction_receipt. */
@@ -1247,6 +1352,9 @@ export namespace koinos {
 
             /** transaction_receipt logs. */
             public logs: string[];
+
+            /** transaction_receipt state_delta_entries. */
+            public state_delta_entries: koinos.protocol.Istate_delta_entry[];
 
             /**
              * Creates a new transaction_receipt instance using the specified properties.
@@ -1591,6 +1699,9 @@ export namespace koinos {
 
             /** block_receipt compute_bandwidth_charged */
             compute_bandwidth_charged?: (number|Long|null);
+
+            /** block_receipt state_delta_entries */
+            state_delta_entries?: (koinos.protocol.Istate_delta_entry[]|null);
         }
 
         /** Represents a block_receipt. */
@@ -1637,6 +1748,9 @@ export namespace koinos {
 
             /** block_receipt compute_bandwidth_charged. */
             public compute_bandwidth_charged: (number|Long);
+
+            /** block_receipt state_delta_entries. */
+            public state_delta_entries: koinos.protocol.Istate_delta_entry[];
 
             /**
              * Creates a new block_receipt instance using the specified properties.
@@ -1704,6 +1818,111 @@ export namespace koinos {
 
             /**
              * Converts this block_receipt to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a state_delta_entry. */
+        interface Istate_delta_entry {
+
+            /** state_delta_entry object_space */
+            object_space?: (koinos.protocol.Iobject_space|null);
+
+            /** state_delta_entry key */
+            key?: (Uint8Array|null);
+
+            /** state_delta_entry value */
+            value?: (Uint8Array|null);
+        }
+
+        /** Represents a state_delta_entry. */
+        class state_delta_entry implements Istate_delta_entry {
+
+            /**
+             * Constructs a new state_delta_entry.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.protocol.Istate_delta_entry);
+
+            /** state_delta_entry object_space. */
+            public object_space?: (koinos.protocol.Iobject_space|null);
+
+            /** state_delta_entry key. */
+            public key: Uint8Array;
+
+            /** state_delta_entry value. */
+            public value?: (Uint8Array|null);
+
+            /** state_delta_entry _value. */
+            public _value?: "value";
+
+            /**
+             * Creates a new state_delta_entry instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns state_delta_entry instance
+             */
+            public static create(properties?: koinos.protocol.Istate_delta_entry): koinos.protocol.state_delta_entry;
+
+            /**
+             * Encodes the specified state_delta_entry message. Does not implicitly {@link koinos.protocol.state_delta_entry.verify|verify} messages.
+             * @param message state_delta_entry message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.protocol.Istate_delta_entry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified state_delta_entry message, length delimited. Does not implicitly {@link koinos.protocol.state_delta_entry.verify|verify} messages.
+             * @param message state_delta_entry message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.protocol.Istate_delta_entry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a state_delta_entry message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns state_delta_entry
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.protocol.state_delta_entry;
+
+            /**
+             * Decodes a state_delta_entry message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns state_delta_entry
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.protocol.state_delta_entry;
+
+            /**
+             * Verifies a state_delta_entry message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a state_delta_entry message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns state_delta_entry
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.protocol.state_delta_entry;
+
+            /**
+             * Creates a plain object from a state_delta_entry message. Also converts values to other types if specified.
+             * @param message state_delta_entry
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.protocol.state_delta_entry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this state_delta_entry to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };

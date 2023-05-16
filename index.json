@@ -35,6 +35,22 @@
             "go_package": "github.com/koinos/koinos-proto-golang/koinos/protocol"
           },
           "nested": {
+            "object_space": {
+              "fields": {
+                "system": {
+                  "type": "bool",
+                  "id": 1
+                },
+                "zone": {
+                  "type": "bytes",
+                  "id": 2
+                },
+                "id": {
+                  "type": "uint32",
+                  "id": 3
+                }
+              }
+            },
             "event_data": {
               "fields": {
                 "sequence": {
@@ -341,6 +357,11 @@
                   "rule": "repeated",
                   "type": "string",
                   "id": 11
+                },
+                "state_delta_entries": {
+                  "rule": "repeated",
+                  "type": "state_delta_entry",
+                  "id": 12
                 }
               }
             },
@@ -491,6 +512,37 @@
                   "id": 12,
                   "options": {
                     "jstype": "JS_STRING"
+                  }
+                },
+                "state_delta_entries": {
+                  "rule": "repeated",
+                  "type": "state_delta_entry",
+                  "id": 13
+                }
+              }
+            },
+            "state_delta_entry": {
+              "oneofs": {
+                "_value": {
+                  "oneof": [
+                    "value"
+                  ]
+                }
+              },
+              "fields": {
+                "object_space": {
+                  "type": "object_space",
+                  "id": 1
+                },
+                "key": {
+                  "type": "bytes",
+                  "id": 2
+                },
+                "value": {
+                  "type": "bytes",
+                  "id": 3,
+                  "options": {
+                    "proto3_optional": true
                   }
                 }
               }
