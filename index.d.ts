@@ -2757,6 +2757,7 @@ export namespace koinos {
             set_account_nonce = 109,
             check_system_authority = 110,
             get_operation = 111,
+            get_contract_metadata = 112,
             get_account_rc = 201,
             consume_account_rc = 202,
             get_resource_limits = 203,
@@ -7325,6 +7326,186 @@ export namespace koinos {
 
             /**
              * Converts this get_operation_result to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_contract_metadata_arguments. */
+        interface Iget_contract_metadata_arguments {
+
+            /** get_contract_metadata_arguments contract_id */
+            contract_id?: (Uint8Array|null);
+        }
+
+        /** Represents a get_contract_metadata_arguments. */
+        class get_contract_metadata_arguments implements Iget_contract_metadata_arguments {
+
+            /**
+             * Constructs a new get_contract_metadata_arguments.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_contract_metadata_arguments);
+
+            /** get_contract_metadata_arguments contract_id. */
+            public contract_id: Uint8Array;
+
+            /**
+             * Creates a new get_contract_metadata_arguments instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_contract_metadata_arguments instance
+             */
+            public static create(properties?: koinos.chain.Iget_contract_metadata_arguments): koinos.chain.get_contract_metadata_arguments;
+
+            /**
+             * Encodes the specified get_contract_metadata_arguments message. Does not implicitly {@link koinos.chain.get_contract_metadata_arguments.verify|verify} messages.
+             * @param message get_contract_metadata_arguments message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_contract_metadata_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_contract_metadata_arguments message, length delimited. Does not implicitly {@link koinos.chain.get_contract_metadata_arguments.verify|verify} messages.
+             * @param message get_contract_metadata_arguments message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_contract_metadata_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_contract_metadata_arguments message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_contract_metadata_arguments
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_contract_metadata_arguments;
+
+            /**
+             * Decodes a get_contract_metadata_arguments message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_contract_metadata_arguments
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_contract_metadata_arguments;
+
+            /**
+             * Verifies a get_contract_metadata_arguments message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_contract_metadata_arguments message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_contract_metadata_arguments
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_contract_metadata_arguments;
+
+            /**
+             * Creates a plain object from a get_contract_metadata_arguments message. Also converts values to other types if specified.
+             * @param message get_contract_metadata_arguments
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_contract_metadata_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_contract_metadata_arguments to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_contract_metadata_result. */
+        interface Iget_contract_metadata_result {
+
+            /** get_contract_metadata_result contract_metadata */
+            contract_metadata?: (koinos.chain.Icontract_metadata_object|null);
+        }
+
+        /** Represents a get_contract_metadata_result. */
+        class get_contract_metadata_result implements Iget_contract_metadata_result {
+
+            /**
+             * Constructs a new get_contract_metadata_result.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_contract_metadata_result);
+
+            /** get_contract_metadata_result contract_metadata. */
+            public contract_metadata?: (koinos.chain.Icontract_metadata_object|null);
+
+            /**
+             * Creates a new get_contract_metadata_result instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_contract_metadata_result instance
+             */
+            public static create(properties?: koinos.chain.Iget_contract_metadata_result): koinos.chain.get_contract_metadata_result;
+
+            /**
+             * Encodes the specified get_contract_metadata_result message. Does not implicitly {@link koinos.chain.get_contract_metadata_result.verify|verify} messages.
+             * @param message get_contract_metadata_result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_contract_metadata_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_contract_metadata_result message, length delimited. Does not implicitly {@link koinos.chain.get_contract_metadata_result.verify|verify} messages.
+             * @param message get_contract_metadata_result message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_contract_metadata_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_contract_metadata_result message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_contract_metadata_result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_contract_metadata_result;
+
+            /**
+             * Decodes a get_contract_metadata_result message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_contract_metadata_result
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_contract_metadata_result;
+
+            /**
+             * Verifies a get_contract_metadata_result message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_contract_metadata_result message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_contract_metadata_result
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_contract_metadata_result;
+
+            /**
+             * Creates a plain object from a get_contract_metadata_result message. Also converts values to other types if specified.
+             * @param message get_contract_metadata_result
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_contract_metadata_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_contract_metadata_result to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
