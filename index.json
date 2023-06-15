@@ -1161,7 +1161,7 @@
             },
             "get_contract_metadata_result": {
               "fields": {
-                "contract_metadata": {
+                "value": {
                   "type": "contract_metadata_object",
                   "id": 1
                 }

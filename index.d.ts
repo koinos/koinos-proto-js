@@ -7424,8 +7424,8 @@ export namespace koinos {
         /** Properties of a get_contract_metadata_result. */
         interface Iget_contract_metadata_result {
 
-            /** get_contract_metadata_result contract_metadata */
-            contract_metadata?: (koinos.chain.Icontract_metadata_object|null);
+            /** get_contract_metadata_result value */
+            value?: (koinos.chain.Icontract_metadata_object|null);
         }
 
         /** Represents a get_contract_metadata_result. */
@@ -7437,8 +7437,8 @@ export namespace koinos {
              */
             constructor(properties?: koinos.chain.Iget_contract_metadata_result);
 
-            /** get_contract_metadata_result contract_metadata. */
-            public contract_metadata?: (koinos.chain.Icontract_metadata_object|null);
+            /** get_contract_metadata_result value. */
+            public value?: (koinos.chain.Icontract_metadata_object|null);
 
             /**
              * Creates a new get_contract_metadata_result instance using the specified properties.
