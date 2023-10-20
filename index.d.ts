@@ -24753,6 +24753,9 @@ export namespace koinos {
 
                 /** invoke_system_call_request args */
                 args?: (Uint8Array|null);
+
+                /** invoke_system_call_request caller_data */
+                caller_data?: (koinos.chain.Icaller_data|null);
             }
 
             /** Represents an invoke_system_call_request. */
@@ -24773,8 +24776,14 @@ export namespace koinos {
                 /** invoke_system_call_request args. */
                 public args: Uint8Array;
 
+                /** invoke_system_call_request caller_data. */
+                public caller_data?: (koinos.chain.Icaller_data|null);
+
                 /** invoke_system_call_request system_call. */
                 public system_call?: ("id"|"name");
+
+                /** invoke_system_call_request _caller_data. */
+                public _caller_data?: "caller_data";
 
                 /**
                  * Creates a new invoke_system_call_request instance using the specified properties.

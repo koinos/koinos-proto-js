@@ -3650,6 +3650,11 @@
                         "id",
                         "name"
                       ]
+                    },
+                    "_caller_data": {
+                      "oneof": [
+                        "caller_data"
+                      ]
                     }
                   },
                   "fields": {
@@ -3664,6 +3669,13 @@
                     "args": {
                       "type": "bytes",
                       "id": 3
+                    },
+                    "caller_data": {
+                      "type": "koinos.chain.caller_data",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
