@@ -17591,219 +17591,6 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
 
-            /** Properties of a check_transaction_eligibility_request. */
-            interface Icheck_transaction_eligibility_request {
-
-                /** check_transaction_eligibility_request payer */
-                payer?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request payee */
-                payee?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request nonce */
-                nonce?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request max_payer_rc */
-                max_payer_rc?: (number|Long|null);
-
-                /** check_transaction_eligibility_request rc_limit */
-                rc_limit?: (number|Long|null);
-
-                /** check_transaction_eligibility_request block_id */
-                block_id?: (Uint8Array|null);
-            }
-
-            /** Represents a check_transaction_eligibility_request. */
-            class check_transaction_eligibility_request implements Icheck_transaction_eligibility_request {
-
-                /**
-                 * Constructs a new check_transaction_eligibility_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_request);
-
-                /** check_transaction_eligibility_request payer. */
-                public payer: Uint8Array;
-
-                /** check_transaction_eligibility_request payee. */
-                public payee: Uint8Array;
-
-                /** check_transaction_eligibility_request nonce. */
-                public nonce: Uint8Array;
-
-                /** check_transaction_eligibility_request max_payer_rc. */
-                public max_payer_rc: (number|Long);
-
-                /** check_transaction_eligibility_request rc_limit. */
-                public rc_limit: (number|Long);
-
-                /** check_transaction_eligibility_request block_id. */
-                public block_id?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request _block_id. */
-                public _block_id?: "block_id";
-
-                /**
-                 * Creates a new check_transaction_eligibility_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_transaction_eligibility_request instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_request): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_request message. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_request.verify|verify} messages.
-                 * @param message check_transaction_eligibility_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_transaction_eligibility_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_request.verify|verify} messages.
-                 * @param message check_transaction_eligibility_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_transaction_eligibility_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_transaction_eligibility_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_transaction_eligibility_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Decodes a check_transaction_eligibility_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_transaction_eligibility_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Verifies a check_transaction_eligibility_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_transaction_eligibility_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_transaction_eligibility_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Creates a plain object from a check_transaction_eligibility_request message. Also converts values to other types if specified.
-                 * @param message check_transaction_eligibility_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_transaction_eligibility_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_transaction_eligibility_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_transaction_eligibility_response. */
-            interface Icheck_transaction_eligibility_response {
-
-                /** check_transaction_eligibility_response success */
-                success?: (boolean|null);
-            }
-
-            /** Represents a check_transaction_eligibility_response. */
-            class check_transaction_eligibility_response implements Icheck_transaction_eligibility_response {
-
-                /**
-                 * Constructs a new check_transaction_eligibility_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_response);
-
-                /** check_transaction_eligibility_response success. */
-                public success: boolean;
-
-                /**
-                 * Creates a new check_transaction_eligibility_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_transaction_eligibility_response instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_response): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_response message. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_response.verify|verify} messages.
-                 * @param message check_transaction_eligibility_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_transaction_eligibility_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_response.verify|verify} messages.
-                 * @param message check_transaction_eligibility_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_transaction_eligibility_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_transaction_eligibility_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_transaction_eligibility_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Decodes a check_transaction_eligibility_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_transaction_eligibility_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Verifies a check_transaction_eligibility_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_transaction_eligibility_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_transaction_eligibility_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Creates a plain object from a check_transaction_eligibility_response message. Also converts values to other types if specified.
-                 * @param message check_transaction_eligibility_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_transaction_eligibility_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_transaction_eligibility_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
             /** Properties of a mempool_request. */
             interface Imempool_request {
 
@@ -17818,9 +17605,6 @@ export namespace koinos {
 
                 /** mempool_request check_account_nonce */
                 check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_request|null);
-
-                /** mempool_request check_transaction_eligibility */
-                check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_request|null);
             }
 
             /** Represents a mempool_request. */
@@ -17844,11 +17628,8 @@ export namespace koinos {
                 /** mempool_request check_account_nonce. */
                 public check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_request|null);
 
-                /** mempool_request check_transaction_eligibility. */
-                public check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_request|null);
-
                 /** mempool_request request. */
-                public request?: ("reserved"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"check_transaction_eligibility");
+                public request?: ("reserved"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce");
 
                 /**
                  * Creates a new mempool_request instance using the specified properties.
@@ -17938,9 +17719,6 @@ export namespace koinos {
 
                 /** mempool_response check_account_nonce */
                 check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_response|null);
-
-                /** mempool_response check_transaction_eligibility */
-                check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_response|null);
             }
 
             /** Represents a mempool_response. */
@@ -17967,11 +17745,8 @@ export namespace koinos {
                 /** mempool_response check_account_nonce. */
                 public check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_response|null);
 
-                /** mempool_response check_transaction_eligibility. */
-                public check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_response|null);
-
                 /** mempool_response response. */
-                public response?: ("reserved"|"error"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"check_transaction_eligibility");
+                public response?: ("reserved"|"error"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce");
 
                 /**
                  * Creates a new mempool_response instance using the specified properties.

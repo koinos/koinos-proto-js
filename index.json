@@ -3087,65 +3087,6 @@
                     }
                   }
                 },
-                "check_transaction_eligibility_request": {
-                  "oneofs": {
-                    "_block_id": {
-                      "oneof": [
-                        "block_id"
-                      ]
-                    }
-                  },
-                  "fields": {
-                    "payer": {
-                      "type": "bytes",
-                      "id": 1,
-                      "options": {
-                        "(btype)": "ADDRESS"
-                      }
-                    },
-                    "payee": {
-                      "type": "bytes",
-                      "id": 2,
-                      "options": {
-                        "(btype)": "ADDRESS"
-                      }
-                    },
-                    "nonce": {
-                      "type": "bytes",
-                      "id": 3
-                    },
-                    "max_payer_rc": {
-                      "type": "uint64",
-                      "id": 4,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "rc_limit": {
-                      "type": "uint64",
-                      "id": 5,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "block_id": {
-                      "type": "bytes",
-                      "id": 1000,
-                      "options": {
-                        "(btype)": "BLOCK_ID",
-                        "proto3_optional": true
-                      }
-                    }
-                  }
-                },
-                "check_transaction_eligibility_response": {
-                  "fields": {
-                    "success": {
-                      "type": "bool",
-                      "id": 1
-                    }
-                  }
-                },
                 "mempool_request": {
                   "oneofs": {
                     "request": {
@@ -3153,8 +3094,7 @@
                         "reserved",
                         "check_pending_account_resources",
                         "get_pending_transactions",
-                        "check_account_nonce",
-                        "check_transaction_eligibility"
+                        "check_account_nonce"
                       ]
                     }
                   },
@@ -3174,10 +3114,6 @@
                     "check_account_nonce": {
                       "type": "check_account_nonce_request",
                       "id": 4
-                    },
-                    "check_transaction_eligibility": {
-                      "type": "check_transaction_eligibility_request",
-                      "id": 5
                     }
                   }
                 },
@@ -3189,8 +3125,7 @@
                         "error",
                         "check_pending_account_resources",
                         "get_pending_transactions",
-                        "check_account_nonce",
-                        "check_transaction_eligibility"
+                        "check_account_nonce"
                       ]
                     }
                   },
@@ -3214,10 +3149,6 @@
                     "check_account_nonce": {
                       "type": "check_account_nonce_response",
                       "id": 5
-                    },
-                    "check_transaction_eligibility": {
-                      "type": "check_transaction_eligibility_response",
-                      "id": 6
                     }
                   }
                 }
