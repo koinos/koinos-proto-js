@@ -2047,10 +2047,6 @@
                   "type": "string",
                   "id": 2
                 },
-                "code": {
-                  "type": "int32",
-                  "id": 3
-                },
                 "details": {
                   "rule": "repeated",
                   "type": "google.protobuf.Any",
@@ -3592,6 +3588,14 @@
                 "compute_bandwidth_limit_exceeded": -1013,
                 "disk_storage_limit_exceeded": -1014,
                 "pre_irreversibility_block": -1015
+              }
+            },
+            "chain_error_details": {
+              "fields": {
+                "code": {
+                  "type": "int32",
+                  "id": 1
+                }
               }
             },
             "value_type": {

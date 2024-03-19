@@ -11960,9 +11960,6 @@ export namespace koinos {
             /** error_status data */
             data?: (string|null);
 
-            /** error_status code */
-            code?: (number|null);
-
             /** error_status details */
             details?: (google.protobuf.IAny[]|null);
         }
@@ -11981,9 +11978,6 @@ export namespace koinos {
 
             /** error_status data. */
             public data: string;
-
-            /** error_status code. */
-            public code: number;
 
             /** error_status details. */
             public details: google.protobuf.IAny[];
@@ -19990,6 +19984,96 @@ export namespace koinos {
             compute_bandwidth_limit_exceeded = -1013,
             disk_storage_limit_exceeded = -1014,
             pre_irreversibility_block = -1015
+        }
+
+        /** Properties of a chain_error_details. */
+        interface Ichain_error_details {
+
+            /** chain_error_details code */
+            code?: (number|null);
+        }
+
+        /** Represents a chain_error_details. */
+        class chain_error_details implements Ichain_error_details {
+
+            /**
+             * Constructs a new chain_error_details.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Ichain_error_details);
+
+            /** chain_error_details code. */
+            public code: number;
+
+            /**
+             * Creates a new chain_error_details instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns chain_error_details instance
+             */
+            public static create(properties?: koinos.chain.Ichain_error_details): koinos.chain.chain_error_details;
+
+            /**
+             * Encodes the specified chain_error_details message. Does not implicitly {@link koinos.chain.chain_error_details.verify|verify} messages.
+             * @param message chain_error_details message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Ichain_error_details, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified chain_error_details message, length delimited. Does not implicitly {@link koinos.chain.chain_error_details.verify|verify} messages.
+             * @param message chain_error_details message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Ichain_error_details, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a chain_error_details message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns chain_error_details
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.chain_error_details;
+
+            /**
+             * Decodes a chain_error_details message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns chain_error_details
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.chain_error_details;
+
+            /**
+             * Verifies a chain_error_details message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a chain_error_details message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns chain_error_details
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.chain_error_details;
+
+            /**
+             * Creates a plain object from a chain_error_details message. Also converts values to other types if specified.
+             * @param message chain_error_details
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.chain_error_details, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this chain_error_details to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
         }
 
         /** Properties of a value_type. */
