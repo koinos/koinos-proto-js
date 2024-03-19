@@ -2037,7 +2037,7 @@
             "reserved_rpc": {
               "fields": {}
             },
-            "error_response": {
+            "error_status": {
               "fields": {
                 "message": {
                   "type": "string",
@@ -2046,6 +2046,15 @@
                 "data": {
                   "type": "string",
                   "id": 2
+                },
+                "code": {
+                  "type": "int32",
+                  "id": 3
+                },
+                "details": {
+                  "rule": "repeated",
+                  "type": "google.protobuf.Any",
+                  "id": 10
                 }
               }
             },
@@ -2109,7 +2118,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "get_contract_meta": {
@@ -2172,7 +2181,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "get_gossip_status": {
@@ -2336,7 +2345,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "get_blocks_by_id": {
@@ -2477,7 +2486,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "get_account_history": {
@@ -2550,7 +2559,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "get_transactions_by_id": {
@@ -2876,7 +2885,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "submit_block": {
@@ -3191,7 +3200,7 @@
                       "id": 1
                     },
                     "error": {
-                      "type": "rpc.error_response",
+                      "type": "rpc.error_status",
                       "id": 2
                     },
                     "check_pending_account_resources": {

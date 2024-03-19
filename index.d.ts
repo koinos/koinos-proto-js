@@ -11951,97 +11951,109 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
-        /** Properties of an error_response. */
-        interface Ierror_response {
+        /** Properties of an error_status. */
+        interface Ierror_status {
 
-            /** error_response message */
+            /** error_status message */
             message?: (string|null);
 
-            /** error_response data */
+            /** error_status data */
             data?: (string|null);
+
+            /** error_status code */
+            code?: (number|null);
+
+            /** error_status details */
+            details?: (google.protobuf.IAny[]|null);
         }
 
-        /** Represents an error_response. */
-        class error_response implements Ierror_response {
+        /** Represents an error_status. */
+        class error_status implements Ierror_status {
 
             /**
-             * Constructs a new error_response.
+             * Constructs a new error_status.
              * @param [properties] Properties to set
              */
-            constructor(properties?: koinos.rpc.Ierror_response);
+            constructor(properties?: koinos.rpc.Ierror_status);
 
-            /** error_response message. */
+            /** error_status message. */
             public message: string;
 
-            /** error_response data. */
+            /** error_status data. */
             public data: string;
 
+            /** error_status code. */
+            public code: number;
+
+            /** error_status details. */
+            public details: google.protobuf.IAny[];
+
             /**
-             * Creates a new error_response instance using the specified properties.
+             * Creates a new error_status instance using the specified properties.
              * @param [properties] Properties to set
-             * @returns error_response instance
+             * @returns error_status instance
              */
-            public static create(properties?: koinos.rpc.Ierror_response): koinos.rpc.error_response;
+            public static create(properties?: koinos.rpc.Ierror_status): koinos.rpc.error_status;
 
             /**
-             * Encodes the specified error_response message. Does not implicitly {@link koinos.rpc.error_response.verify|verify} messages.
-             * @param message error_response message or plain object to encode
+             * Encodes the specified error_status message. Does not implicitly {@link koinos.rpc.error_status.verify|verify} messages.
+             * @param message error_status message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: koinos.rpc.Ierror_response, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: koinos.rpc.Ierror_status, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified error_response message, length delimited. Does not implicitly {@link koinos.rpc.error_response.verify|verify} messages.
-             * @param message error_response message or plain object to encode
+             * Encodes the specified error_status message, length delimited. Does not implicitly {@link koinos.rpc.error_status.verify|verify} messages.
+             * @param message error_status message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: koinos.rpc.Ierror_response, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: koinos.rpc.Ierror_status, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Decodes an error_response message from the specified reader or buffer.
+             * Decodes an error_status message from the specified reader or buffer.
              * @param reader Reader or buffer to decode from
              * @param [length] Message length if known beforehand
-             * @returns error_response
+             * @returns error_status
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.error_response;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.error_status;
 
             /**
-             * Decodes an error_response message from the specified reader or buffer, length delimited.
+             * Decodes an error_status message from the specified reader or buffer, length delimited.
              * @param reader Reader or buffer to decode from
-             * @returns error_response
+             * @returns error_status
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.error_response;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.error_status;
 
             /**
-             * Verifies an error_response message.
+             * Verifies an error_status message.
              * @param message Plain object to verify
              * @returns `null` if valid, otherwise the reason why it is not
              */
             public static verify(message: { [k: string]: any }): (string|null);
 
             /**
-             * Creates an error_response message from a plain object. Also converts values to their respective internal types.
+             * Creates an error_status message from a plain object. Also converts values to their respective internal types.
              * @param object Plain object
-             * @returns error_response
+             * @returns error_status
              */
-            public static fromObject(object: { [k: string]: any }): koinos.rpc.error_response;
+            public static fromObject(object: { [k: string]: any }): koinos.rpc.error_status;
 
             /**
-             * Creates a plain object from an error_response message. Also converts values to other types if specified.
-             * @param message error_response
+             * Creates a plain object from an error_status message. Also converts values to other types if specified.
+             * @param message error_status
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: koinos.rpc.error_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: koinos.rpc.error_status, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
-             * Converts this error_response to JSON.
+             * Converts this error_status to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -12336,7 +12348,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** contract_meta_store_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** contract_meta_store_response get_contract_meta */
                 get_contract_meta?: (koinos.rpc.contract_meta_store.Iget_contract_meta_response|null);
@@ -12355,7 +12367,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** contract_meta_store_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** contract_meta_store_response get_contract_meta. */
                 public get_contract_meta?: (koinos.rpc.contract_meta_store.Iget_contract_meta_response|null);
@@ -12718,7 +12730,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** p2p_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** p2p_response get_gossip_status */
                 get_gossip_status?: (koinos.rpc.p2p.Iget_gossip_status_response|null);
@@ -12737,7 +12749,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** p2p_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** p2p_response get_gossip_status. */
                 public get_gossip_status?: (koinos.rpc.p2p.Iget_gossip_status_response|null);
@@ -13694,7 +13706,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** block_store_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** block_store_response get_blocks_by_id */
                 get_blocks_by_id?: (koinos.rpc.block_store.Iget_blocks_by_id_response|null);
@@ -13722,7 +13734,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** block_store_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** block_store_response get_blocks_by_id. */
                 public get_blocks_by_id?: (koinos.rpc.block_store.Iget_blocks_by_id_response|null);
@@ -14232,7 +14244,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** account_history_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** account_history_response get_account_history */
                 get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
@@ -14251,7 +14263,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** account_history_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** account_history_response get_account_history. */
                 public get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
@@ -14620,7 +14632,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** transaction_store_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** transaction_store_response get_transactions_by_id */
                 get_transactions_by_id?: (koinos.rpc.transaction_store.Iget_transactions_by_id_response|null);
@@ -14639,7 +14651,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** transaction_store_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** transaction_store_response get_transactions_by_id. */
                 public get_transactions_by_id?: (koinos.rpc.transaction_store.Iget_transactions_by_id_response|null);
@@ -16730,7 +16742,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** chain_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** chain_response submit_block */
                 submit_block?: (koinos.rpc.chain.Isubmit_block_response|null);
@@ -16776,7 +16788,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** chain_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** chain_response submit_block. */
                 public submit_block?: (koinos.rpc.chain.Isubmit_block_response|null);
@@ -17916,7 +17928,7 @@ export namespace koinos {
                 reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** mempool_response error */
-                error?: (koinos.rpc.Ierror_response|null);
+                error?: (koinos.rpc.Ierror_status|null);
 
                 /** mempool_response check_pending_account_resources */
                 check_pending_account_resources?: (koinos.rpc.mempool.Icheck_pending_account_resources_response|null);
@@ -17944,7 +17956,7 @@ export namespace koinos {
                 public reserved?: (koinos.rpc.Ireserved_rpc|null);
 
                 /** mempool_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
+                public error?: (koinos.rpc.Ierror_status|null);
 
                 /** mempool_response check_pending_account_resources. */
                 public check_pending_account_resources?: (koinos.rpc.mempool.Icheck_pending_account_resources_response|null);
