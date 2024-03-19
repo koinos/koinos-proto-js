@@ -2,6 +2,198 @@ import * as $protobuf from "protobufjs";
 /** Namespace koinos. */
 export namespace koinos {
 
+    /** Properties of a reserved_rpc. */
+    interface Ireserved_rpc {
+    }
+
+    /** Represents a reserved_rpc. */
+    class reserved_rpc implements Ireserved_rpc {
+
+        /**
+         * Constructs a new reserved_rpc.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: koinos.Ireserved_rpc);
+
+        /**
+         * Creates a new reserved_rpc instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns reserved_rpc instance
+         */
+        public static create(properties?: koinos.Ireserved_rpc): koinos.reserved_rpc;
+
+        /**
+         * Encodes the specified reserved_rpc message. Does not implicitly {@link koinos.reserved_rpc.verify|verify} messages.
+         * @param message reserved_rpc message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: koinos.Ireserved_rpc, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified reserved_rpc message, length delimited. Does not implicitly {@link koinos.reserved_rpc.verify|verify} messages.
+         * @param message reserved_rpc message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: koinos.Ireserved_rpc, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a reserved_rpc message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns reserved_rpc
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.reserved_rpc;
+
+        /**
+         * Decodes a reserved_rpc message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns reserved_rpc
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.reserved_rpc;
+
+        /**
+         * Verifies a reserved_rpc message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a reserved_rpc message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns reserved_rpc
+         */
+        public static fromObject(object: { [k: string]: any }): koinos.reserved_rpc;
+
+        /**
+         * Creates a plain object from a reserved_rpc message. Also converts values to other types if specified.
+         * @param message reserved_rpc
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: koinos.reserved_rpc, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this reserved_rpc to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
+    /** Properties of an error_status. */
+    interface Ierror_status {
+
+        /** error_status message */
+        message?: (string|null);
+
+        /** error_status data */
+        data?: (string|null);
+
+        /** error_status code */
+        code?: (number|null);
+
+        /** error_status details */
+        details?: (google.protobuf.IAny[]|null);
+    }
+
+    /** Represents an error_status. */
+    class error_status implements Ierror_status {
+
+        /**
+         * Constructs a new error_status.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: koinos.Ierror_status);
+
+        /** error_status message. */
+        public message: string;
+
+        /** error_status data. */
+        public data: string;
+
+        /** error_status code. */
+        public code: number;
+
+        /** error_status details. */
+        public details: google.protobuf.IAny[];
+
+        /**
+         * Creates a new error_status instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns error_status instance
+         */
+        public static create(properties?: koinos.Ierror_status): koinos.error_status;
+
+        /**
+         * Encodes the specified error_status message. Does not implicitly {@link koinos.error_status.verify|verify} messages.
+         * @param message error_status message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: koinos.Ierror_status, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified error_status message, length delimited. Does not implicitly {@link koinos.error_status.verify|verify} messages.
+         * @param message error_status message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: koinos.Ierror_status, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes an error_status message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns error_status
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.error_status;
+
+        /**
+         * Decodes an error_status message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns error_status
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.error_status;
+
+        /**
+         * Verifies an error_status message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates an error_status message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns error_status
+         */
+        public static fromObject(object: { [k: string]: any }): koinos.error_status;
+
+        /**
+         * Creates a plain object from an error_status message. Also converts values to other types if specified.
+         * @param message error_status
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: koinos.error_status, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this error_status to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+    }
+
     /** Namespace broadcast. */
     namespace broadcast {
 
@@ -804,6 +996,390 @@ export namespace koinos {
     /** Namespace contract_meta_store. */
     namespace contract_meta_store {
 
+        /** Properties of a get_contract_meta_request. */
+        interface Iget_contract_meta_request {
+
+            /** get_contract_meta_request contract_id */
+            contract_id?: (Uint8Array|null);
+        }
+
+        /** Represents a get_contract_meta_request. */
+        class get_contract_meta_request implements Iget_contract_meta_request {
+
+            /**
+             * Constructs a new get_contract_meta_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.contract_meta_store.Iget_contract_meta_request);
+
+            /** get_contract_meta_request contract_id. */
+            public contract_id: Uint8Array;
+
+            /**
+             * Creates a new get_contract_meta_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_contract_meta_request instance
+             */
+            public static create(properties?: koinos.contract_meta_store.Iget_contract_meta_request): koinos.contract_meta_store.get_contract_meta_request;
+
+            /**
+             * Encodes the specified get_contract_meta_request message. Does not implicitly {@link koinos.contract_meta_store.get_contract_meta_request.verify|verify} messages.
+             * @param message get_contract_meta_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.contract_meta_store.Iget_contract_meta_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_contract_meta_request message, length delimited. Does not implicitly {@link koinos.contract_meta_store.get_contract_meta_request.verify|verify} messages.
+             * @param message get_contract_meta_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.contract_meta_store.Iget_contract_meta_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_contract_meta_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_contract_meta_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contract_meta_store.get_contract_meta_request;
+
+            /**
+             * Decodes a get_contract_meta_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_contract_meta_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contract_meta_store.get_contract_meta_request;
+
+            /**
+             * Verifies a get_contract_meta_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_contract_meta_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_contract_meta_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.contract_meta_store.get_contract_meta_request;
+
+            /**
+             * Creates a plain object from a get_contract_meta_request message. Also converts values to other types if specified.
+             * @param message get_contract_meta_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.contract_meta_store.get_contract_meta_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_contract_meta_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_contract_meta_response. */
+        interface Iget_contract_meta_response {
+
+            /** get_contract_meta_response meta */
+            meta?: (koinos.contract_meta_store.Icontract_meta_item|null);
+        }
+
+        /** Represents a get_contract_meta_response. */
+        class get_contract_meta_response implements Iget_contract_meta_response {
+
+            /**
+             * Constructs a new get_contract_meta_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.contract_meta_store.Iget_contract_meta_response);
+
+            /** get_contract_meta_response meta. */
+            public meta?: (koinos.contract_meta_store.Icontract_meta_item|null);
+
+            /**
+             * Creates a new get_contract_meta_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_contract_meta_response instance
+             */
+            public static create(properties?: koinos.contract_meta_store.Iget_contract_meta_response): koinos.contract_meta_store.get_contract_meta_response;
+
+            /**
+             * Encodes the specified get_contract_meta_response message. Does not implicitly {@link koinos.contract_meta_store.get_contract_meta_response.verify|verify} messages.
+             * @param message get_contract_meta_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.contract_meta_store.Iget_contract_meta_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_contract_meta_response message, length delimited. Does not implicitly {@link koinos.contract_meta_store.get_contract_meta_response.verify|verify} messages.
+             * @param message get_contract_meta_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.contract_meta_store.Iget_contract_meta_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_contract_meta_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_contract_meta_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contract_meta_store.get_contract_meta_response;
+
+            /**
+             * Decodes a get_contract_meta_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_contract_meta_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contract_meta_store.get_contract_meta_response;
+
+            /**
+             * Verifies a get_contract_meta_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_contract_meta_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_contract_meta_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.contract_meta_store.get_contract_meta_response;
+
+            /**
+             * Creates a plain object from a get_contract_meta_response message. Also converts values to other types if specified.
+             * @param message get_contract_meta_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.contract_meta_store.get_contract_meta_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_contract_meta_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a contract_meta_store_request. */
+        interface Icontract_meta_store_request {
+
+            /** contract_meta_store_request reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** contract_meta_store_request get_contract_meta */
+            get_contract_meta?: (koinos.contract_meta_store.Iget_contract_meta_request|null);
+        }
+
+        /** Represents a contract_meta_store_request. */
+        class contract_meta_store_request implements Icontract_meta_store_request {
+
+            /**
+             * Constructs a new contract_meta_store_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.contract_meta_store.Icontract_meta_store_request);
+
+            /** contract_meta_store_request reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** contract_meta_store_request get_contract_meta. */
+            public get_contract_meta?: (koinos.contract_meta_store.Iget_contract_meta_request|null);
+
+            /** contract_meta_store_request request. */
+            public request?: ("reserved"|"get_contract_meta");
+
+            /**
+             * Creates a new contract_meta_store_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns contract_meta_store_request instance
+             */
+            public static create(properties?: koinos.contract_meta_store.Icontract_meta_store_request): koinos.contract_meta_store.contract_meta_store_request;
+
+            /**
+             * Encodes the specified contract_meta_store_request message. Does not implicitly {@link koinos.contract_meta_store.contract_meta_store_request.verify|verify} messages.
+             * @param message contract_meta_store_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.contract_meta_store.Icontract_meta_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified contract_meta_store_request message, length delimited. Does not implicitly {@link koinos.contract_meta_store.contract_meta_store_request.verify|verify} messages.
+             * @param message contract_meta_store_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.contract_meta_store.Icontract_meta_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a contract_meta_store_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns contract_meta_store_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contract_meta_store.contract_meta_store_request;
+
+            /**
+             * Decodes a contract_meta_store_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns contract_meta_store_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contract_meta_store.contract_meta_store_request;
+
+            /**
+             * Verifies a contract_meta_store_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a contract_meta_store_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns contract_meta_store_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.contract_meta_store.contract_meta_store_request;
+
+            /**
+             * Creates a plain object from a contract_meta_store_request message. Also converts values to other types if specified.
+             * @param message contract_meta_store_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.contract_meta_store.contract_meta_store_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this contract_meta_store_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a contract_meta_store_response. */
+        interface Icontract_meta_store_response {
+
+            /** contract_meta_store_response reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** contract_meta_store_response error */
+            error?: (koinos.Ierror_status|null);
+
+            /** contract_meta_store_response get_contract_meta */
+            get_contract_meta?: (koinos.contract_meta_store.Iget_contract_meta_response|null);
+        }
+
+        /** Represents a contract_meta_store_response. */
+        class contract_meta_store_response implements Icontract_meta_store_response {
+
+            /**
+             * Constructs a new contract_meta_store_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.contract_meta_store.Icontract_meta_store_response);
+
+            /** contract_meta_store_response reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** contract_meta_store_response error. */
+            public error?: (koinos.Ierror_status|null);
+
+            /** contract_meta_store_response get_contract_meta. */
+            public get_contract_meta?: (koinos.contract_meta_store.Iget_contract_meta_response|null);
+
+            /** contract_meta_store_response response. */
+            public response?: ("reserved"|"error"|"get_contract_meta");
+
+            /**
+             * Creates a new contract_meta_store_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns contract_meta_store_response instance
+             */
+            public static create(properties?: koinos.contract_meta_store.Icontract_meta_store_response): koinos.contract_meta_store.contract_meta_store_response;
+
+            /**
+             * Encodes the specified contract_meta_store_response message. Does not implicitly {@link koinos.contract_meta_store.contract_meta_store_response.verify|verify} messages.
+             * @param message contract_meta_store_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.contract_meta_store.Icontract_meta_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified contract_meta_store_response message, length delimited. Does not implicitly {@link koinos.contract_meta_store.contract_meta_store_response.verify|verify} messages.
+             * @param message contract_meta_store_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.contract_meta_store.Icontract_meta_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a contract_meta_store_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns contract_meta_store_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.contract_meta_store.contract_meta_store_response;
+
+            /**
+             * Decodes a contract_meta_store_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns contract_meta_store_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.contract_meta_store.contract_meta_store_response;
+
+            /**
+             * Verifies a contract_meta_store_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a contract_meta_store_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns contract_meta_store_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.contract_meta_store.contract_meta_store_response;
+
+            /**
+             * Creates a plain object from a contract_meta_store_response message. Also converts values to other types if specified.
+             * @param message contract_meta_store_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.contract_meta_store.contract_meta_store_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this contract_meta_store_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a contract_meta_item. */
         interface Icontract_meta_item {
 
@@ -889,6 +1465,388 @@ export namespace koinos {
 
             /**
              * Converts this contract_meta_item to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+    }
+
+    /** Namespace p2p. */
+    namespace p2p {
+
+        /** Properties of a get_gossip_status_request. */
+        interface Iget_gossip_status_request {
+        }
+
+        /** Represents a get_gossip_status_request. */
+        class get_gossip_status_request implements Iget_gossip_status_request {
+
+            /**
+             * Constructs a new get_gossip_status_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.p2p.Iget_gossip_status_request);
+
+            /**
+             * Creates a new get_gossip_status_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_gossip_status_request instance
+             */
+            public static create(properties?: koinos.p2p.Iget_gossip_status_request): koinos.p2p.get_gossip_status_request;
+
+            /**
+             * Encodes the specified get_gossip_status_request message. Does not implicitly {@link koinos.p2p.get_gossip_status_request.verify|verify} messages.
+             * @param message get_gossip_status_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.p2p.Iget_gossip_status_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_gossip_status_request message, length delimited. Does not implicitly {@link koinos.p2p.get_gossip_status_request.verify|verify} messages.
+             * @param message get_gossip_status_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.p2p.Iget_gossip_status_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_gossip_status_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_gossip_status_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.p2p.get_gossip_status_request;
+
+            /**
+             * Decodes a get_gossip_status_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_gossip_status_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.p2p.get_gossip_status_request;
+
+            /**
+             * Verifies a get_gossip_status_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_gossip_status_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_gossip_status_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.p2p.get_gossip_status_request;
+
+            /**
+             * Creates a plain object from a get_gossip_status_request message. Also converts values to other types if specified.
+             * @param message get_gossip_status_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.p2p.get_gossip_status_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_gossip_status_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_gossip_status_response. */
+        interface Iget_gossip_status_response {
+
+            /** get_gossip_status_response enabled */
+            enabled?: (boolean|null);
+        }
+
+        /** Represents a get_gossip_status_response. */
+        class get_gossip_status_response implements Iget_gossip_status_response {
+
+            /**
+             * Constructs a new get_gossip_status_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.p2p.Iget_gossip_status_response);
+
+            /** get_gossip_status_response enabled. */
+            public enabled: boolean;
+
+            /**
+             * Creates a new get_gossip_status_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_gossip_status_response instance
+             */
+            public static create(properties?: koinos.p2p.Iget_gossip_status_response): koinos.p2p.get_gossip_status_response;
+
+            /**
+             * Encodes the specified get_gossip_status_response message. Does not implicitly {@link koinos.p2p.get_gossip_status_response.verify|verify} messages.
+             * @param message get_gossip_status_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.p2p.Iget_gossip_status_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_gossip_status_response message, length delimited. Does not implicitly {@link koinos.p2p.get_gossip_status_response.verify|verify} messages.
+             * @param message get_gossip_status_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.p2p.Iget_gossip_status_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_gossip_status_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_gossip_status_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.p2p.get_gossip_status_response;
+
+            /**
+             * Decodes a get_gossip_status_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_gossip_status_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.p2p.get_gossip_status_response;
+
+            /**
+             * Verifies a get_gossip_status_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_gossip_status_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_gossip_status_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.p2p.get_gossip_status_response;
+
+            /**
+             * Creates a plain object from a get_gossip_status_response message. Also converts values to other types if specified.
+             * @param message get_gossip_status_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.p2p.get_gossip_status_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_gossip_status_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a p2p_request. */
+        interface Ip2p_request {
+
+            /** p2p_request reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** p2p_request get_gossip_status */
+            get_gossip_status?: (koinos.p2p.Iget_gossip_status_request|null);
+        }
+
+        /** Represents a p2p_request. */
+        class p2p_request implements Ip2p_request {
+
+            /**
+             * Constructs a new p2p_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.p2p.Ip2p_request);
+
+            /** p2p_request reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** p2p_request get_gossip_status. */
+            public get_gossip_status?: (koinos.p2p.Iget_gossip_status_request|null);
+
+            /** p2p_request request. */
+            public request?: ("reserved"|"get_gossip_status");
+
+            /**
+             * Creates a new p2p_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns p2p_request instance
+             */
+            public static create(properties?: koinos.p2p.Ip2p_request): koinos.p2p.p2p_request;
+
+            /**
+             * Encodes the specified p2p_request message. Does not implicitly {@link koinos.p2p.p2p_request.verify|verify} messages.
+             * @param message p2p_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.p2p.Ip2p_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified p2p_request message, length delimited. Does not implicitly {@link koinos.p2p.p2p_request.verify|verify} messages.
+             * @param message p2p_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.p2p.Ip2p_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a p2p_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns p2p_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.p2p.p2p_request;
+
+            /**
+             * Decodes a p2p_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns p2p_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.p2p.p2p_request;
+
+            /**
+             * Verifies a p2p_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a p2p_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns p2p_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.p2p.p2p_request;
+
+            /**
+             * Creates a plain object from a p2p_request message. Also converts values to other types if specified.
+             * @param message p2p_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.p2p.p2p_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this p2p_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a p2p_response. */
+        interface Ip2p_response {
+
+            /** p2p_response reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** p2p_response error */
+            error?: (koinos.Ierror_status|null);
+
+            /** p2p_response get_gossip_status */
+            get_gossip_status?: (koinos.p2p.Iget_gossip_status_response|null);
+        }
+
+        /** Represents a p2p_response. */
+        class p2p_response implements Ip2p_response {
+
+            /**
+             * Constructs a new p2p_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.p2p.Ip2p_response);
+
+            /** p2p_response reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** p2p_response error. */
+            public error?: (koinos.Ierror_status|null);
+
+            /** p2p_response get_gossip_status. */
+            public get_gossip_status?: (koinos.p2p.Iget_gossip_status_response|null);
+
+            /** p2p_response response. */
+            public response?: ("reserved"|"error"|"get_gossip_status");
+
+            /**
+             * Creates a new p2p_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns p2p_response instance
+             */
+            public static create(properties?: koinos.p2p.Ip2p_response): koinos.p2p.p2p_response;
+
+            /**
+             * Encodes the specified p2p_response message. Does not implicitly {@link koinos.p2p.p2p_response.verify|verify} messages.
+             * @param message p2p_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.p2p.Ip2p_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified p2p_response message, length delimited. Does not implicitly {@link koinos.p2p.p2p_response.verify|verify} messages.
+             * @param message p2p_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.p2p.Ip2p_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a p2p_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns p2p_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.p2p.p2p_response;
+
+            /**
+             * Decodes a p2p_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns p2p_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.p2p.p2p_response;
+
+            /**
+             * Verifies a p2p_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a p2p_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns p2p_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.p2p.p2p_response;
+
+            /**
+             * Creates a plain object from a p2p_response message. Also converts values to other types if specified.
+             * @param message p2p_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.p2p.p2p_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this p2p_response to JSON.
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
@@ -2825,6 +3783,996 @@ export namespace koinos {
     /** Namespace block_store. */
     namespace block_store {
 
+        /** Properties of a get_blocks_by_id_request. */
+        interface Iget_blocks_by_id_request {
+
+            /** get_blocks_by_id_request block_ids */
+            block_ids?: (Uint8Array[]|null);
+
+            /** get_blocks_by_id_request return_block */
+            return_block?: (boolean|null);
+
+            /** get_blocks_by_id_request return_receipt */
+            return_receipt?: (boolean|null);
+        }
+
+        /** Represents a get_blocks_by_id_request. */
+        class get_blocks_by_id_request implements Iget_blocks_by_id_request {
+
+            /**
+             * Constructs a new get_blocks_by_id_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iget_blocks_by_id_request);
+
+            /** get_blocks_by_id_request block_ids. */
+            public block_ids: Uint8Array[];
+
+            /** get_blocks_by_id_request return_block. */
+            public return_block: boolean;
+
+            /** get_blocks_by_id_request return_receipt. */
+            public return_receipt: boolean;
+
+            /**
+             * Creates a new get_blocks_by_id_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_blocks_by_id_request instance
+             */
+            public static create(properties?: koinos.block_store.Iget_blocks_by_id_request): koinos.block_store.get_blocks_by_id_request;
+
+            /**
+             * Encodes the specified get_blocks_by_id_request message. Does not implicitly {@link koinos.block_store.get_blocks_by_id_request.verify|verify} messages.
+             * @param message get_blocks_by_id_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iget_blocks_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_blocks_by_id_request message, length delimited. Does not implicitly {@link koinos.block_store.get_blocks_by_id_request.verify|verify} messages.
+             * @param message get_blocks_by_id_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iget_blocks_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_blocks_by_id_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_blocks_by_id_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.get_blocks_by_id_request;
+
+            /**
+             * Decodes a get_blocks_by_id_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_blocks_by_id_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.get_blocks_by_id_request;
+
+            /**
+             * Verifies a get_blocks_by_id_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_blocks_by_id_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_blocks_by_id_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.get_blocks_by_id_request;
+
+            /**
+             * Creates a plain object from a get_blocks_by_id_request message. Also converts values to other types if specified.
+             * @param message get_blocks_by_id_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.get_blocks_by_id_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_blocks_by_id_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_blocks_by_id_response. */
+        interface Iget_blocks_by_id_response {
+
+            /** get_blocks_by_id_response block_items */
+            block_items?: (koinos.block_store.Iblock_item[]|null);
+        }
+
+        /** Represents a get_blocks_by_id_response. */
+        class get_blocks_by_id_response implements Iget_blocks_by_id_response {
+
+            /**
+             * Constructs a new get_blocks_by_id_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iget_blocks_by_id_response);
+
+            /** get_blocks_by_id_response block_items. */
+            public block_items: koinos.block_store.Iblock_item[];
+
+            /**
+             * Creates a new get_blocks_by_id_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_blocks_by_id_response instance
+             */
+            public static create(properties?: koinos.block_store.Iget_blocks_by_id_response): koinos.block_store.get_blocks_by_id_response;
+
+            /**
+             * Encodes the specified get_blocks_by_id_response message. Does not implicitly {@link koinos.block_store.get_blocks_by_id_response.verify|verify} messages.
+             * @param message get_blocks_by_id_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iget_blocks_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_blocks_by_id_response message, length delimited. Does not implicitly {@link koinos.block_store.get_blocks_by_id_response.verify|verify} messages.
+             * @param message get_blocks_by_id_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iget_blocks_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_blocks_by_id_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_blocks_by_id_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.get_blocks_by_id_response;
+
+            /**
+             * Decodes a get_blocks_by_id_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_blocks_by_id_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.get_blocks_by_id_response;
+
+            /**
+             * Verifies a get_blocks_by_id_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_blocks_by_id_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_blocks_by_id_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.get_blocks_by_id_response;
+
+            /**
+             * Creates a plain object from a get_blocks_by_id_response message. Also converts values to other types if specified.
+             * @param message get_blocks_by_id_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.get_blocks_by_id_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_blocks_by_id_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_blocks_by_height_request. */
+        interface Iget_blocks_by_height_request {
+
+            /** get_blocks_by_height_request head_block_id */
+            head_block_id?: (Uint8Array|null);
+
+            /** get_blocks_by_height_request ancestor_start_height */
+            ancestor_start_height?: (number|Long|null);
+
+            /** get_blocks_by_height_request num_blocks */
+            num_blocks?: (number|null);
+
+            /** get_blocks_by_height_request return_block */
+            return_block?: (boolean|null);
+
+            /** get_blocks_by_height_request return_receipt */
+            return_receipt?: (boolean|null);
+        }
+
+        /** Represents a get_blocks_by_height_request. */
+        class get_blocks_by_height_request implements Iget_blocks_by_height_request {
+
+            /**
+             * Constructs a new get_blocks_by_height_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iget_blocks_by_height_request);
+
+            /** get_blocks_by_height_request head_block_id. */
+            public head_block_id: Uint8Array;
+
+            /** get_blocks_by_height_request ancestor_start_height. */
+            public ancestor_start_height: (number|Long);
+
+            /** get_blocks_by_height_request num_blocks. */
+            public num_blocks: number;
+
+            /** get_blocks_by_height_request return_block. */
+            public return_block: boolean;
+
+            /** get_blocks_by_height_request return_receipt. */
+            public return_receipt: boolean;
+
+            /**
+             * Creates a new get_blocks_by_height_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_blocks_by_height_request instance
+             */
+            public static create(properties?: koinos.block_store.Iget_blocks_by_height_request): koinos.block_store.get_blocks_by_height_request;
+
+            /**
+             * Encodes the specified get_blocks_by_height_request message. Does not implicitly {@link koinos.block_store.get_blocks_by_height_request.verify|verify} messages.
+             * @param message get_blocks_by_height_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iget_blocks_by_height_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_blocks_by_height_request message, length delimited. Does not implicitly {@link koinos.block_store.get_blocks_by_height_request.verify|verify} messages.
+             * @param message get_blocks_by_height_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iget_blocks_by_height_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_blocks_by_height_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_blocks_by_height_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.get_blocks_by_height_request;
+
+            /**
+             * Decodes a get_blocks_by_height_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_blocks_by_height_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.get_blocks_by_height_request;
+
+            /**
+             * Verifies a get_blocks_by_height_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_blocks_by_height_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_blocks_by_height_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.get_blocks_by_height_request;
+
+            /**
+             * Creates a plain object from a get_blocks_by_height_request message. Also converts values to other types if specified.
+             * @param message get_blocks_by_height_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.get_blocks_by_height_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_blocks_by_height_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_blocks_by_height_response. */
+        interface Iget_blocks_by_height_response {
+
+            /** get_blocks_by_height_response block_items */
+            block_items?: (koinos.block_store.Iblock_item[]|null);
+        }
+
+        /** Represents a get_blocks_by_height_response. */
+        class get_blocks_by_height_response implements Iget_blocks_by_height_response {
+
+            /**
+             * Constructs a new get_blocks_by_height_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iget_blocks_by_height_response);
+
+            /** get_blocks_by_height_response block_items. */
+            public block_items: koinos.block_store.Iblock_item[];
+
+            /**
+             * Creates a new get_blocks_by_height_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_blocks_by_height_response instance
+             */
+            public static create(properties?: koinos.block_store.Iget_blocks_by_height_response): koinos.block_store.get_blocks_by_height_response;
+
+            /**
+             * Encodes the specified get_blocks_by_height_response message. Does not implicitly {@link koinos.block_store.get_blocks_by_height_response.verify|verify} messages.
+             * @param message get_blocks_by_height_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iget_blocks_by_height_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_blocks_by_height_response message, length delimited. Does not implicitly {@link koinos.block_store.get_blocks_by_height_response.verify|verify} messages.
+             * @param message get_blocks_by_height_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iget_blocks_by_height_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_blocks_by_height_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_blocks_by_height_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.get_blocks_by_height_response;
+
+            /**
+             * Decodes a get_blocks_by_height_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_blocks_by_height_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.get_blocks_by_height_response;
+
+            /**
+             * Verifies a get_blocks_by_height_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_blocks_by_height_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_blocks_by_height_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.get_blocks_by_height_response;
+
+            /**
+             * Creates a plain object from a get_blocks_by_height_response message. Also converts values to other types if specified.
+             * @param message get_blocks_by_height_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.get_blocks_by_height_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_blocks_by_height_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an add_block_request. */
+        interface Iadd_block_request {
+
+            /** add_block_request block_to_add */
+            block_to_add?: (koinos.protocol.Iblock|null);
+
+            /** add_block_request receipt_to_add */
+            receipt_to_add?: (koinos.protocol.Iblock_receipt|null);
+        }
+
+        /** Represents an add_block_request. */
+        class add_block_request implements Iadd_block_request {
+
+            /**
+             * Constructs a new add_block_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iadd_block_request);
+
+            /** add_block_request block_to_add. */
+            public block_to_add?: (koinos.protocol.Iblock|null);
+
+            /** add_block_request receipt_to_add. */
+            public receipt_to_add?: (koinos.protocol.Iblock_receipt|null);
+
+            /**
+             * Creates a new add_block_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns add_block_request instance
+             */
+            public static create(properties?: koinos.block_store.Iadd_block_request): koinos.block_store.add_block_request;
+
+            /**
+             * Encodes the specified add_block_request message. Does not implicitly {@link koinos.block_store.add_block_request.verify|verify} messages.
+             * @param message add_block_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iadd_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified add_block_request message, length delimited. Does not implicitly {@link koinos.block_store.add_block_request.verify|verify} messages.
+             * @param message add_block_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iadd_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an add_block_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns add_block_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.add_block_request;
+
+            /**
+             * Decodes an add_block_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns add_block_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.add_block_request;
+
+            /**
+             * Verifies an add_block_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an add_block_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns add_block_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.add_block_request;
+
+            /**
+             * Creates a plain object from an add_block_request message. Also converts values to other types if specified.
+             * @param message add_block_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.add_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this add_block_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an add_block_response. */
+        interface Iadd_block_response {
+        }
+
+        /** Represents an add_block_response. */
+        class add_block_response implements Iadd_block_response {
+
+            /**
+             * Constructs a new add_block_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iadd_block_response);
+
+            /**
+             * Creates a new add_block_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns add_block_response instance
+             */
+            public static create(properties?: koinos.block_store.Iadd_block_response): koinos.block_store.add_block_response;
+
+            /**
+             * Encodes the specified add_block_response message. Does not implicitly {@link koinos.block_store.add_block_response.verify|verify} messages.
+             * @param message add_block_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iadd_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified add_block_response message, length delimited. Does not implicitly {@link koinos.block_store.add_block_response.verify|verify} messages.
+             * @param message add_block_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iadd_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an add_block_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns add_block_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.add_block_response;
+
+            /**
+             * Decodes an add_block_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns add_block_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.add_block_response;
+
+            /**
+             * Verifies an add_block_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an add_block_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns add_block_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.add_block_response;
+
+            /**
+             * Creates a plain object from an add_block_response message. Also converts values to other types if specified.
+             * @param message add_block_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.add_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this add_block_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_highest_block_request. */
+        interface Iget_highest_block_request {
+        }
+
+        /** Represents a get_highest_block_request. */
+        class get_highest_block_request implements Iget_highest_block_request {
+
+            /**
+             * Constructs a new get_highest_block_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iget_highest_block_request);
+
+            /**
+             * Creates a new get_highest_block_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_highest_block_request instance
+             */
+            public static create(properties?: koinos.block_store.Iget_highest_block_request): koinos.block_store.get_highest_block_request;
+
+            /**
+             * Encodes the specified get_highest_block_request message. Does not implicitly {@link koinos.block_store.get_highest_block_request.verify|verify} messages.
+             * @param message get_highest_block_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iget_highest_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_highest_block_request message, length delimited. Does not implicitly {@link koinos.block_store.get_highest_block_request.verify|verify} messages.
+             * @param message get_highest_block_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iget_highest_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_highest_block_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_highest_block_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.get_highest_block_request;
+
+            /**
+             * Decodes a get_highest_block_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_highest_block_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.get_highest_block_request;
+
+            /**
+             * Verifies a get_highest_block_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_highest_block_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_highest_block_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.get_highest_block_request;
+
+            /**
+             * Creates a plain object from a get_highest_block_request message. Also converts values to other types if specified.
+             * @param message get_highest_block_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.get_highest_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_highest_block_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_highest_block_response. */
+        interface Iget_highest_block_response {
+
+            /** get_highest_block_response topology */
+            topology?: (koinos.Iblock_topology|null);
+        }
+
+        /** Represents a get_highest_block_response. */
+        class get_highest_block_response implements Iget_highest_block_response {
+
+            /**
+             * Constructs a new get_highest_block_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iget_highest_block_response);
+
+            /** get_highest_block_response topology. */
+            public topology?: (koinos.Iblock_topology|null);
+
+            /**
+             * Creates a new get_highest_block_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_highest_block_response instance
+             */
+            public static create(properties?: koinos.block_store.Iget_highest_block_response): koinos.block_store.get_highest_block_response;
+
+            /**
+             * Encodes the specified get_highest_block_response message. Does not implicitly {@link koinos.block_store.get_highest_block_response.verify|verify} messages.
+             * @param message get_highest_block_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iget_highest_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_highest_block_response message, length delimited. Does not implicitly {@link koinos.block_store.get_highest_block_response.verify|verify} messages.
+             * @param message get_highest_block_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iget_highest_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_highest_block_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_highest_block_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.get_highest_block_response;
+
+            /**
+             * Decodes a get_highest_block_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_highest_block_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.get_highest_block_response;
+
+            /**
+             * Verifies a get_highest_block_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_highest_block_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_highest_block_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.get_highest_block_response;
+
+            /**
+             * Creates a plain object from a get_highest_block_response message. Also converts values to other types if specified.
+             * @param message get_highest_block_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.get_highest_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_highest_block_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a block_store_request. */
+        interface Iblock_store_request {
+
+            /** block_store_request reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** block_store_request get_blocks_by_id */
+            get_blocks_by_id?: (koinos.block_store.Iget_blocks_by_id_request|null);
+
+            /** block_store_request get_blocks_by_height */
+            get_blocks_by_height?: (koinos.block_store.Iget_blocks_by_height_request|null);
+
+            /** block_store_request add_block */
+            add_block?: (koinos.block_store.Iadd_block_request|null);
+
+            /** block_store_request get_highest_block */
+            get_highest_block?: (koinos.block_store.Iget_highest_block_request|null);
+        }
+
+        /** Represents a block_store_request. */
+        class block_store_request implements Iblock_store_request {
+
+            /**
+             * Constructs a new block_store_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iblock_store_request);
+
+            /** block_store_request reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** block_store_request get_blocks_by_id. */
+            public get_blocks_by_id?: (koinos.block_store.Iget_blocks_by_id_request|null);
+
+            /** block_store_request get_blocks_by_height. */
+            public get_blocks_by_height?: (koinos.block_store.Iget_blocks_by_height_request|null);
+
+            /** block_store_request add_block. */
+            public add_block?: (koinos.block_store.Iadd_block_request|null);
+
+            /** block_store_request get_highest_block. */
+            public get_highest_block?: (koinos.block_store.Iget_highest_block_request|null);
+
+            /** block_store_request request. */
+            public request?: ("reserved"|"get_blocks_by_id"|"get_blocks_by_height"|"add_block"|"get_highest_block");
+
+            /**
+             * Creates a new block_store_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns block_store_request instance
+             */
+            public static create(properties?: koinos.block_store.Iblock_store_request): koinos.block_store.block_store_request;
+
+            /**
+             * Encodes the specified block_store_request message. Does not implicitly {@link koinos.block_store.block_store_request.verify|verify} messages.
+             * @param message block_store_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iblock_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified block_store_request message, length delimited. Does not implicitly {@link koinos.block_store.block_store_request.verify|verify} messages.
+             * @param message block_store_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iblock_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a block_store_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns block_store_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.block_store_request;
+
+            /**
+             * Decodes a block_store_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns block_store_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.block_store_request;
+
+            /**
+             * Verifies a block_store_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a block_store_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns block_store_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.block_store_request;
+
+            /**
+             * Creates a plain object from a block_store_request message. Also converts values to other types if specified.
+             * @param message block_store_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.block_store_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this block_store_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a block_store_response. */
+        interface Iblock_store_response {
+
+            /** block_store_response reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** block_store_response error */
+            error?: (koinos.Ierror_status|null);
+
+            /** block_store_response get_blocks_by_id */
+            get_blocks_by_id?: (koinos.block_store.Iget_blocks_by_id_response|null);
+
+            /** block_store_response get_blocks_by_height */
+            get_blocks_by_height?: (koinos.block_store.Iget_blocks_by_height_response|null);
+
+            /** block_store_response add_block */
+            add_block?: (koinos.block_store.Iadd_block_response|null);
+
+            /** block_store_response get_highest_block */
+            get_highest_block?: (koinos.block_store.Iget_highest_block_response|null);
+        }
+
+        /** Represents a block_store_response. */
+        class block_store_response implements Iblock_store_response {
+
+            /**
+             * Constructs a new block_store_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.block_store.Iblock_store_response);
+
+            /** block_store_response reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** block_store_response error. */
+            public error?: (koinos.Ierror_status|null);
+
+            /** block_store_response get_blocks_by_id. */
+            public get_blocks_by_id?: (koinos.block_store.Iget_blocks_by_id_response|null);
+
+            /** block_store_response get_blocks_by_height. */
+            public get_blocks_by_height?: (koinos.block_store.Iget_blocks_by_height_response|null);
+
+            /** block_store_response add_block. */
+            public add_block?: (koinos.block_store.Iadd_block_response|null);
+
+            /** block_store_response get_highest_block. */
+            public get_highest_block?: (koinos.block_store.Iget_highest_block_response|null);
+
+            /** block_store_response response. */
+            public response?: ("reserved"|"error"|"get_blocks_by_id"|"get_blocks_by_height"|"add_block"|"get_highest_block");
+
+            /**
+             * Creates a new block_store_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns block_store_response instance
+             */
+            public static create(properties?: koinos.block_store.Iblock_store_response): koinos.block_store.block_store_response;
+
+            /**
+             * Encodes the specified block_store_response message. Does not implicitly {@link koinos.block_store.block_store_response.verify|verify} messages.
+             * @param message block_store_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.block_store.Iblock_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified block_store_response message, length delimited. Does not implicitly {@link koinos.block_store.block_store_response.verify|verify} messages.
+             * @param message block_store_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.block_store.Iblock_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a block_store_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns block_store_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.block_store.block_store_response;
+
+            /**
+             * Decodes a block_store_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns block_store_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.block_store.block_store_response;
+
+            /**
+             * Verifies a block_store_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a block_store_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns block_store_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.block_store.block_store_response;
+
+            /**
+             * Creates a plain object from a block_store_response message. Also converts values to other types if specified.
+             * @param message block_store_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.block_store.block_store_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this block_store_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a block_item. */
         interface Iblock_item {
 
@@ -3526,6 +5474,530 @@ export namespace koinos {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
+        }
+    }
+
+    /** Namespace rpc. */
+    namespace rpc {
+
+        /** Namespace account_history. */
+        namespace account_history {
+
+            /** Properties of an account_history_entry. */
+            interface Iaccount_history_entry {
+
+                /** account_history_entry seq_num */
+                seq_num?: (number|Long|null);
+
+                /** account_history_entry trx */
+                trx?: (koinos.account_history.Itransaction_record|null);
+
+                /** account_history_entry block */
+                block?: (koinos.account_history.Iblock_record|null);
+            }
+
+            /** Represents an account_history_entry. */
+            class account_history_entry implements Iaccount_history_entry {
+
+                /**
+                 * Constructs a new account_history_entry.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iaccount_history_entry);
+
+                /** account_history_entry seq_num. */
+                public seq_num: (number|Long);
+
+                /** account_history_entry trx. */
+                public trx?: (koinos.account_history.Itransaction_record|null);
+
+                /** account_history_entry block. */
+                public block?: (koinos.account_history.Iblock_record|null);
+
+                /** account_history_entry record. */
+                public record?: ("trx"|"block");
+
+                /**
+                 * Creates a new account_history_entry instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_history_entry instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iaccount_history_entry): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Encodes the specified account_history_entry message. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
+                 * @param message account_history_entry message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iaccount_history_entry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_history_entry message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
+                 * @param message account_history_entry message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_entry, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_history_entry message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_history_entry
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Decodes an account_history_entry message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_history_entry
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Verifies an account_history_entry message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_history_entry message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_history_entry
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_entry;
+
+                /**
+                 * Creates a plain object from an account_history_entry message. Also converts values to other types if specified.
+                 * @param message account_history_entry
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.account_history_entry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_history_entry to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_account_history_request. */
+            interface Iget_account_history_request {
+
+                /** get_account_history_request address */
+                address?: (Uint8Array|null);
+
+                /** get_account_history_request seq_num */
+                seq_num?: (number|Long|null);
+
+                /** get_account_history_request limit */
+                limit?: (number|Long|null);
+
+                /** get_account_history_request ascending */
+                ascending?: (boolean|null);
+
+                /** get_account_history_request irreversible */
+                irreversible?: (boolean|null);
+            }
+
+            /** Represents a get_account_history_request. */
+            class get_account_history_request implements Iget_account_history_request {
+
+                /**
+                 * Constructs a new get_account_history_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iget_account_history_request);
+
+                /** get_account_history_request address. */
+                public address: Uint8Array;
+
+                /** get_account_history_request seq_num. */
+                public seq_num?: (number|Long|null);
+
+                /** get_account_history_request limit. */
+                public limit: (number|Long);
+
+                /** get_account_history_request ascending. */
+                public ascending: boolean;
+
+                /** get_account_history_request irreversible. */
+                public irreversible: boolean;
+
+                /** get_account_history_request _seq_num. */
+                public _seq_num?: "seq_num";
+
+                /**
+                 * Creates a new get_account_history_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_account_history_request instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iget_account_history_request): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Encodes the specified get_account_history_request message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
+                 * @param message get_account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iget_account_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
+                 * @param message get_account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iget_account_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_account_history_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Decodes a get_account_history_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Verifies a get_account_history_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_account_history_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_account_history_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.get_account_history_request;
+
+                /**
+                 * Creates a plain object from a get_account_history_request message. Also converts values to other types if specified.
+                 * @param message get_account_history_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.get_account_history_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_account_history_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_account_history_response. */
+            interface Iget_account_history_response {
+
+                /** get_account_history_response values */
+                values?: (koinos.rpc.account_history.Iaccount_history_entry[]|null);
+            }
+
+            /** Represents a get_account_history_response. */
+            class get_account_history_response implements Iget_account_history_response {
+
+                /**
+                 * Constructs a new get_account_history_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iget_account_history_response);
+
+                /** get_account_history_response values. */
+                public values: koinos.rpc.account_history.Iaccount_history_entry[];
+
+                /**
+                 * Creates a new get_account_history_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_account_history_response instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iget_account_history_response): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Encodes the specified get_account_history_response message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
+                 * @param message get_account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iget_account_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
+                 * @param message get_account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iget_account_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_account_history_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Decodes a get_account_history_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Verifies a get_account_history_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_account_history_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_account_history_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.get_account_history_response;
+
+                /**
+                 * Creates a plain object from a get_account_history_response message. Also converts values to other types if specified.
+                 * @param message get_account_history_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.get_account_history_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_account_history_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an account_history_request. */
+            interface Iaccount_history_request {
+
+                /** account_history_request reserved */
+                reserved?: (koinos.Ireserved_rpc|null);
+
+                /** account_history_request get_account_history */
+                get_account_history?: (koinos.rpc.account_history.Iget_account_history_request|null);
+            }
+
+            /** Represents an account_history_request. */
+            class account_history_request implements Iaccount_history_request {
+
+                /**
+                 * Constructs a new account_history_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iaccount_history_request);
+
+                /** account_history_request reserved. */
+                public reserved?: (koinos.Ireserved_rpc|null);
+
+                /** account_history_request get_account_history. */
+                public get_account_history?: (koinos.rpc.account_history.Iget_account_history_request|null);
+
+                /** account_history_request request. */
+                public request?: ("reserved"|"get_account_history");
+
+                /**
+                 * Creates a new account_history_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_history_request instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iaccount_history_request): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Encodes the specified account_history_request message. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
+                 * @param message account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iaccount_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
+                 * @param message account_history_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_history_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Decodes an account_history_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_history_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Verifies an account_history_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_history_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_history_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_request;
+
+                /**
+                 * Creates a plain object from an account_history_request message. Also converts values to other types if specified.
+                 * @param message account_history_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.account_history_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_history_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an account_history_response. */
+            interface Iaccount_history_response {
+
+                /** account_history_response reserved */
+                reserved?: (koinos.Ireserved_rpc|null);
+
+                /** account_history_response error */
+                error?: (koinos.Ierror_status|null);
+
+                /** account_history_response get_account_history */
+                get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
+            }
+
+            /** Represents an account_history_response. */
+            class account_history_response implements Iaccount_history_response {
+
+                /**
+                 * Constructs a new account_history_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.account_history.Iaccount_history_response);
+
+                /** account_history_response reserved. */
+                public reserved?: (koinos.Ireserved_rpc|null);
+
+                /** account_history_response error. */
+                public error?: (koinos.Ierror_status|null);
+
+                /** account_history_response get_account_history. */
+                public get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
+
+                /** account_history_response response. */
+                public response?: ("reserved"|"error"|"get_account_history");
+
+                /**
+                 * Creates a new account_history_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_history_response instance
+                 */
+                public static create(properties?: koinos.rpc.account_history.Iaccount_history_response): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Encodes the specified account_history_response message. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
+                 * @param message account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.account_history.Iaccount_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
+                 * @param message account_history_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_history_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Decodes an account_history_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_history_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Verifies an account_history_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_history_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_history_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_response;
+
+                /**
+                 * Creates a plain object from an account_history_response message. Also converts values to other types if specified.
+                 * @param message account_history_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.account_history.account_history_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_history_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
         }
     }
 
@@ -11767,6 +14239,390 @@ export namespace koinos {
     /** Namespace transaction_store. */
     namespace transaction_store {
 
+        /** Properties of a get_transactions_by_id_request. */
+        interface Iget_transactions_by_id_request {
+
+            /** get_transactions_by_id_request transaction_ids */
+            transaction_ids?: (Uint8Array[]|null);
+        }
+
+        /** Represents a get_transactions_by_id_request. */
+        class get_transactions_by_id_request implements Iget_transactions_by_id_request {
+
+            /**
+             * Constructs a new get_transactions_by_id_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.transaction_store.Iget_transactions_by_id_request);
+
+            /** get_transactions_by_id_request transaction_ids. */
+            public transaction_ids: Uint8Array[];
+
+            /**
+             * Creates a new get_transactions_by_id_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_transactions_by_id_request instance
+             */
+            public static create(properties?: koinos.transaction_store.Iget_transactions_by_id_request): koinos.transaction_store.get_transactions_by_id_request;
+
+            /**
+             * Encodes the specified get_transactions_by_id_request message. Does not implicitly {@link koinos.transaction_store.get_transactions_by_id_request.verify|verify} messages.
+             * @param message get_transactions_by_id_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.transaction_store.Iget_transactions_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_transactions_by_id_request message, length delimited. Does not implicitly {@link koinos.transaction_store.get_transactions_by_id_request.verify|verify} messages.
+             * @param message get_transactions_by_id_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.transaction_store.Iget_transactions_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_transactions_by_id_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_transactions_by_id_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.transaction_store.get_transactions_by_id_request;
+
+            /**
+             * Decodes a get_transactions_by_id_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_transactions_by_id_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.transaction_store.get_transactions_by_id_request;
+
+            /**
+             * Verifies a get_transactions_by_id_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_transactions_by_id_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_transactions_by_id_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.transaction_store.get_transactions_by_id_request;
+
+            /**
+             * Creates a plain object from a get_transactions_by_id_request message. Also converts values to other types if specified.
+             * @param message get_transactions_by_id_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.transaction_store.get_transactions_by_id_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_transactions_by_id_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_transactions_by_id_response. */
+        interface Iget_transactions_by_id_response {
+
+            /** get_transactions_by_id_response transactions */
+            transactions?: (koinos.transaction_store.Itransaction_item[]|null);
+        }
+
+        /** Represents a get_transactions_by_id_response. */
+        class get_transactions_by_id_response implements Iget_transactions_by_id_response {
+
+            /**
+             * Constructs a new get_transactions_by_id_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.transaction_store.Iget_transactions_by_id_response);
+
+            /** get_transactions_by_id_response transactions. */
+            public transactions: koinos.transaction_store.Itransaction_item[];
+
+            /**
+             * Creates a new get_transactions_by_id_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_transactions_by_id_response instance
+             */
+            public static create(properties?: koinos.transaction_store.Iget_transactions_by_id_response): koinos.transaction_store.get_transactions_by_id_response;
+
+            /**
+             * Encodes the specified get_transactions_by_id_response message. Does not implicitly {@link koinos.transaction_store.get_transactions_by_id_response.verify|verify} messages.
+             * @param message get_transactions_by_id_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.transaction_store.Iget_transactions_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_transactions_by_id_response message, length delimited. Does not implicitly {@link koinos.transaction_store.get_transactions_by_id_response.verify|verify} messages.
+             * @param message get_transactions_by_id_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.transaction_store.Iget_transactions_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_transactions_by_id_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_transactions_by_id_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.transaction_store.get_transactions_by_id_response;
+
+            /**
+             * Decodes a get_transactions_by_id_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_transactions_by_id_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.transaction_store.get_transactions_by_id_response;
+
+            /**
+             * Verifies a get_transactions_by_id_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_transactions_by_id_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_transactions_by_id_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.transaction_store.get_transactions_by_id_response;
+
+            /**
+             * Creates a plain object from a get_transactions_by_id_response message. Also converts values to other types if specified.
+             * @param message get_transactions_by_id_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.transaction_store.get_transactions_by_id_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_transactions_by_id_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a transaction_store_request. */
+        interface Itransaction_store_request {
+
+            /** transaction_store_request reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** transaction_store_request get_transactions_by_id */
+            get_transactions_by_id?: (koinos.transaction_store.Iget_transactions_by_id_request|null);
+        }
+
+        /** Represents a transaction_store_request. */
+        class transaction_store_request implements Itransaction_store_request {
+
+            /**
+             * Constructs a new transaction_store_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.transaction_store.Itransaction_store_request);
+
+            /** transaction_store_request reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** transaction_store_request get_transactions_by_id. */
+            public get_transactions_by_id?: (koinos.transaction_store.Iget_transactions_by_id_request|null);
+
+            /** transaction_store_request request. */
+            public request?: ("reserved"|"get_transactions_by_id");
+
+            /**
+             * Creates a new transaction_store_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns transaction_store_request instance
+             */
+            public static create(properties?: koinos.transaction_store.Itransaction_store_request): koinos.transaction_store.transaction_store_request;
+
+            /**
+             * Encodes the specified transaction_store_request message. Does not implicitly {@link koinos.transaction_store.transaction_store_request.verify|verify} messages.
+             * @param message transaction_store_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.transaction_store.Itransaction_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified transaction_store_request message, length delimited. Does not implicitly {@link koinos.transaction_store.transaction_store_request.verify|verify} messages.
+             * @param message transaction_store_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.transaction_store.Itransaction_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a transaction_store_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns transaction_store_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.transaction_store.transaction_store_request;
+
+            /**
+             * Decodes a transaction_store_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns transaction_store_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.transaction_store.transaction_store_request;
+
+            /**
+             * Verifies a transaction_store_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a transaction_store_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns transaction_store_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.transaction_store.transaction_store_request;
+
+            /**
+             * Creates a plain object from a transaction_store_request message. Also converts values to other types if specified.
+             * @param message transaction_store_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.transaction_store.transaction_store_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this transaction_store_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a transaction_store_response. */
+        interface Itransaction_store_response {
+
+            /** transaction_store_response reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** transaction_store_response error */
+            error?: (koinos.Ierror_status|null);
+
+            /** transaction_store_response get_transactions_by_id */
+            get_transactions_by_id?: (koinos.transaction_store.Iget_transactions_by_id_response|null);
+        }
+
+        /** Represents a transaction_store_response. */
+        class transaction_store_response implements Itransaction_store_response {
+
+            /**
+             * Constructs a new transaction_store_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.transaction_store.Itransaction_store_response);
+
+            /** transaction_store_response reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** transaction_store_response error. */
+            public error?: (koinos.Ierror_status|null);
+
+            /** transaction_store_response get_transactions_by_id. */
+            public get_transactions_by_id?: (koinos.transaction_store.Iget_transactions_by_id_response|null);
+
+            /** transaction_store_response response. */
+            public response?: ("reserved"|"error"|"get_transactions_by_id");
+
+            /**
+             * Creates a new transaction_store_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns transaction_store_response instance
+             */
+            public static create(properties?: koinos.transaction_store.Itransaction_store_response): koinos.transaction_store.transaction_store_response;
+
+            /**
+             * Encodes the specified transaction_store_response message. Does not implicitly {@link koinos.transaction_store.transaction_store_response.verify|verify} messages.
+             * @param message transaction_store_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.transaction_store.Itransaction_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified transaction_store_response message, length delimited. Does not implicitly {@link koinos.transaction_store.transaction_store_response.verify|verify} messages.
+             * @param message transaction_store_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.transaction_store.Itransaction_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a transaction_store_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns transaction_store_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.transaction_store.transaction_store_response;
+
+            /**
+             * Decodes a transaction_store_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns transaction_store_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.transaction_store.transaction_store_response;
+
+            /**
+             * Verifies a transaction_store_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a transaction_store_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns transaction_store_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.transaction_store.transaction_store_response;
+
+            /**
+             * Creates a plain object from a transaction_store_response message. Also converts values to other types if specified.
+             * @param message transaction_store_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.transaction_store.transaction_store_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this transaction_store_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a transaction_item. */
         interface Itransaction_item {
 
@@ -11861,6603 +14717,6 @@ export namespace koinos {
              * @returns JSON object
              */
             public toJSON(): { [k: string]: any };
-        }
-    }
-
-    /** Namespace rpc. */
-    namespace rpc {
-
-        /** Properties of a reserved_rpc. */
-        interface Ireserved_rpc {
-        }
-
-        /** Represents a reserved_rpc. */
-        class reserved_rpc implements Ireserved_rpc {
-
-            /**
-             * Constructs a new reserved_rpc.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.rpc.Ireserved_rpc);
-
-            /**
-             * Creates a new reserved_rpc instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns reserved_rpc instance
-             */
-            public static create(properties?: koinos.rpc.Ireserved_rpc): koinos.rpc.reserved_rpc;
-
-            /**
-             * Encodes the specified reserved_rpc message. Does not implicitly {@link koinos.rpc.reserved_rpc.verify|verify} messages.
-             * @param message reserved_rpc message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.rpc.Ireserved_rpc, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified reserved_rpc message, length delimited. Does not implicitly {@link koinos.rpc.reserved_rpc.verify|verify} messages.
-             * @param message reserved_rpc message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.rpc.Ireserved_rpc, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes a reserved_rpc message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns reserved_rpc
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.reserved_rpc;
-
-            /**
-             * Decodes a reserved_rpc message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns reserved_rpc
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.reserved_rpc;
-
-            /**
-             * Verifies a reserved_rpc message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates a reserved_rpc message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns reserved_rpc
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.rpc.reserved_rpc;
-
-            /**
-             * Creates a plain object from a reserved_rpc message. Also converts values to other types if specified.
-             * @param message reserved_rpc
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.rpc.reserved_rpc, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this reserved_rpc to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Properties of an error_response. */
-        interface Ierror_response {
-
-            /** error_response message */
-            message?: (string|null);
-
-            /** error_response data */
-            data?: (string|null);
-        }
-
-        /** Represents an error_response. */
-        class error_response implements Ierror_response {
-
-            /**
-             * Constructs a new error_response.
-             * @param [properties] Properties to set
-             */
-            constructor(properties?: koinos.rpc.Ierror_response);
-
-            /** error_response message. */
-            public message: string;
-
-            /** error_response data. */
-            public data: string;
-
-            /**
-             * Creates a new error_response instance using the specified properties.
-             * @param [properties] Properties to set
-             * @returns error_response instance
-             */
-            public static create(properties?: koinos.rpc.Ierror_response): koinos.rpc.error_response;
-
-            /**
-             * Encodes the specified error_response message. Does not implicitly {@link koinos.rpc.error_response.verify|verify} messages.
-             * @param message error_response message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encode(message: koinos.rpc.Ierror_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Encodes the specified error_response message, length delimited. Does not implicitly {@link koinos.rpc.error_response.verify|verify} messages.
-             * @param message error_response message or plain object to encode
-             * @param [writer] Writer to encode to
-             * @returns Writer
-             */
-            public static encodeDelimited(message: koinos.rpc.Ierror_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-            /**
-             * Decodes an error_response message from the specified reader or buffer.
-             * @param reader Reader or buffer to decode from
-             * @param [length] Message length if known beforehand
-             * @returns error_response
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.error_response;
-
-            /**
-             * Decodes an error_response message from the specified reader or buffer, length delimited.
-             * @param reader Reader or buffer to decode from
-             * @returns error_response
-             * @throws {Error} If the payload is not a reader or valid buffer
-             * @throws {$protobuf.util.ProtocolError} If required fields are missing
-             */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.error_response;
-
-            /**
-             * Verifies an error_response message.
-             * @param message Plain object to verify
-             * @returns `null` if valid, otherwise the reason why it is not
-             */
-            public static verify(message: { [k: string]: any }): (string|null);
-
-            /**
-             * Creates an error_response message from a plain object. Also converts values to their respective internal types.
-             * @param object Plain object
-             * @returns error_response
-             */
-            public static fromObject(object: { [k: string]: any }): koinos.rpc.error_response;
-
-            /**
-             * Creates a plain object from an error_response message. Also converts values to other types if specified.
-             * @param message error_response
-             * @param [options] Conversion options
-             * @returns Plain object
-             */
-            public static toObject(message: koinos.rpc.error_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-            /**
-             * Converts this error_response to JSON.
-             * @returns JSON object
-             */
-            public toJSON(): { [k: string]: any };
-        }
-
-        /** Namespace contract_meta_store. */
-        namespace contract_meta_store {
-
-            /** Properties of a get_contract_meta_request. */
-            interface Iget_contract_meta_request {
-
-                /** get_contract_meta_request contract_id */
-                contract_id?: (Uint8Array|null);
-            }
-
-            /** Represents a get_contract_meta_request. */
-            class get_contract_meta_request implements Iget_contract_meta_request {
-
-                /**
-                 * Constructs a new get_contract_meta_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.contract_meta_store.Iget_contract_meta_request);
-
-                /** get_contract_meta_request contract_id. */
-                public contract_id: Uint8Array;
-
-                /**
-                 * Creates a new get_contract_meta_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_contract_meta_request instance
-                 */
-                public static create(properties?: koinos.rpc.contract_meta_store.Iget_contract_meta_request): koinos.rpc.contract_meta_store.get_contract_meta_request;
-
-                /**
-                 * Encodes the specified get_contract_meta_request message. Does not implicitly {@link koinos.rpc.contract_meta_store.get_contract_meta_request.verify|verify} messages.
-                 * @param message get_contract_meta_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.contract_meta_store.Iget_contract_meta_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_contract_meta_request message, length delimited. Does not implicitly {@link koinos.rpc.contract_meta_store.get_contract_meta_request.verify|verify} messages.
-                 * @param message get_contract_meta_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.contract_meta_store.Iget_contract_meta_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_contract_meta_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_contract_meta_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.contract_meta_store.get_contract_meta_request;
-
-                /**
-                 * Decodes a get_contract_meta_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_contract_meta_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.contract_meta_store.get_contract_meta_request;
-
-                /**
-                 * Verifies a get_contract_meta_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_contract_meta_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_contract_meta_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.contract_meta_store.get_contract_meta_request;
-
-                /**
-                 * Creates a plain object from a get_contract_meta_request message. Also converts values to other types if specified.
-                 * @param message get_contract_meta_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.contract_meta_store.get_contract_meta_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_contract_meta_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_contract_meta_response. */
-            interface Iget_contract_meta_response {
-
-                /** get_contract_meta_response meta */
-                meta?: (koinos.contract_meta_store.Icontract_meta_item|null);
-            }
-
-            /** Represents a get_contract_meta_response. */
-            class get_contract_meta_response implements Iget_contract_meta_response {
-
-                /**
-                 * Constructs a new get_contract_meta_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.contract_meta_store.Iget_contract_meta_response);
-
-                /** get_contract_meta_response meta. */
-                public meta?: (koinos.contract_meta_store.Icontract_meta_item|null);
-
-                /**
-                 * Creates a new get_contract_meta_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_contract_meta_response instance
-                 */
-                public static create(properties?: koinos.rpc.contract_meta_store.Iget_contract_meta_response): koinos.rpc.contract_meta_store.get_contract_meta_response;
-
-                /**
-                 * Encodes the specified get_contract_meta_response message. Does not implicitly {@link koinos.rpc.contract_meta_store.get_contract_meta_response.verify|verify} messages.
-                 * @param message get_contract_meta_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.contract_meta_store.Iget_contract_meta_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_contract_meta_response message, length delimited. Does not implicitly {@link koinos.rpc.contract_meta_store.get_contract_meta_response.verify|verify} messages.
-                 * @param message get_contract_meta_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.contract_meta_store.Iget_contract_meta_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_contract_meta_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_contract_meta_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.contract_meta_store.get_contract_meta_response;
-
-                /**
-                 * Decodes a get_contract_meta_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_contract_meta_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.contract_meta_store.get_contract_meta_response;
-
-                /**
-                 * Verifies a get_contract_meta_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_contract_meta_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_contract_meta_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.contract_meta_store.get_contract_meta_response;
-
-                /**
-                 * Creates a plain object from a get_contract_meta_response message. Also converts values to other types if specified.
-                 * @param message get_contract_meta_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.contract_meta_store.get_contract_meta_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_contract_meta_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a contract_meta_store_request. */
-            interface Icontract_meta_store_request {
-
-                /** contract_meta_store_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** contract_meta_store_request get_contract_meta */
-                get_contract_meta?: (koinos.rpc.contract_meta_store.Iget_contract_meta_request|null);
-            }
-
-            /** Represents a contract_meta_store_request. */
-            class contract_meta_store_request implements Icontract_meta_store_request {
-
-                /**
-                 * Constructs a new contract_meta_store_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.contract_meta_store.Icontract_meta_store_request);
-
-                /** contract_meta_store_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** contract_meta_store_request get_contract_meta. */
-                public get_contract_meta?: (koinos.rpc.contract_meta_store.Iget_contract_meta_request|null);
-
-                /** contract_meta_store_request request. */
-                public request?: ("reserved"|"get_contract_meta");
-
-                /**
-                 * Creates a new contract_meta_store_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns contract_meta_store_request instance
-                 */
-                public static create(properties?: koinos.rpc.contract_meta_store.Icontract_meta_store_request): koinos.rpc.contract_meta_store.contract_meta_store_request;
-
-                /**
-                 * Encodes the specified contract_meta_store_request message. Does not implicitly {@link koinos.rpc.contract_meta_store.contract_meta_store_request.verify|verify} messages.
-                 * @param message contract_meta_store_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.contract_meta_store.Icontract_meta_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified contract_meta_store_request message, length delimited. Does not implicitly {@link koinos.rpc.contract_meta_store.contract_meta_store_request.verify|verify} messages.
-                 * @param message contract_meta_store_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.contract_meta_store.Icontract_meta_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a contract_meta_store_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns contract_meta_store_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.contract_meta_store.contract_meta_store_request;
-
-                /**
-                 * Decodes a contract_meta_store_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns contract_meta_store_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.contract_meta_store.contract_meta_store_request;
-
-                /**
-                 * Verifies a contract_meta_store_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a contract_meta_store_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns contract_meta_store_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.contract_meta_store.contract_meta_store_request;
-
-                /**
-                 * Creates a plain object from a contract_meta_store_request message. Also converts values to other types if specified.
-                 * @param message contract_meta_store_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.contract_meta_store.contract_meta_store_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this contract_meta_store_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a contract_meta_store_response. */
-            interface Icontract_meta_store_response {
-
-                /** contract_meta_store_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** contract_meta_store_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** contract_meta_store_response get_contract_meta */
-                get_contract_meta?: (koinos.rpc.contract_meta_store.Iget_contract_meta_response|null);
-            }
-
-            /** Represents a contract_meta_store_response. */
-            class contract_meta_store_response implements Icontract_meta_store_response {
-
-                /**
-                 * Constructs a new contract_meta_store_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.contract_meta_store.Icontract_meta_store_response);
-
-                /** contract_meta_store_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** contract_meta_store_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** contract_meta_store_response get_contract_meta. */
-                public get_contract_meta?: (koinos.rpc.contract_meta_store.Iget_contract_meta_response|null);
-
-                /** contract_meta_store_response response. */
-                public response?: ("reserved"|"error"|"get_contract_meta");
-
-                /**
-                 * Creates a new contract_meta_store_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns contract_meta_store_response instance
-                 */
-                public static create(properties?: koinos.rpc.contract_meta_store.Icontract_meta_store_response): koinos.rpc.contract_meta_store.contract_meta_store_response;
-
-                /**
-                 * Encodes the specified contract_meta_store_response message. Does not implicitly {@link koinos.rpc.contract_meta_store.contract_meta_store_response.verify|verify} messages.
-                 * @param message contract_meta_store_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.contract_meta_store.Icontract_meta_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified contract_meta_store_response message, length delimited. Does not implicitly {@link koinos.rpc.contract_meta_store.contract_meta_store_response.verify|verify} messages.
-                 * @param message contract_meta_store_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.contract_meta_store.Icontract_meta_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a contract_meta_store_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns contract_meta_store_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.contract_meta_store.contract_meta_store_response;
-
-                /**
-                 * Decodes a contract_meta_store_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns contract_meta_store_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.contract_meta_store.contract_meta_store_response;
-
-                /**
-                 * Verifies a contract_meta_store_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a contract_meta_store_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns contract_meta_store_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.contract_meta_store.contract_meta_store_response;
-
-                /**
-                 * Creates a plain object from a contract_meta_store_response message. Also converts values to other types if specified.
-                 * @param message contract_meta_store_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.contract_meta_store.contract_meta_store_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this contract_meta_store_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace p2p. */
-        namespace p2p {
-
-            /** Properties of a get_gossip_status_request. */
-            interface Iget_gossip_status_request {
-            }
-
-            /** Represents a get_gossip_status_request. */
-            class get_gossip_status_request implements Iget_gossip_status_request {
-
-                /**
-                 * Constructs a new get_gossip_status_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.p2p.Iget_gossip_status_request);
-
-                /**
-                 * Creates a new get_gossip_status_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_gossip_status_request instance
-                 */
-                public static create(properties?: koinos.rpc.p2p.Iget_gossip_status_request): koinos.rpc.p2p.get_gossip_status_request;
-
-                /**
-                 * Encodes the specified get_gossip_status_request message. Does not implicitly {@link koinos.rpc.p2p.get_gossip_status_request.verify|verify} messages.
-                 * @param message get_gossip_status_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.p2p.Iget_gossip_status_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_gossip_status_request message, length delimited. Does not implicitly {@link koinos.rpc.p2p.get_gossip_status_request.verify|verify} messages.
-                 * @param message get_gossip_status_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.p2p.Iget_gossip_status_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_gossip_status_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_gossip_status_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.p2p.get_gossip_status_request;
-
-                /**
-                 * Decodes a get_gossip_status_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_gossip_status_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.p2p.get_gossip_status_request;
-
-                /**
-                 * Verifies a get_gossip_status_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_gossip_status_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_gossip_status_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.p2p.get_gossip_status_request;
-
-                /**
-                 * Creates a plain object from a get_gossip_status_request message. Also converts values to other types if specified.
-                 * @param message get_gossip_status_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.p2p.get_gossip_status_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_gossip_status_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_gossip_status_response. */
-            interface Iget_gossip_status_response {
-
-                /** get_gossip_status_response enabled */
-                enabled?: (boolean|null);
-            }
-
-            /** Represents a get_gossip_status_response. */
-            class get_gossip_status_response implements Iget_gossip_status_response {
-
-                /**
-                 * Constructs a new get_gossip_status_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.p2p.Iget_gossip_status_response);
-
-                /** get_gossip_status_response enabled. */
-                public enabled: boolean;
-
-                /**
-                 * Creates a new get_gossip_status_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_gossip_status_response instance
-                 */
-                public static create(properties?: koinos.rpc.p2p.Iget_gossip_status_response): koinos.rpc.p2p.get_gossip_status_response;
-
-                /**
-                 * Encodes the specified get_gossip_status_response message. Does not implicitly {@link koinos.rpc.p2p.get_gossip_status_response.verify|verify} messages.
-                 * @param message get_gossip_status_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.p2p.Iget_gossip_status_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_gossip_status_response message, length delimited. Does not implicitly {@link koinos.rpc.p2p.get_gossip_status_response.verify|verify} messages.
-                 * @param message get_gossip_status_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.p2p.Iget_gossip_status_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_gossip_status_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_gossip_status_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.p2p.get_gossip_status_response;
-
-                /**
-                 * Decodes a get_gossip_status_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_gossip_status_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.p2p.get_gossip_status_response;
-
-                /**
-                 * Verifies a get_gossip_status_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_gossip_status_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_gossip_status_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.p2p.get_gossip_status_response;
-
-                /**
-                 * Creates a plain object from a get_gossip_status_response message. Also converts values to other types if specified.
-                 * @param message get_gossip_status_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.p2p.get_gossip_status_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_gossip_status_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a p2p_request. */
-            interface Ip2p_request {
-
-                /** p2p_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** p2p_request get_gossip_status */
-                get_gossip_status?: (koinos.rpc.p2p.Iget_gossip_status_request|null);
-            }
-
-            /** Represents a p2p_request. */
-            class p2p_request implements Ip2p_request {
-
-                /**
-                 * Constructs a new p2p_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.p2p.Ip2p_request);
-
-                /** p2p_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** p2p_request get_gossip_status. */
-                public get_gossip_status?: (koinos.rpc.p2p.Iget_gossip_status_request|null);
-
-                /** p2p_request request. */
-                public request?: ("reserved"|"get_gossip_status");
-
-                /**
-                 * Creates a new p2p_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns p2p_request instance
-                 */
-                public static create(properties?: koinos.rpc.p2p.Ip2p_request): koinos.rpc.p2p.p2p_request;
-
-                /**
-                 * Encodes the specified p2p_request message. Does not implicitly {@link koinos.rpc.p2p.p2p_request.verify|verify} messages.
-                 * @param message p2p_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.p2p.Ip2p_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified p2p_request message, length delimited. Does not implicitly {@link koinos.rpc.p2p.p2p_request.verify|verify} messages.
-                 * @param message p2p_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.p2p.Ip2p_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a p2p_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns p2p_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.p2p.p2p_request;
-
-                /**
-                 * Decodes a p2p_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns p2p_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.p2p.p2p_request;
-
-                /**
-                 * Verifies a p2p_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a p2p_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns p2p_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.p2p.p2p_request;
-
-                /**
-                 * Creates a plain object from a p2p_request message. Also converts values to other types if specified.
-                 * @param message p2p_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.p2p.p2p_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this p2p_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a p2p_response. */
-            interface Ip2p_response {
-
-                /** p2p_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** p2p_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** p2p_response get_gossip_status */
-                get_gossip_status?: (koinos.rpc.p2p.Iget_gossip_status_response|null);
-            }
-
-            /** Represents a p2p_response. */
-            class p2p_response implements Ip2p_response {
-
-                /**
-                 * Constructs a new p2p_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.p2p.Ip2p_response);
-
-                /** p2p_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** p2p_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** p2p_response get_gossip_status. */
-                public get_gossip_status?: (koinos.rpc.p2p.Iget_gossip_status_response|null);
-
-                /** p2p_response response. */
-                public response?: ("reserved"|"error"|"get_gossip_status");
-
-                /**
-                 * Creates a new p2p_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns p2p_response instance
-                 */
-                public static create(properties?: koinos.rpc.p2p.Ip2p_response): koinos.rpc.p2p.p2p_response;
-
-                /**
-                 * Encodes the specified p2p_response message. Does not implicitly {@link koinos.rpc.p2p.p2p_response.verify|verify} messages.
-                 * @param message p2p_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.p2p.Ip2p_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified p2p_response message, length delimited. Does not implicitly {@link koinos.rpc.p2p.p2p_response.verify|verify} messages.
-                 * @param message p2p_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.p2p.Ip2p_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a p2p_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns p2p_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.p2p.p2p_response;
-
-                /**
-                 * Decodes a p2p_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns p2p_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.p2p.p2p_response;
-
-                /**
-                 * Verifies a p2p_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a p2p_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns p2p_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.p2p.p2p_response;
-
-                /**
-                 * Creates a plain object from a p2p_response message. Also converts values to other types if specified.
-                 * @param message p2p_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.p2p.p2p_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this p2p_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace block_store. */
-        namespace block_store {
-
-            /** Properties of a get_blocks_by_id_request. */
-            interface Iget_blocks_by_id_request {
-
-                /** get_blocks_by_id_request block_ids */
-                block_ids?: (Uint8Array[]|null);
-
-                /** get_blocks_by_id_request return_block */
-                return_block?: (boolean|null);
-
-                /** get_blocks_by_id_request return_receipt */
-                return_receipt?: (boolean|null);
-            }
-
-            /** Represents a get_blocks_by_id_request. */
-            class get_blocks_by_id_request implements Iget_blocks_by_id_request {
-
-                /**
-                 * Constructs a new get_blocks_by_id_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iget_blocks_by_id_request);
-
-                /** get_blocks_by_id_request block_ids. */
-                public block_ids: Uint8Array[];
-
-                /** get_blocks_by_id_request return_block. */
-                public return_block: boolean;
-
-                /** get_blocks_by_id_request return_receipt. */
-                public return_receipt: boolean;
-
-                /**
-                 * Creates a new get_blocks_by_id_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_blocks_by_id_request instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iget_blocks_by_id_request): koinos.rpc.block_store.get_blocks_by_id_request;
-
-                /**
-                 * Encodes the specified get_blocks_by_id_request message. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_id_request.verify|verify} messages.
-                 * @param message get_blocks_by_id_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iget_blocks_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_blocks_by_id_request message, length delimited. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_id_request.verify|verify} messages.
-                 * @param message get_blocks_by_id_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iget_blocks_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_blocks_by_id_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_blocks_by_id_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.get_blocks_by_id_request;
-
-                /**
-                 * Decodes a get_blocks_by_id_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_blocks_by_id_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.get_blocks_by_id_request;
-
-                /**
-                 * Verifies a get_blocks_by_id_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_blocks_by_id_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_blocks_by_id_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.get_blocks_by_id_request;
-
-                /**
-                 * Creates a plain object from a get_blocks_by_id_request message. Also converts values to other types if specified.
-                 * @param message get_blocks_by_id_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.get_blocks_by_id_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_blocks_by_id_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_blocks_by_id_response. */
-            interface Iget_blocks_by_id_response {
-
-                /** get_blocks_by_id_response block_items */
-                block_items?: (koinos.block_store.Iblock_item[]|null);
-            }
-
-            /** Represents a get_blocks_by_id_response. */
-            class get_blocks_by_id_response implements Iget_blocks_by_id_response {
-
-                /**
-                 * Constructs a new get_blocks_by_id_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iget_blocks_by_id_response);
-
-                /** get_blocks_by_id_response block_items. */
-                public block_items: koinos.block_store.Iblock_item[];
-
-                /**
-                 * Creates a new get_blocks_by_id_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_blocks_by_id_response instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iget_blocks_by_id_response): koinos.rpc.block_store.get_blocks_by_id_response;
-
-                /**
-                 * Encodes the specified get_blocks_by_id_response message. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_id_response.verify|verify} messages.
-                 * @param message get_blocks_by_id_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iget_blocks_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_blocks_by_id_response message, length delimited. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_id_response.verify|verify} messages.
-                 * @param message get_blocks_by_id_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iget_blocks_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_blocks_by_id_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_blocks_by_id_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.get_blocks_by_id_response;
-
-                /**
-                 * Decodes a get_blocks_by_id_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_blocks_by_id_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.get_blocks_by_id_response;
-
-                /**
-                 * Verifies a get_blocks_by_id_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_blocks_by_id_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_blocks_by_id_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.get_blocks_by_id_response;
-
-                /**
-                 * Creates a plain object from a get_blocks_by_id_response message. Also converts values to other types if specified.
-                 * @param message get_blocks_by_id_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.get_blocks_by_id_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_blocks_by_id_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_blocks_by_height_request. */
-            interface Iget_blocks_by_height_request {
-
-                /** get_blocks_by_height_request head_block_id */
-                head_block_id?: (Uint8Array|null);
-
-                /** get_blocks_by_height_request ancestor_start_height */
-                ancestor_start_height?: (number|Long|null);
-
-                /** get_blocks_by_height_request num_blocks */
-                num_blocks?: (number|null);
-
-                /** get_blocks_by_height_request return_block */
-                return_block?: (boolean|null);
-
-                /** get_blocks_by_height_request return_receipt */
-                return_receipt?: (boolean|null);
-            }
-
-            /** Represents a get_blocks_by_height_request. */
-            class get_blocks_by_height_request implements Iget_blocks_by_height_request {
-
-                /**
-                 * Constructs a new get_blocks_by_height_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iget_blocks_by_height_request);
-
-                /** get_blocks_by_height_request head_block_id. */
-                public head_block_id: Uint8Array;
-
-                /** get_blocks_by_height_request ancestor_start_height. */
-                public ancestor_start_height: (number|Long);
-
-                /** get_blocks_by_height_request num_blocks. */
-                public num_blocks: number;
-
-                /** get_blocks_by_height_request return_block. */
-                public return_block: boolean;
-
-                /** get_blocks_by_height_request return_receipt. */
-                public return_receipt: boolean;
-
-                /**
-                 * Creates a new get_blocks_by_height_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_blocks_by_height_request instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iget_blocks_by_height_request): koinos.rpc.block_store.get_blocks_by_height_request;
-
-                /**
-                 * Encodes the specified get_blocks_by_height_request message. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_height_request.verify|verify} messages.
-                 * @param message get_blocks_by_height_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iget_blocks_by_height_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_blocks_by_height_request message, length delimited. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_height_request.verify|verify} messages.
-                 * @param message get_blocks_by_height_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iget_blocks_by_height_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_blocks_by_height_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_blocks_by_height_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.get_blocks_by_height_request;
-
-                /**
-                 * Decodes a get_blocks_by_height_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_blocks_by_height_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.get_blocks_by_height_request;
-
-                /**
-                 * Verifies a get_blocks_by_height_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_blocks_by_height_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_blocks_by_height_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.get_blocks_by_height_request;
-
-                /**
-                 * Creates a plain object from a get_blocks_by_height_request message. Also converts values to other types if specified.
-                 * @param message get_blocks_by_height_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.get_blocks_by_height_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_blocks_by_height_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_blocks_by_height_response. */
-            interface Iget_blocks_by_height_response {
-
-                /** get_blocks_by_height_response block_items */
-                block_items?: (koinos.block_store.Iblock_item[]|null);
-            }
-
-            /** Represents a get_blocks_by_height_response. */
-            class get_blocks_by_height_response implements Iget_blocks_by_height_response {
-
-                /**
-                 * Constructs a new get_blocks_by_height_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iget_blocks_by_height_response);
-
-                /** get_blocks_by_height_response block_items. */
-                public block_items: koinos.block_store.Iblock_item[];
-
-                /**
-                 * Creates a new get_blocks_by_height_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_blocks_by_height_response instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iget_blocks_by_height_response): koinos.rpc.block_store.get_blocks_by_height_response;
-
-                /**
-                 * Encodes the specified get_blocks_by_height_response message. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_height_response.verify|verify} messages.
-                 * @param message get_blocks_by_height_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iget_blocks_by_height_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_blocks_by_height_response message, length delimited. Does not implicitly {@link koinos.rpc.block_store.get_blocks_by_height_response.verify|verify} messages.
-                 * @param message get_blocks_by_height_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iget_blocks_by_height_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_blocks_by_height_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_blocks_by_height_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.get_blocks_by_height_response;
-
-                /**
-                 * Decodes a get_blocks_by_height_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_blocks_by_height_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.get_blocks_by_height_response;
-
-                /**
-                 * Verifies a get_blocks_by_height_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_blocks_by_height_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_blocks_by_height_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.get_blocks_by_height_response;
-
-                /**
-                 * Creates a plain object from a get_blocks_by_height_response message. Also converts values to other types if specified.
-                 * @param message get_blocks_by_height_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.get_blocks_by_height_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_blocks_by_height_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an add_block_request. */
-            interface Iadd_block_request {
-
-                /** add_block_request block_to_add */
-                block_to_add?: (koinos.protocol.Iblock|null);
-
-                /** add_block_request receipt_to_add */
-                receipt_to_add?: (koinos.protocol.Iblock_receipt|null);
-            }
-
-            /** Represents an add_block_request. */
-            class add_block_request implements Iadd_block_request {
-
-                /**
-                 * Constructs a new add_block_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iadd_block_request);
-
-                /** add_block_request block_to_add. */
-                public block_to_add?: (koinos.protocol.Iblock|null);
-
-                /** add_block_request receipt_to_add. */
-                public receipt_to_add?: (koinos.protocol.Iblock_receipt|null);
-
-                /**
-                 * Creates a new add_block_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns add_block_request instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iadd_block_request): koinos.rpc.block_store.add_block_request;
-
-                /**
-                 * Encodes the specified add_block_request message. Does not implicitly {@link koinos.rpc.block_store.add_block_request.verify|verify} messages.
-                 * @param message add_block_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iadd_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified add_block_request message, length delimited. Does not implicitly {@link koinos.rpc.block_store.add_block_request.verify|verify} messages.
-                 * @param message add_block_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iadd_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an add_block_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns add_block_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.add_block_request;
-
-                /**
-                 * Decodes an add_block_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns add_block_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.add_block_request;
-
-                /**
-                 * Verifies an add_block_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an add_block_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns add_block_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.add_block_request;
-
-                /**
-                 * Creates a plain object from an add_block_request message. Also converts values to other types if specified.
-                 * @param message add_block_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.add_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this add_block_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an add_block_response. */
-            interface Iadd_block_response {
-            }
-
-            /** Represents an add_block_response. */
-            class add_block_response implements Iadd_block_response {
-
-                /**
-                 * Constructs a new add_block_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iadd_block_response);
-
-                /**
-                 * Creates a new add_block_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns add_block_response instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iadd_block_response): koinos.rpc.block_store.add_block_response;
-
-                /**
-                 * Encodes the specified add_block_response message. Does not implicitly {@link koinos.rpc.block_store.add_block_response.verify|verify} messages.
-                 * @param message add_block_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iadd_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified add_block_response message, length delimited. Does not implicitly {@link koinos.rpc.block_store.add_block_response.verify|verify} messages.
-                 * @param message add_block_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iadd_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an add_block_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns add_block_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.add_block_response;
-
-                /**
-                 * Decodes an add_block_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns add_block_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.add_block_response;
-
-                /**
-                 * Verifies an add_block_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an add_block_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns add_block_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.add_block_response;
-
-                /**
-                 * Creates a plain object from an add_block_response message. Also converts values to other types if specified.
-                 * @param message add_block_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.add_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this add_block_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_highest_block_request. */
-            interface Iget_highest_block_request {
-            }
-
-            /** Represents a get_highest_block_request. */
-            class get_highest_block_request implements Iget_highest_block_request {
-
-                /**
-                 * Constructs a new get_highest_block_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iget_highest_block_request);
-
-                /**
-                 * Creates a new get_highest_block_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_highest_block_request instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iget_highest_block_request): koinos.rpc.block_store.get_highest_block_request;
-
-                /**
-                 * Encodes the specified get_highest_block_request message. Does not implicitly {@link koinos.rpc.block_store.get_highest_block_request.verify|verify} messages.
-                 * @param message get_highest_block_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iget_highest_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_highest_block_request message, length delimited. Does not implicitly {@link koinos.rpc.block_store.get_highest_block_request.verify|verify} messages.
-                 * @param message get_highest_block_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iget_highest_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_highest_block_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_highest_block_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.get_highest_block_request;
-
-                /**
-                 * Decodes a get_highest_block_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_highest_block_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.get_highest_block_request;
-
-                /**
-                 * Verifies a get_highest_block_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_highest_block_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_highest_block_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.get_highest_block_request;
-
-                /**
-                 * Creates a plain object from a get_highest_block_request message. Also converts values to other types if specified.
-                 * @param message get_highest_block_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.get_highest_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_highest_block_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_highest_block_response. */
-            interface Iget_highest_block_response {
-
-                /** get_highest_block_response topology */
-                topology?: (koinos.Iblock_topology|null);
-            }
-
-            /** Represents a get_highest_block_response. */
-            class get_highest_block_response implements Iget_highest_block_response {
-
-                /**
-                 * Constructs a new get_highest_block_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iget_highest_block_response);
-
-                /** get_highest_block_response topology. */
-                public topology?: (koinos.Iblock_topology|null);
-
-                /**
-                 * Creates a new get_highest_block_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_highest_block_response instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iget_highest_block_response): koinos.rpc.block_store.get_highest_block_response;
-
-                /**
-                 * Encodes the specified get_highest_block_response message. Does not implicitly {@link koinos.rpc.block_store.get_highest_block_response.verify|verify} messages.
-                 * @param message get_highest_block_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iget_highest_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_highest_block_response message, length delimited. Does not implicitly {@link koinos.rpc.block_store.get_highest_block_response.verify|verify} messages.
-                 * @param message get_highest_block_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iget_highest_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_highest_block_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_highest_block_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.get_highest_block_response;
-
-                /**
-                 * Decodes a get_highest_block_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_highest_block_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.get_highest_block_response;
-
-                /**
-                 * Verifies a get_highest_block_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_highest_block_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_highest_block_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.get_highest_block_response;
-
-                /**
-                 * Creates a plain object from a get_highest_block_response message. Also converts values to other types if specified.
-                 * @param message get_highest_block_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.get_highest_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_highest_block_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a block_store_request. */
-            interface Iblock_store_request {
-
-                /** block_store_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** block_store_request get_blocks_by_id */
-                get_blocks_by_id?: (koinos.rpc.block_store.Iget_blocks_by_id_request|null);
-
-                /** block_store_request get_blocks_by_height */
-                get_blocks_by_height?: (koinos.rpc.block_store.Iget_blocks_by_height_request|null);
-
-                /** block_store_request add_block */
-                add_block?: (koinos.rpc.block_store.Iadd_block_request|null);
-
-                /** block_store_request get_highest_block */
-                get_highest_block?: (koinos.rpc.block_store.Iget_highest_block_request|null);
-            }
-
-            /** Represents a block_store_request. */
-            class block_store_request implements Iblock_store_request {
-
-                /**
-                 * Constructs a new block_store_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iblock_store_request);
-
-                /** block_store_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** block_store_request get_blocks_by_id. */
-                public get_blocks_by_id?: (koinos.rpc.block_store.Iget_blocks_by_id_request|null);
-
-                /** block_store_request get_blocks_by_height. */
-                public get_blocks_by_height?: (koinos.rpc.block_store.Iget_blocks_by_height_request|null);
-
-                /** block_store_request add_block. */
-                public add_block?: (koinos.rpc.block_store.Iadd_block_request|null);
-
-                /** block_store_request get_highest_block. */
-                public get_highest_block?: (koinos.rpc.block_store.Iget_highest_block_request|null);
-
-                /** block_store_request request. */
-                public request?: ("reserved"|"get_blocks_by_id"|"get_blocks_by_height"|"add_block"|"get_highest_block");
-
-                /**
-                 * Creates a new block_store_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns block_store_request instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iblock_store_request): koinos.rpc.block_store.block_store_request;
-
-                /**
-                 * Encodes the specified block_store_request message. Does not implicitly {@link koinos.rpc.block_store.block_store_request.verify|verify} messages.
-                 * @param message block_store_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iblock_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified block_store_request message, length delimited. Does not implicitly {@link koinos.rpc.block_store.block_store_request.verify|verify} messages.
-                 * @param message block_store_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iblock_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a block_store_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns block_store_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.block_store_request;
-
-                /**
-                 * Decodes a block_store_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns block_store_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.block_store_request;
-
-                /**
-                 * Verifies a block_store_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a block_store_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns block_store_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.block_store_request;
-
-                /**
-                 * Creates a plain object from a block_store_request message. Also converts values to other types if specified.
-                 * @param message block_store_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.block_store_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this block_store_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a block_store_response. */
-            interface Iblock_store_response {
-
-                /** block_store_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** block_store_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** block_store_response get_blocks_by_id */
-                get_blocks_by_id?: (koinos.rpc.block_store.Iget_blocks_by_id_response|null);
-
-                /** block_store_response get_blocks_by_height */
-                get_blocks_by_height?: (koinos.rpc.block_store.Iget_blocks_by_height_response|null);
-
-                /** block_store_response add_block */
-                add_block?: (koinos.rpc.block_store.Iadd_block_response|null);
-
-                /** block_store_response get_highest_block */
-                get_highest_block?: (koinos.rpc.block_store.Iget_highest_block_response|null);
-            }
-
-            /** Represents a block_store_response. */
-            class block_store_response implements Iblock_store_response {
-
-                /**
-                 * Constructs a new block_store_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.block_store.Iblock_store_response);
-
-                /** block_store_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** block_store_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** block_store_response get_blocks_by_id. */
-                public get_blocks_by_id?: (koinos.rpc.block_store.Iget_blocks_by_id_response|null);
-
-                /** block_store_response get_blocks_by_height. */
-                public get_blocks_by_height?: (koinos.rpc.block_store.Iget_blocks_by_height_response|null);
-
-                /** block_store_response add_block. */
-                public add_block?: (koinos.rpc.block_store.Iadd_block_response|null);
-
-                /** block_store_response get_highest_block. */
-                public get_highest_block?: (koinos.rpc.block_store.Iget_highest_block_response|null);
-
-                /** block_store_response response. */
-                public response?: ("reserved"|"error"|"get_blocks_by_id"|"get_blocks_by_height"|"add_block"|"get_highest_block");
-
-                /**
-                 * Creates a new block_store_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns block_store_response instance
-                 */
-                public static create(properties?: koinos.rpc.block_store.Iblock_store_response): koinos.rpc.block_store.block_store_response;
-
-                /**
-                 * Encodes the specified block_store_response message. Does not implicitly {@link koinos.rpc.block_store.block_store_response.verify|verify} messages.
-                 * @param message block_store_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.block_store.Iblock_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified block_store_response message, length delimited. Does not implicitly {@link koinos.rpc.block_store.block_store_response.verify|verify} messages.
-                 * @param message block_store_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.block_store.Iblock_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a block_store_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns block_store_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.block_store.block_store_response;
-
-                /**
-                 * Decodes a block_store_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns block_store_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.block_store.block_store_response;
-
-                /**
-                 * Verifies a block_store_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a block_store_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns block_store_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.block_store.block_store_response;
-
-                /**
-                 * Creates a plain object from a block_store_response message. Also converts values to other types if specified.
-                 * @param message block_store_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.block_store.block_store_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this block_store_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace account_history. */
-        namespace account_history {
-
-            /** Properties of an account_history_entry. */
-            interface Iaccount_history_entry {
-
-                /** account_history_entry seq_num */
-                seq_num?: (number|Long|null);
-
-                /** account_history_entry trx */
-                trx?: (koinos.account_history.Itransaction_record|null);
-
-                /** account_history_entry block */
-                block?: (koinos.account_history.Iblock_record|null);
-            }
-
-            /** Represents an account_history_entry. */
-            class account_history_entry implements Iaccount_history_entry {
-
-                /**
-                 * Constructs a new account_history_entry.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.account_history.Iaccount_history_entry);
-
-                /** account_history_entry seq_num. */
-                public seq_num: (number|Long);
-
-                /** account_history_entry trx. */
-                public trx?: (koinos.account_history.Itransaction_record|null);
-
-                /** account_history_entry block. */
-                public block?: (koinos.account_history.Iblock_record|null);
-
-                /** account_history_entry record. */
-                public record?: ("trx"|"block");
-
-                /**
-                 * Creates a new account_history_entry instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns account_history_entry instance
-                 */
-                public static create(properties?: koinos.rpc.account_history.Iaccount_history_entry): koinos.rpc.account_history.account_history_entry;
-
-                /**
-                 * Encodes the specified account_history_entry message. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
-                 * @param message account_history_entry message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.account_history.Iaccount_history_entry, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified account_history_entry message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_entry.verify|verify} messages.
-                 * @param message account_history_entry message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_entry, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an account_history_entry message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns account_history_entry
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_entry;
-
-                /**
-                 * Decodes an account_history_entry message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns account_history_entry
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_entry;
-
-                /**
-                 * Verifies an account_history_entry message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an account_history_entry message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns account_history_entry
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_entry;
-
-                /**
-                 * Creates a plain object from an account_history_entry message. Also converts values to other types if specified.
-                 * @param message account_history_entry
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.account_history.account_history_entry, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this account_history_entry to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_account_history_request. */
-            interface Iget_account_history_request {
-
-                /** get_account_history_request address */
-                address?: (Uint8Array|null);
-
-                /** get_account_history_request seq_num */
-                seq_num?: (number|Long|null);
-
-                /** get_account_history_request limit */
-                limit?: (number|Long|null);
-
-                /** get_account_history_request ascending */
-                ascending?: (boolean|null);
-
-                /** get_account_history_request irreversible */
-                irreversible?: (boolean|null);
-            }
-
-            /** Represents a get_account_history_request. */
-            class get_account_history_request implements Iget_account_history_request {
-
-                /**
-                 * Constructs a new get_account_history_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.account_history.Iget_account_history_request);
-
-                /** get_account_history_request address. */
-                public address: Uint8Array;
-
-                /** get_account_history_request seq_num. */
-                public seq_num?: (number|Long|null);
-
-                /** get_account_history_request limit. */
-                public limit: (number|Long);
-
-                /** get_account_history_request ascending. */
-                public ascending: boolean;
-
-                /** get_account_history_request irreversible. */
-                public irreversible: boolean;
-
-                /** get_account_history_request _seq_num. */
-                public _seq_num?: "seq_num";
-
-                /**
-                 * Creates a new get_account_history_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_account_history_request instance
-                 */
-                public static create(properties?: koinos.rpc.account_history.Iget_account_history_request): koinos.rpc.account_history.get_account_history_request;
-
-                /**
-                 * Encodes the specified get_account_history_request message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
-                 * @param message get_account_history_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.account_history.Iget_account_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_request.verify|verify} messages.
-                 * @param message get_account_history_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.account_history.Iget_account_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_account_history_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_account_history_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.get_account_history_request;
-
-                /**
-                 * Decodes a get_account_history_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_account_history_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.get_account_history_request;
-
-                /**
-                 * Verifies a get_account_history_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_account_history_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_account_history_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.get_account_history_request;
-
-                /**
-                 * Creates a plain object from a get_account_history_request message. Also converts values to other types if specified.
-                 * @param message get_account_history_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.account_history.get_account_history_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_account_history_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_account_history_response. */
-            interface Iget_account_history_response {
-
-                /** get_account_history_response values */
-                values?: (koinos.rpc.account_history.Iaccount_history_entry[]|null);
-            }
-
-            /** Represents a get_account_history_response. */
-            class get_account_history_response implements Iget_account_history_response {
-
-                /**
-                 * Constructs a new get_account_history_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.account_history.Iget_account_history_response);
-
-                /** get_account_history_response values. */
-                public values: koinos.rpc.account_history.Iaccount_history_entry[];
-
-                /**
-                 * Creates a new get_account_history_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_account_history_response instance
-                 */
-                public static create(properties?: koinos.rpc.account_history.Iget_account_history_response): koinos.rpc.account_history.get_account_history_response;
-
-                /**
-                 * Encodes the specified get_account_history_response message. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
-                 * @param message get_account_history_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.account_history.Iget_account_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.get_account_history_response.verify|verify} messages.
-                 * @param message get_account_history_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.account_history.Iget_account_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_account_history_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_account_history_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.get_account_history_response;
-
-                /**
-                 * Decodes a get_account_history_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_account_history_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.get_account_history_response;
-
-                /**
-                 * Verifies a get_account_history_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_account_history_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_account_history_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.get_account_history_response;
-
-                /**
-                 * Creates a plain object from a get_account_history_response message. Also converts values to other types if specified.
-                 * @param message get_account_history_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.account_history.get_account_history_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_account_history_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an account_history_request. */
-            interface Iaccount_history_request {
-
-                /** account_history_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** account_history_request get_account_history */
-                get_account_history?: (koinos.rpc.account_history.Iget_account_history_request|null);
-            }
-
-            /** Represents an account_history_request. */
-            class account_history_request implements Iaccount_history_request {
-
-                /**
-                 * Constructs a new account_history_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.account_history.Iaccount_history_request);
-
-                /** account_history_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** account_history_request get_account_history. */
-                public get_account_history?: (koinos.rpc.account_history.Iget_account_history_request|null);
-
-                /** account_history_request request. */
-                public request?: ("reserved"|"get_account_history");
-
-                /**
-                 * Creates a new account_history_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns account_history_request instance
-                 */
-                public static create(properties?: koinos.rpc.account_history.Iaccount_history_request): koinos.rpc.account_history.account_history_request;
-
-                /**
-                 * Encodes the specified account_history_request message. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
-                 * @param message account_history_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.account_history.Iaccount_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified account_history_request message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_request.verify|verify} messages.
-                 * @param message account_history_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an account_history_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns account_history_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_request;
-
-                /**
-                 * Decodes an account_history_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns account_history_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_request;
-
-                /**
-                 * Verifies an account_history_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an account_history_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns account_history_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_request;
-
-                /**
-                 * Creates a plain object from an account_history_request message. Also converts values to other types if specified.
-                 * @param message account_history_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.account_history.account_history_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this account_history_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an account_history_response. */
-            interface Iaccount_history_response {
-
-                /** account_history_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** account_history_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** account_history_response get_account_history */
-                get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
-            }
-
-            /** Represents an account_history_response. */
-            class account_history_response implements Iaccount_history_response {
-
-                /**
-                 * Constructs a new account_history_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.account_history.Iaccount_history_response);
-
-                /** account_history_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** account_history_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** account_history_response get_account_history. */
-                public get_account_history?: (koinos.rpc.account_history.Iget_account_history_response|null);
-
-                /** account_history_response response. */
-                public response?: ("reserved"|"error"|"get_account_history");
-
-                /**
-                 * Creates a new account_history_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns account_history_response instance
-                 */
-                public static create(properties?: koinos.rpc.account_history.Iaccount_history_response): koinos.rpc.account_history.account_history_response;
-
-                /**
-                 * Encodes the specified account_history_response message. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
-                 * @param message account_history_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.account_history.Iaccount_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified account_history_response message, length delimited. Does not implicitly {@link koinos.rpc.account_history.account_history_response.verify|verify} messages.
-                 * @param message account_history_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.account_history.Iaccount_history_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an account_history_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns account_history_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.account_history.account_history_response;
-
-                /**
-                 * Decodes an account_history_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns account_history_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.account_history.account_history_response;
-
-                /**
-                 * Verifies an account_history_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an account_history_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns account_history_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.account_history.account_history_response;
-
-                /**
-                 * Creates a plain object from an account_history_response message. Also converts values to other types if specified.
-                 * @param message account_history_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.account_history.account_history_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this account_history_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace transaction_store. */
-        namespace transaction_store {
-
-            /** Properties of a get_transactions_by_id_request. */
-            interface Iget_transactions_by_id_request {
-
-                /** get_transactions_by_id_request transaction_ids */
-                transaction_ids?: (Uint8Array[]|null);
-            }
-
-            /** Represents a get_transactions_by_id_request. */
-            class get_transactions_by_id_request implements Iget_transactions_by_id_request {
-
-                /**
-                 * Constructs a new get_transactions_by_id_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.transaction_store.Iget_transactions_by_id_request);
-
-                /** get_transactions_by_id_request transaction_ids. */
-                public transaction_ids: Uint8Array[];
-
-                /**
-                 * Creates a new get_transactions_by_id_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_transactions_by_id_request instance
-                 */
-                public static create(properties?: koinos.rpc.transaction_store.Iget_transactions_by_id_request): koinos.rpc.transaction_store.get_transactions_by_id_request;
-
-                /**
-                 * Encodes the specified get_transactions_by_id_request message. Does not implicitly {@link koinos.rpc.transaction_store.get_transactions_by_id_request.verify|verify} messages.
-                 * @param message get_transactions_by_id_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.transaction_store.Iget_transactions_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_transactions_by_id_request message, length delimited. Does not implicitly {@link koinos.rpc.transaction_store.get_transactions_by_id_request.verify|verify} messages.
-                 * @param message get_transactions_by_id_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.transaction_store.Iget_transactions_by_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_transactions_by_id_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_transactions_by_id_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.transaction_store.get_transactions_by_id_request;
-
-                /**
-                 * Decodes a get_transactions_by_id_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_transactions_by_id_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.transaction_store.get_transactions_by_id_request;
-
-                /**
-                 * Verifies a get_transactions_by_id_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_transactions_by_id_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_transactions_by_id_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.transaction_store.get_transactions_by_id_request;
-
-                /**
-                 * Creates a plain object from a get_transactions_by_id_request message. Also converts values to other types if specified.
-                 * @param message get_transactions_by_id_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.transaction_store.get_transactions_by_id_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_transactions_by_id_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_transactions_by_id_response. */
-            interface Iget_transactions_by_id_response {
-
-                /** get_transactions_by_id_response transactions */
-                transactions?: (koinos.transaction_store.Itransaction_item[]|null);
-            }
-
-            /** Represents a get_transactions_by_id_response. */
-            class get_transactions_by_id_response implements Iget_transactions_by_id_response {
-
-                /**
-                 * Constructs a new get_transactions_by_id_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.transaction_store.Iget_transactions_by_id_response);
-
-                /** get_transactions_by_id_response transactions. */
-                public transactions: koinos.transaction_store.Itransaction_item[];
-
-                /**
-                 * Creates a new get_transactions_by_id_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_transactions_by_id_response instance
-                 */
-                public static create(properties?: koinos.rpc.transaction_store.Iget_transactions_by_id_response): koinos.rpc.transaction_store.get_transactions_by_id_response;
-
-                /**
-                 * Encodes the specified get_transactions_by_id_response message. Does not implicitly {@link koinos.rpc.transaction_store.get_transactions_by_id_response.verify|verify} messages.
-                 * @param message get_transactions_by_id_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.transaction_store.Iget_transactions_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_transactions_by_id_response message, length delimited. Does not implicitly {@link koinos.rpc.transaction_store.get_transactions_by_id_response.verify|verify} messages.
-                 * @param message get_transactions_by_id_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.transaction_store.Iget_transactions_by_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_transactions_by_id_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_transactions_by_id_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.transaction_store.get_transactions_by_id_response;
-
-                /**
-                 * Decodes a get_transactions_by_id_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_transactions_by_id_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.transaction_store.get_transactions_by_id_response;
-
-                /**
-                 * Verifies a get_transactions_by_id_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_transactions_by_id_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_transactions_by_id_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.transaction_store.get_transactions_by_id_response;
-
-                /**
-                 * Creates a plain object from a get_transactions_by_id_response message. Also converts values to other types if specified.
-                 * @param message get_transactions_by_id_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.transaction_store.get_transactions_by_id_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_transactions_by_id_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a transaction_store_request. */
-            interface Itransaction_store_request {
-
-                /** transaction_store_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** transaction_store_request get_transactions_by_id */
-                get_transactions_by_id?: (koinos.rpc.transaction_store.Iget_transactions_by_id_request|null);
-            }
-
-            /** Represents a transaction_store_request. */
-            class transaction_store_request implements Itransaction_store_request {
-
-                /**
-                 * Constructs a new transaction_store_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.transaction_store.Itransaction_store_request);
-
-                /** transaction_store_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** transaction_store_request get_transactions_by_id. */
-                public get_transactions_by_id?: (koinos.rpc.transaction_store.Iget_transactions_by_id_request|null);
-
-                /** transaction_store_request request. */
-                public request?: ("reserved"|"get_transactions_by_id");
-
-                /**
-                 * Creates a new transaction_store_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns transaction_store_request instance
-                 */
-                public static create(properties?: koinos.rpc.transaction_store.Itransaction_store_request): koinos.rpc.transaction_store.transaction_store_request;
-
-                /**
-                 * Encodes the specified transaction_store_request message. Does not implicitly {@link koinos.rpc.transaction_store.transaction_store_request.verify|verify} messages.
-                 * @param message transaction_store_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.transaction_store.Itransaction_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified transaction_store_request message, length delimited. Does not implicitly {@link koinos.rpc.transaction_store.transaction_store_request.verify|verify} messages.
-                 * @param message transaction_store_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.transaction_store.Itransaction_store_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a transaction_store_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns transaction_store_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.transaction_store.transaction_store_request;
-
-                /**
-                 * Decodes a transaction_store_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns transaction_store_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.transaction_store.transaction_store_request;
-
-                /**
-                 * Verifies a transaction_store_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a transaction_store_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns transaction_store_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.transaction_store.transaction_store_request;
-
-                /**
-                 * Creates a plain object from a transaction_store_request message. Also converts values to other types if specified.
-                 * @param message transaction_store_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.transaction_store.transaction_store_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this transaction_store_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a transaction_store_response. */
-            interface Itransaction_store_response {
-
-                /** transaction_store_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** transaction_store_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** transaction_store_response get_transactions_by_id */
-                get_transactions_by_id?: (koinos.rpc.transaction_store.Iget_transactions_by_id_response|null);
-            }
-
-            /** Represents a transaction_store_response. */
-            class transaction_store_response implements Itransaction_store_response {
-
-                /**
-                 * Constructs a new transaction_store_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.transaction_store.Itransaction_store_response);
-
-                /** transaction_store_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** transaction_store_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** transaction_store_response get_transactions_by_id. */
-                public get_transactions_by_id?: (koinos.rpc.transaction_store.Iget_transactions_by_id_response|null);
-
-                /** transaction_store_response response. */
-                public response?: ("reserved"|"error"|"get_transactions_by_id");
-
-                /**
-                 * Creates a new transaction_store_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns transaction_store_response instance
-                 */
-                public static create(properties?: koinos.rpc.transaction_store.Itransaction_store_response): koinos.rpc.transaction_store.transaction_store_response;
-
-                /**
-                 * Encodes the specified transaction_store_response message. Does not implicitly {@link koinos.rpc.transaction_store.transaction_store_response.verify|verify} messages.
-                 * @param message transaction_store_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.transaction_store.Itransaction_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified transaction_store_response message, length delimited. Does not implicitly {@link koinos.rpc.transaction_store.transaction_store_response.verify|verify} messages.
-                 * @param message transaction_store_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.transaction_store.Itransaction_store_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a transaction_store_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns transaction_store_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.transaction_store.transaction_store_response;
-
-                /**
-                 * Decodes a transaction_store_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns transaction_store_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.transaction_store.transaction_store_response;
-
-                /**
-                 * Verifies a transaction_store_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a transaction_store_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns transaction_store_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.transaction_store.transaction_store_response;
-
-                /**
-                 * Creates a plain object from a transaction_store_response message. Also converts values to other types if specified.
-                 * @param message transaction_store_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.transaction_store.transaction_store_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this transaction_store_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace chain. */
-        namespace chain {
-
-            /** Properties of a submit_block_request. */
-            interface Isubmit_block_request {
-
-                /** submit_block_request block */
-                block?: (koinos.protocol.Iblock|null);
-            }
-
-            /** Represents a submit_block_request. */
-            class submit_block_request implements Isubmit_block_request {
-
-                /**
-                 * Constructs a new submit_block_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Isubmit_block_request);
-
-                /** submit_block_request block. */
-                public block?: (koinos.protocol.Iblock|null);
-
-                /**
-                 * Creates a new submit_block_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns submit_block_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Isubmit_block_request): koinos.rpc.chain.submit_block_request;
-
-                /**
-                 * Encodes the specified submit_block_request message. Does not implicitly {@link koinos.rpc.chain.submit_block_request.verify|verify} messages.
-                 * @param message submit_block_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Isubmit_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified submit_block_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.submit_block_request.verify|verify} messages.
-                 * @param message submit_block_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Isubmit_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a submit_block_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns submit_block_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.submit_block_request;
-
-                /**
-                 * Decodes a submit_block_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns submit_block_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.submit_block_request;
-
-                /**
-                 * Verifies a submit_block_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a submit_block_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns submit_block_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.submit_block_request;
-
-                /**
-                 * Creates a plain object from a submit_block_request message. Also converts values to other types if specified.
-                 * @param message submit_block_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.submit_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this submit_block_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a submit_block_response. */
-            interface Isubmit_block_response {
-
-                /** submit_block_response receipt */
-                receipt?: (koinos.protocol.Iblock_receipt|null);
-            }
-
-            /** Represents a submit_block_response. */
-            class submit_block_response implements Isubmit_block_response {
-
-                /**
-                 * Constructs a new submit_block_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Isubmit_block_response);
-
-                /** submit_block_response receipt. */
-                public receipt?: (koinos.protocol.Iblock_receipt|null);
-
-                /**
-                 * Creates a new submit_block_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns submit_block_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Isubmit_block_response): koinos.rpc.chain.submit_block_response;
-
-                /**
-                 * Encodes the specified submit_block_response message. Does not implicitly {@link koinos.rpc.chain.submit_block_response.verify|verify} messages.
-                 * @param message submit_block_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Isubmit_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified submit_block_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.submit_block_response.verify|verify} messages.
-                 * @param message submit_block_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Isubmit_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a submit_block_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns submit_block_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.submit_block_response;
-
-                /**
-                 * Decodes a submit_block_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns submit_block_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.submit_block_response;
-
-                /**
-                 * Verifies a submit_block_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a submit_block_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns submit_block_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.submit_block_response;
-
-                /**
-                 * Creates a plain object from a submit_block_response message. Also converts values to other types if specified.
-                 * @param message submit_block_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.submit_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this submit_block_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a submit_transaction_request. */
-            interface Isubmit_transaction_request {
-
-                /** submit_transaction_request transaction */
-                transaction?: (koinos.protocol.Itransaction|null);
-
-                /** submit_transaction_request broadcast */
-                broadcast?: (boolean|null);
-            }
-
-            /** Represents a submit_transaction_request. */
-            class submit_transaction_request implements Isubmit_transaction_request {
-
-                /**
-                 * Constructs a new submit_transaction_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Isubmit_transaction_request);
-
-                /** submit_transaction_request transaction. */
-                public transaction?: (koinos.protocol.Itransaction|null);
-
-                /** submit_transaction_request broadcast. */
-                public broadcast: boolean;
-
-                /**
-                 * Creates a new submit_transaction_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns submit_transaction_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Isubmit_transaction_request): koinos.rpc.chain.submit_transaction_request;
-
-                /**
-                 * Encodes the specified submit_transaction_request message. Does not implicitly {@link koinos.rpc.chain.submit_transaction_request.verify|verify} messages.
-                 * @param message submit_transaction_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Isubmit_transaction_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified submit_transaction_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.submit_transaction_request.verify|verify} messages.
-                 * @param message submit_transaction_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Isubmit_transaction_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a submit_transaction_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns submit_transaction_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.submit_transaction_request;
-
-                /**
-                 * Decodes a submit_transaction_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns submit_transaction_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.submit_transaction_request;
-
-                /**
-                 * Verifies a submit_transaction_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a submit_transaction_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns submit_transaction_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.submit_transaction_request;
-
-                /**
-                 * Creates a plain object from a submit_transaction_request message. Also converts values to other types if specified.
-                 * @param message submit_transaction_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.submit_transaction_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this submit_transaction_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a submit_transaction_response. */
-            interface Isubmit_transaction_response {
-
-                /** submit_transaction_response receipt */
-                receipt?: (koinos.protocol.Itransaction_receipt|null);
-            }
-
-            /** Represents a submit_transaction_response. */
-            class submit_transaction_response implements Isubmit_transaction_response {
-
-                /**
-                 * Constructs a new submit_transaction_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Isubmit_transaction_response);
-
-                /** submit_transaction_response receipt. */
-                public receipt?: (koinos.protocol.Itransaction_receipt|null);
-
-                /**
-                 * Creates a new submit_transaction_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns submit_transaction_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Isubmit_transaction_response): koinos.rpc.chain.submit_transaction_response;
-
-                /**
-                 * Encodes the specified submit_transaction_response message. Does not implicitly {@link koinos.rpc.chain.submit_transaction_response.verify|verify} messages.
-                 * @param message submit_transaction_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Isubmit_transaction_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified submit_transaction_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.submit_transaction_response.verify|verify} messages.
-                 * @param message submit_transaction_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Isubmit_transaction_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a submit_transaction_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns submit_transaction_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.submit_transaction_response;
-
-                /**
-                 * Decodes a submit_transaction_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns submit_transaction_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.submit_transaction_response;
-
-                /**
-                 * Verifies a submit_transaction_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a submit_transaction_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns submit_transaction_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.submit_transaction_response;
-
-                /**
-                 * Creates a plain object from a submit_transaction_response message. Also converts values to other types if specified.
-                 * @param message submit_transaction_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.submit_transaction_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this submit_transaction_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_head_info_request. */
-            interface Iget_head_info_request {
-            }
-
-            /** Represents a get_head_info_request. */
-            class get_head_info_request implements Iget_head_info_request {
-
-                /**
-                 * Constructs a new get_head_info_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_head_info_request);
-
-                /**
-                 * Creates a new get_head_info_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_head_info_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_head_info_request): koinos.rpc.chain.get_head_info_request;
-
-                /**
-                 * Encodes the specified get_head_info_request message. Does not implicitly {@link koinos.rpc.chain.get_head_info_request.verify|verify} messages.
-                 * @param message get_head_info_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_head_info_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_head_info_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_head_info_request.verify|verify} messages.
-                 * @param message get_head_info_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_head_info_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_head_info_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_head_info_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_head_info_request;
-
-                /**
-                 * Decodes a get_head_info_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_head_info_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_head_info_request;
-
-                /**
-                 * Verifies a get_head_info_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_head_info_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_head_info_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_head_info_request;
-
-                /**
-                 * Creates a plain object from a get_head_info_request message. Also converts values to other types if specified.
-                 * @param message get_head_info_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_head_info_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_head_info_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_head_info_response. */
-            interface Iget_head_info_response {
-
-                /** get_head_info_response head_topology */
-                head_topology?: (koinos.Iblock_topology|null);
-
-                /** get_head_info_response last_irreversible_block */
-                last_irreversible_block?: (number|Long|null);
-
-                /** get_head_info_response head_state_merkle_root */
-                head_state_merkle_root?: (Uint8Array|null);
-
-                /** get_head_info_response head_block_time */
-                head_block_time?: (number|Long|null);
-            }
-
-            /** Represents a get_head_info_response. */
-            class get_head_info_response implements Iget_head_info_response {
-
-                /**
-                 * Constructs a new get_head_info_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_head_info_response);
-
-                /** get_head_info_response head_topology. */
-                public head_topology?: (koinos.Iblock_topology|null);
-
-                /** get_head_info_response last_irreversible_block. */
-                public last_irreversible_block: (number|Long);
-
-                /** get_head_info_response head_state_merkle_root. */
-                public head_state_merkle_root: Uint8Array;
-
-                /** get_head_info_response head_block_time. */
-                public head_block_time: (number|Long);
-
-                /**
-                 * Creates a new get_head_info_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_head_info_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_head_info_response): koinos.rpc.chain.get_head_info_response;
-
-                /**
-                 * Encodes the specified get_head_info_response message. Does not implicitly {@link koinos.rpc.chain.get_head_info_response.verify|verify} messages.
-                 * @param message get_head_info_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_head_info_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_head_info_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_head_info_response.verify|verify} messages.
-                 * @param message get_head_info_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_head_info_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_head_info_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_head_info_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_head_info_response;
-
-                /**
-                 * Decodes a get_head_info_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_head_info_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_head_info_response;
-
-                /**
-                 * Verifies a get_head_info_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_head_info_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_head_info_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_head_info_response;
-
-                /**
-                 * Creates a plain object from a get_head_info_response message. Also converts values to other types if specified.
-                 * @param message get_head_info_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_head_info_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_head_info_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_chain_id_request. */
-            interface Iget_chain_id_request {
-            }
-
-            /** Represents a get_chain_id_request. */
-            class get_chain_id_request implements Iget_chain_id_request {
-
-                /**
-                 * Constructs a new get_chain_id_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_chain_id_request);
-
-                /**
-                 * Creates a new get_chain_id_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_chain_id_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_chain_id_request): koinos.rpc.chain.get_chain_id_request;
-
-                /**
-                 * Encodes the specified get_chain_id_request message. Does not implicitly {@link koinos.rpc.chain.get_chain_id_request.verify|verify} messages.
-                 * @param message get_chain_id_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_chain_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_chain_id_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_chain_id_request.verify|verify} messages.
-                 * @param message get_chain_id_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_chain_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_chain_id_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_chain_id_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_chain_id_request;
-
-                /**
-                 * Decodes a get_chain_id_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_chain_id_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_chain_id_request;
-
-                /**
-                 * Verifies a get_chain_id_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_chain_id_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_chain_id_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_chain_id_request;
-
-                /**
-                 * Creates a plain object from a get_chain_id_request message. Also converts values to other types if specified.
-                 * @param message get_chain_id_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_chain_id_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_chain_id_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_chain_id_response. */
-            interface Iget_chain_id_response {
-
-                /** get_chain_id_response chain_id */
-                chain_id?: (Uint8Array|null);
-            }
-
-            /** Represents a get_chain_id_response. */
-            class get_chain_id_response implements Iget_chain_id_response {
-
-                /**
-                 * Constructs a new get_chain_id_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_chain_id_response);
-
-                /** get_chain_id_response chain_id. */
-                public chain_id: Uint8Array;
-
-                /**
-                 * Creates a new get_chain_id_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_chain_id_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_chain_id_response): koinos.rpc.chain.get_chain_id_response;
-
-                /**
-                 * Encodes the specified get_chain_id_response message. Does not implicitly {@link koinos.rpc.chain.get_chain_id_response.verify|verify} messages.
-                 * @param message get_chain_id_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_chain_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_chain_id_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_chain_id_response.verify|verify} messages.
-                 * @param message get_chain_id_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_chain_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_chain_id_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_chain_id_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_chain_id_response;
-
-                /**
-                 * Decodes a get_chain_id_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_chain_id_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_chain_id_response;
-
-                /**
-                 * Verifies a get_chain_id_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_chain_id_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_chain_id_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_chain_id_response;
-
-                /**
-                 * Creates a plain object from a get_chain_id_response message. Also converts values to other types if specified.
-                 * @param message get_chain_id_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_chain_id_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_chain_id_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_fork_heads_request. */
-            interface Iget_fork_heads_request {
-            }
-
-            /** Represents a get_fork_heads_request. */
-            class get_fork_heads_request implements Iget_fork_heads_request {
-
-                /**
-                 * Constructs a new get_fork_heads_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_fork_heads_request);
-
-                /**
-                 * Creates a new get_fork_heads_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_fork_heads_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_fork_heads_request): koinos.rpc.chain.get_fork_heads_request;
-
-                /**
-                 * Encodes the specified get_fork_heads_request message. Does not implicitly {@link koinos.rpc.chain.get_fork_heads_request.verify|verify} messages.
-                 * @param message get_fork_heads_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_fork_heads_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_fork_heads_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_fork_heads_request.verify|verify} messages.
-                 * @param message get_fork_heads_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_fork_heads_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_fork_heads_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_fork_heads_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_fork_heads_request;
-
-                /**
-                 * Decodes a get_fork_heads_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_fork_heads_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_fork_heads_request;
-
-                /**
-                 * Verifies a get_fork_heads_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_fork_heads_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_fork_heads_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_fork_heads_request;
-
-                /**
-                 * Creates a plain object from a get_fork_heads_request message. Also converts values to other types if specified.
-                 * @param message get_fork_heads_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_fork_heads_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_fork_heads_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_fork_heads_response. */
-            interface Iget_fork_heads_response {
-
-                /** get_fork_heads_response last_irreversible_block */
-                last_irreversible_block?: (koinos.Iblock_topology|null);
-
-                /** get_fork_heads_response fork_heads */
-                fork_heads?: (koinos.Iblock_topology[]|null);
-            }
-
-            /** Represents a get_fork_heads_response. */
-            class get_fork_heads_response implements Iget_fork_heads_response {
-
-                /**
-                 * Constructs a new get_fork_heads_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_fork_heads_response);
-
-                /** get_fork_heads_response last_irreversible_block. */
-                public last_irreversible_block?: (koinos.Iblock_topology|null);
-
-                /** get_fork_heads_response fork_heads. */
-                public fork_heads: koinos.Iblock_topology[];
-
-                /**
-                 * Creates a new get_fork_heads_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_fork_heads_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_fork_heads_response): koinos.rpc.chain.get_fork_heads_response;
-
-                /**
-                 * Encodes the specified get_fork_heads_response message. Does not implicitly {@link koinos.rpc.chain.get_fork_heads_response.verify|verify} messages.
-                 * @param message get_fork_heads_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_fork_heads_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_fork_heads_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_fork_heads_response.verify|verify} messages.
-                 * @param message get_fork_heads_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_fork_heads_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_fork_heads_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_fork_heads_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_fork_heads_response;
-
-                /**
-                 * Decodes a get_fork_heads_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_fork_heads_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_fork_heads_response;
-
-                /**
-                 * Verifies a get_fork_heads_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_fork_heads_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_fork_heads_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_fork_heads_response;
-
-                /**
-                 * Creates a plain object from a get_fork_heads_response message. Also converts values to other types if specified.
-                 * @param message get_fork_heads_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_fork_heads_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_fork_heads_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a read_contract_request. */
-            interface Iread_contract_request {
-
-                /** read_contract_request contract_id */
-                contract_id?: (Uint8Array|null);
-
-                /** read_contract_request entry_point */
-                entry_point?: (number|null);
-
-                /** read_contract_request args */
-                args?: (Uint8Array|null);
-            }
-
-            /** Represents a read_contract_request. */
-            class read_contract_request implements Iread_contract_request {
-
-                /**
-                 * Constructs a new read_contract_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iread_contract_request);
-
-                /** read_contract_request contract_id. */
-                public contract_id: Uint8Array;
-
-                /** read_contract_request entry_point. */
-                public entry_point: number;
-
-                /** read_contract_request args. */
-                public args: Uint8Array;
-
-                /**
-                 * Creates a new read_contract_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns read_contract_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iread_contract_request): koinos.rpc.chain.read_contract_request;
-
-                /**
-                 * Encodes the specified read_contract_request message. Does not implicitly {@link koinos.rpc.chain.read_contract_request.verify|verify} messages.
-                 * @param message read_contract_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iread_contract_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified read_contract_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.read_contract_request.verify|verify} messages.
-                 * @param message read_contract_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iread_contract_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a read_contract_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns read_contract_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.read_contract_request;
-
-                /**
-                 * Decodes a read_contract_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns read_contract_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.read_contract_request;
-
-                /**
-                 * Verifies a read_contract_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a read_contract_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns read_contract_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.read_contract_request;
-
-                /**
-                 * Creates a plain object from a read_contract_request message. Also converts values to other types if specified.
-                 * @param message read_contract_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.read_contract_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this read_contract_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a read_contract_response. */
-            interface Iread_contract_response {
-
-                /** read_contract_response result */
-                result?: (Uint8Array|null);
-
-                /** read_contract_response logs */
-                logs?: (string[]|null);
-            }
-
-            /** Represents a read_contract_response. */
-            class read_contract_response implements Iread_contract_response {
-
-                /**
-                 * Constructs a new read_contract_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iread_contract_response);
-
-                /** read_contract_response result. */
-                public result: Uint8Array;
-
-                /** read_contract_response logs. */
-                public logs: string[];
-
-                /**
-                 * Creates a new read_contract_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns read_contract_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iread_contract_response): koinos.rpc.chain.read_contract_response;
-
-                /**
-                 * Encodes the specified read_contract_response message. Does not implicitly {@link koinos.rpc.chain.read_contract_response.verify|verify} messages.
-                 * @param message read_contract_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iread_contract_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified read_contract_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.read_contract_response.verify|verify} messages.
-                 * @param message read_contract_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iread_contract_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a read_contract_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns read_contract_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.read_contract_response;
-
-                /**
-                 * Decodes a read_contract_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns read_contract_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.read_contract_response;
-
-                /**
-                 * Verifies a read_contract_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a read_contract_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns read_contract_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.read_contract_response;
-
-                /**
-                 * Creates a plain object from a read_contract_response message. Also converts values to other types if specified.
-                 * @param message read_contract_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.read_contract_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this read_contract_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_account_nonce_request. */
-            interface Iget_account_nonce_request {
-
-                /** get_account_nonce_request account */
-                account?: (Uint8Array|null);
-            }
-
-            /** Represents a get_account_nonce_request. */
-            class get_account_nonce_request implements Iget_account_nonce_request {
-
-                /**
-                 * Constructs a new get_account_nonce_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_account_nonce_request);
-
-                /** get_account_nonce_request account. */
-                public account: Uint8Array;
-
-                /**
-                 * Creates a new get_account_nonce_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_account_nonce_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_account_nonce_request): koinos.rpc.chain.get_account_nonce_request;
-
-                /**
-                 * Encodes the specified get_account_nonce_request message. Does not implicitly {@link koinos.rpc.chain.get_account_nonce_request.verify|verify} messages.
-                 * @param message get_account_nonce_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_account_nonce_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_account_nonce_request.verify|verify} messages.
-                 * @param message get_account_nonce_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_account_nonce_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_account_nonce_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_account_nonce_request;
-
-                /**
-                 * Decodes a get_account_nonce_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_account_nonce_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_account_nonce_request;
-
-                /**
-                 * Verifies a get_account_nonce_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_account_nonce_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_account_nonce_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_account_nonce_request;
-
-                /**
-                 * Creates a plain object from a get_account_nonce_request message. Also converts values to other types if specified.
-                 * @param message get_account_nonce_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_account_nonce_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_account_nonce_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_account_nonce_response. */
-            interface Iget_account_nonce_response {
-
-                /** get_account_nonce_response nonce */
-                nonce?: (Uint8Array|null);
-            }
-
-            /** Represents a get_account_nonce_response. */
-            class get_account_nonce_response implements Iget_account_nonce_response {
-
-                /**
-                 * Constructs a new get_account_nonce_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_account_nonce_response);
-
-                /** get_account_nonce_response nonce. */
-                public nonce: Uint8Array;
-
-                /**
-                 * Creates a new get_account_nonce_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_account_nonce_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_account_nonce_response): koinos.rpc.chain.get_account_nonce_response;
-
-                /**
-                 * Encodes the specified get_account_nonce_response message. Does not implicitly {@link koinos.rpc.chain.get_account_nonce_response.verify|verify} messages.
-                 * @param message get_account_nonce_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_account_nonce_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_account_nonce_response.verify|verify} messages.
-                 * @param message get_account_nonce_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_account_nonce_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_account_nonce_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_account_nonce_response;
-
-                /**
-                 * Decodes a get_account_nonce_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_account_nonce_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_account_nonce_response;
-
-                /**
-                 * Verifies a get_account_nonce_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_account_nonce_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_account_nonce_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_account_nonce_response;
-
-                /**
-                 * Creates a plain object from a get_account_nonce_response message. Also converts values to other types if specified.
-                 * @param message get_account_nonce_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_account_nonce_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_account_nonce_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_account_rc_request. */
-            interface Iget_account_rc_request {
-
-                /** get_account_rc_request account */
-                account?: (Uint8Array|null);
-            }
-
-            /** Represents a get_account_rc_request. */
-            class get_account_rc_request implements Iget_account_rc_request {
-
-                /**
-                 * Constructs a new get_account_rc_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_account_rc_request);
-
-                /** get_account_rc_request account. */
-                public account: Uint8Array;
-
-                /**
-                 * Creates a new get_account_rc_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_account_rc_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_account_rc_request): koinos.rpc.chain.get_account_rc_request;
-
-                /**
-                 * Encodes the specified get_account_rc_request message. Does not implicitly {@link koinos.rpc.chain.get_account_rc_request.verify|verify} messages.
-                 * @param message get_account_rc_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_account_rc_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_account_rc_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_account_rc_request.verify|verify} messages.
-                 * @param message get_account_rc_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_account_rc_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_account_rc_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_account_rc_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_account_rc_request;
-
-                /**
-                 * Decodes a get_account_rc_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_account_rc_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_account_rc_request;
-
-                /**
-                 * Verifies a get_account_rc_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_account_rc_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_account_rc_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_account_rc_request;
-
-                /**
-                 * Creates a plain object from a get_account_rc_request message. Also converts values to other types if specified.
-                 * @param message get_account_rc_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_account_rc_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_account_rc_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_account_rc_response. */
-            interface Iget_account_rc_response {
-
-                /** get_account_rc_response rc */
-                rc?: (number|Long|null);
-            }
-
-            /** Represents a get_account_rc_response. */
-            class get_account_rc_response implements Iget_account_rc_response {
-
-                /**
-                 * Constructs a new get_account_rc_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_account_rc_response);
-
-                /** get_account_rc_response rc. */
-                public rc: (number|Long);
-
-                /**
-                 * Creates a new get_account_rc_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_account_rc_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_account_rc_response): koinos.rpc.chain.get_account_rc_response;
-
-                /**
-                 * Encodes the specified get_account_rc_response message. Does not implicitly {@link koinos.rpc.chain.get_account_rc_response.verify|verify} messages.
-                 * @param message get_account_rc_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_account_rc_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_account_rc_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_account_rc_response.verify|verify} messages.
-                 * @param message get_account_rc_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_account_rc_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_account_rc_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_account_rc_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_account_rc_response;
-
-                /**
-                 * Decodes a get_account_rc_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_account_rc_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_account_rc_response;
-
-                /**
-                 * Verifies a get_account_rc_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_account_rc_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_account_rc_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_account_rc_response;
-
-                /**
-                 * Creates a plain object from a get_account_rc_response message. Also converts values to other types if specified.
-                 * @param message get_account_rc_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_account_rc_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_account_rc_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_resource_limits_request. */
-            interface Iget_resource_limits_request {
-            }
-
-            /** Represents a get_resource_limits_request. */
-            class get_resource_limits_request implements Iget_resource_limits_request {
-
-                /**
-                 * Constructs a new get_resource_limits_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_resource_limits_request);
-
-                /**
-                 * Creates a new get_resource_limits_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_resource_limits_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_resource_limits_request): koinos.rpc.chain.get_resource_limits_request;
-
-                /**
-                 * Encodes the specified get_resource_limits_request message. Does not implicitly {@link koinos.rpc.chain.get_resource_limits_request.verify|verify} messages.
-                 * @param message get_resource_limits_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_resource_limits_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_resource_limits_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_resource_limits_request.verify|verify} messages.
-                 * @param message get_resource_limits_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_resource_limits_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_resource_limits_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_resource_limits_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_resource_limits_request;
-
-                /**
-                 * Decodes a get_resource_limits_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_resource_limits_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_resource_limits_request;
-
-                /**
-                 * Verifies a get_resource_limits_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_resource_limits_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_resource_limits_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_resource_limits_request;
-
-                /**
-                 * Creates a plain object from a get_resource_limits_request message. Also converts values to other types if specified.
-                 * @param message get_resource_limits_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_resource_limits_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_resource_limits_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_resource_limits_response. */
-            interface Iget_resource_limits_response {
-
-                /** get_resource_limits_response resource_limit_data */
-                resource_limit_data?: (koinos.chain.Iresource_limit_data|null);
-            }
-
-            /** Represents a get_resource_limits_response. */
-            class get_resource_limits_response implements Iget_resource_limits_response {
-
-                /**
-                 * Constructs a new get_resource_limits_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iget_resource_limits_response);
-
-                /** get_resource_limits_response resource_limit_data. */
-                public resource_limit_data?: (koinos.chain.Iresource_limit_data|null);
-
-                /**
-                 * Creates a new get_resource_limits_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_resource_limits_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iget_resource_limits_response): koinos.rpc.chain.get_resource_limits_response;
-
-                /**
-                 * Encodes the specified get_resource_limits_response message. Does not implicitly {@link koinos.rpc.chain.get_resource_limits_response.verify|verify} messages.
-                 * @param message get_resource_limits_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iget_resource_limits_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_resource_limits_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.get_resource_limits_response.verify|verify} messages.
-                 * @param message get_resource_limits_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iget_resource_limits_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_resource_limits_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_resource_limits_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.get_resource_limits_response;
-
-                /**
-                 * Decodes a get_resource_limits_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_resource_limits_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.get_resource_limits_response;
-
-                /**
-                 * Verifies a get_resource_limits_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_resource_limits_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_resource_limits_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.get_resource_limits_response;
-
-                /**
-                 * Creates a plain object from a get_resource_limits_response message. Also converts values to other types if specified.
-                 * @param message get_resource_limits_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.get_resource_limits_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_resource_limits_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an invoke_system_call_request. */
-            interface Iinvoke_system_call_request {
-
-                /** invoke_system_call_request id */
-                id?: (number|Long|null);
-
-                /** invoke_system_call_request name */
-                name?: (string|null);
-
-                /** invoke_system_call_request args */
-                args?: (Uint8Array|null);
-
-                /** invoke_system_call_request caller_data */
-                caller_data?: (koinos.chain.Icaller_data|null);
-            }
-
-            /** Represents an invoke_system_call_request. */
-            class invoke_system_call_request implements Iinvoke_system_call_request {
-
-                /**
-                 * Constructs a new invoke_system_call_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iinvoke_system_call_request);
-
-                /** invoke_system_call_request id. */
-                public id?: (number|Long|null);
-
-                /** invoke_system_call_request name. */
-                public name?: (string|null);
-
-                /** invoke_system_call_request args. */
-                public args: Uint8Array;
-
-                /** invoke_system_call_request caller_data. */
-                public caller_data?: (koinos.chain.Icaller_data|null);
-
-                /** invoke_system_call_request system_call. */
-                public system_call?: ("id"|"name");
-
-                /** invoke_system_call_request _caller_data. */
-                public _caller_data?: "caller_data";
-
-                /**
-                 * Creates a new invoke_system_call_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns invoke_system_call_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iinvoke_system_call_request): koinos.rpc.chain.invoke_system_call_request;
-
-                /**
-                 * Encodes the specified invoke_system_call_request message. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_request.verify|verify} messages.
-                 * @param message invoke_system_call_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iinvoke_system_call_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified invoke_system_call_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_request.verify|verify} messages.
-                 * @param message invoke_system_call_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iinvoke_system_call_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an invoke_system_call_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns invoke_system_call_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.invoke_system_call_request;
-
-                /**
-                 * Decodes an invoke_system_call_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns invoke_system_call_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.invoke_system_call_request;
-
-                /**
-                 * Verifies an invoke_system_call_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an invoke_system_call_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns invoke_system_call_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.invoke_system_call_request;
-
-                /**
-                 * Creates a plain object from an invoke_system_call_request message. Also converts values to other types if specified.
-                 * @param message invoke_system_call_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.invoke_system_call_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this invoke_system_call_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of an invoke_system_call_response. */
-            interface Iinvoke_system_call_response {
-
-                /** invoke_system_call_response value */
-                value?: (Uint8Array|null);
-            }
-
-            /** Represents an invoke_system_call_response. */
-            class invoke_system_call_response implements Iinvoke_system_call_response {
-
-                /**
-                 * Constructs a new invoke_system_call_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Iinvoke_system_call_response);
-
-                /** invoke_system_call_response value. */
-                public value: Uint8Array;
-
-                /**
-                 * Creates a new invoke_system_call_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns invoke_system_call_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Iinvoke_system_call_response): koinos.rpc.chain.invoke_system_call_response;
-
-                /**
-                 * Encodes the specified invoke_system_call_response message. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_response.verify|verify} messages.
-                 * @param message invoke_system_call_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Iinvoke_system_call_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified invoke_system_call_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.invoke_system_call_response.verify|verify} messages.
-                 * @param message invoke_system_call_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Iinvoke_system_call_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes an invoke_system_call_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns invoke_system_call_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.invoke_system_call_response;
-
-                /**
-                 * Decodes an invoke_system_call_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns invoke_system_call_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.invoke_system_call_response;
-
-                /**
-                 * Verifies an invoke_system_call_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates an invoke_system_call_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns invoke_system_call_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.invoke_system_call_response;
-
-                /**
-                 * Creates a plain object from an invoke_system_call_response message. Also converts values to other types if specified.
-                 * @param message invoke_system_call_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.invoke_system_call_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this invoke_system_call_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a chain_request. */
-            interface Ichain_request {
-
-                /** chain_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** chain_request submit_block */
-                submit_block?: (koinos.rpc.chain.Isubmit_block_request|null);
-
-                /** chain_request submit_transaction */
-                submit_transaction?: (koinos.rpc.chain.Isubmit_transaction_request|null);
-
-                /** chain_request get_head_info */
-                get_head_info?: (koinos.rpc.chain.Iget_head_info_request|null);
-
-                /** chain_request get_chain_id */
-                get_chain_id?: (koinos.rpc.chain.Iget_chain_id_request|null);
-
-                /** chain_request get_fork_heads */
-                get_fork_heads?: (koinos.rpc.chain.Iget_fork_heads_request|null);
-
-                /** chain_request read_contract */
-                read_contract?: (koinos.rpc.chain.Iread_contract_request|null);
-
-                /** chain_request get_account_nonce */
-                get_account_nonce?: (koinos.rpc.chain.Iget_account_nonce_request|null);
-
-                /** chain_request get_account_rc */
-                get_account_rc?: (koinos.rpc.chain.Iget_account_rc_request|null);
-
-                /** chain_request get_resource_limits */
-                get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_request|null);
-
-                /** chain_request invoke_system_call */
-                invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_request|null);
-            }
-
-            /** Represents a chain_request. */
-            class chain_request implements Ichain_request {
-
-                /**
-                 * Constructs a new chain_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Ichain_request);
-
-                /** chain_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** chain_request submit_block. */
-                public submit_block?: (koinos.rpc.chain.Isubmit_block_request|null);
-
-                /** chain_request submit_transaction. */
-                public submit_transaction?: (koinos.rpc.chain.Isubmit_transaction_request|null);
-
-                /** chain_request get_head_info. */
-                public get_head_info?: (koinos.rpc.chain.Iget_head_info_request|null);
-
-                /** chain_request get_chain_id. */
-                public get_chain_id?: (koinos.rpc.chain.Iget_chain_id_request|null);
-
-                /** chain_request get_fork_heads. */
-                public get_fork_heads?: (koinos.rpc.chain.Iget_fork_heads_request|null);
-
-                /** chain_request read_contract. */
-                public read_contract?: (koinos.rpc.chain.Iread_contract_request|null);
-
-                /** chain_request get_account_nonce. */
-                public get_account_nonce?: (koinos.rpc.chain.Iget_account_nonce_request|null);
-
-                /** chain_request get_account_rc. */
-                public get_account_rc?: (koinos.rpc.chain.Iget_account_rc_request|null);
-
-                /** chain_request get_resource_limits. */
-                public get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_request|null);
-
-                /** chain_request invoke_system_call. */
-                public invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_request|null);
-
-                /** chain_request request. */
-                public request?: ("reserved"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
-
-                /**
-                 * Creates a new chain_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns chain_request instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Ichain_request): koinos.rpc.chain.chain_request;
-
-                /**
-                 * Encodes the specified chain_request message. Does not implicitly {@link koinos.rpc.chain.chain_request.verify|verify} messages.
-                 * @param message chain_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Ichain_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified chain_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.chain_request.verify|verify} messages.
-                 * @param message chain_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Ichain_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a chain_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns chain_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.chain_request;
-
-                /**
-                 * Decodes a chain_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns chain_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.chain_request;
-
-                /**
-                 * Verifies a chain_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a chain_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns chain_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.chain_request;
-
-                /**
-                 * Creates a plain object from a chain_request message. Also converts values to other types if specified.
-                 * @param message chain_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.chain_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this chain_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a chain_response. */
-            interface Ichain_response {
-
-                /** chain_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** chain_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** chain_response submit_block */
-                submit_block?: (koinos.rpc.chain.Isubmit_block_response|null);
-
-                /** chain_response submit_transaction */
-                submit_transaction?: (koinos.rpc.chain.Isubmit_transaction_response|null);
-
-                /** chain_response get_head_info */
-                get_head_info?: (koinos.rpc.chain.Iget_head_info_response|null);
-
-                /** chain_response get_chain_id */
-                get_chain_id?: (koinos.rpc.chain.Iget_chain_id_response|null);
-
-                /** chain_response get_fork_heads */
-                get_fork_heads?: (koinos.rpc.chain.Iget_fork_heads_response|null);
-
-                /** chain_response read_contract */
-                read_contract?: (koinos.rpc.chain.Iread_contract_response|null);
-
-                /** chain_response get_account_nonce */
-                get_account_nonce?: (koinos.rpc.chain.Iget_account_nonce_response|null);
-
-                /** chain_response get_account_rc */
-                get_account_rc?: (koinos.rpc.chain.Iget_account_rc_response|null);
-
-                /** chain_response get_resource_limits */
-                get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_response|null);
-
-                /** chain_response invoke_system_call */
-                invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_response|null);
-            }
-
-            /** Represents a chain_response. */
-            class chain_response implements Ichain_response {
-
-                /**
-                 * Constructs a new chain_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.chain.Ichain_response);
-
-                /** chain_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** chain_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** chain_response submit_block. */
-                public submit_block?: (koinos.rpc.chain.Isubmit_block_response|null);
-
-                /** chain_response submit_transaction. */
-                public submit_transaction?: (koinos.rpc.chain.Isubmit_transaction_response|null);
-
-                /** chain_response get_head_info. */
-                public get_head_info?: (koinos.rpc.chain.Iget_head_info_response|null);
-
-                /** chain_response get_chain_id. */
-                public get_chain_id?: (koinos.rpc.chain.Iget_chain_id_response|null);
-
-                /** chain_response get_fork_heads. */
-                public get_fork_heads?: (koinos.rpc.chain.Iget_fork_heads_response|null);
-
-                /** chain_response read_contract. */
-                public read_contract?: (koinos.rpc.chain.Iread_contract_response|null);
-
-                /** chain_response get_account_nonce. */
-                public get_account_nonce?: (koinos.rpc.chain.Iget_account_nonce_response|null);
-
-                /** chain_response get_account_rc. */
-                public get_account_rc?: (koinos.rpc.chain.Iget_account_rc_response|null);
-
-                /** chain_response get_resource_limits. */
-                public get_resource_limits?: (koinos.rpc.chain.Iget_resource_limits_response|null);
-
-                /** chain_response invoke_system_call. */
-                public invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_response|null);
-
-                /** chain_response response. */
-                public response?: ("reserved"|"error"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
-
-                /**
-                 * Creates a new chain_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns chain_response instance
-                 */
-                public static create(properties?: koinos.rpc.chain.Ichain_response): koinos.rpc.chain.chain_response;
-
-                /**
-                 * Encodes the specified chain_response message. Does not implicitly {@link koinos.rpc.chain.chain_response.verify|verify} messages.
-                 * @param message chain_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.chain.Ichain_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified chain_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.chain_response.verify|verify} messages.
-                 * @param message chain_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.chain.Ichain_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a chain_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns chain_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.chain_response;
-
-                /**
-                 * Decodes a chain_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns chain_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.chain_response;
-
-                /**
-                 * Verifies a chain_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a chain_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns chain_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.chain_response;
-
-                /**
-                 * Creates a plain object from a chain_response message. Also converts values to other types if specified.
-                 * @param message chain_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.chain.chain_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this chain_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-
-        /** Namespace mempool. */
-        namespace mempool {
-
-            /** Properties of a pending_transaction. */
-            interface Ipending_transaction {
-
-                /** pending_transaction transaction */
-                transaction?: (koinos.protocol.Itransaction|null);
-
-                /** pending_transaction disk_storage_used */
-                disk_storage_used?: (number|Long|null);
-
-                /** pending_transaction network_bandwidth_used */
-                network_bandwidth_used?: (number|Long|null);
-
-                /** pending_transaction compute_bandwidth_used */
-                compute_bandwidth_used?: (number|Long|null);
-            }
-
-            /** Represents a pending_transaction. */
-            class pending_transaction implements Ipending_transaction {
-
-                /**
-                 * Constructs a new pending_transaction.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Ipending_transaction);
-
-                /** pending_transaction transaction. */
-                public transaction?: (koinos.protocol.Itransaction|null);
-
-                /** pending_transaction disk_storage_used. */
-                public disk_storage_used: (number|Long);
-
-                /** pending_transaction network_bandwidth_used. */
-                public network_bandwidth_used: (number|Long);
-
-                /** pending_transaction compute_bandwidth_used. */
-                public compute_bandwidth_used: (number|Long);
-
-                /**
-                 * Creates a new pending_transaction instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns pending_transaction instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Ipending_transaction): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Encodes the specified pending_transaction message. Does not implicitly {@link koinos.rpc.mempool.pending_transaction.verify|verify} messages.
-                 * @param message pending_transaction message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified pending_transaction message, length delimited. Does not implicitly {@link koinos.rpc.mempool.pending_transaction.verify|verify} messages.
-                 * @param message pending_transaction message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a pending_transaction message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns pending_transaction
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Decodes a pending_transaction message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns pending_transaction
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Verifies a pending_transaction message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a pending_transaction message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns pending_transaction
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Creates a plain object from a pending_transaction message. Also converts values to other types if specified.
-                 * @param message pending_transaction
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.pending_transaction, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this pending_transaction to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_pending_account_resources_request. */
-            interface Icheck_pending_account_resources_request {
-
-                /** check_pending_account_resources_request payer */
-                payer?: (Uint8Array|null);
-
-                /** check_pending_account_resources_request max_payer_rc */
-                max_payer_rc?: (number|Long|null);
-
-                /** check_pending_account_resources_request rc_limit */
-                rc_limit?: (number|Long|null);
-
-                /** check_pending_account_resources_request block_id */
-                block_id?: (Uint8Array|null);
-            }
-
-            /** Represents a check_pending_account_resources_request. */
-            class check_pending_account_resources_request implements Icheck_pending_account_resources_request {
-
-                /**
-                 * Constructs a new check_pending_account_resources_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_pending_account_resources_request);
-
-                /** check_pending_account_resources_request payer. */
-                public payer: Uint8Array;
-
-                /** check_pending_account_resources_request max_payer_rc. */
-                public max_payer_rc: (number|Long);
-
-                /** check_pending_account_resources_request rc_limit. */
-                public rc_limit: (number|Long);
-
-                /** check_pending_account_resources_request block_id. */
-                public block_id?: (Uint8Array|null);
-
-                /** check_pending_account_resources_request _block_id. */
-                public _block_id?: "block_id";
-
-                /**
-                 * Creates a new check_pending_account_resources_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_pending_account_resources_request instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_pending_account_resources_request): koinos.rpc.mempool.check_pending_account_resources_request;
-
-                /**
-                 * Encodes the specified check_pending_account_resources_request message. Does not implicitly {@link koinos.rpc.mempool.check_pending_account_resources_request.verify|verify} messages.
-                 * @param message check_pending_account_resources_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_pending_account_resources_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_pending_account_resources_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_pending_account_resources_request.verify|verify} messages.
-                 * @param message check_pending_account_resources_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_pending_account_resources_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_pending_account_resources_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_pending_account_resources_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_pending_account_resources_request;
-
-                /**
-                 * Decodes a check_pending_account_resources_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_pending_account_resources_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_pending_account_resources_request;
-
-                /**
-                 * Verifies a check_pending_account_resources_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_pending_account_resources_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_pending_account_resources_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_pending_account_resources_request;
-
-                /**
-                 * Creates a plain object from a check_pending_account_resources_request message. Also converts values to other types if specified.
-                 * @param message check_pending_account_resources_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_pending_account_resources_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_pending_account_resources_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_pending_account_resources_response. */
-            interface Icheck_pending_account_resources_response {
-
-                /** check_pending_account_resources_response success */
-                success?: (boolean|null);
-            }
-
-            /** Represents a check_pending_account_resources_response. */
-            class check_pending_account_resources_response implements Icheck_pending_account_resources_response {
-
-                /**
-                 * Constructs a new check_pending_account_resources_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_pending_account_resources_response);
-
-                /** check_pending_account_resources_response success. */
-                public success: boolean;
-
-                /**
-                 * Creates a new check_pending_account_resources_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_pending_account_resources_response instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_pending_account_resources_response): koinos.rpc.mempool.check_pending_account_resources_response;
-
-                /**
-                 * Encodes the specified check_pending_account_resources_response message. Does not implicitly {@link koinos.rpc.mempool.check_pending_account_resources_response.verify|verify} messages.
-                 * @param message check_pending_account_resources_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_pending_account_resources_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_pending_account_resources_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_pending_account_resources_response.verify|verify} messages.
-                 * @param message check_pending_account_resources_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_pending_account_resources_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_pending_account_resources_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_pending_account_resources_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_pending_account_resources_response;
-
-                /**
-                 * Decodes a check_pending_account_resources_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_pending_account_resources_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_pending_account_resources_response;
-
-                /**
-                 * Verifies a check_pending_account_resources_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_pending_account_resources_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_pending_account_resources_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_pending_account_resources_response;
-
-                /**
-                 * Creates a plain object from a check_pending_account_resources_response message. Also converts values to other types if specified.
-                 * @param message check_pending_account_resources_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_pending_account_resources_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_pending_account_resources_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_pending_transactions_request. */
-            interface Iget_pending_transactions_request {
-
-                /** get_pending_transactions_request limit */
-                limit?: (number|Long|null);
-
-                /** get_pending_transactions_request block_id */
-                block_id?: (Uint8Array|null);
-            }
-
-            /** Represents a get_pending_transactions_request. */
-            class get_pending_transactions_request implements Iget_pending_transactions_request {
-
-                /**
-                 * Constructs a new get_pending_transactions_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Iget_pending_transactions_request);
-
-                /** get_pending_transactions_request limit. */
-                public limit: (number|Long);
-
-                /** get_pending_transactions_request block_id. */
-                public block_id?: (Uint8Array|null);
-
-                /** get_pending_transactions_request _block_id. */
-                public _block_id?: "block_id";
-
-                /**
-                 * Creates a new get_pending_transactions_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_pending_transactions_request instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Iget_pending_transactions_request): koinos.rpc.mempool.get_pending_transactions_request;
-
-                /**
-                 * Encodes the specified get_pending_transactions_request message. Does not implicitly {@link koinos.rpc.mempool.get_pending_transactions_request.verify|verify} messages.
-                 * @param message get_pending_transactions_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Iget_pending_transactions_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_pending_transactions_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.get_pending_transactions_request.verify|verify} messages.
-                 * @param message get_pending_transactions_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Iget_pending_transactions_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_pending_transactions_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_pending_transactions_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.get_pending_transactions_request;
-
-                /**
-                 * Decodes a get_pending_transactions_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_pending_transactions_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.get_pending_transactions_request;
-
-                /**
-                 * Verifies a get_pending_transactions_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_pending_transactions_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_pending_transactions_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.get_pending_transactions_request;
-
-                /**
-                 * Creates a plain object from a get_pending_transactions_request message. Also converts values to other types if specified.
-                 * @param message get_pending_transactions_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.get_pending_transactions_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_pending_transactions_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a get_pending_transactions_response. */
-            interface Iget_pending_transactions_response {
-
-                /** get_pending_transactions_response pending_transactions */
-                pending_transactions?: (koinos.rpc.mempool.Ipending_transaction[]|null);
-            }
-
-            /** Represents a get_pending_transactions_response. */
-            class get_pending_transactions_response implements Iget_pending_transactions_response {
-
-                /**
-                 * Constructs a new get_pending_transactions_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Iget_pending_transactions_response);
-
-                /** get_pending_transactions_response pending_transactions. */
-                public pending_transactions: koinos.rpc.mempool.Ipending_transaction[];
-
-                /**
-                 * Creates a new get_pending_transactions_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns get_pending_transactions_response instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Iget_pending_transactions_response): koinos.rpc.mempool.get_pending_transactions_response;
-
-                /**
-                 * Encodes the specified get_pending_transactions_response message. Does not implicitly {@link koinos.rpc.mempool.get_pending_transactions_response.verify|verify} messages.
-                 * @param message get_pending_transactions_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Iget_pending_transactions_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified get_pending_transactions_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.get_pending_transactions_response.verify|verify} messages.
-                 * @param message get_pending_transactions_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Iget_pending_transactions_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a get_pending_transactions_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns get_pending_transactions_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.get_pending_transactions_response;
-
-                /**
-                 * Decodes a get_pending_transactions_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns get_pending_transactions_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.get_pending_transactions_response;
-
-                /**
-                 * Verifies a get_pending_transactions_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a get_pending_transactions_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns get_pending_transactions_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.get_pending_transactions_response;
-
-                /**
-                 * Creates a plain object from a get_pending_transactions_response message. Also converts values to other types if specified.
-                 * @param message get_pending_transactions_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.get_pending_transactions_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this get_pending_transactions_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_account_nonce_request. */
-            interface Icheck_account_nonce_request {
-
-                /** check_account_nonce_request payee */
-                payee?: (Uint8Array|null);
-
-                /** check_account_nonce_request nonce */
-                nonce?: (Uint8Array|null);
-
-                /** check_account_nonce_request block_id */
-                block_id?: (Uint8Array|null);
-            }
-
-            /** Represents a check_account_nonce_request. */
-            class check_account_nonce_request implements Icheck_account_nonce_request {
-
-                /**
-                 * Constructs a new check_account_nonce_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_account_nonce_request);
-
-                /** check_account_nonce_request payee. */
-                public payee: Uint8Array;
-
-                /** check_account_nonce_request nonce. */
-                public nonce: Uint8Array;
-
-                /** check_account_nonce_request block_id. */
-                public block_id?: (Uint8Array|null);
-
-                /** check_account_nonce_request _block_id. */
-                public _block_id?: "block_id";
-
-                /**
-                 * Creates a new check_account_nonce_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_account_nonce_request instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_account_nonce_request): koinos.rpc.mempool.check_account_nonce_request;
-
-                /**
-                 * Encodes the specified check_account_nonce_request message. Does not implicitly {@link koinos.rpc.mempool.check_account_nonce_request.verify|verify} messages.
-                 * @param message check_account_nonce_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_account_nonce_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_account_nonce_request.verify|verify} messages.
-                 * @param message check_account_nonce_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_account_nonce_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_account_nonce_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_account_nonce_request;
-
-                /**
-                 * Decodes a check_account_nonce_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_account_nonce_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_account_nonce_request;
-
-                /**
-                 * Verifies a check_account_nonce_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_account_nonce_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_account_nonce_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_account_nonce_request;
-
-                /**
-                 * Creates a plain object from a check_account_nonce_request message. Also converts values to other types if specified.
-                 * @param message check_account_nonce_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_account_nonce_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_account_nonce_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_account_nonce_response. */
-            interface Icheck_account_nonce_response {
-
-                /** check_account_nonce_response success */
-                success?: (boolean|null);
-            }
-
-            /** Represents a check_account_nonce_response. */
-            class check_account_nonce_response implements Icheck_account_nonce_response {
-
-                /**
-                 * Constructs a new check_account_nonce_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_account_nonce_response);
-
-                /** check_account_nonce_response success. */
-                public success: boolean;
-
-                /**
-                 * Creates a new check_account_nonce_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_account_nonce_response instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_account_nonce_response): koinos.rpc.mempool.check_account_nonce_response;
-
-                /**
-                 * Encodes the specified check_account_nonce_response message. Does not implicitly {@link koinos.rpc.mempool.check_account_nonce_response.verify|verify} messages.
-                 * @param message check_account_nonce_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_account_nonce_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_account_nonce_response.verify|verify} messages.
-                 * @param message check_account_nonce_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_account_nonce_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_account_nonce_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_account_nonce_response;
-
-                /**
-                 * Decodes a check_account_nonce_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_account_nonce_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_account_nonce_response;
-
-                /**
-                 * Verifies a check_account_nonce_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_account_nonce_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_account_nonce_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_account_nonce_response;
-
-                /**
-                 * Creates a plain object from a check_account_nonce_response message. Also converts values to other types if specified.
-                 * @param message check_account_nonce_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_account_nonce_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_account_nonce_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_transaction_eligibility_request. */
-            interface Icheck_transaction_eligibility_request {
-
-                /** check_transaction_eligibility_request payer */
-                payer?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request payee */
-                payee?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request nonce */
-                nonce?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request max_payer_rc */
-                max_payer_rc?: (number|Long|null);
-
-                /** check_transaction_eligibility_request rc_limit */
-                rc_limit?: (number|Long|null);
-
-                /** check_transaction_eligibility_request block_id */
-                block_id?: (Uint8Array|null);
-            }
-
-            /** Represents a check_transaction_eligibility_request. */
-            class check_transaction_eligibility_request implements Icheck_transaction_eligibility_request {
-
-                /**
-                 * Constructs a new check_transaction_eligibility_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_request);
-
-                /** check_transaction_eligibility_request payer. */
-                public payer: Uint8Array;
-
-                /** check_transaction_eligibility_request payee. */
-                public payee: Uint8Array;
-
-                /** check_transaction_eligibility_request nonce. */
-                public nonce: Uint8Array;
-
-                /** check_transaction_eligibility_request max_payer_rc. */
-                public max_payer_rc: (number|Long);
-
-                /** check_transaction_eligibility_request rc_limit. */
-                public rc_limit: (number|Long);
-
-                /** check_transaction_eligibility_request block_id. */
-                public block_id?: (Uint8Array|null);
-
-                /** check_transaction_eligibility_request _block_id. */
-                public _block_id?: "block_id";
-
-                /**
-                 * Creates a new check_transaction_eligibility_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_transaction_eligibility_request instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_request): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_request message. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_request.verify|verify} messages.
-                 * @param message check_transaction_eligibility_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_transaction_eligibility_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_request.verify|verify} messages.
-                 * @param message check_transaction_eligibility_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_transaction_eligibility_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_transaction_eligibility_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_transaction_eligibility_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Decodes a check_transaction_eligibility_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_transaction_eligibility_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Verifies a check_transaction_eligibility_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_transaction_eligibility_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_transaction_eligibility_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_transaction_eligibility_request;
-
-                /**
-                 * Creates a plain object from a check_transaction_eligibility_request message. Also converts values to other types if specified.
-                 * @param message check_transaction_eligibility_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_transaction_eligibility_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_transaction_eligibility_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a check_transaction_eligibility_response. */
-            interface Icheck_transaction_eligibility_response {
-
-                /** check_transaction_eligibility_response success */
-                success?: (boolean|null);
-            }
-
-            /** Represents a check_transaction_eligibility_response. */
-            class check_transaction_eligibility_response implements Icheck_transaction_eligibility_response {
-
-                /**
-                 * Constructs a new check_transaction_eligibility_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_response);
-
-                /** check_transaction_eligibility_response success. */
-                public success: boolean;
-
-                /**
-                 * Creates a new check_transaction_eligibility_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns check_transaction_eligibility_response instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Icheck_transaction_eligibility_response): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_response message. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_response.verify|verify} messages.
-                 * @param message check_transaction_eligibility_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Icheck_transaction_eligibility_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified check_transaction_eligibility_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.check_transaction_eligibility_response.verify|verify} messages.
-                 * @param message check_transaction_eligibility_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Icheck_transaction_eligibility_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a check_transaction_eligibility_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns check_transaction_eligibility_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Decodes a check_transaction_eligibility_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns check_transaction_eligibility_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Verifies a check_transaction_eligibility_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a check_transaction_eligibility_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns check_transaction_eligibility_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.check_transaction_eligibility_response;
-
-                /**
-                 * Creates a plain object from a check_transaction_eligibility_response message. Also converts values to other types if specified.
-                 * @param message check_transaction_eligibility_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.check_transaction_eligibility_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this check_transaction_eligibility_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a mempool_request. */
-            interface Imempool_request {
-
-                /** mempool_request reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** mempool_request check_pending_account_resources */
-                check_pending_account_resources?: (koinos.rpc.mempool.Icheck_pending_account_resources_request|null);
-
-                /** mempool_request get_pending_transactions */
-                get_pending_transactions?: (koinos.rpc.mempool.Iget_pending_transactions_request|null);
-
-                /** mempool_request check_account_nonce */
-                check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_request|null);
-
-                /** mempool_request check_transaction_eligibility */
-                check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_request|null);
-            }
-
-            /** Represents a mempool_request. */
-            class mempool_request implements Imempool_request {
-
-                /**
-                 * Constructs a new mempool_request.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Imempool_request);
-
-                /** mempool_request reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** mempool_request check_pending_account_resources. */
-                public check_pending_account_resources?: (koinos.rpc.mempool.Icheck_pending_account_resources_request|null);
-
-                /** mempool_request get_pending_transactions. */
-                public get_pending_transactions?: (koinos.rpc.mempool.Iget_pending_transactions_request|null);
-
-                /** mempool_request check_account_nonce. */
-                public check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_request|null);
-
-                /** mempool_request check_transaction_eligibility. */
-                public check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_request|null);
-
-                /** mempool_request request. */
-                public request?: ("reserved"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"check_transaction_eligibility");
-
-                /**
-                 * Creates a new mempool_request instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns mempool_request instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Imempool_request): koinos.rpc.mempool.mempool_request;
-
-                /**
-                 * Encodes the specified mempool_request message. Does not implicitly {@link koinos.rpc.mempool.mempool_request.verify|verify} messages.
-                 * @param message mempool_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Imempool_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified mempool_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.mempool_request.verify|verify} messages.
-                 * @param message mempool_request message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Imempool_request, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a mempool_request message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns mempool_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.mempool_request;
-
-                /**
-                 * Decodes a mempool_request message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns mempool_request
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.mempool_request;
-
-                /**
-                 * Verifies a mempool_request message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a mempool_request message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns mempool_request
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.mempool_request;
-
-                /**
-                 * Creates a plain object from a mempool_request message. Also converts values to other types if specified.
-                 * @param message mempool_request
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.mempool_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this mempool_request to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
-            /** Properties of a mempool_response. */
-            interface Imempool_response {
-
-                /** mempool_response reserved */
-                reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** mempool_response error */
-                error?: (koinos.rpc.Ierror_response|null);
-
-                /** mempool_response check_pending_account_resources */
-                check_pending_account_resources?: (koinos.rpc.mempool.Icheck_pending_account_resources_response|null);
-
-                /** mempool_response get_pending_transactions */
-                get_pending_transactions?: (koinos.rpc.mempool.Iget_pending_transactions_response|null);
-
-                /** mempool_response check_account_nonce */
-                check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_response|null);
-
-                /** mempool_response check_transaction_eligibility */
-                check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_response|null);
-            }
-
-            /** Represents a mempool_response. */
-            class mempool_response implements Imempool_response {
-
-                /**
-                 * Constructs a new mempool_response.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Imempool_response);
-
-                /** mempool_response reserved. */
-                public reserved?: (koinos.rpc.Ireserved_rpc|null);
-
-                /** mempool_response error. */
-                public error?: (koinos.rpc.Ierror_response|null);
-
-                /** mempool_response check_pending_account_resources. */
-                public check_pending_account_resources?: (koinos.rpc.mempool.Icheck_pending_account_resources_response|null);
-
-                /** mempool_response get_pending_transactions. */
-                public get_pending_transactions?: (koinos.rpc.mempool.Iget_pending_transactions_response|null);
-
-                /** mempool_response check_account_nonce. */
-                public check_account_nonce?: (koinos.rpc.mempool.Icheck_account_nonce_response|null);
-
-                /** mempool_response check_transaction_eligibility. */
-                public check_transaction_eligibility?: (koinos.rpc.mempool.Icheck_transaction_eligibility_response|null);
-
-                /** mempool_response response. */
-                public response?: ("reserved"|"error"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"check_transaction_eligibility");
-
-                /**
-                 * Creates a new mempool_response instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns mempool_response instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Imempool_response): koinos.rpc.mempool.mempool_response;
-
-                /**
-                 * Encodes the specified mempool_response message. Does not implicitly {@link koinos.rpc.mempool.mempool_response.verify|verify} messages.
-                 * @param message mempool_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Imempool_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified mempool_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.mempool_response.verify|verify} messages.
-                 * @param message mempool_response message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Imempool_response, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a mempool_response message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns mempool_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.mempool_response;
-
-                /**
-                 * Decodes a mempool_response message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns mempool_response
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.mempool_response;
-
-                /**
-                 * Verifies a mempool_response message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a mempool_response message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns mempool_response
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.mempool_response;
-
-                /**
-                 * Creates a plain object from a mempool_response message. Also converts values to other types if specified.
-                 * @param message mempool_response
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.mempool_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this mempool_response to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-        }
-    }
-
-    /** Namespace services. */
-    namespace services {
-
-        /** Represents a koinos */
-        class koinos extends $protobuf.rpc.Service {
-
-            /**
-             * Constructs a new koinos service.
-             * @param rpcImpl RPC implementation
-             * @param [requestDelimited=false] Whether requests are length-delimited
-             * @param [responseDelimited=false] Whether responses are length-delimited
-             */
-            constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
-
-            /**
-             * Creates new koinos service using the specified rpc implementation.
-             * @param rpcImpl RPC implementation
-             * @param [requestDelimited=false] Whether requests are length-delimited
-             * @param [responseDelimited=false] Whether responses are length-delimited
-             * @returns RPC service. Useful where requests and/or responses are streamed.
-             */
-            public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): koinos;
-
-            /**
-             * Calls get_account_history.
-             * @param request get_account_history_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_account_history_response
-             */
-            public get_account_history(request: koinos.rpc.account_history.Iget_account_history_request, callback: koinos.services.koinos.get_account_historyCallback): void;
-
-            /**
-             * Calls get_account_history.
-             * @param request get_account_history_request message or plain object
-             * @returns Promise
-             */
-            public get_account_history(request: koinos.rpc.account_history.Iget_account_history_request): Promise<koinos.rpc.account_history.get_account_history_response>;
-
-            /**
-             * Calls get_blocks_by_id.
-             * @param request get_blocks_by_id_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_blocks_by_id_response
-             */
-            public get_blocks_by_id(request: koinos.rpc.block_store.Iget_blocks_by_id_request, callback: koinos.services.koinos.get_blocks_by_idCallback): void;
-
-            /**
-             * Calls get_blocks_by_id.
-             * @param request get_blocks_by_id_request message or plain object
-             * @returns Promise
-             */
-            public get_blocks_by_id(request: koinos.rpc.block_store.Iget_blocks_by_id_request): Promise<koinos.rpc.block_store.get_blocks_by_id_response>;
-
-            /**
-             * Calls get_blocks_by_height.
-             * @param request get_blocks_by_height_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_blocks_by_height_response
-             */
-            public get_blocks_by_height(request: koinos.rpc.block_store.Iget_blocks_by_height_request, callback: koinos.services.koinos.get_blocks_by_heightCallback): void;
-
-            /**
-             * Calls get_blocks_by_height.
-             * @param request get_blocks_by_height_request message or plain object
-             * @returns Promise
-             */
-            public get_blocks_by_height(request: koinos.rpc.block_store.Iget_blocks_by_height_request): Promise<koinos.rpc.block_store.get_blocks_by_height_response>;
-
-            /**
-             * Calls get_highest_block.
-             * @param request get_highest_block_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_highest_block_response
-             */
-            public get_highest_block(request: koinos.rpc.block_store.Iget_highest_block_request, callback: koinos.services.koinos.get_highest_blockCallback): void;
-
-            /**
-             * Calls get_highest_block.
-             * @param request get_highest_block_request message or plain object
-             * @returns Promise
-             */
-            public get_highest_block(request: koinos.rpc.block_store.Iget_highest_block_request): Promise<koinos.rpc.block_store.get_highest_block_response>;
-
-            /**
-             * Calls submit_block.
-             * @param request submit_block_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and submit_block_response
-             */
-            public submit_block(request: koinos.rpc.chain.Isubmit_block_request, callback: koinos.services.koinos.submit_blockCallback): void;
-
-            /**
-             * Calls submit_block.
-             * @param request submit_block_request message or plain object
-             * @returns Promise
-             */
-            public submit_block(request: koinos.rpc.chain.Isubmit_block_request): Promise<koinos.rpc.chain.submit_block_response>;
-
-            /**
-             * Calls submit_transaction.
-             * @param request submit_transaction_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and submit_transaction_response
-             */
-            public submit_transaction(request: koinos.rpc.chain.Isubmit_transaction_request, callback: koinos.services.koinos.submit_transactionCallback): void;
-
-            /**
-             * Calls submit_transaction.
-             * @param request submit_transaction_request message or plain object
-             * @returns Promise
-             */
-            public submit_transaction(request: koinos.rpc.chain.Isubmit_transaction_request): Promise<koinos.rpc.chain.submit_transaction_response>;
-
-            /**
-             * Calls get_head_info.
-             * @param request get_head_info_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_head_info_response
-             */
-            public get_head_info(request: koinos.rpc.chain.Iget_head_info_request, callback: koinos.services.koinos.get_head_infoCallback): void;
-
-            /**
-             * Calls get_head_info.
-             * @param request get_head_info_request message or plain object
-             * @returns Promise
-             */
-            public get_head_info(request: koinos.rpc.chain.Iget_head_info_request): Promise<koinos.rpc.chain.get_head_info_response>;
-
-            /**
-             * Calls get_chain_id.
-             * @param request get_chain_id_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_chain_id_response
-             */
-            public get_chain_id(request: koinos.rpc.chain.Iget_chain_id_request, callback: koinos.services.koinos.get_chain_idCallback): void;
-
-            /**
-             * Calls get_chain_id.
-             * @param request get_chain_id_request message or plain object
-             * @returns Promise
-             */
-            public get_chain_id(request: koinos.rpc.chain.Iget_chain_id_request): Promise<koinos.rpc.chain.get_chain_id_response>;
-
-            /**
-             * Calls get_fork_heads.
-             * @param request get_fork_heads_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_fork_heads_response
-             */
-            public get_fork_heads(request: koinos.rpc.chain.Iget_fork_heads_request, callback: koinos.services.koinos.get_fork_headsCallback): void;
-
-            /**
-             * Calls get_fork_heads.
-             * @param request get_fork_heads_request message or plain object
-             * @returns Promise
-             */
-            public get_fork_heads(request: koinos.rpc.chain.Iget_fork_heads_request): Promise<koinos.rpc.chain.get_fork_heads_response>;
-
-            /**
-             * Calls read_contract.
-             * @param request read_contract_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and read_contract_response
-             */
-            public read_contract(request: koinos.rpc.chain.Iread_contract_request, callback: koinos.services.koinos.read_contractCallback): void;
-
-            /**
-             * Calls read_contract.
-             * @param request read_contract_request message or plain object
-             * @returns Promise
-             */
-            public read_contract(request: koinos.rpc.chain.Iread_contract_request): Promise<koinos.rpc.chain.read_contract_response>;
-
-            /**
-             * Calls get_account_nonce.
-             * @param request get_account_nonce_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_account_nonce_response
-             */
-            public get_account_nonce(request: koinos.rpc.chain.Iget_account_nonce_request, callback: koinos.services.koinos.get_account_nonceCallback): void;
-
-            /**
-             * Calls get_account_nonce.
-             * @param request get_account_nonce_request message or plain object
-             * @returns Promise
-             */
-            public get_account_nonce(request: koinos.rpc.chain.Iget_account_nonce_request): Promise<koinos.rpc.chain.get_account_nonce_response>;
-
-            /**
-             * Calls get_account_rc.
-             * @param request get_account_rc_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_account_rc_response
-             */
-            public get_account_rc(request: koinos.rpc.chain.Iget_account_rc_request, callback: koinos.services.koinos.get_account_rcCallback): void;
-
-            /**
-             * Calls get_account_rc.
-             * @param request get_account_rc_request message or plain object
-             * @returns Promise
-             */
-            public get_account_rc(request: koinos.rpc.chain.Iget_account_rc_request): Promise<koinos.rpc.chain.get_account_rc_response>;
-
-            /**
-             * Calls get_resource_limits.
-             * @param request get_resource_limits_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_resource_limits_response
-             */
-            public get_resource_limits(request: koinos.rpc.chain.Iget_resource_limits_request, callback: koinos.services.koinos.get_resource_limitsCallback): void;
-
-            /**
-             * Calls get_resource_limits.
-             * @param request get_resource_limits_request message or plain object
-             * @returns Promise
-             */
-            public get_resource_limits(request: koinos.rpc.chain.Iget_resource_limits_request): Promise<koinos.rpc.chain.get_resource_limits_response>;
-
-            /**
-             * Calls invoke_system_call.
-             * @param request invoke_system_call_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and invoke_system_call_response
-             */
-            public invoke_system_call(request: koinos.rpc.chain.Iinvoke_system_call_request, callback: koinos.services.koinos.invoke_system_callCallback): void;
-
-            /**
-             * Calls invoke_system_call.
-             * @param request invoke_system_call_request message or plain object
-             * @returns Promise
-             */
-            public invoke_system_call(request: koinos.rpc.chain.Iinvoke_system_call_request): Promise<koinos.rpc.chain.invoke_system_call_response>;
-
-            /**
-             * Calls get_contract_meta.
-             * @param request get_contract_meta_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_contract_meta_response
-             */
-            public get_contract_meta(request: koinos.rpc.contract_meta_store.Iget_contract_meta_request, callback: koinos.services.koinos.get_contract_metaCallback): void;
-
-            /**
-             * Calls get_contract_meta.
-             * @param request get_contract_meta_request message or plain object
-             * @returns Promise
-             */
-            public get_contract_meta(request: koinos.rpc.contract_meta_store.Iget_contract_meta_request): Promise<koinos.rpc.contract_meta_store.get_contract_meta_response>;
-
-            /**
-             * Calls get_pending_transactions.
-             * @param request get_pending_transactions_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_pending_transactions_response
-             */
-            public get_pending_transactions(request: koinos.rpc.mempool.Iget_pending_transactions_request, callback: koinos.services.koinos.get_pending_transactionsCallback): void;
-
-            /**
-             * Calls get_pending_transactions.
-             * @param request get_pending_transactions_request message or plain object
-             * @returns Promise
-             */
-            public get_pending_transactions(request: koinos.rpc.mempool.Iget_pending_transactions_request): Promise<koinos.rpc.mempool.get_pending_transactions_response>;
-
-            /**
-             * Calls check_pending_account_resources.
-             * @param request check_pending_account_resources_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and check_pending_account_resources_response
-             */
-            public check_pending_account_resources(request: koinos.rpc.mempool.Icheck_pending_account_resources_request, callback: koinos.services.koinos.check_pending_account_resourcesCallback): void;
-
-            /**
-             * Calls check_pending_account_resources.
-             * @param request check_pending_account_resources_request message or plain object
-             * @returns Promise
-             */
-            public check_pending_account_resources(request: koinos.rpc.mempool.Icheck_pending_account_resources_request): Promise<koinos.rpc.mempool.check_pending_account_resources_response>;
-
-            /**
-             * Calls get_gossip_status.
-             * @param request get_gossip_status_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_gossip_status_response
-             */
-            public get_gossip_status(request: koinos.rpc.p2p.Iget_gossip_status_request, callback: koinos.services.koinos.get_gossip_statusCallback): void;
-
-            /**
-             * Calls get_gossip_status.
-             * @param request get_gossip_status_request message or plain object
-             * @returns Promise
-             */
-            public get_gossip_status(request: koinos.rpc.p2p.Iget_gossip_status_request): Promise<koinos.rpc.p2p.get_gossip_status_response>;
-
-            /**
-             * Calls get_transactions_by_id.
-             * @param request get_transactions_by_id_request message or plain object
-             * @param callback Node-style callback called with the error, if any, and get_transactions_by_id_response
-             */
-            public get_transactions_by_id(request: koinos.rpc.transaction_store.Iget_transactions_by_id_request, callback: koinos.services.koinos.get_transactions_by_idCallback): void;
-
-            /**
-             * Calls get_transactions_by_id.
-             * @param request get_transactions_by_id_request message or plain object
-             * @returns Promise
-             */
-            public get_transactions_by_id(request: koinos.rpc.transaction_store.Iget_transactions_by_id_request): Promise<koinos.rpc.transaction_store.get_transactions_by_id_response>;
-        }
-
-        namespace koinos {
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_account_history}.
-             * @param error Error, if any
-             * @param [response] get_account_history_response
-             */
-            type get_account_historyCallback = (error: (Error|null), response?: koinos.rpc.account_history.get_account_history_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_blocks_by_id}.
-             * @param error Error, if any
-             * @param [response] get_blocks_by_id_response
-             */
-            type get_blocks_by_idCallback = (error: (Error|null), response?: koinos.rpc.block_store.get_blocks_by_id_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_blocks_by_height}.
-             * @param error Error, if any
-             * @param [response] get_blocks_by_height_response
-             */
-            type get_blocks_by_heightCallback = (error: (Error|null), response?: koinos.rpc.block_store.get_blocks_by_height_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_highest_block}.
-             * @param error Error, if any
-             * @param [response] get_highest_block_response
-             */
-            type get_highest_blockCallback = (error: (Error|null), response?: koinos.rpc.block_store.get_highest_block_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#submit_block}.
-             * @param error Error, if any
-             * @param [response] submit_block_response
-             */
-            type submit_blockCallback = (error: (Error|null), response?: koinos.rpc.chain.submit_block_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#submit_transaction}.
-             * @param error Error, if any
-             * @param [response] submit_transaction_response
-             */
-            type submit_transactionCallback = (error: (Error|null), response?: koinos.rpc.chain.submit_transaction_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_head_info}.
-             * @param error Error, if any
-             * @param [response] get_head_info_response
-             */
-            type get_head_infoCallback = (error: (Error|null), response?: koinos.rpc.chain.get_head_info_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_chain_id}.
-             * @param error Error, if any
-             * @param [response] get_chain_id_response
-             */
-            type get_chain_idCallback = (error: (Error|null), response?: koinos.rpc.chain.get_chain_id_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_fork_heads}.
-             * @param error Error, if any
-             * @param [response] get_fork_heads_response
-             */
-            type get_fork_headsCallback = (error: (Error|null), response?: koinos.rpc.chain.get_fork_heads_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#read_contract}.
-             * @param error Error, if any
-             * @param [response] read_contract_response
-             */
-            type read_contractCallback = (error: (Error|null), response?: koinos.rpc.chain.read_contract_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_account_nonce}.
-             * @param error Error, if any
-             * @param [response] get_account_nonce_response
-             */
-            type get_account_nonceCallback = (error: (Error|null), response?: koinos.rpc.chain.get_account_nonce_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_account_rc}.
-             * @param error Error, if any
-             * @param [response] get_account_rc_response
-             */
-            type get_account_rcCallback = (error: (Error|null), response?: koinos.rpc.chain.get_account_rc_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_resource_limits}.
-             * @param error Error, if any
-             * @param [response] get_resource_limits_response
-             */
-            type get_resource_limitsCallback = (error: (Error|null), response?: koinos.rpc.chain.get_resource_limits_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#invoke_system_call}.
-             * @param error Error, if any
-             * @param [response] invoke_system_call_response
-             */
-            type invoke_system_callCallback = (error: (Error|null), response?: koinos.rpc.chain.invoke_system_call_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_contract_meta}.
-             * @param error Error, if any
-             * @param [response] get_contract_meta_response
-             */
-            type get_contract_metaCallback = (error: (Error|null), response?: koinos.rpc.contract_meta_store.get_contract_meta_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_pending_transactions}.
-             * @param error Error, if any
-             * @param [response] get_pending_transactions_response
-             */
-            type get_pending_transactionsCallback = (error: (Error|null), response?: koinos.rpc.mempool.get_pending_transactions_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#check_pending_account_resources}.
-             * @param error Error, if any
-             * @param [response] check_pending_account_resources_response
-             */
-            type check_pending_account_resourcesCallback = (error: (Error|null), response?: koinos.rpc.mempool.check_pending_account_resources_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_gossip_status}.
-             * @param error Error, if any
-             * @param [response] get_gossip_status_response
-             */
-            type get_gossip_statusCallback = (error: (Error|null), response?: koinos.rpc.p2p.get_gossip_status_response) => void;
-
-            /**
-             * Callback as used by {@link koinos.services.koinos#get_transactions_by_id}.
-             * @param error Error, if any
-             * @param [response] get_transactions_by_id_response
-             */
-            type get_transactions_by_idCallback = (error: (Error|null), response?: koinos.rpc.transaction_store.get_transactions_by_id_response) => void;
         }
     }
 
@@ -19856,6 +16115,2166 @@ export namespace koinos {
         /** dsa enum. */
         enum dsa {
             ecdsa_secp256k1 = 0
+        }
+
+        /** Properties of a submit_block_request. */
+        interface Isubmit_block_request {
+
+            /** submit_block_request block */
+            block?: (koinos.protocol.Iblock|null);
+        }
+
+        /** Represents a submit_block_request. */
+        class submit_block_request implements Isubmit_block_request {
+
+            /**
+             * Constructs a new submit_block_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Isubmit_block_request);
+
+            /** submit_block_request block. */
+            public block?: (koinos.protocol.Iblock|null);
+
+            /**
+             * Creates a new submit_block_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns submit_block_request instance
+             */
+            public static create(properties?: koinos.chain.Isubmit_block_request): koinos.chain.submit_block_request;
+
+            /**
+             * Encodes the specified submit_block_request message. Does not implicitly {@link koinos.chain.submit_block_request.verify|verify} messages.
+             * @param message submit_block_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Isubmit_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified submit_block_request message, length delimited. Does not implicitly {@link koinos.chain.submit_block_request.verify|verify} messages.
+             * @param message submit_block_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Isubmit_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a submit_block_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns submit_block_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.submit_block_request;
+
+            /**
+             * Decodes a submit_block_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns submit_block_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.submit_block_request;
+
+            /**
+             * Verifies a submit_block_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a submit_block_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns submit_block_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.submit_block_request;
+
+            /**
+             * Creates a plain object from a submit_block_request message. Also converts values to other types if specified.
+             * @param message submit_block_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.submit_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this submit_block_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a submit_block_response. */
+        interface Isubmit_block_response {
+
+            /** submit_block_response receipt */
+            receipt?: (koinos.protocol.Iblock_receipt|null);
+        }
+
+        /** Represents a submit_block_response. */
+        class submit_block_response implements Isubmit_block_response {
+
+            /**
+             * Constructs a new submit_block_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Isubmit_block_response);
+
+            /** submit_block_response receipt. */
+            public receipt?: (koinos.protocol.Iblock_receipt|null);
+
+            /**
+             * Creates a new submit_block_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns submit_block_response instance
+             */
+            public static create(properties?: koinos.chain.Isubmit_block_response): koinos.chain.submit_block_response;
+
+            /**
+             * Encodes the specified submit_block_response message. Does not implicitly {@link koinos.chain.submit_block_response.verify|verify} messages.
+             * @param message submit_block_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Isubmit_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified submit_block_response message, length delimited. Does not implicitly {@link koinos.chain.submit_block_response.verify|verify} messages.
+             * @param message submit_block_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Isubmit_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a submit_block_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns submit_block_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.submit_block_response;
+
+            /**
+             * Decodes a submit_block_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns submit_block_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.submit_block_response;
+
+            /**
+             * Verifies a submit_block_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a submit_block_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns submit_block_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.submit_block_response;
+
+            /**
+             * Creates a plain object from a submit_block_response message. Also converts values to other types if specified.
+             * @param message submit_block_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.submit_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this submit_block_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a submit_transaction_request. */
+        interface Isubmit_transaction_request {
+
+            /** submit_transaction_request transaction */
+            transaction?: (koinos.protocol.Itransaction|null);
+
+            /** submit_transaction_request broadcast */
+            broadcast?: (boolean|null);
+        }
+
+        /** Represents a submit_transaction_request. */
+        class submit_transaction_request implements Isubmit_transaction_request {
+
+            /**
+             * Constructs a new submit_transaction_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Isubmit_transaction_request);
+
+            /** submit_transaction_request transaction. */
+            public transaction?: (koinos.protocol.Itransaction|null);
+
+            /** submit_transaction_request broadcast. */
+            public broadcast: boolean;
+
+            /**
+             * Creates a new submit_transaction_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns submit_transaction_request instance
+             */
+            public static create(properties?: koinos.chain.Isubmit_transaction_request): koinos.chain.submit_transaction_request;
+
+            /**
+             * Encodes the specified submit_transaction_request message. Does not implicitly {@link koinos.chain.submit_transaction_request.verify|verify} messages.
+             * @param message submit_transaction_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Isubmit_transaction_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified submit_transaction_request message, length delimited. Does not implicitly {@link koinos.chain.submit_transaction_request.verify|verify} messages.
+             * @param message submit_transaction_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Isubmit_transaction_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a submit_transaction_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns submit_transaction_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.submit_transaction_request;
+
+            /**
+             * Decodes a submit_transaction_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns submit_transaction_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.submit_transaction_request;
+
+            /**
+             * Verifies a submit_transaction_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a submit_transaction_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns submit_transaction_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.submit_transaction_request;
+
+            /**
+             * Creates a plain object from a submit_transaction_request message. Also converts values to other types if specified.
+             * @param message submit_transaction_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.submit_transaction_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this submit_transaction_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a submit_transaction_response. */
+        interface Isubmit_transaction_response {
+
+            /** submit_transaction_response receipt */
+            receipt?: (koinos.protocol.Itransaction_receipt|null);
+        }
+
+        /** Represents a submit_transaction_response. */
+        class submit_transaction_response implements Isubmit_transaction_response {
+
+            /**
+             * Constructs a new submit_transaction_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Isubmit_transaction_response);
+
+            /** submit_transaction_response receipt. */
+            public receipt?: (koinos.protocol.Itransaction_receipt|null);
+
+            /**
+             * Creates a new submit_transaction_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns submit_transaction_response instance
+             */
+            public static create(properties?: koinos.chain.Isubmit_transaction_response): koinos.chain.submit_transaction_response;
+
+            /**
+             * Encodes the specified submit_transaction_response message. Does not implicitly {@link koinos.chain.submit_transaction_response.verify|verify} messages.
+             * @param message submit_transaction_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Isubmit_transaction_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified submit_transaction_response message, length delimited. Does not implicitly {@link koinos.chain.submit_transaction_response.verify|verify} messages.
+             * @param message submit_transaction_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Isubmit_transaction_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a submit_transaction_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns submit_transaction_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.submit_transaction_response;
+
+            /**
+             * Decodes a submit_transaction_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns submit_transaction_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.submit_transaction_response;
+
+            /**
+             * Verifies a submit_transaction_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a submit_transaction_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns submit_transaction_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.submit_transaction_response;
+
+            /**
+             * Creates a plain object from a submit_transaction_response message. Also converts values to other types if specified.
+             * @param message submit_transaction_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.submit_transaction_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this submit_transaction_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_head_info_request. */
+        interface Iget_head_info_request {
+        }
+
+        /** Represents a get_head_info_request. */
+        class get_head_info_request implements Iget_head_info_request {
+
+            /**
+             * Constructs a new get_head_info_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_head_info_request);
+
+            /**
+             * Creates a new get_head_info_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_head_info_request instance
+             */
+            public static create(properties?: koinos.chain.Iget_head_info_request): koinos.chain.get_head_info_request;
+
+            /**
+             * Encodes the specified get_head_info_request message. Does not implicitly {@link koinos.chain.get_head_info_request.verify|verify} messages.
+             * @param message get_head_info_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_head_info_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_head_info_request message, length delimited. Does not implicitly {@link koinos.chain.get_head_info_request.verify|verify} messages.
+             * @param message get_head_info_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_head_info_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_head_info_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_head_info_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_head_info_request;
+
+            /**
+             * Decodes a get_head_info_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_head_info_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_head_info_request;
+
+            /**
+             * Verifies a get_head_info_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_head_info_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_head_info_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_head_info_request;
+
+            /**
+             * Creates a plain object from a get_head_info_request message. Also converts values to other types if specified.
+             * @param message get_head_info_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_head_info_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_head_info_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_head_info_response. */
+        interface Iget_head_info_response {
+
+            /** get_head_info_response head_topology */
+            head_topology?: (koinos.Iblock_topology|null);
+
+            /** get_head_info_response last_irreversible_block */
+            last_irreversible_block?: (number|Long|null);
+
+            /** get_head_info_response head_state_merkle_root */
+            head_state_merkle_root?: (Uint8Array|null);
+
+            /** get_head_info_response head_block_time */
+            head_block_time?: (number|Long|null);
+        }
+
+        /** Represents a get_head_info_response. */
+        class get_head_info_response implements Iget_head_info_response {
+
+            /**
+             * Constructs a new get_head_info_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_head_info_response);
+
+            /** get_head_info_response head_topology. */
+            public head_topology?: (koinos.Iblock_topology|null);
+
+            /** get_head_info_response last_irreversible_block. */
+            public last_irreversible_block: (number|Long);
+
+            /** get_head_info_response head_state_merkle_root. */
+            public head_state_merkle_root: Uint8Array;
+
+            /** get_head_info_response head_block_time. */
+            public head_block_time: (number|Long);
+
+            /**
+             * Creates a new get_head_info_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_head_info_response instance
+             */
+            public static create(properties?: koinos.chain.Iget_head_info_response): koinos.chain.get_head_info_response;
+
+            /**
+             * Encodes the specified get_head_info_response message. Does not implicitly {@link koinos.chain.get_head_info_response.verify|verify} messages.
+             * @param message get_head_info_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_head_info_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_head_info_response message, length delimited. Does not implicitly {@link koinos.chain.get_head_info_response.verify|verify} messages.
+             * @param message get_head_info_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_head_info_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_head_info_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_head_info_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_head_info_response;
+
+            /**
+             * Decodes a get_head_info_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_head_info_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_head_info_response;
+
+            /**
+             * Verifies a get_head_info_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_head_info_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_head_info_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_head_info_response;
+
+            /**
+             * Creates a plain object from a get_head_info_response message. Also converts values to other types if specified.
+             * @param message get_head_info_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_head_info_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_head_info_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_chain_id_request. */
+        interface Iget_chain_id_request {
+        }
+
+        /** Represents a get_chain_id_request. */
+        class get_chain_id_request implements Iget_chain_id_request {
+
+            /**
+             * Constructs a new get_chain_id_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_chain_id_request);
+
+            /**
+             * Creates a new get_chain_id_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_chain_id_request instance
+             */
+            public static create(properties?: koinos.chain.Iget_chain_id_request): koinos.chain.get_chain_id_request;
+
+            /**
+             * Encodes the specified get_chain_id_request message. Does not implicitly {@link koinos.chain.get_chain_id_request.verify|verify} messages.
+             * @param message get_chain_id_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_chain_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_chain_id_request message, length delimited. Does not implicitly {@link koinos.chain.get_chain_id_request.verify|verify} messages.
+             * @param message get_chain_id_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_chain_id_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_chain_id_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_chain_id_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_chain_id_request;
+
+            /**
+             * Decodes a get_chain_id_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_chain_id_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_chain_id_request;
+
+            /**
+             * Verifies a get_chain_id_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_chain_id_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_chain_id_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_chain_id_request;
+
+            /**
+             * Creates a plain object from a get_chain_id_request message. Also converts values to other types if specified.
+             * @param message get_chain_id_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_chain_id_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_chain_id_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_chain_id_response. */
+        interface Iget_chain_id_response {
+
+            /** get_chain_id_response chain_id */
+            chain_id?: (Uint8Array|null);
+        }
+
+        /** Represents a get_chain_id_response. */
+        class get_chain_id_response implements Iget_chain_id_response {
+
+            /**
+             * Constructs a new get_chain_id_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_chain_id_response);
+
+            /** get_chain_id_response chain_id. */
+            public chain_id: Uint8Array;
+
+            /**
+             * Creates a new get_chain_id_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_chain_id_response instance
+             */
+            public static create(properties?: koinos.chain.Iget_chain_id_response): koinos.chain.get_chain_id_response;
+
+            /**
+             * Encodes the specified get_chain_id_response message. Does not implicitly {@link koinos.chain.get_chain_id_response.verify|verify} messages.
+             * @param message get_chain_id_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_chain_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_chain_id_response message, length delimited. Does not implicitly {@link koinos.chain.get_chain_id_response.verify|verify} messages.
+             * @param message get_chain_id_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_chain_id_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_chain_id_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_chain_id_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_chain_id_response;
+
+            /**
+             * Decodes a get_chain_id_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_chain_id_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_chain_id_response;
+
+            /**
+             * Verifies a get_chain_id_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_chain_id_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_chain_id_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_chain_id_response;
+
+            /**
+             * Creates a plain object from a get_chain_id_response message. Also converts values to other types if specified.
+             * @param message get_chain_id_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_chain_id_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_chain_id_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_fork_heads_request. */
+        interface Iget_fork_heads_request {
+        }
+
+        /** Represents a get_fork_heads_request. */
+        class get_fork_heads_request implements Iget_fork_heads_request {
+
+            /**
+             * Constructs a new get_fork_heads_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_fork_heads_request);
+
+            /**
+             * Creates a new get_fork_heads_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_fork_heads_request instance
+             */
+            public static create(properties?: koinos.chain.Iget_fork_heads_request): koinos.chain.get_fork_heads_request;
+
+            /**
+             * Encodes the specified get_fork_heads_request message. Does not implicitly {@link koinos.chain.get_fork_heads_request.verify|verify} messages.
+             * @param message get_fork_heads_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_fork_heads_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_fork_heads_request message, length delimited. Does not implicitly {@link koinos.chain.get_fork_heads_request.verify|verify} messages.
+             * @param message get_fork_heads_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_fork_heads_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_fork_heads_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_fork_heads_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_fork_heads_request;
+
+            /**
+             * Decodes a get_fork_heads_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_fork_heads_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_fork_heads_request;
+
+            /**
+             * Verifies a get_fork_heads_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_fork_heads_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_fork_heads_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_fork_heads_request;
+
+            /**
+             * Creates a plain object from a get_fork_heads_request message. Also converts values to other types if specified.
+             * @param message get_fork_heads_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_fork_heads_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_fork_heads_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_fork_heads_response. */
+        interface Iget_fork_heads_response {
+
+            /** get_fork_heads_response last_irreversible_block */
+            last_irreversible_block?: (koinos.Iblock_topology|null);
+
+            /** get_fork_heads_response fork_heads */
+            fork_heads?: (koinos.Iblock_topology[]|null);
+        }
+
+        /** Represents a get_fork_heads_response. */
+        class get_fork_heads_response implements Iget_fork_heads_response {
+
+            /**
+             * Constructs a new get_fork_heads_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_fork_heads_response);
+
+            /** get_fork_heads_response last_irreversible_block. */
+            public last_irreversible_block?: (koinos.Iblock_topology|null);
+
+            /** get_fork_heads_response fork_heads. */
+            public fork_heads: koinos.Iblock_topology[];
+
+            /**
+             * Creates a new get_fork_heads_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_fork_heads_response instance
+             */
+            public static create(properties?: koinos.chain.Iget_fork_heads_response): koinos.chain.get_fork_heads_response;
+
+            /**
+             * Encodes the specified get_fork_heads_response message. Does not implicitly {@link koinos.chain.get_fork_heads_response.verify|verify} messages.
+             * @param message get_fork_heads_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_fork_heads_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_fork_heads_response message, length delimited. Does not implicitly {@link koinos.chain.get_fork_heads_response.verify|verify} messages.
+             * @param message get_fork_heads_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_fork_heads_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_fork_heads_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_fork_heads_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_fork_heads_response;
+
+            /**
+             * Decodes a get_fork_heads_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_fork_heads_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_fork_heads_response;
+
+            /**
+             * Verifies a get_fork_heads_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_fork_heads_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_fork_heads_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_fork_heads_response;
+
+            /**
+             * Creates a plain object from a get_fork_heads_response message. Also converts values to other types if specified.
+             * @param message get_fork_heads_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_fork_heads_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_fork_heads_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a read_contract_request. */
+        interface Iread_contract_request {
+
+            /** read_contract_request contract_id */
+            contract_id?: (Uint8Array|null);
+
+            /** read_contract_request entry_point */
+            entry_point?: (number|null);
+
+            /** read_contract_request args */
+            args?: (Uint8Array|null);
+        }
+
+        /** Represents a read_contract_request. */
+        class read_contract_request implements Iread_contract_request {
+
+            /**
+             * Constructs a new read_contract_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iread_contract_request);
+
+            /** read_contract_request contract_id. */
+            public contract_id: Uint8Array;
+
+            /** read_contract_request entry_point. */
+            public entry_point: number;
+
+            /** read_contract_request args. */
+            public args: Uint8Array;
+
+            /**
+             * Creates a new read_contract_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns read_contract_request instance
+             */
+            public static create(properties?: koinos.chain.Iread_contract_request): koinos.chain.read_contract_request;
+
+            /**
+             * Encodes the specified read_contract_request message. Does not implicitly {@link koinos.chain.read_contract_request.verify|verify} messages.
+             * @param message read_contract_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iread_contract_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified read_contract_request message, length delimited. Does not implicitly {@link koinos.chain.read_contract_request.verify|verify} messages.
+             * @param message read_contract_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iread_contract_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a read_contract_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns read_contract_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.read_contract_request;
+
+            /**
+             * Decodes a read_contract_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns read_contract_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.read_contract_request;
+
+            /**
+             * Verifies a read_contract_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a read_contract_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns read_contract_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.read_contract_request;
+
+            /**
+             * Creates a plain object from a read_contract_request message. Also converts values to other types if specified.
+             * @param message read_contract_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.read_contract_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this read_contract_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a read_contract_response. */
+        interface Iread_contract_response {
+
+            /** read_contract_response result */
+            result?: (Uint8Array|null);
+
+            /** read_contract_response logs */
+            logs?: (string[]|null);
+        }
+
+        /** Represents a read_contract_response. */
+        class read_contract_response implements Iread_contract_response {
+
+            /**
+             * Constructs a new read_contract_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iread_contract_response);
+
+            /** read_contract_response result. */
+            public result: Uint8Array;
+
+            /** read_contract_response logs. */
+            public logs: string[];
+
+            /**
+             * Creates a new read_contract_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns read_contract_response instance
+             */
+            public static create(properties?: koinos.chain.Iread_contract_response): koinos.chain.read_contract_response;
+
+            /**
+             * Encodes the specified read_contract_response message. Does not implicitly {@link koinos.chain.read_contract_response.verify|verify} messages.
+             * @param message read_contract_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iread_contract_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified read_contract_response message, length delimited. Does not implicitly {@link koinos.chain.read_contract_response.verify|verify} messages.
+             * @param message read_contract_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iread_contract_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a read_contract_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns read_contract_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.read_contract_response;
+
+            /**
+             * Decodes a read_contract_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns read_contract_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.read_contract_response;
+
+            /**
+             * Verifies a read_contract_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a read_contract_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns read_contract_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.read_contract_response;
+
+            /**
+             * Creates a plain object from a read_contract_response message. Also converts values to other types if specified.
+             * @param message read_contract_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.read_contract_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this read_contract_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_account_nonce_request. */
+        interface Iget_account_nonce_request {
+
+            /** get_account_nonce_request account */
+            account?: (Uint8Array|null);
+        }
+
+        /** Represents a get_account_nonce_request. */
+        class get_account_nonce_request implements Iget_account_nonce_request {
+
+            /**
+             * Constructs a new get_account_nonce_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_account_nonce_request);
+
+            /** get_account_nonce_request account. */
+            public account: Uint8Array;
+
+            /**
+             * Creates a new get_account_nonce_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_account_nonce_request instance
+             */
+            public static create(properties?: koinos.chain.Iget_account_nonce_request): koinos.chain.get_account_nonce_request;
+
+            /**
+             * Encodes the specified get_account_nonce_request message. Does not implicitly {@link koinos.chain.get_account_nonce_request.verify|verify} messages.
+             * @param message get_account_nonce_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_account_nonce_request message, length delimited. Does not implicitly {@link koinos.chain.get_account_nonce_request.verify|verify} messages.
+             * @param message get_account_nonce_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_account_nonce_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_account_nonce_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_account_nonce_request;
+
+            /**
+             * Decodes a get_account_nonce_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_account_nonce_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_account_nonce_request;
+
+            /**
+             * Verifies a get_account_nonce_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_account_nonce_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_account_nonce_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_account_nonce_request;
+
+            /**
+             * Creates a plain object from a get_account_nonce_request message. Also converts values to other types if specified.
+             * @param message get_account_nonce_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_account_nonce_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_account_nonce_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_account_nonce_response. */
+        interface Iget_account_nonce_response {
+
+            /** get_account_nonce_response nonce */
+            nonce?: (Uint8Array|null);
+        }
+
+        /** Represents a get_account_nonce_response. */
+        class get_account_nonce_response implements Iget_account_nonce_response {
+
+            /**
+             * Constructs a new get_account_nonce_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_account_nonce_response);
+
+            /** get_account_nonce_response nonce. */
+            public nonce: Uint8Array;
+
+            /**
+             * Creates a new get_account_nonce_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_account_nonce_response instance
+             */
+            public static create(properties?: koinos.chain.Iget_account_nonce_response): koinos.chain.get_account_nonce_response;
+
+            /**
+             * Encodes the specified get_account_nonce_response message. Does not implicitly {@link koinos.chain.get_account_nonce_response.verify|verify} messages.
+             * @param message get_account_nonce_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_account_nonce_response message, length delimited. Does not implicitly {@link koinos.chain.get_account_nonce_response.verify|verify} messages.
+             * @param message get_account_nonce_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_account_nonce_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_account_nonce_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_account_nonce_response;
+
+            /**
+             * Decodes a get_account_nonce_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_account_nonce_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_account_nonce_response;
+
+            /**
+             * Verifies a get_account_nonce_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_account_nonce_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_account_nonce_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_account_nonce_response;
+
+            /**
+             * Creates a plain object from a get_account_nonce_response message. Also converts values to other types if specified.
+             * @param message get_account_nonce_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_account_nonce_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_account_nonce_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_account_rc_request. */
+        interface Iget_account_rc_request {
+
+            /** get_account_rc_request account */
+            account?: (Uint8Array|null);
+        }
+
+        /** Represents a get_account_rc_request. */
+        class get_account_rc_request implements Iget_account_rc_request {
+
+            /**
+             * Constructs a new get_account_rc_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_account_rc_request);
+
+            /** get_account_rc_request account. */
+            public account: Uint8Array;
+
+            /**
+             * Creates a new get_account_rc_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_account_rc_request instance
+             */
+            public static create(properties?: koinos.chain.Iget_account_rc_request): koinos.chain.get_account_rc_request;
+
+            /**
+             * Encodes the specified get_account_rc_request message. Does not implicitly {@link koinos.chain.get_account_rc_request.verify|verify} messages.
+             * @param message get_account_rc_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_account_rc_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_account_rc_request message, length delimited. Does not implicitly {@link koinos.chain.get_account_rc_request.verify|verify} messages.
+             * @param message get_account_rc_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_account_rc_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_account_rc_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_account_rc_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_account_rc_request;
+
+            /**
+             * Decodes a get_account_rc_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_account_rc_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_account_rc_request;
+
+            /**
+             * Verifies a get_account_rc_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_account_rc_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_account_rc_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_account_rc_request;
+
+            /**
+             * Creates a plain object from a get_account_rc_request message. Also converts values to other types if specified.
+             * @param message get_account_rc_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_account_rc_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_account_rc_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_account_rc_response. */
+        interface Iget_account_rc_response {
+
+            /** get_account_rc_response rc */
+            rc?: (number|Long|null);
+        }
+
+        /** Represents a get_account_rc_response. */
+        class get_account_rc_response implements Iget_account_rc_response {
+
+            /**
+             * Constructs a new get_account_rc_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_account_rc_response);
+
+            /** get_account_rc_response rc. */
+            public rc: (number|Long);
+
+            /**
+             * Creates a new get_account_rc_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_account_rc_response instance
+             */
+            public static create(properties?: koinos.chain.Iget_account_rc_response): koinos.chain.get_account_rc_response;
+
+            /**
+             * Encodes the specified get_account_rc_response message. Does not implicitly {@link koinos.chain.get_account_rc_response.verify|verify} messages.
+             * @param message get_account_rc_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_account_rc_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_account_rc_response message, length delimited. Does not implicitly {@link koinos.chain.get_account_rc_response.verify|verify} messages.
+             * @param message get_account_rc_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_account_rc_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_account_rc_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_account_rc_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_account_rc_response;
+
+            /**
+             * Decodes a get_account_rc_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_account_rc_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_account_rc_response;
+
+            /**
+             * Verifies a get_account_rc_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_account_rc_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_account_rc_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_account_rc_response;
+
+            /**
+             * Creates a plain object from a get_account_rc_response message. Also converts values to other types if specified.
+             * @param message get_account_rc_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_account_rc_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_account_rc_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_resource_limits_request. */
+        interface Iget_resource_limits_request {
+        }
+
+        /** Represents a get_resource_limits_request. */
+        class get_resource_limits_request implements Iget_resource_limits_request {
+
+            /**
+             * Constructs a new get_resource_limits_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_resource_limits_request);
+
+            /**
+             * Creates a new get_resource_limits_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_resource_limits_request instance
+             */
+            public static create(properties?: koinos.chain.Iget_resource_limits_request): koinos.chain.get_resource_limits_request;
+
+            /**
+             * Encodes the specified get_resource_limits_request message. Does not implicitly {@link koinos.chain.get_resource_limits_request.verify|verify} messages.
+             * @param message get_resource_limits_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_resource_limits_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_resource_limits_request message, length delimited. Does not implicitly {@link koinos.chain.get_resource_limits_request.verify|verify} messages.
+             * @param message get_resource_limits_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_resource_limits_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_resource_limits_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_resource_limits_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_resource_limits_request;
+
+            /**
+             * Decodes a get_resource_limits_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_resource_limits_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_resource_limits_request;
+
+            /**
+             * Verifies a get_resource_limits_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_resource_limits_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_resource_limits_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_resource_limits_request;
+
+            /**
+             * Creates a plain object from a get_resource_limits_request message. Also converts values to other types if specified.
+             * @param message get_resource_limits_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_resource_limits_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_resource_limits_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_resource_limits_response. */
+        interface Iget_resource_limits_response {
+
+            /** get_resource_limits_response resource_limit_data */
+            resource_limit_data?: (koinos.chain.Iresource_limit_data|null);
+        }
+
+        /** Represents a get_resource_limits_response. */
+        class get_resource_limits_response implements Iget_resource_limits_response {
+
+            /**
+             * Constructs a new get_resource_limits_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iget_resource_limits_response);
+
+            /** get_resource_limits_response resource_limit_data. */
+            public resource_limit_data?: (koinos.chain.Iresource_limit_data|null);
+
+            /**
+             * Creates a new get_resource_limits_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_resource_limits_response instance
+             */
+            public static create(properties?: koinos.chain.Iget_resource_limits_response): koinos.chain.get_resource_limits_response;
+
+            /**
+             * Encodes the specified get_resource_limits_response message. Does not implicitly {@link koinos.chain.get_resource_limits_response.verify|verify} messages.
+             * @param message get_resource_limits_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iget_resource_limits_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_resource_limits_response message, length delimited. Does not implicitly {@link koinos.chain.get_resource_limits_response.verify|verify} messages.
+             * @param message get_resource_limits_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iget_resource_limits_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_resource_limits_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_resource_limits_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.get_resource_limits_response;
+
+            /**
+             * Decodes a get_resource_limits_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_resource_limits_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.get_resource_limits_response;
+
+            /**
+             * Verifies a get_resource_limits_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_resource_limits_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_resource_limits_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.get_resource_limits_response;
+
+            /**
+             * Creates a plain object from a get_resource_limits_response message. Also converts values to other types if specified.
+             * @param message get_resource_limits_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.get_resource_limits_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_resource_limits_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an invoke_system_call_request. */
+        interface Iinvoke_system_call_request {
+
+            /** invoke_system_call_request id */
+            id?: (number|Long|null);
+
+            /** invoke_system_call_request name */
+            name?: (string|null);
+
+            /** invoke_system_call_request args */
+            args?: (Uint8Array|null);
+
+            /** invoke_system_call_request caller_data */
+            caller_data?: (koinos.chain.Icaller_data|null);
+        }
+
+        /** Represents an invoke_system_call_request. */
+        class invoke_system_call_request implements Iinvoke_system_call_request {
+
+            /**
+             * Constructs a new invoke_system_call_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iinvoke_system_call_request);
+
+            /** invoke_system_call_request id. */
+            public id?: (number|Long|null);
+
+            /** invoke_system_call_request name. */
+            public name?: (string|null);
+
+            /** invoke_system_call_request args. */
+            public args: Uint8Array;
+
+            /** invoke_system_call_request caller_data. */
+            public caller_data?: (koinos.chain.Icaller_data|null);
+
+            /** invoke_system_call_request system_call. */
+            public system_call?: ("id"|"name");
+
+            /** invoke_system_call_request _caller_data. */
+            public _caller_data?: "caller_data";
+
+            /**
+             * Creates a new invoke_system_call_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns invoke_system_call_request instance
+             */
+            public static create(properties?: koinos.chain.Iinvoke_system_call_request): koinos.chain.invoke_system_call_request;
+
+            /**
+             * Encodes the specified invoke_system_call_request message. Does not implicitly {@link koinos.chain.invoke_system_call_request.verify|verify} messages.
+             * @param message invoke_system_call_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iinvoke_system_call_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified invoke_system_call_request message, length delimited. Does not implicitly {@link koinos.chain.invoke_system_call_request.verify|verify} messages.
+             * @param message invoke_system_call_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iinvoke_system_call_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an invoke_system_call_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns invoke_system_call_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.invoke_system_call_request;
+
+            /**
+             * Decodes an invoke_system_call_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns invoke_system_call_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.invoke_system_call_request;
+
+            /**
+             * Verifies an invoke_system_call_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an invoke_system_call_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns invoke_system_call_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.invoke_system_call_request;
+
+            /**
+             * Creates a plain object from an invoke_system_call_request message. Also converts values to other types if specified.
+             * @param message invoke_system_call_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.invoke_system_call_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this invoke_system_call_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an invoke_system_call_response. */
+        interface Iinvoke_system_call_response {
+
+            /** invoke_system_call_response value */
+            value?: (Uint8Array|null);
+        }
+
+        /** Represents an invoke_system_call_response. */
+        class invoke_system_call_response implements Iinvoke_system_call_response {
+
+            /**
+             * Constructs a new invoke_system_call_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Iinvoke_system_call_response);
+
+            /** invoke_system_call_response value. */
+            public value: Uint8Array;
+
+            /**
+             * Creates a new invoke_system_call_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns invoke_system_call_response instance
+             */
+            public static create(properties?: koinos.chain.Iinvoke_system_call_response): koinos.chain.invoke_system_call_response;
+
+            /**
+             * Encodes the specified invoke_system_call_response message. Does not implicitly {@link koinos.chain.invoke_system_call_response.verify|verify} messages.
+             * @param message invoke_system_call_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Iinvoke_system_call_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified invoke_system_call_response message, length delimited. Does not implicitly {@link koinos.chain.invoke_system_call_response.verify|verify} messages.
+             * @param message invoke_system_call_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Iinvoke_system_call_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an invoke_system_call_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns invoke_system_call_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.invoke_system_call_response;
+
+            /**
+             * Decodes an invoke_system_call_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns invoke_system_call_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.invoke_system_call_response;
+
+            /**
+             * Verifies an invoke_system_call_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an invoke_system_call_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns invoke_system_call_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.invoke_system_call_response;
+
+            /**
+             * Creates a plain object from an invoke_system_call_response message. Also converts values to other types if specified.
+             * @param message invoke_system_call_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.invoke_system_call_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this invoke_system_call_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a chain_request. */
+        interface Ichain_request {
+
+            /** chain_request reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** chain_request submit_block */
+            submit_block?: (koinos.chain.Isubmit_block_request|null);
+
+            /** chain_request submit_transaction */
+            submit_transaction?: (koinos.chain.Isubmit_transaction_request|null);
+
+            /** chain_request get_head_info */
+            get_head_info?: (koinos.chain.Iget_head_info_request|null);
+
+            /** chain_request get_chain_id */
+            get_chain_id?: (koinos.chain.Iget_chain_id_request|null);
+
+            /** chain_request get_fork_heads */
+            get_fork_heads?: (koinos.chain.Iget_fork_heads_request|null);
+
+            /** chain_request read_contract */
+            read_contract?: (koinos.chain.Iread_contract_request|null);
+
+            /** chain_request get_account_nonce */
+            get_account_nonce?: (koinos.chain.Iget_account_nonce_request|null);
+
+            /** chain_request get_account_rc */
+            get_account_rc?: (koinos.chain.Iget_account_rc_request|null);
+
+            /** chain_request get_resource_limits */
+            get_resource_limits?: (koinos.chain.Iget_resource_limits_request|null);
+
+            /** chain_request invoke_system_call */
+            invoke_system_call?: (koinos.chain.Iinvoke_system_call_request|null);
+        }
+
+        /** Represents a chain_request. */
+        class chain_request implements Ichain_request {
+
+            /**
+             * Constructs a new chain_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Ichain_request);
+
+            /** chain_request reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** chain_request submit_block. */
+            public submit_block?: (koinos.chain.Isubmit_block_request|null);
+
+            /** chain_request submit_transaction. */
+            public submit_transaction?: (koinos.chain.Isubmit_transaction_request|null);
+
+            /** chain_request get_head_info. */
+            public get_head_info?: (koinos.chain.Iget_head_info_request|null);
+
+            /** chain_request get_chain_id. */
+            public get_chain_id?: (koinos.chain.Iget_chain_id_request|null);
+
+            /** chain_request get_fork_heads. */
+            public get_fork_heads?: (koinos.chain.Iget_fork_heads_request|null);
+
+            /** chain_request read_contract. */
+            public read_contract?: (koinos.chain.Iread_contract_request|null);
+
+            /** chain_request get_account_nonce. */
+            public get_account_nonce?: (koinos.chain.Iget_account_nonce_request|null);
+
+            /** chain_request get_account_rc. */
+            public get_account_rc?: (koinos.chain.Iget_account_rc_request|null);
+
+            /** chain_request get_resource_limits. */
+            public get_resource_limits?: (koinos.chain.Iget_resource_limits_request|null);
+
+            /** chain_request invoke_system_call. */
+            public invoke_system_call?: (koinos.chain.Iinvoke_system_call_request|null);
+
+            /** chain_request request. */
+            public request?: ("reserved"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
+
+            /**
+             * Creates a new chain_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns chain_request instance
+             */
+            public static create(properties?: koinos.chain.Ichain_request): koinos.chain.chain_request;
+
+            /**
+             * Encodes the specified chain_request message. Does not implicitly {@link koinos.chain.chain_request.verify|verify} messages.
+             * @param message chain_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Ichain_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified chain_request message, length delimited. Does not implicitly {@link koinos.chain.chain_request.verify|verify} messages.
+             * @param message chain_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Ichain_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a chain_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns chain_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.chain_request;
+
+            /**
+             * Decodes a chain_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns chain_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.chain_request;
+
+            /**
+             * Verifies a chain_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a chain_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns chain_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.chain_request;
+
+            /**
+             * Creates a plain object from a chain_request message. Also converts values to other types if specified.
+             * @param message chain_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.chain_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this chain_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a chain_response. */
+        interface Ichain_response {
+
+            /** chain_response reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** chain_response error */
+            error?: (koinos.Ierror_status|null);
+
+            /** chain_response submit_block */
+            submit_block?: (koinos.chain.Isubmit_block_response|null);
+
+            /** chain_response submit_transaction */
+            submit_transaction?: (koinos.chain.Isubmit_transaction_response|null);
+
+            /** chain_response get_head_info */
+            get_head_info?: (koinos.chain.Iget_head_info_response|null);
+
+            /** chain_response get_chain_id */
+            get_chain_id?: (koinos.chain.Iget_chain_id_response|null);
+
+            /** chain_response get_fork_heads */
+            get_fork_heads?: (koinos.chain.Iget_fork_heads_response|null);
+
+            /** chain_response read_contract */
+            read_contract?: (koinos.chain.Iread_contract_response|null);
+
+            /** chain_response get_account_nonce */
+            get_account_nonce?: (koinos.chain.Iget_account_nonce_response|null);
+
+            /** chain_response get_account_rc */
+            get_account_rc?: (koinos.chain.Iget_account_rc_response|null);
+
+            /** chain_response get_resource_limits */
+            get_resource_limits?: (koinos.chain.Iget_resource_limits_response|null);
+
+            /** chain_response invoke_system_call */
+            invoke_system_call?: (koinos.chain.Iinvoke_system_call_response|null);
+        }
+
+        /** Represents a chain_response. */
+        class chain_response implements Ichain_response {
+
+            /**
+             * Constructs a new chain_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.chain.Ichain_response);
+
+            /** chain_response reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** chain_response error. */
+            public error?: (koinos.Ierror_status|null);
+
+            /** chain_response submit_block. */
+            public submit_block?: (koinos.chain.Isubmit_block_response|null);
+
+            /** chain_response submit_transaction. */
+            public submit_transaction?: (koinos.chain.Isubmit_transaction_response|null);
+
+            /** chain_response get_head_info. */
+            public get_head_info?: (koinos.chain.Iget_head_info_response|null);
+
+            /** chain_response get_chain_id. */
+            public get_chain_id?: (koinos.chain.Iget_chain_id_response|null);
+
+            /** chain_response get_fork_heads. */
+            public get_fork_heads?: (koinos.chain.Iget_fork_heads_response|null);
+
+            /** chain_response read_contract. */
+            public read_contract?: (koinos.chain.Iread_contract_response|null);
+
+            /** chain_response get_account_nonce. */
+            public get_account_nonce?: (koinos.chain.Iget_account_nonce_response|null);
+
+            /** chain_response get_account_rc. */
+            public get_account_rc?: (koinos.chain.Iget_account_rc_response|null);
+
+            /** chain_response get_resource_limits. */
+            public get_resource_limits?: (koinos.chain.Iget_resource_limits_response|null);
+
+            /** chain_response invoke_system_call. */
+            public invoke_system_call?: (koinos.chain.Iinvoke_system_call_response|null);
+
+            /** chain_response response. */
+            public response?: ("reserved"|"error"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
+
+            /**
+             * Creates a new chain_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns chain_response instance
+             */
+            public static create(properties?: koinos.chain.Ichain_response): koinos.chain.chain_response;
+
+            /**
+             * Encodes the specified chain_response message. Does not implicitly {@link koinos.chain.chain_response.verify|verify} messages.
+             * @param message chain_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.chain.Ichain_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified chain_response message, length delimited. Does not implicitly {@link koinos.chain.chain_response.verify|verify} messages.
+             * @param message chain_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.chain.Ichain_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a chain_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns chain_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.chain.chain_response;
+
+            /**
+             * Decodes a chain_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns chain_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.chain.chain_response;
+
+            /**
+             * Verifies a chain_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a chain_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns chain_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.chain.chain_response;
+
+            /**
+             * Creates a plain object from a chain_response message. Also converts values to other types if specified.
+             * @param message chain_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.chain.chain_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this chain_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
         }
 
         /** authorization_type enum. */
@@ -29398,6 +27817,1152 @@ export namespace koinos {
 
     /** Namespace mempool. */
     namespace mempool {
+
+        /** Properties of a pending_transaction. */
+        interface Ipending_transaction {
+
+            /** pending_transaction transaction */
+            transaction?: (koinos.protocol.Itransaction|null);
+
+            /** pending_transaction disk_storage_used */
+            disk_storage_used?: (number|Long|null);
+
+            /** pending_transaction network_bandwidth_used */
+            network_bandwidth_used?: (number|Long|null);
+
+            /** pending_transaction compute_bandwidth_used */
+            compute_bandwidth_used?: (number|Long|null);
+        }
+
+        /** Represents a pending_transaction. */
+        class pending_transaction implements Ipending_transaction {
+
+            /**
+             * Constructs a new pending_transaction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Ipending_transaction);
+
+            /** pending_transaction transaction. */
+            public transaction?: (koinos.protocol.Itransaction|null);
+
+            /** pending_transaction disk_storage_used. */
+            public disk_storage_used: (number|Long);
+
+            /** pending_transaction network_bandwidth_used. */
+            public network_bandwidth_used: (number|Long);
+
+            /** pending_transaction compute_bandwidth_used. */
+            public compute_bandwidth_used: (number|Long);
+
+            /**
+             * Creates a new pending_transaction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns pending_transaction instance
+             */
+            public static create(properties?: koinos.mempool.Ipending_transaction): koinos.mempool.pending_transaction;
+
+            /**
+             * Encodes the specified pending_transaction message. Does not implicitly {@link koinos.mempool.pending_transaction.verify|verify} messages.
+             * @param message pending_transaction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified pending_transaction message, length delimited. Does not implicitly {@link koinos.mempool.pending_transaction.verify|verify} messages.
+             * @param message pending_transaction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a pending_transaction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns pending_transaction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.pending_transaction;
+
+            /**
+             * Decodes a pending_transaction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns pending_transaction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.pending_transaction;
+
+            /**
+             * Verifies a pending_transaction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a pending_transaction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns pending_transaction
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.pending_transaction;
+
+            /**
+             * Creates a plain object from a pending_transaction message. Also converts values to other types if specified.
+             * @param message pending_transaction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.pending_transaction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this pending_transaction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a check_pending_account_resources_request. */
+        interface Icheck_pending_account_resources_request {
+
+            /** check_pending_account_resources_request payer */
+            payer?: (Uint8Array|null);
+
+            /** check_pending_account_resources_request max_payer_rc */
+            max_payer_rc?: (number|Long|null);
+
+            /** check_pending_account_resources_request rc_limit */
+            rc_limit?: (number|Long|null);
+
+            /** check_pending_account_resources_request block_id */
+            block_id?: (Uint8Array|null);
+        }
+
+        /** Represents a check_pending_account_resources_request. */
+        class check_pending_account_resources_request implements Icheck_pending_account_resources_request {
+
+            /**
+             * Constructs a new check_pending_account_resources_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Icheck_pending_account_resources_request);
+
+            /** check_pending_account_resources_request payer. */
+            public payer: Uint8Array;
+
+            /** check_pending_account_resources_request max_payer_rc. */
+            public max_payer_rc: (number|Long);
+
+            /** check_pending_account_resources_request rc_limit. */
+            public rc_limit: (number|Long);
+
+            /** check_pending_account_resources_request block_id. */
+            public block_id?: (Uint8Array|null);
+
+            /** check_pending_account_resources_request _block_id. */
+            public _block_id?: "block_id";
+
+            /**
+             * Creates a new check_pending_account_resources_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns check_pending_account_resources_request instance
+             */
+            public static create(properties?: koinos.mempool.Icheck_pending_account_resources_request): koinos.mempool.check_pending_account_resources_request;
+
+            /**
+             * Encodes the specified check_pending_account_resources_request message. Does not implicitly {@link koinos.mempool.check_pending_account_resources_request.verify|verify} messages.
+             * @param message check_pending_account_resources_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Icheck_pending_account_resources_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified check_pending_account_resources_request message, length delimited. Does not implicitly {@link koinos.mempool.check_pending_account_resources_request.verify|verify} messages.
+             * @param message check_pending_account_resources_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Icheck_pending_account_resources_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a check_pending_account_resources_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns check_pending_account_resources_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.check_pending_account_resources_request;
+
+            /**
+             * Decodes a check_pending_account_resources_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns check_pending_account_resources_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.check_pending_account_resources_request;
+
+            /**
+             * Verifies a check_pending_account_resources_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a check_pending_account_resources_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns check_pending_account_resources_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.check_pending_account_resources_request;
+
+            /**
+             * Creates a plain object from a check_pending_account_resources_request message. Also converts values to other types if specified.
+             * @param message check_pending_account_resources_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.check_pending_account_resources_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this check_pending_account_resources_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a check_pending_account_resources_response. */
+        interface Icheck_pending_account_resources_response {
+
+            /** check_pending_account_resources_response success */
+            success?: (boolean|null);
+        }
+
+        /** Represents a check_pending_account_resources_response. */
+        class check_pending_account_resources_response implements Icheck_pending_account_resources_response {
+
+            /**
+             * Constructs a new check_pending_account_resources_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Icheck_pending_account_resources_response);
+
+            /** check_pending_account_resources_response success. */
+            public success: boolean;
+
+            /**
+             * Creates a new check_pending_account_resources_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns check_pending_account_resources_response instance
+             */
+            public static create(properties?: koinos.mempool.Icheck_pending_account_resources_response): koinos.mempool.check_pending_account_resources_response;
+
+            /**
+             * Encodes the specified check_pending_account_resources_response message. Does not implicitly {@link koinos.mempool.check_pending_account_resources_response.verify|verify} messages.
+             * @param message check_pending_account_resources_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Icheck_pending_account_resources_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified check_pending_account_resources_response message, length delimited. Does not implicitly {@link koinos.mempool.check_pending_account_resources_response.verify|verify} messages.
+             * @param message check_pending_account_resources_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Icheck_pending_account_resources_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a check_pending_account_resources_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns check_pending_account_resources_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.check_pending_account_resources_response;
+
+            /**
+             * Decodes a check_pending_account_resources_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns check_pending_account_resources_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.check_pending_account_resources_response;
+
+            /**
+             * Verifies a check_pending_account_resources_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a check_pending_account_resources_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns check_pending_account_resources_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.check_pending_account_resources_response;
+
+            /**
+             * Creates a plain object from a check_pending_account_resources_response message. Also converts values to other types if specified.
+             * @param message check_pending_account_resources_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.check_pending_account_resources_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this check_pending_account_resources_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_pending_transactions_request. */
+        interface Iget_pending_transactions_request {
+
+            /** get_pending_transactions_request limit */
+            limit?: (number|Long|null);
+
+            /** get_pending_transactions_request block_id */
+            block_id?: (Uint8Array|null);
+        }
+
+        /** Represents a get_pending_transactions_request. */
+        class get_pending_transactions_request implements Iget_pending_transactions_request {
+
+            /**
+             * Constructs a new get_pending_transactions_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Iget_pending_transactions_request);
+
+            /** get_pending_transactions_request limit. */
+            public limit: (number|Long);
+
+            /** get_pending_transactions_request block_id. */
+            public block_id?: (Uint8Array|null);
+
+            /** get_pending_transactions_request _block_id. */
+            public _block_id?: "block_id";
+
+            /**
+             * Creates a new get_pending_transactions_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_pending_transactions_request instance
+             */
+            public static create(properties?: koinos.mempool.Iget_pending_transactions_request): koinos.mempool.get_pending_transactions_request;
+
+            /**
+             * Encodes the specified get_pending_transactions_request message. Does not implicitly {@link koinos.mempool.get_pending_transactions_request.verify|verify} messages.
+             * @param message get_pending_transactions_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Iget_pending_transactions_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_pending_transactions_request message, length delimited. Does not implicitly {@link koinos.mempool.get_pending_transactions_request.verify|verify} messages.
+             * @param message get_pending_transactions_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Iget_pending_transactions_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_pending_transactions_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_pending_transactions_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.get_pending_transactions_request;
+
+            /**
+             * Decodes a get_pending_transactions_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_pending_transactions_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.get_pending_transactions_request;
+
+            /**
+             * Verifies a get_pending_transactions_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_pending_transactions_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_pending_transactions_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.get_pending_transactions_request;
+
+            /**
+             * Creates a plain object from a get_pending_transactions_request message. Also converts values to other types if specified.
+             * @param message get_pending_transactions_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.get_pending_transactions_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_pending_transactions_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a get_pending_transactions_response. */
+        interface Iget_pending_transactions_response {
+
+            /** get_pending_transactions_response pending_transactions */
+            pending_transactions?: (koinos.mempool.Ipending_transaction[]|null);
+        }
+
+        /** Represents a get_pending_transactions_response. */
+        class get_pending_transactions_response implements Iget_pending_transactions_response {
+
+            /**
+             * Constructs a new get_pending_transactions_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Iget_pending_transactions_response);
+
+            /** get_pending_transactions_response pending_transactions. */
+            public pending_transactions: koinos.mempool.Ipending_transaction[];
+
+            /**
+             * Creates a new get_pending_transactions_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns get_pending_transactions_response instance
+             */
+            public static create(properties?: koinos.mempool.Iget_pending_transactions_response): koinos.mempool.get_pending_transactions_response;
+
+            /**
+             * Encodes the specified get_pending_transactions_response message. Does not implicitly {@link koinos.mempool.get_pending_transactions_response.verify|verify} messages.
+             * @param message get_pending_transactions_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Iget_pending_transactions_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified get_pending_transactions_response message, length delimited. Does not implicitly {@link koinos.mempool.get_pending_transactions_response.verify|verify} messages.
+             * @param message get_pending_transactions_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Iget_pending_transactions_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a get_pending_transactions_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns get_pending_transactions_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.get_pending_transactions_response;
+
+            /**
+             * Decodes a get_pending_transactions_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns get_pending_transactions_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.get_pending_transactions_response;
+
+            /**
+             * Verifies a get_pending_transactions_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a get_pending_transactions_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns get_pending_transactions_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.get_pending_transactions_response;
+
+            /**
+             * Creates a plain object from a get_pending_transactions_response message. Also converts values to other types if specified.
+             * @param message get_pending_transactions_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.get_pending_transactions_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this get_pending_transactions_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a check_account_nonce_request. */
+        interface Icheck_account_nonce_request {
+
+            /** check_account_nonce_request payee */
+            payee?: (Uint8Array|null);
+
+            /** check_account_nonce_request nonce */
+            nonce?: (Uint8Array|null);
+
+            /** check_account_nonce_request block_id */
+            block_id?: (Uint8Array|null);
+        }
+
+        /** Represents a check_account_nonce_request. */
+        class check_account_nonce_request implements Icheck_account_nonce_request {
+
+            /**
+             * Constructs a new check_account_nonce_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Icheck_account_nonce_request);
+
+            /** check_account_nonce_request payee. */
+            public payee: Uint8Array;
+
+            /** check_account_nonce_request nonce. */
+            public nonce: Uint8Array;
+
+            /** check_account_nonce_request block_id. */
+            public block_id?: (Uint8Array|null);
+
+            /** check_account_nonce_request _block_id. */
+            public _block_id?: "block_id";
+
+            /**
+             * Creates a new check_account_nonce_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns check_account_nonce_request instance
+             */
+            public static create(properties?: koinos.mempool.Icheck_account_nonce_request): koinos.mempool.check_account_nonce_request;
+
+            /**
+             * Encodes the specified check_account_nonce_request message. Does not implicitly {@link koinos.mempool.check_account_nonce_request.verify|verify} messages.
+             * @param message check_account_nonce_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Icheck_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified check_account_nonce_request message, length delimited. Does not implicitly {@link koinos.mempool.check_account_nonce_request.verify|verify} messages.
+             * @param message check_account_nonce_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Icheck_account_nonce_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a check_account_nonce_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns check_account_nonce_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.check_account_nonce_request;
+
+            /**
+             * Decodes a check_account_nonce_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns check_account_nonce_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.check_account_nonce_request;
+
+            /**
+             * Verifies a check_account_nonce_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a check_account_nonce_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns check_account_nonce_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.check_account_nonce_request;
+
+            /**
+             * Creates a plain object from a check_account_nonce_request message. Also converts values to other types if specified.
+             * @param message check_account_nonce_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.check_account_nonce_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this check_account_nonce_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a check_account_nonce_response. */
+        interface Icheck_account_nonce_response {
+
+            /** check_account_nonce_response success */
+            success?: (boolean|null);
+        }
+
+        /** Represents a check_account_nonce_response. */
+        class check_account_nonce_response implements Icheck_account_nonce_response {
+
+            /**
+             * Constructs a new check_account_nonce_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Icheck_account_nonce_response);
+
+            /** check_account_nonce_response success. */
+            public success: boolean;
+
+            /**
+             * Creates a new check_account_nonce_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns check_account_nonce_response instance
+             */
+            public static create(properties?: koinos.mempool.Icheck_account_nonce_response): koinos.mempool.check_account_nonce_response;
+
+            /**
+             * Encodes the specified check_account_nonce_response message. Does not implicitly {@link koinos.mempool.check_account_nonce_response.verify|verify} messages.
+             * @param message check_account_nonce_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Icheck_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified check_account_nonce_response message, length delimited. Does not implicitly {@link koinos.mempool.check_account_nonce_response.verify|verify} messages.
+             * @param message check_account_nonce_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Icheck_account_nonce_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a check_account_nonce_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns check_account_nonce_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.check_account_nonce_response;
+
+            /**
+             * Decodes a check_account_nonce_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns check_account_nonce_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.check_account_nonce_response;
+
+            /**
+             * Verifies a check_account_nonce_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a check_account_nonce_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns check_account_nonce_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.check_account_nonce_response;
+
+            /**
+             * Creates a plain object from a check_account_nonce_response message. Also converts values to other types if specified.
+             * @param message check_account_nonce_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.check_account_nonce_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this check_account_nonce_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a check_transaction_eligibility_request. */
+        interface Icheck_transaction_eligibility_request {
+
+            /** check_transaction_eligibility_request payer */
+            payer?: (Uint8Array|null);
+
+            /** check_transaction_eligibility_request payee */
+            payee?: (Uint8Array|null);
+
+            /** check_transaction_eligibility_request nonce */
+            nonce?: (Uint8Array|null);
+
+            /** check_transaction_eligibility_request max_payer_rc */
+            max_payer_rc?: (number|Long|null);
+
+            /** check_transaction_eligibility_request rc_limit */
+            rc_limit?: (number|Long|null);
+
+            /** check_transaction_eligibility_request block_id */
+            block_id?: (Uint8Array|null);
+        }
+
+        /** Represents a check_transaction_eligibility_request. */
+        class check_transaction_eligibility_request implements Icheck_transaction_eligibility_request {
+
+            /**
+             * Constructs a new check_transaction_eligibility_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Icheck_transaction_eligibility_request);
+
+            /** check_transaction_eligibility_request payer. */
+            public payer: Uint8Array;
+
+            /** check_transaction_eligibility_request payee. */
+            public payee: Uint8Array;
+
+            /** check_transaction_eligibility_request nonce. */
+            public nonce: Uint8Array;
+
+            /** check_transaction_eligibility_request max_payer_rc. */
+            public max_payer_rc: (number|Long);
+
+            /** check_transaction_eligibility_request rc_limit. */
+            public rc_limit: (number|Long);
+
+            /** check_transaction_eligibility_request block_id. */
+            public block_id?: (Uint8Array|null);
+
+            /** check_transaction_eligibility_request _block_id. */
+            public _block_id?: "block_id";
+
+            /**
+             * Creates a new check_transaction_eligibility_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns check_transaction_eligibility_request instance
+             */
+            public static create(properties?: koinos.mempool.Icheck_transaction_eligibility_request): koinos.mempool.check_transaction_eligibility_request;
+
+            /**
+             * Encodes the specified check_transaction_eligibility_request message. Does not implicitly {@link koinos.mempool.check_transaction_eligibility_request.verify|verify} messages.
+             * @param message check_transaction_eligibility_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Icheck_transaction_eligibility_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified check_transaction_eligibility_request message, length delimited. Does not implicitly {@link koinos.mempool.check_transaction_eligibility_request.verify|verify} messages.
+             * @param message check_transaction_eligibility_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Icheck_transaction_eligibility_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a check_transaction_eligibility_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns check_transaction_eligibility_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.check_transaction_eligibility_request;
+
+            /**
+             * Decodes a check_transaction_eligibility_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns check_transaction_eligibility_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.check_transaction_eligibility_request;
+
+            /**
+             * Verifies a check_transaction_eligibility_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a check_transaction_eligibility_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns check_transaction_eligibility_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.check_transaction_eligibility_request;
+
+            /**
+             * Creates a plain object from a check_transaction_eligibility_request message. Also converts values to other types if specified.
+             * @param message check_transaction_eligibility_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.check_transaction_eligibility_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this check_transaction_eligibility_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a check_transaction_eligibility_response. */
+        interface Icheck_transaction_eligibility_response {
+
+            /** check_transaction_eligibility_response success */
+            success?: (boolean|null);
+        }
+
+        /** Represents a check_transaction_eligibility_response. */
+        class check_transaction_eligibility_response implements Icheck_transaction_eligibility_response {
+
+            /**
+             * Constructs a new check_transaction_eligibility_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Icheck_transaction_eligibility_response);
+
+            /** check_transaction_eligibility_response success. */
+            public success: boolean;
+
+            /**
+             * Creates a new check_transaction_eligibility_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns check_transaction_eligibility_response instance
+             */
+            public static create(properties?: koinos.mempool.Icheck_transaction_eligibility_response): koinos.mempool.check_transaction_eligibility_response;
+
+            /**
+             * Encodes the specified check_transaction_eligibility_response message. Does not implicitly {@link koinos.mempool.check_transaction_eligibility_response.verify|verify} messages.
+             * @param message check_transaction_eligibility_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Icheck_transaction_eligibility_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified check_transaction_eligibility_response message, length delimited. Does not implicitly {@link koinos.mempool.check_transaction_eligibility_response.verify|verify} messages.
+             * @param message check_transaction_eligibility_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Icheck_transaction_eligibility_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a check_transaction_eligibility_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns check_transaction_eligibility_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.check_transaction_eligibility_response;
+
+            /**
+             * Decodes a check_transaction_eligibility_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns check_transaction_eligibility_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.check_transaction_eligibility_response;
+
+            /**
+             * Verifies a check_transaction_eligibility_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a check_transaction_eligibility_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns check_transaction_eligibility_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.check_transaction_eligibility_response;
+
+            /**
+             * Creates a plain object from a check_transaction_eligibility_response message. Also converts values to other types if specified.
+             * @param message check_transaction_eligibility_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.check_transaction_eligibility_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this check_transaction_eligibility_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a mempool_request. */
+        interface Imempool_request {
+
+            /** mempool_request reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** mempool_request check_pending_account_resources */
+            check_pending_account_resources?: (koinos.mempool.Icheck_pending_account_resources_request|null);
+
+            /** mempool_request get_pending_transactions */
+            get_pending_transactions?: (koinos.mempool.Iget_pending_transactions_request|null);
+
+            /** mempool_request check_account_nonce */
+            check_account_nonce?: (koinos.mempool.Icheck_account_nonce_request|null);
+
+            /** mempool_request check_transaction_eligibility */
+            check_transaction_eligibility?: (koinos.mempool.Icheck_transaction_eligibility_request|null);
+        }
+
+        /** Represents a mempool_request. */
+        class mempool_request implements Imempool_request {
+
+            /**
+             * Constructs a new mempool_request.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Imempool_request);
+
+            /** mempool_request reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** mempool_request check_pending_account_resources. */
+            public check_pending_account_resources?: (koinos.mempool.Icheck_pending_account_resources_request|null);
+
+            /** mempool_request get_pending_transactions. */
+            public get_pending_transactions?: (koinos.mempool.Iget_pending_transactions_request|null);
+
+            /** mempool_request check_account_nonce. */
+            public check_account_nonce?: (koinos.mempool.Icheck_account_nonce_request|null);
+
+            /** mempool_request check_transaction_eligibility. */
+            public check_transaction_eligibility?: (koinos.mempool.Icheck_transaction_eligibility_request|null);
+
+            /** mempool_request request. */
+            public request?: ("reserved"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"check_transaction_eligibility");
+
+            /**
+             * Creates a new mempool_request instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns mempool_request instance
+             */
+            public static create(properties?: koinos.mempool.Imempool_request): koinos.mempool.mempool_request;
+
+            /**
+             * Encodes the specified mempool_request message. Does not implicitly {@link koinos.mempool.mempool_request.verify|verify} messages.
+             * @param message mempool_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Imempool_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified mempool_request message, length delimited. Does not implicitly {@link koinos.mempool.mempool_request.verify|verify} messages.
+             * @param message mempool_request message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Imempool_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a mempool_request message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns mempool_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.mempool_request;
+
+            /**
+             * Decodes a mempool_request message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns mempool_request
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.mempool_request;
+
+            /**
+             * Verifies a mempool_request message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a mempool_request message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns mempool_request
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.mempool_request;
+
+            /**
+             * Creates a plain object from a mempool_request message. Also converts values to other types if specified.
+             * @param message mempool_request
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.mempool_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this mempool_request to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a mempool_response. */
+        interface Imempool_response {
+
+            /** mempool_response reserved */
+            reserved?: (koinos.Ireserved_rpc|null);
+
+            /** mempool_response error */
+            error?: (koinos.Ierror_status|null);
+
+            /** mempool_response check_pending_account_resources */
+            check_pending_account_resources?: (koinos.mempool.Icheck_pending_account_resources_response|null);
+
+            /** mempool_response get_pending_transactions */
+            get_pending_transactions?: (koinos.mempool.Iget_pending_transactions_response|null);
+
+            /** mempool_response check_account_nonce */
+            check_account_nonce?: (koinos.mempool.Icheck_account_nonce_response|null);
+
+            /** mempool_response check_transaction_eligibility */
+            check_transaction_eligibility?: (koinos.mempool.Icheck_transaction_eligibility_response|null);
+        }
+
+        /** Represents a mempool_response. */
+        class mempool_response implements Imempool_response {
+
+            /**
+             * Constructs a new mempool_response.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Imempool_response);
+
+            /** mempool_response reserved. */
+            public reserved?: (koinos.Ireserved_rpc|null);
+
+            /** mempool_response error. */
+            public error?: (koinos.Ierror_status|null);
+
+            /** mempool_response check_pending_account_resources. */
+            public check_pending_account_resources?: (koinos.mempool.Icheck_pending_account_resources_response|null);
+
+            /** mempool_response get_pending_transactions. */
+            public get_pending_transactions?: (koinos.mempool.Iget_pending_transactions_response|null);
+
+            /** mempool_response check_account_nonce. */
+            public check_account_nonce?: (koinos.mempool.Icheck_account_nonce_response|null);
+
+            /** mempool_response check_transaction_eligibility. */
+            public check_transaction_eligibility?: (koinos.mempool.Icheck_transaction_eligibility_response|null);
+
+            /** mempool_response response. */
+            public response?: ("reserved"|"error"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"check_transaction_eligibility");
+
+            /**
+             * Creates a new mempool_response instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns mempool_response instance
+             */
+            public static create(properties?: koinos.mempool.Imempool_response): koinos.mempool.mempool_response;
+
+            /**
+             * Encodes the specified mempool_response message. Does not implicitly {@link koinos.mempool.mempool_response.verify|verify} messages.
+             * @param message mempool_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Imempool_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified mempool_response message, length delimited. Does not implicitly {@link koinos.mempool.mempool_response.verify|verify} messages.
+             * @param message mempool_response message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Imempool_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a mempool_response message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns mempool_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.mempool_response;
+
+            /**
+             * Decodes a mempool_response message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns mempool_response
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.mempool_response;
+
+            /**
+             * Verifies a mempool_response message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a mempool_response message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns mempool_response
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.mempool_response;
+
+            /**
+             * Creates a plain object from a mempool_response message. Also converts values to other types if specified.
+             * @param message mempool_response
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.mempool_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this mempool_response to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
 
         /** Properties of a mempool_metadata. */
         interface Imempool_metadata {
