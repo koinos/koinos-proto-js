@@ -3590,7 +3590,7 @@
                 "pre_irreversibility_block": -1015
               }
             },
-            "chain_error_details": {
+            "error_details": {
               "fields": {
                 "code": {
                   "type": "int32",
