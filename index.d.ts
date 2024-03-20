@@ -16576,6 +16576,195 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
 
+            /** Properties of a propose_block_request. */
+            interface Ipropose_block_request {
+
+                /** propose_block_request block */
+                block?: (koinos.protocol.Iblock|null);
+            }
+
+            /** Represents a propose_block_request. */
+            class propose_block_request implements Ipropose_block_request {
+
+                /**
+                 * Constructs a new propose_block_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.chain.Ipropose_block_request);
+
+                /** propose_block_request block. */
+                public block?: (koinos.protocol.Iblock|null);
+
+                /**
+                 * Creates a new propose_block_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns propose_block_request instance
+                 */
+                public static create(properties?: koinos.rpc.chain.Ipropose_block_request): koinos.rpc.chain.propose_block_request;
+
+                /**
+                 * Encodes the specified propose_block_request message. Does not implicitly {@link koinos.rpc.chain.propose_block_request.verify|verify} messages.
+                 * @param message propose_block_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.chain.Ipropose_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified propose_block_request message, length delimited. Does not implicitly {@link koinos.rpc.chain.propose_block_request.verify|verify} messages.
+                 * @param message propose_block_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.chain.Ipropose_block_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a propose_block_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns propose_block_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.propose_block_request;
+
+                /**
+                 * Decodes a propose_block_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns propose_block_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.propose_block_request;
+
+                /**
+                 * Verifies a propose_block_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a propose_block_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns propose_block_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.propose_block_request;
+
+                /**
+                 * Creates a plain object from a propose_block_request message. Also converts values to other types if specified.
+                 * @param message propose_block_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.chain.propose_block_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this propose_block_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a propose_block_response. */
+            interface Ipropose_block_response {
+
+                /** propose_block_response receipt */
+                receipt?: (koinos.protocol.Iblock_receipt|null);
+
+                /** propose_block_response failed_transaction_indices */
+                failed_transaction_indices?: (number[]|null);
+            }
+
+            /** Represents a propose_block_response. */
+            class propose_block_response implements Ipropose_block_response {
+
+                /**
+                 * Constructs a new propose_block_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.chain.Ipropose_block_response);
+
+                /** propose_block_response receipt. */
+                public receipt?: (koinos.protocol.Iblock_receipt|null);
+
+                /** propose_block_response failed_transaction_indices. */
+                public failed_transaction_indices: number[];
+
+                /** propose_block_response _receipt. */
+                public _receipt?: "receipt";
+
+                /**
+                 * Creates a new propose_block_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns propose_block_response instance
+                 */
+                public static create(properties?: koinos.rpc.chain.Ipropose_block_response): koinos.rpc.chain.propose_block_response;
+
+                /**
+                 * Encodes the specified propose_block_response message. Does not implicitly {@link koinos.rpc.chain.propose_block_response.verify|verify} messages.
+                 * @param message propose_block_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.chain.Ipropose_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified propose_block_response message, length delimited. Does not implicitly {@link koinos.rpc.chain.propose_block_response.verify|verify} messages.
+                 * @param message propose_block_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.chain.Ipropose_block_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a propose_block_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns propose_block_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.chain.propose_block_response;
+
+                /**
+                 * Decodes a propose_block_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns propose_block_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.chain.propose_block_response;
+
+                /**
+                 * Verifies a propose_block_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a propose_block_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns propose_block_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.chain.propose_block_response;
+
+                /**
+                 * Creates a plain object from a propose_block_response message. Also converts values to other types if specified.
+                 * @param message propose_block_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.chain.propose_block_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this propose_block_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
             /** Properties of a chain_request. */
             interface Ichain_request {
 
@@ -16611,6 +16800,9 @@ export namespace koinos {
 
                 /** chain_request invoke_system_call */
                 invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_request|null);
+
+                /** chain_request propose_block */
+                propose_block?: (koinos.rpc.chain.Ipropose_block_request|null);
             }
 
             /** Represents a chain_request. */
@@ -16655,8 +16847,11 @@ export namespace koinos {
                 /** chain_request invoke_system_call. */
                 public invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_request|null);
 
+                /** chain_request propose_block. */
+                public propose_block?: (koinos.rpc.chain.Ipropose_block_request|null);
+
                 /** chain_request request. */
-                public request?: ("reserved"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
+                public request?: ("reserved"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call"|"propose_block");
 
                 /**
                  * Creates a new chain_request instance using the specified properties.
@@ -16767,6 +16962,9 @@ export namespace koinos {
 
                 /** chain_response invoke_system_call */
                 invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_response|null);
+
+                /** chain_response propose_block */
+                propose_block?: (koinos.rpc.chain.Ipropose_block_response|null);
             }
 
             /** Represents a chain_response. */
@@ -16814,8 +17012,11 @@ export namespace koinos {
                 /** chain_response invoke_system_call. */
                 public invoke_system_call?: (koinos.rpc.chain.Iinvoke_system_call_response|null);
 
+                /** chain_response propose_block. */
+                public propose_block?: (koinos.rpc.chain.Ipropose_block_response|null);
+
                 /** chain_response response. */
-                public response?: ("reserved"|"error"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call");
+                public response?: ("reserved"|"error"|"submit_block"|"submit_transaction"|"get_head_info"|"get_chain_id"|"get_fork_heads"|"read_contract"|"get_account_nonce"|"get_account_rc"|"get_resource_limits"|"invoke_system_call"|"propose_block");
 
                 /**
                  * Creates a new chain_response instance using the specified properties.

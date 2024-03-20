@@ -2791,6 +2791,37 @@
                     }
                   }
                 },
+                "propose_block_request": {
+                  "fields": {
+                    "block": {
+                      "type": "protocol.block",
+                      "id": 1
+                    }
+                  }
+                },
+                "propose_block_response": {
+                  "oneofs": {
+                    "_receipt": {
+                      "oneof": [
+                        "receipt"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "receipt": {
+                      "type": "protocol.block_receipt",
+                      "id": 1,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    },
+                    "failed_transaction_indices": {
+                      "rule": "repeated",
+                      "type": "uint32",
+                      "id": 2
+                    }
+                  }
+                },
                 "chain_request": {
                   "oneofs": {
                     "request": {
@@ -2805,7 +2836,8 @@
                         "get_account_nonce",
                         "get_account_rc",
                         "get_resource_limits",
-                        "invoke_system_call"
+                        "invoke_system_call",
+                        "propose_block"
                       ]
                     }
                   },
@@ -2853,6 +2885,10 @@
                     "invoke_system_call": {
                       "type": "invoke_system_call_request",
                       "id": 11
+                    },
+                    "propose_block": {
+                      "type": "propose_block_request",
+                      "id": 12
                     }
                   }
                 },
@@ -2871,7 +2907,8 @@
                         "get_account_nonce",
                         "get_account_rc",
                         "get_resource_limits",
-                        "invoke_system_call"
+                        "invoke_system_call",
+                        "propose_block"
                       ]
                     }
                   },
@@ -2923,6 +2960,10 @@
                     "invoke_system_call": {
                       "type": "invoke_system_call_response",
                       "id": 12
+                    },
+                    "propose_block": {
+                      "type": "propose_block_response",
+                      "id": 13
                     }
                   }
                 }
