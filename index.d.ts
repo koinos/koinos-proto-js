@@ -20192,6 +20192,9 @@ export namespace koinos {
 
             /** error_details code */
             code?: (number|null);
+
+            /** error_details logs */
+            logs?: (string[]|null);
         }
 
         /** Represents an error_details. */
@@ -20205,6 +20208,9 @@ export namespace koinos {
 
             /** error_details code. */
             public code: number;
+
+            /** error_details logs. */
+            public logs: string[];
 
             /**
              * Creates a new error_details instance using the specified properties.

@@ -3636,6 +3636,11 @@
                 "code": {
                   "type": "int32",
                   "id": 1
+                },
+                "logs": {
+                  "rule": "repeated",
+                  "type": "string",
+                  "id": 2
                 }
               }
             },
