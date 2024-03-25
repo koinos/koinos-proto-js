@@ -2045,7 +2045,10 @@
                 },
                 "data": {
                   "type": "string",
-                  "id": 2
+                  "id": 2,
+                  "options": {
+                    "deprecated": true
+                  }
                 },
                 "details": {
                   "rule": "repeated",
