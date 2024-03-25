@@ -2,12 +2,12 @@
   "nested": {
     "koinos": {
       "options": {
-        "go_package": "github.com/koinos/koinos-proto-golang/koinos"
+        "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos"
       },
       "nested": {
         "broadcast": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/broadcast"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/broadcast"
           },
           "nested": {
             "transaction_accepted": {
@@ -153,7 +153,7 @@
         },
         "contract_meta_store": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/contract_meta_store"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contract_meta_store"
           },
           "nested": {
             "contract_meta_item": {
@@ -168,7 +168,7 @@
         },
         "protocol": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/protocol"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/protocol"
           },
           "nested": {
             "object_space": {
@@ -712,7 +712,7 @@
         },
         "block_store": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/block_store"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/block_store"
           },
           "nested": {
             "block_item": {
@@ -779,7 +779,7 @@
         },
         "account_history": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/account_history"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/account_history"
           },
           "nested": {
             "account_metadata": {
@@ -855,7 +855,7 @@
           "nested": {
             "token": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/token"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/token"
               },
               "nested": {
                 "name_arguments": {
@@ -1073,7 +1073,7 @@
             },
             "pow": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/pow"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/pow"
               },
               "nested": {
                 "difficulty_metadata": {
@@ -1129,7 +1129,7 @@
             },
             "resources": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/resources"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/resources"
               },
               "nested": {
                 "market": {
@@ -1293,7 +1293,7 @@
             },
             "koin": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/koin"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/koin"
               },
               "nested": {
                 "mana_balance_object": {
@@ -1325,7 +1325,7 @@
             },
             "governance": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/governance"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/governance"
               },
               "nested": {
                 "proposal_status": {
@@ -1517,7 +1517,7 @@
             },
             "vhp": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/vhp"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/vhp"
               },
               "nested": {
                 "effective_balance_of_arguments": {
@@ -1580,7 +1580,7 @@
             },
             "pob": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/pob"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/pob"
               },
               "nested": {
                 "consensus_parameters": {
@@ -1815,7 +1815,7 @@
             },
             "claim": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/claim"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/claim"
               },
               "nested": {
                 "claim_info": {
@@ -1912,7 +1912,7 @@
             },
             "name_service": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/contracts/name-service"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/contracts/name-service"
               },
               "nested": {
                 "name_record": {
@@ -2008,7 +2008,7 @@
         },
         "transaction_store": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/transaction_store"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/transaction_store"
           },
           "nested": {
             "transaction_item": {
@@ -2031,7 +2031,7 @@
         },
         "rpc": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc"
           },
           "nested": {
             "reserved_rpc": {
@@ -2056,7 +2056,7 @@
             },
             "contract_meta_store": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/contract_meta_store"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/contract_meta_store"
               },
               "nested": {
                 "get_contract_meta_request": {
@@ -2127,7 +2127,7 @@
             },
             "p2p": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/p2p"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/p2p"
               },
               "nested": {
                 "get_gossip_status_request": {
@@ -2190,7 +2190,7 @@
             },
             "block_store": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/block_store"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/block_store"
               },
               "nested": {
                 "get_blocks_by_id_request": {
@@ -2366,7 +2366,7 @@
             },
             "account_history": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/account_history"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/account_history"
               },
               "nested": {
                 "account_history_entry": {
@@ -2495,7 +2495,7 @@
             },
             "transaction_store": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/transaction_store"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/transaction_store"
               },
               "nested": {
                 "get_transactions_by_id_request": {
@@ -2568,7 +2568,7 @@
             },
             "chain": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/chain"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/chain"
               },
               "nested": {
                 "submit_block_request": {
@@ -2971,7 +2971,7 @@
             },
             "mempool": {
               "options": {
-                "go_package": "github.com/koinos/koinos-proto-golang/koinos/rpc/mempool"
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/mempool"
               },
               "nested": {
                 "pending_transaction": {
@@ -3195,7 +3195,7 @@
         },
         "services": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/services"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/services"
           },
           "nested": {
             "koinos": {
@@ -3282,7 +3282,7 @@
         },
         "chain": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/chain"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/chain"
           },
           "nested": {
             "error_data": {
@@ -4696,7 +4696,7 @@
         },
         "mempool": {
           "options": {
-            "go_package": "github.com/koinos/koinos-proto-golang/koinos/mempool"
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/mempool"
           },
           "nested": {
             "mempool_metadata": {
