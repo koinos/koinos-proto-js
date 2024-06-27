@@ -30668,6 +30668,2410 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
         }
+
+        /** Namespace kcs3. */
+        namespace kcs3 {
+
+            /** Properties of a name_arguments. */
+            interface Iname_arguments {
+            }
+
+            /** Represents a name_arguments. */
+            class name_arguments implements Iname_arguments {
+
+                /**
+                 * Constructs a new name_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iname_arguments);
+
+                /**
+                 * Creates a new name_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns name_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iname_arguments): koinos.standards.kcs3.name_arguments;
+
+                /**
+                 * Encodes the specified name_arguments message. Does not implicitly {@link koinos.standards.kcs3.name_arguments.verify|verify} messages.
+                 * @param message name_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iname_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified name_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.name_arguments.verify|verify} messages.
+                 * @param message name_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iname_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a name_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns name_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.name_arguments;
+
+                /**
+                 * Decodes a name_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns name_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.name_arguments;
+
+                /**
+                 * Verifies a name_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a name_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns name_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.name_arguments;
+
+                /**
+                 * Creates a plain object from a name_arguments message. Also converts values to other types if specified.
+                 * @param message name_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.name_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this name_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a name_result. */
+            interface Iname_result {
+
+                /** name_result value */
+                value?: (string|null);
+            }
+
+            /** Represents a name_result. */
+            class name_result implements Iname_result {
+
+                /**
+                 * Constructs a new name_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iname_result);
+
+                /** name_result value. */
+                public value: string;
+
+                /**
+                 * Creates a new name_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns name_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iname_result): koinos.standards.kcs3.name_result;
+
+                /**
+                 * Encodes the specified name_result message. Does not implicitly {@link koinos.standards.kcs3.name_result.verify|verify} messages.
+                 * @param message name_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iname_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified name_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.name_result.verify|verify} messages.
+                 * @param message name_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iname_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a name_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns name_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.name_result;
+
+                /**
+                 * Decodes a name_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns name_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.name_result;
+
+                /**
+                 * Verifies a name_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a name_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns name_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.name_result;
+
+                /**
+                 * Creates a plain object from a name_result message. Also converts values to other types if specified.
+                 * @param message name_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.name_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this name_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a symbol_arguments. */
+            interface Isymbol_arguments {
+            }
+
+            /** Represents a symbol_arguments. */
+            class symbol_arguments implements Isymbol_arguments {
+
+                /**
+                 * Constructs a new symbol_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Isymbol_arguments);
+
+                /**
+                 * Creates a new symbol_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns symbol_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Isymbol_arguments): koinos.standards.kcs3.symbol_arguments;
+
+                /**
+                 * Encodes the specified symbol_arguments message. Does not implicitly {@link koinos.standards.kcs3.symbol_arguments.verify|verify} messages.
+                 * @param message symbol_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Isymbol_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified symbol_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.symbol_arguments.verify|verify} messages.
+                 * @param message symbol_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Isymbol_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a symbol_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns symbol_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.symbol_arguments;
+
+                /**
+                 * Decodes a symbol_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns symbol_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.symbol_arguments;
+
+                /**
+                 * Verifies a symbol_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a symbol_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns symbol_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.symbol_arguments;
+
+                /**
+                 * Creates a plain object from a symbol_arguments message. Also converts values to other types if specified.
+                 * @param message symbol_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.symbol_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this symbol_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a symbol_result. */
+            interface Isymbol_result {
+
+                /** symbol_result value */
+                value?: (string|null);
+            }
+
+            /** Represents a symbol_result. */
+            class symbol_result implements Isymbol_result {
+
+                /**
+                 * Constructs a new symbol_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Isymbol_result);
+
+                /** symbol_result value. */
+                public value: string;
+
+                /**
+                 * Creates a new symbol_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns symbol_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Isymbol_result): koinos.standards.kcs3.symbol_result;
+
+                /**
+                 * Encodes the specified symbol_result message. Does not implicitly {@link koinos.standards.kcs3.symbol_result.verify|verify} messages.
+                 * @param message symbol_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Isymbol_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified symbol_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.symbol_result.verify|verify} messages.
+                 * @param message symbol_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Isymbol_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a symbol_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns symbol_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.symbol_result;
+
+                /**
+                 * Decodes a symbol_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns symbol_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.symbol_result;
+
+                /**
+                 * Verifies a symbol_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a symbol_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns symbol_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.symbol_result;
+
+                /**
+                 * Creates a plain object from a symbol_result message. Also converts values to other types if specified.
+                 * @param message symbol_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.symbol_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this symbol_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a decimals_arguments. */
+            interface Idecimals_arguments {
+            }
+
+            /** Represents a decimals_arguments. */
+            class decimals_arguments implements Idecimals_arguments {
+
+                /**
+                 * Constructs a new decimals_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Idecimals_arguments);
+
+                /**
+                 * Creates a new decimals_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns decimals_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Idecimals_arguments): koinos.standards.kcs3.decimals_arguments;
+
+                /**
+                 * Encodes the specified decimals_arguments message. Does not implicitly {@link koinos.standards.kcs3.decimals_arguments.verify|verify} messages.
+                 * @param message decimals_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Idecimals_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified decimals_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.decimals_arguments.verify|verify} messages.
+                 * @param message decimals_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Idecimals_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a decimals_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns decimals_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.decimals_arguments;
+
+                /**
+                 * Decodes a decimals_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns decimals_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.decimals_arguments;
+
+                /**
+                 * Verifies a decimals_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a decimals_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns decimals_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.decimals_arguments;
+
+                /**
+                 * Creates a plain object from a decimals_arguments message. Also converts values to other types if specified.
+                 * @param message decimals_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.decimals_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this decimals_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a decimals_result. */
+            interface Idecimals_result {
+
+                /** decimals_result value */
+                value?: (number|null);
+            }
+
+            /** Represents a decimals_result. */
+            class decimals_result implements Idecimals_result {
+
+                /**
+                 * Constructs a new decimals_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Idecimals_result);
+
+                /** decimals_result value. */
+                public value: number;
+
+                /**
+                 * Creates a new decimals_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns decimals_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Idecimals_result): koinos.standards.kcs3.decimals_result;
+
+                /**
+                 * Encodes the specified decimals_result message. Does not implicitly {@link koinos.standards.kcs3.decimals_result.verify|verify} messages.
+                 * @param message decimals_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Idecimals_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified decimals_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.decimals_result.verify|verify} messages.
+                 * @param message decimals_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Idecimals_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a decimals_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns decimals_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.decimals_result;
+
+                /**
+                 * Decodes a decimals_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns decimals_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.decimals_result;
+
+                /**
+                 * Verifies a decimals_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a decimals_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns decimals_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.decimals_result;
+
+                /**
+                 * Creates a plain object from a decimals_result message. Also converts values to other types if specified.
+                 * @param message decimals_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.decimals_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this decimals_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a total_supply_arguments. */
+            interface Itotal_supply_arguments {
+            }
+
+            /** Represents a total_supply_arguments. */
+            class total_supply_arguments implements Itotal_supply_arguments {
+
+                /**
+                 * Constructs a new total_supply_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Itotal_supply_arguments);
+
+                /**
+                 * Creates a new total_supply_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns total_supply_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Itotal_supply_arguments): koinos.standards.kcs3.total_supply_arguments;
+
+                /**
+                 * Encodes the specified total_supply_arguments message. Does not implicitly {@link koinos.standards.kcs3.total_supply_arguments.verify|verify} messages.
+                 * @param message total_supply_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Itotal_supply_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified total_supply_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.total_supply_arguments.verify|verify} messages.
+                 * @param message total_supply_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Itotal_supply_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a total_supply_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns total_supply_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.total_supply_arguments;
+
+                /**
+                 * Decodes a total_supply_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns total_supply_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.total_supply_arguments;
+
+                /**
+                 * Verifies a total_supply_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a total_supply_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns total_supply_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.total_supply_arguments;
+
+                /**
+                 * Creates a plain object from a total_supply_arguments message. Also converts values to other types if specified.
+                 * @param message total_supply_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.total_supply_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this total_supply_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a total_supply_result. */
+            interface Itotal_supply_result {
+
+                /** total_supply_result value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a total_supply_result. */
+            class total_supply_result implements Itotal_supply_result {
+
+                /**
+                 * Constructs a new total_supply_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Itotal_supply_result);
+
+                /** total_supply_result value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new total_supply_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns total_supply_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Itotal_supply_result): koinos.standards.kcs3.total_supply_result;
+
+                /**
+                 * Encodes the specified total_supply_result message. Does not implicitly {@link koinos.standards.kcs3.total_supply_result.verify|verify} messages.
+                 * @param message total_supply_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Itotal_supply_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified total_supply_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.total_supply_result.verify|verify} messages.
+                 * @param message total_supply_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Itotal_supply_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a total_supply_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns total_supply_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.total_supply_result;
+
+                /**
+                 * Decodes a total_supply_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns total_supply_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.total_supply_result;
+
+                /**
+                 * Verifies a total_supply_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a total_supply_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns total_supply_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.total_supply_result;
+
+                /**
+                 * Creates a plain object from a total_supply_result message. Also converts values to other types if specified.
+                 * @param message total_supply_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.total_supply_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this total_supply_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a balance_of_arguments. */
+            interface Ibalance_of_arguments {
+
+                /** balance_of_arguments owner */
+                owner?: (Uint8Array|null);
+            }
+
+            /** Represents a balance_of_arguments. */
+            class balance_of_arguments implements Ibalance_of_arguments {
+
+                /**
+                 * Constructs a new balance_of_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Ibalance_of_arguments);
+
+                /** balance_of_arguments owner. */
+                public owner: Uint8Array;
+
+                /**
+                 * Creates a new balance_of_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns balance_of_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Ibalance_of_arguments): koinos.standards.kcs3.balance_of_arguments;
+
+                /**
+                 * Encodes the specified balance_of_arguments message. Does not implicitly {@link koinos.standards.kcs3.balance_of_arguments.verify|verify} messages.
+                 * @param message balance_of_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Ibalance_of_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified balance_of_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.balance_of_arguments.verify|verify} messages.
+                 * @param message balance_of_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Ibalance_of_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a balance_of_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns balance_of_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.balance_of_arguments;
+
+                /**
+                 * Decodes a balance_of_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns balance_of_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.balance_of_arguments;
+
+                /**
+                 * Verifies a balance_of_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a balance_of_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns balance_of_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.balance_of_arguments;
+
+                /**
+                 * Creates a plain object from a balance_of_arguments message. Also converts values to other types if specified.
+                 * @param message balance_of_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.balance_of_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this balance_of_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a balance_of_result. */
+            interface Ibalance_of_result {
+
+                /** balance_of_result value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a balance_of_result. */
+            class balance_of_result implements Ibalance_of_result {
+
+                /**
+                 * Constructs a new balance_of_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Ibalance_of_result);
+
+                /** balance_of_result value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new balance_of_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns balance_of_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Ibalance_of_result): koinos.standards.kcs3.balance_of_result;
+
+                /**
+                 * Encodes the specified balance_of_result message. Does not implicitly {@link koinos.standards.kcs3.balance_of_result.verify|verify} messages.
+                 * @param message balance_of_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Ibalance_of_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified balance_of_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.balance_of_result.verify|verify} messages.
+                 * @param message balance_of_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Ibalance_of_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a balance_of_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns balance_of_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.balance_of_result;
+
+                /**
+                 * Decodes a balance_of_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns balance_of_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.balance_of_result;
+
+                /**
+                 * Verifies a balance_of_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a balance_of_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns balance_of_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.balance_of_result;
+
+                /**
+                 * Creates a plain object from a balance_of_result message. Also converts values to other types if specified.
+                 * @param message balance_of_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.balance_of_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this balance_of_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a transfer_arguments. */
+            interface Itransfer_arguments {
+
+                /** transfer_arguments from */
+                from?: (Uint8Array|null);
+
+                /** transfer_arguments to */
+                to?: (Uint8Array|null);
+
+                /** transfer_arguments value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a transfer_arguments. */
+            class transfer_arguments implements Itransfer_arguments {
+
+                /**
+                 * Constructs a new transfer_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Itransfer_arguments);
+
+                /** transfer_arguments from. */
+                public from: Uint8Array;
+
+                /** transfer_arguments to. */
+                public to: Uint8Array;
+
+                /** transfer_arguments value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new transfer_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns transfer_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Itransfer_arguments): koinos.standards.kcs3.transfer_arguments;
+
+                /**
+                 * Encodes the specified transfer_arguments message. Does not implicitly {@link koinos.standards.kcs3.transfer_arguments.verify|verify} messages.
+                 * @param message transfer_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Itransfer_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified transfer_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.transfer_arguments.verify|verify} messages.
+                 * @param message transfer_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Itransfer_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a transfer_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns transfer_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.transfer_arguments;
+
+                /**
+                 * Decodes a transfer_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns transfer_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.transfer_arguments;
+
+                /**
+                 * Verifies a transfer_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a transfer_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns transfer_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.transfer_arguments;
+
+                /**
+                 * Creates a plain object from a transfer_arguments message. Also converts values to other types if specified.
+                 * @param message transfer_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.transfer_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this transfer_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a transfer_result. */
+            interface Itransfer_result {
+            }
+
+            /** Represents a transfer_result. */
+            class transfer_result implements Itransfer_result {
+
+                /**
+                 * Constructs a new transfer_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Itransfer_result);
+
+                /**
+                 * Creates a new transfer_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns transfer_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Itransfer_result): koinos.standards.kcs3.transfer_result;
+
+                /**
+                 * Encodes the specified transfer_result message. Does not implicitly {@link koinos.standards.kcs3.transfer_result.verify|verify} messages.
+                 * @param message transfer_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Itransfer_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified transfer_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.transfer_result.verify|verify} messages.
+                 * @param message transfer_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Itransfer_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a transfer_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns transfer_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.transfer_result;
+
+                /**
+                 * Decodes a transfer_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns transfer_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.transfer_result;
+
+                /**
+                 * Verifies a transfer_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a transfer_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns transfer_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.transfer_result;
+
+                /**
+                 * Creates a plain object from a transfer_result message. Also converts values to other types if specified.
+                 * @param message transfer_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.transfer_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this transfer_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a mint_arguments. */
+            interface Imint_arguments {
+
+                /** mint_arguments to */
+                to?: (Uint8Array|null);
+
+                /** mint_arguments value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a mint_arguments. */
+            class mint_arguments implements Imint_arguments {
+
+                /**
+                 * Constructs a new mint_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Imint_arguments);
+
+                /** mint_arguments to. */
+                public to: Uint8Array;
+
+                /** mint_arguments value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new mint_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns mint_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Imint_arguments): koinos.standards.kcs3.mint_arguments;
+
+                /**
+                 * Encodes the specified mint_arguments message. Does not implicitly {@link koinos.standards.kcs3.mint_arguments.verify|verify} messages.
+                 * @param message mint_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Imint_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified mint_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.mint_arguments.verify|verify} messages.
+                 * @param message mint_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Imint_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a mint_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns mint_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.mint_arguments;
+
+                /**
+                 * Decodes a mint_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns mint_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.mint_arguments;
+
+                /**
+                 * Verifies a mint_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a mint_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns mint_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.mint_arguments;
+
+                /**
+                 * Creates a plain object from a mint_arguments message. Also converts values to other types if specified.
+                 * @param message mint_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.mint_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this mint_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a mint_result. */
+            interface Imint_result {
+            }
+
+            /** Represents a mint_result. */
+            class mint_result implements Imint_result {
+
+                /**
+                 * Constructs a new mint_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Imint_result);
+
+                /**
+                 * Creates a new mint_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns mint_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Imint_result): koinos.standards.kcs3.mint_result;
+
+                /**
+                 * Encodes the specified mint_result message. Does not implicitly {@link koinos.standards.kcs3.mint_result.verify|verify} messages.
+                 * @param message mint_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Imint_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified mint_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.mint_result.verify|verify} messages.
+                 * @param message mint_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Imint_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a mint_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns mint_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.mint_result;
+
+                /**
+                 * Decodes a mint_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns mint_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.mint_result;
+
+                /**
+                 * Verifies a mint_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a mint_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns mint_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.mint_result;
+
+                /**
+                 * Creates a plain object from a mint_result message. Also converts values to other types if specified.
+                 * @param message mint_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.mint_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this mint_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a burn_arguments. */
+            interface Iburn_arguments {
+
+                /** burn_arguments from */
+                from?: (Uint8Array|null);
+
+                /** burn_arguments value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a burn_arguments. */
+            class burn_arguments implements Iburn_arguments {
+
+                /**
+                 * Constructs a new burn_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iburn_arguments);
+
+                /** burn_arguments from. */
+                public from: Uint8Array;
+
+                /** burn_arguments value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new burn_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns burn_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iburn_arguments): koinos.standards.kcs3.burn_arguments;
+
+                /**
+                 * Encodes the specified burn_arguments message. Does not implicitly {@link koinos.standards.kcs3.burn_arguments.verify|verify} messages.
+                 * @param message burn_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iburn_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified burn_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.burn_arguments.verify|verify} messages.
+                 * @param message burn_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iburn_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a burn_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns burn_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.burn_arguments;
+
+                /**
+                 * Decodes a burn_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns burn_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.burn_arguments;
+
+                /**
+                 * Verifies a burn_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a burn_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns burn_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.burn_arguments;
+
+                /**
+                 * Creates a plain object from a burn_arguments message. Also converts values to other types if specified.
+                 * @param message burn_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.burn_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this burn_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a burn_result. */
+            interface Iburn_result {
+            }
+
+            /** Represents a burn_result. */
+            class burn_result implements Iburn_result {
+
+                /**
+                 * Constructs a new burn_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iburn_result);
+
+                /**
+                 * Creates a new burn_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns burn_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iburn_result): koinos.standards.kcs3.burn_result;
+
+                /**
+                 * Encodes the specified burn_result message. Does not implicitly {@link koinos.standards.kcs3.burn_result.verify|verify} messages.
+                 * @param message burn_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iburn_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified burn_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.burn_result.verify|verify} messages.
+                 * @param message burn_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iburn_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a burn_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns burn_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.burn_result;
+
+                /**
+                 * Decodes a burn_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns burn_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.burn_result;
+
+                /**
+                 * Verifies a burn_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a burn_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns burn_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.burn_result;
+
+                /**
+                 * Creates a plain object from a burn_result message. Also converts values to other types if specified.
+                 * @param message burn_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.burn_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this burn_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a balance_object. */
+            interface Ibalance_object {
+
+                /** balance_object value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a balance_object. */
+            class balance_object implements Ibalance_object {
+
+                /**
+                 * Constructs a new balance_object.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Ibalance_object);
+
+                /** balance_object value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new balance_object instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns balance_object instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Ibalance_object): koinos.standards.kcs3.balance_object;
+
+                /**
+                 * Encodes the specified balance_object message. Does not implicitly {@link koinos.standards.kcs3.balance_object.verify|verify} messages.
+                 * @param message balance_object message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Ibalance_object, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified balance_object message, length delimited. Does not implicitly {@link koinos.standards.kcs3.balance_object.verify|verify} messages.
+                 * @param message balance_object message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Ibalance_object, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a balance_object message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns balance_object
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.balance_object;
+
+                /**
+                 * Decodes a balance_object message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns balance_object
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.balance_object;
+
+                /**
+                 * Verifies a balance_object message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a balance_object message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns balance_object
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.balance_object;
+
+                /**
+                 * Creates a plain object from a balance_object message. Also converts values to other types if specified.
+                 * @param message balance_object
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.balance_object, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this balance_object to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** direction enum. */
+            enum direction {
+                ascending = 0,
+                descending = 1
+            }
+
+            /** Properties of a spender_value. */
+            interface Ispender_value {
+
+                /** spender_value spender */
+                spender?: (Uint8Array|null);
+
+                /** spender_value value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a spender_value. */
+            class spender_value implements Ispender_value {
+
+                /**
+                 * Constructs a new spender_value.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Ispender_value);
+
+                /** spender_value spender. */
+                public spender: Uint8Array;
+
+                /** spender_value value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new spender_value instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns spender_value instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Ispender_value): koinos.standards.kcs3.spender_value;
+
+                /**
+                 * Encodes the specified spender_value message. Does not implicitly {@link koinos.standards.kcs3.spender_value.verify|verify} messages.
+                 * @param message spender_value message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Ispender_value, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified spender_value message, length delimited. Does not implicitly {@link koinos.standards.kcs3.spender_value.verify|verify} messages.
+                 * @param message spender_value message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Ispender_value, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a spender_value message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns spender_value
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.spender_value;
+
+                /**
+                 * Decodes a spender_value message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns spender_value
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.spender_value;
+
+                /**
+                 * Verifies a spender_value message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a spender_value message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns spender_value
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.spender_value;
+
+                /**
+                 * Creates a plain object from a spender_value message. Also converts values to other types if specified.
+                 * @param message spender_value
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.spender_value, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this spender_value to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_allowances_arguments. */
+            interface Iget_allowances_arguments {
+
+                /** get_allowances_arguments owner */
+                owner?: (Uint8Array|null);
+
+                /** get_allowances_arguments start */
+                start?: (Uint8Array|null);
+
+                /** get_allowances_arguments limit */
+                limit?: (number|null);
+
+                /** get_allowances_arguments direction */
+                direction?: (koinos.standards.kcs3.direction|null);
+            }
+
+            /** Represents a get_allowances_arguments. */
+            class get_allowances_arguments implements Iget_allowances_arguments {
+
+                /**
+                 * Constructs a new get_allowances_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iget_allowances_arguments);
+
+                /** get_allowances_arguments owner. */
+                public owner: Uint8Array;
+
+                /** get_allowances_arguments start. */
+                public start: Uint8Array;
+
+                /** get_allowances_arguments limit. */
+                public limit: number;
+
+                /** get_allowances_arguments direction. */
+                public direction: koinos.standards.kcs3.direction;
+
+                /**
+                 * Creates a new get_allowances_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_allowances_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iget_allowances_arguments): koinos.standards.kcs3.get_allowances_arguments;
+
+                /**
+                 * Encodes the specified get_allowances_arguments message. Does not implicitly {@link koinos.standards.kcs3.get_allowances_arguments.verify|verify} messages.
+                 * @param message get_allowances_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iget_allowances_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_allowances_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.get_allowances_arguments.verify|verify} messages.
+                 * @param message get_allowances_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iget_allowances_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_allowances_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_allowances_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.get_allowances_arguments;
+
+                /**
+                 * Decodes a get_allowances_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_allowances_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.get_allowances_arguments;
+
+                /**
+                 * Verifies a get_allowances_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_allowances_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_allowances_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.get_allowances_arguments;
+
+                /**
+                 * Creates a plain object from a get_allowances_arguments message. Also converts values to other types if specified.
+                 * @param message get_allowances_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.get_allowances_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_allowances_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_allowances_result. */
+            interface Iget_allowances_result {
+
+                /** get_allowances_result owner */
+                owner?: (Uint8Array|null);
+
+                /** get_allowances_result allowances */
+                allowances?: (koinos.standards.kcs3.Ispender_value[]|null);
+            }
+
+            /** Represents a get_allowances_result. */
+            class get_allowances_result implements Iget_allowances_result {
+
+                /**
+                 * Constructs a new get_allowances_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iget_allowances_result);
+
+                /** get_allowances_result owner. */
+                public owner: Uint8Array;
+
+                /** get_allowances_result allowances. */
+                public allowances: koinos.standards.kcs3.Ispender_value[];
+
+                /**
+                 * Creates a new get_allowances_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_allowances_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iget_allowances_result): koinos.standards.kcs3.get_allowances_result;
+
+                /**
+                 * Encodes the specified get_allowances_result message. Does not implicitly {@link koinos.standards.kcs3.get_allowances_result.verify|verify} messages.
+                 * @param message get_allowances_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iget_allowances_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_allowances_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.get_allowances_result.verify|verify} messages.
+                 * @param message get_allowances_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iget_allowances_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_allowances_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_allowances_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.get_allowances_result;
+
+                /**
+                 * Decodes a get_allowances_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_allowances_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.get_allowances_result;
+
+                /**
+                 * Verifies a get_allowances_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_allowances_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_allowances_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.get_allowances_result;
+
+                /**
+                 * Creates a plain object from a get_allowances_result message. Also converts values to other types if specified.
+                 * @param message get_allowances_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.get_allowances_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_allowances_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an approve_arguments. */
+            interface Iapprove_arguments {
+
+                /** approve_arguments owner */
+                owner?: (Uint8Array|null);
+
+                /** approve_arguments spender */
+                spender?: (Uint8Array|null);
+
+                /** approve_arguments value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents an approve_arguments. */
+            class approve_arguments implements Iapprove_arguments {
+
+                /**
+                 * Constructs a new approve_arguments.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iapprove_arguments);
+
+                /** approve_arguments owner. */
+                public owner: Uint8Array;
+
+                /** approve_arguments spender. */
+                public spender: Uint8Array;
+
+                /** approve_arguments value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new approve_arguments instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns approve_arguments instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iapprove_arguments): koinos.standards.kcs3.approve_arguments;
+
+                /**
+                 * Encodes the specified approve_arguments message. Does not implicitly {@link koinos.standards.kcs3.approve_arguments.verify|verify} messages.
+                 * @param message approve_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iapprove_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified approve_arguments message, length delimited. Does not implicitly {@link koinos.standards.kcs3.approve_arguments.verify|verify} messages.
+                 * @param message approve_arguments message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iapprove_arguments, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an approve_arguments message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns approve_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.approve_arguments;
+
+                /**
+                 * Decodes an approve_arguments message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns approve_arguments
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.approve_arguments;
+
+                /**
+                 * Verifies an approve_arguments message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an approve_arguments message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns approve_arguments
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.approve_arguments;
+
+                /**
+                 * Creates a plain object from an approve_arguments message. Also converts values to other types if specified.
+                 * @param message approve_arguments
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.approve_arguments, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this approve_arguments to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an approve_result. */
+            interface Iapprove_result {
+            }
+
+            /** Represents an approve_result. */
+            class approve_result implements Iapprove_result {
+
+                /**
+                 * Constructs a new approve_result.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iapprove_result);
+
+                /**
+                 * Creates a new approve_result instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns approve_result instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iapprove_result): koinos.standards.kcs3.approve_result;
+
+                /**
+                 * Encodes the specified approve_result message. Does not implicitly {@link koinos.standards.kcs3.approve_result.verify|verify} messages.
+                 * @param message approve_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iapprove_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified approve_result message, length delimited. Does not implicitly {@link koinos.standards.kcs3.approve_result.verify|verify} messages.
+                 * @param message approve_result message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iapprove_result, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an approve_result message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns approve_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.approve_result;
+
+                /**
+                 * Decodes an approve_result message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns approve_result
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.approve_result;
+
+                /**
+                 * Verifies an approve_result message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an approve_result message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns approve_result
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.approve_result;
+
+                /**
+                 * Creates a plain object from an approve_result message. Also converts values to other types if specified.
+                 * @param message approve_result
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.approve_result, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this approve_result to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a burn_event. */
+            interface Iburn_event {
+
+                /** burn_event from */
+                from?: (Uint8Array|null);
+
+                /** burn_event value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a burn_event. */
+            class burn_event implements Iburn_event {
+
+                /**
+                 * Constructs a new burn_event.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iburn_event);
+
+                /** burn_event from. */
+                public from: Uint8Array;
+
+                /** burn_event value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new burn_event instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns burn_event instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iburn_event): koinos.standards.kcs3.burn_event;
+
+                /**
+                 * Encodes the specified burn_event message. Does not implicitly {@link koinos.standards.kcs3.burn_event.verify|verify} messages.
+                 * @param message burn_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iburn_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified burn_event message, length delimited. Does not implicitly {@link koinos.standards.kcs3.burn_event.verify|verify} messages.
+                 * @param message burn_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iburn_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a burn_event message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns burn_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.burn_event;
+
+                /**
+                 * Decodes a burn_event message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns burn_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.burn_event;
+
+                /**
+                 * Verifies a burn_event message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a burn_event message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns burn_event
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.burn_event;
+
+                /**
+                 * Creates a plain object from a burn_event message. Also converts values to other types if specified.
+                 * @param message burn_event
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.burn_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this burn_event to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a mint_event. */
+            interface Imint_event {
+
+                /** mint_event to */
+                to?: (Uint8Array|null);
+
+                /** mint_event value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a mint_event. */
+            class mint_event implements Imint_event {
+
+                /**
+                 * Constructs a new mint_event.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Imint_event);
+
+                /** mint_event to. */
+                public to: Uint8Array;
+
+                /** mint_event value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new mint_event instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns mint_event instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Imint_event): koinos.standards.kcs3.mint_event;
+
+                /**
+                 * Encodes the specified mint_event message. Does not implicitly {@link koinos.standards.kcs3.mint_event.verify|verify} messages.
+                 * @param message mint_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Imint_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified mint_event message, length delimited. Does not implicitly {@link koinos.standards.kcs3.mint_event.verify|verify} messages.
+                 * @param message mint_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Imint_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a mint_event message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns mint_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.mint_event;
+
+                /**
+                 * Decodes a mint_event message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns mint_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.mint_event;
+
+                /**
+                 * Verifies a mint_event message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a mint_event message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns mint_event
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.mint_event;
+
+                /**
+                 * Creates a plain object from a mint_event message. Also converts values to other types if specified.
+                 * @param message mint_event
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.mint_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this mint_event to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a transfer_event. */
+            interface Itransfer_event {
+
+                /** transfer_event from */
+                from?: (Uint8Array|null);
+
+                /** transfer_event to */
+                to?: (Uint8Array|null);
+
+                /** transfer_event value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents a transfer_event. */
+            class transfer_event implements Itransfer_event {
+
+                /**
+                 * Constructs a new transfer_event.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Itransfer_event);
+
+                /** transfer_event from. */
+                public from: Uint8Array;
+
+                /** transfer_event to. */
+                public to: Uint8Array;
+
+                /** transfer_event value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new transfer_event instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns transfer_event instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Itransfer_event): koinos.standards.kcs3.transfer_event;
+
+                /**
+                 * Encodes the specified transfer_event message. Does not implicitly {@link koinos.standards.kcs3.transfer_event.verify|verify} messages.
+                 * @param message transfer_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Itransfer_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified transfer_event message, length delimited. Does not implicitly {@link koinos.standards.kcs3.transfer_event.verify|verify} messages.
+                 * @param message transfer_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Itransfer_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a transfer_event message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns transfer_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.transfer_event;
+
+                /**
+                 * Decodes a transfer_event message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns transfer_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.transfer_event;
+
+                /**
+                 * Verifies a transfer_event message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a transfer_event message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns transfer_event
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.transfer_event;
+
+                /**
+                 * Creates a plain object from a transfer_event message. Also converts values to other types if specified.
+                 * @param message transfer_event
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.transfer_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this transfer_event to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an approve_event. */
+            interface Iapprove_event {
+
+                /** approve_event owner */
+                owner?: (Uint8Array|null);
+
+                /** approve_event spender */
+                spender?: (Uint8Array|null);
+
+                /** approve_event value */
+                value?: (number|Long|null);
+            }
+
+            /** Represents an approve_event. */
+            class approve_event implements Iapprove_event {
+
+                /**
+                 * Constructs a new approve_event.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.standards.kcs3.Iapprove_event);
+
+                /** approve_event owner. */
+                public owner: Uint8Array;
+
+                /** approve_event spender. */
+                public spender: Uint8Array;
+
+                /** approve_event value. */
+                public value: (number|Long);
+
+                /**
+                 * Creates a new approve_event instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns approve_event instance
+                 */
+                public static create(properties?: koinos.standards.kcs3.Iapprove_event): koinos.standards.kcs3.approve_event;
+
+                /**
+                 * Encodes the specified approve_event message. Does not implicitly {@link koinos.standards.kcs3.approve_event.verify|verify} messages.
+                 * @param message approve_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.standards.kcs3.Iapprove_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified approve_event message, length delimited. Does not implicitly {@link koinos.standards.kcs3.approve_event.verify|verify} messages.
+                 * @param message approve_event message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.standards.kcs3.Iapprove_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an approve_event message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns approve_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.standards.kcs3.approve_event;
+
+                /**
+                 * Decodes an approve_event message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns approve_event
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.standards.kcs3.approve_event;
+
+                /**
+                 * Verifies an approve_event message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an approve_event message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns approve_event
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.standards.kcs3.approve_event;
+
+                /**
+                 * Creates a plain object from an approve_event message. Also converts values to other types if specified.
+                 * @param message approve_event
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.standards.kcs3.approve_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this approve_event to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+        }
     }
 
     /** Namespace broadcast. */
