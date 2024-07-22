@@ -19671,12 +19671,6 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
 
-            /** direction enum. */
-            enum direction {
-                ascending = 0,
-                descending = 1
-            }
-
             /** Properties of a spender_value. */
             interface Ispender_value {
 
@@ -19785,8 +19779,8 @@ export namespace koinos {
                 /** get_allowances_arguments limit */
                 limit?: (number|null);
 
-                /** get_allowances_arguments direction */
-                direction?: (koinos.standards.kcs4.direction|null);
+                /** get_allowances_arguments descending */
+                descending?: (boolean|null);
             }
 
             /** Represents a get_allowances_arguments. */
@@ -19807,8 +19801,8 @@ export namespace koinos {
                 /** get_allowances_arguments limit. */
                 public limit: number;
 
-                /** get_allowances_arguments direction. */
-                public direction: koinos.standards.kcs4.direction;
+                /** get_allowances_arguments descending. */
+                public descending: boolean;
 
                 /**
                  * Creates a new get_allowances_arguments instance using the specified properties.

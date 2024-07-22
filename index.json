@@ -3357,12 +3357,6 @@
                     }
                   }
                 },
-                "direction": {
-                  "values": {
-                    "ascending": 0,
-                    "descending": 1
-                  }
-                },
                 "spender_value": {
                   "fields": {
                     "spender": {
@@ -3401,8 +3395,8 @@
                       "type": "int32",
                       "id": 3
                     },
-                    "direction": {
-                      "type": "direction",
+                    "descending": {
+                      "type": "bool",
                       "id": 4
                     }
                   }
