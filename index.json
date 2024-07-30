@@ -3608,17 +3608,6 @@
                       }
                     }
                   }
-                },
-                "balance_object": {
-                  "fields": {
-                    "value": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    }
-                  }
                 }
               }
             },
@@ -3993,17 +3982,6 @@
                       }
                     }
                   }
-                },
-                "balance_object": {
-                  "fields": {
-                    "value": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    }
-                  }
                 }
               }
             },
@@ -4150,17 +4128,6 @@
                 },
                 "burn_result": {
                   "fields": {}
-                },
-                "balance_object": {
-                  "fields": {
-                    "value": {
-                      "type": "uint64",
-                      "id": 1,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    }
-                  }
                 },
                 "burn_event": {
                   "fields": {
