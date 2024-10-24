@@ -6200,7 +6200,10 @@ export namespace koinos {
                 public value: (number|Long);
 
                 /** transfer_arguments memo. */
-                public memo: string;
+                public memo?: (string|null);
+
+                /** transfer_arguments _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new transfer_arguments instance using the specified properties.
@@ -6365,6 +6368,9 @@ export namespace koinos {
 
                 /** mint_arguments value */
                 value?: (number|Long|null);
+
+                /** mint_arguments memo */
+                memo?: (string|null);
             }
 
             /** Represents a mint_arguments. */
@@ -6381,6 +6387,12 @@ export namespace koinos {
 
                 /** mint_arguments value. */
                 public value: (number|Long);
+
+                /** mint_arguments memo. */
+                public memo?: (string|null);
+
+                /** mint_arguments _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new mint_arguments instance using the specified properties.
@@ -6545,6 +6557,9 @@ export namespace koinos {
 
                 /** burn_arguments value */
                 value?: (number|Long|null);
+
+                /** burn_arguments memo */
+                memo?: (string|null);
             }
 
             /** Represents a burn_arguments. */
@@ -6561,6 +6576,12 @@ export namespace koinos {
 
                 /** burn_arguments value. */
                 public value: (number|Long);
+
+                /** burn_arguments memo. */
+                public memo?: (string|null);
+
+                /** burn_arguments _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new burn_arguments instance using the specified properties.
@@ -6728,6 +6749,9 @@ export namespace koinos {
 
                 /** approve_arguments value */
                 value?: (number|Long|null);
+
+                /** approve_arguments memo */
+                memo?: (string|null);
             }
 
             /** Represents an approve_arguments. */
@@ -6747,6 +6771,12 @@ export namespace koinos {
 
                 /** approve_arguments value. */
                 public value: (number|Long);
+
+                /** approve_arguments memo. */
+                public memo?: (string|null);
+
+                /** approve_arguments _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new approve_arguments instance using the specified properties.
@@ -6911,6 +6941,9 @@ export namespace koinos {
 
                 /** burn_event value */
                 value?: (number|Long|null);
+
+                /** burn_event memo */
+                memo?: (string|null);
             }
 
             /** Represents a burn_event. */
@@ -6927,6 +6960,12 @@ export namespace koinos {
 
                 /** burn_event value. */
                 public value: (number|Long);
+
+                /** burn_event memo. */
+                public memo?: (string|null);
+
+                /** burn_event _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new burn_event instance using the specified properties.
@@ -7007,6 +7046,9 @@ export namespace koinos {
 
                 /** mint_event value */
                 value?: (number|Long|null);
+
+                /** mint_event memo */
+                memo?: (string|null);
             }
 
             /** Represents a mint_event. */
@@ -7023,6 +7065,12 @@ export namespace koinos {
 
                 /** mint_event value. */
                 public value: (number|Long);
+
+                /** mint_event memo. */
+                public memo?: (string|null);
+
+                /** mint_event _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new mint_event instance using the specified properties.
@@ -7130,7 +7178,10 @@ export namespace koinos {
                 public value: (number|Long);
 
                 /** transfer_event memo. */
-                public memo: string;
+                public memo?: (string|null);
+
+                /** transfer_event _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new transfer_event instance using the specified properties.
@@ -7214,6 +7265,9 @@ export namespace koinos {
 
                 /** approve_event value */
                 value?: (number|Long|null);
+
+                /** approve_event memo */
+                memo?: (string|null);
             }
 
             /** Represents an approve_event. */
@@ -7233,6 +7287,12 @@ export namespace koinos {
 
                 /** approve_event value. */
                 public value: (number|Long);
+
+                /** approve_event memo. */
+                public memo?: (string|null);
+
+                /** approve_event _memo. */
+                public _memo?: "memo";
 
                 /**
                  * Creates a new approve_event instance using the specified properties.
@@ -18991,6 +19051,1153 @@ export namespace koinos {
 
                 /**
                  * Converts this chain_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+        }
+
+        /** Namespace koindx_tracker. */
+        namespace koindx_tracker {
+
+            /** Properties of a pool_pair. */
+            interface Ipool_pair {
+
+                /** pool_pair pool */
+                pool?: (Uint8Array|null);
+
+                /** pool_pair token_a */
+                token_a?: (string|null);
+
+                /** pool_pair token_b */
+                token_b?: (string|null);
+            }
+
+            /** Represents a pool_pair. */
+            class pool_pair implements Ipool_pair {
+
+                /**
+                 * Constructs a new pool_pair.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Ipool_pair);
+
+                /** pool_pair pool. */
+                public pool: Uint8Array;
+
+                /** pool_pair token_a. */
+                public token_a: string;
+
+                /** pool_pair token_b. */
+                public token_b: string;
+
+                /**
+                 * Creates a new pool_pair instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns pool_pair instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Ipool_pair): koinos.rpc.koindx_tracker.pool_pair;
+
+                /**
+                 * Encodes the specified pool_pair message. Does not implicitly {@link koinos.rpc.koindx_tracker.pool_pair.verify|verify} messages.
+                 * @param message pool_pair message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Ipool_pair, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified pool_pair message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.pool_pair.verify|verify} messages.
+                 * @param message pool_pair message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Ipool_pair, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a pool_pair message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns pool_pair
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.pool_pair;
+
+                /**
+                 * Decodes a pool_pair message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns pool_pair
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.pool_pair;
+
+                /**
+                 * Verifies a pool_pair message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a pool_pair message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns pool_pair
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.pool_pair;
+
+                /**
+                 * Creates a plain object from a pool_pair message. Also converts values to other types if specified.
+                 * @param message pool_pair
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.pool_pair, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this pool_pair to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_pools_request. */
+            interface Iget_pools_request {
+
+                /** get_pools_request start */
+                start?: (Uint8Array|null);
+
+                /** get_pools_request pool */
+                pool?: (Uint8Array|null);
+
+                /** get_pools_request limit */
+                limit?: (number|Long|null);
+            }
+
+            /** Represents a get_pools_request. */
+            class get_pools_request implements Iget_pools_request {
+
+                /**
+                 * Constructs a new get_pools_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iget_pools_request);
+
+                /** get_pools_request start. */
+                public start?: (Uint8Array|null);
+
+                /** get_pools_request pool. */
+                public pool?: (Uint8Array|null);
+
+                /** get_pools_request limit. */
+                public limit: (number|Long);
+
+                /** get_pools_request target. */
+                public target?: ("start"|"pool");
+
+                /**
+                 * Creates a new get_pools_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_pools_request instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iget_pools_request): koinos.rpc.koindx_tracker.get_pools_request;
+
+                /**
+                 * Encodes the specified get_pools_request message. Does not implicitly {@link koinos.rpc.koindx_tracker.get_pools_request.verify|verify} messages.
+                 * @param message get_pools_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iget_pools_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_pools_request message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.get_pools_request.verify|verify} messages.
+                 * @param message get_pools_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iget_pools_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_pools_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_pools_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.get_pools_request;
+
+                /**
+                 * Decodes a get_pools_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_pools_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.get_pools_request;
+
+                /**
+                 * Verifies a get_pools_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_pools_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_pools_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.get_pools_request;
+
+                /**
+                 * Creates a plain object from a get_pools_request message. Also converts values to other types if specified.
+                 * @param message get_pools_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.get_pools_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_pools_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_pools_response. */
+            interface Iget_pools_response {
+
+                /** get_pools_response values */
+                values?: (koinos.rpc.koindx_tracker.Ipool_pair[]|null);
+            }
+
+            /** Represents a get_pools_response. */
+            class get_pools_response implements Iget_pools_response {
+
+                /**
+                 * Constructs a new get_pools_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iget_pools_response);
+
+                /** get_pools_response values. */
+                public values: koinos.rpc.koindx_tracker.Ipool_pair[];
+
+                /**
+                 * Creates a new get_pools_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_pools_response instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iget_pools_response): koinos.rpc.koindx_tracker.get_pools_response;
+
+                /**
+                 * Encodes the specified get_pools_response message. Does not implicitly {@link koinos.rpc.koindx_tracker.get_pools_response.verify|verify} messages.
+                 * @param message get_pools_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iget_pools_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_pools_response message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.get_pools_response.verify|verify} messages.
+                 * @param message get_pools_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iget_pools_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_pools_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_pools_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.get_pools_response;
+
+                /**
+                 * Decodes a get_pools_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_pools_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.get_pools_response;
+
+                /**
+                 * Verifies a get_pools_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_pools_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_pools_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.get_pools_response;
+
+                /**
+                 * Creates a plain object from a get_pools_response message. Also converts values to other types if specified.
+                 * @param message get_pools_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.get_pools_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_pools_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of an account_liquidity. */
+            interface Iaccount_liquidity {
+
+                /** account_liquidity address */
+                address?: (Uint8Array|null);
+
+                /** account_liquidity balance */
+                balance?: (number|Long|null);
+
+                /** account_liquidity coin_ms_hi */
+                coin_ms_hi?: (number|Long|null);
+
+                /** account_liquidity coin_ms_lo */
+                coin_ms_lo?: (number|Long|null);
+            }
+
+            /** Represents an account_liquidity. */
+            class account_liquidity implements Iaccount_liquidity {
+
+                /**
+                 * Constructs a new account_liquidity.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iaccount_liquidity);
+
+                /** account_liquidity address. */
+                public address: Uint8Array;
+
+                /** account_liquidity balance. */
+                public balance: (number|Long);
+
+                /** account_liquidity coin_ms_hi. */
+                public coin_ms_hi: (number|Long);
+
+                /** account_liquidity coin_ms_lo. */
+                public coin_ms_lo: (number|Long);
+
+                /**
+                 * Creates a new account_liquidity instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns account_liquidity instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iaccount_liquidity): koinos.rpc.koindx_tracker.account_liquidity;
+
+                /**
+                 * Encodes the specified account_liquidity message. Does not implicitly {@link koinos.rpc.koindx_tracker.account_liquidity.verify|verify} messages.
+                 * @param message account_liquidity message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iaccount_liquidity, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified account_liquidity message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.account_liquidity.verify|verify} messages.
+                 * @param message account_liquidity message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iaccount_liquidity, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes an account_liquidity message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns account_liquidity
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.account_liquidity;
+
+                /**
+                 * Decodes an account_liquidity message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns account_liquidity
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.account_liquidity;
+
+                /**
+                 * Verifies an account_liquidity message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates an account_liquidity message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns account_liquidity
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.account_liquidity;
+
+                /**
+                 * Creates a plain object from an account_liquidity message. Also converts values to other types if specified.
+                 * @param message account_liquidity
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.account_liquidity, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this account_liquidity to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_liquidity_request. */
+            interface Iget_liquidity_request {
+
+                /** get_liquidity_request pool */
+                pool?: (Uint8Array|null);
+
+                /** get_liquidity_request start */
+                start?: (Uint8Array|null);
+
+                /** get_liquidity_request limit */
+                limit?: (number|Long|null);
+
+                /** get_liquidity_request start_ms */
+                start_ms?: (number|Long|null);
+
+                /** get_liquidity_request end_ms */
+                end_ms?: (number|Long|null);
+            }
+
+            /** Represents a get_liquidity_request. */
+            class get_liquidity_request implements Iget_liquidity_request {
+
+                /**
+                 * Constructs a new get_liquidity_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iget_liquidity_request);
+
+                /** get_liquidity_request pool. */
+                public pool: Uint8Array;
+
+                /** get_liquidity_request start. */
+                public start: Uint8Array;
+
+                /** get_liquidity_request limit. */
+                public limit: (number|Long);
+
+                /** get_liquidity_request start_ms. */
+                public start_ms?: (number|Long|null);
+
+                /** get_liquidity_request end_ms. */
+                public end_ms?: (number|Long|null);
+
+                /** get_liquidity_request _start_ms. */
+                public _start_ms?: "start_ms";
+
+                /** get_liquidity_request _end_ms. */
+                public _end_ms?: "end_ms";
+
+                /**
+                 * Creates a new get_liquidity_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_liquidity_request instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iget_liquidity_request): koinos.rpc.koindx_tracker.get_liquidity_request;
+
+                /**
+                 * Encodes the specified get_liquidity_request message. Does not implicitly {@link koinos.rpc.koindx_tracker.get_liquidity_request.verify|verify} messages.
+                 * @param message get_liquidity_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iget_liquidity_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_liquidity_request message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.get_liquidity_request.verify|verify} messages.
+                 * @param message get_liquidity_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iget_liquidity_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_liquidity_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_liquidity_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.get_liquidity_request;
+
+                /**
+                 * Decodes a get_liquidity_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_liquidity_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.get_liquidity_request;
+
+                /**
+                 * Verifies a get_liquidity_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_liquidity_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_liquidity_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.get_liquidity_request;
+
+                /**
+                 * Creates a plain object from a get_liquidity_request message. Also converts values to other types if specified.
+                 * @param message get_liquidity_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.get_liquidity_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_liquidity_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_liquidity_response. */
+            interface Iget_liquidity_response {
+
+                /** get_liquidity_response values */
+                values?: (koinos.rpc.koindx_tracker.Iaccount_liquidity[]|null);
+            }
+
+            /** Represents a get_liquidity_response. */
+            class get_liquidity_response implements Iget_liquidity_response {
+
+                /**
+                 * Constructs a new get_liquidity_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iget_liquidity_response);
+
+                /** get_liquidity_response values. */
+                public values: koinos.rpc.koindx_tracker.Iaccount_liquidity[];
+
+                /**
+                 * Creates a new get_liquidity_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_liquidity_response instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iget_liquidity_response): koinos.rpc.koindx_tracker.get_liquidity_response;
+
+                /**
+                 * Encodes the specified get_liquidity_response message. Does not implicitly {@link koinos.rpc.koindx_tracker.get_liquidity_response.verify|verify} messages.
+                 * @param message get_liquidity_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iget_liquidity_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_liquidity_response message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.get_liquidity_response.verify|verify} messages.
+                 * @param message get_liquidity_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iget_liquidity_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_liquidity_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_liquidity_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.get_liquidity_response;
+
+                /**
+                 * Decodes a get_liquidity_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_liquidity_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.get_liquidity_response;
+
+                /**
+                 * Verifies a get_liquidity_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_liquidity_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_liquidity_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.get_liquidity_response;
+
+                /**
+                 * Creates a plain object from a get_liquidity_response message. Also converts values to other types if specified.
+                 * @param message get_liquidity_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.get_liquidity_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_liquidity_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a pool_tvl. */
+            interface Ipool_tvl {
+
+                /** pool_tvl pool */
+                pool?: (Uint8Array|null);
+
+                /** pool_tvl tvl */
+                tvl?: (number|Long|null);
+            }
+
+            /** Represents a pool_tvl. */
+            class pool_tvl implements Ipool_tvl {
+
+                /**
+                 * Constructs a new pool_tvl.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Ipool_tvl);
+
+                /** pool_tvl pool. */
+                public pool: Uint8Array;
+
+                /** pool_tvl tvl. */
+                public tvl: (number|Long);
+
+                /**
+                 * Creates a new pool_tvl instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns pool_tvl instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Ipool_tvl): koinos.rpc.koindx_tracker.pool_tvl;
+
+                /**
+                 * Encodes the specified pool_tvl message. Does not implicitly {@link koinos.rpc.koindx_tracker.pool_tvl.verify|verify} messages.
+                 * @param message pool_tvl message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Ipool_tvl, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified pool_tvl message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.pool_tvl.verify|verify} messages.
+                 * @param message pool_tvl message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Ipool_tvl, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a pool_tvl message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns pool_tvl
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.pool_tvl;
+
+                /**
+                 * Decodes a pool_tvl message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns pool_tvl
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.pool_tvl;
+
+                /**
+                 * Verifies a pool_tvl message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a pool_tvl message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns pool_tvl
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.pool_tvl;
+
+                /**
+                 * Creates a plain object from a pool_tvl message. Also converts values to other types if specified.
+                 * @param message pool_tvl
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.pool_tvl, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this pool_tvl to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_tvl_request. */
+            interface Iget_tvl_request {
+
+                /** get_tvl_request start */
+                start?: (Uint8Array|null);
+
+                /** get_tvl_request pool */
+                pool?: (Uint8Array|null);
+
+                /** get_tvl_request limit */
+                limit?: (number|Long|null);
+
+                /** get_tvl_request ms */
+                ms?: (number|Long|null);
+            }
+
+            /** Represents a get_tvl_request. */
+            class get_tvl_request implements Iget_tvl_request {
+
+                /**
+                 * Constructs a new get_tvl_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iget_tvl_request);
+
+                /** get_tvl_request start. */
+                public start?: (Uint8Array|null);
+
+                /** get_tvl_request pool. */
+                public pool?: (Uint8Array|null);
+
+                /** get_tvl_request limit. */
+                public limit: (number|Long);
+
+                /** get_tvl_request ms. */
+                public ms?: (number|Long|null);
+
+                /** get_tvl_request target. */
+                public target?: ("start"|"pool");
+
+                /** get_tvl_request _ms. */
+                public _ms?: "ms";
+
+                /**
+                 * Creates a new get_tvl_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_tvl_request instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iget_tvl_request): koinos.rpc.koindx_tracker.get_tvl_request;
+
+                /**
+                 * Encodes the specified get_tvl_request message. Does not implicitly {@link koinos.rpc.koindx_tracker.get_tvl_request.verify|verify} messages.
+                 * @param message get_tvl_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iget_tvl_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_tvl_request message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.get_tvl_request.verify|verify} messages.
+                 * @param message get_tvl_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iget_tvl_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_tvl_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_tvl_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.get_tvl_request;
+
+                /**
+                 * Decodes a get_tvl_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_tvl_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.get_tvl_request;
+
+                /**
+                 * Verifies a get_tvl_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_tvl_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_tvl_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.get_tvl_request;
+
+                /**
+                 * Creates a plain object from a get_tvl_request message. Also converts values to other types if specified.
+                 * @param message get_tvl_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.get_tvl_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_tvl_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_tvl_response. */
+            interface Iget_tvl_response {
+
+                /** get_tvl_response values */
+                values?: (koinos.rpc.koindx_tracker.Ipool_tvl[]|null);
+            }
+
+            /** Represents a get_tvl_response. */
+            class get_tvl_response implements Iget_tvl_response {
+
+                /**
+                 * Constructs a new get_tvl_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Iget_tvl_response);
+
+                /** get_tvl_response values. */
+                public values: koinos.rpc.koindx_tracker.Ipool_tvl[];
+
+                /**
+                 * Creates a new get_tvl_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_tvl_response instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Iget_tvl_response): koinos.rpc.koindx_tracker.get_tvl_response;
+
+                /**
+                 * Encodes the specified get_tvl_response message. Does not implicitly {@link koinos.rpc.koindx_tracker.get_tvl_response.verify|verify} messages.
+                 * @param message get_tvl_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Iget_tvl_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_tvl_response message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.get_tvl_response.verify|verify} messages.
+                 * @param message get_tvl_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Iget_tvl_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_tvl_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_tvl_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.get_tvl_response;
+
+                /**
+                 * Decodes a get_tvl_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_tvl_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.get_tvl_response;
+
+                /**
+                 * Verifies a get_tvl_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_tvl_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_tvl_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.get_tvl_response;
+
+                /**
+                 * Creates a plain object from a get_tvl_response message. Also converts values to other types if specified.
+                 * @param message get_tvl_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.get_tvl_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_tvl_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a koindx_tracker_request. */
+            interface Ikoindx_tracker_request {
+
+                /** koindx_tracker_request reserved */
+                reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** koindx_tracker_request get_pools */
+                get_pools?: (koinos.rpc.koindx_tracker.Iget_pools_request|null);
+
+                /** koindx_tracker_request get_liquidity */
+                get_liquidity?: (koinos.rpc.koindx_tracker.Iget_liquidity_request|null);
+
+                /** koindx_tracker_request get_tvl */
+                get_tvl?: (koinos.rpc.koindx_tracker.Iget_tvl_request|null);
+            }
+
+            /** Represents a koindx_tracker_request. */
+            class koindx_tracker_request implements Ikoindx_tracker_request {
+
+                /**
+                 * Constructs a new koindx_tracker_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Ikoindx_tracker_request);
+
+                /** koindx_tracker_request reserved. */
+                public reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** koindx_tracker_request get_pools. */
+                public get_pools?: (koinos.rpc.koindx_tracker.Iget_pools_request|null);
+
+                /** koindx_tracker_request get_liquidity. */
+                public get_liquidity?: (koinos.rpc.koindx_tracker.Iget_liquidity_request|null);
+
+                /** koindx_tracker_request get_tvl. */
+                public get_tvl?: (koinos.rpc.koindx_tracker.Iget_tvl_request|null);
+
+                /** koindx_tracker_request request. */
+                public request?: ("reserved"|"get_pools"|"get_liquidity"|"get_tvl");
+
+                /**
+                 * Creates a new koindx_tracker_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns koindx_tracker_request instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Ikoindx_tracker_request): koinos.rpc.koindx_tracker.koindx_tracker_request;
+
+                /**
+                 * Encodes the specified koindx_tracker_request message. Does not implicitly {@link koinos.rpc.koindx_tracker.koindx_tracker_request.verify|verify} messages.
+                 * @param message koindx_tracker_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Ikoindx_tracker_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified koindx_tracker_request message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.koindx_tracker_request.verify|verify} messages.
+                 * @param message koindx_tracker_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Ikoindx_tracker_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a koindx_tracker_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns koindx_tracker_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.koindx_tracker_request;
+
+                /**
+                 * Decodes a koindx_tracker_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns koindx_tracker_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.koindx_tracker_request;
+
+                /**
+                 * Verifies a koindx_tracker_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a koindx_tracker_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns koindx_tracker_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.koindx_tracker_request;
+
+                /**
+                 * Creates a plain object from a koindx_tracker_request message. Also converts values to other types if specified.
+                 * @param message koindx_tracker_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.koindx_tracker_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this koindx_tracker_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a koindx_tracker_response. */
+            interface Ikoindx_tracker_response {
+
+                /** koindx_tracker_response reserved */
+                reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** koindx_tracker_response error */
+                error?: (koinos.rpc.Ierror_status|null);
+
+                /** koindx_tracker_response get_pools */
+                get_pools?: (koinos.rpc.koindx_tracker.Iget_pools_response|null);
+
+                /** koindx_tracker_response get_liquidity */
+                get_liquidity?: (koinos.rpc.koindx_tracker.Iget_liquidity_response|null);
+
+                /** koindx_tracker_response get_tvl */
+                get_tvl?: (koinos.rpc.koindx_tracker.Iget_tvl_response|null);
+            }
+
+            /** Represents a koindx_tracker_response. */
+            class koindx_tracker_response implements Ikoindx_tracker_response {
+
+                /**
+                 * Constructs a new koindx_tracker_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.koindx_tracker.Ikoindx_tracker_response);
+
+                /** koindx_tracker_response reserved. */
+                public reserved?: (koinos.rpc.Ireserved_rpc|null);
+
+                /** koindx_tracker_response error. */
+                public error?: (koinos.rpc.Ierror_status|null);
+
+                /** koindx_tracker_response get_pools. */
+                public get_pools?: (koinos.rpc.koindx_tracker.Iget_pools_response|null);
+
+                /** koindx_tracker_response get_liquidity. */
+                public get_liquidity?: (koinos.rpc.koindx_tracker.Iget_liquidity_response|null);
+
+                /** koindx_tracker_response get_tvl. */
+                public get_tvl?: (koinos.rpc.koindx_tracker.Iget_tvl_response|null);
+
+                /** koindx_tracker_response response. */
+                public response?: ("reserved"|"error"|"get_pools"|"get_liquidity"|"get_tvl");
+
+                /**
+                 * Creates a new koindx_tracker_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns koindx_tracker_response instance
+                 */
+                public static create(properties?: koinos.rpc.koindx_tracker.Ikoindx_tracker_response): koinos.rpc.koindx_tracker.koindx_tracker_response;
+
+                /**
+                 * Encodes the specified koindx_tracker_response message. Does not implicitly {@link koinos.rpc.koindx_tracker.koindx_tracker_response.verify|verify} messages.
+                 * @param message koindx_tracker_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.koindx_tracker.Ikoindx_tracker_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified koindx_tracker_response message, length delimited. Does not implicitly {@link koinos.rpc.koindx_tracker.koindx_tracker_response.verify|verify} messages.
+                 * @param message koindx_tracker_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.koindx_tracker.Ikoindx_tracker_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a koindx_tracker_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns koindx_tracker_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.koindx_tracker.koindx_tracker_response;
+
+                /**
+                 * Decodes a koindx_tracker_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns koindx_tracker_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.koindx_tracker.koindx_tracker_response;
+
+                /**
+                 * Verifies a koindx_tracker_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a koindx_tracker_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns koindx_tracker_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.koindx_tracker.koindx_tracker_response;
+
+                /**
+                 * Creates a plain object from a koindx_tracker_response message. Also converts values to other types if specified.
+                 * @param message koindx_tracker_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.koindx_tracker.koindx_tracker_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this koindx_tracker_response to JSON.
                  * @returns JSON object
                  */
                 public toJSON(): { [k: string]: any };
@@ -30930,6 +32137,406 @@ export namespace koinos {
         /** dsa enum. */
         enum dsa {
             ecdsa_secp256k1 = 0
+        }
+    }
+
+    /** Namespace koindx_tracker. */
+    namespace koindx_tracker {
+
+        /** Properties of a liquidity_record. */
+        interface Iliquidity_record {
+
+            /** liquidity_record address */
+            address?: (Uint8Array|null);
+
+            /** liquidity_record balance */
+            balance?: (number|Long|null);
+
+            /** liquidity_record prev_coin_ms_hi */
+            prev_coin_ms_hi?: (number|Long|null);
+
+            /** liquidity_record prev_coin_ms_lo */
+            prev_coin_ms_lo?: (number|Long|null);
+
+            /** liquidity_record last_update */
+            last_update?: (number|Long|null);
+        }
+
+        /** Represents a liquidity_record. */
+        class liquidity_record implements Iliquidity_record {
+
+            /**
+             * Constructs a new liquidity_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.koindx_tracker.Iliquidity_record);
+
+            /** liquidity_record address. */
+            public address: Uint8Array;
+
+            /** liquidity_record balance. */
+            public balance: (number|Long);
+
+            /** liquidity_record prev_coin_ms_hi. */
+            public prev_coin_ms_hi: (number|Long);
+
+            /** liquidity_record prev_coin_ms_lo. */
+            public prev_coin_ms_lo: (number|Long);
+
+            /** liquidity_record last_update. */
+            public last_update: (number|Long);
+
+            /**
+             * Creates a new liquidity_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns liquidity_record instance
+             */
+            public static create(properties?: koinos.koindx_tracker.Iliquidity_record): koinos.koindx_tracker.liquidity_record;
+
+            /**
+             * Encodes the specified liquidity_record message. Does not implicitly {@link koinos.koindx_tracker.liquidity_record.verify|verify} messages.
+             * @param message liquidity_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.koindx_tracker.Iliquidity_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified liquidity_record message, length delimited. Does not implicitly {@link koinos.koindx_tracker.liquidity_record.verify|verify} messages.
+             * @param message liquidity_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.koindx_tracker.Iliquidity_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a liquidity_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns liquidity_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.koindx_tracker.liquidity_record;
+
+            /**
+             * Decodes a liquidity_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns liquidity_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.koindx_tracker.liquidity_record;
+
+            /**
+             * Verifies a liquidity_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a liquidity_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns liquidity_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.koindx_tracker.liquidity_record;
+
+            /**
+             * Creates a plain object from a liquidity_record message. Also converts values to other types if specified.
+             * @param message liquidity_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.koindx_tracker.liquidity_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this liquidity_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a tvl_record. */
+        interface Itvl_record {
+
+            /** tvl_record value */
+            value?: (number|Long|null);
+        }
+
+        /** Represents a tvl_record. */
+        class tvl_record implements Itvl_record {
+
+            /**
+             * Constructs a new tvl_record.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.koindx_tracker.Itvl_record);
+
+            /** tvl_record value. */
+            public value: (number|Long);
+
+            /**
+             * Creates a new tvl_record instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns tvl_record instance
+             */
+            public static create(properties?: koinos.koindx_tracker.Itvl_record): koinos.koindx_tracker.tvl_record;
+
+            /**
+             * Encodes the specified tvl_record message. Does not implicitly {@link koinos.koindx_tracker.tvl_record.verify|verify} messages.
+             * @param message tvl_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.koindx_tracker.Itvl_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified tvl_record message, length delimited. Does not implicitly {@link koinos.koindx_tracker.tvl_record.verify|verify} messages.
+             * @param message tvl_record message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.koindx_tracker.Itvl_record, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a tvl_record message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns tvl_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.koindx_tracker.tvl_record;
+
+            /**
+             * Decodes a tvl_record message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns tvl_record
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.koindx_tracker.tvl_record;
+
+            /**
+             * Verifies a tvl_record message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a tvl_record message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns tvl_record
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.koindx_tracker.tvl_record;
+
+            /**
+             * Creates a plain object from a tvl_record message. Also converts values to other types if specified.
+             * @param message tvl_record
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.koindx_tracker.tvl_record, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this tvl_record to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of an initialize_event. */
+        interface Iinitialize_event {
+
+            /** initialize_event token_a */
+            token_a?: (string|null);
+
+            /** initialize_event token_b */
+            token_b?: (string|null);
+        }
+
+        /** Represents an initialize_event. */
+        class initialize_event implements Iinitialize_event {
+
+            /**
+             * Constructs a new initialize_event.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.koindx_tracker.Iinitialize_event);
+
+            /** initialize_event token_a. */
+            public token_a: string;
+
+            /** initialize_event token_b. */
+            public token_b: string;
+
+            /**
+             * Creates a new initialize_event instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns initialize_event instance
+             */
+            public static create(properties?: koinos.koindx_tracker.Iinitialize_event): koinos.koindx_tracker.initialize_event;
+
+            /**
+             * Encodes the specified initialize_event message. Does not implicitly {@link koinos.koindx_tracker.initialize_event.verify|verify} messages.
+             * @param message initialize_event message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.koindx_tracker.Iinitialize_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified initialize_event message, length delimited. Does not implicitly {@link koinos.koindx_tracker.initialize_event.verify|verify} messages.
+             * @param message initialize_event message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.koindx_tracker.Iinitialize_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes an initialize_event message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns initialize_event
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.koindx_tracker.initialize_event;
+
+            /**
+             * Decodes an initialize_event message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns initialize_event
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.koindx_tracker.initialize_event;
+
+            /**
+             * Verifies an initialize_event message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates an initialize_event message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns initialize_event
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.koindx_tracker.initialize_event;
+
+            /**
+             * Creates a plain object from an initialize_event message. Also converts values to other types if specified.
+             * @param message initialize_event
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.koindx_tracker.initialize_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this initialize_event to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        /** Properties of a sync_event. */
+        interface Isync_event {
+
+            /** sync_event reserve_a */
+            reserve_a?: (number|Long|null);
+
+            /** sync_event reserve_b */
+            reserve_b?: (number|Long|null);
+        }
+
+        /** Represents a sync_event. */
+        class sync_event implements Isync_event {
+
+            /**
+             * Constructs a new sync_event.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.koindx_tracker.Isync_event);
+
+            /** sync_event reserve_a. */
+            public reserve_a: (number|Long);
+
+            /** sync_event reserve_b. */
+            public reserve_b: (number|Long);
+
+            /**
+             * Creates a new sync_event instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns sync_event instance
+             */
+            public static create(properties?: koinos.koindx_tracker.Isync_event): koinos.koindx_tracker.sync_event;
+
+            /**
+             * Encodes the specified sync_event message. Does not implicitly {@link koinos.koindx_tracker.sync_event.verify|verify} messages.
+             * @param message sync_event message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.koindx_tracker.Isync_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified sync_event message, length delimited. Does not implicitly {@link koinos.koindx_tracker.sync_event.verify|verify} messages.
+             * @param message sync_event message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.koindx_tracker.Isync_event, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a sync_event message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns sync_event
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.koindx_tracker.sync_event;
+
+            /**
+             * Decodes a sync_event message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns sync_event
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.koindx_tracker.sync_event;
+
+            /**
+             * Verifies a sync_event message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a sync_event message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns sync_event
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.koindx_tracker.sync_event;
+
+            /**
+             * Creates a plain object from a sync_event message. Also converts values to other types if specified.
+             * @param message sync_event
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.koindx_tracker.sync_event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this sync_event to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
         }
     }
 

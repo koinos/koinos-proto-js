@@ -951,6 +951,13 @@
                   }
                 },
                 "transfer_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "from": {
                       "type": "bytes",
@@ -975,7 +982,10 @@
                     },
                     "memo": {
                       "type": "string",
-                      "id": 4
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
@@ -983,6 +993,13 @@
                   "fields": {}
                 },
                 "mint_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "to": {
                       "type": "bytes",
@@ -996,6 +1013,13 @@
                       "id": 2,
                       "options": {
                         "jstype": "JS_STRING"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
                       }
                     }
                   }
@@ -1004,6 +1028,13 @@
                   "fields": {}
                 },
                 "burn_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "from": {
                       "type": "bytes",
@@ -1018,6 +1049,13 @@
                       "options": {
                         "jstype": "JS_STRING"
                       }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
@@ -1025,6 +1063,13 @@
                   "fields": {}
                 },
                 "approve_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "owner": {
                       "type": "bytes",
@@ -1046,6 +1091,13 @@
                       "options": {
                         "jstype": "JS_STRING"
                       }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
@@ -1053,6 +1105,13 @@
                   "fields": {}
                 },
                 "burn_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "from": {
                       "type": "bytes",
@@ -1067,10 +1126,24 @@
                       "options": {
                         "jstype": "JS_STRING"
                       }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
                 "mint_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "to": {
                       "type": "bytes",
@@ -1085,10 +1158,24 @@
                       "options": {
                         "jstype": "JS_STRING"
                       }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
                 "transfer_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "from": {
                       "type": "bytes",
@@ -1113,11 +1200,21 @@
                     },
                     "memo": {
                       "type": "string",
-                      "id": 4
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
                     }
                   }
                 },
                 "approve_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
                   "fields": {
                     "owner": {
                       "type": "bytes",
@@ -1138,6 +1235,13 @@
                       "id": 3,
                       "options": {
                         "jstype": "JS_STRING"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
                       }
                     }
                   }
@@ -2987,6 +3091,306 @@
                 }
               }
             },
+            "koindx_tracker": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/koindx_tracker"
+              },
+              "nested": {
+                "pool_pair": {
+                  "fields": {
+                    "pool": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "token_a": {
+                      "type": "string",
+                      "id": 2
+                    },
+                    "token_b": {
+                      "type": "string",
+                      "id": 3
+                    }
+                  }
+                },
+                "get_pools_request": {
+                  "oneofs": {
+                    "target": {
+                      "oneof": [
+                        "start",
+                        "pool"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "start": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "pool": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "limit": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "get_pools_response": {
+                  "fields": {
+                    "values": {
+                      "rule": "repeated",
+                      "type": "pool_pair",
+                      "id": 1
+                    }
+                  }
+                },
+                "account_liquidity": {
+                  "fields": {
+                    "address": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "balance": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "coin_ms_hi": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "coin_ms_lo": {
+                      "type": "uint64",
+                      "id": 4,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "get_liquidity_request": {
+                  "oneofs": {
+                    "_start_ms": {
+                      "oneof": [
+                        "start_ms"
+                      ]
+                    },
+                    "_end_ms": {
+                      "oneof": [
+                        "end_ms"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "pool": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "start": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "limit": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "start_ms": {
+                      "type": "uint64",
+                      "id": 4,
+                      "options": {
+                        "jstype": "JS_STRING",
+                        "proto3_optional": true
+                      }
+                    },
+                    "end_ms": {
+                      "type": "uint64",
+                      "id": 5,
+                      "options": {
+                        "jstype": "JS_STRING",
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "get_liquidity_response": {
+                  "fields": {
+                    "values": {
+                      "rule": "repeated",
+                      "type": "account_liquidity",
+                      "id": 1
+                    }
+                  }
+                },
+                "pool_tvl": {
+                  "fields": {
+                    "pool": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "tvl": {
+                      "type": "uint64",
+                      "id": 2,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "get_tvl_request": {
+                  "oneofs": {
+                    "target": {
+                      "oneof": [
+                        "start",
+                        "pool"
+                      ]
+                    },
+                    "_ms": {
+                      "oneof": [
+                        "ms"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "start": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "pool": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "ADDRESS"
+                      }
+                    },
+                    "limit": {
+                      "type": "uint64",
+                      "id": 3,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "ms": {
+                      "type": "uint64",
+                      "id": 4,
+                      "options": {
+                        "jstype": "JS_STRING",
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "get_tvl_response": {
+                  "fields": {
+                    "values": {
+                      "rule": "repeated",
+                      "type": "pool_tvl",
+                      "id": 1
+                    }
+                  }
+                },
+                "koindx_tracker_request": {
+                  "oneofs": {
+                    "request": {
+                      "oneof": [
+                        "reserved",
+                        "get_pools",
+                        "get_liquidity",
+                        "get_tvl"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "reserved": {
+                      "type": "rpc.reserved_rpc",
+                      "id": 1
+                    },
+                    "get_pools": {
+                      "type": "get_pools_request",
+                      "id": 2
+                    },
+                    "get_liquidity": {
+                      "type": "get_liquidity_request",
+                      "id": 3
+                    },
+                    "get_tvl": {
+                      "type": "get_tvl_request",
+                      "id": 4
+                    }
+                  }
+                },
+                "koindx_tracker_response": {
+                  "oneofs": {
+                    "response": {
+                      "oneof": [
+                        "reserved",
+                        "error",
+                        "get_pools",
+                        "get_liquidity",
+                        "get_tvl"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "reserved": {
+                      "type": "rpc.reserved_rpc",
+                      "id": 1
+                    },
+                    "error": {
+                      "type": "rpc.error_status",
+                      "id": 2
+                    },
+                    "get_pools": {
+                      "type": "get_pools_response",
+                      "id": 3
+                    },
+                    "get_liquidity": {
+                      "type": "get_liquidity_response",
+                      "id": 4
+                    },
+                    "get_tvl": {
+                      "type": "get_tvl_response",
+                      "id": 5
+                    }
+                  }
+                }
+              }
+            },
             "contract_meta_store": {
               "options": {
                 "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/contract_meta_store"
@@ -4556,6 +4960,93 @@
             "dsa": {
               "values": {
                 "ecdsa_secp256k1": 0
+              }
+            }
+          }
+        },
+        "koindx_tracker": {
+          "options": {
+            "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/koindx_tracker"
+          },
+          "nested": {
+            "liquidity_record": {
+              "fields": {
+                "address": {
+                  "type": "bytes",
+                  "id": 1,
+                  "options": {
+                    "(btype)": "ADDRESS"
+                  }
+                },
+                "balance": {
+                  "type": "uint64",
+                  "id": 2,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "prev_coin_ms_hi": {
+                  "type": "uint64",
+                  "id": 3,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "prev_coin_ms_lo": {
+                  "type": "uint64",
+                  "id": 4,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "last_update": {
+                  "type": "uint64",
+                  "id": 5,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                }
+              }
+            },
+            "tvl_record": {
+              "fields": {
+                "value": {
+                  "type": "uint64",
+                  "id": 1,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                }
+              }
+            },
+            "initialize_event": {
+              "fields": {
+                "token_a": {
+                  "type": "string",
+                  "id": 1
+                },
+                "token_b": {
+                  "type": "string",
+                  "id": 2
+                }
+              }
+            },
+            "sync_event": {
+              "fields": {
+                "reserve_a": {
+                  "type": "uint64",
+                  "id": 1,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "reserve_b": {
+                  "type": "uint64",
+                  "id": 2,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                }
               }
             }
           }
