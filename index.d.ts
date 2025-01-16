@@ -11307,6 +11307,7 @@ export namespace koinos {
             malformed_block = -203,
             malformed_transaction = -204,
             block_resource_failure = -205,
+            pending_transaction_limit_exceeded = -206,
             unknown_backend = -1000,
             unexpected_state = -1001,
             missing_required_arguments = -1002,
@@ -40816,6 +40817,195 @@ export namespace koinos {
                 public toJSON(): { [k: string]: any };
             }
 
+            /** Properties of a get_pending_transaction_count_request. */
+            interface Iget_pending_transaction_count_request {
+
+                /** get_pending_transaction_count_request payee */
+                payee?: (Uint8Array|null);
+
+                /** get_pending_transaction_count_request block_id */
+                block_id?: (Uint8Array|null);
+            }
+
+            /** Represents a get_pending_transaction_count_request. */
+            class get_pending_transaction_count_request implements Iget_pending_transaction_count_request {
+
+                /**
+                 * Constructs a new get_pending_transaction_count_request.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.mempool.Iget_pending_transaction_count_request);
+
+                /** get_pending_transaction_count_request payee. */
+                public payee: Uint8Array;
+
+                /** get_pending_transaction_count_request block_id. */
+                public block_id?: (Uint8Array|null);
+
+                /** get_pending_transaction_count_request _block_id. */
+                public _block_id?: "block_id";
+
+                /**
+                 * Creates a new get_pending_transaction_count_request instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_pending_transaction_count_request instance
+                 */
+                public static create(properties?: koinos.rpc.mempool.Iget_pending_transaction_count_request): koinos.rpc.mempool.get_pending_transaction_count_request;
+
+                /**
+                 * Encodes the specified get_pending_transaction_count_request message. Does not implicitly {@link koinos.rpc.mempool.get_pending_transaction_count_request.verify|verify} messages.
+                 * @param message get_pending_transaction_count_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.mempool.Iget_pending_transaction_count_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_pending_transaction_count_request message, length delimited. Does not implicitly {@link koinos.rpc.mempool.get_pending_transaction_count_request.verify|verify} messages.
+                 * @param message get_pending_transaction_count_request message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.mempool.Iget_pending_transaction_count_request, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_pending_transaction_count_request message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_pending_transaction_count_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.get_pending_transaction_count_request;
+
+                /**
+                 * Decodes a get_pending_transaction_count_request message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_pending_transaction_count_request
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.get_pending_transaction_count_request;
+
+                /**
+                 * Verifies a get_pending_transaction_count_request message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_pending_transaction_count_request message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_pending_transaction_count_request
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.get_pending_transaction_count_request;
+
+                /**
+                 * Creates a plain object from a get_pending_transaction_count_request message. Also converts values to other types if specified.
+                 * @param message get_pending_transaction_count_request
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.mempool.get_pending_transaction_count_request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_pending_transaction_count_request to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
+            /** Properties of a get_pending_transaction_count_response. */
+            interface Iget_pending_transaction_count_response {
+
+                /** get_pending_transaction_count_response count */
+                count?: (number|Long|null);
+            }
+
+            /** Represents a get_pending_transaction_count_response. */
+            class get_pending_transaction_count_response implements Iget_pending_transaction_count_response {
+
+                /**
+                 * Constructs a new get_pending_transaction_count_response.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: koinos.rpc.mempool.Iget_pending_transaction_count_response);
+
+                /** get_pending_transaction_count_response count. */
+                public count: (number|Long);
+
+                /**
+                 * Creates a new get_pending_transaction_count_response instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns get_pending_transaction_count_response instance
+                 */
+                public static create(properties?: koinos.rpc.mempool.Iget_pending_transaction_count_response): koinos.rpc.mempool.get_pending_transaction_count_response;
+
+                /**
+                 * Encodes the specified get_pending_transaction_count_response message. Does not implicitly {@link koinos.rpc.mempool.get_pending_transaction_count_response.verify|verify} messages.
+                 * @param message get_pending_transaction_count_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: koinos.rpc.mempool.Iget_pending_transaction_count_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified get_pending_transaction_count_response message, length delimited. Does not implicitly {@link koinos.rpc.mempool.get_pending_transaction_count_response.verify|verify} messages.
+                 * @param message get_pending_transaction_count_response message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: koinos.rpc.mempool.Iget_pending_transaction_count_response, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a get_pending_transaction_count_response message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns get_pending_transaction_count_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.get_pending_transaction_count_response;
+
+                /**
+                 * Decodes a get_pending_transaction_count_response message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns get_pending_transaction_count_response
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.get_pending_transaction_count_response;
+
+                /**
+                 * Verifies a get_pending_transaction_count_response message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a get_pending_transaction_count_response message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns get_pending_transaction_count_response
+                 */
+                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.get_pending_transaction_count_response;
+
+                /**
+                 * Creates a plain object from a get_pending_transaction_count_response message. Also converts values to other types if specified.
+                 * @param message get_pending_transaction_count_response
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: koinos.rpc.mempool.get_pending_transaction_count_response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this get_pending_transaction_count_response to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+            }
+
             /** Properties of a mempool_request. */
             interface Imempool_request {
 
@@ -40836,6 +41026,9 @@ export namespace koinos {
 
                 /** mempool_request get_pending_nonce */
                 get_pending_nonce?: (koinos.rpc.mempool.Iget_pending_nonce_request|null);
+
+                /** mempool_request get_pending_transaction_count */
+                get_pending_transaction_count?: (koinos.rpc.mempool.Iget_pending_transaction_count_request|null);
             }
 
             /** Represents a mempool_request. */
@@ -40865,8 +41058,11 @@ export namespace koinos {
                 /** mempool_request get_pending_nonce. */
                 public get_pending_nonce?: (koinos.rpc.mempool.Iget_pending_nonce_request|null);
 
+                /** mempool_request get_pending_transaction_count. */
+                public get_pending_transaction_count?: (koinos.rpc.mempool.Iget_pending_transaction_count_request|null);
+
                 /** mempool_request request. */
-                public request?: ("reserved"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"get_reserved_account_rc"|"get_pending_nonce");
+                public request?: ("reserved"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"get_reserved_account_rc"|"get_pending_nonce"|"get_pending_transaction_count");
 
                 /**
                  * Creates a new mempool_request instance using the specified properties.
@@ -40962,6 +41158,9 @@ export namespace koinos {
 
                 /** mempool_response get_pending_nonce */
                 get_pending_nonce?: (koinos.rpc.mempool.Iget_pending_nonce_response|null);
+
+                /** mempool_response get_pending_transaction_count */
+                get_pending_transaction_count?: (koinos.rpc.mempool.Iget_pending_transaction_count_response|null);
             }
 
             /** Represents a mempool_response. */
@@ -40994,8 +41193,11 @@ export namespace koinos {
                 /** mempool_response get_pending_nonce. */
                 public get_pending_nonce?: (koinos.rpc.mempool.Iget_pending_nonce_response|null);
 
+                /** mempool_response get_pending_transaction_count. */
+                public get_pending_transaction_count?: (koinos.rpc.mempool.Iget_pending_transaction_count_response|null);
+
                 /** mempool_response response. */
-                public response?: ("reserved"|"error"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"get_reserved_account_rc"|"get_pending_nonce");
+                public response?: ("reserved"|"error"|"check_pending_account_resources"|"get_pending_transactions"|"check_account_nonce"|"get_reserved_account_rc"|"get_pending_nonce"|"get_pending_transaction_count");
 
                 /**
                  * Creates a new mempool_response instance using the specified properties.
