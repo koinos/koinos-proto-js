@@ -4797,6 +4797,18 @@
                   "options": {
                     "jstype": "JS_STRING"
                   }
+                },
+                "system_disk_storage_used": {
+                  "type": "uint64",
+                  "id": 4
+                },
+                "system_network_bandwidth_used": {
+                  "type": "uint64",
+                  "id": 5
+                },
+                "system_compute_bandwidth_used": {
+                  "type": "uint64",
+                  "id": 6
                 }
               }
             },
@@ -6147,35 +6159,6 @@
                 "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/rpc/mempool"
               },
               "nested": {
-                "pending_transaction": {
-                  "fields": {
-                    "transaction": {
-                      "type": "protocol.transaction",
-                      "id": 1
-                    },
-                    "disk_storage_used": {
-                      "type": "uint64",
-                      "id": 2,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "network_bandwidth_used": {
-                      "type": "uint64",
-                      "id": 3,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    },
-                    "compute_bandwidth_used": {
-                      "type": "uint64",
-                      "id": 4,
-                      "options": {
-                        "jstype": "JS_STRING"
-                      }
-                    }
-                  }
-                },
                 "check_pending_account_resources_request": {
                   "oneofs": {
                     "_block_id": {
@@ -6254,7 +6237,7 @@
                   "fields": {
                     "pending_transactions": {
                       "rule": "repeated",
-                      "type": "pending_transaction",
+                      "type": "koinos.mempool.pending_transaction",
                       "id": 1
                     }
                   }
@@ -6759,27 +6742,65 @@
                 }
               }
             },
-            "pending_transaction_record": {
+            "pending_transaction": {
               "fields": {
                 "transaction": {
                   "type": "protocol.transaction",
                   "id": 1
                 },
-                "timestamp": {
-                  "type": "uint64",
-                  "id": 2
-                },
                 "disk_storage_used": {
                   "type": "uint64",
-                  "id": 3
+                  "id": 2,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
                 },
                 "network_bandwidth_used": {
                   "type": "uint64",
-                  "id": 4
+                  "id": 3,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
                 },
                 "compute_bandwidth_used": {
                   "type": "uint64",
-                  "id": 5
+                  "id": 4,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "system_disk_storage_used": {
+                  "type": "uint64",
+                  "id": 5,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "system_network_bandwidth_used": {
+                  "type": "uint64",
+                  "id": 6,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                },
+                "system_compute_bandwidth_used": {
+                  "type": "uint64",
+                  "id": 7,
+                  "options": {
+                    "jstype": "JS_STRING"
+                  }
+                }
+              }
+            },
+            "pending_transaction_record": {
+              "fields": {
+                "pending_transaction": {
+                  "type": "pending_transaction",
+                  "id": 1
+                },
+                "timestamp": {
+                  "type": "uint64",
+                  "id": 2
                 }
               }
             }
