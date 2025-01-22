@@ -32780,6 +32780,15 @@ export namespace koinos {
 
             /** transaction_accepted height */
             height?: (number|Long|null);
+
+            /** transaction_accepted system_disk_storage_used */
+            system_disk_storage_used?: (number|Long|null);
+
+            /** transaction_accepted system_network_bandwidth_used */
+            system_network_bandwidth_used?: (number|Long|null);
+
+            /** transaction_accepted system_compute_bandwidth_used */
+            system_compute_bandwidth_used?: (number|Long|null);
         }
 
         /** Represents a transaction_accepted. */
@@ -32799,6 +32808,15 @@ export namespace koinos {
 
             /** transaction_accepted height. */
             public height: (number|Long);
+
+            /** transaction_accepted system_disk_storage_used. */
+            public system_disk_storage_used: (number|Long);
+
+            /** transaction_accepted system_network_bandwidth_used. */
+            public system_network_bandwidth_used: (number|Long);
+
+            /** transaction_accepted system_compute_bandwidth_used. */
+            public system_compute_bandwidth_used: (number|Long);
 
             /**
              * Creates a new transaction_accepted instance using the specified properties.
@@ -39755,114 +39773,6 @@ export namespace koinos {
         /** Namespace mempool. */
         namespace mempool {
 
-            /** Properties of a pending_transaction. */
-            interface Ipending_transaction {
-
-                /** pending_transaction transaction */
-                transaction?: (koinos.protocol.Itransaction|null);
-
-                /** pending_transaction disk_storage_used */
-                disk_storage_used?: (number|Long|null);
-
-                /** pending_transaction network_bandwidth_used */
-                network_bandwidth_used?: (number|Long|null);
-
-                /** pending_transaction compute_bandwidth_used */
-                compute_bandwidth_used?: (number|Long|null);
-            }
-
-            /** Represents a pending_transaction. */
-            class pending_transaction implements Ipending_transaction {
-
-                /**
-                 * Constructs a new pending_transaction.
-                 * @param [properties] Properties to set
-                 */
-                constructor(properties?: koinos.rpc.mempool.Ipending_transaction);
-
-                /** pending_transaction transaction. */
-                public transaction?: (koinos.protocol.Itransaction|null);
-
-                /** pending_transaction disk_storage_used. */
-                public disk_storage_used: (number|Long);
-
-                /** pending_transaction network_bandwidth_used. */
-                public network_bandwidth_used: (number|Long);
-
-                /** pending_transaction compute_bandwidth_used. */
-                public compute_bandwidth_used: (number|Long);
-
-                /**
-                 * Creates a new pending_transaction instance using the specified properties.
-                 * @param [properties] Properties to set
-                 * @returns pending_transaction instance
-                 */
-                public static create(properties?: koinos.rpc.mempool.Ipending_transaction): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Encodes the specified pending_transaction message. Does not implicitly {@link koinos.rpc.mempool.pending_transaction.verify|verify} messages.
-                 * @param message pending_transaction message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encode(message: koinos.rpc.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Encodes the specified pending_transaction message, length delimited. Does not implicitly {@link koinos.rpc.mempool.pending_transaction.verify|verify} messages.
-                 * @param message pending_transaction message or plain object to encode
-                 * @param [writer] Writer to encode to
-                 * @returns Writer
-                 */
-                public static encodeDelimited(message: koinos.rpc.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                /**
-                 * Decodes a pending_transaction message from the specified reader or buffer.
-                 * @param reader Reader or buffer to decode from
-                 * @param [length] Message length if known beforehand
-                 * @returns pending_transaction
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Decodes a pending_transaction message from the specified reader or buffer, length delimited.
-                 * @param reader Reader or buffer to decode from
-                 * @returns pending_transaction
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Verifies a pending_transaction message.
-                 * @param message Plain object to verify
-                 * @returns `null` if valid, otherwise the reason why it is not
-                 */
-                public static verify(message: { [k: string]: any }): (string|null);
-
-                /**
-                 * Creates a pending_transaction message from a plain object. Also converts values to their respective internal types.
-                 * @param object Plain object
-                 * @returns pending_transaction
-                 */
-                public static fromObject(object: { [k: string]: any }): koinos.rpc.mempool.pending_transaction;
-
-                /**
-                 * Creates a plain object from a pending_transaction message. Also converts values to other types if specified.
-                 * @param message pending_transaction
-                 * @param [options] Conversion options
-                 * @returns Plain object
-                 */
-                public static toObject(message: koinos.rpc.mempool.pending_transaction, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                /**
-                 * Converts this pending_transaction to JSON.
-                 * @returns JSON object
-                 */
-                public toJSON(): { [k: string]: any };
-            }
-
             /** Properties of a check_pending_account_resources_request. */
             interface Icheck_pending_account_resources_request {
 
@@ -40167,7 +40077,7 @@ export namespace koinos {
             interface Iget_pending_transactions_response {
 
                 /** get_pending_transactions_response pending_transactions */
-                pending_transactions?: (koinos.rpc.mempool.Ipending_transaction[]|null);
+                pending_transactions?: (koinos.mempool.Ipending_transaction[]|null);
             }
 
             /** Represents a get_pending_transactions_response. */
@@ -40180,7 +40090,7 @@ export namespace koinos {
                 constructor(properties?: koinos.rpc.mempool.Iget_pending_transactions_response);
 
                 /** get_pending_transactions_response pending_transactions. */
-                public pending_transactions: koinos.rpc.mempool.Ipending_transaction[];
+                public pending_transactions: koinos.mempool.Ipending_transaction[];
 
                 /**
                  * Creates a new get_pending_transactions_response instance using the specified properties.
@@ -42781,23 +42691,140 @@ export namespace koinos {
             public toJSON(): { [k: string]: any };
         }
 
+        /** Properties of a pending_transaction. */
+        interface Ipending_transaction {
+
+            /** pending_transaction transaction */
+            transaction?: (koinos.protocol.Itransaction|null);
+
+            /** pending_transaction disk_storage_used */
+            disk_storage_used?: (number|Long|null);
+
+            /** pending_transaction network_bandwidth_used */
+            network_bandwidth_used?: (number|Long|null);
+
+            /** pending_transaction compute_bandwidth_used */
+            compute_bandwidth_used?: (number|Long|null);
+
+            /** pending_transaction system_disk_storage_used */
+            system_disk_storage_used?: (number|Long|null);
+
+            /** pending_transaction system_network_bandwidth_used */
+            system_network_bandwidth_used?: (number|Long|null);
+
+            /** pending_transaction system_compute_bandwidth_used */
+            system_compute_bandwidth_used?: (number|Long|null);
+        }
+
+        /** Represents a pending_transaction. */
+        class pending_transaction implements Ipending_transaction {
+
+            /**
+             * Constructs a new pending_transaction.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: koinos.mempool.Ipending_transaction);
+
+            /** pending_transaction transaction. */
+            public transaction?: (koinos.protocol.Itransaction|null);
+
+            /** pending_transaction disk_storage_used. */
+            public disk_storage_used: (number|Long);
+
+            /** pending_transaction network_bandwidth_used. */
+            public network_bandwidth_used: (number|Long);
+
+            /** pending_transaction compute_bandwidth_used. */
+            public compute_bandwidth_used: (number|Long);
+
+            /** pending_transaction system_disk_storage_used. */
+            public system_disk_storage_used: (number|Long);
+
+            /** pending_transaction system_network_bandwidth_used. */
+            public system_network_bandwidth_used: (number|Long);
+
+            /** pending_transaction system_compute_bandwidth_used. */
+            public system_compute_bandwidth_used: (number|Long);
+
+            /**
+             * Creates a new pending_transaction instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns pending_transaction instance
+             */
+            public static create(properties?: koinos.mempool.Ipending_transaction): koinos.mempool.pending_transaction;
+
+            /**
+             * Encodes the specified pending_transaction message. Does not implicitly {@link koinos.mempool.pending_transaction.verify|verify} messages.
+             * @param message pending_transaction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: koinos.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified pending_transaction message, length delimited. Does not implicitly {@link koinos.mempool.pending_transaction.verify|verify} messages.
+             * @param message pending_transaction message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: koinos.mempool.Ipending_transaction, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a pending_transaction message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns pending_transaction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): koinos.mempool.pending_transaction;
+
+            /**
+             * Decodes a pending_transaction message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns pending_transaction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): koinos.mempool.pending_transaction;
+
+            /**
+             * Verifies a pending_transaction message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a pending_transaction message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns pending_transaction
+             */
+            public static fromObject(object: { [k: string]: any }): koinos.mempool.pending_transaction;
+
+            /**
+             * Creates a plain object from a pending_transaction message. Also converts values to other types if specified.
+             * @param message pending_transaction
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: koinos.mempool.pending_transaction, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this pending_transaction to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
         /** Properties of a pending_transaction_record. */
         interface Ipending_transaction_record {
 
-            /** pending_transaction_record transaction */
-            transaction?: (koinos.protocol.Itransaction|null);
+            /** pending_transaction_record pending_transaction */
+            pending_transaction?: (koinos.mempool.Ipending_transaction|null);
 
             /** pending_transaction_record timestamp */
             timestamp?: (number|Long|null);
-
-            /** pending_transaction_record disk_storage_used */
-            disk_storage_used?: (number|Long|null);
-
-            /** pending_transaction_record network_bandwidth_used */
-            network_bandwidth_used?: (number|Long|null);
-
-            /** pending_transaction_record compute_bandwidth_used */
-            compute_bandwidth_used?: (number|Long|null);
         }
 
         /** Represents a pending_transaction_record. */
@@ -42809,20 +42836,11 @@ export namespace koinos {
              */
             constructor(properties?: koinos.mempool.Ipending_transaction_record);
 
-            /** pending_transaction_record transaction. */
-            public transaction?: (koinos.protocol.Itransaction|null);
+            /** pending_transaction_record pending_transaction. */
+            public pending_transaction?: (koinos.mempool.Ipending_transaction|null);
 
             /** pending_transaction_record timestamp. */
             public timestamp: (number|Long);
-
-            /** pending_transaction_record disk_storage_used. */
-            public disk_storage_used: (number|Long);
-
-            /** pending_transaction_record network_bandwidth_used. */
-            public network_bandwidth_used: (number|Long);
-
-            /** pending_transaction_record compute_bandwidth_used. */
-            public compute_bandwidth_used: (number|Long);
 
             /**
              * Creates a new pending_transaction_record instance using the specified properties.
