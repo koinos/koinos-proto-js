@@ -6367,6 +6367,42 @@
                     }
                   }
                 },
+                "get_pending_transactions_by_id_request": {
+                  "oneofs": {
+                    "_block_id": {
+                      "oneof": [
+                        "block_id"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "transaction_ids": {
+                      "rule": "repeated",
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(btype)": "TRANSACTION_ID"
+                      }
+                    },
+                    "block_id": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(btype)": "BLOCK_ID",
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "get_pending_transactions_by_id_response": {
+                  "fields": {
+                    "pending_transactions": {
+                      "rule": "repeated",
+                      "type": "koinos.mempool.pending_transaction",
+                      "id": 1
+                    }
+                  }
+                },
                 "mempool_request": {
                   "oneofs": {
                     "request": {
@@ -6377,7 +6413,8 @@
                         "check_account_nonce",
                         "get_reserved_account_rc",
                         "get_pending_nonce",
-                        "get_pending_transaction_count"
+                        "get_pending_transaction_count",
+                        "get_pending_transactions_by_id"
                       ]
                     }
                   },
@@ -6409,6 +6446,10 @@
                     "get_pending_transaction_count": {
                       "type": "get_pending_transaction_count_request",
                       "id": 7
+                    },
+                    "get_pending_transactions_by_id": {
+                      "type": "get_pending_transactions_by_id_request",
+                      "id": 8
                     }
                   }
                 },
@@ -6423,7 +6464,8 @@
                         "check_account_nonce",
                         "get_reserved_account_rc",
                         "get_pending_nonce",
-                        "get_pending_transaction_count"
+                        "get_pending_transaction_count",
+                        "get_pending_transactions_by_id"
                       ]
                     }
                   },
@@ -6459,6 +6501,10 @@
                     "get_pending_transaction_count": {
                       "type": "get_pending_transaction_count_response",
                       "id": 8
+                    },
+                    "get_pending_transactions_by_id": {
+                      "type": "get_pending_transactions_by_id_response",
+                      "id": 9
                     }
                   }
                 }
