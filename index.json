@@ -2172,6 +2172,847 @@
                 }
               }
             },
+            "kcs5": {
+              "options": {
+                "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/standards/kcs5"
+              },
+              "nested": {
+                "name_arguments": {
+                  "fields": {}
+                },
+                "name_result": {
+                  "fields": {
+                    "value": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "symbol_arguments": {
+                  "fields": {}
+                },
+                "symbol_result": {
+                  "fields": {
+                    "value": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "uri_arguments": {
+                  "fields": {}
+                },
+                "uri_result": {
+                  "fields": {
+                    "value": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "token_uri_arguments": {
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "token_uri_result": {
+                  "fields": {
+                    "value": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "get_info_arguments": {
+                  "fields": {}
+                },
+                "get_info_result": {
+                  "fields": {
+                    "name": {
+                      "type": "string",
+                      "id": 1
+                    },
+                    "symbol": {
+                      "type": "string",
+                      "id": 2
+                    },
+                    "uri": {
+                      "type": "uint32",
+                      "id": 3
+                    },
+                    "description": {
+                      "type": "string",
+                      "id": 4
+                    }
+                  }
+                },
+                "owner_arguments": {
+                  "fields": {}
+                },
+                "owner_result": {
+                  "fields": {
+                    "value": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "total_supply_arguments": {
+                  "fields": {}
+                },
+                "total_supply_result": {
+                  "fields": {
+                    "value": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "royalty": {
+                  "fields": {
+                    "percentage": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    },
+                    "address": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "royalties_arguments": {
+                  "fields": {}
+                },
+                "royalties_result": {
+                  "fields": {
+                    "value": {
+                      "rule": "repeated",
+                      "type": "royalty",
+                      "id": 1
+                    }
+                  }
+                },
+                "balance_of_arguments": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "balance_of_result": {
+                  "fields": {
+                    "value": {
+                      "type": "uint64",
+                      "id": 1,
+                      "options": {
+                        "jstype": "JS_STRING"
+                      }
+                    }
+                  }
+                },
+                "owner_of_arguments": {
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "owner_of_result": {
+                  "fields": {
+                    "value": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "metadata_of_arguments": {
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "metadata_of_result": {
+                  "fields": {
+                    "value": {
+                      "type": "string",
+                      "id": 1
+                    }
+                  }
+                },
+                "get_tokens_arguments": {
+                  "fields": {
+                    "start": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "limit": {
+                      "type": "int32",
+                      "id": 2
+                    },
+                    "descending": {
+                      "type": "bool",
+                      "id": 3
+                    }
+                  }
+                },
+                "get_tokens_result": {
+                  "fields": {
+                    "values": {
+                      "rule": "repeated",
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "get_tokens_by_owner_arguments": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "start": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "limit": {
+                      "type": "int32",
+                      "id": 3
+                    },
+                    "descending": {
+                      "type": "bool",
+                      "id": 4
+                    }
+                  }
+                },
+                "get_tokens_by_owner_result": {
+                  "fields": {
+                    "values": {
+                      "rule": "repeated",
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "get_approved_arguments": {
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    }
+                  }
+                },
+                "get_approved_result": {
+                  "fields": {
+                    "value": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "is_approved_for_all_arguments": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "operator": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "is_approved_for_all_result": {
+                  "fields": {
+                    "value": {
+                      "type": "bool",
+                      "id": 1
+                    }
+                  }
+                },
+                "get_operator_approvals_arguments": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "start": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "limit": {
+                      "type": "int32",
+                      "id": 3
+                    },
+                    "descending": {
+                      "type": "bool",
+                      "id": 4
+                    }
+                  }
+                },
+                "get_operator_approvals_result": {
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "operators": {
+                      "rule": "repeated",
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "transfer_ownership_arguments": {
+                  "fields": {
+                    "to": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "transfer_ownership_result": {
+                  "fields": {}
+                },
+                "owner_event": {
+                  "fields": {
+                    "from": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "to": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    }
+                  }
+                },
+                "set_royalties_arguments": {
+                  "fields": {
+                    "value": {
+                      "rule": "repeated",
+                      "type": "royalty",
+                      "id": 1
+                    }
+                  }
+                },
+                "set_royalties_result": {
+                  "fields": {}
+                },
+                "royalties_event": {
+                  "fields": {
+                    "value": {
+                      "rule": "repeated",
+                      "type": "royalty",
+                      "id": 1
+                    }
+                  }
+                },
+                "set_metadata_arguments": {
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "metadata": {
+                      "type": "string",
+                      "id": 2
+                    }
+                  }
+                },
+                "set_metadata_result": {
+                  "fields": {}
+                },
+                "set_metadata_event": {
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "metadata": {
+                      "type": "string",
+                      "id": 2
+                    }
+                  }
+                },
+                "approve_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    },
+                    "_approve": {
+                      "oneof": [
+                        "approve"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS",
+                        "deprecated": true
+                      }
+                    },
+                    "operator": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 3,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    },
+                    "approve": {
+                      "type": "bool",
+                      "id": 5,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "approve_result": {
+                  "fields": {}
+                },
+                "token_approval_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    },
+                    "_approve": {
+                      "oneof": [
+                        "approve"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "operator": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 3,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    },
+                    "approve": {
+                      "type": "bool",
+                      "id": 5,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "set_approval_for_all_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "operator": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "approved": {
+                      "type": "bool",
+                      "id": 3
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "set_approval_for_all_result": {
+                  "fields": {}
+                },
+                "operator_approval_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "owner": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "operator": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "approved": {
+                      "type": "bool",
+                      "id": 3
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "mint_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "to": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "mint_result": {
+                  "fields": {}
+                },
+                "mint_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "to": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "transfer_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "from": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS",
+                        "deprecated": true
+                      }
+                    },
+                    "to": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 3,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "transfer_result": {
+                  "fields": {}
+                },
+                "transfer_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "from": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "to": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 3,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 4,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "burn_arguments": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 2,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                },
+                "burn_result": {
+                  "fields": {}
+                },
+                "burn_event": {
+                  "oneofs": {
+                    "_memo": {
+                      "oneof": [
+                        "memo"
+                      ]
+                    }
+                  },
+                  "fields": {
+                    "from": {
+                      "type": "bytes",
+                      "id": 1,
+                      "options": {
+                        "(koinos.btype)": "ADDRESS"
+                      }
+                    },
+                    "token_id": {
+                      "type": "bytes",
+                      "id": 2,
+                      "options": {
+                        "(koinos.btype)": "HEX"
+                      }
+                    },
+                    "memo": {
+                      "type": "string",
+                      "id": 3,
+                      "options": {
+                        "proto3_optional": true
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "kcs2": {
               "options": {
                 "go_package": "github.com/koinos/koinos-proto-golang/v2/koinos/standards/kcs2"
